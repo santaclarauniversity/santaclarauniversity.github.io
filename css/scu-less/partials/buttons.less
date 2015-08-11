@@ -1,0 +1,95 @@
+/**
+ * These need a rework. Originally thought to extend Bootstrap's .btn class,
+ * we've decided against it. Old notes:
+ *
+ * The default SCU button is text left aligned, with a &raquo; ::after element.
+ * This is usually used as a link, rather than a <button>, and with the
+ * additional Bootstrap classes .btn and .btn-block:
+ * ex. <a href="/link" class="btn btn-scu btn-block">Button text here</a>
+ *
+ * Note that Bootstrap's .btn-block class causes text to not wrap and remain
+ * on one line, so keep these short.
+ */
+.link-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  @media (min-width: @screen-sm-min) {
+    max-width: 320px;
+  }
+  @media (min-width: @screen-lg-min) {
+    max-width: 360px;
+  }
+  &.inline {
+    display: inline-block;
+    background-clip: border-box;
+  }
+  &.maroon { /* Maroon buttons */
+    position: relative;
+    padding: 10px 25px 9px 15px;
+    margin: 0 0 .5em;
+    border: 1px solid @maroon;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
+    background-color: @maroon;
+    color: @white !important;
+    text-decoration: none !important;
+    &::after {
+      content: '\00bb';
+      position: absolute;
+      right: 15px;
+    }
+    &:hover {
+      background-color: darken(@maroon, 5%);
+      color: @white;
+      text-decoration: none;
+    }
+  }
+  &.stroked {
+    position: relative;
+    margin: 0 0 10px;
+    outline: 1px solid #bdbdbd;
+    border: 6px solid @white;
+    &:before {
+      content:'';
+      position: absolute;
+      z-index: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border: 1px solid @brand-red;
+    }
+  }
+  &.white {
+    padding: 14px 10px;
+    background-color: @white;
+    font-size: 37px;
+    color: #8c8a8a;
+    span {
+      color: @brand-red;
+      .serif-font();
+    }
+    &:hover {
+      background-color: darken(@white, 5%);
+      color: #8c8a8a;
+      text-decoration: none;
+      span {
+        color: @brand-red;
+      }
+    }
+  }
+  &.red {
+    padding: 17px 10px;
+    background-color: @brand-red;
+    color: @white !important;
+    font-size: 27px;
+    .sans-serif-font(bold);
+    &:before {
+      border-color: @maroon;
+    }
+    &:hover {
+      background-color: darken(@brand-red, 5%);
+      color: @white;
+      text-decoration: none;
+    }
+  }
+}

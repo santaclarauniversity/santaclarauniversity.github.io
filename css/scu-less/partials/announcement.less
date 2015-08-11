@@ -1,0 +1,38 @@
+/* Announcement module */
+@emergency-color: #f00;
+.announcement.module {
+  border-left: 1px solid @brand-red;
+  &.emergency {
+    border-left-color: @emergency-color;
+    h3 {
+      background-color: @emergency-color;
+    }
+  }
+  h3 {
+    display: inline-block;
+    padding: 6px 11px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: @white;
+    background-color: @brand-red;
+  }
+  .announcement-body {
+    padding: 22px 0 22px 22px;
+    &>*:last-child { margin-bottom: 0; }
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.25;
+    color: #242424;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    h3 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 24px;
+    }
+  }
+}

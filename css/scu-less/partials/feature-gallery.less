@@ -1,0 +1,119 @@
+/**
+ * Feature Gallery (two-column) and Jumbotron (full-width) module:
+ *
+ * The Feature Gallery and Jumbotron are essentially the same save for the wrapping class:
+ * .two-column.feature-gallery.module or .full-width.feature-gallery.module. (.jumbotron is
+ * already a part of Bootstrap, so we're not using it here.)
+ *
+ * These are based off of Bootstrap's carousel, with new CSS for a fading transition effect
+ * instead of a slide left/right. http://getbootstrap.com/javascript/#carousel
+ *
+ * Images in these can be of any size, technically, but ideally all slides in the gallery
+ * will be of the same size. The full-size width on images in these modules are:
+ *
+ * Feature Gallery: 744px wide, suggested size: 744px by 389px wide. (1116px by 584px for retina screens.)
+ * Jumbotron: 1140px wide, suggested size: 1140px by 596px tall. (1710px by 894px for retina screens.)
+ */
+
+.feature-gallery.module {
+  &.two-column {
+    .lh-box-shadow(0 1px 5px rgba(0,0,0,.18));
+    border: 3px solid @white;
+  }
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      .lh-transition(opacity .4s ease-in-out);
+    }
+    .active {
+      opacity: 1;
+      &.left,
+      &.right {
+        left: 0;
+        opacity: 0;
+        z-index: 1;
+        .lh-transform(none);
+      }
+    }
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+  }
+  .carousel-caption {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* This Flexbox styling should work in modern browsers, but IE8 and IE9 won't vertically center text if there's one line. */
+    .lh-display(flex);          
+    .lh-flex-direction(column); 
+    .lh-justify-content(center);
+    min-height: (49em/12);
+    padding: 10px 49px 9px;
+    .rgba-background(255,255,255,.85);
+    color: #231f20;
+    text-shadow: none;
+    &, * {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+    @media(min-width: @screen-sm-min) {
+      min-height: (55em/14);
+      &, * {
+        font-size: 14px;
+        line-height: (17/14);
+      }
+    }
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .carousel-control {
+    top: auto;
+    z-index: 11;
+    /* This Flexbox styling should work in modern browsers, but IE8 and IE9 are addressed in the selector beginning with html.no-flexbox below */
+    .lh-display(flex);
+    .lh-flex-direction(column);
+    .lh-justify-content(center);
+    width: 34px;
+    height: 49px;
+    text-shadow: none;
+    background-image: none;
+    color: #ab0028;
+    opacity: 1;
+    filter: none;
+    -ms-filter: none;
+    html.no-flexbox & {
+      line-height: 49px;
+    }
+    @media (min-width: @screen-sm-min) {
+      height: 55px;
+      html.no-flexbox & {
+        line-height: 55px;
+      }
+    }
+  }
+}
+.feature-gallery-source {
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: @medium-gray;
+  .sans-serif-font(italic);
+}
+
+/* If the jumbotron comes after a subheader, it overlaps a bit: */
+.subheader.module + .container>.row>.col-xs-12>.full-width.feature-gallery.module {
+  border: 3px solid @white;
+  border-width: 3px 3px 0;
+  margin-top: -45px;
+  margin-left: -3px;
+  margin-right: -3px;
+  .lh-box-sizing(content-box);
+}
+
+.site-header:not(.uses-core-navigation) + .container>.row>.col-xs-12>.full-width.feature-gallery.module {
+  margin-top: -20px;
+  @media (min-width: @screen-sm-min) {
+    margin-top: -55px;
+  }
+}
