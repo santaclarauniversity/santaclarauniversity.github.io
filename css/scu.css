@@ -415,6 +415,15 @@ html.no-fontface .page-title .back-to-site-home a span {
     padding-bottom: 26px;
   }
 }
+.site-header .wordmarks,
+.site-header .group-logo {
+  line-height: 1.3;
+}
+.site-header .wordmarks a:hover,
+.site-header .group-logo a:hover {
+  text-decoration: none;
+  opacity: .8;
+}
 .site-header .wordmarks img,
 .site-header .group-logo img {
   display: block;
@@ -434,6 +443,97 @@ html.no-fontface .page-title .back-to-site-home a span {
 }
 .site-header-text-and-search {
   background-size: cover;
+}
+/* HEADER TEXT */
+.title-large {
+  font-size: 40px;
+  display: block;
+}
+.title-large {
+  text-decoration: none;
+  display: block;
+}
+.title-small {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+/* FONT */
+/* default is Trajan */
+.wordmarks,
+.font-trajan .wordmarks {
+  font-family: 'Trajan W01 Regular';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+}
+/* other options are Trade Gothic, Bodoni Black Italic, Helvetica */
+.font-tradegothic .wordmarks {
+  font-family: 'Trade Gothic W01 Light';
+}
+.font-bodoni .wordmarks {
+  line-height: 1.2;
+}
+.font-bodoni .wordmarks .title-large {
+  font-family: 'BauerBodoniW01-BlackIta';
+  font-size: 48px;
+  text-transform: none;
+}
+.font-helvetica .wordmarks {
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-weight: 200;
+  text-transform: none;
+}
+/* HEADER COLOR */
+/* Default is black/gray on white */
+.wordmarks a.title-large {
+  color: #333333;
+}
+.wordmarks a.title-small {
+  color: #6d6d6d;
+}
+/* Other background options are burgundy, cadet, navy, purple, teal (white text) */
+.color-burgundy header {
+  background-color: #690521;
+}
+.color-burgundy .wordmarks a {
+  color: #fff;
+}
+.color-cadet header {
+  background-color: #3a5163;
+}
+.color-cadet .wordmarks a {
+  color: #fff;
+}
+.color-navy header {
+  background-color: #021d52;
+}
+.color-navy .wordmarks a {
+  color: #fff;
+}
+.color-purple header {
+  background-color: #3d1d4e;
+}
+.color-purple .wordmarks a {
+  color: #fff;
+}
+.color-teal header {
+  background-color: #1d4952;
+}
+.color-teal h1 {
+  color: #1d4952;
+}
+.color-teal .wordmarks a {
+  color: #fff;
+}
+/* Optional white title for use on top of photos */
+.white-title .wordmarks a {
+  color: #fff;
+}
+/* HEADER PHOTO */
+/*  By default, any background photo applied to the <header> tag will be displayed centered at full width */
+header.site-header {
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 @media (max-width: 767px) {
   .site-header-search-and-toggles {
@@ -510,6 +610,9 @@ html.no-fontface .page-title .back-to-site-home a span {
   .site-header-custom-title .site-header-text-and-search {
     height: 200px;
   }
+  .tall-header .site-header-custom-title .site-header-text-and-search {
+    height: 300px;
+  }
 }
 .site-header-custom-title .site-header-text-and-search .wordmarks {
   padding: 25px 0;
@@ -559,6 +662,10 @@ html.no-fontface .page-title .back-to-site-home a span {
   .site-header-custom-title .site-header-text-and-search .wordmarks,
   .site-header-custom-title .site-header-text-and-search .group-logo {
     height: 200px;
+  }
+  .tall-header .site-header-custom-title .site-header-text-and-search .wordmarks,
+  .tall-header .site-header-custom-title .site-header-text-and-search .group-logo {
+    height: 300px;
   }
 }
 .no-flexbox .site-header-custom-title .site-header-text-and-search .wordmarks,

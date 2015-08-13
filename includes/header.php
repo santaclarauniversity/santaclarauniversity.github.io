@@ -5,8 +5,10 @@
           <div class="row">
             <div class="col-xs-12 col-sm-9 site-header-titles">
               <a href="index.php" class="text-hide pull-left seal">Santa Clara University</a>
-              <a href="index.php" class="wordmarks"><img src="css/assets/header-large-Santa-Clara-University.png" srcset="css/assets/header-large-Santa-Clara-University@2x.png 1.5x" alt="Santa Clara University" width="572" height="28" />
-                <img src="css/assets/header-small-the-jesuit-university-in-silicon-valley.png" srcset="css/assets/header-small-the-jesuit-university-in-silicon-valley@2x.png 1.5x" alt="The Jesuit University In Silicon Valley" width="433" height="20" /></a>
+              <div class="wordmarks">
+			   		<a href="index.html" class="title-small">Optional Link to Parent Site or SCU</a>
+			   		<a href="index.html" class="title-large">Title of Website</a>
+	            </div>
             </div>
             <div class="col-xs-12 col-sm-3 clearfix site-header-search-and-toggles">
               <button type="button" class="visible-xs-block menu-toggle menu-toggle-main" data-toggle="offcanvas" data-target="#scu-main-navigation">
