@@ -47,6 +47,31 @@
 
       <nav class="gateway-navigation core-gateways offcanvas-right" id="scu-gateway-navigation">
         <div class="container sidebar-offcanvas">
+          <ul class="nav navbar-left">
+            <li class="dropdown scu-nav">
+              <a href="http://www.scu.edu/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <span class="text-hide mission">Main Navigation for</span>
+                <span class="hidden-sm nameplate">Santa Clara University</span>
+                <span class="hidden-xs hidden-md hidden-lg nameplate">SCU</span>
+                <span class="caret hidden-xs"></span>
+              </a>
+              <div class="dropdown-menu">
+                <div class="container">
+                  <ul role="menu" class="nav nav-pills">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About SCU</a></li>
+                    <li><a href="#">Academics</a></li>
+                    <li><a href="#">Admission</a></li>
+                    <li><a href="#">Campus Life</a></li>
+                    <li><a href="#">Athletics</a></li>
+                    <li><a href="#">Global</a></li>
+                    <li><a href="#">Giving</a></li>
+                    <li><a href="#">News & Events</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
           <ul class="nav nav-pills navbar-right">
             <li><a href="#">Students</a></li>
             <li><a href="#">Faculty & Staff</a></li>

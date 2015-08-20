@@ -1125,6 +1125,12 @@ header.site-header {
     padding: 0;
   }
 }
+.uses-core-navigation .gateway-navigation .navbar-left {
+  display: none;
+}
+.hide-nameplate .gateway-navigation .nameplate {
+  display: none !important;
+}
 .gateway-navigation > .container > .nav {
   background-color: #fcfcfc;
 }
