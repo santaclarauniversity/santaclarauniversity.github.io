@@ -364,6 +364,13 @@ html.no-fontface .page-title .back-to-site-home a span {
     font-size: 18px;
   }
 }
+.lw_cal_today_day {
+  font-family: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
+}
+html.no-fontface .lw_cal_today_day {
+  font-weight: 600;
+  font-style: italic;
+}
 .intro,
 .intro > * {
   color: #666;
@@ -2773,6 +2780,13 @@ html.no-fontface .feature-gallery-source {
   font-size: 20px;
   line-height: 1.2;
   text-transform: none;
+}
+.events.module ul {
+  padding-left: 0;
+  list-style: none;
+}
+.events.module li + li {
+  margin-top: 15px;
 }
 .events.module p {
   color: #242424;
