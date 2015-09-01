@@ -33,11 +33,17 @@
         <div class="container sidebar-offcanvas">
           <ul class="nav nav-pills">
             <li><a href="#">About SCU</a></li>
+            
             <li><a href="#">Academics</a></li>
             <li><span class="currentbranch0"><a href="#">Admission</a></span></li>
-            <li><a href="#">Campus Life</a></li>
-            <li><a href="#">Athletics</a></li>
-            <li><a href="#">Global</a></li>
+              <li class="dropdown"><a href="homepage.php" class="dropdown-toggle" data-toggle="dropdown">Dropdown Menu</a>
+                <ul class="dropdown-menu">
+                  <li><a href="can-we.php">Hero Features</a></li>
+                  <li><a href="hero-features.php">Hero Features</a></li>
+                  <li><a href="landing-hero-features.php">Landing Hero Features</a></li>
+                  <li><a href="subheaders.php">Subheaders</a></li>
+                </ul>
+              </li>
             <li><a href="#">Giving</a></li>
             <li><a href="#">News & Events</a></li>
           </ul>

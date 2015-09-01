@@ -14,7 +14,7 @@
   </head>
   <body class="<?php echo $_GET["header"]; ?>">
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
-    <header class="site-header site-header-custom-title white-nav">
+    <header class="site-header site-header-custom-title white-nav" style="background-image:url(_examples/hero-sky.jpg);">
 
       <div class="site-header-text-and-search">
         <div class="container">
@@ -214,7 +214,11 @@
       </nav>
     
     </header>
-
+    <div class="subheader module">
+      <div class="container">
+        <h1><span>Department of</span> Chemistry & Biochemistry</h1>
+      </div>
+    </div>
       <div class="container" id="content">
         
       <div class="row">

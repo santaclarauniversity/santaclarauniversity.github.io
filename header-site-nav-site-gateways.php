@@ -49,8 +49,6 @@
           <ul class="nav nav-pills">
             <li><a href="#">College or Center Links</a></li>
             <li><a href="#">Sample Navigation</a></li>
-            <li><span class="currentbranch0"><a href="#">Faculty</a></span></li>
-            <li><a href="#">Our Programs</a></li>
             <li><a href="#">Partners & Labs</a></li>
             <li><a href="#">News & Events</a></li>
           </ul>
@@ -74,9 +72,15 @@
                     <li><a href="#">About SCU</a></li>
                     <li><a href="#">Academics</a></li>
                     <li><a href="#">Admission</a></li>
-                    <li><a href="#">Campus Life</a></li>
                     <li><a href="#">Athletics</a></li>
-                    <li><a href="#">Global</a></li>
+              <li class="dropdown"><a href="homepage.php" class="dropdown-toggle" data-toggle="dropdown">Dropdown Menu in Sidebar</a>
+                <ul class="dropdown-menu">
+                  <li><a href="can-we.php">Hero Features</a></li>
+                  <li><a href="hero-features.php">Hero Features</a></li>
+                  <li><a href="landing-hero-features.php">Landing Hero Features</a></li>
+                  <li><a href="subheaders.php">Subheaders</a></li>
+                </ul>
+              </li>
                     <li><a href="#">Giving</a></li>
                     <li><a href="#">News & Events</a></li>
                   </ul>
@@ -211,7 +215,11 @@
       </nav>
     
     </header>
-
+    <div class="office subheader module">
+      <div class="container">
+        <h2>Registrar's Office</h2>
+      </div>
+    </div>
       <div class="container" id="content">
         
       <div class="row">

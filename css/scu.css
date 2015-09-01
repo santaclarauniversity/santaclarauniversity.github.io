@@ -929,39 +929,39 @@ header.site-header {
     height: 52px;
   }
 }
-.main-navigation li {
+.main-navigation .nav > li {
   position: relative;
   margin: 0;
   font-size: 13px;
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
-  .main-navigation li {
+  .main-navigation .nav > li {
     font-size: 12px;
   }
 }
 @media (min-width: 825px) {
-  .main-navigation li {
+  .main-navigation .nav > li {
     font-size: 13px;
   }
 }
 @media (min-width: 930px) {
-  .main-navigation li {
+  .main-navigation .nav > li {
     font-size: 14px;
   }
 }
 @media (min-width: 1065px) {
-  .main-navigation li {
+  .main-navigation .nav > li {
     font-size: 15px;
   }
 }
 @media (min-width: 1200px) {
-  .main-navigation li {
+  .main-navigation .nav > li {
     font-size: 17px;
   }
 }
 @media (min-width: 768px) {
-  .main-navigation li + li::before {
+  .main-navigation .nav > li + li::before {
     content: '';
     position: absolute;
     left: 0;
@@ -1031,13 +1031,20 @@ header.site-header {
     padding-left: 18px;
   }
 }
+.main-navigation .nav-pills > li .dropdown-menu {
+  margin-top: -1px;
+  text-transform: none;
+}
+.main-navigation .nav-pills > li:hover .dropdown-menu {
+  display: block;
+}
 .main-navigation .nav-pills > li > a:hover,
 .main-navigation .nav-pills > li > span > a:hover {
   background-color: #b30738;
   color: #ffffff;
 }
 /* Core Navigation */
-.core-navigation ul {
+.core-navigation > div > ul {
   background-color: #b30738;
   border-top: 1px solid #b30738;
   border-bottom: 1px solid #b30738;
@@ -1495,6 +1502,7 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
   width: 100%;
   height: 150px;
   background-color: #611b25;
+  margin-top: -20px;
 }
 .subheader.module.office {
   background-color: #464646;
@@ -1537,6 +1545,21 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
   font-size: 18px;
   text-transform: uppercase;
   color: #e9e8d5;
+}
+@media (min-width: 768px) {
+  .subheader.module {
+    margin-top: -35px;
+  }
+}
+@media (min-width: 1065px) {
+  .subheader.module {
+    margin-top: -58px;
+  }
+}
+@media (min-width: 1200px) {
+  .subheader.module {
+    margin-top: -60px;
+  }
 }
 .site-header.uses-core-navigation + .subheader.module {
   margin-top: -20px;
@@ -3680,6 +3703,14 @@ html.flexbox .infographic.module.window .infographic-label {
 }
 html.flexbox .infographic.module.window .infographic-label {
   padding-top: 8px;
+}
+/*  Search Results  */
+h2.search_title span {
+  font-family: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
+}
+html.no-fontface h2.search_title span {
+  font-weight: 600;
+  font-style: italic;
 }
 /* Retina-display-only show/hide classes: */
 .retina-only {

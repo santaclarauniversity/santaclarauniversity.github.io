@@ -46,7 +46,14 @@
                     <nav class="side-navigation match-page-title">
             <a class="side-navigation-header" href="index.php">SCU Templates and Modules</a>
             <ul>
-              <li><a href="homepage.php">Homepage</a></li>
+              <li class="dropdown"><a href="homepage.php" class="dropdown-toggle" data-toggle="dropdown">Sidebar Dropdown Requires Click</a>
+                <ul class="dropdown-menu">
+                  <li><a href="can-we.php">Hero Features</a></li>
+                  <li><a href="hero-features.php">Hero Features</a></li>
+                  <li><a href="landing-hero-features.php">Landing Hero Features</a></li>
+                  <li><a href="subheaders.php">Subheaders</a></li>
+                </ul>
+              </li>
               <li><a href="inside-two-columns.php">Inside Page: 2 Columns</a></li>
               <li><a href="inside-three-columns.php">Inside Page: 3 Columns</a></li>
               <li><a href="inside-full-width.php">Inside Page: Full Width</a></li>
