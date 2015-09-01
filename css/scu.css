@@ -2436,6 +2436,29 @@ html.no-fontface .can-we.module.feature .can-we-body .can-we-box h3 {
     width: 80px;
     height: 80px;
   }
+  .vertical.can-we.module.feature .can-we-body .can-we-boxes {
+    position: absolute;
+    top: 1em;
+    bottom: 1em;
+    left: 0;
+    right: 1em;
+  }
+  .vertical.can-we.module.feature .can-we-body .col-xs-4 {
+    float: right;
+    clear: right;
+  }
+  .vertical.can-we.module.feature .can-we-body .can-we-box {
+    min-height: 140px;
+    margin-bottom: 1em;
+  }
+  .vertical.can-we.module.feature .can-we-body .can-we-box p {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  .vertical.can-we.module.feature .can-we-body .can-we-photo,
+  .vertical.can-we.module.feature .can-we-body .can-we-credit {
+    display: none;
+  }
 }
 @media (min-width: 1065px) {
   .can-we.module.feature .can-we-body {
