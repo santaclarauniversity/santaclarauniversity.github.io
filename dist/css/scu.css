@@ -201,38 +201,38 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 */
 @font-face {
   font-family: "Bauer Bodoni W01 Italic";
-  src: url("assets/fonts/0d956984-1d14-4bf5-bfbd-24047fe105f0.eot?#iefix");
-  src: url("assets/fonts/0d956984-1d14-4bf5-bfbd-24047fe105f0.eot?#iefix") format("eot"), url("assets/fonts/185ac1c7-6f53-44a3-9eb9-6426c900c088.woff2") format("woff2"), url("assets/fonts/47cb918f-38fe-4009-ae12-16659f98a1eb.woff") format("woff"), url("assets/fonts/37942b37-f74a-4adf-91a0-6866ad671859.ttf") format("truetype"), url("assets/fonts/1aa79473-3e74-468a-a0fe-f575dea12203.svg#1aa79473-3e74-468a-a0fe-f575dea12203") format("svg");
+  src: url("../assets/fonts/0d956984-1d14-4bf5-bfbd-24047fe105f0.eot?#iefix");
+  src: url("../assets/fonts/0d956984-1d14-4bf5-bfbd-24047fe105f0.eot?#iefix") format("eot"), url("../assets/fonts/185ac1c7-6f53-44a3-9eb9-6426c900c088.woff2") format("woff2"), url("../assets/fonts/47cb918f-38fe-4009-ae12-16659f98a1eb.woff") format("woff"), url("../assets/fonts/37942b37-f74a-4adf-91a0-6866ad671859.ttf") format("truetype"), url("../assets/fonts/1aa79473-3e74-468a-a0fe-f575dea12203.svg#1aa79473-3e74-468a-a0fe-f575dea12203") format("svg");
 }
 @font-face {
   font-family: "BauerBodoniW01-BlackIta";
-  src: url("assets/fonts/f5650444-5085-482f-95c4-fed344d7b399.eot?#iefix");
-  src: url("assets/fonts/f5650444-5085-482f-95c4-fed344d7b399.eot?#iefix") format("eot"), url("assets/fonts/806f1bc0-d615-41ad-b6e9-3f27b8e9b148.woff2") format("woff2"), url("assets/fonts/2e0c0536-949e-4b3a-a465-e562cf02d60b.woff") format("woff"), url("assets/fonts/f5de218c-65fe-4f39-b133-0f871722bfa5.ttf") format("truetype"), url("assets/fonts/be1fbad4-abf5-49be-a8ce-a23bc83cac9b.svg#be1fbad4-abf5-49be-a8ce-a23bc83cac9b") format("svg");
+  src: url("../assets/fonts/f5650444-5085-482f-95c4-fed344d7b399.eot?#iefix");
+  src: url("../assets/fonts/f5650444-5085-482f-95c4-fed344d7b399.eot?#iefix") format("eot"), url("../assets/fonts/806f1bc0-d615-41ad-b6e9-3f27b8e9b148.woff2") format("woff2"), url("../assets/fonts/2e0c0536-949e-4b3a-a465-e562cf02d60b.woff") format("woff"), url("../assets/fonts/f5de218c-65fe-4f39-b133-0f871722bfa5.ttf") format("truetype"), url("../assets/fonts/be1fbad4-abf5-49be-a8ce-a23bc83cac9b.svg#be1fbad4-abf5-49be-a8ce-a23bc83cac9b") format("svg");
 }
 @font-face {
   font-family: "Trade Gothic W01 Light";
-  src: url("assets/fonts/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix");
-  src: url("assets/fonts/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix") format("eot"), url("assets/fonts/5414f75e-5cb8-4357-88e5-5a294424c859.woff2") format("woff2"), url("assets/fonts/537b145a-6a7d-4787-81d9-7228d3a42458.woff") format("woff"), url("assets/fonts/8e50278c-45cd-4808-b774-24767d958f17.ttf") format("truetype"), url("assets/fonts/d918b947-5fcb-42e2-8286-a98a801876de.svg#d918b947-5fcb-42e2-8286-a98a801876de") format("svg");
+  src: url("../assets/fonts/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix");
+  src: url("../assets/fonts/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix") format("eot"), url("../assets/fonts/5414f75e-5cb8-4357-88e5-5a294424c859.woff2") format("woff2"), url("../assets/fonts/537b145a-6a7d-4787-81d9-7228d3a42458.woff") format("woff"), url("../assets/fonts/8e50278c-45cd-4808-b774-24767d958f17.ttf") format("truetype"), url("../assets/fonts/d918b947-5fcb-42e2-8286-a98a801876de.svg#d918b947-5fcb-42e2-8286-a98a801876de") format("svg");
 }
 @font-face {
   font-family: "TradeGothicW01-LightObl";
-  src: url("assets/fonts/b1721311-de06-4277-8dcb-bf39e072b75e.eot?#iefix");
-  src: url("assets/fonts/b1721311-de06-4277-8dcb-bf39e072b75e.eot?#iefix") format("eot"), url("assets/fonts/c71beaba-ad09-45b0-9e21-78db525b4d1c.woff2") format("woff2"), url("assets/fonts/c357a65e-dd87-4d11-8063-db04802d44c0.woff") format("woff"), url("assets/fonts/6b9ca17d-cb9d-43bb-8b43-93670b45b83f.ttf") format("truetype"), url("assets/fonts/198ed3e2-0cdf-496f-a0ef-86da8d4dde55.svg#198ed3e2-0cdf-496f-a0ef-86da8d4dde55") format("svg");
+  src: url("../assets/fonts/b1721311-de06-4277-8dcb-bf39e072b75e.eot?#iefix");
+  src: url("../assets/fonts/b1721311-de06-4277-8dcb-bf39e072b75e.eot?#iefix") format("eot"), url("../assets/fonts/c71beaba-ad09-45b0-9e21-78db525b4d1c.woff2") format("woff2"), url("../assets/fonts/c357a65e-dd87-4d11-8063-db04802d44c0.woff") format("woff"), url("../assets/fonts/6b9ca17d-cb9d-43bb-8b43-93670b45b83f.ttf") format("truetype"), url("../assets/fonts/198ed3e2-0cdf-496f-a0ef-86da8d4dde55.svg#198ed3e2-0cdf-496f-a0ef-86da8d4dde55") format("svg");
 }
 @font-face {
   font-family: "Trade Gothic W01 Bold_2";
-  src: url("assets/fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix");
-  src: url("assets/fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix") format("eot"), url("assets/fonts/7bb1c0cb-e6e9-44ea-ae0c-1984ad7e3339.woff2") format("woff2"), url("assets/fonts/1454a71d-cdbb-429c-8092-122f4493e0c7.woff") format("woff"), url("assets/fonts/d5ea405c-2180-4ff0-bd51-3e19fb280be4.ttf") format("truetype"), url("assets/fonts/70ac6679-cf48-4a0e-a909-d1e3bb4a1aa9.svg#70ac6679-cf48-4a0e-a909-d1e3bb4a1aa9") format("svg");
+  src: url("../assets/fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix");
+  src: url("../assets/fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix") format("eot"), url("../assets/fonts/7bb1c0cb-e6e9-44ea-ae0c-1984ad7e3339.woff2") format("woff2"), url("../assets/fonts/1454a71d-cdbb-429c-8092-122f4493e0c7.woff") format("woff"), url("../assets/fonts/d5ea405c-2180-4ff0-bd51-3e19fb280be4.ttf") format("truetype"), url("../assets/fonts/70ac6679-cf48-4a0e-a909-d1e3bb4a1aa9.svg#70ac6679-cf48-4a0e-a909-d1e3bb4a1aa9") format("svg");
 }
 @font-face {
   font-family: "TradeGothicW01-Bold2Obl";
-  src: url("assets/fonts/363fd092-cd55-4bd1-bdc5-cfc9a7057517.eot?#iefix");
-  src: url("assets/fonts/363fd092-cd55-4bd1-bdc5-cfc9a7057517.eot?#iefix") format("eot"), url("assets/fonts/2576748c-c86d-474c-b80b-33a1ce248599.woff2") format("woff2"), url("assets/fonts/25f577c3-f32b-4fbf-b684-3e7c1a76d1ea.woff") format("woff"), url("assets/fonts/2ed49e17-92ad-4026-9ae6-d20f88f21840.ttf") format("truetype"), url("assets/fonts/969cd675-2b4c-4baa-ada6-62bb7ace778f.svg#969cd675-2b4c-4baa-ada6-62bb7ace778f") format("svg");
+  src: url("../assets/fonts/363fd092-cd55-4bd1-bdc5-cfc9a7057517.eot?#iefix");
+  src: url("../assets/fonts/363fd092-cd55-4bd1-bdc5-cfc9a7057517.eot?#iefix") format("eot"), url("../assets/fonts/2576748c-c86d-474c-b80b-33a1ce248599.woff2") format("woff2"), url("../assets/fonts/25f577c3-f32b-4fbf-b684-3e7c1a76d1ea.woff") format("woff"), url("../assets/fonts/2ed49e17-92ad-4026-9ae6-d20f88f21840.ttf") format("truetype"), url("../assets/fonts/969cd675-2b4c-4baa-ada6-62bb7ace778f.svg#969cd675-2b4c-4baa-ada6-62bb7ace778f") format("svg");
 }
 @font-face {
   font-family: "Trajan W01 Regular";
-  src: url("assets/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix");
-  src: url("assets/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix") format("eot"), url("assets/fonts/610145ac-dd31-4024-b833-3ab0ce6b7847.woff2") format("woff2"), url("assets/fonts/b4312891-e355-4bdc-80c9-ef3dbf7bd916.woff") format("woff"), url("assets/fonts/124dc47b-32a0-4543-a60e-d8aad32782b4.ttf") format("truetype"), url("assets/fonts/001e534b-3742-45b3-b20b-d4c53c41a519.svg#001e534b-3742-45b3-b20b-d4c53c41a519") format("svg");
+  src: url("../assets/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix");
+  src: url("../assets/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix") format("eot"), url("../assets/fonts/610145ac-dd31-4024-b833-3ab0ce6b7847.woff2") format("woff2"), url("../assets/fonts/b4312891-e355-4bdc-80c9-ef3dbf7bd916.woff") format("woff"), url("../assets/fonts/124dc47b-32a0-4543-a60e-d8aad32782b4.ttf") format("truetype"), url("../assets/fonts/001e534b-3742-45b3-b20b-d4c53c41a519.svg#001e534b-3742-45b3-b20b-d4c53c41a519") format("svg");
 }
 h1,
 h5 {
@@ -572,7 +572,7 @@ header.site-header {
     display: inline-block;
     width: 41px;
     height: 19px;
-    background: url(assets/header-mobile-gateways-silhouettes.png) 0 0 no-repeat;
+    background: url(../assets/header-mobile-gateways-silhouettes.png) 0 0 no-repeat;
     font: inherit;
   }
   .site-header-search-and-toggles .menu-toggle .left-caret {
@@ -755,7 +755,7 @@ header.site-header {
   width: 40px;
   height: 40px;
   margin: 0;
-  background: url(assets/SCU-seal-85x85.png) 0 0 no-repeat;
+  background: url(../assets/SCU-seal-85x85.png) 0 0 no-repeat;
   box-sizing: content-box;
   background-size: 100% 100%;
   outline: 0;
@@ -794,7 +794,7 @@ header.site-header {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .site-header-with-seal .seal {
-    background-image: url(assets/SCU-seal-170x170.png);
+    background-image: url(../assets/SCU-seal-170x170.png);
   }
 }
 .site-header-with-seal .wordmarks {
@@ -1065,7 +1065,7 @@ header.site-header {
     background-image: linear-gradient(to right, transparent 0%, transparent 50%, #b30738 50%, #b30738 100%);
   }
   html.no-cssgradients .core-navigation {
-    background: transparent url(assets/bg-core-nav-background.gif) 50% 0 repeat-y;
+    background: transparent url(../assets/bg-core-nav-background.gif) 50% 0 repeat-y;
   }
   .core-navigation ul.nav-pills {
     margin: 0 0 0 97px;
@@ -1285,12 +1285,12 @@ header.site-header {
   width: 42px;
   height: 45px;
   margin: -12px 0 -23px -10px;
-  background: url(assets/header-mission.png) 0 0 no-repeat;
+  background: url(../assets/header-mission.png) 0 0 no-repeat;
   background-size: 100% 100%;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .gateway-navigation .nav > li.scu-nav .mission {
-    background-image: url(assets/header-mission@2x.png);
+    background-image: url(../assets/header-mission@2x.png);
   }
 }
 .gateway-navigation .nav > li.scu-nav .mission + span {
@@ -1453,11 +1453,11 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
 .gateway-navigation .people-gateways {
   display: inline-block;
   width: 64px;
-  background: url(assets/header-people.png) 50% 14px no-repeat;
+  background: url(../assets/header-people.png) 50% 14px no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .gateway-navigation .people-gateways {
-    background-image: url(assets/header-people@2x.png);
+    background-image: url(../assets/header-people@2x.png);
     background-size: 34px 16px;
   }
 }
@@ -1628,19 +1628,19 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
   margin-bottom: 7px;
 }
 .site-footer .facebook {
-  background: #3b5998 url(assets/social-media/facebook-32.png) 0 0 no-repeat;
+  background: #3b5998 url(../assets/social-media/facebook-32.png) 0 0 no-repeat;
 }
 .site-footer .instagram {
-  background: #3f729b url(assets/social-media/instagram-32.png) 0 0 no-repeat;
+  background: #3f729b url(../assets/social-media/instagram-32.png) 0 0 no-repeat;
 }
 .site-footer .linkedin {
-  background: #007fb1 url(assets/social-media/linkedin-32.png) 0 0 no-repeat;
+  background: #007fb1 url(../assets/social-media/linkedin-32.png) 0 0 no-repeat;
 }
 .site-footer .pinterest {
-  background: #cb2027 url(assets/social-media/pinterest-32.png) 0 0 no-repeat;
+  background: #cb2027 url(../assets/social-media/pinterest-32.png) 0 0 no-repeat;
 }
 .site-footer .twitter {
-  background: #00aced url(assets/social-media/twitter-32.png) 0 0 no-repeat;
+  background: #00aced url(../assets/social-media/twitter-32.png) 0 0 no-repeat;
 }
 .site-footer .social-icon {
   display: inline-block;
@@ -1696,19 +1696,19 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
 /* Retina monitor/screen styles */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .site-footer .facebook {
-    background-image: url(assets/social-media/facebook-64.png);
+    background-image: url(../assets/social-media/facebook-64.png);
   }
   .site-footer .instagram {
-    background-image: url(assets/social-media/instagram-64.png);
+    background-image: url(../assets/social-media/instagram-64.png);
   }
   .site-footer .linkedin {
-    background-image: url(assets/social-media/linkedin-64.png);
+    background-image: url(../assets/social-media/linkedin-64.png);
   }
   .site-footer .pinterest {
-    background-image: url(assets/social-media/pinterest-64.png);
+    background-image: url(../assets/social-media/pinterest-64.png);
   }
   .site-footer .twitter {
-    background-image: url(assets/social-media/twitter-64.png);
+    background-image: url(../assets/social-media/twitter-64.png);
   }
 }
 body.homepage {
@@ -2949,7 +2949,7 @@ html.no-fontface .feature-gallery-source {
   z-index: 0;
 }
 .person-spotlight.module.two-column .person-spotlight-overlay {
-  background-image: url(assets/person-spotlight-overlay-left.png);
+  background-image: url(../assets/person-spotlight-overlay-left.png);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -2957,7 +2957,7 @@ html.no-fontface .feature-gallery-source {
   /* Text on the left, spotlight on the right */
 }
 .person-spotlight.module.two-column.left-aligned .person-spotlight-overlay {
-  background-image: url(assets/person-spotlight-overlay-right.png);
+  background-image: url(../assets/person-spotlight-overlay-right.png);
 }
 .person-spotlight.module.two-column .person-spotlight-titles {
   z-index: 1;

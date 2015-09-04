@@ -25,7 +25,7 @@
 (function (module) {
 	if (typeof define === 'function' && define.amd) {
 		// AMD. Register as an anonymous module.
-		define(['jquery'], module);
+		define(['jquery.event.swipe'], module);
 	} else {
 		// Browser globals
 		module(jQuery);
@@ -603,7 +603,7 @@
 (function (thisModule) {
 	if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['jquery'], thisModule);
+        define(['jquery.event.swipe'], thisModule);
     } else if ((typeof module !== "undefined" && module !== null) && module.exports) {
         module.exports = thisModule;
 	} else {
