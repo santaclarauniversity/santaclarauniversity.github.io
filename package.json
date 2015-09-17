@@ -1,0 +1,28 @@
+{
+  "name": "scu-web-assets",
+  "version": "1.0.0",
+  "description": "SCU's Digital Assets Automated Build",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-jekyll": "^0.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santaclarauniversity/scu-web-assets.git"
+  },
+  "author": "Santa Clara University",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santaclarauniversity/scu-web-assets/issues"
+  },
+  "homepage": "https://github.com/santaclarauniversity/scu-web-assets#readme"
+}
