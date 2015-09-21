@@ -1,27 +1,30 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var path = require('path');
-var jekyll = require('gulp-jekyll');
+var $ = require('gulp-load-plugins')();
 
-gulp.task('default', function() {
-    console.log("I'm not doing anything but I look cool");
+gulp.task('default', function () {
+    console.log("I'm not doing anything.. yet!");
 });
 gulp.task('less', function () {
-    return gulp.src('./less/**/*.less')
+    console.log("Compiling LESS");
+    return gulp.src('./css/scu-less/scu.less')
         .pipe(less({
-            paths: [ path.join(__dirname, 'less', 'includes') ]
+            paths: [path.join(__dirname, 'less', 'includes')]
         }))
-        .pipe(gulp.dest('./public/css'));
+        .pipe(gulp.dest('./dist/css'));
 });
-gulp.task('docs', function() {
-    gulp.src(['./index.html', './_layouts/*.html', './_posts/*.{markdown,md}'])
-        .pipe(jekyll({
-            source: './',
-            destination: './deploy/',
-            bundleExec: true
-        }))
-        .pipe(gulp.dest('./deploy/'));
+gulp.task('docs', ['less'], function () {
+    console.log('Moving assets over to docs/dist');
+    gulp.src("./dist/**/*")
+        .pipe(gulp.dest('./docs/dist'));
+
+    console.log('Done. Rebuilding docs.');
+    return gulp.src(['./docs/_config.yml'])
+        .pipe($.shell([
+            'cd docs/ && jekyll build --config <%= file.path %>'
+        ]))
 });
-gulp.task('deploy', function() {
+gulp.task('deploy', function () {
 
 });

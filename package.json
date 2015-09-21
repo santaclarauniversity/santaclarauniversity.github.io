@@ -11,7 +11,10 @@
     "gulp-less": "^3.0.3",
     "gulp-jekyll": "^0.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-shell": "^0.4.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
