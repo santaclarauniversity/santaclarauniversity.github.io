@@ -4,6 +4,8 @@ This is our first attempt at completing an **automated build**.
 
 ### Installation
 
+First, install [Node.js][node.js].
+
 You need Gulp installed globally:
 
 ```sh
@@ -25,6 +27,6 @@ $ jekyll serve
 
 ### To-do:
 * Template demonstrations should become the style guide.
-* Make actual tasks for gulp; `build`, `deploy`
+* Make actual tasks for gulp; configure `default` and `deploy` steps.
 
-
+[node.js]: <http://nodejs.org>
