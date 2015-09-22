@@ -31,6 +31,8 @@
           <div class="intro">
             <p>Here are examples of two-column modules.</p>
           </div>
+           
+
           <h3>Person Spotlight</h3>
            <div class="two-column person-spotlight module">
                 <div class="person-spotlight-portrait">
@@ -59,6 +61,14 @@
                 <div class="person-spotlight-overlay sr-hide"></div>
               </div>
           <hr>
+          <h3>Featured Story</h3>
+          <div class="two-column featured-story module">
+                <a href="#" class="thumbnail"><img src="_examples/lg-1503-nash.jpg" alt=""></a>
+                <h4 class="featured-story-heading"><a href="#">A Wild Generosity</a></h4>
+                <p>On the retirement of Steve Nash '96 from pro basketball, writer Brian Doyle recalls the riveting display of graceful mastery, athleticism, and sheer creativity of his game.</p>
+                <p><a href="#">More in Alumni Stories &raquo;</a></p>
+           </div>
+           <hr>
           <h3>Feature Gallery</h3>
           <p>Based on <a href="http://getbootstrap.com/javascript/#carousel">Bootstrap's carousel module</a>, with some extra CSS additions to have a fade transition instead of a slide effect. Still working on: a show/hide of captions for mobile screens, and IE11 vertical caption centering flexbox issues.</p>
 <div class="two-column feature-gallery module">
