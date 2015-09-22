@@ -2414,7 +2414,7 @@ html.no-fontface .can-we.module.feature .can-we-body .can-we-box h3 {
 }
 .can-we.module.feature .can-we-body .can-we-box .can-we-credit {
   text-transform: uppercase;
-  max-width: 75%;
+  max-width: 60%;
   font-size: 10px;
   position: absolute;
   left: 20px;
