@@ -1,8 +1,8 @@
-@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35");
 /**
  * Updates to the Bootstrap framework that couldn't be done in the customization web form:
  */
 /* Rows (as in: .row) that come after text elements should have some better top spacing */
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35");
 p + .row,
 ul + .row,
 ol + .row,
@@ -453,16 +453,33 @@ html.no-fontface .lw_cal_today_day {
 }
 /* HEADER TEXT */
 .title-large {
-  font-size: 40px;
   display: block;
-}
-.title-large {
   text-decoration: none;
-  display: block;
+  font-size: 24px;
+}
+@media (min-width: 768px) {
+  .title-large {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1065px) {
+  .title-large {
+    font-size: 40px;
+  }
 }
 .title-small {
-  font-size: 20px;
   text-transform: uppercase;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .title-small {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1065px) {
+  .title-small {
+    font-size: 20px;
+  }
 }
 /* FONT */
 /* default is Trajan */
