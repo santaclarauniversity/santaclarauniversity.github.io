@@ -10,6 +10,7 @@
     <title>SCU | SCU Templates and Modules | Two Column Modules</title>
 
 	<?php require('includes/head.php'); ?>
+
   </head>
   <body>
 	<?php require('includes/header.php'); ?>
@@ -31,7 +32,7 @@
             <p>Here are examples of two-column modules.</p>
           </div>
           <h3>Person Spotlight</h3>
-                        <div class="two-column person-spotlight module">
+           <div class="two-column person-spotlight module">
                 <div class="person-spotlight-portrait">
                   <img src="_examples/elspeth-rossetti.jpg" alt="Elspeth Rossetti" width="670" height="242">
                 </div>
@@ -60,24 +61,24 @@
           <hr>
           <h3>Feature Gallery</h3>
           <p>Based on <a href="http://getbootstrap.com/javascript/#carousel">Bootstrap's carousel module</a>, with some extra CSS additions to have a fade transition instead of a slide effect. Still working on: a show/hide of captions for mobile screens, and IE11 vertical caption centering flexbox issues.</p>
-          <div class="two-column feature-gallery module">
+<div class="two-column feature-gallery module">
 
 <div id="feature-gallery-example" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox"><!-- Wrapper for slides -->
     <div class="item active">
-      <img src="_examples/feature-gallery-sprinksgiving.jpg" alt="Sprinksgiving" width="750" height="365">
+      <a href="#" class="thumbnail"><img src="_examples/feature-gallery-sprinksgiving.jpg" alt="Sprinksgiving" width="750" height="365"></a>
       <div class="carousel-caption">
         <p>EVENT: On April 15, 2015 we welcome our third annual <a href="http://www.scu.edu/give/direct-your-gift/santa-clara-fund/sprinksgiving/">Sprinksgiving</a> event, to reflect upon our growing culture of gratitude and donor appreciation.</p>
       </div>
     </div>
     <div class="item">
-      <img src="_examples/feature-gallery-nash.jpg" alt="" width="750" height="365">
+      <a href="#" class="thumbnail"><img src="_examples/feature-gallery-nash.jpg" alt="" width="750" height="365"></a>
       <div class="carousel-caption">
         <p>PHOTO: And <a href="#">a link to a story</a> about this alumnus. <a href="#" class="feature-gallery-source">Source</a></p>
       </div>
     </div>
     <div class="item">
-      <img src="_examples/feature-gallery-commencement.jpg" alt="Commencement 2014" width="750" height="365">
+      <a href="#" class="thumbnail"><img src="_examples/feature-gallery-commencement.jpg" alt="Commencement 2014" width="750" height="365"></a>
       <div class="carousel-caption">
         <p>PHOTO: Graduating classmembers celebrate at 2014 Commencement. We'll use this as an example of a very long caption to demonstrate what happens when text wraps and runs longer than two lines. The Feature Gallery caption space can expand upwards.</p>
       </div>
@@ -98,6 +99,68 @@
 </div>
           <hr>
           
+          
+<h3>Gallery</h3>
+<div class="two-column gallery module">
+
+	<div class="row">
+		<div class="col-sm-9 full-image">
+			<div class="gallery-image">
+				<a href="#" class="thumbnail"><img src="_examples/feature-gallery-sprinksgiving.jpg" alt="Sprinksgiving"></a>
+				<div class="gallery-caption">
+					<p><strong>Caption for the selected photo.</strong>  Libero tempore, career nobis est eligendi optio lorem ipsum in quo with qui dolorem eum. Quisque sit amet pretium  ultrices, faucibus elit eu, rhoncus justo, non et risus.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="slides">
+				<div class="gallery-image">
+					<a href="#" class="thumbnail"><img src="_examples/cuba.jpg" alt="cuba"></a>
+					<div class="gallery-caption">
+						<p>Caption for Cuba photo.</p>
+					</div>
+				</div>
+				<div class="gallery-image">
+					<a href="#" class="thumbnail"><img src="_examples/feature-gallery-nash.jpg" alt="Steve Nash"></a>
+					<div class="gallery-caption">
+						<p>Caption for Steve Nash photo.</p>
+					</div>
+				</div>
+				<div class="gallery-image">
+					<a href="#" class="thumbnail"><img src="_examples/thegame.jpg" alt="thegame"></a>
+					<div class="gallery-caption">
+						<p>Caption for Game photo.</p>
+					</div>
+				</div>
+				<div class="gallery-image">
+					<a href="#" class="thumbnail"><img src="_examples/feature-gallery-commencement.jpg" alt="Commencement 2014"></a>
+					<div class="gallery-caption">
+						<p>Caption for Commencement 2014 photo.</p>
+					</div>
+				</div>
+				<div class="gallery-image">
+					<a href="#" class="thumbnail"><img src="_examples/feature-gallery-nash.jpg" alt="Steve Nash"></a>
+					<div class="gallery-caption">
+						<p>Caption for Steve Nash photo.</p>
+					</div>
+				</div>
+				<div class="gallery-image">
+					<a href="#" class="thumbnail"><img src="_examples/feature-gallery-sprinksgiving.jpg" alt="Sprinksgiving"></a>
+					<div class="gallery-caption">
+						<p>Caption for Sprinksgiving photo.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+
+
+
+          <hr>
+                    
           <h3>News List</h3>
                         <div class="two-column news module">
                 <ul class="media-list">

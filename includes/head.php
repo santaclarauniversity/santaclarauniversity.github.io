@@ -1,5 +1,7 @@
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-scu/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/slick/slick.css" rel="stylesheet">
+    <link href="css/slick/slick-theme.css" rel="stylesheet">
     <link href="css/scu.css" rel="stylesheet">
     <script src="js/modernizr.min.js"></script>
     
