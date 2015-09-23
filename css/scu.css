@@ -3680,6 +3680,10 @@ html.no-fontface .feature-gallery-source {
   bottom: 0;
   border: 1px solid #b30738;
 }
+.link-button.stroked:hover {
+  text-decoration: none;
+  outline-color: #5d101d;
+}
 .link-button.white {
   padding: 14px 10px;
   background-color: #ffffff;
