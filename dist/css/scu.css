@@ -453,16 +453,33 @@ html.no-fontface .lw_cal_today_day {
 }
 /* HEADER TEXT */
 .title-large {
-  font-size: 40px;
   display: block;
-}
-.title-large {
   text-decoration: none;
-  display: block;
+  font-size: 24px;
+}
+@media (min-width: 768px) {
+  .title-large {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1065px) {
+  .title-large {
+    font-size: 40px;
+  }
 }
 .title-small {
-  font-size: 20px;
   text-transform: uppercase;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .title-small {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1065px) {
+  .title-small {
+    font-size: 20px;
+  }
 }
 /* FONT */
 /* default is Trajan */
@@ -929,39 +946,39 @@ header.site-header {
     height: 52px;
   }
 }
-.main-navigation li {
+.main-navigation .nav > li {
   position: relative;
   margin: 0;
   font-size: 13px;
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
-  .main-navigation li {
+  .main-navigation .nav > li {
     font-size: 12px;
   }
 }
 @media (min-width: 825px) {
-  .main-navigation li {
+  .main-navigation .nav > li {
     font-size: 13px;
   }
 }
 @media (min-width: 930px) {
-  .main-navigation li {
+  .main-navigation .nav > li {
     font-size: 14px;
   }
 }
 @media (min-width: 1065px) {
-  .main-navigation li {
+  .main-navigation .nav > li {
     font-size: 15px;
   }
 }
 @media (min-width: 1200px) {
-  .main-navigation li {
+  .main-navigation .nav > li {
     font-size: 17px;
   }
 }
 @media (min-width: 768px) {
-  .main-navigation li + li::before {
+  .main-navigation .nav > li + li::before {
     content: '';
     position: absolute;
     left: 0;
@@ -1031,13 +1048,20 @@ header.site-header {
     padding-left: 18px;
   }
 }
+.main-navigation .nav-pills > li .dropdown-menu {
+  margin-top: -1px;
+  text-transform: none;
+}
+.main-navigation .nav-pills > li:hover .dropdown-menu {
+  display: block;
+}
 .main-navigation .nav-pills > li > a:hover,
 .main-navigation .nav-pills > li > span > a:hover {
   background-color: #b30738;
   color: #ffffff;
 }
 /* Core Navigation */
-.core-navigation ul {
+.core-navigation > div > ul {
   background-color: #b30738;
   border-top: 1px solid #b30738;
   border-bottom: 1px solid #b30738;
@@ -1495,6 +1519,7 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
   width: 100%;
   height: 150px;
   background-color: #611b25;
+  margin-top: -20px;
 }
 .subheader.module.office {
   background-color: #464646;
@@ -1537,6 +1562,21 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
   font-size: 18px;
   text-transform: uppercase;
   color: #e9e8d5;
+}
+@media (min-width: 768px) {
+  .subheader.module {
+    margin-top: -35px;
+  }
+}
+@media (min-width: 1065px) {
+  .subheader.module {
+    margin-top: -58px;
+  }
+}
+@media (min-width: 1200px) {
+  .subheader.module {
+    margin-top: -60px;
+  }
 }
 .site-header.uses-core-navigation + .subheader.module {
   margin-top: -20px;
@@ -2374,7 +2414,7 @@ html.no-fontface .can-we.module.feature .can-we-body .can-we-box h3 {
 }
 .can-we.module.feature .can-we-body .can-we-box .can-we-credit {
   text-transform: uppercase;
-  max-width: 75%;
+  max-width: 60%;
   font-size: 10px;
   position: absolute;
   left: 20px;
@@ -2435,6 +2475,29 @@ html.no-fontface .can-we.module.feature .can-we-body .can-we-box h3 {
   .can-we.module.feature .can-we-body .can-we-box .can-we-photo {
     width: 80px;
     height: 80px;
+  }
+  .vertical.can-we.module.feature .can-we-body .can-we-boxes {
+    position: absolute;
+    top: 1em;
+    bottom: 1em;
+    left: 0;
+    right: 1em;
+  }
+  .vertical.can-we.module.feature .can-we-body .col-xs-4 {
+    float: right;
+    clear: right;
+  }
+  .vertical.can-we.module.feature .can-we-body .can-we-box {
+    min-height: 140px;
+    margin-bottom: 1em;
+  }
+  .vertical.can-we.module.feature .can-we-body .can-we-box p {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  .vertical.can-we.module.feature .can-we-body .can-we-photo,
+  .vertical.can-we.module.feature .can-we-body .can-we-credit {
+    display: none;
   }
 }
 @media (min-width: 1065px) {
@@ -2577,6 +2640,9 @@ html.no-fontface .can-we.module.feature .can-we-body .can-we-box h3 {
  * Feature Gallery: 744px wide, suggested size: 744px by 389px wide. (1116px by 584px for retina screens.)
  * Jumbotron: 1140px wide, suggested size: 1140px by 596px tall. (1710px by 894px for retina screens.)
  */
+.feature-gallery.module .thumbnail {
+  margin-bottom: 0;
+}
 .feature-gallery.module.two-column {
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.18);
   -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.18);
@@ -2733,6 +2799,297 @@ html.no-fontface .feature-gallery-source {
   .site-header:not(.uses-core-navigation) + .container > .row > .col-xs-12 > .full-width.feature-gallery.module {
     margin-top: -55px;
   }
+}
+.gallery.module .full-image {
+  padding-right: 0;
+}
+.gallery.module .full-image img {
+  max-height: 350px;
+  width: auto;
+}
+.gallery.module .slides {
+  height: 330px;
+  overflow: hidden;
+  padding-right: 15px;
+  /* space for scrollbar */
+  margin-right: -15px;
+}
+.gallery.module .slides .gallery-caption {
+  display: none;
+}
+.js .gallery.module .slides {
+  display: none;
+  /* fade in slides once scrollbar has loaded */
+}
+.gallery.module .gallery-image {
+  padding-top: 2px;
+  /* space for image shadow */
+}
+@media (max-width: 767px) {
+  .gallery.module .full-image {
+    padding-right: 15px;
+  }
+  .gallery.module .slides {
+    width: 100%;
+    height: 135px;
+    padding-bottom: 15px;
+    /* space for scrollbar */
+    margin-bottom: -15px;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .gallery.module .slides .gallery-image {
+    display: inline-block;
+    float: left;
+    clear: none;
+    margin-right: 15px;
+  }
+  .gallery.module .slides .gallery-image:last-child {
+    margin-right: 0;
+  }
+  .gallery.module .slides .gallery-image img {
+    height: 110px;
+    width: auto;
+  }
+}
+/* 
+------------------------------------------------------------------------------------------------------------------------
+ GALLERY SCROLLBAR STYLES
+------------------------------------------------------------------------------------------------------------------------
+*/
+.mCustomScrollbar {
+  -ms-touch-action: none;
+  touch-action: none;
+  /* MSPointer events - direct all pointer events to js */
+}
+.mCustomScrollbar.mCS_no_scrollbar,
+.mCustomScrollbar.mCS_touch_action {
+  -ms-touch-action: auto;
+  touch-action: auto;
+}
+.mCustomScrollBox {
+  /* contains plugin's markup */
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  max-width: 100%;
+  outline: none;
+  direction: ltr;
+}
+.mCSB_container {
+  /* contains the original content */
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+.mCSB_inside > .mCSB_container {
+  margin-right: 30px;
+}
+.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-right: 0;
+}
+/* non-visible scrollbar */
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container {
+  /* RTL direction/left-side scrollbar */
+  margin-right: 0;
+  margin-left: 30px;
+}
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-left: 0;
+}
+/* RTL direction/left-side scrollbar */
+.mCSB_scrollTools {
+  /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
+  position: absolute;
+  width: 16px;
+  height: auto;
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.mCSB_outside + .mCSB_scrollTools {
+  right: -26px;
+}
+/* scrollbar position: outside */
+.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools,
+.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools {
+  /* RTL direction/left-side scrollbar */
+  right: auto;
+  left: 0;
+}
+.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools {
+  left: -26px;
+}
+/* RTL direction/left-side scrollbar (scrollbar position: outside) */
+.mCSB_scrollTools .mCSB_draggerContainer {
+  /* contains the draggable element and dragger rail markup */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+}
+.mCSB_scrollTools a + .mCSB_draggerContainer {
+  margin: 20px 0;
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+  width: 2px;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+}
+.mCSB_scrollTools .mCSB_dragger {
+  /* the draggable element */
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  /* minimum dragger height */
+  z-index: 1;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  /* the dragger element */
+  position: relative;
+  width: 4px;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  text-align: center;
+}
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  width: 12px;
+  /* auto-expanded scrollbar */
+}
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  width: 8px;
+  /* auto-expanded scrollbar */
+}
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown {
+  display: block;
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.mCSB_scrollTools .mCSB_buttonDown {
+  bottom: 0;
+}
+.mCSB_horizontal.mCSB_inside > .mCSB_container {
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+.mCSB_horizontal.mCSB_outside > .mCSB_container {
+  min-height: 100%;
+}
+.mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden {
+  margin-bottom: 0;
+}
+/* non-visible scrollbar */
+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  width: auto;
+  height: 16px;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  bottom: -26px;
+}
+/* scrollbar position: outside */
+.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer {
+  margin: 0 20px;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 2px;
+  margin: 7px 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 30px;
+  /* minimum dragger width */
+  height: 100%;
+  left: 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 4px;
+  margin: 6px auto;
+}
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  height: 12px;
+  /* auto-expanded scrollbar */
+  margin: 2px auto;
+}
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  height: 8px;
+  /* auto-expanded scrollbar */
+  margin: 4px 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft {
+  left: 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+  right: 0;
+}
+/* theme: "minimal" */
+.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical,
+.mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical {
+  right: 0;
+  margin: 12px 0;
+}
+.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  bottom: 0;
+  margin: 0 12px;
+}
+.mCS-minimal.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+}
+.mCS-minimal.mCSB_scrollTools_vertical .mCSB_dragger,
+.mCS-minimal-dark.mCSB_scrollTools_vertical .mCSB_dragger {
+  height: 50px;
+}
+.mCS-minimal.mCSB_scrollTools_horizontal .mCSB_dragger,
+.mCS-minimal-dark.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 50px;
+}
+.mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #a6a6a6;
+  background-color: rgba(0, 0, 0, 0.35);
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+.mCS-minimal.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-minimal.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  opacity: 1;
 }
 /**
  * Events List module:
@@ -3657,6 +4014,57 @@ html.flexbox .infographic.module.window .infographic-label {
 }
 html.flexbox .infographic.module.window .infographic-label {
   padding-top: 8px;
+}
+/*  Search Results  */
+h2.search_title span {
+  font-family: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
+}
+html.no-fontface h2.search_title span {
+  font-weight: 600;
+  font-style: italic;
+}
+.search_title,
+.search_nav {
+  padding: 15px;
+  margin-bottom: 0;
+  color: #000000;
+}
+.g_result {
+  padding: 15px;
+  position: relative;
+}
+.g_result p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.g_result p a {
+  color: #000000;
+}
+.g_result:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  content: ' ';
+  height: 1px;
+  border-top: 1px solid #cecece;
+}
+.g_result:first-child {
+  border-left: 10px solid #b30738;
+}
+.g_result:first-child a {
+  color: #b30738;
+}
+.g_result:last-child {
+  border: none;
+}
+@media (min-width: 768px) {
+  .search_title,
+  .search_nav,
+  .g_result {
+    padding: 15px 40px;
+  }
 }
 /* Retina-display-only show/hide classes: */
 .retina-only {

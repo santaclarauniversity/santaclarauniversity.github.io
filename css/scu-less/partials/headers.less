@@ -29,7 +29,6 @@
       padding-bottom: 26px;
     }
   }
-  
   .wordmarks,
   .group-logo {
     line-height:1.3;
@@ -55,11 +54,24 @@
 // Header style options
 	
 /* HEADER TEXT */
-	.title-large {font-size:40px; display:block;}	
-	.title-large {text-decoration: none;display:block;}	
-	.title-small {font-size:20px; text-transform: uppercase;}	
-	
-	
+.title-large { display:block;text-decoration: none;	font-size:24px;
+    @media (min-width: @screen-sm-min) {
+      font-size: 30px;
+	}
+    @media (min-width: @screen-md-min) {
+      font-size:40px;
+    }
+}
+.title-small { text-transform: uppercase; font-size:12px;
+    @media (min-width: @screen-sm-min) {
+      font-size: 16px;
+	}
+    @media (min-width: @screen-md-min) {
+      font-size:20px;
+    }
+}
+
+
 /* FONT */
 
 	/* default is Trajan */
@@ -443,7 +455,7 @@
   @media (min-width: @screen-lg-min) {
     height: 52px;
   }
-  li {
+  .nav > li {
     position: relative;
     margin: 0;
     font-size: 13px;
@@ -515,6 +527,13 @@
         padding-left: 18px;
       }
     }
+    
+   .dropdown-menu {
+      margin-top:-1px;
+      text-transform: none;
+	}
+    &:hover .dropdown-menu {display:block;}
+
   }
   .nav-pills > li > a:hover,
   .nav-pills > li > span > a:hover {
@@ -525,7 +544,7 @@
 /* Core Navigation */
 .core-navigation {
   //background: @brand-red;
-  ul {
+  > div > ul {
     background-color: @brand-red;
     border-top: 1px solid @brand-red;
     border-bottom: 1px solid @brand-red;
@@ -924,5 +943,65 @@
   }
   a.glyphicon {
     font-size: 18px;
+  }
+}
+
+/**
+ * Subheader module
+ */
+
+.subheader.module {
+  width: 100%;
+  height: 150px;
+  background-color: #611b25;
+  &.office {
+    background-color: #464646;
+  }
+  
+  .container {
+    height: 150px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    display: table-cell;
+    height: 150px;
+    padding: 10px 0 20px;
+    margin: 0;
+    font-size: 45px;
+    line-height: 1.2;
+    color: @white;
+    vertical-align: bottom;
+    @media (min-width: @screen-sm-min) {
+      font-size: 55px;
+    }
+
+    span {
+      display: block;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #e9e8d5;
+    }
+  }
+  margin-top:-20px;
+  @media (min-width: @screen-sm-min) {
+	margin-top: -35px;
+   }
+   @media (min-width: @screen-md-min) {
+	  margin-top: -58px;
+   }
+   @media (min-width: @screen-lg-min) {
+	  margin-top: -60px;
+   }
+  .site-header.uses-core-navigation + & {
+    margin-top: -20px;
+    @media (min-width: @screen-sm-min) {
+      margin-top: -55px;
+    }
+    @media (min-width: @screen-md-min) {
+      margin-top: -78px;
+    }
+    @media (min-width: @screen-lg-min) {
+      margin-top: -80px;
+    }
   }
 }

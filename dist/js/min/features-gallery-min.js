@@ -1,0 +1,1 @@
+$(function(){$(".gallery.module .slides").slick({slidesToShow:4,infinite:!1,slidesToScroll:1,speed:300,vertical:!0,verticalSwiping:!0})});
