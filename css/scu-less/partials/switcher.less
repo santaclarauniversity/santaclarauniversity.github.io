@@ -1,0 +1,32 @@
+/**
+ * Piggybacks on styles from buttons.less.
+ */
+ 
+ 
+.switcher.link-button {
+	cursor:pointer;
+	> a {
+		display:block;
+		color:inherit;
+		&:focus {
+			text-decoration: none;
+		}
+	} 
+	.module {
+		margin-top:1rem;
+		ul {margin-bottom:2rem;}
+		display:none;
+	}
+	&.on {
+		cursor:auto;
+		max-width:none;
+		text-align:left;
+		padding:14px 24px;
+		> a {
+			border-bottom: 1px solid @light-gray;
+		}
+		h4 a {color: @medium-gray; text-decoration: underline;}
+		.module {display:block;}
+		&:hover {background:none;}
+	}
+}

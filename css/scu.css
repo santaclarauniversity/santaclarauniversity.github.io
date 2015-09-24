@@ -2607,6 +2607,45 @@ html.no-fontface .can-we.module.feature .can-we-body .can-we-box h3 {
   margin-bottom: 0;
 }
 /**
+ * Piggybacks on styles from buttons.less.
+ */
+.switcher.link-button {
+  cursor: pointer;
+}
+.switcher.link-button > a {
+  display: block;
+  color: inherit;
+}
+.switcher.link-button > a:focus {
+  text-decoration: none;
+}
+.switcher.link-button .module {
+  margin-top: 1rem;
+  display: none;
+}
+.switcher.link-button .module ul {
+  margin-bottom: 2rem;
+}
+.switcher.link-button.on {
+  cursor: auto;
+  max-width: none;
+  text-align: left;
+  padding: 14px 24px;
+}
+.switcher.link-button.on > a {
+  border-bottom: 1px solid #cecece;
+}
+.switcher.link-button.on h4 a {
+  color: #6d6d6d;
+  text-decoration: underline;
+}
+.switcher.link-button.on .module {
+  display: block;
+}
+.switcher.link-button.on:hover {
+  background: none;
+}
+/**
  * Featured Story module
  *
  * For showing a single story to be featured.
