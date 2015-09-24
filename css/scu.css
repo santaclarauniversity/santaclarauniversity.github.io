@@ -3329,6 +3329,14 @@ html.no-fontface .feature-gallery-source {
   text-transform: none;
   color: #9e1b32;
 }
+.col-sm-8 .person-spotlight.module.one-column {
+  /* one-column profile style inside two-column spaces: float left, to create a two column layout */
+  float: left;
+  margin-top: 0;
+}
+.col-sm-8 .person-spotlight.module.one-column:nth-child(2n+1) {
+  clear: left;
+}
 .person-spotlight.module.two-column {
   /* The two-column version has the spotlight overlay */
   position: relative;
