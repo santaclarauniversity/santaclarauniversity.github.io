@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>My Own Business, Inc.</title>
+    <title>My Own Business Institute</title>
 
 	<?php require('includes/head.php'); ?>
 	<link rel="stylesheet" href="MOBI.css"/>
@@ -15,19 +15,18 @@
   </head>
   <body>
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
-          <header class="site-header site-header-custom-title gray-nav">
+    <header class="site-header site-header-with-seal gray-nav">
 
       <div class="site-header-text-and-search">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 col-sm-9 site-header-titles">
-              <h1>My Own Business, Inc.</h1>
-              <p class="subhead">Free online courses for business entrepreneurs</p>
+            <div class="col-xs-12 site-header-titles">
+              <a href="index.php" class="text-hide pull-left seal">Santa Clara University</a>
+              <div class="wordmarks">
+			   		<a href="index.html" class="title-large">My Own Business Institute</a>
+			   		<a href="index.html" class="title-small">Leavey School of Business</a>
+	            </div>
             </div>
-            <div class="col-sm-3 site-logo">
-                <img src="MOBI-symbol.png" alt="MOBI-symbol" width="" height="" />
-            </div>
-            
             
             
           </div>
@@ -94,112 +93,16 @@
             </li>
           </ul>
           <ul class="nav nav-pills navbar-right">
-            <li><a href="#">Leavey School of Business</a></li>
-            <li class="dropdown scu-gateways">
-              <a href="#" class="dropdown-toggle text-hide hidden-xs people-gateways" data-toggle="dropdown" role="button" aria-expanded="false">People Gateways</a>
-              <div class="dropdown-menu">
-                <div class="container">
-                  <ul role="menu" class="nav nav-pills navbar-right">
-                    <li><a href="#">Students</a></li>
-                    <li><a href="#">Faculty & Staff</a></li>
-                    <li><a href="#">Families</a></li>
-                    <li><a href="#">Alumni</a></li>
-                    <li><a href="#">Visitors</a></li>
-                  </ul>
-                </div>
-              </div>
+            <li class="">
+				<a href="#">Log in for courses:</a>
             </li>
-            <li class="slide-menu"><a href="offices-services.html" role="button" aria-expanded="false"><span class="gateway-dropdown">Offices & Services <span class="caret"></span></span></a>
-              <div class="slide-panel">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <h6>Offices of SCU</h6>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <ul role="menu">
-                            <li><a href="#">Education and Counseling Psychology</a></li>
-                            <li><a href="#">School of Engineering</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-6">
-                          <ul role="menu">
-                            <li><a href="#">Jesuit School of Theology</a></li>
-                            <li><a href="#" class="more-link">All Offices of SCU &raquo;</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <h6>Services at SCU</h6>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <ul>
-                            <li><a href="#">An SCU Service Link</a></li>
-                            <li><a href="#">Another Service of SCU</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-6">
-                          <ul>
-                            <li><a href="#">Ignatian Center for Jesuit Education</a></li>
-                            <li><a href="#" class="more-link">All Services at SCU &raquo;</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="slide-menu"><a href="centers-schools.html" role="button" aria-expanded="false"><span class="gateway-dropdown">Centers & Schools <span class="caret"></span></span></a>
-              <div class="slide-panel">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <h6>Schools &amp; Colleges</h6>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <ul role="menu">
-                            <li><a href="#">College of Arts & Sciences</a></li>
-                            <li><a href="#">Education and Counseling Psychology</a></li>
-                            <li><a href="#">Leavey School of Business</a></li>
-                            <li><a href="#">School of Engineering</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-6">
-                          <ul role="menu">
-                            <li><a href="#">Jesuit School of Theology</a></li>
-                            <li><a href="#">School of Law</a></li>
-                            <li><a href="#">Summer School</a></li>
-                            <li><a href="#" class="more-link">All Schools & Colleges &raquo;</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <h6>Centers of Distinction</h6>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <ul>
-                            <li><a href="#">Center for Science, Technology, and Society</a></li>
-                            <li><a href="#">Ignatian Center for Jesuit Education</a></li>
-                            <li><a href="#">Markkula Center for Applied Ethics</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-6">
-                          <ul>
-                            <li><a href="#">A sample center link</a></li>
-                            <li><a href="#">A center link of distinction</a></li>
-                            <li><a href="#">Another Center Yonder</a></li>
-                            <li><a href="#" class="more-link">All Centers & Institutes &raquo;</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
+            <li class="">
+	            <form action="http://www.myownbusiness.org/course/login/index.php" method="post" id="MOBI-login">
+					<input type="text" name="username" id="username" placeholder="USERNAME">
+					<input type="password" name="password" id="password" placeholder="PASSWORD">
+					<button class="btn btn-default" type="submit" id="loginbtn" >Go</button>
+	            </form>
+            </li>            
             <li class="hidden-xs dropdown dropdown-search">
               <a href="#" class="glyphicon glyphicon-search" data-toggle="dropdown" role="button" aria-expanded="false"></a>
               <div class="dropdown-menu">
@@ -220,13 +123,20 @@
     
     </header>
     <div class="hero feature module" style="background-image:url(MOBI.jpg);">
-      <div class="container hero-body white-text">
+      <div class="container hero-body">
         <div class="row">
-          <div class="col-xs-12 quiz">
-            <p class="quiz-question">The single <strong>most common mistake</strong><br/> made by <strong>entrepreneurs</strong> is:</p>
-            <p class="quiz-blank"><span>not having sufficient money.</span></p>
-            <p class="quiz-options"><span id="quiz-true"><input type="radio" name="quiz-radio" value="true"/>True</span><span id="quiz-false"><input type="radio" name="quiz-radio" value="false"/>False</span></p>
+          <div class="col-sm-8">
+	          <h2><strong>Small businesses account for the majority of new jobs in the US economy.</strong></h2>
 
+			  <p class="emphasis">Is it time to start yours?</p>
+
+			  <p class="opening">The My Own Business Institute has provided free business courses to thousands of entrepreneurs around the world since 2000.</p>
+          </div>
+          <div class="col-sm-4">
+              <a class="maroon link-button" href="#" role="button">Free Business Courses</a>
+              <a class="maroon link-button" href="#" role="button">Sample Business Plans</a>
+              <a class="maroon link-button" href="#" role="button">Licenses & Permits</a>
+              <a class="maroon link-button" href="#" role="button">How to Get Started</a>
           </div>
         </div>
       </div>      
@@ -243,21 +153,11 @@
                   <img src="MOBI-grape.jpg" alt="" width="750" height="365">
                     <div class="MOBI-testimonial">
                         <img src="/_examples/MOBI-Matt-Reid.jpg"/>
-                        <blockquote><strong>“Early on, we had so many questions - and MOBI had all the answers.”</strong>
-                            <div>- Matt Reid, winemaker <br/>
-                            Calistoga, California, USA
-                           </div>
-
+                        <blockquote><strong>“Early on, we had so many questions.  <br/>MOBI had all the answers.”</strong>
                         </blockquote>
                     </div>
                   <div class="carousel-caption">
-                    <p>PHOTO: And <a href="#">a link to a story</a> about this alumnus. <a href="#" class="feature-gallery-source">Source</a></p>
-                  </div>
-                </div>
-                <div class="item">
-                  <img src="_examples/feature-gallery-commencement.jpg" alt="Commencement 2014" width="750" height="365">
-                  <div class="carousel-caption">
-                    <p>PHOTO: Graduating classmembers celebrate at 2014 Commencement. We'll use this as an example of a very long caption to demonstrate what happens when text wraps and runs longer than two lines. The Feature Gallery caption space can expand upwards.</p>
+                    <p>Winemaker <a href="#">Matt Reid</a> and his wife Marcy Webb conceived <a href="#">The People’s Wine Revolution</a> to bring great wines to all at reasonable prices.</p>
                   </div>
                 </div>
               </div>
@@ -275,7 +175,7 @@
             
             </div>
           <div class="intro">
-            <p>If you’re looking to start a business, start here. MyOwnBusiness.org is the world’s leading provider of <a href="#">online education for entrepreneurs.</a></p>
+            <p>MyOwnBusiness.org is the world’s leading provider of <a href="#">online education for entrepreneurs.</a></p>
           </div>
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
               <div class="panel panel-default">
@@ -288,7 +188,7 @@
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                   <div class="panel-body panel-with-caret">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                   The popular original course is designed for the entrepreneur who wants to start a business. Our 15 sessions cover the most important topics that are clearly explained with emphasis on learning how to write a business plan.
                   </div>
                 </div>
               </div>
@@ -302,7 +202,7 @@
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                   <div class="panel-body panel-with-caret">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    This new course is for established business owners to help take your business to the next level. Strengthen your operations, seize opportunities and plan for the future.
                   </div>
                 </div>
               </div>
@@ -328,9 +228,9 @@
               </div>
               <div class="one-column video module">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/23wgwaLEEgo" frameborder="0" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" width="560" height="315" src="http://www.youtube.com/v/Ej_G-N6djdY" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="video-caption">Video: <a href="https://www.youtube.com/watch?v=23wgwaLEEgo">What is a Business?</a></p>
+                <p class="video-caption">Video: <a href="https://www.youtube.com/watch?v=23wgwaLEEgo">A Transformational Gift for Entrepreneurial Education at SCU</a></p>
               </div>
         </div>
       </div>
