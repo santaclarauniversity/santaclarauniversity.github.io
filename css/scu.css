@@ -1228,6 +1228,10 @@ header.site-header {
   border-left: none;
   border-right: none;
 }
+.gateway-navigation .nav > li.scu-nav.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
 .gateway-navigation .nav > li.dropdown-search .dropdown-menu {
   width: 300px;
 }
@@ -3329,12 +3333,12 @@ html.no-fontface .feature-gallery-source {
   text-transform: none;
   color: #9e1b32;
 }
-.col-sm-8 .person-spotlight.module.one-column {
-  /* one-column profile style inside two-column spaces: float left, to create a two column layout */
+.person-spotlight.module .grid {
+  /*  display as grid, two per row  */
   float: left;
   margin-top: 0;
 }
-.col-sm-8 .person-spotlight.module.one-column:nth-child(2n+1) {
+.person-spotlight.module .grid:nth-child(2n+1) {
   clear: left;
 }
 .person-spotlight.module.two-column {
