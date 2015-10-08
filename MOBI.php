@@ -36,7 +36,7 @@
                 <span class="caret left-caret"></span> <span class="menu-label"><span class="sr-only">Toggle navigation</span> Menu</span>
               </button>
               <button type="button" class="visible-xs-block menu-toggle menu-toggle-gateways" data-toggle="offcanvas" data-target="#scu-gateway-navigation">
-                <span class="menu-label text-hide"><span class="sr-only">Toggle navigation</span> Gateways</span> <span class="caret right-caret"></span>
+                <span>LOGIN</span> <span class="caret right-caret"></span>
               </button>
               <form class="pull-right site-header-search">
                 <div class="input-group">
