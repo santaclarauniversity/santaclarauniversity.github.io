@@ -18,6 +18,13 @@ form#MOBI-login input {
 	border-top: 3px solid #72001b;
 	padding: 11px 15px 8px;
 }
+
+@media (max-width: 768px) {
+	form#MOBI-login input, form#MOBI-login button {
+		width: 90%;
+		margin: 0 5% 15px;
+	}
+}
 .news.module .media-list {
   margin-left: 0;
 }
