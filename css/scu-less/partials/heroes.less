@@ -14,6 +14,26 @@
 @landing-hero-short-height: 355px;
 @landing-hero-xshort-height: 300px;
 
+// Treatment for main navigations on pages with side navigation and hero features
+
+@media (min-width: @screen-sm-min) {
+ 	.hero.feature.module+.container {
+ 		 &, & > .row, & > .row > .col-sm-4 {
+			position:relative;
+		}
+		& > .row > .col-sm-4 > .side-navigation {
+			position:absolute;
+			bottom:100%;
+			right:0;
+			.side-navigation-header {
+				display:none;
+			}
+			ul {
+				background-color:rgba(255,255,255,.9);
+			}
+		}
+	}
+}
 
 .hero.module {
   width: 100%;
