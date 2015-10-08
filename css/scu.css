@@ -459,12 +459,17 @@ html.no-fontface .lw_cal_today_day {
 }
 @media (min-width: 768px) {
   .title-large {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 @media (min-width: 1065px) {
   .title-large {
-    font-size: 40px;
+    font-size: 28px;
+  }
+}
+@media (min-width: 1200px) {
+  .title-large {
+    font-size: 32px;
   }
 }
 .title-small {
@@ -473,12 +478,12 @@ html.no-fontface .lw_cal_today_day {
 }
 @media (min-width: 768px) {
   .title-small {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
-@media (min-width: 1065px) {
+@media (min-width: 1200px) {
   .title-small {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 /* FONT */
@@ -515,7 +520,7 @@ html.no-fontface .lw_cal_today_day {
 .wordmarks a.title-small {
   color: #6d6d6d;
 }
-/* Other background options are burgundy, cadet, navy, purple, teal (white text) */
+/* Other background options are burgundy, cadet, affy, purple, teal (white text) */
 .color-burgundy header {
   background-color: #690521;
 }
@@ -1390,6 +1395,12 @@ header.site-header {
     font-size: 17px;
   }
 }
+.gateway-navigation nav.affix + nav .caret {
+  transform: rotate(180deg);
+}
+.gateway-navigation nav.affix + nav .dropdown:hover .caret {
+  transform: rotate(0deg);
+}
 .gateway-navigation .nav > li.scu-nav.open > a .mission {
   z-index: 1001;
 }
@@ -1523,10 +1534,14 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
   width: 100%;
   height: 150px;
   background-color: #611b25;
+  background-size: cover;
   margin-top: -20px;
 }
 .subheader.module.office {
   background-color: #464646;
+}
+.subheader.module + .hero.module {
+  margin-top: -2em;
 }
 .subheader.module .container {
   height: 150px;
