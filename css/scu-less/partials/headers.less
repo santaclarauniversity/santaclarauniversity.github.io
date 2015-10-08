@@ -198,8 +198,10 @@
 .site-header-custom-title {
   .site-header-text-and-search {
     position: relative;
+    height:auto;
     @media (min-width: @screen-sm-min) {
-      height: 200px;
+      height: 150px;
+      overflow:hidden;
       .tall-header & {
 	      height:300px;
       }
@@ -225,13 +227,14 @@
     }
     .wordmarks,
     .group-logo {
-      height: 167px;
+      height: auto;
       /* This Flexbox styling should work in modern browsers, but IE8 and IE9 won't vertically center text if there's one line. */
       .lh-display(flex);
       .lh-flex-direction(column);
       .lh-justify-content(center);
       @media (min-width: @screen-sm-min) {
-        height: 200px;
+        height: 150px;
+        overflow:hidden;
 	      .tall-header & {
 		      height:300px;
 	      }
@@ -491,6 +494,9 @@
         margin-top: -10px;
         border-left: 1px dotted #bbbaba;
       }
+	    &.active + li:before {
+		    border-left: none;
+			}
     }
   }
   .nav-pills > li {
@@ -541,6 +547,10 @@
   .nav-pills > li > a:hover,
   .nav-pills > li > span > a:hover {
     background-color: @brand-red;
+    color: @white;
+  }
+  .nav-pills>li.active>a {
+    background-color: @link-red;
     color: @white;
   }
 }
@@ -776,6 +786,12 @@
         display: inline-block;
         margin-left: 34px;
       }
+			& + span.scu-fullname {
+					display:none; 
+			}
+			& + span.scu-shortname {
+					display:inline-block;  
+			}
       @media (min-width: @screen-sm-min) {
         position: relative;
         width: 56px;
