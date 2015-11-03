@@ -2,3 +2,5 @@
 *.codekit
 
 .dropbox
+
+bootstrap/
