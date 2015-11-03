@@ -129,50 +129,43 @@
             <li class="slide-menu"><a href="#" role="button" aria-expanded="false"><span class="gateway-dropdown">Centers & Schools <span class="caret"></span></span></a>
               <div class="slide-panel">
                 <div class="container">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <h6>Schools &amp; Colleges</h6>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <ul role="menu">
-                            <li><a href="#">College of Arts & Sciences</a></li>
-                            <li><a href="#">Education and Counseling Psychology</a></li>
-                            <li><a href="#">Leavey School of Business</a></li>
-                            <li><a href="#">School of Engineering</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-6">
-                          <ul role="menu">
-                            <li><a href="#">Jesuit School of Theology</a></li>
-                            <li><a href="#">School of Law</a></li>
-                            <li><a href="#">Summer School</a></li>
-                            <li><a href="#" class="more-link">All Schools & Colleges &raquo;</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <h6>Centers of Distinction</h6>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <ul>
-                            <li><a href="#">Center for Science, Technology, and Society</a></li>
-                            <li><a href="#">Ignatian Center for Jesuit Education</a></li>
-                            <li><a href="#">Markkula Center for Applied Ethics</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-6">
-                          <ul>
-                            <li><a href="#">A sample center link</a></li>
-                            <li><a href="#">A center link of distinction</a></li>
-                            <li><a href="#">Another Center Yonder</a></li>
-                            <li><a href="#" class="more-link">All Centers & Institutes &raquo;</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<div class="row">
+        
+        <div class="col-sm-8">
+          <h6>Schools and Colleges</h6>
+          <div class="row">
+          	<div class="col-sm-6">
+              <ul>
+<li><a class="" href="/cas/">College of Arts &amp; Sciences</a></li>
+<li><a class="" href="/ecp/">Education and Counseling Psychology</a></li>
+<li><a class="" href="/business/">Leavey School of Business</a></li>
+</ul>
+          	</div>
+          	<div class="col-sm-6">
+              <ul>
+<li><a class="" href="/engineering/">School of Engineering</a></li>
+<li><a href="/jst/">Jesuit School of Theology</a></li>
+<li><a href="http://law.scu.edu">School of Law</a></li>
+</ul>
+              
+             </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-4">
+          <h6> Centers of Distinction</h6>
+          <div class="row">
+          	<div class="col-sm-12">
+            	<ul>
+<li><a href="http://www.scu-social-entrepreneurship.org/">Miller Center for Social Entrepreneurship</a></li>
+<li><a class="" href="/ignatiancenter/">Ignatian Center for Jesuit Education</a></li>
+<li><a class="" href="/ethics/">Markkula Center for Applied Ethics</a></li>
+</ul><a href="/portals/centers-and-institutes/" class="more-link">Centers and Institutes »</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>                </div>
               </div>
             </li>
           </ul>
