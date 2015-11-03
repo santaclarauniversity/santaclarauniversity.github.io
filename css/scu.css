@@ -234,6 +234,22 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
   src: url("assets/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix");
   src: url("assets/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix") format("eot"), url("assets/fonts/610145ac-dd31-4024-b833-3ab0ce6b7847.woff2") format("woff2"), url("assets/fonts/b4312891-e355-4bdc-80c9-ef3dbf7bd916.woff") format("woff"), url("assets/fonts/124dc47b-32a0-4543-a60e-d8aad32782b4.ttf") format("truetype"), url("assets/fonts/001e534b-3742-45b3-b20b-d4c53c41a519.svg#001e534b-3742-45b3-b20b-d4c53c41a519") format("svg");
 }
+@font-face {
+  font-family: "Trade Gothic Next W01";
+  src: url("assets/fonts/8a6c3750-4927-4649-9dac-87049f5e9700.eot?#iefix");
+  src: url("assets/fonts/8a6c3750-4927-4649-9dac-87049f5e9700.eot?#iefix") format("eot"), url("assets/fonts/d4eef5b1-2f4a-42d6-ae2d-6220d71243be.woff2") format("woff2"), url("assets/fonts/57625f96-ca80-4602-9644-ec1803cb3ba3.woff") format("woff"), url("assets/fonts/6618d500-1727-4334-878e-1c4b95192f42.ttf") format("truetype"), url("assets/fonts/01ebe944-ca6c-41db-a3ba-b7e2a90536d9.svg#01ebe944-ca6c-41db-a3ba-b7e2a90536d9") format("svg");
+}
+@font-face {
+  font-family: "TradeGothicNextW01-Ital";
+  src: url("assets/fonts/5907bd95-539f-4f25-b115-69c42aee6b21.eot?#iefix");
+  src: url("assets/fonts/5907bd95-539f-4f25-b115-69c42aee6b21.eot?#iefix") format("eot"), url("assets/fonts/e41c3ce6-57bc-473c-aaf0-9e0e771bf6c8.woff2") format("woff2"), url("assets/fonts/3bde4253-d238-40b7-b813-eea7bdd9e80d.woff") format("woff"), url("assets/fonts/6005c161-37f3-4678-869a-1b4306ecc563.ttf") format("truetype"), url("Fonts/1301d16e-d0ec-407b-9796-677535450691.svg#1301d16e-d0ec-407b-9796-677535450691") format("svg");
+}
+.sans-serif-light-font {
+  font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+html.no-fontface .sans-serif-light-font {
+  font-weight: 200;
+}
 h1,
 h5 {
   color: #000;
@@ -272,7 +288,7 @@ html.no-fontface strong {
 i,
 em {
   font-style: normal;
-  font-family: "TradeGothicW01-LightObl", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "TradeGothicNextW01-Ital", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 html.no-fontface i,
 html.no-fontface em {
@@ -313,6 +329,10 @@ i b strong {
   border-bottom: 1px solid #e1e0e0;
   margin-bottom: 40px;
   margin-top: 0;
+  font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+html.no-fontface .page-title {
+  font-weight: 200;
 }
 .page-title h1 {
   margin: 0;
@@ -2067,7 +2087,7 @@ html.no-fontface .hero.module.landing .container > h1 {
   color: #555;
   font-size: 13px;
   text-transform: uppercase;
-  font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Trade Gothic Next W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .hero.module.landing .hero-body .strip h6 {
   color: #d0d0d0;
@@ -2868,7 +2888,7 @@ html.no-flexbox .feature-gallery.module .carousel-control {
   text-transform: uppercase;
   text-decoration: underline;
   color: #6d6d6d;
-  font-family: "TradeGothicW01-LightObl", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "TradeGothicNextW01-Ital", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 html.no-fontface .feature-gallery-source {
   font-style: italic;
@@ -3306,7 +3326,7 @@ html.no-fontface .feature-gallery-source {
 }
 .events.module .featured-event h4 a {
   color: #fff;
-  font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Trade Gothic Next W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.2em;
 }
 .events.module .featured-event p {

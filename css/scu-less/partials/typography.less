@@ -40,14 +40,25 @@ font-family:"Trajan W01 Regular";
 src:url("assets/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix");
 src:url("assets/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix") format("eot"),url("assets/fonts/610145ac-dd31-4024-b833-3ab0ce6b7847.woff2") format("woff2"),url("assets/fonts/b4312891-e355-4bdc-80c9-ef3dbf7bd916.woff") format("woff"),url("assets/fonts/124dc47b-32a0-4543-a60e-d8aad32782b4.ttf") format("truetype"),url("assets/fonts/001e534b-3742-45b3-b20b-d4c53c41a519.svg#001e534b-3742-45b3-b20b-d4c53c41a519") format("svg");
 }
+@font-face{
+font-family:"Trade Gothic Next W01";
+src:url("assets/fonts/8a6c3750-4927-4649-9dac-87049f5e9700.eot?#iefix");
+src:url("assets/fonts/8a6c3750-4927-4649-9dac-87049f5e9700.eot?#iefix") format("eot"),url("assets/fonts/d4eef5b1-2f4a-42d6-ae2d-6220d71243be.woff2") format("woff2"),url("assets/fonts/57625f96-ca80-4602-9644-ec1803cb3ba3.woff") format("woff"),url("assets/fonts/6618d500-1727-4334-878e-1c4b95192f42.ttf") format("truetype"),url("assets/fonts/01ebe944-ca6c-41db-a3ba-b7e2a90536d9.svg#01ebe944-ca6c-41db-a3ba-b7e2a90536d9") format("svg");
+}
+@font-face{
+font-family:"TradeGothicNextW01-Ital";
+src:url("assets/fonts/5907bd95-539f-4f25-b115-69c42aee6b21.eot?#iefix");
+src:url("assets/fonts/5907bd95-539f-4f25-b115-69c42aee6b21.eot?#iefix") format("eot"),url("assets/fonts/e41c3ce6-57bc-473c-aaf0-9e0e771bf6c8.woff2") format("woff2"),url("assets/fonts/3bde4253-d238-40b7-b813-eea7bdd9e80d.woff") format("woff"),url("assets/fonts/6005c161-37f3-4678-869a-1b4306ecc563.ttf") format("truetype"),url("Fonts/1301d16e-d0ec-407b-9796-677535450691.svg#1301d16e-d0ec-407b-9796-677535450691") format("svg");
+}
 
 
 // Font variables/mixins:
 @serif-font: "Bauer Bodoni W01 Italic", Georgia, "Times New Roman", Times, serif;
 @serif-bold-font: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
-@sans-serif-font: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sans-serif-font: "Trade Gothic Next W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sans-serif-light-font: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @sans-serif-bold-font: "Trade Gothic W01 Bold_2", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@sans-serif-italic-font: "TradeGothicW01-LightObl", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sans-serif-italic-font: "TradeGothicNextW01-Ital", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @sans-serif-bold-italic-font: "TradeGothicW01-Bold2Obl", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @trajan-font: "Trajan W01 Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -94,6 +105,19 @@ src:url("assets/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix") format("
     font-style: italic;
   }
 }
+.sans-serif-light-font {
+  font-family: @sans-serif-light-font;
+  html.no-fontface & {
+    font-weight:200;
+  }
+}
+
+.sans-serif-light-font(italic){
+  font-family: @sans-serif-italic-font;
+  html.no-fontface & {
+    font-weight: 200;
+  }
+}
 .sans-serif-font(){
   font-family: @sans-serif-font;
 }
@@ -136,6 +160,7 @@ b i, b em, strong i, strong em, em strong, em b, i strong, i b {
   border-bottom: 1px solid @really-light-gray;
   margin-bottom: 40px;
   margin-top: 0;
+  .sans-serif-light-font();
   h1 {
     margin: 0;
   }
