@@ -1,9 +1,9 @@
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap-scu/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/slick/slick.css" rel="stylesheet">
-    <link href="css/slick/slick-theme.css" rel="stylesheet">
-    <link href="css/scu.css" rel="stylesheet">
-    <script src="js/modernizr.min.js"></script>
+    <link href="/bootstrap-scu/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/slick/slick.css" rel="stylesheet">
+    <link href="/css/slick/slick-theme.css" rel="stylesheet">
+    <link href="/css/scu.css" rel="stylesheet">
+    <script src="/js/modernizr.min.js"></script>
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

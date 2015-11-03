@@ -69,9 +69,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="bootstrap-scu/js/bootstrap.min.js"></script>
-    <script src="js/mediaCheck-min.js"></script>
-    <script src="js/jquery.event.swipe.js"></script>
-    <script src="js/features-gallery.js"></script>
-    <script src="js/features-switcher.js"></script>
-    <script src="js/header.js"></script>
+    <script src="/bootstrap-scu/js/bootstrap.min.js"></script>
+    <script src="/js/mediaCheck-min.js"></script>
+    <script src="/js/jquery.event.swipe.js"></script>
+    <script src="/js/features-gallery.js"></script>
+    <script src="/js/features-switcher.js"></script>
+    <script src="/js/header.js"></script>

@@ -7,23 +7,28 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SCU | SCU Templates and Modules | Header: Site Nav, Site Gateways</title>
+    <title>SCU | Headers | CAS</title>
 
-	<?php require('includes/head.php'); ?>
-	
+	<?php require('../../includes/head.php'); ?>
+	<style> /* temporary style suggestion for CAS header */
+		
+	</style>
   </head>
-  <body class="<?php echo $_GET["header"]; ?>">
+  <body class="">
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
-    <header class="site-header site-header-custom-title white-nav">
+          <header class="site-header site-header-custom-title gray-nav">
 
-      <div class="site-header-text-and-search">
+      <div class="site-header-text-and-search" style="background-image:url(bg_page.gif); background-size: auto; background-repeat: repeat;">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 col-sm-9 site-header-titles">
+            <div class="col-xs-9 site-header-titles">
 	           <div class="wordmarks">
-			   		<a href="index.html" class="title-small">Santa Clara University</a>
-			   		<a href="index.html" class="title-large">My New Website</a>
+				   		<a href="index.html" class="title-small">Santa Clara University</a>
+				   		<a href="index.html" class="title-large">College of Arts <span>&</span> Sciences</a>
 	           </div>
+            </div>
+            <div class="col-xs-3 clearfix group-logo">
+              <a href="index.html"><img src="logo_header.png"/></a>
             </div>
           </div>
           <div class="row">
@@ -49,14 +54,7 @@
 
       <nav class="main-navigation offcanvas-left" id="scu-main-navigation">
         <div class="container sidebar-offcanvas">
-          <ul class="nav nav-pills">
-            <li><a href="#">College or Center Links</a></li>
-            <li><a href="#">Sample Navigation</a></li>
-            <li><span class="currentbranch0"><a href="#">Faculty</a></span></li>
-            <li><a href="#">Our Programs</a></li>
-            <li><a href="#">Partners & Labs</a></li>
-            <li><a href="#">News & Events</a></li>
-          </ul>
+<ul class="nav nav-pills"><li class="dropdown" id="toplink2192"><a href="/cas/about-cas/">About CAS</a><ul class="dropdown-menu"><li><a href="/cas/about-cas/message-from-the-dean/">Message from the Dean</a></li><li><a href="/cas/about-cas/college-facts/" class="">College Facts</a></li><li><a href="/cas/about-cas/office-of-the-dean/" class="">Office of the Dean</a></li><li><a href="/cas/about-cas/leadership-board/" class="">Leadership Board</a></li></ul></li><li class="dropdown" id="toplink2204"><a href="/cas/academics/">Academics</a><ul class="dropdown-menu"><li><a href="/cas/academics/departments-and-programs/">Departments and Programs</a></li><li><a href="/cas/academics/majors-and-minors/" class="">Majors and Minors</a></li></ul></li><li class="dropdown" id="toplink2209"><a href="/cas/college-initiatives/">College Initiatives</a><ul class="dropdown-menu"><li><a href="/cas/college-initiatives/arts-for-social-justice/">Arts for Social Justice</a></li><li><a href="/cas/college-initiatives/center-for-arts-and-humanities/">Center for Arts and Humanities</a></li><li><a href="/cas/college-initiatives/denardo-lectureship/">DeNardo Lectureship</a></li><li><a href="/cas/college-initiatives/vari-italian-studies/">Vari Italian Studies</a></li></ul></li><li class="dropdown" id="toplink2218"><a href="/cas/news-and-events/">News and Events</a></li></ul>
         </div>
       </nav>
 
@@ -66,7 +64,7 @@
             <li class="dropdown scu-nav">
               <a href="http://www.scu.edu/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                 <span class="text-hide mission">Main Navigation for</span>
-                <span class="hidden-sm">Santa Clara University</span>
+                <span class="hidden-sm">SCU.EDU</span>
                 <span class="hidden-xs hidden-md hidden-lg">SCU</span>
                 <span class="caret hidden-xs"></span>
               </a>
@@ -212,127 +210,9 @@
         </div>
         <div class="slide-menu-backdrop"></div>
       </nav>
-    
+
     </header>
-    <div class="subheader module">
-      <div class="container">
-        <h1><span>Department of</span> Chemistry & Biochemistry</h1>
-      </div>
-    </div>
-      <div class="container" id="content">
-        
-      <div class="row">
-        <div class="col-sm-8">
-          <h1 class="page-title">Header Options</h1>
-
-          <ol class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Section Title</a></li>
-            <li><a href="#">Parent Page</a></li>
-            <li class="active">Header: Site Nav, Site Gateways</li>
-          </ol>
-
-          <div class="intro">
-            <p>You can customize header fonts, color, and height on the new SCU build.  This page will let you test drive some options.</p>
-          </div>
-          <div class="row" style="font-size:1.3em; ">
-	          <div class="col-sm-4">
-		          Font:
-		         <ul>
-			         <li><a href="header-options.php?header=">Trajan (default)</a></li>
-			         <li><a href="header-options.php?header=font-tradegothic">Trade Gothic</a></li>
-			         <li><a href="header-options.php?header=font-bodoni">Bodoni</a></li>
-			         <li><a href="header-options.php?header=font-helvetica">Helvetica</a></li>
-		         </ul>
-	          </div>
-	          <div class="col-sm-4">
-		          Color:
-		         <ul>
-			         <li><a href="header-options.php?header=">Default</a></li>
-			         <li><a href="header-options.php?header=color-teal">Teal</a></li>
-			         <li><a href="header-options.php?header=color-burgundy">Burgundy</a></li>
-			         <li><a href="header-options.php?header=color-navy">Navy</a></li>
-			         <li><a href="header-options.php?header=color-cadet">Cadet</a></li>
-			         <li><a href="header-options.php?header=color-purple">Purple</a></li>
-		         </ul>
-	          </div>
-	          <div class="col-sm-4">
-		          Height:
-		         <ul>
-			         <li><a href="header-options.php?header=">Default</a></li>
-			         <li><a href="header-options.php?header=tall-header">Tall</a></li>
-		         </ul>
-		          Photo:
-		         <ul>
-			         <li><a href="header-options.php?header=header-photo">Photo</a></li>
-			         <li><a href="header-options.php?header=tall-header header-photo">Photo / Tall</a></li>
-		         </ul>
-	          </div>
-	          <div class="row">
-		          <div class="col-sm-12" style="border-top: 1px dotted #ccc; padding-top:15px;">
-			          Combinations:
-			         <ul>
-				         <li><a href="header-options.php?header=color-teal font-bodoni tall-header">Teal header, Bodoni, tall</a></li>
-				         <li><a href="header-options.php?header=font-tradegothic header-photo">Photo header, Trade Gothic</a></li>
-				         <li><a href="header-options.php?header=header-photo font-trajan tall-header">Photo header, Trajan, tall</a></li>
-				         <li><a href="header-options.php?header=color-cadet font-helvetica">Cadet with Helvetica</a></li>
-			         </ul>
-		          </div>
-	          </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-                    <nav class="side-navigation match-page-title">
-            <a class="side-navigation-header" href="index.php">SCU Templates and Modules</a>
-            <ul>
-              <li><a href="homepage.php">Homepage</a></li>
-              <li><a href="inside-two-columns.php">Inside Page: 2 Columns</a></li>
-              <li><a href="inside-three-columns.php">Inside Page: 3 Columns</a></li>
-              <li><a href="inside-full-width.php">Inside Page: Full Width</a></li>
-              <li><a href="inside-grid.php">Inside Page: Grid</a></li>
-              <li><a href="inside-jumbotron-three-columns.php">Inside Page: Jumbotron Three Columns</a></li>
-              <li><a href="inside-jumbotron-two-columns.php">Inside Page: Jumbotron Two Columns</a></li>
-              <li>
-                <a href="one-column-modules.php">One Column Modules</a>
-                <ul class="multilevel-linkul-0">
-                  <li><a href="building-one-column-modules.php">Building One Column Modules</a></li>
-                  <li><a href="#">A test link</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="two-column-modules.php">Two Column Modules</a>
-              </li>
-              <li>
-                <a href="full-width-modules.php">Full Width Modules</a>
-                <ul class="multilevel-linkul-0">
-                  <li><a href="can-we.php">Hero Features</a></li>
-                  <li><a href="hero-features.php">Hero Features</a></li>
-                  <li><a href="landing-hero-features.php">Landing Hero Features</a></li>
-                  <li><a href="subheaders.php">Subheaders</a></li>
-                </ul>
-              </li>
-              <li class="active">
-                <a href="headers.php">Headers</a>
-                <ul class="multilevel-linkul-0">
-                  <li><a href="header-core-nav-core-gateways.php">Core Nav, Core Gateways</a></li>
-                  <li class="active"><a href="header-site-nav-site-gateways.php">Site Nav, Site Gateways</a>
-                    <ul class="multilevel-linkul-1">
-                      <li><a href="header-stone-site-nav.php">Example: Stone Nav</a></li>
-                      <li class="active"><a href="header-gray-site-nav.php">Example: Gray Nav</a></li>
-                      <li><a href="header-black-site-nav.php">Example: Black Nav</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-
-          
-        </div>
-      </div>
-
-      </div>
       
-	<?php require('includes/footer.php'); ?>
+      
   </body>
 </html>
