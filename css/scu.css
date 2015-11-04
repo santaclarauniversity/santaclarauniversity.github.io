@@ -471,6 +471,9 @@ html.no-fontface .lw_cal_today_day {
 .site-header-text-and-search {
   background-size: cover;
 }
+.navbar-form .radio input {
+  margin: 10px 8px 0 0;
+}
 /* HEADER TEXT */
 .title-large {
   display: block;

@@ -204,6 +204,18 @@
                       <button class="btn btn-default" type="button" aria-label="Submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                     </span>
                   </div>
+	                 <div class="radio">
+				              <label>
+											  <input type="radio" name="search-type" id="search_local" value="local" checked="checked"> 
+											  Search the University Library site
+											</label>
+	                 </div>
+	                 <div class="radio">
+										<label>
+										  <input type="radio" name="search-type" id="search_scu" value="scu"> 
+										  Search the full SCU site
+										</label>
+	                 </div>
                 </form>
               </div>
             </li>
