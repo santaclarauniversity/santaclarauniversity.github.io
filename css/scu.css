@@ -949,6 +949,9 @@ header.site-header {
     right: 0;
     bottom: auto;
   }
+  .nav-dropdown-open .main-navigation.affix {
+    margin-top: 50px;
+  }
   .main-navigation.affix-top {
     top: auto !important;
   }

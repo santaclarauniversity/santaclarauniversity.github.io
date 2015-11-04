@@ -285,10 +285,8 @@ $(document).ready(function(){
       };
       
   // Add slidedown/slideup animations to header dropdowns using Bootstrap's events:
-  $header.find('.dropdown').on('show.bs.dropdown', function(e){
-    $(this).find('.dropdown-menu').first().stop(true, true).slideDown(250);
-  }).on('hide.bs.dropdown', function(e){
-    $(this).find('.dropdown-menu').first().stop(true, true).slideUp(250);
+  $('#scu-main-navigation+nav .scu-nav').hover(function(){
+    $body.toggleClass('nav-dropdown-open');
   });
 
   // Slide menus for tablet/desktop drawers in gateway navigation
