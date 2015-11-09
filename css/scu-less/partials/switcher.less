@@ -2,72 +2,31 @@
  * Piggybacks on styles from buttons.less.
  */
  
-.switcher {
-	top:50px;
-	right:0;
-	font-size: 24px;
-	position:absolute;
-	background: none;
-	z-index: 100;
+ 
+.switcher.link-button {
+	cursor:pointer;
+	> a {
+		display:block;
+		color:inherit;
+		&:focus {
+			text-decoration: none;
+		}
+	} 
+	.module {
+		margin-top:1rem;
+		ul {margin-bottom:2rem;}
+		display:none;
+	}
 	&.on {
-		background: #fff;
-		width: 200%;
-		box-shadow: 1px 1px 3px rgba(0,0,0,.4);
-	}
-	& > a {
-		padding: 14px 10px;
-		background: rgba(255,255,255,.8) !important;
-		text-align:center;
-	}
-	& h4 {
-		height:auto !important;
-		padding:0 !important;
-	}
-	
-	&.link-button {
-		cursor:pointer;
+		cursor:auto;
+		max-width:none;
+		text-align:left;
+		padding:14px 24px;
 		> a {
-			display:block;
-			color:inherit;
-			&:focus {
-				text-decoration: none;
-			}
-		} 
-		.module {
-			margin-top:1rem;
-			ul {margin-bottom:2rem;}
-			display:none;
+			border-bottom: 1px solid @light-gray;
 		}
-		&.on {
-			cursor:auto;
-			max-width:none;
-			text-align:left;
-			padding:14px 24px;
-			> a {
-				border-bottom: 1px solid @light-gray;
-			}
-			h4 a {color: @medium-gray; text-decoration: underline;}
-			.module {display:block;}
-		}
-	}
-}
-
-
-/* temporary code for switchers on school landing pages: keep 'em open */
-
-.col-sm-12 {
-		> .switcher, > .switcher.on {
-			width: auto !important;
-			position:relative !important;
-			box-shadow:none !important;
-			z-index: 1;
-				cursor:auto;
-				max-width:none;
-				text-align:left;
-				padding:14px 24px;
-				> a {
-					display:none;
-				}
-				.module {display:block;}
+		h4 a {color: @medium-gray; text-decoration: underline;}
+		.module {display:block;}
+		&:hover {background:none;}
 	}
 }

@@ -1577,7 +1577,6 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
   height: 150px;
   background-color: #611b25;
   background-size: cover;
-  background-position: 50%;
   margin-top: -20px;
 }
 .subheader.module.office {
@@ -1612,24 +1611,6 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
   .subheader.module h5,
   .subheader.module h6 {
     font-size: 55px;
-  }
-}
-.subheader.module h1.long,
-.subheader.module h2.long,
-.subheader.module h3.long,
-.subheader.module h4.long,
-.subheader.module h5.long,
-.subheader.module h6.long {
-  font-size: 34px;
-}
-@media (min-width: 768px) {
-  .subheader.module h1.long,
-  .subheader.module h2.long,
-  .subheader.module h3.long,
-  .subheader.module h4.long,
-  .subheader.module h5.long,
-  .subheader.module h6.long {
-    font-size: 42px;
   }
 }
 .subheader.module h1 span,
@@ -1913,10 +1894,6 @@ html.no-fontface .evergreen.module {
     margin-top: -80px;
   }
 }
-.hero.module.feature {
-  background: #dcdcdc;
-  background-size: cover;
-}
 .hero.module.feature .container {
   min-height: 300px;
   padding-top: 25px;
@@ -1941,13 +1918,6 @@ html.no-fontface .evergreen.module {
 }
 .hero.module.feature .hero-body {
   height: 300px;
-}
-.hero.module.feature .hero-body h1 {
-  position: absolute;
-  top: 100px;
-  left: 15px;
-  max-width: 60%;
-  color: #fff;
 }
 .hero.module.feature .hero-body p,
 .hero.module.feature .hero-body ol,
@@ -2718,28 +2688,6 @@ html.no-fontface .can-we.module.feature .can-we-body .can-we-box h3 {
 /**
  * Piggybacks on styles from buttons.less.
  */
-.switcher {
-  top: 50px;
-  right: 0;
-  font-size: 24px;
-  position: absolute;
-  background: none;
-  z-index: 100;
-}
-.switcher.on {
-  background: #fff;
-  width: 200%;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-}
-.switcher > a {
-  padding: 14px 10px;
-  background: rgba(255, 255, 255, 0.8) !important;
-  text-align: center;
-}
-.switcher h4 {
-  height: auto !important;
-  padding: 0 !important;
-}
 .switcher.link-button {
   cursor: pointer;
 }
@@ -2773,25 +2721,8 @@ html.no-fontface .can-we.module.feature .can-we-body .can-we-box h3 {
 .switcher.link-button.on .module {
   display: block;
 }
-/* temporary code for switchers on school landing pages: keep 'em open */
-.col-sm-12 > .switcher,
-.col-sm-12 > .switcher.on {
-  width: auto !important;
-  position: relative !important;
-  box-shadow: none !important;
-  z-index: 1;
-  cursor: auto;
-  max-width: none;
-  text-align: left;
-  padding: 14px 24px;
-}
-.col-sm-12 > .switcher > a,
-.col-sm-12 > .switcher.on > a {
-  display: none;
-}
-.col-sm-12 > .switcher .module,
-.col-sm-12 > .switcher.on .module {
-  display: block;
+.switcher.link-button.on:hover {
+  background: none;
 }
 /**
  * Featured Story module
