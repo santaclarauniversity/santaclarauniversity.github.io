@@ -57,6 +57,9 @@
   }
   
   &.feature {
+    background: #dcdcdc; // fallback color
+    background-size: cover;
+    
     .container {
       min-height: @hero-xs-height;
       padding-top: 25px;
@@ -75,6 +78,15 @@
     }
     
     .hero-body {
+      h1 {
+        position:absolute; 
+        top:100px; 
+        left:15px; 
+        max-width: 60%;
+        color:#fff;
+        color: @white;
+      }
+      
       height: @hero-xs-height;
       p, ol, ul {
         margin-bottom: 1.5em;
