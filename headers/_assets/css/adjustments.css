@@ -1,0 +1,141 @@
+/*  
+	
+	CHANGELOG FOR MARKUP ADJUSTMENTS
+	
+	GENERAL
+	* Added temporary stylesheet and fonts.com Javascript
+	* Changed markup of header (previously a.wordmarks) from two images to a single link inside div.wordmarks
+	* added class="active" to <li> for "Academics" main nav item
+	* point all docs to temporary (scraped) scu.css in /adjustments/ root
+	* removed "Department Of" <span>s in h1's
+	
+	THEATRE AND DANCE and ART+ART HISTORY
+	* Changed feature-gallery module from .full-width to .two-column
+	* Moved this module to the top of following .col-sm-8 and deleted its (now empty) .col-sm-12
+	
+	ACCOUNTING 
+	* Move non-navigation content (events, etc.) out of <nav> to immediately after
+	* Add class="module" to .side-navigation
+	
+*/
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+ }
+ nav.affix+nav .dropdown:hover .caret {
+    transform: rotate(0deg);
+}
+
+.wordmarks a:hover {
+	text-decoration: none;
+	opacity: .8;
+}
+.main-navigation .nav-pills>li.active>a {
+    color: #fff;
+    background-color: #9e1b32;
+}
+@media (min-width: 768px) {
+	.main-navigation .nav > li.active + li::before {
+	    border-left: none;
+	}
+}
+@media (min-width: 768px) {
+
+	.hero.feature.module+.container,.hero.feature.module+.container>.row,.hero.feature.module+.container>.row>.col-sm-4 {
+		position:relative;
+	}
+	.hero.feature.module+.container>.row>.col-sm-4>.side-navigation{
+		position:absolute;
+		bottom:100%;
+		right:0;
+	}
+	.hero.feature.module+.container>.row>.col-sm-4>.side-navigation .side-navigation-header {
+		display:none;
+	}
+	.hero.feature.module+.container>.row>.col-sm-4>.side-navigation ul {
+		background-color:rgba(255,255,255,.9);
+	}
+}
+
+.site-header-custom-title .site-header-text-and-search .wordmarks, .site-header-custom-title .site-header-text-and-search .group-logo {
+    height: auto;
+}
+@media (min-width: 768px) {
+	.site-header-custom-title .site-header-text-and-search, .site-header-custom-title .site-header-text-and-search div.wordmarks, .site-header-custom-title .site-header-text-and-search .group-logo {
+	    height: 150px;
+	    overflow:hidden;
+	}
+	.gateway-navigation .nav > li.scu-nav .mission + span.scu-fullname {
+		display:none; 
+	}
+	.gateway-navigation .nav > li.scu-nav span.hidden-lg.scu-shortname {
+		display:inline-block;  
+	}
+
+}
+
+nav.affix+nav .caret {
+    transform: rotate(180deg);
+}
+
+
+/*  TEMPORARY switcher setup */
+
+.subheader .switcher {
+	top:50px;
+	right:0;
+	font-size: 24px;
+	position:absolute;
+	background: none;
+	z-index: 100;
+}
+.subheader .switcher.on, .subheader .switcher.on:hover  {
+	background: #fff;
+	width: 200%;
+}
+.subheader .switcher > a {
+	padding: 14px 10px;
+	background: rgba(255,255,255,.8) !important;
+	text-align:center;
+}
+.subheader .switcher h4 {
+	height:auto;
+	padding:0;
+}
+/* HEADER TEXT size changes */
+.title-large {
+  display: block;
+  text-decoration: none;
+  font-size: 24px;
+}
+@media (min-width: 768px) {
+  .title-large {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1065px) {
+  .title-large {
+    font-size: 32px;
+  }
+}
+.title-small {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .title-small {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1065px) {
+  .title-small {
+    font-size: 16px;
+  }
+}
+
+.subheader.module+.hero.module {
+	margin-top:-2em;
+}
+.subheader.module {
+	background-size:cover;
+}

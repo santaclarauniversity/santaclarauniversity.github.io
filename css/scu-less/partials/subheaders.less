@@ -7,6 +7,7 @@
   height: 150px;
   background-color: #611b25;
   background-size:cover;
+  background-position: 50%;
   &.office {
     background-color: #464646;
   }
@@ -28,6 +29,14 @@
     vertical-align: bottom;
     @media (min-width: @screen-sm-min) {
       font-size: 55px;
+    }
+    
+    &.long {
+      font-size: 34px;
+      
+      @media (min-width: @screen-sm-min) {
+        font-size: 42px;
+      }
     }
 
     span {
