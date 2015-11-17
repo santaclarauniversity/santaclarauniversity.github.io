@@ -13,9 +13,8 @@
   </head>  <body>
 	<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
     <header class="site-header uses-core-navigation site-header-with-seal">
-      <?php require('../../../includes/header-arts.php'); ?>
-      <?php require('../../../includes/nav-core.php'); ?>
-      <?php require('../../../includes/gateway-nav.php'); ?>
+      <?php require('../../../includes/header-cas.php'); ?>
+      <?php require('../../../includes/nav-institutional.php'); ?>
     </header>
     <div class="subheader module" style="background-image:url('/headers/_assets/images/liberal-studies.jpg');">
       <div class="container">
@@ -31,5 +30,6 @@
         </div>
       </div>
     </div>
+      <?php require('../../../includes/footer.php'); ?>
   </body>
 </html>

@@ -17,7 +17,10 @@
         .col-sm-8 ul {font-size:2rem;}
         .col-sm-4 li {margin-bottom:1em;}
         .btn-success {margin-bottom:50px;}
+        li {margin-bottom: .75em;}
+        .switcher {top: 0; position:relative;}
      </style>
+     <base target="_blank"/>
   </head>
   <body>
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
@@ -28,11 +31,56 @@
           </h1>
           <h4>Site Buildout
           </h4>
-          <div class="row">
-            <div class="col-sm-8">
-              <div class="intro">
-                <p>This staging site contains all the buildout files for the new <strong>scu.edu</strong>, for implementation into the TerminalFour CMS.</p>
+					<div class="row">
+						<div class="col-sm-12"> 
+             <h2>Priority 1 Headers: Schools and Academic Departments</h2>
+             
+             <h3>Rules</h3>
+             <ul>
+	             <li>All SCU's <strong>schools and colleges</strong> have the SCU seal in their header, along with a small SANTA CLARA UNIVERSITY and the school/college name set in the official Trajan font.  Their <em>navigation bars</em> differ in color as desired; of the available colors, only red (reserved for the institutional site nav) can't be used.</li>
+	             <li>The schools and colleges that have departments— <strong><a href="/headers/cas/index.php">CAS</a>, <a href="/headers/engineering/index.php">Engineering</a>, <a href="/headers/business/index.php">Business</a></strong>— use the white background in their headers, matching the institutional site.  The self-standing schools with primarily graduate programs (ECP, JST, Law) have their choice of background colors from the official palette.</li>
+	              <li>Schools and colleges have the mission logo dropdown for main institutional navigation at top left, labeled SCU.EDU. In most cases they should have both the ADMISSION and GIVING additional top navigation links.</li>
+	             <li>All academic department sites have the header of their parent school/college (CAS, Business, Engineering) and the main SCU institutional navigation.  Each academic department has an image header that draws from the subject matter studied in that department.  Correspondences between image and departmental subjects should not be read too literally, and should not be too obvious in their interpretation; the intent of these header images is to give a general suggestion or flavor for the work these departments do.  Prospective students typically visit a wide range of departmental sites to get a sense of the school, so the intent is that they should work together as a set.  The "Departments & Programs" switcher is designed to facilitate the process of visiting lots of departmental sites.</li>
+	             <li>For departments whose work is highly photogenic, or who desire a bolder visual first impression, there is a "tall header" version that allows more space for the opening image.  These opening images should have captions, and may vary or rotate with each visit to the page.  This treatment is only available to departmental homepages; other pages follow the standard template, using the same image as seen on the homepage or a more general, generic image.  (Example: <a href="/headers/art-and-art-history/">Art and Art History</a>.)</li>
+             </ul>
+             
+             <h3>Examples</h3>
+             <em>The following code is also used for the department switcher on these pages; you can navigate from department to department using the switcher, or open all these links in tabs.</em>
+						 	<?php require('includes/department-switcher.php'); ?>
+             <h2>Priority 2 Headers: Branded Sites</h2>
+             
+             <h3>Rules</h3>
+             <p>Branded sites are subject to fewer restrictions on color and typeface.  Organizations that have invested in an independent brand have the right to use those brands, as long as the general look and feel works with the overall site aesthetic and conforms to the rules below.</p>
+             <ul>
+	             <li>If site brands are designed to work well with the core SCU identity, they can be used in place of the site name at up to 2/3 of the width of the site header. (Example: <a href="/headers/alumni/">Alumni Association</a>.) If not, they can be used at 1/3 of the header width on the right side of the header, with the site name set in approved SCU site color/typeface in the standard logo/header position. (Example: Campus Recreation</a>.)</li>
+	             <li>If branded sites have a reasonable claim to a graphic standard outside the approved SCU brand package— such as a unique color or typeface— those can be incorporated, as long as they're judged to work in reasonable harmony with other SCU standard graphic elements.</li>
+	             <li>Navigation bars for branded sites should be in neutral colors only— black, gray, or white.  For white navigation bars, nav links can be in an alternate color if desired and approved by OMC.</li>
+	             <li>Branded sites have the mission logo and dropdown nav, labeled SANTA CLARA UNIVERSITY unless those words are used in the header/title of the branded site. They do not need ADMISSION and GIVING links unless these sites cater in particular to an external audience of prospective students and donors.
+             </ul>
+             
+             <h3>Examples</h3>
+             <ul>
+								<li><a href="/headers/alumni/">Alumni Association</a></li>
+								<li><a href="/headers/desaisset/">De Saisset Museum</a></li>
+								<li><a href="/headers/ignatian-center/">Ignatian Center</a></li>
+								<li>Miller Center</a></li>
+								<li>SCU Presents</a></li>
+								<li>Bronco bench foundation</a></li>
+								<li>Campus Recreation</a></li>
+             </ul>
+             <h2>Priority 3 Headers: "Sites that need help"</h2>
+             <ul>
+								<li>Provost main header, 4 area subheads</a></li>
+								<li>President's Office</a></li>
+								<li>Markkula Center</a></li>	             
+             </ul>
+						</div>
+					</div>     
+              <div class="intro" style="margin-top:50px;">
+                <p><em>The links below are outdated; archived copies are preserved if needed.</em></p>
               </div>
+          <div class="row" style="opacity:.5;">
+            <div class="col-sm-8">
              <h2>Templates / Page Types</h2>
              <p>These are the basic page layouts used across all site pages.</p>
                 <ul>

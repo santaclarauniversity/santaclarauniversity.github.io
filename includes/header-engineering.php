@@ -2,9 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-9 site-header-titles">
-        <a href="/headers/engineering" class="text-hide pull-left seal">Santa Clara University</a>
+        <a href="/" class="text-hide pull-left seal">Santa Clara University</a>
         <div class="wordmarks">
-   			<a href="/headers/engineering" class="title-small">Santa Clara University</a>
+   			<a href="/" class="title-small">Santa Clara University</a>
    			<a href="/headers/engineering" class="title-large">School of Engineering</a>
         </div>
       </div>

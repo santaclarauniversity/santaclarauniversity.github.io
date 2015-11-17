@@ -11,7 +11,7 @@
 	z-index: 100;
 	&.on {
 		background: #fff;
-		width: 200%;
+		@media (min-width: @screen-md-min) { width: 200%; }
 		box-shadow: 1px 1px 3px rgba(0,0,0,.4);
 	}
 	& > a {

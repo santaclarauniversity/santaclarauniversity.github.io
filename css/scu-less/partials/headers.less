@@ -207,7 +207,7 @@
       height: 150px;
       overflow:hidden;
       .tall-header & {
-	      height:300px;
+	      height:250px;
       }
     }
     .wordmarks {
@@ -240,7 +240,7 @@
         height: 150px;
         overflow:hidden;
 	      .tall-header & {
-		      height:300px;
+		      height:250px;
 	      }
       }
       .no-flexbox & {
@@ -251,13 +251,13 @@
 }
 .site-header-with-seal {
   .site-header-text-and-search {
-    background-color: @white;
+    // background-color: @white;               <--- testing removal of this line; conflicts with new header styles that allow colors along with seal
     @media (min-width: @screen-sm-min) {
       padding: 0 0 30px;
     }
     @media (min-width: @screen-md-min) {
       height: 184px;
-      padding: 0;
+      padding: 15px 0 0 0;
     }
   }
   .site-header-titles {
@@ -592,6 +592,7 @@
     ul.nav-pills {
       margin: 0 0 0 97px;
       padding-left: 8px;
+      width:100%;
     }
   }
   @media (min-width: @screen-lg-min) {

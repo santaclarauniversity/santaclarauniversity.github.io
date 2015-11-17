@@ -1,4 +1,4 @@
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top:200px;">   <!-- top margin is temporary for dept headers only -->
       <div class="site-footer-navigation">
         <div class="container">
           <div class="footer-title-row">
@@ -6,21 +6,21 @@
               <div class="col-sm-2 col-sm-push-5 footer-mission">
                 <div class="footer-mission-wrapper">
                     <a href="/">
-                      <img class="hide-for-retina" src="css/assets/footer-mission.png" width="100" height="109" alt="">
-                      <img class="retina-only" src="css/assets/footer-mission@2x.png" width="100" height="109" alt="">
+                      <img class="hide-for-retina" src="/css/assets/footer-mission.png" width="100" height="109" alt="">
+                      <img class="retina-only" src="/css/assets/footer-mission@2x.png" width="100" height="109" alt="">
                     </a>
                 </div>
               </div>
               <div class="col-xs-12 col-md-5 col-md-pull-2 footer-title">
                     <a href="/">
-                        <img class="hide-for-retina" src="css/assets/footer-Santa-Clara-University.png" alt="Santa Clara University" width="277" height="15">
-                        <img class="retina-only" src="css/assets/footer-Santa-Clara-University@2x.png" alt="Santa Clara University" width="277" height="15">
+                        <img class="hide-for-retina" src="/css/assets/footer-Santa-Clara-University.png" alt="Santa Clara University" width="277" height="15">
+                        <img class="retina-only" src="/css/assets/footer-Santa-Clara-University@2x.png" alt="Santa Clara University" width="277" height="15">
                     </a>
               </div>
               <div class="col-xs-12 col-md-5 footer-tagline footer-title">
                     <a href="/">
-                        <img class="hide-for-retina" src="css/assets/footer-The-Jesuit-University-of-Silicon-Valley.png" alt="The Jesuit University of Silicon Valley" width="426" height="19">
-                        <img class="retina-only" src="css/assets/footer-The-Jesuit-University-of-Silicon-Valley@2x.png" alt="The Jesuit University of Silicon Valley" width="426" height="19">
+                        <img class="hide-for-retina" src="/css/assets/footer-The-Jesuit-University-of-Silicon-Valley.png" alt="The Jesuit University of Silicon Valley" width="426" height="19">
+                        <img class="retina-only" src="/css/assets/footer-The-Jesuit-University-of-Silicon-Valley@2x.png" alt="The Jesuit University of Silicon Valley" width="426" height="19">
                     </a>
               </div>
             </div>

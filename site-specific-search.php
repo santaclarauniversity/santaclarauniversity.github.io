@@ -207,7 +207,7 @@
 	                 <div class="radio">
 				              <label>
 											  <input type="radio" name="search-type" id="search_local" value="local" checked="checked"> 
-											  Search the University Library site
+											  Search the _____ site
 											</label>
 	                 </div>
 	                 <div class="radio">

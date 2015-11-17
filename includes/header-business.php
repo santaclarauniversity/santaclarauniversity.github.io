@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-9 site-header-titles">
-        <a href="headers/business" class="text-hide pull-left seal">Santa Clara University</a>
+        <a href="/" class="text-hide pull-left seal">Santa Clara University</a>
         <div class="wordmarks">
-   		<a href="headers/business" class="title-small">Santa Clara University</a>
-   		<a href="headers/business" class="title-large">Leavey School of Business</a>
+   		<a href="/" class="title-small">Santa Clara University</a>
+   		<a href="/headers/business" class="title-large">Leavey School of Business</a>
         </div>
       </div>
       <div class="col-xs-12 col-sm-3 clearfix site-header-search-and-toggles">

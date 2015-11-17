@@ -11,11 +11,11 @@
 	<?php require('../../includes/head.php'); ?>
 	
   </head>
-    <body class="stone-nav">
+    <body class="schools-colleges stone-nav">
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
-    <header class="site-header uses-core-navigation site-header-with-seal">
-      <?php require('../../includes/header-arts-landing.php'); ?>
-      <?php require('../../includes/gateway-nav.php'); ?>
+    <header class="site-header site-header-with-seal">
+      <?php require('../../includes/header-cas.php'); ?>
+      <?php require('../../includes/nav-cas.php'); ?>
     </header>
 		<div class="container">
         <div class="row">
@@ -24,5 +24,6 @@
     		  </div>
         </div>
 		</div>
+	<?php require('../../includes/footer.php'); ?>
   </body>
 </html>
