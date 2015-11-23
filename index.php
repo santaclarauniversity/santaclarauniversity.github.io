@@ -40,7 +40,9 @@
 	             <li>All SCU's <strong>schools and colleges</strong> have the SCU seal in their header, along with a small SANTA CLARA UNIVERSITY and the school/college name set in the official Trajan font.  Their <em>navigation bars</em> differ in color as desired; of the available colors, only red (reserved for the institutional site nav) can't be used.</li>
 	             <li>The schools and colleges that have departments— <strong><a href="/headers/cas/index.php">CAS</a>, <a href="/headers/engineering/index.php">Engineering</a>, <a href="/headers/business/index.php">Business</a></strong>— use the white background in their headers, matching the institutional site.  The self-standing schools with primarily graduate programs (ECP, JST, Law) have their choice of background colors from the official palette.</li>
 	              <li>Schools and colleges have the mission logo dropdown for main institutional navigation at top left, labeled SCU.EDU. In most cases they should have both the ADMISSION and GIVING additional top navigation links.</li>
-	             <li>All academic department sites have the header of their parent school/college (CAS, Business, Engineering) and the main SCU institutional navigation.  Each academic department has an image header that draws from the subject matter studied in that department.  Correspondences between image and departmental subjects should not be read too literally, and should not be too obvious in their interpretation; the intent of these header images is to give a general suggestion or flavor for the work these departments do.  Prospective students typically visit a wide range of departmental sites to get a sense of the school, so the intent is that they should work together as a set.  The "Departments & Programs" switcher is designed to facilitate the process of visiting lots of departmental sites.</li>
+	             <li>All academic department sites have the header of their parent school/college (CAS, Business, Engineering) and the main SCU institutional navigation.  Each academic department has an image header that draws from the subject matter studied in that department.  </li>
+	             <li>Correspondences between image and departmental subjects should not be read too literally, and should not be too obvious in their interpretation; the intent of these header images is to give a general suggestion or flavor for the work these departments do.  </li>
+	             <li>Prospective students typically visit a wide range of departmental sites to get a sense of the school, so the intent is that they should work together as a set.  The "Departments & Programs" switcher is designed to facilitate the process of visiting lots of departmental sites.</li>
 	             <li>For departments whose work is highly photogenic, or who desire a bolder visual first impression, there is a "tall header" version that allows more space for the opening image.  These opening images should have captions, and may vary or rotate with each visit to the page.  This treatment is only available to departmental homepages; other pages follow the standard template, using the same image as seen on the homepage or a more general, generic image.  (Example: <a href="/headers/art-and-art-history/">Art and Art History</a>.)</li>
              </ul>
              
@@ -68,7 +70,7 @@
 								<li>Bronco bench foundation</a></li>
 								<li>Campus Recreation</a></li>
              </ul>
-             <h2>Priority 3 Headers: "Sites that need help"</h2>
+             <h2>Priority 3 Headers: Additional sites</h2>
              <ul>
 								<li>Provost main header, 4 area subheads</a></li>
 								<li>President's Office</a></li>

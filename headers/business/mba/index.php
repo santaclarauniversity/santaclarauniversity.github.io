@@ -16,7 +16,7 @@
       <?php require('../../../includes/header-business.php'); ?>
       <?php require('../../../includes/nav-institutional.php'); ?>
     </header>
-    <div class="subheader module" style="background-image:url('/headers/_assets/images/business-2.jpg');">
+    <div class="subheader module" style="background-image:url('/headers/_assets/images/mba.jpg');">
       <div class="container">
         <div class="row">
     		  <div class="col-sm-8">

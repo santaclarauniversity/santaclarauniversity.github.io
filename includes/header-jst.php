@@ -1,11 +1,11 @@
-<div class="site-header-text-and-search">
+<div class="site-header-text-and-search" style="background-image:url(header_jst.jpg); background-size: auto; background-repeat: repeat;">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-9 site-header-titles">
         <a href="/" class="text-hide pull-left seal">Santa Clara University</a>
         <div class="wordmarks">
-   		<a href="/" class="title-small">Santa Clara University</a>
    		<a href="/headers/jst" class="title-large">Jesuit School of Theology</a>
+   		<a href="/" class="title-small">Berkeley, California</a>
         </div>
       </div>
       <div class="col-xs-12 col-sm-3 clearfix site-header-search-and-toggles">

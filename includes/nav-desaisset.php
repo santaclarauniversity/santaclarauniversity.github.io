@@ -141,14 +141,26 @@
       <li class="hidden-xs dropdown dropdown-search">
         <a href="#" class="glyphicon glyphicon-search" data-toggle="dropdown" role="button" aria-expanded="false"></a>
         <div class="dropdown-menu">
-          <form class="navbar-form site-header-search">
-            <div class="input-group">
-              <input type="search" class="form-control" placeholder="SEARCH">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button" aria-label="Submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-              </span>
-            </div>
-          </form>
+                <form class="navbar-form site-header-search">
+                  <div class="input-group">
+                    <input type="search" class="form-control" placeholder="SEARCH">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button" aria-label="Submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    </span>
+                  </div>
+	                 <div class="radio">
+				              <label>
+											  <input type="radio" name="search-type" id="search_local" value="local" checked="checked"> 
+											  Search the _____ site
+											</label>
+	                 </div>
+	                 <div class="radio">
+										<label>
+										  <input type="radio" name="search-type" id="search_scu" value="scu"> 
+										  Search the full SCU site
+										</label>
+	                 </div>
+                </form>
         </div>
       </li>
     </ul>
