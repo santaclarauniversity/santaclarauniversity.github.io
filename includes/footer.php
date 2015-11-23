@@ -72,6 +72,7 @@
     <script src="/bootstrap-scu/js/bootstrap.min.js"></script>
     <script src="/js/mediaCheck-min.js"></script>
     <script src="/js/jquery.event.swipe.js"></script>
+    <script src="/js/jquery.mCustomScrollbar.js "></script>
     <script src="/js/features-gallery.js"></script>
     <script src="/js/features-switcher.js"></script>
     <script src="/js/header.js"></script>

@@ -21,4 +21,9 @@ $(function() {
 
     return true;
   });
+  
+  // Show thumbnail scrollbar once images load
+  $(window).load(function(){
+      $gallery.find('.slides').mCustomScrollbar().show();
+  });
 });
