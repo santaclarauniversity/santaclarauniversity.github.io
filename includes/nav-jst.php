@@ -140,7 +140,7 @@
   </div>
 </li>
 
-      <li class="hidden-xs dropdown dropdown-search">
+      <li class="hidden-xs hidden-lg hidden-md hidden-sm dropdown dropdown-search">
         <a href="#" class="glyphicon glyphicon-search" data-toggle="dropdown" role="button" aria-expanded="false"></a>
         <div class="dropdown-menu">
                 <form class="navbar-form">
