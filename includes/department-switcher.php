@@ -32,7 +32,7 @@
         </div>
 
         <div class="one-column related-links module col-sm-6">
-          <h4 class="related-links-header"><a href="/headers/engineering/index.php">College of Engineering</a></h4>
+          <h4 class="related-links-header"><a href="/headers/engineering/index.php">School of Engineering</a></h4>
           <ul>
             <li><a href="/headers/engineering/applied-mathematics">Applied Mathematics</a></li>
             <li><a href="/headers/engineering/bioengineering">Bioengineering</a></li>
