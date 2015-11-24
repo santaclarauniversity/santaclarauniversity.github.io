@@ -2,7 +2,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12 site-header-titles">
-              <a href="index.html"><img src="alumni_logo.png" style="width:635px; max-width:100%;"/></a>
+              <a href="index.php"><img src="alumni_logo.png" style="width:635px; max-width:100%;"/></a>
             </div>
           </div>
           <div class="row">

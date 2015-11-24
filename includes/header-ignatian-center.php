@@ -2,7 +2,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-9 site-header-titles">
-              <a href="index.html" class="wordmarks"><img src="ignatian_logo.png" style="width:635px; max-width:100%; height:132px;"/></a>
+              <a href="index.php" class="wordmarks"><img src="ignatian_logo.png" style="width:635px; max-width:100%; height:132px;"/></a>
             </div>
           </div>
           <div class="row">

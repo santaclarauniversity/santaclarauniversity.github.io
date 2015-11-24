@@ -3,8 +3,8 @@
           <div class="row">
             <div class="col-sm-9 site-header-titles">
 	            <div class="wordmarks">
-		            <a href="index.html">The South Bay's Free Museum of Art and History</a>
-	              <a href="index.html"><img src="desaisset_logo.png" style="width:450px; height:auto; max-width: 100%;"/></a>
+		            <a href="index.php">The South Bay's Free Museum of Art and History</a>
+	              <a href="index.php"><img src="desaisset_logo.png" style="width:450px; height:auto; max-width: 100%;"/></a>
 	              </a>
 	            </div>
             </div>

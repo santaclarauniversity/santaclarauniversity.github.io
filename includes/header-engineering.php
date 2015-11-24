@@ -15,14 +15,6 @@
         <button type="button" class="visible-xs-block menu-toggle menu-toggle-gateways" data-toggle="offcanvas" data-target="#scu-gateway-navigation">
           <span class="menu-label text-hide"><span class="sr-only">Toggle navigation</span> Gateways</span> <span class="caret right-caret"></span>
         </button>
-        <form class="pull-right site-header-search">
-          <div class="input-group">
-            <input type="search" class="form-control" placeholder="SEARCH">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" aria-label="Submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-            </span>
-          </div>
-        </form>
       </div>
     </div>
   </div>

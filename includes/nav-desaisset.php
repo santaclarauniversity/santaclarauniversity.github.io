@@ -141,7 +141,7 @@
       <li class="hidden-xs dropdown dropdown-search">
         <a href="#" class="glyphicon glyphicon-search" data-toggle="dropdown" role="button" aria-expanded="false"></a>
         <div class="dropdown-menu">
-                <form class="navbar-form site-header-search">
+                <form class="navbar-form">
                   <div class="input-group">
                     <input type="search" class="form-control" placeholder="SEARCH">
                     <span class="input-group-btn">
