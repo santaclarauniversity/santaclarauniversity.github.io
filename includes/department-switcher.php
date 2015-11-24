@@ -1,5 +1,5 @@
 <div class="link-button switcher module">
-  <a href="#"><span>Departments & Programs</span></a>
+  <a href="javascript:;"><span>Departments & Programs</span></a>
   <div class="row">
         <div class="one-column related-links module col-sm-6">
           <h4 class="related-links-header"><a href="/headers/cas/index.php">College of Arts and Sciences</a></h4>
@@ -55,7 +55,7 @@
             <li><a href="/headers/business/ms-information-systems">MS Information Systems</a></li>
             <li><a href="/headers/business/operations-management-and-information-systems">Operations Management and Information Systems</a></li>
           </ul>
-          <h4 class="related-links-header"><a href="#">School of Law </a><small>(header not on priority list?)</small></h4>
+          <h4 class="related-links-header">School of Law</h4>
           
           <h4 class="related-links-header"><a href="/headers/jst/">Jesuit School of Theology</a></h4>
           <h4 class="related-links-header"><a href="/headers/ecp/">School of Education and Counseling Psychology</a></h4>

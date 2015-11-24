@@ -3,16 +3,26 @@
  */
  
 .switcher {
-	top:50px;
+	top:0;
 	right:0;
 	font-size: 24px;
 	position:absolute;
-	background: none;
+	background-color: @light-gray;
 	z-index: 100;
+	@media (min-width: @screen-md-min) { width: 200%; top:50px; background: none;}
 	&.on {
 		background: #fff;
-		@media (min-width: @screen-md-min) { width: 200%; }
-		box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+		@media (min-width: @screen-md-min) { 
+			width: 200%; 
+			box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+		}
+		@media (max-width: (@screen-xs - 1)) { 
+			> a > span:after {
+				display:block;
+				font-size:12px;
+				content:'Tap anywhere to close.'
+			}
+		}
 	}
 	& > a {
 		padding: 14px 10px;
@@ -29,12 +39,14 @@
 		> a {
 			display:block;
 			color:inherit;
+			text-decoration: none;
 			&:focus {
 				text-decoration: none;
 			}
 		} 
 		.module {
 			margin-top:1rem;
+			padding:0 24px;
 			ul {margin-bottom:2rem;}
 			display:none;
 		}
@@ -42,7 +54,6 @@
 			cursor:auto;
 			max-width:none;
 			text-align:left;
-			padding:14px 24px;
 			> a {
 				border-bottom: 1px solid @light-gray;
 			}
