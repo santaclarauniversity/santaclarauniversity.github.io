@@ -2264,6 +2264,18 @@ html.no-fontface .hero.module.landing .container > h1 {
   max-width: 100%;
   height: auto;
 }
+.module.image-attach-top {
+  background-position-y: top;
+}
+.module.image-attach-bottom {
+  background-position-y: bottom;
+}
+.module.image-attach-right {
+  background-position-x: right;
+}
+.module.image-attach-left {
+  background-position-x: left;
+}
 /**
  * Breadcrumbs
  *
