@@ -421,7 +421,7 @@ html.no-fontface .lw_cal_today_day {
 @media (min-width: 768px) {
   .site-header {
     padding: 48px 0 44px;
-    margin: 0 0 55px;
+    margin: 0 0 30px;
   }
 }
 @media (min-width: 825px) {
