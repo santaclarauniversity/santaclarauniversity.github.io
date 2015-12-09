@@ -97,8 +97,8 @@
 	      &:last-child {
 		      margin-right:0;
 	      }
-	      p {
-	      }
+	      p {margin:0; font-size:inherit;}
+
 	      h2 {
 		      .serif-font;
 		      color: @brand-red;
@@ -124,6 +124,7 @@
 		      left: 20px;
 		      bottom:10px;
 		      .schools-colleges &, .centers & {display:none;}
+		      p {margin:0; font-size:inherit;}
 	      }
 	      .can-we-photo {
 		      position:absolute;
@@ -230,7 +231,8 @@
 	      	min-height: 226px;
 	      	
 		    .can-we-credit {
-			    font-size:1em;
+			    &, p { font-size:1em; }
+			   
 		     }
 	        .can-we-photo {
 		      width:140px;

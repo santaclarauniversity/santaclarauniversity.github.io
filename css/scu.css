@@ -2537,6 +2537,10 @@ html.no-fontface .can-we.module.feature .can-we-body .can-we-headline h2 {
 .can-we.module.feature .can-we-body .can-we-box:last-child {
   margin-right: 0;
 }
+.can-we.module.feature .can-we-body .can-we-box p {
+  margin: 0;
+  font-size: inherit;
+}
 .can-we.module.feature .can-we-body .can-we-box h2 {
   font-family: "Bauer Bodoni W01 Italic", Georgia, "Times New Roman", Times, serif;
   color: #b30738;
@@ -2571,6 +2575,10 @@ html.no-fontface .can-we.module.feature .can-we-body .can-we-box h3 {
 .schools-colleges .can-we.module.feature .can-we-body .can-we-box .can-we-credit,
 .centers .can-we.module.feature .can-we-body .can-we-box .can-we-credit {
   display: none;
+}
+.can-we.module.feature .can-we-body .can-we-box .can-we-credit p {
+  margin: 0;
+  font-size: inherit;
 }
 .can-we.module.feature .can-we-body .can-we-box .can-we-photo {
   position: absolute;
@@ -2695,7 +2703,8 @@ html.no-fontface .can-we.module.feature .can-we-body .can-we-box h3 {
   .can-we.module.feature .can-we-body .can-we-box {
     min-height: 226px;
   }
-  .can-we.module.feature .can-we-body .can-we-box .can-we-credit {
+  .can-we.module.feature .can-we-body .can-we-box .can-we-credit,
+  .can-we.module.feature .can-we-body .can-we-box .can-we-credit p {
     font-size: 1em;
   }
   .can-we.module.feature .can-we-body .can-we-box .can-we-photo {
