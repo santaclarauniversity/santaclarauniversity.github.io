@@ -2449,17 +2449,17 @@ html.no-fontface .side-navigation li.active > a {
 }
 @media (min-width: 768px) {
   .site-header + .can-we.module {
-    margin-top: -55px;
+    margin-top: -30px;
   }
 }
 @media (min-width: 1065px) {
   .site-header + .can-we.module {
-    margin-top: -78px;
+    margin-top: -53px;
   }
 }
 @media (min-width: 1200px) {
   .site-header + .can-we.module {
-    margin-top: -80px;
+    margin-top: -55px;
   }
 }
 .can-we.module.feature .container {
