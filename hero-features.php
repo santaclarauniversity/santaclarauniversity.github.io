@@ -30,7 +30,7 @@
       <div class="hero feature module" style="background-image:url(_examples/hero-plant.jpg);">
       <div class="container hero-body white-text">
         <div class="row">
-          <div class="col-xs-8">
+          <div class="col-md-8 col-xs-12">
             <p>Santa Clara is California's <a href="#">oldest-operating institution</a> of higher education, with more than 150 years of history.</p>
             <p><a href="#" class="maroon inline link-button">Santa Clara's History</a> <a href="#" class="maroon inline link-button">University Archives</a></p>
           </div>
@@ -40,7 +40,7 @@
     <div class="hero feature module" style="background-image:url(_examples/hero-plant-flipped.jpg);">
       <div class="container hero-body white-text">
         <div class="row">
-          <div class="col-xs-8 col-xs-push-4 text-right">
+          <div class="col-md-8 col-md-push-4 col-xs-12 text-right">
             <p>Generous donations from <a href="#">alumni and friends</a> have helped Santa Clara maintain its excellence for more than 150 years.</p>
             <p><a href="#" class="maroon inline link-button">Online Giving to Santa Clara</a> <a href="#" class="maroon inline link-button">Bronco Bench Foundation</a></p>
           </div>
@@ -50,7 +50,7 @@
     <div class="hero feature module" style="background-image:url(_examples/hero-sky.jpg);">
       <div class="container hero-body">
         <div class="row">
-          <div class="col-xs-8">
+          <div class="col-xs-12 col-md-8">
             <p>Generous donations from <a href="#">alumni and friends</a> have helped Santa Clara maintain its excellence for more than 150 years.</p>
             <p><a href="#" class="maroon inline link-button">Online Giving to Santa Clara</a> <a href="#" class="maroon inline link-button">Bronco Bench Foundation</a></p>
           </div>
