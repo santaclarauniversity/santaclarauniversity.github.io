@@ -1,4 +1,4 @@
-    <footer class="site-footer" style="margin-top:200px;">   <!-- top margin is temporary for dept headers only -->
+    <footer class="site-footer">   <!-- top margin is temporary for dept headers only -->
       <div class="site-footer-navigation">
         <div class="container">
           <div class="footer-title-row">
