@@ -7,12 +7,8 @@
 @hero-md-height: 400px;
 @hero-lg-height: 450px;
 
-@landing-hero-xs-height: 355px;
-@landing-hero-sm-height: 440px;
-@landing-hero-md-height: 470px;
-@landing-hero-lg-height: 530px;
-@landing-hero-short-height: 355px;
-@landing-hero-xshort-height: 300px;
+@hero-short-height: 355px;
+@hero-xshort-height: 300px;
 
 
 .hero.module {
@@ -34,15 +30,29 @@
   }
   
   .container {
+	  position: relative;
     min-height: @hero-xs-height;
     @media (min-width: @screen-sm-min) {
       min-height: @hero-sm-height;
+      &>h1 {
+        font-size: 90px;
+      }
     }
     @media (min-width: @screen-md-min) {
       min-height: @hero-md-height;
+      &>h1 {
+        font-size: 120px;
+      }
     }
     @media (min-width: @screen-lg-min) {
       min-height: @hero-lg-height;
+    }
+   // tighten up feature in case of short desktop windows
+    @media (min-width: @screen-sm-min) and (max-height: @screen-short) {
+      min-height: @hero-short-height;
+    }
+    @media (min-width: @screen-sm-min) and (max-height: @screen-xshort) {
+      min-height: @hero-xshort-height;
     }
   }
 
@@ -74,6 +84,7 @@
       max-width: 60%;
       color:#fff;
       color: @white;
+      .centers & { top:auto; bottom: 20px; font-size: 60px;}
     }
     
     height: @hero-xs-height;
@@ -138,7 +149,6 @@
   &.landing {
     .container {
       position: relative;
-      min-height: @landing-hero-xs-height;
       &>h1 {
         position: absolute;
         bottom: 0;
@@ -151,33 +161,21 @@
         text-shadow: 0 -2px 3px rgba(0,0,0,.22);
         .serif-font(bold);
       }
-      @media (min-width: @screen-sm-min) {
-        min-height: @landing-hero-sm-height;
-        &>h1 {
-          font-size: 90px;
-        }
-      }
-      @media (min-width: @screen-md-min) {
-        min-height: @landing-hero-md-height;
-        &>h1 {
-          font-size: 120px;
-        }
-      }
-      @media (min-width: @screen-lg-min) {
-        min-height: @landing-hero-lg-height;
-      }
-     // tighten up feature in case of short desktop windows
-      @media (min-width: @screen-sm-min) and (max-height: @screen-short) {
-        min-height: @landing-hero-short-height;
-      }
-      @media (min-width: @screen-sm-min) and (max-height: @screen-xshort) {
-        min-height: @landing-hero-xshort-height;
-      }
+	    @media (min-width: @screen-sm-min) {
+	      &>h1 {
+	        font-size: 90px;
+	      }
+	    }
+	    @media (min-width: @screen-md-min) {
+	      &>h1 {
+	        font-size: 120px;
+	      }
+	    }
     }
     
     .hero-body {
       .strip {
-        height: @landing-hero-xs-height;
+        height: @hero-xs-height;
         padding: 15px 20px;
         background-color: #1b1b1b;
         /* This Flexbox styling should work in modern browsers, but IE8 and IE9 won't vertically center text if there's one line. */
@@ -208,7 +206,7 @@
           }
         }
         @media (min-width: @screen-sm-min) {
-          height: @landing-hero-sm-height;
+          height: @hero-sm-height;
           h5 {
             font-size: 15px;
           }
@@ -220,16 +218,31 @@
           }
         }
         @media (min-width: @screen-md-min) {
-          height: @landing-hero-md-height;
+          height: @hero-md-height;
           padding: 35px 20px;
           p, ol, ul {
             font-size: 15px;
           }
         }
         @media (min-width: @screen-lg-min) {
-          height: @landing-hero-lg-height;
+          height: @hero-lg-height;
         }
       }
     }
+  }
+}
+
+// 'Project Title' on pages with hero images
+
+.hero.module+.project-title {
+	background-color: rgba(0,0,0,.7);
+  margin-top: -8.7em;
+  margin-bottom:2em;
+  position: relative;
+  h1 {
+	  color: #fff;
+	  font-size: 60px;
+  }
+  .container {
   }
 }
