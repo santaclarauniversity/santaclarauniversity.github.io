@@ -1942,21 +1942,38 @@ html.no-fontface .evergreen.module {
   }
 }
 .hero.module .container {
+  position: relative;
   min-height: 300px;
 }
 @media (min-width: 768px) {
   .hero.module .container {
     min-height: 375px;
   }
+  .hero.module .container > h1 {
+    font-size: 90px;
+  }
 }
 @media (min-width: 1065px) {
   .hero.module .container {
     min-height: 400px;
   }
+  .hero.module .container > h1 {
+    font-size: 120px;
+  }
 }
 @media (min-width: 1200px) {
   .hero.module .container {
     min-height: 450px;
+  }
+}
+@media (min-width: 768px) and (max-height: 900px) {
+  .hero.module .container {
+    min-height: 355px;
+  }
+}
+@media (min-width: 768px) and (max-height: 600px) {
+  .hero.module .container {
+    min-height: 300px;
   }
 }
 .hero.module .hero-body {
@@ -1996,6 +2013,11 @@ html.no-fontface .evergreen.module {
   left: 15px;
   max-width: 60%;
   color: #fff;
+}
+.centers .hero.module .hero-body h1 {
+  top: auto;
+  bottom: 20px;
+  font-size: 60px;
 }
 .hero.module .hero-body p,
 .hero.module .hero-body ol,
@@ -2081,7 +2103,6 @@ html.no-fontface .evergreen.module {
 }
 .hero.module.landing .container {
   position: relative;
-  min-height: 355px;
 }
 .hero.module.landing .container > h1 {
   position: absolute;
@@ -2100,38 +2121,17 @@ html.no-fontface .hero.module.landing .container > h1 {
   font-style: italic;
 }
 @media (min-width: 768px) {
-  .hero.module.landing .container {
-    min-height: 440px;
-  }
   .hero.module.landing .container > h1 {
     font-size: 90px;
   }
 }
 @media (min-width: 1065px) {
-  .hero.module.landing .container {
-    min-height: 470px;
-  }
   .hero.module.landing .container > h1 {
     font-size: 120px;
   }
 }
-@media (min-width: 1200px) {
-  .hero.module.landing .container {
-    min-height: 530px;
-  }
-}
-@media (min-width: 768px) and (max-height: 820px) {
-  .hero.module.landing .container {
-    min-height: 355px;
-  }
-}
-@media (min-width: 768px) and (max-height: 600px) {
-  .hero.module.landing .container {
-    min-height: 300px;
-  }
-}
 .hero.module.landing .hero-body .strip {
-  height: 355px;
+  height: 300px;
   padding: 15px 20px;
   background-color: #1b1b1b;
   /* This Flexbox styling should work in modern browsers, but IE8 and IE9 won't vertically center text if there's one line. */
@@ -2180,7 +2180,7 @@ html.no-fontface .hero.module.landing .container > h1 {
 }
 @media (min-width: 768px) {
   .hero.module.landing .hero-body .strip {
-    height: 440px;
+    height: 375px;
   }
   .hero.module.landing .hero-body .strip h5 {
     font-size: 15px;
@@ -2196,7 +2196,7 @@ html.no-fontface .hero.module.landing .container > h1 {
 }
 @media (min-width: 1065px) {
   .hero.module.landing .hero-body .strip {
-    height: 470px;
+    height: 400px;
     padding: 35px 20px;
   }
   .hero.module.landing .hero-body .strip p,
@@ -2207,8 +2207,18 @@ html.no-fontface .hero.module.landing .container > h1 {
 }
 @media (min-width: 1200px) {
   .hero.module.landing .hero-body .strip {
-    height: 530px;
+    height: 450px;
   }
+}
+.hero.module + .project-title {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: -8.7em;
+  margin-bottom: 2em;
+  position: relative;
+}
+.hero.module + .project-title h1 {
+  color: #fff;
+  font-size: 60px;
 }
 /**
  * Classes for building SCU modules:
@@ -3080,6 +3090,22 @@ html.no-fontface .feature-gallery-source {
   max-height: 350px;
   width: auto;
 }
+.gallery.module a.gallery-viewall {
+  display: block;
+  margin-top: 10px;
+  line-height: 1.1;
+}
+.gallery.module a.gallery-viewall:hover {
+  background-color: #333333;
+}
+.gallery.module .gallery-title h3,
+.gallery.module .gallery-viewall {
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #b30738;
+  color: #fff;
+}
 .gallery.module .slides {
   height: 330px;
   overflow: hidden;
@@ -3154,9 +3180,6 @@ html.no-fontface .feature-gallery-source {
   overflow: hidden;
   width: auto;
   height: auto;
-}
-.mCSB_inside > .mCSB_container {
-  margin-right: 30px;
 }
 .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
   margin-right: 0;
