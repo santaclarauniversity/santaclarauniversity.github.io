@@ -1728,17 +1728,17 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
 }
 @media (min-width: 768px) {
   .site-header.uses-core-navigation + .subheader.module {
-    margin-top: -55px;
+    margin-top: -30px;
   }
 }
 @media (min-width: 1065px) {
   .site-header.uses-core-navigation + .subheader.module {
-    margin-top: -78px;
+    margin-top: -53px;
   }
 }
 @media (min-width: 1200px) {
   .site-header.uses-core-navigation + .subheader.module {
-    margin-top: -80px;
+    margin-top: -55px;
   }
 }
 /* Site Footer */
@@ -4252,7 +4252,7 @@ html.no-fontface .infographic.module.large .infographic-label a {
   -moz-background-clip: padding;
   border-radius: 50%;
   background-clip: padding-box;
-  font-size: 78px;
+  font-size: 60px;
   line-height: 1;
   color: #b30738;
 }
