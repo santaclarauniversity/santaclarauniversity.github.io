@@ -21,6 +21,7 @@
         <div class="row">
     		  <div class="col-sm-8">
     			    <h1 class="program">
+	    			    <span></span>
     			      Liberal Studies Program
     			    </h1>
     		  </div>

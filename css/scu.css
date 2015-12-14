@@ -1708,6 +1708,14 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
   margin-top: -2px;
   background: rgba(0, 0, 0, 0.5);
 }
+.subheader.module h1 span:empty,
+.subheader.module h2 span:empty,
+.subheader.module h3 span:empty,
+.subheader.module h4 span:empty,
+.subheader.module h5 span:empty,
+.subheader.module h6 span:empty {
+  padding: 0;
+}
 @media (min-width: 768px) {
   .subheader.module {
     margin-top: -35px;
