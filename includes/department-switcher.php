@@ -39,6 +39,7 @@
             <li><a href="/headers/engineering/civil-engineering">Civil Engineering</a></li>
             <li><a href="/headers/engineering/computer-engineering">Computer Engineering</a></li>
             <li><a href="/headers/engineering/electrical-engineering">Electrical Engineering</a></li>
+            <li>Engineering Management and Leadership</li>
             <li><a href="/headers/engineering/mechanical-engineering">Mechanical Engineering</a></li>
             <li><a href="/headers/engineering/sustainable-energy">Sustainable Energy</a></li>
           </ul>

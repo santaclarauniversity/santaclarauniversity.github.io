@@ -48,7 +48,21 @@
              
              <h3>Examples</h3>
              <em>The following code is also used for the department switcher on these pages; you can navigate from department to department using the switcher, or open all these links in tabs.</em>
-						 	<?php require('includes/department-switcher.php'); ?>
+			<?php require('includes/department-switcher.php'); ?>
+              <h4>Minors and other programs</h4>
+              <ul>
+                <li><a href="/headers/cas/aimes/">Arabic, Islamic, and Middle Eastern Studies minor</a></li>
+                <li><a href="/headers/cas/asianstudies/">Asian Studies minor</a></li>
+                <li><a href="/headers/cas/biotechnology/">Biotechnology minor</a></li>
+                <li><a href="/headers/cas/catholicstudies/">Catholic Studies minor</a></li>
+                <li><a href="/headers/cas/gerontology/">Gerontology Certificate</a></li>
+                <li><a href="/headers/cas/latinamericanstudies/">Latin American Studies minor</a></li>
+                <li><a href="/headers/cas/prelaw/">Pre-Law Advising</a></li>
+                <li><a href="/headers/cas/preteaching/">Pre-Teaching</a></li>
+                <li><a href="/headers/cas/mrs/">Medieval Renaissance Studies minor</a></li>
+                <li><a href="/headers/cas/sustainability/">Sustainability minor</a></li>
+                <li><a href="/headers/cas/urbaneducation/">Urban Education minor</a></li>                  
+              </ul>
              <h2>Priority 2 Headers: Branded Sites</h2>
              
              <h3>Rules</h3>
@@ -65,16 +79,16 @@
 								<li><a href="/headers/alumni/">Alumni Association</a></li>
 								<li><a href="/headers/desaisset/">De Saisset Museum</a></li>
 								<li><a href="/headers/ignatian-center/">Ignatian Center</a></li>
-								<li>Miller Center</a></li>
-								<li>SCU Presents</a></li>
-								<li>Bronco bench foundation</a></li>
-								<li>Campus Recreation</a></li>
+								<li><a href="/headers/millercenter/" style="color:#999;">Miller Center (NEED VECTOR LOGO FILE FROM OMC)</a></li>
+								<li><a href="/headers/scupresents/" style="color:#999;">SCU Presents (NEED VECTOR LOGO FILE FROM OMC)</a></li>
+								<li><a href="/headers/broncobench/" style="color:#999;">Bronco Bench foundation (NEED VECTOR LOGO FILE FROM OMC)</a></li>
+								<li><a href="/headers/campus-recreation/" style="color:#999;">Campus Recreation (NEED VECTOR LOGO FILE FROM OMC)</a></li>
              </ul>
              <h2>Priority 3 Headers: Additional sites</h2>
              <ul>
-								<li>Provost main header, 4 area subheads</a></li>
-								<li>President's Office</a></li>
-								<li>Markkula Center</a></li>	             
+								<li><a href="/headers/provost/">Provost main header, 4 area subheads</a></li>
+								<li><a href="/headers/president/">President's Office</a></li>
+								<li><a href="/headers/markkula/">Markkula Center</a></li>	             
              </ul>
 						</div>
 					</div>     
