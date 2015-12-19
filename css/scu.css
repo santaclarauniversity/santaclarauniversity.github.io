@@ -2821,23 +2821,28 @@ html.no-fontface .can-we.module.feature .can-we-body .can-we-box h3 {
   background-color: #cecece;
   z-index: 100;
 }
-@media (min-width: 1065px) {
+@media (min-width: 768px) {
   .switcher {
     width: 200%;
     top: 50px;
     background: none;
   }
 }
+@media (min-width: 768px) and (max-width: 1065px) {
+  .switcher {
+    font-size: 16px;
+  }
+}
 .switcher.on {
   background: #fff;
 }
-@media (min-width: 1065px) {
+@media (min-width: 768px) {
   .switcher.on {
     width: 200%;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   .switcher.on > a > span:after {
     display: block;
     font-size: 12px;

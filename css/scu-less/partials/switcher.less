@@ -9,14 +9,15 @@
 	position:absolute;
 	background-color: @light-gray;
 	z-index: 100;
-	@media (min-width: @screen-md-min) { width: 200%; top:50px; background: none;}
+	@media (min-width: @screen-sm-min) { width: 200%; top:50px; background: none;}
+	@media (min-width: @screen-sm-min) and (max-width: @screen-md) { font-size: 16px;} 
 	&.on {
 		background: #fff;
-		@media (min-width: @screen-md-min) { 
+		@media (min-width: @screen-sm-min) { 
 			width: 200%; 
 			box-shadow: 1px 1px 3px rgba(0,0,0,.4);
 		}
-		@media (max-width: (@screen-xs - 1)) { 
+		@media (max-width: (@screen-sm - 1)) { 
 			> a > span:after {
 				display:block;
 				font-size:12px;
