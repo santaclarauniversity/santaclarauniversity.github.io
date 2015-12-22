@@ -2011,6 +2011,13 @@ html.no-fontface .evergreen.module {
   background-color: rgba(0, 0, 0, 0.55);
   padding-top: 20px;
   padding-right: 20px;
+  color: #FFF;
+}
+.hero.module .hero-body .high-contrast a {
+  color: #fbfb96;
+}
+.hero.module .hero-body .high-contrast a:hover {
+  color: #f9f965;
 }
 .hero.module .hero-body .caption {
   padding: 15px;
