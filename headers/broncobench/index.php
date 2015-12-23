@@ -11,7 +11,7 @@
 
 	<?php require('../../includes/head.php'); ?>
   </head>
-  <body class="black-nav centers tall-header">
+  <body class="stone-nav color-burgundy tall-header">
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
    <header class="site-header site-header-custom-title">
       <?php require('../../includes/header-broncobench.php'); ?>
