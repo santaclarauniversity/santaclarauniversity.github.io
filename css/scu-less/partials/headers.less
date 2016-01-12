@@ -49,6 +49,11 @@
 }
 .site-header-text-and-search {
   background-size: cover;
+  @media (max-width: @screen-md) {
+    &.no-mobile-bg {   // hide background image on mobile
+	    background-image:none !important;
+    }
+  }
 }
 
 .navbar-form .radio input {

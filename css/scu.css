@@ -484,6 +484,11 @@ html.no-fontface .lw_cal_today_day {
 .site-header-text-and-search {
   background-size: cover;
 }
+@media (max-width: 1065px) {
+  .site-header-text-and-search.no-mobile-bg {
+    background-image: none !important;
+  }
+}
 .navbar-form .radio input {
   margin: 10px 8px 0 0;
 }

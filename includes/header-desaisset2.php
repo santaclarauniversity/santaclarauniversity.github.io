@@ -1,9 +1,9 @@
-      <div class="site-header-text-and-search" style="background-image:url(desaisset_header_1.jpg); background-size: auto; background-position: left center; background-repeat: no-repeat;">
+      <div class="site-header-text-and-search no-mobile-bg" style="background-image:url(desaisset_header_2.jpg); background-size: auto; background-position: right center; background-repeat: no-repeat;">
         <div class="container">
           <div class="row">
             <div class="col-sm-9 site-header-titles">
 	            <div class="wordmarks">
-	              <a href="index.php"><img src="desaisset_logo.png" style="width:450px; height:auto; max-width: 100%; margin-bottom: 15px;"/></a>
+	              <a href="index.php"><img src="desaisset_logo_2.png" style="width:400px; height:auto; max-width: 100%; margin-bottom: 15px;"/></a>
 		            <a href="index.php">The South Bay's Free Museum of Art and History</a>
 	              </a>
 	            </div>
