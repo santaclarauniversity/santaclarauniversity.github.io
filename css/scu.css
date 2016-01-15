@@ -3565,7 +3565,7 @@ html.no-fontface .feature-gallery-source {
 }
 @media (min-width: 768px) {
   .events.module .featured-event .media-body {
-    min-height: 50%;
+    padding-bottom: 20px;
   }
   .events.module .featured-event .events-date-page {
     top: -3%;
