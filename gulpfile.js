@@ -8,7 +8,7 @@ gulp.task('default', function () {
 });
 gulp.task('less', function () {
     console.log("Compiling LESS");
-    return gulp.src('./css/scu-less/scu.less')
+    return gulp.src('./scu-less/scu.less')
         .pipe(less({
             paths: [path.join(__dirname, 'less', 'includes')]
         }))
