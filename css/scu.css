@@ -4142,36 +4142,6 @@ html.no-fontface .link-button.red {
 }
 /* '' */
 /*  Social brand colors  */
-.facebook {
-  background-color: #3b5998;
-}
-.twitter {
-  background-color: #00aced;
-}
-.pinterest {
-  background-color: #cb2027;
-}
-.linkedin {
-  background-color: #007bb6;
-}
-.youtube {
-  background-color: #bb0000;
-}
-.vimeo {
-  background-color: #aad450;
-}
-.soundcloud {
-  background-color: #ff3a00;
-}
-.flickr {
-  background-color: #ff0084;
-}
-.rss {
-  background-color: #ff7600;
-}
-.instagram {
-  background-color: #517fa4;
-}
 /*  SCU-specific styles  */
 .social a {
   display: block;
@@ -4185,6 +4155,36 @@ html.no-fontface .link-button.red {
   transition: opacity .3s;
   -webkit-transition: opacity .3s;
   color: #fff;
+}
+.social a.facebook {
+  background-color: #3b5998;
+}
+.social a.twitter {
+  background-color: #00aced;
+}
+.social a.pinterest {
+  background-color: #cb2027;
+}
+.social a.linkedin {
+  background-color: #007bb6;
+}
+.social a.youtube {
+  background-color: #bb0000;
+}
+.social a.vimeo {
+  background-color: #aad450;
+}
+.social a.soundcloud {
+  background-color: #ff3a00;
+}
+.social a.flickr {
+  background-color: #ff0084;
+}
+.social a.rss {
+  background-color: #ff7600;
+}
+.social a.instagram {
+  background-color: #517fa4;
 }
 .social a:hover {
   opacity: .7;
