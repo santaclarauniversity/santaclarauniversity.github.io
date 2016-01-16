@@ -13,19 +13,21 @@
   background-size: cover;
   position:relative;
   margin-bottom:80px;
+  
+  
   .site-header + & {
     margin-top: -20px;
     @media (min-width: @screen-sm-min) {
-      margin-top: -55px;
+      margin-top: -30px;
     }
     @media (min-width: @screen-md-min) {
-      margin-top: -78px;
+      margin-top: -53px;
     }
     @media (min-width: @screen-lg-min) {
-      margin-top: -80px;
+      margin-top: -55px;
     }
   }
-  
+    
   &.feature {
     .container {
       min-height: @can-we-xs-height;
@@ -97,8 +99,8 @@
 	      &:last-child {
 		      margin-right:0;
 	      }
-	      p {
-	      }
+	      p {margin:0; font-size:inherit;}
+
 	      h2 {
 		      .serif-font;
 		      color: @brand-red;
@@ -123,6 +125,8 @@
 		      position:absolute;
 		      left: 20px;
 		      bottom:10px;
+		      .schools-colleges &, .centers & {display:none;}
+		      p {margin:0; font-size:inherit;}
 	      }
 	      .can-we-photo {
 		      position:absolute;
@@ -139,6 +143,7 @@
 			      width:100%;
 			      height:auto;
 		      }
+		      .schools-colleges &, .centers & {display:none;}
 	      }
       }  
 	      
@@ -177,6 +182,7 @@
 		}      
 	    .can-we-box {
 	      	min-height: 160px;
+		      .schools-colleges &, .centers & {min-height: 180px !important;}
 	      	min-width: 0;
 		    .can-we-credit {
 			    font-size:14px;
@@ -225,8 +231,10 @@
         }
         .can-we-box {
 	      	min-height: 226px;
+	      	
 		    .can-we-credit {
-			    font-size:1em;
+			    &, p { font-size:1em; }
+			   
 		     }
 	        .can-we-photo {
 		      width:140px;

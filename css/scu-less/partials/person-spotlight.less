@@ -46,7 +46,13 @@
     color: @link-red;
   }
   
-  
+  .grid  {     /*  display as grid, two per row  */
+	float:left;
+	margin-top:0;
+	&:nth-child(2n+1) {
+		clear:left;
+	}  
+  }
   
   &.two-column { /* The two-column version has the spotlight overlay */
     position: relative;

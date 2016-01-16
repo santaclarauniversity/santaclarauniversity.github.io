@@ -6,6 +6,19 @@
 			width:auto;
 		}
 	}
+	a.gallery-viewall {
+		display:block;
+		margin-top:10px;
+		line-height: 1.1;
+		&:hover { background-color: @dark-gray;}
+	}
+	.gallery-title h3, .gallery-viewall {
+			font-size: 18px;
+			padding: 10px;
+			margin-bottom:5px;
+			background-color: @brand-red;
+			color: @white;
+	}
 }
 
 .gallery.module .slides  {
@@ -71,7 +84,7 @@
 	height: auto;
 }
 
-.mCSB_inside > .mCSB_container{ margin-right: 30px; }
+// .mCSB_inside > .mCSB_container{ margin-right: 30px; }
 
 .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-right: 0; } /* non-visible scrollbar */
 

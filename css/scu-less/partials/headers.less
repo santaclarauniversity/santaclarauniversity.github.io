@@ -6,7 +6,7 @@
   margin: 0 0 20px;
   @media (min-width: @screen-sm-min) {
     padding: 48px 0 44px;
-    margin: 0 0 55px;
+    margin: 0 0 30px;
   }
   @media (min-width: 825px) {
     padding-bottom: 46px;
@@ -49,6 +49,15 @@
 }
 .site-header-text-and-search {
   background-size: cover;
+  @media (max-width: @screen-md) {
+    &.no-mobile-bg {   // hide background image on mobile
+	    background-image:none !important;
+    }
+  }
+}
+
+.navbar-form .radio input {
+    margin: 10px 8px 0 0;
 }
 
 // Header style options
@@ -56,18 +65,21 @@
 /* HEADER TEXT */
 .title-large { display:block;text-decoration: none;	font-size:24px;
     @media (min-width: @screen-sm-min) {
-      font-size: 30px;
+      font-size: 24px;
 	}
     @media (min-width: @screen-md-min) {
-      font-size:40px;
+      font-size:28px;
+    }
+    @media (min-width: @screen-lg-min) {
+      font-size:32px;
     }
 }
 .title-small { text-transform: uppercase; font-size:12px;
     @media (min-width: @screen-sm-min) {
-      font-size: 16px;
+      font-size: 14px;
 	}
-    @media (min-width: @screen-md-min) {
-      font-size:20px;
+    @media (min-width: @screen-lg-min) {
+      font-size:16px;
     }
 }
 
@@ -139,12 +151,12 @@
       color: @white;
       text-transform: uppercase;
       &.menu-toggle-main {
-        width: 85px;
+        width: 91px;
       }
       &.menu-toggle-gateways {
         left: auto;
         right: 0;
-        width: 84px;
+        width: 88px;
         .menu-label {
           display: inline-block;
           width: 41px;
@@ -195,10 +207,12 @@
 .site-header-custom-title {
   .site-header-text-and-search {
     position: relative;
+    height:auto;
     @media (min-width: @screen-sm-min) {
-      height: 200px;
+      height: 150px;
+      overflow:hidden;
       .tall-header & {
-	      height:300px;
+	      height:250px;
       }
     }
     .wordmarks {
@@ -222,15 +236,16 @@
     }
     .wordmarks,
     .group-logo {
-      height: 167px;
+      height: auto;
       /* This Flexbox styling should work in modern browsers, but IE8 and IE9 won't vertically center text if there's one line. */
       .lh-display(flex);
       .lh-flex-direction(column);
       .lh-justify-content(center);
       @media (min-width: @screen-sm-min) {
-        height: 200px;
+        height: 150px;
+        overflow:hidden;
 	      .tall-header & {
-		      height:300px;
+		      height:250px;
 	      }
       }
       .no-flexbox & {
@@ -241,13 +256,13 @@
 }
 .site-header-with-seal {
   .site-header-text-and-search {
-    background-color: @white;
+    // background-color: @white;               <--- testing removal of this line; conflicts with new header styles that allow colors along with seal
     @media (min-width: @screen-sm-min) {
       padding: 0 0 30px;
     }
     @media (min-width: @screen-md-min) {
       height: 184px;
-      padding: 0;
+      padding: 15px 0 0 0;
     }
   }
   .site-header-titles {
@@ -346,7 +361,7 @@
     display: inline-block;
     width: auto;
     max-width: calc(~"100% - 45px");
-    margin: 25px 0 0 45px;
+    margin: 25px 0 15px 45px;
     padding: 0;
     @media (min-width: 390px) {
     max-width: calc(~"100% - 55px");
@@ -433,6 +448,7 @@
       left: 0;
       right: 0;
       bottom: auto;
+      .nav-dropdown-open & {margin-top:50px;}
     }
     &.affix-top {
       top: auto !important;
@@ -445,6 +461,7 @@
       margin-left: -15px;
       margin-right: -15px;
     }
+    
   }
   @media (min-width: @screen-md-min) {
     height: 49px;
@@ -488,6 +505,9 @@
         margin-top: -10px;
         border-left: 1px dotted #bbbaba;
       }
+	    &.active + li:before {
+		    border-left: none;
+			}
     }
   }
   .nav-pills > li {
@@ -527,7 +547,7 @@
         padding-left: 18px;
       }
     }
-    
+
    .dropdown-menu {
       margin-top:-1px;
       text-transform: none;
@@ -538,6 +558,10 @@
   .nav-pills > li > a:hover,
   .nav-pills > li > span > a:hover {
     background-color: @brand-red;
+    color: @white;
+  }
+  .nav-pills>li.active>a {
+    background-color: @link-red;
     color: @white;
   }
 }
@@ -573,6 +597,7 @@
     ul.nav-pills {
       margin: 0 0 0 97px;
       padding-left: 8px;
+      width:100%;
     }
   }
   @media (min-width: @screen-lg-min) {
@@ -690,6 +715,12 @@
       border-left: none;
       border-right: none;
     }
+    
+   &.scu-nav.dropdown:hover .dropdown-menu {
+	    display: block;
+	    margin-top: 0; 
+	 }
+
     &.dropdown-search .dropdown-menu {
       width: 300px;
       .input-group {
@@ -767,6 +798,12 @@
         display: inline-block;
         margin-left: 34px;
       }
+			& + span.scu-fullname {
+					display:none; 
+			}
+			& + span.scu-shortname {
+					display:inline-block;  
+			}
       @media (min-width: @screen-sm-min) {
         position: relative;
         width: 56px;
@@ -823,7 +860,16 @@
         }
       }
     }
+    
   }
+    nav.affix+nav .caret {
+    	transform: rotate(180deg);
+	}
+	 nav.affix+nav .dropdown:hover .caret {
+	    transform: rotate(0deg);
+	}
+
+
   .nav > li.scu-nav.open > a .mission {
     z-index: 1001;
   }
@@ -841,6 +887,7 @@
           border-top: none;
           border-bottom: 4px solid;
         }
+        
       }
     }
     .slide-panel {
@@ -879,7 +926,7 @@
         color: #97052e;
         .caret {
           border-top: none;
-          border-bottom: 4px solid;
+          border-bottom: 4px solid;          
         }
       }
       &.open > a {
@@ -943,65 +990,5 @@
   }
   a.glyphicon {
     font-size: 18px;
-  }
-}
-
-/**
- * Subheader module
- */
-
-.subheader.module {
-  width: 100%;
-  height: 150px;
-  background-color: #611b25;
-  &.office {
-    background-color: #464646;
-  }
-  
-  .container {
-    height: 150px;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    display: table-cell;
-    height: 150px;
-    padding: 10px 0 20px;
-    margin: 0;
-    font-size: 45px;
-    line-height: 1.2;
-    color: @white;
-    vertical-align: bottom;
-    @media (min-width: @screen-sm-min) {
-      font-size: 55px;
-    }
-
-    span {
-      display: block;
-      font-size: 18px;
-      text-transform: uppercase;
-      color: #e9e8d5;
-    }
-  }
-  margin-top:-20px;
-  @media (min-width: @screen-sm-min) {
-	margin-top: -35px;
-   }
-   @media (min-width: @screen-md-min) {
-	  margin-top: -58px;
-   }
-   @media (min-width: @screen-lg-min) {
-	  margin-top: -60px;
-   }
-  .site-header.uses-core-navigation + & {
-    margin-top: -20px;
-    @media (min-width: @screen-sm-min) {
-      margin-top: -55px;
-    }
-    @media (min-width: @screen-md-min) {
-      margin-top: -78px;
-    }
-    @media (min-width: @screen-lg-min) {
-      margin-top: -80px;
-    }
   }
 }
