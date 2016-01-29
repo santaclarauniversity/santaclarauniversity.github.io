@@ -15,5 +15,12 @@
   "text-indent": false,
   "unique-headings": false,
   "universal-selector": false,
-  "unqualified-attributes": false
+  "unqualified-attributes": false,
+  "overqualified-elements": false,
+  "fallback-colors": false,
+  "empty-rules": false,
+  "ids": false,
+  "bulletproof-font-face": false,
+  "import": false,
+  "font-faces": false
 }
