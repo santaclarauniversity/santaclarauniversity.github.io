@@ -25,8 +25,23 @@ $ cd docs
 $ jekyll serve
 ```
 
+### Building CSS and JavaScript with Gulp
+
+To build all CSS and JavaScript code:
+
+```sh
+$ gulp deploy
+```
+
+Alternatively, you can choose to do either CSS or JavaScript:
+
+```sh
+$ gulp [css/js]
+```
+
+Note: Your code will be checked by a 'linter' and style checker which will err if your code is either broken, inefficient, or not compliant with the style format.  Make sure your code passes both the test for JS and CSS before you push any changes.
+
 ### To-do:
 * Template demonstrations should become the style guide.
-* Make actual tasks for gulp; configure `default` and `deploy` steps.
 
 [node.js]: <http://nodejs.org>
