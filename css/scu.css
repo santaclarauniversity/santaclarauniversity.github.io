@@ -3585,11 +3585,8 @@ html.no-fontface .feature-gallery-source {
 }
 @media (min-width: 1065px) {
   .events.module .featured-event .events-date-page {
-    top: auto;
-    bottom: 45%;
-  }
-  .events.module .featured-event h4 {
-    padding: 10px 20px 10px 60px;
+    top: 5%;
+    bottom: auto;
   }
 }
 /**
