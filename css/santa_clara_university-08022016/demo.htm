@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Webfonts Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+	    body, textarea { font-family:Arial, Sans-Serif; line-height:1.6em; font-size:13px; }
+	    h1 { font-size:3em; }
+	    h2, h3 { color:#999; }
+	    .content { width:780px; margin: 20px auto 40px; }
+	    .demo { font-weight:bold; font-style:normal; color: #999 }
+	    .fontdisplay {font-size:2em;line-height:150%;margin: 10px 40px 0px 0px;}
+	    .guidelines { color:#333; }
+	    pre { padding:0 0 0 20px; }
+	    hr { border:0; border-bottom:1px solid #537094; margin:20px 0; }
+	    .link { color: #537094;text-decoration:none; font-weight:bold;}
+	    .uc {text-transform:uppercase}
+	    
+    </style>
+    <style type="text/css">
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35");
+@font-face{
+font-family:"Bauer Bodoni W01 Italic";
+src:url("Fonts/0d956984-1d14-4bf5-bfbd-24047fe105f0.eot?#iefix");
+src:url("Fonts/0d956984-1d14-4bf5-bfbd-24047fe105f0.eot?#iefix") format("eot"),url("Fonts/185ac1c7-6f53-44a3-9eb9-6426c900c088.woff2") format("woff2"),url("Fonts/47cb918f-38fe-4009-ae12-16659f98a1eb.woff") format("woff"),url("Fonts/37942b37-f74a-4adf-91a0-6866ad671859.ttf") format("truetype"),url("Fonts/1aa79473-3e74-468a-a0fe-f575dea12203.svg#1aa79473-3e74-468a-a0fe-f575dea12203") format("svg");
+}
+@font-face{
+font-family:"BauerBodoniW01-BlackIta";
+src:url("Fonts/f5650444-5085-482f-95c4-fed344d7b399.eot?#iefix");
+src:url("Fonts/f5650444-5085-482f-95c4-fed344d7b399.eot?#iefix") format("eot"),url("Fonts/806f1bc0-d615-41ad-b6e9-3f27b8e9b148.woff2") format("woff2"),url("Fonts/2e0c0536-949e-4b3a-a465-e562cf02d60b.woff") format("woff"),url("Fonts/f5de218c-65fe-4f39-b133-0f871722bfa5.ttf") format("truetype"),url("Fonts/be1fbad4-abf5-49be-a8ce-a23bc83cac9b.svg#be1fbad4-abf5-49be-a8ce-a23bc83cac9b") format("svg");
+}
+@font-face{
+font-family:"Trade Gothic Next W01";
+src:url("Fonts/8a6c3750-4927-4649-9dac-87049f5e9700.eot?#iefix");
+src:url("Fonts/8a6c3750-4927-4649-9dac-87049f5e9700.eot?#iefix") format("eot"),url("Fonts/d4eef5b1-2f4a-42d6-ae2d-6220d71243be.woff2") format("woff2"),url("Fonts/57625f96-ca80-4602-9644-ec1803cb3ba3.woff") format("woff"),url("Fonts/6618d500-1727-4334-878e-1c4b95192f42.ttf") format("truetype"),url("Fonts/01ebe944-ca6c-41db-a3ba-b7e2a90536d9.svg#01ebe944-ca6c-41db-a3ba-b7e2a90536d9") format("svg");
+}
+@font-face{
+font-family:"TradeGothicNextW01-Ital";
+src:url("Fonts/5907bd95-539f-4f25-b115-69c42aee6b21.eot?#iefix");
+src:url("Fonts/5907bd95-539f-4f25-b115-69c42aee6b21.eot?#iefix") format("eot"),url("Fonts/e41c3ce6-57bc-473c-aaf0-9e0e771bf6c8.woff2") format("woff2"),url("Fonts/3bde4253-d238-40b7-b813-eea7bdd9e80d.woff") format("woff"),url("Fonts/6005c161-37f3-4678-869a-1b4306ecc563.ttf") format("truetype"),url("Fonts/1301d16e-d0ec-407b-9796-677535450691.svg#1301d16e-d0ec-407b-9796-677535450691") format("svg");
+}
+@font-face{
+font-family:"Trade Gothic W01 Light";
+src:url("Fonts/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix");
+src:url("Fonts/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix") format("eot"),url("Fonts/5414f75e-5cb8-4357-88e5-5a294424c859.woff2") format("woff2"),url("Fonts/537b145a-6a7d-4787-81d9-7228d3a42458.woff") format("woff"),url("Fonts/8e50278c-45cd-4808-b774-24767d958f17.ttf") format("truetype"),url("Fonts/d918b947-5fcb-42e2-8286-a98a801876de.svg#d918b947-5fcb-42e2-8286-a98a801876de") format("svg");
+}
+@font-face{
+font-family:"TradeGothicW01-LightObl";
+src:url("Fonts/b1721311-de06-4277-8dcb-bf39e072b75e.eot?#iefix");
+src:url("Fonts/b1721311-de06-4277-8dcb-bf39e072b75e.eot?#iefix") format("eot"),url("Fonts/c71beaba-ad09-45b0-9e21-78db525b4d1c.woff2") format("woff2"),url("Fonts/c357a65e-dd87-4d11-8063-db04802d44c0.woff") format("woff"),url("Fonts/6b9ca17d-cb9d-43bb-8b43-93670b45b83f.ttf") format("truetype"),url("Fonts/198ed3e2-0cdf-496f-a0ef-86da8d4dde55.svg#198ed3e2-0cdf-496f-a0ef-86da8d4dde55") format("svg");
+}
+@font-face{
+font-family:"Trade Gothic W01 Bold_2";
+src:url("Fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix");
+src:url("Fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix") format("eot"),url("Fonts/7bb1c0cb-e6e9-44ea-ae0c-1984ad7e3339.woff2") format("woff2"),url("Fonts/1454a71d-cdbb-429c-8092-122f4493e0c7.woff") format("woff"),url("Fonts/d5ea405c-2180-4ff0-bd51-3e19fb280be4.ttf") format("truetype"),url("Fonts/70ac6679-cf48-4a0e-a909-d1e3bb4a1aa9.svg#70ac6679-cf48-4a0e-a909-d1e3bb4a1aa9") format("svg");
+}
+@font-face{
+font-family:"TradeGothicW01-Bold2Obl";
+src:url("Fonts/363fd092-cd55-4bd1-bdc5-cfc9a7057517.eot?#iefix");
+src:url("Fonts/363fd092-cd55-4bd1-bdc5-cfc9a7057517.eot?#iefix") format("eot"),url("Fonts/2576748c-c86d-474c-b80b-33a1ce248599.woff2") format("woff2"),url("Fonts/25f577c3-f32b-4fbf-b684-3e7c1a76d1ea.woff") format("woff"),url("Fonts/2ed49e17-92ad-4026-9ae6-d20f88f21840.ttf") format("truetype"),url("Fonts/969cd675-2b4c-4baa-ada6-62bb7ace778f.svg#969cd675-2b4c-4baa-ada6-62bb7ace778f") format("svg");
+}
+@font-face{
+font-family:"Trajan W01 Regular";
+src:url("Fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix");
+src:url("Fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix") format("eot"),url("Fonts/610145ac-dd31-4024-b833-3ab0ce6b7847.woff2") format("woff2"),url("Fonts/b4312891-e355-4bdc-80c9-ef3dbf7bd916.woff") format("woff"),url("Fonts/124dc47b-32a0-4543-a60e-d8aad32782b4.ttf") format("truetype"),url("Fonts/001e534b-3742-45b3-b20b-d4c53c41a519.svg#001e534b-3742-45b3-b20b-d4c53c41a519") format("svg");
+}
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 class="demo">Fonts.com Web fonts</h1>
+        <p style="margin-top:-10px; font-size:1.5em;color:#666"><b>@font-face implementation instructions</b></p>
+        <hr />
+        <p class="uc">The fonts contained in this kit are:</p>
+        <div class="fontdisplay">
+<div style="font-family:'Trade Gothic W01 Bold_2';"> Trade Gothic® W01 Bold #2 </div>
+<div style="font-family:'TradeGothicW01-Bold2Obl';"> Trade Gothic® W01 Bold #2 Oblique </div>
+<div style="font-family:'Trade Gothic W01 Light';"> Trade Gothic® W01 Light </div>
+<div style="font-family:'TradeGothicW01-LightObl';"> Trade Gothic® W01 Light Oblique </div>
+<div style="font-family:'TradeGothicNextW01-Ital';"> Trade Gothic® Next W01 Italic </div>
+<div style="font-family:'Trade Gothic Next W01';"> Trade Gothic® Next W01 Regular </div>
+<div style="font-family:'Bauer Bodoni W01 Italic';"> Bauer Bodoni® W01 Italic </div>
+<div style="font-family:'BauerBodoniW01-BlackIta';"> Bauer Bodoni® W01 Black Italic </div>
+<div style="font-family:'Trajan W01 Regular';"> Trajan™ W01 Regular </div>
+
+        </div>
+        <hr />
+        Click here for <a class="link uc" href="demo-async.htm">asynchronous</a> web fonts implementation
+        <hr />
+        <div class="guidelines">
+            <h2>CSS Implementation Guidelines</h2>
+            <p>You and any third party web font hosting service are responsible for ensuring that the font software in the self-hosting kit, in its original format, can only be used on the Web Sites for which the self-hosting kit was downloaded and cannot be used or referenced by any other web site. This includes, but is not limited to installing adequate technical protection measures that restrict the use and/or access to the font software, for instance by utilizing JavaScript or access control mechanism for cross-origin resource sharing and protecting against use on web sites other than the Web Sites for which the self-hosting kit was downloaded by restricting domain access only to such Web Sites. You must also retain the pageview tracking code on any Web Site that you self-host. In the event this Agreement terminates for any reason, the font software included with the self-hosting kit must be deleted from the server and all copies must be destroyed or returned to Monotype Imaging.</p>
+            <p>View <a class="link" href="http://new.fonts.com/info/legal/eula/web-fonts" target="_blank">"WEB FONT SOFTWARE" LICENSE AGREEMENT</a></p>
+            <p>Font file names have been obfuscated to protect the font software. You can identify font format based on file ending:</p>
+            <ul>
+                <li>1 - TrueType (ttf)</li>
+                <li>2 - Embedded OpenType (eot)</li>
+                <li>3 - Web Open Font Format (woff)</li>
+                <li>4 - Web Open Font Format version 2 (woff2)</li>
+                <li>5 - Scalable Vector Graphics (svg)</li>
+            </ul>
+            <p class="uc" style="margin: 20px 0px -20px;"><b>Copy and paste following code in head section of the page</b></p>
+            <hr />
+            <textarea style="width:830px; height:350px; border:1 #fff solid; background-color:#fcfcfc;"><style type="text/css">
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35");
+@font-face{
+font-family:"Bauer Bodoni W01 Italic";
+src:url("Fonts/0d956984-1d14-4bf5-bfbd-24047fe105f0.eot?#iefix");
+src:url("Fonts/0d956984-1d14-4bf5-bfbd-24047fe105f0.eot?#iefix") format("eot"),url("Fonts/185ac1c7-6f53-44a3-9eb9-6426c900c088.woff2") format("woff2"),url("Fonts/47cb918f-38fe-4009-ae12-16659f98a1eb.woff") format("woff"),url("Fonts/37942b37-f74a-4adf-91a0-6866ad671859.ttf") format("truetype"),url("Fonts/1aa79473-3e74-468a-a0fe-f575dea12203.svg#1aa79473-3e74-468a-a0fe-f575dea12203") format("svg");
+}
+@font-face{
+font-family:"BauerBodoniW01-BlackIta";
+src:url("Fonts/f5650444-5085-482f-95c4-fed344d7b399.eot?#iefix");
+src:url("Fonts/f5650444-5085-482f-95c4-fed344d7b399.eot?#iefix") format("eot"),url("Fonts/806f1bc0-d615-41ad-b6e9-3f27b8e9b148.woff2") format("woff2"),url("Fonts/2e0c0536-949e-4b3a-a465-e562cf02d60b.woff") format("woff"),url("Fonts/f5de218c-65fe-4f39-b133-0f871722bfa5.ttf") format("truetype"),url("Fonts/be1fbad4-abf5-49be-a8ce-a23bc83cac9b.svg#be1fbad4-abf5-49be-a8ce-a23bc83cac9b") format("svg");
+}
+@font-face{
+font-family:"Trade Gothic Next W01";
+src:url("Fonts/8a6c3750-4927-4649-9dac-87049f5e9700.eot?#iefix");
+src:url("Fonts/8a6c3750-4927-4649-9dac-87049f5e9700.eot?#iefix") format("eot"),url("Fonts/d4eef5b1-2f4a-42d6-ae2d-6220d71243be.woff2") format("woff2"),url("Fonts/57625f96-ca80-4602-9644-ec1803cb3ba3.woff") format("woff"),url("Fonts/6618d500-1727-4334-878e-1c4b95192f42.ttf") format("truetype"),url("Fonts/01ebe944-ca6c-41db-a3ba-b7e2a90536d9.svg#01ebe944-ca6c-41db-a3ba-b7e2a90536d9") format("svg");
+}
+@font-face{
+font-family:"TradeGothicNextW01-Ital";
+src:url("Fonts/5907bd95-539f-4f25-b115-69c42aee6b21.eot?#iefix");
+src:url("Fonts/5907bd95-539f-4f25-b115-69c42aee6b21.eot?#iefix") format("eot"),url("Fonts/e41c3ce6-57bc-473c-aaf0-9e0e771bf6c8.woff2") format("woff2"),url("Fonts/3bde4253-d238-40b7-b813-eea7bdd9e80d.woff") format("woff"),url("Fonts/6005c161-37f3-4678-869a-1b4306ecc563.ttf") format("truetype"),url("Fonts/1301d16e-d0ec-407b-9796-677535450691.svg#1301d16e-d0ec-407b-9796-677535450691") format("svg");
+}
+@font-face{
+font-family:"Trade Gothic W01 Light";
+src:url("Fonts/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix");
+src:url("Fonts/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix") format("eot"),url("Fonts/5414f75e-5cb8-4357-88e5-5a294424c859.woff2") format("woff2"),url("Fonts/537b145a-6a7d-4787-81d9-7228d3a42458.woff") format("woff"),url("Fonts/8e50278c-45cd-4808-b774-24767d958f17.ttf") format("truetype"),url("Fonts/d918b947-5fcb-42e2-8286-a98a801876de.svg#d918b947-5fcb-42e2-8286-a98a801876de") format("svg");
+}
+@font-face{
+font-family:"TradeGothicW01-LightObl";
+src:url("Fonts/b1721311-de06-4277-8dcb-bf39e072b75e.eot?#iefix");
+src:url("Fonts/b1721311-de06-4277-8dcb-bf39e072b75e.eot?#iefix") format("eot"),url("Fonts/c71beaba-ad09-45b0-9e21-78db525b4d1c.woff2") format("woff2"),url("Fonts/c357a65e-dd87-4d11-8063-db04802d44c0.woff") format("woff"),url("Fonts/6b9ca17d-cb9d-43bb-8b43-93670b45b83f.ttf") format("truetype"),url("Fonts/198ed3e2-0cdf-496f-a0ef-86da8d4dde55.svg#198ed3e2-0cdf-496f-a0ef-86da8d4dde55") format("svg");
+}
+@font-face{
+font-family:"Trade Gothic W01 Bold_2";
+src:url("Fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix");
+src:url("Fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix") format("eot"),url("Fonts/7bb1c0cb-e6e9-44ea-ae0c-1984ad7e3339.woff2") format("woff2"),url("Fonts/1454a71d-cdbb-429c-8092-122f4493e0c7.woff") format("woff"),url("Fonts/d5ea405c-2180-4ff0-bd51-3e19fb280be4.ttf") format("truetype"),url("Fonts/70ac6679-cf48-4a0e-a909-d1e3bb4a1aa9.svg#70ac6679-cf48-4a0e-a909-d1e3bb4a1aa9") format("svg");
+}
+@font-face{
+font-family:"TradeGothicW01-Bold2Obl";
+src:url("Fonts/363fd092-cd55-4bd1-bdc5-cfc9a7057517.eot?#iefix");
+src:url("Fonts/363fd092-cd55-4bd1-bdc5-cfc9a7057517.eot?#iefix") format("eot"),url("Fonts/2576748c-c86d-474c-b80b-33a1ce248599.woff2") format("woff2"),url("Fonts/25f577c3-f32b-4fbf-b684-3e7c1a76d1ea.woff") format("woff"),url("Fonts/2ed49e17-92ad-4026-9ae6-d20f88f21840.ttf") format("truetype"),url("Fonts/969cd675-2b4c-4baa-ada6-62bb7ace778f.svg#969cd675-2b4c-4baa-ada6-62bb7ace778f") format("svg");
+}
+@font-face{
+font-family:"Trajan W01 Regular";
+src:url("Fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix");
+src:url("Fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix") format("eot"),url("Fonts/610145ac-dd31-4024-b833-3ab0ce6b7847.woff2") format("woff2"),url("Fonts/b4312891-e355-4bdc-80c9-ef3dbf7bd916.woff") format("woff"),url("Fonts/124dc47b-32a0-4543-a60e-d8aad32782b4.ttf") format("truetype"),url("Fonts/001e534b-3742-45b3-b20b-d4c53c41a519.svg#001e534b-3742-45b3-b20b-d4c53c41a519") format("svg");
+}
+
+</style>
+
+</textarea>
+            <h3>Licensing information should be included within the CSS</h3>
+<pre>/*
+This CSS resource incorporates links to font software which is the valuable copyrighted
+property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+Imaging with any questions regarding Web Fonts:  http://www.fonts.com
+*/</pre>
+        </div>
+    </div>
+</body>
+</html>
