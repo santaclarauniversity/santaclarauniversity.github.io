@@ -77,6 +77,18 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./dist/js/'));
 });
 
+// Copy compressed, minified output files to remote server
+gulp.task('rsync', function() {
+  var rsync = require('gulp-rsync');
+
+  return gulp
+    .src(['./dist/assets/**/*', './dist/css/**/*', './dist/js/**/*'])
+    .pipe(rsync({
+      destination: '', // TODO We need to make this actually push to remote server.
+      root: './dist'
+    }));
+});
+
 gulp.task('docs', ['css'], function() {
   console.log('Moving assets over to docs/dist..');
 
@@ -95,7 +107,7 @@ gulp.task('docs', ['css'], function() {
 
 // Runs the whole pipeline in sequence (and exits appropriately if there are any breaking failures)
 gulp.task('deploy', function() {
-  runSequence('css', 'js', function(err) {
+  runSequence('css', 'js', 'rsync', function(err) {
     if (!err) {
       console.log('Good job, you managed to not cause any errors!');
     }
