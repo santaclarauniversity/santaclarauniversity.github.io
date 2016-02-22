@@ -558,6 +558,9 @@ html.no-fontface .lw_cal_today_day {
 .color-burgundy header {
   background-color: #690521;
 }
+.color-burgundy-alumni header {
+  background-color: #991514;
+}
 .color-burgundy .wordmarks a {
   color: #fff;
 }
