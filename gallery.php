@@ -30,7 +30,7 @@
       				</div>
       			</div>
       		</div>
-      		<div class="col-sm-3 hidden-xs slides">
+      		<div class="col-sm-3 slides">
       			<div class="gallery-image">
       				<a href="#" class="thumbnail"><img src="_examples/cuba.jpg" alt="cuba"></a>
       				<div class="gallery-caption">

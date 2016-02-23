@@ -11,8 +11,6 @@ $(function() {
         img_src = $this.find('.thumbnail img').attr('src'),
         caption = $this.find('.gallery-caption').html() || '';
 
-    console.log($this.find('.gallery-image img').length);
-
     $image.fadeOut(100, function() {
       $image.attr('src', img_src);
     }).fadeIn(100);
@@ -22,8 +20,29 @@ $(function() {
     return true;
   });
   
-  // Show thumbnail scrollbar once images load
-  $(window).load(function(){
+  
+  var thumbSlider = function() {
+    
+    $gallery.find('.slides').mCustomScrollbar("destroy"); 
+
+    if (Modernizr.mq('(max-width: 767px)')){
+
+      // Show horizontal thumbnail scrollbar on small screens
+      $gallery.find('.slides').mCustomScrollbar({
+          axis:"x", // horizontal scrollbar
+          advanced:{autoExpandHorizontalScroll:true}
+      }).show();
+    
+    } else {
+      
+      // Show vertical thumbnail scrollbar on larger screens
       $gallery.find('.slides').mCustomScrollbar().show();
+    }
+  }
+   
+  // Show thumbnail scrollbar after images load
+  // Destroy and create a new scrollbar when window is resized
+  $(window).on('load resize',function(){
+    thumbSlider();
   });
 });
