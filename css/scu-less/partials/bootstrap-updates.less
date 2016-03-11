@@ -1,0 +1,181 @@
+/**
+ * Updates to the Bootstrap framework that couldn't be done in the customization web form:
+ */
+
+/* Rows (as in: .row) that come after text elements should have some better top spacing */
+p + .row,
+ul + .row,
+ol + .row,
+h2 + .row,
+h3 + .row,
+h4 + .row,
+h5 + .row,
+h6 + .row {
+  margin-top: 2em;
+}
+
+/* Thumbnails have dropshadows: */
+.thumbnail, .img-thumbnail {
+  .lh-box-shadow(0 1px 5px rgba(0,0,0,.18));
+}
+img.thumbnail {
+  background-color: @beige;
+}
+/* Round thumbnails have a different dropshadow: */
+.img-thumbnail.img-round {
+  //.lh-box-shadow(0 0 25px rgba(0,0,0,.16));
+}
+
+/* Block level buttons should have more spacing between them: */
+.btn-block+.btn-block {
+  margin-top: 10px;
+}
+
+/* Pagination size is a bit smaller and always capitalized: */
+.pagination {
+  font-size: 14px;
+  text-transform: uppercase;
+  &.pagination-sm {
+    font-size: 13px;
+  }
+  &>li>a,
+  &>li>span { /* Pagination has expanded spacing and more space between links: */
+    display: inline-block;
+    float: none;
+    padding: 5px 10px;
+    margin-left: 4px;
+  }
+  &>li:first-child>a,
+  &>li:first-child>span,
+  &>li:last-child>a,
+  &>li:last-child>span { /* Pagination has no rounded corners: */
+    .lh-border-radius(0);
+  }
+}
+
+/* Accordions: */
+.panel-title {
+  font-size: 18px;
+  &>a, &>small, &>.small, &>small>a, &>.small>a {
+    color: #ab0028;
+    &.collapsed {
+      color: #464646;
+      .caret { /* Point the caret right when closed */
+        margin: 0 10px 3px 0;
+        border-left: 6px dashed;
+        border-right: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+      }
+    }
+    .caret { /* aligning with text: */
+      margin: 0 7px 3px -3px;
+      border-left-width: 6px;
+      border-top-width: 6px;
+      border-right-width: 6px;
+    }
+  }
+  &>a, &>small>a, &>.small>a {
+    &:active, &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+}
+.panel-group {
+  .panel {
+    
+  }
+}
+@media (min-width: @screen-sm-min) {
+  .panel-body {
+    &.panel-with-caret { /* Align panel body with panel title */
+      padding-left: 36px;
+    }
+  }
+}
+
+/* Carets */
+.caret {
+  &.up-caret {
+    border-top: 0;
+    border-bottom: 4px solid;
+  }
+  &.right-caret,
+  &.left-caret {
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+  }
+  &.right-caret {
+    border-left: 4px solid @black;
+    border-right: none;
+  }
+  &.left-caret {
+    border-right: 4px solid @black;
+    border-left: none;
+  }
+}
+
+/**
+ * Offcanvas
+ * A bootstrap experiment, inspiration from http://http://getbootstrap.com/examples/offcanvas/
+ */
+@media screen and (max-width: (@screen-sm-min - 1)) {
+  html,
+  body {
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+  }
+  body {
+    #js-mobile-content-wrapper {
+      position: relative;
+      left: 0;
+      right: 0;
+    }
+    &.active-left #js-mobile-content-wrapper{
+      left: 50%;
+      right: -50%
+    }
+    &.active-right #js-mobile-content-wrapper{
+      left: -50%;
+      right: 50%;
+    }
+  }
+
+  .offcanvas-right {
+    right: 0;
+  }
+
+  .offcanvas-left {
+    left: 0;
+  }
+  
+  #js-mobile-content-wrapper,
+  .sidebar-offcanvas {
+    .lh-transition(left .25s ease-out, right .25s ease-out);
+  }
+
+  .offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  body.active-right .offcanvas-right .sidebar-offcanvas {
+    right: 0%; /* 6 columns */
+  }
+
+  body.active-left .offcanvas-left .sidebar-offcanvas {
+    left: 0%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    width: 50%; /* 6 columns */
+  }
+}

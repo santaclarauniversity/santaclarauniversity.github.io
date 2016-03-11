@@ -1,0 +1,6 @@
+.person-spotlight.module.two-column .person-spotlight-overlay {
+    background-image: url(assets/person-spotlight-overlay-left-ie.png);
+}
+.person-spotlight.module.two-column.left-aligned .person-spotlight-overlay {
+    background-image: url(assets/person-spotlight-overlay-right-ie.png);
+}

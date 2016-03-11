@@ -1,0 +1,115 @@
+/**
+ * Social Media Icons
+ * Uses Fontello: fontello.com
+ * Add to and modify this customized font set using /css/assets/fontello/config.json
+ */
+
+			@font-face {
+			  font-family: 'fontello';
+			  src: url('/css/assets/fontello/fontello.eot?88632057');
+			  src: url('/css/assets/fontello/fontello.eot?88632057#iefix') format('embedded-opentype'),
+			       url('/css/assets/fontello/fontello.woff?88632057') format('woff'),
+			       url('/css/assets/fontello/fontello.ttf?88632057') format('truetype'),
+			       url('/css/assets/fontello/fontello.svg?88632057#fontello') format('svg');
+			  font-weight: normal;
+			  font-style: normal;
+			}
+				 
+		 [class^="icon-"]:before, [class*=" icon-"]:before {
+		  font-family: "fontello";
+		  font-style: normal;
+		  font-weight: normal;
+		  speak: none;
+		 
+		  display: inline-block;
+		  text-decoration: inherit;
+		  width: 1em;
+//		  margin-right: .2em;
+		  text-align: center;
+		  /* opacity: .8; */
+		 
+		  /* For safety - reset parent styles, that can break glyph codes*/
+		  font-variant: normal;
+		  text-transform: none;
+		 
+		  /* fix buttons height, for twitter bootstrap */
+		  line-height: 1em;
+		 		 
+		  /* you can be more comfortable with increased icons size */
+		  /* font-size: 120%; */
+		 
+		  /* Font smoothing. That was taken from TWBS */
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		 
+		}
+		 
+		.icon-flickr:before { content: '\e800'; } /* '' */
+		.icon-twitter:before { content: '\e801'; } /* '' */
+		.icon-vimeo:before { content: '\e802'; } /* '' */
+		.icon-facebook-squared:before { content: '\e803'; } /* '' */
+		.icon-instagram:before { content: '\e804'; } /* '' */
+		.icon-pinterest:before { content: '\e805'; } /* '' */
+		.icon-rss:before { content: '\e806'; } /* '' */
+		.icon-soundcloud:before { content: '\e807'; } /* '' */
+		.icon-youtube:before { content: '\e808'; } /* '' */
+		.icon-linkedin:before { content: '\e809'; } /* '' */
+		
+/*  Social brand colors  */
+
+		@twitter: #00aced;
+		@facebook: #3b5998;
+		@googleplus: #dd4b39;
+		@pinterest: #cb2027;
+		@linkedin: #007bb6;
+		@youtube: #bb0000;
+		@vimeo: #aad450;
+		@tumblr: #32506d;
+		@instagram: #517fa4;
+		@flickr: #ff0084;
+		@foursquare: #0072b1;
+		@wordpress: #21759b;
+		@stumbleupon: #EB4823;
+		@yahoo: #7B0099;
+		@rss: #ff7600;
+		@soundcloud: #ff3a00;
+
+/*  SCU-specific styles  */
+
+.social a {
+	display: block;
+	width: 64px;
+	height:64px;
+	margin: 0 8px 8px 0;
+	float:left;
+	font-size: 40px;
+	text-align: center;
+	opacity:1;
+	transition: opacity .3s;
+	-webkit-transition: opacity .3s;
+	color: #fff;
+	&.facebook {background-color: @facebook;}
+	&.twitter {background-color: @twitter;}
+	&.pinterest {background-color: @pinterest;}
+	&.linkedin {background-color: @linkedin;}
+	&.youtube {background-color: @youtube;}
+	&.vimeo {background-color: @vimeo;}
+	&.soundcloud {background-color: @soundcloud;}
+	&.flickr {background-color: @flickr;}
+	&.rss {background-color: @rss;}
+	&.instagram {background-color: @instagram;}
+	&:hover { 
+		opacity:.7;
+	}
+	&.illuminate {
+		background-image: url(/css/assets/icon-illuminate.png);
+		background-size:cover;
+	}
+	&.scu {
+		background-image: url(/css/assets/icon-scu.png);
+		background-size:cover;
+	}
+}
+
+
+

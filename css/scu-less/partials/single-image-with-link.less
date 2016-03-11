@@ -1,0 +1,35 @@
+/**
+ * Single-image-with-link module
+ * (Sometimes refered to as "site pointer")
+ *
+ * The single-image-with-link is a link containing a photo and a title, used to link to another SCU site.
+ *
+ * For proper display all around, the image should be at least 657 pixels wide.
+ */
+
+.single-image-with-link.module {
+  display: block;
+  padding: 5px;
+  border: 1px solid #bdbdbd;
+  .lh-transition(border .2s ease-in-out);
+  &:hover {
+    text-decoration: none;
+    border-color: darken(@link-red, 15%);
+    .single-image-with-link-body {
+      background-color: darken(@brand-red, 5%);
+    }
+  }
+  img + .single-image-with-link-body {
+    margin: 5px 0 0;
+  }
+  .single-image-with-link-body {
+    display: block;
+    border: 1px solid @maroon;
+    padding: 20px 19px 19px;
+    background-color: @brand-red;
+    color: @white;
+    font-size: 20px;
+    line-height: 1.2;
+    .lh-transition(background-color .2s ease-in-out);
+  }
+}
