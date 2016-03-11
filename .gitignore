@@ -1,3 +1,4 @@
 .idea/
 *.codekit
 node_modules/
+dist/

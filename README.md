@@ -1,47 +1,38 @@
 # Santa Clara University Digital Assets
 
-This is our first attempt at completing an **automated build**.
+This is our ~~first~~ second attempt at completing an **automated build**.
 
 ### Installation
 
-First, install [Node.js][node.js].
+First, install [Node.js](http://nodejs.org/).
 
-You need Gulp installed globally:
+You need [Gulp](http://gulpjs.com/) installed globally:
 
 ```sh
 $ npm i -g gulp
 $ gulp
 ```
+
 Get the dependencies for Gulp:
+
 ```sh
 $ npm install
 ```
 
-Documentation is made with `jekyll` - build the docs:
+Finally, the site uses [Bower](http://bower.io/) to keep track of static dependencies like Bootstrap, Modernizr, etc.
+In order to grab the latest, just install Bower:
 
 ```sh
-$ gem install jekyll
-$ cd docs
-$ jekyll serve
+$ npm install -g bower
+$ bower install
 ```
 
-### Building CSS and JavaScript with Gulp
+The *bower install* command will grab all of the latest versions of the required sources listed in *bower.json*.
 
-To build all CSS and JavaScript code:
+Documentation is constructed with [Fabricator](https://github.com/fbrctr/fabricator).  It's quite simple:
 
 ```sh
-$ gulp deploy
+$ npm start
 ```
 
-Alternatively, you can choose to do either CSS or JavaScript:
-
-```sh
-$ gulp [css/js]
-```
-
-Note: Your code will be checked by a 'linter' and style checker which will err if your code is either broken, inefficient, or not compliant with the style format.  Make sure your code passes both the test for JS and CSS before you push any changes.
-
-### To-do:
-* Template demonstrations should become the style guide.
-
-[node.js]: <http://nodejs.org>
+Fabricator is designed to "restart" itself silently whenever a change is made to virtually anything (JavaScript, CSS, images).  Adding, updating or otherwise altering Bower components will require a manual restart (just close and re-run the above command).  Fonts can just be updated manually and a browser refresh should update.
