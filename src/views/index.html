@@ -20,7 +20,7 @@ fabricator: true
 {{#each toolkit.colors}}
 	<div class="f-color-chips">
 	{{#each this}}
-		<div class="f-color-chip">
+		<div class="f-color-chip"">
 			<div class="f-color-chip__name">{{@key}}</div>
 			<div class="f-color-chip__color">{{this}}</div>
 		</div>
@@ -28,17 +28,41 @@ fabricator: true
 	</div>
 {{/each}}
 
-<br />
-
 <h2>Typography</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim sunt sapiente molestias, sed dicta inventore consectetur beatae asperiores, aliquid laboriosam animi, praesentium repudiandae et, quam saepe sint cupiditate reiciendis.</p>
 
 <p class="intro">This is an intro paragraph, which shows up if used in General Content.</p>
 
+<p>All HTML headings, <code class="highlighter-rouge">&lt;h1&gt;</code> through <code class="highlighter-rouge">&lt;h6&gt;</code>, are available. <code class="highlighter-rouge">.h1</code> through <code class="highlighter-rouge">.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
 <h1>Heading Level 1</h1>
 <h2>Heading Level 2</h2>
 <h3>Heading Level 3</h3>
 <h4>Heading Level 4</h4>
 <h5>Heading Level 5</h5>
 <h6>Heading Level 6</h6>
+
+<h2>Headings with Subheadings</h2>
+<h4>
+	Fancy display heading
+	<small class="text-muted">With faded secondary text</small>
+</h4>
+
+<h3>Inline Styles</h3>
+<p>You can use the mark tag to <mark>highlight</mark> text.</p>
+<p><del>This line of text is meant to be treated as deleted text.</del></p>
+<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+<p><u>This line of text will render as underlined</u></p>
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+<p><strong>This line rendered as bold text.</strong></p>
+<p><em>This line rendered as italicized text.</em></p>
+
+<h3>Block Quotes</h3>
+
+<blockquote class="blockquote">
+	<p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+
+<blockquote class="blockquote">
+	<p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+	<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
