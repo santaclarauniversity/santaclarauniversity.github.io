@@ -9,8 +9,7 @@ First, install [Node.js](http://nodejs.org/).
 You need [Gulp](http://gulpjs.com/) installed globally:
 
 ```sh
-$ npm i -g gulp
-$ gulp
+$ npm install -g gulp
 ```
 
 Get the dependencies for Gulp:
@@ -20,7 +19,7 @@ $ npm install
 ```
 
 Finally, the site uses [Bower](http://bower.io/) to keep track of static dependencies like Bootstrap, Modernizr, etc.
-In order to grab the latest, just install Bower:
+In order to grab the latest, just install Bower (technically should already be installed because of the above command, but just in case):
 
 ```sh
 $ npm install -g bower
@@ -33,6 +32,18 @@ Documentation is constructed with [Fabricator](https://github.com/fbrctr/fabrica
 
 ```sh
 $ npm start
+```
+
+Alternatively, to shortcut past the npm rebuilding stage, you can just run one of the many Gulp tasks either individually:
+
+```sh
+$ gulp <individual command here>
+```
+
+Or the whole sequence in order:
+
+```sh
+$ gulp
 ```
 
 Fabricator is designed to "restart" itself silently whenever a change is made to virtually anything (JavaScript, CSS, images).  Adding, updating or otherwise altering Bower components will require a manual restart (just close and re-run the above command).  Fonts can just be updated manually and a browser refresh should update.
