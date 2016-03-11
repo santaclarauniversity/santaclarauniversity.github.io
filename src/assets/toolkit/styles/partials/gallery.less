@@ -22,45 +22,53 @@
 }
 
 .gallery.module .slides  {
-	.gallery-caption {display:none;}
-	height: 330px;
-		overflow:hidden;
-		padding-right: 15px; /* space for scrollbar */
-		margin-right: -15px;
-	}
-	.js .gallery.module .slides { 
-		display: none; /* fade in slides once scrollbar has loaded */
-	}
-	.gallery.module .gallery-image {
-		padding-top: 2px; /* space for image shadow */
-	}
+  height: 330px;
+	overflow:hidden;
 	
-	@media (max-width:767px) {
-		.gallery.module .full-image {
-			padding-right: 15px;
-		}
-		.gallery.module .slides {
-			width: 100%;
-			height: 135px;
-			padding-bottom: 15px; /* space for scrollbar */
-			margin-bottom: -15px;
-			padding-right: 0;
-			margin-right: 0;
-		}
-		.gallery.module .slides .gallery-image {
-	    display: inline-block;
-	    /*float: left;*/
-	    clear: none;
-	    margin-right: 15px;
-		}
-		.gallery.module .slides .gallery-image:last-child {
-			margin-right: 0;
-		}
-		.gallery.module .slides .gallery-image img {
-	    height: 110px;
-	    width: auto;
-		}
+  .gallery-caption {display:none;}
+}
+.js .gallery.module .slides { 
+	display: none; /* fade in slides once scrollbar has loaded */
+}
+.gallery.module .gallery-image {
+	padding-top: 2px; /* space for image shadow */
+}
+.gallery.module .mCSB_scrollTools {
+  opacity: 0; /* hide scrollbar on desktop */
+}
+
+/* Mobile Styles: horizontal thumbnail scrollbar */
+@media (max-width:767px) {
+	.gallery.module .full-image {
+		padding-right: 15px;
 	}
+	.gallery.module .slides {
+		width: 100%;
+		height: 130px; /* 115px gallery + 15px scrollbar */
+		padding-right: 15px;
+		margin-right: 0;
+	}
+	.gallery.module .slides .mCustomScrollBox {
+		padding-bottom: 15px; /* space for scrollbar */
+		margin-bottom: -15px;
+  }
+	.gallery.module .slides .gallery-image {
+    display: inline-block;
+    float: left;
+    clear: none;
+    margin-right: 10px;
+	}
+	.gallery.module .slides .gallery-image:last-child {
+		margin-right: 0;
+	}
+	.gallery.module .slides .gallery-image img {
+    height: 90px;
+    width: auto;
+	}
+  .gallery.module .mCSB_scrollTools {
+    opacity: 1; /* show scrollbar on mobile */
+  }
+}
 /* 
 ------------------------------------------------------------------------------------------------------------------------
  GALLERY SCROLLBAR STYLES
@@ -147,6 +155,10 @@
 	margin: 0 auto;
 	-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
 	text-align: center;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.2);
+  filter: "alpha(opacity=25)";
+  -ms-filter: "alpha(opacity=25)";
 }
 
 .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
@@ -235,42 +247,3 @@
 .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft{ left: 0; }
 
 .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{ right: 0; }
-
-/* theme: "minimal" */
-
-.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, 
-.mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical{
-	right: 0; 
-	margin: 12px 0; 
-}
-
-.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
-.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
-.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
-.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal{
-	bottom: 0; 
-	margin: 0 12px; 
-}
-
-.mCS-minimal.mCSB_scrollTools .mCSB_draggerRail, 
-.mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }
-
-.mCS-minimal.mCSB_scrollTools_vertical .mCSB_dragger, 
-.mCS-minimal-dark.mCSB_scrollTools_vertical .mCSB_dragger{ height: 50px; }
-
-.mCS-minimal.mCSB_scrollTools_horizontal .mCSB_dragger, 
-.mCS-minimal-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 50px; }
-
-.mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-	background-color: #a6a6a6; 
-	background-color: rgba(0,0,0,0.35);
-	-webkit-transition: opacity 0.5s;
-transition: opacity 0.5s;
-opacity: 0;
-}
-
-.mCS-minimal.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
-.mCS-minimal.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
-	opacity: 1;
-}
-		

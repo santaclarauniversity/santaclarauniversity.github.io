@@ -63,15 +63,15 @@
         line-height: 1.25;
       }
       h2 {
-	      font-size: 24px;
+	      font-size: 32px;
       }
       a { text-decoration: underline; }
       .can-we-headline {
 	      position:absolute;
-	      top: 0;
+	      top: 20px;
 	      left:0;
 	      padding:20px;
-	      color: @white;
+	      &, a { color: @white; text-decoration: none; }
 	      span { 
 		      .trajan-font; 
 		      font-size:14px;
@@ -99,13 +99,13 @@
 	      &:last-child {
 		      margin-right:0;
 	      }
-	      p {margin:0; font-size:inherit;}
+	      p {margin:0; font-size:16px;}
 
 	      h2 {
 		      .serif-font;
 		      color: @brand-red;
 		      line-height:.7;
-		      margin:10px 0 20px;
+		      margin:10px 0 14px;
 		      border-bottom:1px solid #ddd;
 		      span {
 			      position:relative;
@@ -121,7 +121,7 @@
 	      .can-we-credit {
 		      text-transform: uppercase;
 		      max-width:60%;
-		      font-size:10px;
+		      font-size:12px;
 		      position:absolute;
 		      left: 20px;
 		      bottom:10px;
@@ -163,14 +163,13 @@
         min-width: 240px;
 	}
 	      
-      @media (min-width: @screen-sm-min) {
-        height: @can-we-sm-height;
-        max-height: @can-we-sm-height;
-        .can-we-headline {
-	      position:absolute;
-	      top: 100px;
-	    }
-	    
+  @media (min-width: @screen-sm-min) {
+    height: @can-we-sm-height;
+    max-height: @can-we-sm-height;
+    .can-we-headline {
+	    position:absolute;
+	  }
+  
 		.can-we-boxes {
             position: static;
 			width: auto;
@@ -181,11 +180,12 @@
             }
 		}      
 	    .can-we-box {
-	      	min-height: 160px;
+	      	min-height: 200px;
 		      .schools-colleges &, .centers & {min-height: 180px !important;}
 	      	min-width: 0;
+			    p {margin-bottom:0; font-size:14px;}
 		    .can-we-credit {
-			    font-size:14px;
+			    font-size:12px;
 		     }
 	        .can-we-photo {
 		      width:80px;
@@ -198,51 +198,53 @@
 		    .can-we-box {
 			    min-height:140px; 
 			    margin-bottom: 1em;
-			    p {margin-bottom:0; font-size:14px;}
 		    }
 		    .can-we-photo, .can-we-credit {display:none;}
 	    }
+    }
+    @media (min-width: @screen-md-min) {
+      height: @can-we-md-height;
+      max-height: @can-we-md-height;
+	    .can-we-headline {
+		    top:100px;
+		  }
+      p, ol, ul {
+        font-size: 18px;
       }
-      @media (min-width: @screen-md-min) {
-        height: @can-we-md-height;
-        max-height: @can-we-md-height;
-        p, ol, ul {
-          font-size: 18px;
-        }
-        h2 {
-		      font-size:36px;
-        }
-        .can-we-box {
-	      	min-height: 180px;
-		    .can-we-credit {
-			    font-size:14px;
-		     }
-	        .can-we-photo {
-		      width:100px;
-		      height:100px;
-	        }
-        }
+      h2 {
+	      font-size:36px;
       }
-      @media (min-width: @screen-lg-min) {
-        height: @can-we-lg-height;
-        max-height: @can-we-lg-height;
-        h2 {
-		      font-size:48px;
+      .can-we-box {
+      	min-height: 180px;
+	    .can-we-credit {
+		    font-size:14px;
+	     }
+        .can-we-photo {
+	      width:100px;
+	      height:100px;
         }
-        .can-we-box {
-	      	min-height: 226px;
-	      	
-		    .can-we-credit {
-			    &, p { font-size:1em; }
-			   
-		     }
-	        .can-we-photo {
-		      width:140px;
-		      height:140px;
-	        }
-	      }
       }
     }
+    @media (min-width: @screen-lg-min) {
+      height: @can-we-lg-height;
+      max-height: @can-we-lg-height;
+      h2 {
+	      font-size:48px;
+      }
+      .can-we-box {
+      	min-height: 226px;
+			  p {font-size:16px;}
+	    .can-we-credit {
+		    &, p { font-size:1em; }
+		   
+	     }
+        .can-we-photo {
+	      width:140px;
+	      height:140px;
+        }
+      }
+    }
+  }
 	  .carousel-caption {
 	    top:100%;
 	    left: 0;
