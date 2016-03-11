@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{title}}</title>
+
+	{{#if fabricator}}<link rel="stylesheet" href="{{baseurl}}/assets/fabricator/styles/f.css">{{/if}}
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="{{baseurl}}/assets/toolkit/styles/bootstrap.min.css">
+	<link rel="stylesheet" href="{{baseurl}}/assets/toolkit/styles/toolkit.min.css">
+	<!-- /toolkit styles -->
+
+	<!--[if lte IE 9]>
+	<link rel="stylesheet" href="{{baseurl}}/assets/toolkit/styles/ie.min.css">
+	<script src="{{baseurl}}/assets/toolkit/scripts/jRespond.min.js"></script>
+	<script src="{{baseurl}}/assets/toolkit/scripts/html5shiv.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	{{#if fabricator}}
+		{{> f-icons}}
+		{{> f-menu}}
+		<div class="f-container">
+			{{> f-control-bar}}
+	{{/if}}
+
+
+	{% body %}
+
+
+	{{#if fabricator}}
+		</div>
+	<script src="{{baseurl}}/assets/fabricator/scripts/f.js"></script>
+	{{/if}}
+
+	<!-- toolkit scripts -->
+	<!-- deps -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	<script src="{{baseurl}}/assets/toolkit/scripts/bootstrap.min.js"></script>
+	<script src="{{baseurl}}/assets/toolkit/scripts/jquery.event.swipe.js"></script>
+	<script src="{{baseurl}}/assets/toolkit/scripts/mediaCheck-min.js"></script>
+	<script src="https://www.scu.edu/js/modernizr.min.js"></script>
+	<!-- /deps -->
+	<!-- custom -->
+	<script src="{{baseurl}}/assets/toolkit/scripts/toolkit.min.js"></script>
+	<!-- /custom -->
+	<!-- /toolkit scripts -->
+
+</body>
+</html>

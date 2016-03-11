@@ -1,0 +1,9 @@
+colors:
+  primary:
+    darkRed:    rgb(158, 27, 50)
+    red:        rgb(179, 7, 56)
+  secondary:
+    black:      rgb(0, 0, 0)
+    gray:       rgb(187, 188, 190)
+    lightGray:  rgb(247, 247, 247)
+    white:      rgb(252, 252, 252)
