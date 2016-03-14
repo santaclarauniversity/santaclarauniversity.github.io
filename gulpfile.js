@@ -52,7 +52,7 @@ var config = {
 			ieCompatibility: './src/assets/toolkit/styles/ie.less'
 		},
 		images: './src/assets/toolkit/images/**/*',
-		views: './src/toolkit/views/*.html'
+		views: ['src/views/**/*', '!src/views/+(layouts)/**']
 	},
 	fonts: './fonts/**/*',
 	dest: './dist/'
