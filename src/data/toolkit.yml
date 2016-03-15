@@ -1,3 +1,4 @@
+version: "1.0"
 colors:
   primary:
     brandRed:   "#b30738"

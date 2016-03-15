@@ -3,24 +3,16 @@ title: Overview | Fabricator
 fabricator: true
 ---
 
-<h1>Overview</h1>
-
-<p>This UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.</p>
-
-<p>The SCU website calls its materials <em>content types</em>, some of which operate by themselves, and some of which can be assembled to create something whole on a larger scale (for example, a <em>Story Display</em> of several <em>Story</em> types).</p>
-
-<p>By using content types, content creators are able to piece together webpages by focusing solely on the content that pertains to their part of the website.  The rest of the content forms the headers, footers, and navigation, which are described as <em>pages</em> that are included outside of the scope of content types.</p>
-
-<p>This guide contains real working examples, code snippets, documentation, and style guidelines.</p>
-
-<br />
+<h1>Santa Clara University - Web Toolkit</h1>
+<p><code class="highlighter-rouge">{{toolkit.version}}</code></p>
+<p>This UI toolkit is a demonstration of the visual language we have developed for Santa Clara University's digital properties. This toolkit is a living document that will be continually updated as our language evolves.</p>
 
 <h2>Color</h2>
 
 {{#each toolkit.colors}}
 	<div class="f-color-chips">
 	{{#each this}}
-		<div class="f-color-chip"">
+		<div class="f-color-chip">
 			<div class="f-color-chip__name">{{@key}}</div>
 			<div class="f-color-chip__color">{{this}}</div>
 		</div>
@@ -29,9 +21,24 @@ fabricator: true
 {{/each}}
 
 <h2>Typography</h2>
+<div class="row">
+	<div class="col-md-4">
+		<p>Trade Gothic Next</p>
+		<p class="intro">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+	</div>
+	<div class="col-md-4">
+		<p>Bauer Bodoni W01 Italic</p>
+		<p class="intro" style="font-family: 'Bauer Bodoni W01 Italic'">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+	</div>
+	<div class="col-md-4">
+		<p>Trajan W01 Regular</p>
+		<p class="intro" style="font-family: 'Trajan W01 Regular'">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+	</div>
+</div>
+<h4>Using Fonts</h4>
+<p>These fonts have restrictions on their use. Please see <a href="docs.html#cloud-fonts">Cloud Fonts</a>.</p>
 
-<p class="intro">This is an intro paragraph, which shows up if used in General Content.</p>
-
+<hr>
 <p>All HTML headings, <code class="highlighter-rouge">&lt;h1&gt;</code> through <code class="highlighter-rouge">&lt;h6&gt;</code>, are available. <code class="highlighter-rouge">.h1</code> through <code class="highlighter-rouge">.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
 <h1>Heading Level 1</h1>
 <h2>Heading Level 2</h2>
