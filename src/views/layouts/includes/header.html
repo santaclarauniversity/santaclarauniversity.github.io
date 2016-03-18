@@ -1,14 +1,13 @@
-<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 <header class="site-header uses-core-navigation site-header-with-seal">
 	<div class="site-header-text-and-search">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-9 site-header-titles">
-					<a href="index.php" class="text-hide pull-left seal">Santa Clara University</a>
-					<div class="wordmarks">
-						<a href="index.html" class="title-small">Optional Link to Parent Site or SCU</a>
-						<a href="index.html" class="title-large">Title of Website</a>
-					</div>
+					<a href="/" class="text-hide pull-left seal">Santa Clara University</a>
+					<a href="/" class="wordmarks">
+						<img src="{{baseurl}}/assets/toolkit/images/header-large-Santa-Clara-University.png" srcset="{{baseurl}}/assets/toolkit/images/header-large-Santa-Clara-University@2x.png 1.5x" alt="Santa Clara University" width="572" height="28">
+						<img src="{{baseurl}}/assets/toolkit/images/header-small-the-jesuit-university-in-silicon-valley.png" srcset="{{baseurl}}/assets/toolkit/images/header-small-the-jesuit-university-in-silicon-valley@2x.png 1.5x" alt="The Jesuit University In Silicon Valley" width="433" height="20">
+					</a>
 				</div>
 				<div class="col-xs-12 col-sm-3 clearfix site-header-search-and-toggles">
 					<button type="button" class="visible-xs-block menu-toggle menu-toggle-main" data-toggle="offcanvas" data-target="#scu-main-navigation">
@@ -17,11 +16,11 @@
 					<button type="button" class="visible-xs-block menu-toggle menu-toggle-gateways" data-toggle="offcanvas" data-target="#scu-gateway-navigation">
 						<span class="menu-label text-hide"><span class="sr-only">Toggle navigation</span> Gateways</span> <span class="caret right-caret"></span>
 					</button>
-					<form class="pull-right site-header-search">
+					<form action="/search/" method="get" class="pull-right site-header-search" id="header-search-form">
 						<div class="input-group">
-							<input type="search" class="form-control" placeholder="SEARCH">
+							<input type="search" class="form-control" name="q" id="header-search" placeholder="SEARCH">
                   <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" aria-label="Submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    <button class="btn btn-default" type="submit" aria-label="Submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                   </span>
 						</div>
 					</form>
@@ -29,62 +28,22 @@
 			</div>
 		</div>
 	</div>
-	<nav class="main-navigation core-navigation offcanvas-left" id="scu-main-navigation">
+	<nav class="main-navigation core-navigation offcanvas-left affix-top" id="scu-main-navigation">
 		<div class="container sidebar-offcanvas">
-			<ul class="nav nav-pills">
-				<li><a href="#">About SCU</a></li>
-
-				<li><a href="#">Academics</a></li>
-				<li><span class="currentbranch0"><a href="#">Admission</a></span></li>
-				<li class="dropdown"><a href="homepage.php" class="dropdown-toggle" data-toggle="dropdown">Dropdown Menu</a>
-					<ul class="dropdown-menu">
-						<li><a href="can-we.php">Hero Features</a></li>
-						<li><a href="hero-features.php">Hero Features</a></li>
-						<li><a href="landing-hero-features.php">Landing Hero Features</a></li>
-						<li><a href="subheaders.php">Subheaders</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Giving</a></li>
-				<li><a href="#">News & Events</a></li>
-			</ul>
-		</div>
+			<ul class="nav nav-pills"><li><a href="/aboutscu/">About SCU</a></li><li><a href="/academics/">Academics</a></li><li><a href="/admission/">Admission</a></li><li><a href="/campus-life/">Campus Life</a></li><li><a href="/athletics/">Athletics</a></li><li><a href="/global/">Global</a></li><li><a href="/giving/">Giving</a></li><li><a href="/news-and-events/">News &amp; Events</a></li></ul>
 		</div>
 	</nav>
 
 	<nav class="gateway-navigation core-gateways offcanvas-right" id="scu-gateway-navigation">
 		<div class="container sidebar-offcanvas">
-			<ul class="nav navbar-left">
-				<li class="dropdown scu-nav">
-					<a href="http://www.scu.edu/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-						<span class="text-hide mission">Main Navigation for</span>
-						<span class="hidden-sm nameplate">Santa Clara University</span>
-						<span class="hidden-xs hidden-md hidden-lg nameplate">SCU</span>
-						<span class="caret hidden-xs"></span>
-					</a>
-					<div class="dropdown-menu">
-						<div class="container">
-							<ul role="menu" class="nav nav-pills">
-								<li><a href="#">Home</a></li>
-								<li><a href="#">About SCU</a></li>
-								<li><a href="#">Academics</a></li>
-								<li><a href="#">Admission</a></li>
-								<li><a href="#">Campus Life</a></li>
-								<li><a href="#">Athletics</a></li>
-								<li><a href="#">Global</a></li>
-								<li><a href="#">Giving</a></li>
-								<li><a href="#">News & Events</a></li>
-							</ul>
-						</div>
-					</div>
-				</li>
-			</ul>
 			<ul class="nav nav-pills navbar-right">
-				<li><a href="#">Students</a></li>
-				<li><a href="#">Faculty & Staff</a></li>
-				<li><a href="#">Families</a></li>
-				<li><a href="#">Alumni</a></li>
-				<li><a href="#">Visitors</a></li>
-				<li class="slide-menu"><a href="#" role="button" aria-expanded="false"><span class="gateway-dropdown">Offices & Services <span class="caret"></span></span></a>
+				<li><a href="/students/">Students</a></li><li><a href="/faculty/">Faculty &amp; Staff</a></li><li><a href="/family/">Families</a></li><li><a href="/alumni/">Alumni</a></li><li><a href="/visitors/">Visitors</a></li>
+				<li class="slide-menu">
+					<a href="/services/" role="button" aria-expanded="false">
+    <span class="gateway-dropdown">
+      Offices &amp; Services <span class="caret"></span>
+    </span>
+					</a>
 					<div class="slide-panel">
 						<div class="container">
 							<div class="row">
@@ -93,62 +52,69 @@
 								</div>
 								<div class="col-sm-3">
 									<ul>
-										<li><a class="" href="/enrollment-management/">Enrollment Management</a></li>
-										<li><a class="" href="/cm/">Campus Ministry</a></li>
-										<li><a class="" href="/university-operations/campus-safety/">Campus Safety</a></li>
-										<li><a class="" href="/university-operations/facilities/">Facilities</a></li>
+										<li><a href="/onestop/">Enrollment Services</a></li>
+										<li><a href="/cm/">Campus Ministry</a></li>
+										<li><a href="/university-operations/campus-safety/">Campus Safety</a></li>
+										<li><a href="/university-operations/facilities/">Facilities</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul>
-										<li><a class="" href="/diversity/">Diversity &amp; Inclusion</a></li>
-										<li><a class="" href="/is/">Information&nbsp;Services</a></li>
-										<li><a href="/campus-recreation/">Recreation</a></li>
-										<li><a class="" href="/sustainability/">Sustainability</a></li>
-									</ul>
-
-								</div>
-								<div class="col-sm-3">
-									<ul>
-										<li>Arts at SCU</li>
-										<li>Bookstore</li>
-										<li><a class="" href="/career-center/">Career Center</a></li>
-										<li><a class="" href="/hr/">Human Resources</a></li>
+										<li><a href="/diversity/">Diversity and&nbsp;Inclusion</a></li>
+										<li><a href="/technology/">Technology at SCU</a></li>
+										<li><a href="/recreation/">Recreation</a></li>
+										<li><a href="/sustainability/">Sustainability</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul>
-										<li><a class="" href="/library/">Library</a></li>
-										<li><a class="" href="/missionchurch/">Mission Church</a></li>
+										<li><a href="/arts/">Arts at SCU</a></li>
+										<li><a href="/auxiliary-services/bookstore/">Bookstore</a></li>
+										<li><a href="/careercenter/">Career Center</a></li>
+										<li><a href="/hr/">Human Resources</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<ul>
+										<li><a href="/library/">University Library</a></li>
+										<li><a href="/missionchurch/">Mission Church</a></li>
 										<li><a href="/login/">SCU Login</a></li>
 									</ul>
-									<a href="/portals/all-offices-and-services/" class="more-link">All Offices and Services »</a>
+									<a href="/services/" class="more-link">Offices and Services »</a>
 								</div>
-
 							</div>
+
 						</div>
 					</div>
 				</li>
-				<li class="slide-menu"><a href="#" role="button" aria-expanded="false"><span class="gateway-dropdown">Centers & Schools <span class="caret"></span></span></a>
+
+				<li class="slide-menu">
+					<a href="/site-assets/header/schools--centers/" role="button" aria-expanded="false">
+    <span class="gateway-dropdown">
+      Schools &amp; Centers <span class="caret"></span>
+    </span>
+					</a>
 					<div class="slide-panel">
 						<div class="container">
 							<div class="row">
+
 								<div class="col-sm-7">
 									<h6>Schools and Colleges</h6>
 									<div class="row">
 										<div class="col-sm-6">
 											<ul>
-												<li><a class="" href="/cas/">College of Arts &amp; Sciences</a></li>
-												<li><a class="" href="/ecp/">Education and Counseling Psychology</a></li>
-												<li><a class="" href="/business/">Leavey School of Business</a></li>
+												<li><a href="/cas/">College of Arts and&nbsp;Sciences</a></li>
+												<li><a href="/ecp/">Education and Counseling Psychology</a></li>
+												<li><a href="/business/">Leavey School of Business</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-6">
 											<ul>
-												<li><a class="" href="/engineering/">School of Engineering</a></li>
+												<li><a href="/engineering/">School of Engineering</a></li>
 												<li><a href="/jst/">Jesuit School of Theology</a></li>
 												<li><a href="http://law.scu.edu">School of Law</a></li>
 											</ul>
+
 										</div>
 									</div>
 								</div>
@@ -159,9 +125,9 @@
 										<div class="col-sm-12">
 											<ul>
 												<li><a href="http://www.scu-social-entrepreneurship.org/">Miller Center for Social Entrepreneurship</a></li>
-												<li><a class="" href="/ignatiancenter/">Ignatian Center for Jesuit Education</a></li>
-												<li><a class="" href="/ethics/">Markkula Center for Applied Ethics</a></li>
-											</ul><a href="/portals/centers-and-institutes/" class="more-link">Centers and Institutes »</a>
+												<li><a href="/ic/">Ignatian Center for Jesuit Education</a></li>
+												<li><a href="/ethics/">Markkula Center for Applied Ethics</a></li>
+											</ul><a href="/centers/" class="more-link">Centers and Institutes »</a>
 										</div>
 									</div>
 								</div>
@@ -170,6 +136,7 @@
 						</div>
 					</div>
 				</li>
+
 			</ul>
 		</div>
 		<div class="slide-menu-backdrop"></div>
