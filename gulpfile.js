@@ -28,6 +28,7 @@ var minify  		= require('gulp-minify');
 var clone 			= require('gulp-clone');
 var rename 			= require('gulp-rename');
 var merge			= require('merge-stream');
+var newer			= require('gulp-newer');
 
 // configuration
 var config = {
@@ -46,16 +47,25 @@ var config = {
 			}
 		},
 		styles: {
+			bower: {
+				fontAwesome: './bower_components/font-awesome/css/font-awesome.min.css'
+			},
 			fabricator: './src/assets/fabricator/styles/fabricator.scss',
 			bootstrap: './src/assets/toolkit/styles/bootstrap.less',
 			toolkit: './src/assets/toolkit/styles/toolkit.less',
 			ieCompatibility: './src/assets/toolkit/styles/ie.less'
 		},
-		images: './src/assets/toolkit/images/**/*',
 		views: ['src/views/**/*', '!src/views/+(layouts)/**']
 	},
-	fonts: './fonts/**/*',
-	dest: './dist/'
+	dest: './dist/',
+	/*
+		We use root directories for assets to expedite the build process for the many
+		large, generally unchanged assets.
+	 */
+	cssDest: './css/',
+	fontsDest: './assets/fonts/',
+	jsDest: './js/',
+	imagesDest: './assets/images/'
 };
 
 
@@ -79,7 +89,7 @@ gulp.task('styles:fabricator', function() {
 		.pipe(gulpif(!config.dev, csso()))
 		.pipe(rename('f.css'))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(config.dest + '/assets/fabricator/styles'))
+		.pipe(gulp.dest(config.dest + 'assets/fabricator/styles'))
 		.pipe(gulpif(config.dev, reload({
 			stream: true
 		})));
@@ -90,12 +100,15 @@ gulp.task('styles:bootstrap', function() {
 		.pipe(sourcemaps.init())
 		.pipe(less());
 
-	var min = css.pipe(clone())
+	var min = css
+		.pipe(clone())
 		.pipe(nano())
-		.pipe(rename('bootstrap.min.css'));
+		.pipe(rename('bootstrap.min.css'))
+		.pipe(gulp.dest(config.cssDest + 'min/'))
+		.pipe(clone())
+		.pipe(gulp.dest(config.dest + 'assets/toolkit/styles'));
 
-	return merge(css, min)
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'));
+	return css.pipe(gulp.dest(config.cssDest));
 });
 
 gulp.task('styles:ieCompatibility', function() {
@@ -105,15 +118,25 @@ gulp.task('styles:ieCompatibility', function() {
 		.pipe(lint())
 		.pipe(lessReporter(config.src.styles.ieCompatibility));
 
-	var min = css.pipe(clone())
+	var min = css
+		.pipe(clone())
 		.pipe(nano())
-		.pipe(rename('ie.min.css'));
+		.pipe(rename('ie.min.css'))
+		.pipe(gulp.dest(config.cssDest + 'min/'))
+		.pipe(clone())
+		.pipe(gulp.dest(config.dest + 'assets/toolkit/styles'));
 
-	return merge(css, min)
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'));
+	return css.pipe(gulp.dest(config.cssDest));
 })
 
 gulp.task('styles:toolkit', function() {
+	// First, include statics from Bower.  Not sure if this is the best way to do this yet, but it works.
+	for (var include in config.src.styles.bower) {
+		gulp.src(config.src.styles.bower[include])
+			.pipe(clone())
+			.pipe(gulp.dest(config.dest + 'assets/toolkit/styles'));
+	}
+
 	var css = gulp.src(config.src.styles.toolkit)
 		.pipe(sourcemaps.init())
 		// Compile LESS to CSS
@@ -122,13 +145,16 @@ gulp.task('styles:toolkit', function() {
 		.pipe(lint())
 		.pipe(lessReporter(config.src.styles.toolkit));
 
-	// Compress ("minify") CSS if linter succeeded
-	var min = css.pipe(clone())
+	// Copy the compiled file, minify it, move the minified copy to public /dist/, keep unminified in /css/.
+	var min = css
+		.pipe(clone())
 		.pipe(nano())
-		.pipe(rename('toolkit.min.css'));
+		.pipe(rename('toolkit.min.css'))
+		.pipe(gulp.dest(config.cssDest + 'min/'))
+		.pipe(clone())
+		.pipe(gulp.dest(config.dest + 'assets/toolkit/styles'));
 
-	return merge(css, min)
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'));
+	return css.pipe(gulp.dest(config.cssDest));
 });
 
 gulp.task('styles', ['styles:fabricator', 'styles:bootstrap', 'styles:ieCompatibility', 'styles:toolkit']);
@@ -155,7 +181,7 @@ gulp.task('scripts:toolkit', function() {
 	for (var include in config.src.scripts.bower) {
 		gulp.src(config.src.scripts.bower[include])
 			.pipe(clone())
-			.pipe(gulp.dest(config.dest + '/assets/toolkit/scripts'));
+			.pipe(gulp.dest(config.dest + 'assets/toolkit/scripts'));
 	}
 
 	return gulp.src(config.src.scripts.toolkit)
@@ -173,23 +199,31 @@ gulp.task('scripts:toolkit', function() {
 				min: '.min.js'
 			}
 		}))
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/scripts'));
+		.pipe(gulp.dest(config.jsDest))
+		.pipe(clone())
+		.pipe(gulp.dest(config.dest + 'assets/toolkit/scripts'));
 });
 
 gulp.task('scripts', ['scripts:fabricator', 'scripts:toolkit']);
 
 
 gulp.task('fonts', function() {
-	return gulp.src(config.fonts)
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/fonts'));
+	return gulp.src(config.fontsDest + '**/*')
+		.pipe(gulp.dest(config.dest + 'assets/toolkit/fonts'));
 });
 
 
 // images
 gulp.task('images', ['favicon'], function() {
-	return gulp.src(config.src.images)
+	gulp.src(config.imagesDest + '**/*')
+		.pipe(newer(config.imagesDest))
 		.pipe(imagemin())
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/images'));
+		.pipe(gulp.dest(config.imagesDest));
+
+	// For some reason the above line can't just pipe into the below line.  Not sure why.
+	gulp.src(config.imagesDest + '**/*')
+		.pipe(clone())
+		.pipe(gulp.dest(config.dest + 'assets/toolkit/images'));
 });
 
 gulp.task('favicon', function() {
