@@ -31,7 +31,9 @@
     "mediaCheck": "https://github.com/sparkbox/mediaCheck.git#^0.4.6",
     "html5shiv": "^3.7.3",
     "jrespond": "https://github.com/ten1seven/jRespond.git#^1.0.0",
-    "modernizr": "^3.3.1"
+    "modernizr": "^3.3.1",
+    "font-awesome": "^4.5.0",
+    "fontello": "^5.3.0"
   },
   "devDependencies": {
 
