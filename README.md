@@ -47,3 +47,11 @@ $ gulp
 ```
 
 Fabricator is designed to "restart" itself silently whenever a change is made to virtually anything (JavaScript, CSS, images).  Adding, updating or otherwise altering Bower components will require a manual restart (just close and re-run the above command).  Fonts can just be updated manually and a browser refresh should update.
+
+
+### TODO
+
+#### Content Types
+
+* Person Spotlight looks very messed up unless the size of the browser is small
+* Image Gallery next/prev button glyphicons don't show up until browser resized or area of buttons is clicked

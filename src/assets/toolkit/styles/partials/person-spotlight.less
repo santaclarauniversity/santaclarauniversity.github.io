@@ -45,22 +45,22 @@
     text-transform: none;
     color: @link-red;
   }
-  
+
   .grid  {     /*  display as grid, two per row  */
 	float:left;
 	margin-top:0;
 	&:nth-child(2n+1) {
 		clear:left;
-	}  
+	}
   }
-  
+
   &.two-column { /* The two-column version has the spotlight overlay */
     position: relative;
     //height: 242px;
     //max-height: 242px;
     padding: percentage(242/670) 0 0;
     //overflow: hidden;
-    
+
     .person-spotlight-portrait,
     .person-spotlight-titles,
     .person-spotlight-overlay {
@@ -74,13 +74,13 @@
     .person-spotlight-overlay {
       //padding: 0 0 percentage(242/670);
       //width: percentage(997/320);//997px;
-      background-image: url(assets/person-spotlight-overlay-left.png);
+      background-image: url(../images/person-spotlight-overlay-left.png);
       background-size: 100% auto;
       background-repeat: no-repeat;
     }
     &.left-aligned { /* Text on the left, spotlight on the right */
       .person-spotlight-overlay {
-        background-image: url(assets/person-spotlight-overlay-right.png);
+        background-image: url(../images/person-spotlight-overlay-right.png);
       }
     }
     .person-spotlight-titles {
