@@ -61,7 +61,7 @@
 }
 
 // Header style options
-	
+
 /* HEADER TEXT */
 .title-large { display:block;text-decoration: none;	font-size:24px;
     @media (min-width: @screen-sm-min) {
@@ -88,51 +88,51 @@
 
 	/* default is Trajan */
 	.wordmarks, .font-trajan .wordmarks { font-family:'Trajan W01 Regular'; text-transform: uppercase; letter-spacing: 1px; text-rendering: optimizeLegibility;}
-	
+
 	/* other options are Trade Gothic, Bodoni Black Italic, Helvetica */
 	.font-tradegothic .wordmarks {font-family:'Trade Gothic W01 Light';}
 
 	.font-bodoni .wordmarks { line-height:1.2;}
 	.font-bodoni .wordmarks .title-large {font-family:'BauerBodoniW01-BlackIta'; font-size:48px; text-transform: none;}
-	
+
 	.font-helvetica .wordmarks {font-family:'Helvetica Neue', 'Helvetica', sans-serif; font-weight: 200; text-transform: none;}
-			
+
 /* HEADER COLOR */
-	
+
 	/* Default is black/gray on white */
-	.wordmarks a.title-large {color: #333333;}	
-	.wordmarks a.title-small {color: #6d6d6d;}	
-	
+	.wordmarks a.title-large {color: #333333;}
+	.wordmarks a.title-small {color: #6d6d6d;}
+
 	/* Other background options are burgundy, cadet, navy, purple, teal (white text) */
-	
+
 	.color-burgundy header {background-color: #690521;}
     .color-burgundy-alumni header {background-color: #991514;}
 	.color-burgundy .wordmarks a {color: #fff;}
-		
+
 	.color-cadet header {background-color: #3a5163;}
 	.color-cadet .wordmarks a {color: #fff;}
-		
+
 	.color-navy header {background-color: #021d52;}
 	.color-navy .wordmarks a {color: #fff;}
-		
+
 	.color-purple header {background-color: #3d1d4e; }
 	.color-purple .wordmarks a {color: #fff;}
-		
+
 	.color-teal header {background-color: #1d4952;}
 	.color-teal h1 {color: #1d4952;}
 	.color-teal .wordmarks a {color: #fff;}
-	
+
 	/* Optional white title for use on top of photos */
-	
+
 	.white-title .wordmarks a {color: #fff;}
-		
+
 /* HEADER PHOTO */
-	
+
 	/*  By default, any background photo applied to the <header> tag will be displayed centered at full width */
-	
+
 	header.site-header {background-size:cover; background-repeat: no-repeat;}
-	
-	
+
+
 
 
 @media (max-width: (@screen-sm-min - 1)) {
@@ -162,7 +162,7 @@
           display: inline-block;
           width: 41px;
           height: 19px;
-          background: url(assets/header-mobile-gateways-silhouettes.png) 0 0 no-repeat;
+          background: url(../images/header-mobile-gateways-silhouettes.png) 0 0 no-repeat;
           font: inherit; // Bootstrap's "font: 0/0 a;" was kind of messing with the layout here.
         }
       }
@@ -286,7 +286,7 @@
     width: 40px;
     height: 40px;
     margin: 0;
-    background: url(assets/SCU-seal-85x85.png) 0 0 no-repeat;
+    background: url(../images/SCU-seal-85x85.png) 0 0 no-repeat;
     box-sizing: content-box;
     background-size: 100% 100%;
     outline: 0;
@@ -321,7 +321,7 @@
     only screen and (        min-device-pixel-ratio: 2),
     only screen and (                min-resolution: 192dpi),
     only screen and (                min-resolution: 2dppx) {
-      background-image: url(assets/SCU-seal-170x170.png);
+      background-image: url(../images/SCU-seal-170x170.png);
     }
   }
   /*.wordmark {
@@ -462,7 +462,7 @@
       margin-left: -15px;
       margin-right: -15px;
     }
-    
+
   }
   @media (min-width: @screen-md-min) {
     height: 49px;
@@ -716,10 +716,10 @@
       border-left: none;
       border-right: none;
     }
-    
+
    &.scu-nav.dropdown:hover .dropdown-menu {
 	    display: block;
-	    margin-top: 0; 
+	    margin-top: 0;
 	 }
 
     &.dropdown-search .dropdown-menu {
@@ -800,10 +800,10 @@
         margin-left: 34px;
       }
 			& + span.scu-fullname {
-					display:none; 
+					display:none;
 			}
 			& + span.scu-shortname {
-					display:inline-block;  
+					display:inline-block;
 			}
       @media (min-width: @screen-sm-min) {
         position: relative;
@@ -861,7 +861,7 @@
         }
       }
     }
-    
+
   }
     nav.affix+nav .caret {
     	transform: rotate(180deg);
@@ -888,7 +888,7 @@
           border-top: none;
           border-bottom: 4px solid;
         }
-        
+
       }
     }
     .slide-panel {
@@ -927,7 +927,7 @@
         color: #97052e;
         .caret {
           border-top: none;
-          border-bottom: 4px solid;          
+          border-bottom: 4px solid;
         }
       }
       &.open > a {

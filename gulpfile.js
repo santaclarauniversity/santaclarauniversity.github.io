@@ -31,29 +31,35 @@ var merge			= require('merge-stream');
 var newer			= require('gulp-newer');
 
 // configuration
+var preConfig = {
+	bower: './bower_components',
+	assets: './src/assets/'
+}
 var config = {
 	dev: gutil.env.dev,
 	src: {
 		scripts: {
-			fabricator: './src/assets/fabricator/scripts/fabricator.js',
-			toolkit: './src/assets/toolkit/scripts/toolkit.js',
+			fabricator: 		preConfig.assets + '/fabricator/scripts/fabricator.js',
+			toolkit: 			preConfig.assets + '/toolkit/scripts/toolkit.js',
 			bower: {
-				jquery: './bower_components/jquery/dist/jquery.min.js',
-				bootstrap: './bower_components/bootstrap/dist/js/bootstrap.min.js',
-				jquerySwipe: './bower_components/jquery.event.swipe/js/jquery.event.swipe.js',
-				jRespond: './bower_components/jrespond/js/jRespond.min.js',
-				mediaCheck: './bower_components/mediaCheck/js/mediaCheck-min.js',
-				html5shiv: './bower_components/html5shiv/dist/html5shiv.min.js'
+				jquery: 		preConfig.bower + '/jquery/dist/jquery.min.js',
+				jqueryUi: 		preConfig.bower + '/jquery-ui/jquery-ui.min.js',
+				bootstrap: 		preConfig.bower + '/bootstrap/dist/js/bootstrap.min.js',
+				jquerySwipe: 	preConfig.bower + '/jquery.event.swipe/js/jquery.event.swipe.js',
+				jRespond: 		preConfig.bower + '/jrespond/js/jRespond.min.js',
+				mediaCheck: 	preConfig.bower + '/mediaCheck/js/mediaCheck-min.js',
+				html5shiv: 		preConfig.bower + '/html5shiv/dist/html5shiv.min.js'
 			}
 		},
 		styles: {
+			fabricator: 		preConfig.assets + '/fabricator/styles/fabricator.scss',
+			bootstrap: 			preConfig.assets + '/toolkit/styles/bootstrap.less',
+			toolkit: 			preConfig.assets + '/toolkit/styles/toolkit.less',
+			ieCompatibility: 	preConfig.assets + '/toolkit/styles/ie.less',
 			bower: {
-				fontAwesome: './bower_components/font-awesome/css/font-awesome.min.css'
-			},
-			fabricator: './src/assets/fabricator/styles/fabricator.scss',
-			bootstrap: './src/assets/toolkit/styles/bootstrap.less',
-			toolkit: './src/assets/toolkit/styles/toolkit.less',
-			ieCompatibility: './src/assets/toolkit/styles/ie.less'
+				fontAwesome: 	preConfig.bower + '/font-awesome/css/font-awesome.min.css',
+				jqueryUi: 		preConfig.bower + '/smoothness/jquery-ui.min.css'
+			}
 		},
 		views: ['src/views/**/*', '!src/views/+(layouts)/**']
 	},
@@ -127,10 +133,9 @@ gulp.task('styles:ieCompatibility', function() {
 		.pipe(gulp.dest(config.dest + 'assets/toolkit/styles'));
 
 	return css.pipe(gulp.dest(config.cssDest));
-})
+});
 
 gulp.task('styles:toolkit', function() {
-	// First, include statics from Bower.  Not sure if this is the best way to do this yet, but it works.
 	for (var include in config.src.styles.bower) {
 		gulp.src(config.src.styles.bower[include])
 			.pipe(clone())
@@ -139,13 +144,10 @@ gulp.task('styles:toolkit', function() {
 
 	var css = gulp.src(config.src.styles.toolkit)
 		.pipe(sourcemaps.init())
-		// Compile LESS to CSS
 		.pipe(less())
-		// Check compiled code for errors/warnings; fail task if there are any
 		.pipe(lint())
 		.pipe(lessReporter(config.src.styles.toolkit));
 
-	// Copy the compiled file, minify it, move the minified copy to public /dist/, keep unminified in /css/.
 	var min = css
 		.pipe(clone())
 		.pipe(nano())
@@ -185,15 +187,12 @@ gulp.task('scripts:toolkit', function() {
 	}
 
 	return gulp.src(config.src.scripts.toolkit)
-		// Check JS for errors/warnings; fail task if there are any
 		.pipe(jshint())
 		.pipe(jshint.reporter())
 		.pipe(jshint.reporter('fail'))
-		// Check JS for style consistency; fail task if there are any errors
 		.pipe(jscs())
 		.pipe(jscs.reporter())
 		.pipe(jscs.reporter('fail'))
-		// Minify/compress JS
 		.pipe(minify({
 			ext: {
 				min: '.min.js'
@@ -219,7 +218,6 @@ gulp.task('images', ['favicon'], function() {
 		.pipe(newer(config.imagesDest))
 		.pipe(imagemin())
 		.pipe(gulp.dest(config.imagesDest));
-
 	// For some reason the above line can't just pipe into the below line.  Not sure why.
 	gulp.src(config.imagesDest + '**/*')
 		.pipe(clone())
@@ -298,7 +296,7 @@ gulp.task('default', ['clean'], function() {
 		'scripts',
 		'images',
 		'fonts',
-		'assemble',
+		'assemble'
 	];
 
 	// run build

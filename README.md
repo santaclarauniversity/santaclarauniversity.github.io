@@ -46,12 +46,29 @@ Or the whole sequence in order:
 $ gulp
 ```
 
-Fabricator is designed to "restart" itself silently whenever a change is made to virtually anything (JavaScript, CSS, images).  Adding, updating or otherwise altering Bower components will require a manual restart (just close and re-run the above command).  Fonts can just be updated manually and a browser refresh should update.
+
+Only the following will require a full restart (i.e. re-run of *gulp*, *gulp --dev*, or *npm start*):
+
+* Anything being added to ./assets/ (including images and fonts, currently) (TODO)
+* Anything involving alteration of gulp file (including, for example, removing/adding Bower components)
+
+Everything else *should* be automatically reloaded by Fabricator - namely, anything inside of ./src/.
 
 
 ### TODO
+
+#### Code
+
+* Modernizr should be used programatically instead of just linking to the current SCU website's JS; or should it?
+* Enable content in ./assets/**/* to be reloaded automatically
+
 
 #### Content Types
 
 * Person Spotlight looks very messed up unless the size of the browser is small
 * Image Gallery next/prev button glyphicons don't show up until browser resized or area of buttons is clicked
+
+
+#### Demos
+
+* Dept. Switcher - Header page for the active department is colliding with navigation directly above
