@@ -26,14 +26,14 @@ var jshint  		= require('gulp-jshint');
 var jscs    		= require('gulp-jscs');
 var minify  		= require('gulp-minify');
 var clone 			= require('gulp-clone');
-var rename 			= require('gulp-rename');
 var merge			= require('merge-stream');
 var newer			= require('gulp-newer');
+//var watch			= require('gulp-watch');
 
 // configuration
 var preConfig = {
 	bower: './bower_components',
-	assets: './src/assets/'
+	assets: './src/assets'
 }
 var config = {
 	dev: gutil.env.dev,
@@ -241,12 +241,10 @@ gulp.task('assemble', function(done) {
 
 // server
 gulp.task('serve', function() {
-
 	browserSync({
 		server: {
 			baseDir: config.dest
 		},
-		notify: false,
 		logPrefix: 'FABRICATOR',
 	});
 
@@ -270,26 +268,27 @@ gulp.task('serve', function() {
 	}
 
 	gulp.task('assemble:watch', ['assemble'], reload);
-	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
+	gulp.watch('src/**/*', ['assemble:watch']);
 
 	gulp.task('styles:fabricator:watch', ['styles:fabricator']);
-	gulp.watch('src/assets/fabricator/styles/**/*.scss', ['styles:fabricator:watch']);
+	gulp.watch(preConfig.assets + '/fabricator/styles/**/*.scss', ['styles:fabricator:watch']);
 
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
-	gulp.watch('src/assets/toolkit/styles/**/*.less', ['styles:toolkit:watch']);
+	gulp.watch(preConfig.assets + '/toolkit/styles/**/*.less', ['styles:toolkit:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], reload);
-	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
+	gulp.watch(preConfig.assets + '/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
 
 	gulp.task('images:watch', ['images'], reload);
-	gulp.watch(config.src.images, ['images:watch']);
+	gulp.watch(config.imagesDest + '**/*.{png,gif,jpg,jpeg}', ['images:watch']);
 
+	gulp.task('fonts:watch', ['fonts'], reload);
+	gulp.watch(config.fontsDest + '**/*.{eot,svg,woff,woff2,ttf}', ['fonts:watch']);
 });
 
 
 // default build task
 gulp.task('default', ['clean'], function() {
-
 	// define build tasks
 	var tasks = [
 		'styles',
@@ -308,5 +307,4 @@ gulp.task('default', ['clean'], function() {
 
 		}
 	});
-
 });

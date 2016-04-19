@@ -70,5 +70,3 @@ Everything else *should* be automatically reloaded by Fabricator - namely, anyth
 
 
 #### Demos
-
-* Dept. Switcher - Header page for the active department is colliding with navigation directly above
