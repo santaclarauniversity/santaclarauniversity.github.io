@@ -1,9 +1,21 @@
-// Overheard elements in Alumni section
+// Styling for Overheard elements in Alumni section
+
+
+// Fonts: SCU Alumni additional web fonts
+//----------------------------------------
+@font-face{
+font-family:"Trade Gothic W01 Bold";
+src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix");
+src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") format("eot"),url("/css/assets/fonts/d2e623ca-efc6-4557-ae55-ebb786065dcf.woff2") format("woff2"),url("/css/assets/fonts/f51d24dd-8256-43c6-ba1a-6aeae9d3f262.woff") format("woff"),url("/css/assets/fonts/955ee494-66b2-4eb2-8f19-bc3a088df16d.ttf") format("truetype"),url("/css/assets/fonts/d5153ad4-7c93-4757-9147-640e69ec4801.svg#d5153ad4-7c93-4757-9147-640e69ec4801") format("svg");
+}
+
+
 
 // Colors
 //---------------------------------------
 @red: #a12121;
 @gray: #524a48;
+@gold: #faba4b;
 
 
 // Global styles
@@ -14,7 +26,8 @@
   margin-left: 16px;
 
   > h2 {
-    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 70px;
   }
 
   > p {
@@ -46,8 +59,8 @@
     position: absolute;
     left: -16px;
     top: 50%;
-    width: 72px;
-    height: 72px;
+    width:74px;
+    height: 74px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     background: url('/assets/images/overheard-icon.png') center no-repeat;
@@ -73,6 +86,14 @@
   height: 250px;
   border: 3px solid #fff;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4);
+
+  // default background
+  background: url('/assets/images/overheard-bg-red-diagonal-vignette.png') center/cover no-repeat;
+
+  // default color
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .overheard-footer {
@@ -96,7 +117,10 @@
   &.mod-large {
     blockquote {
       padding-top: 40px;
-      font-size: 22px;
+      font-size: 25px;
+      line-height: 1.2;
+      font-family:"Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal;
 
       &:before {
         top: 30px;
@@ -104,22 +128,13 @@
     }
   }
 
-  // Background
-  .overheard-box {
-    background: url('/assets/images/overheard-bg-red-diagonal.png') center/cover no-repeat;
-  }
-
   // Quote
   blockquote {
     position:relative;
     margin: 0;
-    padding: 28px 44px;
+    padding: 28px 45px;
     border: none;
-    color: #fff;
     font-size: 18px;
-    font-weight: bold;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 
     &:before {
       content:'';
@@ -146,5 +161,20 @@
       background-size: contain;
       opacity:0.5;
     }
+  }
+}
+
+
+
+
+
+
+// Color Options
+//---------------------------------------
+.overheard.mod-gold-on-red {
+
+  .overheard-box {
+    background-image: url('/assets/images/overheard-bg-red-diagonal.png');
+    color: @gold;
   }
 }
