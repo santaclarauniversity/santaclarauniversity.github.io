@@ -1,0 +1,150 @@
+// Overheard elements in Alumni section
+
+// Colors
+//---------------------------------------
+@red: #a12121;
+@gray: #524a48;
+
+
+// Global styles
+//---------------------------------------
+
+// Remove demo container for live site
+.overheard-demo-container {
+  margin-left: 16px;
+
+  > h2 {
+    margin-bottom: 50px;
+  }
+
+  > p {
+    font-size: 15px;
+    margin: 15px 0 70px;
+    color: #777;
+  }
+}
+
+.overheard {
+  width: 320px;
+}
+
+.overheard-title {
+  position: relative;
+  margin: 0;
+  padding: 3px 0 2px 62px;
+  color: @gray;
+  font-size: 16px;
+  font-family: "Trajan W01 Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+
+  // Icon
+  &:before {
+    z-index: 1;
+    content:'';
+    display: block;
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    width: 72px;
+    height: 72px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background: url('/css/assets/overheard-icon.png') center no-repeat;
+    background-size: contain;
+  }
+
+  // Overheard
+  strong {
+    color: @red;
+    font-family: "Trajan W01 Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-size: 28px;
+  }
+
+  // @ symbol
+  span {
+    padding: 0 2px;
+  }
+}
+
+.overheard-box {
+  position: relative;
+  height: 250px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.overheard-footer {
+  position: absolute;
+  bottom: 0;
+  left:0;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+
+
+
+// Illuminate styles
+//---------------------------------------
+.overheard.mod-illuminate {
+
+  // Large font option for shorter quotes
+  &.mod-large {
+    blockquote {
+      padding-top: 40px;
+      font-size: 22px;
+
+      &:before {
+        top: 30px;
+      }
+    }
+  }
+
+  // Background
+  .overheard-box {
+    background: url('/css/assets/overheard-bg-red-diagonal.png') center/cover no-repeat;
+  }
+
+  // Quote
+  blockquote {
+    position:relative;
+    margin: 0;
+    padding: 28px 44px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:before {
+      content:'';
+      display: block;
+      position: absolute;
+      left: -1px;
+      top: 15px;
+      width: 50px;
+      height: 41px;
+      background: url('/css/assets/overheard-quote-left.png') center no-repeat;
+      background-size: contain;
+      opacity:0.5;
+    }
+
+    &:after {
+      content:'';
+      display: block;
+      position: absolute;
+      right: -1px;
+      bottom: 20px;
+      width: 50px;
+      height: 41px;
+      background: url('/css/assets/overheard-quote-right.png') center no-repeat;
+      background-size: contain;
+      opacity:0.5;
+    }
+  }
+}
