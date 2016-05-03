@@ -39,6 +39,11 @@
       content: '\00bb';
       position: absolute;
       right: 15px;
+	  // Begin - Fix to make chevrons align correctly regardless of text length
+	  top: 50%;
+	  transform: translate(0, -50%);
+	  -webkit-transform: translate(0, -50%);
+	  // End Fix
     }
     &:hover {
       background-color: darken(@maroon, 5%);

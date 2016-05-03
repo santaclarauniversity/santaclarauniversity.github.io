@@ -256,6 +256,8 @@ h5 {
 }
 h3 {
   color: #6d6d6d;
+}
+h3 .uppercase {
   text-transform: uppercase;
 }
 h4,
@@ -4161,6 +4163,9 @@ html.no-fontface .feature-gallery-source {
   content: '\00bb';
   position: absolute;
   right: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
 }
 .link-button.maroon:hover {
   background-color: #590015;
