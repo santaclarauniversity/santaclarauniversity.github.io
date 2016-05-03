@@ -34,7 +34,8 @@ var newer			= require('gulp-newer');
 var preConfig = {
 	bower: './bower_components',
 	assets: './src/assets'
-}
+};
+
 var config = {
 	dev: gutil.env.dev,
 	src: {
@@ -56,6 +57,7 @@ var config = {
 			bootstrap: 			preConfig.assets + '/toolkit/styles/bootstrap.less',
 			toolkit: 			preConfig.assets + '/toolkit/styles/toolkit.less',
 			ieCompatibility: 	preConfig.assets + '/toolkit/styles/ie.less',
+			landingPages:		preConfig.assets + '/toolkit/styles/bootstrap/landing-pages/impl/startup.less',
 			bower: {
 				fontAwesome: 	preConfig.bower + '/font-awesome/css/font-awesome.min.css',
 				jqueryUi: 		preConfig.bower + '/smoothness/jquery-ui.min.css'
@@ -135,6 +137,24 @@ gulp.task('styles:ieCompatibility', function() {
 	return css.pipe(gulp.dest(config.cssDest));
 });
 
+gulp.task('styles:landingPages', function() {
+	var css = gulp.src(config.src.styles.landingPages)
+		.pipe(sourcemaps.init())
+		.pipe(less())
+		.pipe(lint())
+		.pipe(lessReporter(config.src.styles.landingPages));
+
+	var min = css
+		.pipe(clone())
+		.pipe(nano())
+		.pipe(rename('landing.min.css'))
+		.pipe(gulp.dest(config.cssDest + 'min/'))
+		.pipe(clone())
+		.pipe(gulp.dest(config.dest + 'assets/toolkit/styles'));
+
+	return css.pipe(gulp.dest(config.cssDest));
+});
+
 gulp.task('styles:toolkit', function() {
 	for (var include in config.src.styles.bower) {
 		gulp.src(config.src.styles.bower[include])
@@ -159,7 +179,8 @@ gulp.task('styles:toolkit', function() {
 	return css.pipe(gulp.dest(config.cssDest));
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:bootstrap', 'styles:ieCompatibility', 'styles:toolkit']);
+gulp.task('styles', ['styles:fabricator', 'styles:bootstrap', 'styles:ieCompatibility', 'styles:landingPages',
+	'styles:toolkit']);
 
 
 // scripts
@@ -245,7 +266,7 @@ gulp.task('serve', function() {
 		server: {
 			baseDir: config.dest
 		},
-		logPrefix: 'FABRICATOR',
+		logPrefix: 'FABRICATOR'
 	});
 
 	/**
