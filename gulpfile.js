@@ -294,8 +294,12 @@ gulp.task('serve', function() {
 	gulp.task('styles:fabricator:watch', ['styles:fabricator']);
 	gulp.watch(preConfig.assets + '/fabricator/styles/**/*.scss', ['styles:fabricator:watch']);
 
+	gulp.task('styles:bootstrap:watch', ['styles:toolkit']);
+	gulp.watch(preConfig.assets + '/toolkit/styles/bootstrap/**/*.less', ['styles:toolkit:watch']);
+
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
-	gulp.watch(preConfig.assets + '/toolkit/styles/**/*.less', ['styles:toolkit:watch']);
+	gulp.watch([preConfig.assets + '/toolkit/styles/**/*.less',
+		'!' + preConfig.assets + '/toolkit/styles/bootstrap/**/*.less'], ['styles:toolkit:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], reload);
 	gulp.watch(preConfig.assets + '/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
