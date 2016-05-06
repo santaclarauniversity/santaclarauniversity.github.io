@@ -205,6 +205,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.overheard.mod-photo.mod-vertical.mod-large-photo .overheard-image {
+  max-height: 103%;
+}
 .overheard.mod-quote.mod-photo {
   position: relative;
   background-size: cover;

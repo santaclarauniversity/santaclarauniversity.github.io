@@ -353,6 +353,14 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
       -webkit-font-smoothing: antialiased; // smooth text because font is small
       -moz-osx-font-smoothing: grayscale;
     }
+
+    // Vertical photos are larger without the citation box (citation box detected via JS)
+    &.mod-large-photo {
+
+      .overheard-image {
+        max-height: 103%;
+      }
+    }
   }
 }
 

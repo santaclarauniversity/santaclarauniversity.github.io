@@ -29,7 +29,8 @@
         $('.overheard.mod-photo').each(function(){
 
             var $overheard = $(this),
-                $img = $overheard.find('.overheard-image');
+                $img = $overheard.find('.overheard-image'),
+                $citation = $overheard.find('.overheard-footer');
 
             // vertical photos
             if ( $img.width() < $img.height() ) {
@@ -37,9 +38,9 @@
             }
 
             // photos without citation box
-            if ( $overheard.has('.overheard-footer:not(:empty)')  ) {
+            if ( ! $citation.length || $citation.is(':empty') ) {
 
-                $overheard.addClass('test');
+                $overheard.addClass('mod-large-photo');
             }
         });
     };
