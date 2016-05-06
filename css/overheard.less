@@ -1,8 +1,9 @@
-// Styling for Overheard elements in Alumni section
+// Styling for Overheard elements in SCU Alumni section
 
 
 // Fonts
 //----------------------------------------
+
 // Additional fonts from SCU Alumni web font project
 @font-face{
 font-family:"Trade Gothic W01 Bold";
@@ -34,7 +35,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 // Global styles
 //---------------------------------------
 
-// Demo container: remove for live site
+// Demo container: not needed for live site
 .overheard-demo-container {
   margin-left: 16px;
 
@@ -56,13 +57,11 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 }
 
 
-.overheard {
-  width: 320px;
-}
-
+// "OVERHEARD @ SCU" title
 .overheard-title {
+  width: 320px;
   position: relative;
-  margin: 0;
+  margin-bottom: 0;
   padding: 3px 0 2px 62px;
   color: @gray;
   font-size: 16px;
@@ -86,7 +85,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     background-size: contain;
   }
 
-  // Overheard
+  // "Overheard"
   strong {
     color: @red;
     font-family: "Trajan W01 Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -94,16 +93,18 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     font-size: 28px;
   }
 
-  // @ symbol
+  // "@" symbol
   span {
     padding: 0 2px;
   }
 }
 
-/* Overheard box can be a div or anchor element */
-.overheard-box {
+
+// Overheard box can be a div or anchor element
+.overheard {
+  width: 320px;
   display: block;
-  position: relative;
+  position: relative; /* contains footer and photos */
   height: 250px;
   border: 3px solid @white;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4);
@@ -114,6 +115,8 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
   // Default color
   color: @white;
 
+
+  // Hover state
   &:hover {
     color: @white;
     text-decoration: none;
@@ -122,24 +125,22 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
   }
 }
 
-.overheard-main {
-  z-index: 1; // above backgrounds
-  position: relative;
-}
 
 .overheard-footer {
-  z-index: 1; // above backgrounds
   position: absolute;
   bottom: 0;
   left:0;
   width: 100%;
   font-size: 15px;
-  -webkit-font-smoothing: antialiased; // smooth footer text because font is small
+  -webkit-font-smoothing: antialiased; // smooth text because font is small
   -moz-osx-font-smoothing: grayscale;
 
-  img {
-    max-width: 100%;
-  }
+
+  // Default citation box styling
+  padding: 9px 10px;
+  color: @white;
+  background-color: @red;
+  text-align: center;
 
   p {
     margin: 0;
@@ -149,65 +150,47 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     text-decoration: underline;
     color: @white;
   }
+
+  img {
+    max-width: 100%;
+  }
+
+
+  // Hide empty footers -- empty footers must not contain whitespace
+  &:empty {
+    display: none;
+  }
 }
+
 
 
 
 
 // Quotes
 //---------------------------------------
+
 .overheard.mod-quote {
 
   // Quote
   blockquote {
     position:relative;
     margin: 0;
-    padding: 28px 43px;
+    padding: 28px 42px 15px;
     border: none;
     font-size: 18px;
     font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-    // Curly quotes
-    &:before,
-    &:after {
-      display: block;
-      position: absolute;
-      opacity:0.5;
-      font-size: 90px;
-      line-height: 1;
-      font-family: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
-      font-weight: normal;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-
-      // Set optional curly quote color here
-      color: inherit;
-    }
-
-    &:before {
-      content:'\0201C';
-      left: -8px;
-      top: 10px;
-    }
-
-    &:after {
-      content:'\0201D';
-      right: 6px;
-      bottom: -10px;
-    }
   }
-
 
   // Large font options for shorter quotes
   &.mod-large,
   &.mod-xlarge {
     blockquote {
       padding-top: 40px;
-      font-size: 25px;
+      font-size: 24px;
       line-height: 1.2;
       font-weight: normal;
       font-family:"Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
+      -webkit-font-smoothing: antialiased; // smooth bold fonts
       -moz-osx-font-smoothing: grayscale;
 
       &:before {
@@ -216,12 +199,58 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     }
   }
 
-
   // Extra large font option
   &.mod-xlarge {
     blockquote {
       font-size: 28px;
     }
+  }
+
+
+  // Trade Gothic Regular font option
+  &.mod-regular {
+    blockquote {
+      // font-family:"Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  }
+
+
+  // Curly quotes
+  blockquote:before,
+  blockquote:after {
+    display: block;
+    position: absolute;
+    opacity:0.5;
+    font-size: 90px;
+    line-height: 1;
+    font-family: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased; // smoothing looks better
+    -moz-osx-font-smoothing: grayscale;
+
+    // Set optional curly quote color here
+    color: inherit;
+  }
+
+  blockquote:before {
+    content:'\0201C';
+    left: -8px;
+    top: 10px;
+  }
+
+  blockquote:after {
+    content:'\0201D';
+    right: 6px;
+    bottom: -10px;
+  }
+
+
+  // Attribution
+  .overheard-attribution {
+    float: right;
+    text-align: right;
+    padding-right: 42px;
+    font-size: 13px;
   }
 }
 
@@ -230,13 +259,32 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
 
 
+
+// Illuminate Blog Posts
+//---------------------------------------
+
+.overheard.mod-illuminate {
+
+  .overheard-footer {
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+
 // Social Posts
 //---------------------------------------
+
 .overheard.mod-facebook {
 
   .overheard-footer {
     padding: 9px 20px 9px 45px;
     background-color: #35569C;
+    text-align: left;
 
     // Facebook icon
     &:before {
@@ -260,14 +308,51 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
 
 
-// Photo posts
+// Photo Posts
 //---------------------------------------
+
 .overheard.mod-photo {
 
-  .overheard-footer {
-    padding: 9px 10px;
-    background-color: @red;
-    text-align: center;
+  // Default horizontal photo
+  overflow: hidden;
+
+  .overheard-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+
+
+  // Vertical photo
+  &.mod-vertical {
+    overflow: visible;
+
+    .overheard-image {
+      z-index: 1; // above footer, below overheard icon
+      position: absolute;
+      left: 0;
+      top: -4px;
+      max-width: 50%;
+      max-height: 85%;
+      height: auto;
+      -webkit-transform: rotateZ(-7deg);
+              transform: rotateZ(-7deg);
+      border: 3px solid @white;
+      box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    // Attribution
+    .overheard-caption {
+      float: right;
+      max-width: 35%;
+      margin-top: 45px;
+      margin-right: 25px;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased; // smooth text because font is small
+      -moz-osx-font-smoothing: grayscale;
+    }
   }
 }
 
@@ -278,71 +363,59 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
 // Color Options
 //---------------------------------------
+
 .overheard.mod-quote.mod-photo {
 
-  .overheard-box {
-    position: relative;
-    background-size: cover;
-    background-position: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
 
-    // Darken background photo
-    &:after {
-      content:'';
-      display: block;
-      position:absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
+  // Darken background photo
+  &:before {  // :before element sits above background, but under quotes and footer;
+    content:'';
+    display: block;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  // Darken photo if not applied as background image (does not work in IE yet)
+  .overheard-image {
+    -webkit-filter: brightness(0.7);
+            filter: brightness(0.7);
   }
 }
 
 
 .overheard.mod-gray-on-gray {
 
-  .overheard-box {
-    background-image: url('/assets/images/overheard-bg-gray.png');
-    color: @dark-gray;
-  }
+  background-image: url('/assets/images/overheard-bg-gray.png');
+  color: @dark-gray;
 }
 
 
 .overheard.mod-red-on-gray {
 
-  .overheard-box {
-    background-image: url('/assets/images/overheard-bg-gray.png');
-    color: @dark-red;
-  }
-}
-
-
-.overheard.mod-gold-on-gray {
-
-  .overheard-box {
-    background-image: url('/assets/images/overheard-bg-gray.png');
-    color: @dark-gold;
-  }
+  background-image: url('/assets/images/overheard-bg-gray.png');
+  color: @dark-red;
 }
 
 
 .overheard.mod-white-on-gold {
 
-  .overheard-box {
-    background-image: url('/assets/images/overheard-bg-gold.png');
-    color: @white;
-  }
+  background-image: url('/assets/images/overheard-bg-gold.png');
+  color: @white;
 }
 
 
 
 .overheard.mod-gold-on-red {
 
-  .overheard-box {
-    background-image: url('/assets/images/overheard-bg-red-diagonal.png');
-    color: @gold;
-  }
+  background-image: url('/assets/images/overheard-bg-red-diagonal.png');
+  color: @gold;
 }
 
 
@@ -351,109 +424,39 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 // Carousel styles
 //---------------------------------------------
 
-// Core Owl Carousel CSS File-----------------
-.owl-carousel {
-  display: none;
-  width: 100%;
-  -webkit-tap-highlight-color: transparent;
-  /* position relative and z-index fix webkit rendering fonts issue */
-  position: relative;
-  z-index: 1;
-}
-.owl-carousel .owl-stage {
-  position: relative;
-  -ms-touch-action: pan-Y;
-}
-.owl-carousel .owl-stage:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-.owl-carousel .owl-stage-outer {
-  position: relative;
-  overflow: hidden;
-  /* fix for flashing background */
-  -webkit-transform: translate3d(0px, 0px, 0px);
-}
-.owl-carousel .owl-controls .owl-nav .owl-prev,
-.owl-carousel .owl-controls .owl-nav .owl-next,
-.owl-carousel .owl-controls .owl-dot {
-  cursor: pointer;
-  cursor: hand;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.owl-carousel.owl-loaded {
-  display: block;
-}
-.owl-carousel.owl-loading {
-  opacity: 0;
-  display: block;
-}
-.owl-carousel.owl-hidden {
-  opacity: 0;
-}
-.owl-carousel .owl-refresh .owl-item {
-  display: none;
-}
-.owl-carousel .owl-item {
-  position: relative;
-  min-height: 1px;
-  float: left;
-  -webkit-backface-visibility: hidden;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.owl-carousel .owl-item img {
-  display: block;
-  width: 100%;
-  -webkit-transform-style: preserve-3d;
-}
-.owl-carousel.owl-text-select-on .owl-item {
-  -webkit-user-select: auto;
-  -moz-user-select: auto;
-  -ms-user-select: auto;
-  user-select: auto;
-}
-.owl-carousel .owl-grab {
-  cursor: move;
-  cursor: -webkit-grab;
-  cursor: -o-grab;
-  cursor: -ms-grab;
-  cursor: grab;
-}
-.owl-carousel.owl-rtl {
-  direction: rtl;
-}
-.owl-carousel.owl-rtl .owl-item {
-  float: right;
-}
+// Include owl carousel plugin styles as a LESS import (prevents parallel css downloads)
 
-/* No Js */
-.no-js .owl-carousel {
-  display: block;
-}
-// End core owl carousel file---------------
+@import "owl-carousel.less";
 
 
 // Additional custom carousel styles
-.owl-carousel {
-  width: 340px; // space for icon and shadow
-}
 
-.owl-carousel .overheard {
-  width: 320px;
-  padding-left: 20px; // add space for icon and shadow
-  padding-top: 15px;
-  padding-bottom: 5px;
+.overheard-carousel {
+  width: 324px;
+  margin: -2px; // removes space from shadow
+
+  .owl-item {
+    padding: 2px; // space for shadow
+  }
+
+  .owl-dots {
+    margin-top: 6px;
+  }
+
+  .owl-dot {
+
+    span {
+      width: 12px;
+      height: 12px;
+      margin: 5px 4px;
+      background-color: #ccc;
+    }
+
+    &.active,
+    &:hover {
+      span {
+        background: @red;
+      }
+    }
+  }
 }

@@ -77,8 +77,12 @@ $('.one-column.social-grid.module').hide();
       <script src="https://www.scu.edu/media/scuedu/style-assets/javascript/respond.min.js"></script>
     <![endif]-->
 
-    <!-- OVERHEARD STYLESHEET -->
+
+
+    <!-- BEGIN OVERHEARD STYLESHEET -->
     <link href="/css/overheard.css" rel="stylesheet">
+    <!-- END OVERHEARD STYLESHEET -->
+
 
   </head>
   <body class=" color-burgundy-alumni font-bodoni  white-nav white-nav">
@@ -88,23 +92,11 @@ $('.one-column.social-grid.module').hide();
           <div class="row">
             <div class="col-sm-12 site-header-titles">
 
-
-
-
-
-
-
-
-
-
-
-
               <a class="wordmarkshidethis" href="/alumni/">
                 <img style="max-width:100%;height:auto;" src="https://www.scu.edu/media/offices/alumni/alumni_logo-635x200.png" alt="Alumni" width="635" height="200">
 
               </a>
             </div>
-
 
             <div class="col-xs-12 col-sm-3 col-md-1 hidden-md hidden-lg  clearfix site-header-search-and-toggles">
               <button type="button" class="visible-xs-block menu-toggle menu-toggle-main" data-toggle="offcanvas" data-target="#scu-main-navigation">
@@ -273,27 +265,27 @@ $('.one-column.social-grid.module').hide();
       </div>
     </li>
 
-                <li class="hidden-xs dropdown dropdown-search">
-                  <a href="#" class="glyphicon glyphicon-search" data-toggle="dropdown" role="button" aria-expanded="false"></a>
-                  <div class="dropdown-menu">
-                    <form class="navbar-form" method="get" action="/search/">
-                      <div class="input-group">
-                        <input type="search" class="form-control" name="q" id="q" placeholder="SEARCH">
-                        <span class="input-group-btn">
-                          <button class="btn btn-default" type="submit" aria-label="Submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                        </span>
-                      </div>
-
-                    </form>
+            <li class="hidden-xs dropdown dropdown-search">
+              <a href="#" class="glyphicon glyphicon-search" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+              <div class="dropdown-menu">
+                <form class="navbar-form" method="get" action="/search/">
+                  <div class="input-group">
+                    <input type="search" class="form-control" name="q" id="q" placeholder="SEARCH">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="submit" aria-label="Submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    </span>
                   </div>
-                </li>
 
-              </ul>
-            </div>
-            <div class="slide-menu-backdrop"></div>
-          </nav>
+                </form>
+              </div>
+            </li>
 
-        </header>
+          </ul>
+        </div>
+        <div class="slide-menu-backdrop"></div>
+      </nav>
+
+    </header>
 
   <div class="container" id="content">
     <div class="row">
@@ -302,80 +294,69 @@ $('.one-column.social-grid.module').hide();
 
 
 
-<!-- BEGIN OVERHEARD CONTENT -->
+
+<!-- BEGIN OVERHEARD DEMO CONTENT -->
 
         <div class="overheard-demo-container">
 
-          <h1>Overheard Feature Options</h1>
+          <h1>Overheard feature options</h1>
 
-          <h2>Illuminate Blog Post</h2>
+          <h2>Illuminate blog post</h2>
 
-          <aside class="overheard mod-quote">
-            <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-            <a href="#illuminate-blog-article-link" class="overheard-box">
-              <div class="overheard-main">
-                <blockquote>The maximum length of the longer quote is 160 characters. The font used for this quote is Trade Gothic Light. This is the default style for Illuminate quotes.</blockquote>
-              </div>
-              <footer class="overheard-footer">
-                <img src="/assets/images/overheard-illuminate-branding.png" alt="Illuminate"/>
-              </footer>
-            </a>
-          </aside>
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <a href="#illuminate-blog-article-link" class="overheard mod-quote mod-illuminate">
+            <blockquote>The maximum length of the longer quote is 160 characters. The font used for this quote is Trade Gothic Light. This is the default style for Illuminate quotes.</blockquote>
+            <footer class="overheard-footer">
+              <img src="/assets/images/overheard-illuminate-branding.png" alt="Illuminate"/>
+            </footer>
+          </a>
 
-          <p>Illuminate: long quote with Illuminate branding, 160 characters. <br/>The entire overheard box is a link for Illuminate posts.</p>
-          <code>class="overheard mod-quote"</code>
+          <p>Illuminate: 160-character quote with Illuminate branding.
+          <br/>For Illuminate posts, the entire box is a link.</p>
+          <code>class="overheard mod-quote mod-illuminate"</code>
 
 
-          <aside class="overheard mod-quote mod-large">
-            <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-            <a href="#illuminate-blog-article-link" class="overheard-box">
-              <div class="overheard-main">
-                <blockquote>The maximum length of the large text Trade Gothic Bold quote is 80 characters.</blockquote>
-              </div>
-              <footer class="overheard-footer">
-                <img src="/assets/images/overheard-illuminate-branding.png" alt="Illuminate"/>
-              </footer>
-            </a>
-          </aside>
 
-          <p>Illuminate: short quote with Illuminate branding, 80 characters.</p>
-          <code>class="overheard mod-quote mod-large"</code>
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <a href="#illuminate-blog-article-link" class="overheard mod-quote mod-large mod-illuminate">
+            <blockquote>The maximum length of the large text Trade Gothic Bold quote is 80 characters.</blockquote>
+            <footer class="overheard-footer">
+              <img src="/assets/images/overheard-illuminate-branding.png" alt="Illuminate"/>
+            </footer>
+          </a>
+
+          <p>Illuminate: 80-character quote with Illuminate branding.</p>
+          <code>class="overheard mod-quote mod-large mod-illuminate"</code>
 
 
-          <aside class="overheard mod-quote mod-xlarge">
-            <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-            <a href="#illuminate-blog-article-link" class="overheard-box">
-              <div class="overheard-main">
-                <blockquote>Maximum length of the extra large text is 60 characters.</blockquote>
-              </div>
-              <footer class="overheard-footer">
-                <img src="/assets/images/overheard-illuminate-branding.png" alt="Illuminate"/>
-              </footer>
-            </a>
-          </aside>
 
-          <p>Illuminate: even shorter quote with Illuminate branding, 60 characters.</p>
-          <code>class="overheard mod-quote mod-xlarge"</code>
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <a href="#illuminate-blog-article-link" class="overheard mod-quote mod-xlarge mod-illuminate">
+            <blockquote>Maximum length of the extra large text is 60 characters.</blockquote>
+            <footer class="overheard-footer">
+              <img src="/assets/images/overheard-illuminate-branding.png" alt="Illuminate"/>
+            </footer>
+          </a>
+
+          <p>Illuminate: 60-character quote with Illuminate branding.</p>
+          <code>class="overheard mod-quote mod-xlarge mod-illuminate"</code>
 
 
 
 
 
-          <h2>Social Post</h2>
 
-          <aside class="overheard mod-quote mod-large mod-facebook">
-            <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-            <div class="overheard-box">
-              <div class="overheard-main">
-                <blockquote>This is a social post. It includes a quote with social branding in the footer.</blockquote>
-              </div>
-              <footer class="overheard-footer">
-                Mike Kukreja '02, on <a href="/#add-link-here">Facebook</a>
-              </footer>
-            </div>
-          </aside>
+          <h2>Social post</h2>
 
-          <p>Social post: character limit of footer box is 40 chars.</p>
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div class="overheard mod-quote mod-large mod-facebook">
+            <blockquote>This is a social post. It includes a quote with social branding in the footer.</blockquote>
+            <footer class="overheard-footer">
+              Mike Kukreja '02, on <a href="/#add-link-here">Facebook</a>
+            </footer>
+          </div>
+
+          <p>Social post: 40-character limit for the footer box.</p>
           <code>class="overheard mod-quote mod-large mod-facebook"</code>
 
 
@@ -385,186 +366,256 @@ $('.one-column.social-grid.module').hide();
 
           <h2>Photo</h2>
 
-          <aside class="overheard mod-photo">
-            <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-            <div class="overheard-box" style="background-image:url('/assets/images/overheard-sample-photo.jpg')">
-              <div class="overheard-main">
-              </div>
-              <footer class="overheard-footer">
-                Photo by Jane Doe '06. <a href="/#add-link-here">View Gallery</a>
-              </footer>
-            </div>
-          </aside>
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div class="overheard mod-photo">
+            <img src="/assets/images/overheard-sample-photo.jpg" alt="Image caption or alt text here" class="overheard-image"/>
+            <footer class="overheard-footer">
+              Photo by Jane Doe '06. <a href="/#add-link-here">View Gallery</a>
+            </footer>
+          </div>
 
-          <p>Photo post: character limit of footer box is 40 chars.</p>
+          <p>Photo: Horizontal photo with citation box.<br/>
+          40-character limit for citation box.</p>
+          <code>class="overheard mod-photo"</code>
+
+
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div class="overheard mod-photo">
+            <img src="/assets/images/overheard-sample-photo.jpg" alt="Image caption or alt text here" class="overheard-image"/>
+            <footer class="overheard-footer"></footer>
+          </div>
+
+          <p>Photo: Horizontal photo without citation box.
+          <br/><small>Tech note: if the citation box is empty it won't display.</small></p>
+          <code>class="overheard mod-photo"</code>
+
+
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div  class="overheard mod-photo">
+            <img src="https://snap-photos.s3.amazonaws.com/img-thumbs/960w/4JVCVRGGKD.jpg" class="overheard-image"/>
+            <p class="overheard-caption">
+              Optional caption for this photo by <strong>Jane Doe</strong>. This caption is eighty five characters.
+            </p>
+            <footer class="overheard-footer">
+              Photo by Jane Doe '06. <a href="/#add-link-here">View Gallery</a>
+            </footer>
+          </div>
+
+          <p>Photo: Vertical photo with citation box.<br/>
+          Maximum length of vertical caption is 85 characters.</p>
+          <code>class="overheard mod-photo"</code>
+
+
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div  class="overheard mod-photo">
+            <img src="https://snap-photos.s3.amazonaws.com/img-thumbs/960w/4JVCVRGGKD.jpg" class="overheard-image"/>
+            <p class="overheard-caption">
+              Optional caption for this photo by <strong>Jane Doe</strong>. The caption for this photo is ninety five characters.
+            </p>
+            <footer class="overheard-footer"></footer>
+          </div>
+
+          <p>Photo: Vertical photo without citation box.<br/>
+          Maximum length of vertical caption is 95 characters.</p>
           <code>class="overheard mod-photo"</code>
 
 
 
-          <h2>Color Options</h2>
 
-          <aside class="overheard mod-quote mod-large">
-            <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-            <div class="overheard-box">
-              <div class="overheard-main">
-                <blockquote>There was the black squirrel of Mission Gardens. Stole my grilled Ham and Swiss.</blockquote>
-              </div>
-            </div>
-          </aside>
+          <h2>Quote</h2>
+
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div class="overheard mod-quote">
+            <blockquote>The maximum length of the quote with attribution is 140 characters. This is 138 chars. The font used for this quote is Trade Gothic Light.</blockquote>
+            <small class="overheard-attribution">
+              &mdash;&emsp;Melanie Borchardt '05<br/>
+              Sacramento Santa Claran of the Year
+            </small>
+          </div>
+
+          <p>Quote: 140-character quote with attribution.</p>
+          <code>class="overheard mod-quote"</code>
+
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div class="overheard mod-quote mod-regular">
+            <blockquote>The maximum length of the quote with a citation box is 160 characters. The font used for this quote is Trade Gothic Light. This is one hundred and sixty chars.</blockquote>
+            <footer class="overheard-footer">
+              <strong>Leslie Orta</strong> '79
+            </footer>
+          </div>
+
+          <p>Quote: 160-character quote with citation box.</p>
+          <code>class="overheard mod-quote"</code>
+
+
+
+
+
+
+          <h2>Color schemes</h2>
+
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div class="overheard mod-quote mod-large">
+            <blockquote>There was the black squirrel of Mission Gardens. Stole my grilled Ham and Swiss.</blockquote>
+            <footer class="overheard-footer">
+              <strong>Leslie Orta</strong> '79
+            </footer>
+          </div>
 
           <p>Color: default white text on red diagonal striped vignette background.</p>
           <code>class="overheard mod-quote mod-large"</code>
 
 
-          <aside class="overheard mod-quote mod-xlarge mod-photo">
-            <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-            <div class="overheard-box" style="background-image:url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/DOCMFK4EYU.jpg')">
-              <div class="overheard-main">
-                <blockquote>A photo can be used behind a quote, if the quote is short.</blockquote>
-              </div>
-              <footer class="overheard-footer">
-                <strong>Leslie Orta</strong> '79
-              </footer>
-            </div>
-          </aside>
 
-          <p>Color: white text on darkened photo background, optional footer.</p>
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div style="background-image:url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/DOCMFK4EYU.jpg')" class="overheard mod-quote mod-xlarge mod-photo">
+            <!-- OPTIONAL IMG ELEMENT INSTEAD OF BACKGROUND IMAGE -->
+            <!-- <img src="https://snap-photos.s3.amazonaws.com/img-thumbs/960w/DOCMFK4EYU.jpg" alt="Image caption or alt text here" class="overheard-image"/> -->
+            <blockquote>A photo can be used behind a quote, if the quote is short.</blockquote>
+            <footer class="overheard-footer">
+              <strong>Leslie Orta</strong> '79
+            </footer>
+          </div>
+
+          <p>Color: white text on darkened photo (background image).<br/>
+          <small>Tech note: photo can be included via img element <em>or</em> background image, the latter is more IE friendly.</small></p>
           <code>class="overheard mod-quote mod-xlarge mod-photo"</code>
 
 
-          <aside class="overheard mod-quote mod-xlarge mod-gray-on-gray">
-            <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-            <div class="overheard-box">
-              <div class="overheard-main">
-                <blockquote>Alternate color scheme: dark gray on light gray.</blockquote>
-              </div>
-            </div>
-          </aside>
+
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div class="overheard mod-quote mod-xlarge mod-gray-on-gray">
+            <blockquote>Alternate color scheme: dark gray on light gray.</blockquote>
+            <footer class="overheard-footer">
+              <strong>Leslie Orta</strong> '79
+            </footer>
+          </div>
 
           <p>Color: dark gray text on gray background.</p>
           <code>class="overheard mod-quote mod-xlarge mod-gray-on-gray"</code>
 
 
-          <aside class="overheard mod-quote mod-xlarge mod-red-on-gray">
-            <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-            <div class="overheard-box">
-              <div class="overheard-main">
-                <blockquote>Alternate color scheme: dark red on light gray.</blockquote>
-              </div>
-            </div>
-          </aside>
+
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div class="overheard mod-quote mod-xlarge mod-red-on-gray">
+            <blockquote>Alternate color scheme: dark red on light gray.</blockquote>
+            <footer class="overheard-footer">
+              <strong>Leslie Orta</strong> '79
+            </footer>
+          </div>
 
           <p>Color: dark red text on gray background.</p>
           <code>class="overheard mod-quote mod-xlarge mod-red-on-gray"</code>
 
 
-          <aside class="overheard mod-quote mod-xlarge mod-gold-on-gray">
-            <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-            <div class="overheard-box">
-              <div class="overheard-main">
-                <blockquote>Alternate color scheme: gold on light gray.</blockquote>
-              </div>
-            </div>
-          </aside>
-
-          <p>Color: gold text on gray background.</p>
-          <code>class="overheard mod-quote mod-xlarge mod-gold-on-gray"</code>
-
-
-
-          <aside class="overheard mod-quote mod-xlarge mod-white-on-gold">
-            <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-            <div class="overheard-box">
-              <div class="overheard-main">
-                <blockquote>Alternate color scheme: white on gold.</blockquote>
-              </div>
-            </div>
-          </aside>
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div  class="overheard mod-quote mod-xlarge mod-illuminate mod-white-on-gold">
+            <blockquote>Alternate color scheme: white on gold.</blockquote>
+            <footer class="overheard-footer">
+              <img src="/assets/images/overheard-illuminate-branding.png" alt="Illuminate"/>
+            </footer>
+          </div>
 
           <p>Color: white text on gold background.</p>
-          <code>class="overheard mod-quote mod-xlarge mod-white-on-gold"</code>
+          <code>class="overheard mod-quote mod-xlarge mod-illuminate mod-white-on-gold"</code>
 
 
 
-          <aside class="overheard mod-quote mod-xlarge mod-gold-on-red">
-            <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-            <div class="overheard-box">
-              <div class="overheard-main">
-                <blockquote>Alternate color scheme: gold on red.</blockquote>
-              </div>
-            </div>
-          </aside>
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+          <div class="overheard mod-quote mod-xlarge mod-illuminate mod-gold-on-red">
+            <blockquote>Alternate color scheme: gold on red.</blockquote>
+            <footer class="overheard-footer">
+              <img src="/assets/images/overheard-illuminate-branding.png" alt="Illuminate"/>
+            </footer>
+          </div>
 
           <p>Color: gold text on red diagonal striped background (no vignette).</p>
-          <code>class="overheard mod-quote mod-xlarge mod-gold-on-red"</code>
+          <code>class="overheard mod-quote mod-xlarge mod-illuminate mod-gold-on-red"</code>
 
 
 
-          <h2>Carousel Demo (in progress)</h2>
+
+          <h2>Carousel demo</h2>
+
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
 
           <div class="overheard-carousel">
 
-            <aside class="overheard mod-quote">
-              <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-              <a href="#illuminate-blog-article-link" class="overheard-box">
-                <div class="overheard-main">
-                  <blockquote>The maximum length of the longer quote is 160 characters. The font used for this quote is Trade Gothic Light. This is the default style for Illuminate quotes.</blockquote>
-                </div>
-                <footer class="overheard-footer">
-                  <img src="/assets/images/overheard-illuminate-branding.png" alt="Illuminate"/>
-                </footer>
-              </a>
-            </aside>
+            <a href="#illuminate-blog-article-link" class="overheard mod-quote mod-illuminate">
+              <blockquote>The maximum length of the longer quote is 160 characters. The font used for this quote is Trade Gothic Light. This is the default style for Illuminate quotes.</blockquote>
+              <footer class="overheard-footer">
+                <img src="/assets/images/overheard-illuminate-branding.png" alt="Illuminate"/>
+              </footer>
+            </a>
 
-            <aside class="overheard mod-quote mod-xlarge mod-gold-on-red">
-              <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-              <div class="overheard-box">
-                <div class="overheard-main">
-                  <blockquote>Alternate color scheme: gold on red.</blockquote>
-                </div>
-              </div>
-            </aside>
+            <div class="overheard mod-photo">
+              <img src="/assets/images/overheard-sample-photo.jpg" alt="Image caption or alt text here" class="overheard-image"/>
+              <footer class="overheard-footer">
+                Photo by Jane Doe '06. <a href="/#add-link-here">View Gallery</a>
+              </footer>
+            </div>
 
-            <aside class="overheard mod-quote mod-xlarge mod-photo">
-              <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-              <div class="overheard-box" style="background-image:url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/DOCMFK4EYU.jpg')">
-                <div class="overheard-main">
-                  <blockquote>A photo can be used behind a quote, if the quote is short.</blockquote>
-                </div>
-                <footer class="overheard-footer">
-                  <strong>Leslie Orta</strong> '79
-                </footer>
-              </div>
-            </aside>
+            <div style="background-image:url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/DOCMFK4EYU.jpg')" class="overheard mod-quote mod-xlarge mod-photo">
+              <blockquote>A photo can be used behind a quote, if the quote is short.</blockquote>
+              <footer class="overheard-footer">
+                <strong>Leslie Orta</strong> '79
+              </footer>
+            </div>
 
+            <div class="overheard mod-quote mod-xlarge mod-red-on-gray">
+              <blockquote>Alternate color scheme: dark red on light gray.</blockquote>
+              <footer class="overheard-footer">
+                <strong>Leslie Orta</strong> '79
+              </footer>
+            </div>
 
-            <aside class="overheard mod-quote mod-xlarge mod-red-on-gray">
-              <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-              <div class="overheard-box">
-                <div class="overheard-main">
-                  <blockquote>Alternate color scheme: dark red on light gray.</blockquote>
-                </div>
-              </div>
-            </aside>
-
-            <aside class="overheard mod-photo">
-              <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
-              <div class="overheard-box" style="background-image:url('/assets/images/overheard-sample-photo.jpg')">
-                <div class="overheard-main">
-                </div>
-                <footer class="overheard-footer">
-                  Photo by Jane Doe '06. <a href="/#add-link-here">View Gallery</a>
-                </footer>
-              </div>
-            </aside>
           </div>
 
+          <p>Carousel: default carousel with swipe effect.<br/>
+          Timing is 5 seconds and slideshow pauses on mouse hover (adjustable in code).</p>
+          <code>class="overheard-carousel"</code>
 
+
+          <h5 class="overheard-title"><strong>Overheard</strong><span>@</span>SCU</h5>
+
+          <div class="overheard-carousel mod-fade">
+
+            <a href="#illuminate-blog-article-link" class="overheard mod-quote mod-illuminate">
+              <blockquote>The maximum length of the longer quote is 160 characters. The font used for this quote is Trade Gothic Light. This is the default style for Illuminate quotes.</blockquote>
+              <footer class="overheard-footer">
+                <img src="/assets/images/overheard-illuminate-branding.png" alt="Illuminate"/>
+              </footer>
+            </a>
+
+            <div class="overheard mod-photo">
+              <img src="/assets/images/overheard-sample-photo.jpg" alt="Image caption or alt text here" class="overheard-image"/>
+              <footer class="overheard-footer">
+                Photo by Jane Doe '06. <a href="/#add-link-here">View Gallery</a>
+              </footer>
+            </div>
+
+            <div style="background-image:url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/DOCMFK4EYU.jpg')" class="overheard mod-quote mod-xlarge mod-photo">
+              <blockquote>A photo can be used behind a quote, if the quote is short.</blockquote>
+              <footer class="overheard-footer">
+                <strong>Leslie Orta</strong> '79
+              </footer>
+            </div>
+
+            <div class="overheard mod-quote mod-xlarge mod-red-on-gray">
+              <blockquote>Alternate color scheme: dark red on light gray.</blockquote>
+              <footer class="overheard-footer">
+                <strong>Leslie Orta</strong> '79
+              </footer>
+            </div>
+          </div>
+
+          <p>Carousel: optional fade effect.</p>
+          <code>class="overheard-carousel mod-fade"</code>
 
 
         </div>
 
-<!-- END OVERHEARD CONTENT  -->
+<!-- END OVERHEARD DEMO CONTENT  -->
 
 
 
@@ -711,25 +762,12 @@ $('.one-column.social-grid.module').hide();
 
 
 
-<!-- BEGIN OVERHEARD JAVASCRIPT -->
+<!-- BEGIN OVERHEARD JAVASCRIPT: PLACE BEFORE CLOSING </body> TAG -->
 
     <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/overheard.js"></script>
 
-    <script>
-      $(document).ready(function(){
-          $(".overheard-carousel").owlCarousel({
-              items: 1,
-              loop:true,
-              margin:20,
-              // ADJUST OVERHEARD CAROUSEL TIMING HERE ----------------
-              autoplay: true,            // autoplay
-              autoplayTimeout: 5000,     // autoplay interval timeout
-              autoPlayHoverPause: true,  // pause on mouse hover
-          });
-      });
-    </script>
-
-<!-- END OVERHEARD JAVASCRIPT -->
+<!-- END OVERHEARDJAVASCRIPT -->
 
 
     </body>

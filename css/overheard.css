@@ -19,12 +19,10 @@
   display: inline-block;
   margin-bottom: 70px;
 }
-.overheard {
-  width: 320px;
-}
 .overheard-title {
+  width: 320px;
   position: relative;
-  margin: 0;
+  margin-bottom: 0;
   padding: 3px 0 2px 62px;
   color: #524a48;
   font-size: 16px;
@@ -55,28 +53,24 @@
 .overheard-title span {
   padding: 0 2px;
 }
-/* Overheard box can be a div or anchor element */
-.overheard-box {
+.overheard {
+  width: 320px;
   display: block;
   position: relative;
+  /* contains footer and photos */
   height: 250px;
   border: 3px solid #ffffff;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4);
   background: url('/assets/images/overheard-bg-red-diagonal-vignette.png') center / cover no-repeat;
   color: #ffffff;
 }
-.overheard-box:hover {
+.overheard:hover {
   color: #ffffff;
   text-decoration: none;
   -webkit-filter: brightness(1.15);
   filter: brightness(1.15);
 }
-.overheard-main {
-  z-index: 1;
-  position: relative;
-}
 .overheard-footer {
-  z-index: 1;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -84,9 +78,10 @@
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.overheard-footer img {
-  max-width: 100%;
+  padding: 9px 10px;
+  color: #ffffff;
+  background-color: #a12121;
+  text-align: center;
 }
 .overheard-footer p {
   margin: 0;
@@ -95,13 +90,36 @@
   text-decoration: underline;
   color: #ffffff;
 }
+.overheard-footer img {
+  max-width: 100%;
+}
+.overheard-footer:empty {
+  display: none;
+}
 .overheard.mod-quote blockquote {
   position: relative;
   margin: 0;
-  padding: 28px 43px;
+  padding: 28px 42px 15px;
   border: none;
   font-size: 18px;
   font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.overheard.mod-quote.mod-large blockquote,
+.overheard.mod-quote.mod-xlarge blockquote {
+  padding-top: 40px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: normal;
+  font-family: "Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.overheard.mod-quote.mod-large blockquote:before,
+.overheard.mod-quote.mod-xlarge blockquote:before {
+  top: 28px;
+}
+.overheard.mod-quote.mod-xlarge blockquote {
+  font-size: 28px;
 }
 .overheard.mod-quote blockquote:before,
 .overheard.mod-quote blockquote:after {
@@ -126,26 +144,19 @@
   right: 6px;
   bottom: -10px;
 }
-.overheard.mod-quote.mod-large blockquote,
-.overheard.mod-quote.mod-xlarge blockquote {
-  padding-top: 40px;
-  font-size: 25px;
-  line-height: 1.2;
-  font-weight: normal;
-  font-family: "Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.overheard.mod-quote .overheard-attribution {
+  float: right;
+  text-align: right;
+  padding-right: 42px;
+  font-size: 13px;
 }
-.overheard.mod-quote.mod-large blockquote:before,
-.overheard.mod-quote.mod-xlarge blockquote:before {
-  top: 28px;
-}
-.overheard.mod-quote.mod-xlarge blockquote {
-  font-size: 28px;
+.overheard.mod-illuminate .overheard-footer {
+  padding: 0;
 }
 .overheard.mod-facebook .overheard-footer {
   padding: 9px 20px 9px 45px;
   background-color: #35569C;
+  text-align: left;
 }
 .overheard.mod-facebook .overheard-footer:before {
   content: '';
@@ -159,17 +170,47 @@
   height: 32px;
   background: url('/assets/images/social-media/facebook-64.png') center / contain no-repeat;
 }
-.overheard.mod-photo .overheard-footer {
-  padding: 9px 10px;
-  background-color: #a12121;
-  text-align: center;
+.overheard.mod-photo {
+  overflow: hidden;
 }
-.overheard.mod-quote.mod-photo .overheard-box {
+.overheard.mod-photo .overheard-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+.overheard.mod-photo.mod-vertical {
+  overflow: visible;
+}
+.overheard.mod-photo.mod-vertical .overheard-image {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: -4px;
+  max-width: 50%;
+  max-height: 85%;
+  height: auto;
+  -webkit-transform: rotateZ(-7deg);
+  transform: rotateZ(-7deg);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+.overheard.mod-photo.mod-vertical .overheard-caption {
+  float: right;
+  max-width: 35%;
+  margin-top: 45px;
+  margin-right: 25px;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.overheard.mod-quote.mod-photo {
   position: relative;
   background-size: cover;
   background-position: center;
 }
-.overheard.mod-quote.mod-photo .overheard-box:after {
+.overheard.mod-quote.mod-photo:before {
   content: '';
   display: block;
   position: absolute;
@@ -179,23 +220,23 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.overheard.mod-gray-on-gray .overheard-box {
+.overheard.mod-quote.mod-photo .overheard-image {
+  -webkit-filter: brightness(0.7);
+  filter: brightness(0.7);
+}
+.overheard.mod-gray-on-gray {
   background-image: url('/assets/images/overheard-bg-gray.png');
   color: #333333;
 }
-.overheard.mod-red-on-gray .overheard-box {
+.overheard.mod-red-on-gray {
   background-image: url('/assets/images/overheard-bg-gray.png');
   color: #72021b;
 }
-.overheard.mod-gold-on-gray .overheard-box {
-  background-image: url('/assets/images/overheard-bg-gray.png');
-  color: #f2ab1d;
-}
-.overheard.mod-white-on-gold .overheard-box {
+.overheard.mod-white-on-gold {
   background-image: url('/assets/images/overheard-bg-gold.png');
   color: #ffffff;
 }
-.overheard.mod-gold-on-red .overheard-box {
+.overheard.mod-gold-on-red {
   background-image: url('/assets/images/overheard-bg-red-diagonal.png');
   color: #faba4b;
 }
@@ -289,12 +330,82 @@
 .no-js .owl-carousel {
   display: block;
 }
-.owl-carousel {
-  width: 340px;
+/* Dots */
+.owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
 }
-.owl-carousel .overheard {
-  width: 320px;
-  padding-left: 20px;
-  padding-top: 15px;
-  padding-bottom: 5px;
+.owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #d6d6d6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 30px;
+}
+.owl-dots .owl-dot.active span,
+.owl-dots .owl-dot:hover span {
+  background: #869791;
+}
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.overheard-carousel {
+  width: 324px;
+  margin: -2px;
+}
+.overheard-carousel .owl-item {
+  padding: 2px;
+}
+.overheard-carousel .owl-dots {
+  margin-top: 6px;
+}
+.overheard-carousel .owl-dot span {
+  width: 12px;
+  height: 12px;
+  margin: 5px 4px;
+  background-color: #ccc;
+}
+.overheard-carousel .owl-dot.active span,
+.overheard-carousel .owl-dot:hover span {
+  background: #a12121;
 }
