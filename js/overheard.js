@@ -14,7 +14,8 @@
             items: 1,
             loop:true,
             margin:20,
-            // ADJUST OVERHEARD CAROUSEL TIMING HERE ----------------
+            video: true,
+            // ADJUST SCU OVERHEARD CAROUSEL TIMING HERE ----------------
             autoplay: true,            // autoplay
             autoplayTimeout: 5000,     // autoplay interval timeout
             autoplayHoverPause: true,  // pause on mouse hover

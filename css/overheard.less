@@ -6,6 +6,11 @@
 
 // Additional fonts from SCU Alumni web font project
 @font-face{
+font-family:"Trade Gothic W01 Roman";
+src:url("/css/assets/fonts/413d9688-00d4-47c4-bb55-656a0cd396e9.eot?#iefix");
+src:url("/css/assets/fonts/413d9688-00d4-47c4-bb55-656a0cd396e9.eot?#iefix") format("eot"),url("/css/assets/fonts/7b555e94-d57a-415e-a36e-1b0c5d3b90d2.woff2") format("woff2"),url("/css/assets/fonts/c4aef0d4-bfcf-4790-acf5-909881f411e8.woff") format("woff"),url("/css/assets/fonts/e741f29c-bc18-4343-bff3-db2465a0be3e.ttf") format("truetype"),url("/css/assets/fonts/853e2a9b-4057-42a5-ad7e-0762cda0b13c.svg#853e2a9b-4057-42a5-ad7e-0762cda0b13c") format("svg");
+}
+@font-face{
 font-family:"Trade Gothic W01 Bold";
 src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix");
 src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") format("eot"),url("/css/assets/fonts/d2e623ca-efc6-4557-ae55-ebb786065dcf.woff2") format("woff2"),url("/css/assets/fonts/f51d24dd-8256-43c6-ba1a-6aeae9d3f262.woff") format("woff"),url("/css/assets/fonts/955ee494-66b2-4eb2-8f19-bc3a088df16d.ttf") format("truetype"),url("/css/assets/fonts/d5153ad4-7c93-4757-9147-640e69ec4801.svg#d5153ad4-7c93-4757-9147-640e69ec4801") format("svg");
@@ -21,6 +26,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 @red: #a12121;
 @dark-red: #72021B;
 
+@light-gray: #EDEDED;
 @gray: #524a48;
 @dark-gray: #333;
 
@@ -117,11 +123,22 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
 
   // Hover state
-  &:hover {
+  &:hover,
+  &:focus {
     color: @white;
     text-decoration: none;
     -webkit-filter: brightness(1.15);
             filter: brightness(1.15);
+  }
+
+  // Overheard link covers entire box
+  > a {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -148,7 +165,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
   a {
     text-decoration: underline;
-    color: @white;
+    color: inherit;
   }
 
   img {
@@ -166,98 +183,6 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
 
 
-// Quotes
-//---------------------------------------
-
-.overheard.mod-quote {
-
-  // Quote
-  blockquote {
-    position:relative;
-    margin: 0;
-    padding: 28px 42px 15px;
-    border: none;
-    font-size: 18px;
-    font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-
-  // Large font options for shorter quotes
-  &.mod-large,
-  &.mod-xlarge {
-    blockquote {
-      padding-top: 40px;
-      font-size: 24px;
-      line-height: 1.2;
-      font-weight: normal;
-      font-family:"Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased; // smooth bold fonts
-      -moz-osx-font-smoothing: grayscale;
-
-      &:before {
-        top: 28px;
-      }
-    }
-  }
-
-  // Extra large font option
-  &.mod-xlarge {
-    blockquote {
-      font-size: 28px;
-    }
-  }
-
-
-  // Trade Gothic Regular font option
-  &.mod-regular {
-    blockquote {
-      // font-family:"Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-  }
-
-
-  // Curly quotes
-  blockquote:before,
-  blockquote:after {
-    display: block;
-    position: absolute;
-    opacity:0.5;
-    font-size: 90px;
-    line-height: 1;
-    font-family: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased; // smoothing looks better
-    -moz-osx-font-smoothing: grayscale;
-
-    // Set optional curly quote color here
-    color: inherit;
-  }
-
-  blockquote:before {
-    content:'\0201C';
-    left: -8px;
-    top: 10px;
-  }
-
-  blockquote:after {
-    content:'\0201D';
-    right: 6px;
-    bottom: -10px;
-  }
-
-
-  // Attribution
-  .overheard-attribution {
-    float: right;
-    text-align: right;
-    padding-right: 42px;
-    font-size: 13px;
-  }
-}
-
-
-
-
-
 
 
 // Illuminate Blog Posts
@@ -267,9 +192,9 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
   .overheard-footer {
     padding: 0;
+    pointer-events: none; // clicks pass through to overheard link
   }
 }
-
 
 
 
@@ -279,14 +204,13 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 // Social Posts
 //---------------------------------------
 
-.overheard.mod-facebook {
+.social-footer() {
 
   .overheard-footer {
     padding: 9px 20px 9px 45px;
-    background-color: #35569C;
     text-align: left;
 
-    // Facebook icon
+    // Social Icon
     &:before {
       content:'';
       display: block;
@@ -297,11 +221,148 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
               transform: translateY(-50%);
       width: 32px;
       height: 32px;
-      background: url('/assets/images/social-media/facebook-64.png') center/contain no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+}
+
+
+.overheard.mod-facebook {
+
+  .social-footer;
+
+  .overheard-footer {
+    background-color: #35569C;
+
+    // Facebook icon
+    &:before {
+      background-image: url('/assets/images/social-media/facebook-64.png');
     }
   }
 }
 
+
+.overheard.mod-linkedin {
+
+  .social-footer;
+
+  .overheard-footer {
+    background-color: #007ab8;
+
+    // LinkedIn icon
+    &:before {
+      background-image: url('/assets/images/social-media/linkedin-64.png');
+    }
+  }
+}
+
+
+.overheard.mod-twitter {
+
+  .social-footer;
+
+  .overheard-footer {
+    background-color: #007ab8;
+
+    // Twitter icon
+    &:before {
+      background-image: url('/assets/images/social-media/twitter-64.png');
+    }
+  }
+}
+
+
+.overheard.mod-flickr {
+  .social-footer;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  .overheard-footer {
+    background-color: #0063dc;
+
+    // Flickr icon
+    &:before {
+      background-image: url('/assets/images/social-media/flickr-64.png');
+      background-size: 22px;
+    }
+  }
+
+  // Darken background photo
+  &:before {  // :before element sits above background, but under text and footer
+    content:'';
+    display: block;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+.overheard.mod-instagram {
+  .social-footer;
+
+  .overheard-footer {
+    background-color: #3f729b;
+
+    // Instagram icon
+    &:before {
+      background-image: url('/assets/images/social-media/instagram-64.png');
+    }
+  }
+
+  // Instagram photo
+  .overheard-image {
+    pointer-events: none;
+    z-index: 1; // above footer, below overheard icon
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    max-width: 100%;
+    max-height: 78%;
+    height: auto;
+    -webkit-transform: translateX(-50%) rotateZ(-7deg);
+            transform: translateX(-50%) rotateZ(-7deg);
+    border: 3px solid @white;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+.overheard.mod-youtube {
+  .social-footer;
+
+  .overheard-footer {
+    background-color: #cd201f;
+
+    // Youtube icon
+    &:before {
+      background-image: url('/assets/images/social-media/youtube-64.png');
+      background-size: 24px;
+    }
+  }
+}
+
+
+.overheard.mod-vimeo {
+  .social-footer;
+
+  .overheard-footer {
+    background-color: #1ab7ea;
+
+    // Vimeo icon
+    &:before {
+      background-image: url('/assets/images/social-media/vimeo-64.png');
+      background-size: 22px;
+    }
+  }
+}
 
 
 
@@ -322,6 +383,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     top: 0;
     width: 100%;
     height: auto;
+    pointer-events: none; // clicks pass through to overheard link
   }
 
 
@@ -369,17 +431,61 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
 
 
-// Color Options
+// Video Posts
 //---------------------------------------
 
-.overheard.mod-quote.mod-photo {
+.overheard.mod-video {
 
-  position: relative;
+  // Regular video treatment with photo, citation, and large play icon
+  overflow: hidden;
+
+  // Large video icon
+  a:after {
+    z-index: 1; // above photo
+    content:"";
+    position: absolute;
+    top:108px;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+    width: 105px;
+    height: 105px;
+    background: url('/assets/images/overheard-video-icon.png') center/105px no-repeat;
+  }
+
+
+  // Feature treatment with small play icon
+  &.mod-feature {
+
+    // Small video icon
+    a:after {
+      top: auto;
+      left: auto;
+      bottom: 12px;
+      right: 12px;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      width: 44px;
+      height: 44px;
+      background-size: 44px;
+    }
+  }
+}
+
+
+
+
+
+// Feature Posts (applies to videos for now)
+//------------------------------------------
+.overheard.mod-feature {
+  position: relative; // photo can be applied as bg or img element
   background-size: cover;
   background-position: center;
 
   // Darken background photo
-  &:before {  // :before element sits above background, but under quotes and footer;
+  &:before {
+    z-index: 1; // above overheard image
     content:'';
     display: block;
     position:absolute;
@@ -387,13 +493,168 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(66, 21, 21, 0.65);
   }
 
-  // Darken photo if not applied as background image (does not work in IE yet)
+  // Lighten background on hover
+  &:hover,
+  &:focus {
+    &:before {
+      background-color: rgba(66, 21, 21, 0.6);
+    }
+  }
+
+  > a {
+    z-index: 2; // above dark panel
+  }
+
   .overheard-image {
-    -webkit-filter: brightness(0.7);
-            filter: brightness(0.7);
+    z-index: 0; // behind dark panel
+    position: absolute;
+  }
+
+  .overheard-feature-header,
+  .overheard-feature-title,
+  .overheard-feature-summary {
+    z-index: 2; // text goes above dark panel
+    position: relative;
+    display: block;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: @white;
+    pointer-events: none; // clicks pass through to video link
+  }
+
+  .overheard-feature-header {
+    padding-top: 28px;
+    padding-bottom: 9px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family:"Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; // smooth bold fonts
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .overheard-feature-title {
+    margin: 0;
+    text-transform: none;
+    font-size: 36px;
+    font-family:"Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .overheard-feature-summary {
+    padding-top: 15px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+}
+
+
+
+
+
+// Quotes
+//---------------------------------------
+
+.overheard.mod-quote {
+
+  // Quote
+  blockquote {
+    position:relative;
+    margin: 0;
+    padding: 28px 42px 15px;
+    border: none;
+    font-size: 18px;
+    font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    pointer-events: none; // clicks pass through to overheard link
+  }
+
+  // Curly quotes
+  blockquote:before,
+  blockquote:after {
+    display: block;
+    position: absolute;
+    font-size: 90px;
+    line-height: 1;
+    font-family: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased; // smoothing looks better
+    -moz-osx-font-smoothing: grayscale;
+
+    // Default curly quote color and opacity
+    color: inherit;
+    opacity:0.5;
+  }
+
+  blockquote:before {
+    content:'\0201C';
+    left: -8px;
+    top: 10px;
+  }
+
+  blockquote:after {
+    content:'\0201D';
+    right: 6px;
+    bottom: -10px;
+  }
+
+  // Attribution
+  .overheard-attribution {
+    float: right;
+    text-align: right;
+    padding-right: 42px;
+    font-size: 13px;
+  }
+
+
+  // Font Options
+
+  // Large font options for shorter quotes
+  &.mod-large,
+  &.mod-xlarge {
+    blockquote {
+      padding-top: 40px;
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: normal;
+      font-family:"Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased; // smooth bold fonts
+      -moz-osx-font-smoothing: grayscale;
+
+      &:before {
+        top: 26px;
+      }
+    }
+  }
+
+  // Extra large font option
+  &.mod-xlarge {
+    blockquote {
+      font-size: 28px;
+    }
+  }
+
+  // Trade Gothic Regular font option
+  &.mod-regular {
+    blockquote {
+      font-family:"Trade Gothic W01 Roman";
+    }
+  }
+}
+
+
+
+
+
+
+// Color Options
+//---------------------------------------
+
+.overheard.mod-opaque {
+  blockquote:before,
+  blockquote:after {
+    opacity:1;
   }
 }
 
@@ -419,12 +680,78 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 }
 
 
-
 .overheard.mod-gold-on-red {
 
   background-image: url('/assets/images/overheard-bg-red-diagonal.png');
   color: @gold;
 }
+
+
+.mod-black-footer {
+
+  .overheard-footer {
+    color: @white;
+    background-color: #000;
+  }
+}
+
+
+.mod-dark-gray-footer {
+
+  .overheard-footer {
+    color: @white;
+    background-color: @dark-gray;
+  }
+}
+
+
+.mod-light-gray-footer {
+
+  .overheard-footer {
+    color: @dark-gray;
+    background-color: @light-gray;
+  }
+}
+
+
+.mod-white-footer {
+
+  .overheard-footer {
+    color: @dark-gray;
+    background-color: @white;
+  }
+}
+
+
+.mod-gold-footer {
+
+  .overheard-footer {
+    color: @dark-gray;
+    background-color: @gold;
+  }
+}
+
+
+.overheard.mod-quote.mod-photo {
+
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  // Darken background photo
+  &:before {  // :before element sits above background, but under text and footer
+    content:'';
+    display: block;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+
 
 
 

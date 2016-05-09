@@ -1,4 +1,9 @@
 @font-face {
+  font-family: "Trade Gothic W01 Roman";
+  src: url("/css/assets/fonts/413d9688-00d4-47c4-bb55-656a0cd396e9.eot?#iefix");
+  src: url("/css/assets/fonts/413d9688-00d4-47c4-bb55-656a0cd396e9.eot?#iefix") format("eot"), url("/css/assets/fonts/7b555e94-d57a-415e-a36e-1b0c5d3b90d2.woff2") format("woff2"), url("/css/assets/fonts/c4aef0d4-bfcf-4790-acf5-909881f411e8.woff") format("woff"), url("/css/assets/fonts/e741f29c-bc18-4343-bff3-db2465a0be3e.ttf") format("truetype"), url("/css/assets/fonts/853e2a9b-4057-42a5-ad7e-0762cda0b13c.svg#853e2a9b-4057-42a5-ad7e-0762cda0b13c") format("svg");
+}
+@font-face {
   font-family: "Trade Gothic W01 Bold";
   src: url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix");
   src: url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") format("eot"), url("/css/assets/fonts/d2e623ca-efc6-4557-ae55-ebb786065dcf.woff2") format("woff2"), url("/css/assets/fonts/f51d24dd-8256-43c6-ba1a-6aeae9d3f262.woff") format("woff"), url("/css/assets/fonts/955ee494-66b2-4eb2-8f19-bc3a088df16d.ttf") format("truetype"), url("/css/assets/fonts/d5153ad4-7c93-4757-9147-640e69ec4801.svg#d5153ad4-7c93-4757-9147-640e69ec4801") format("svg");
@@ -64,11 +69,20 @@
   background: url('/assets/images/overheard-bg-red-diagonal-vignette.png') center / cover no-repeat;
   color: #ffffff;
 }
-.overheard:hover {
+.overheard:hover,
+.overheard:focus {
   color: #ffffff;
   text-decoration: none;
   -webkit-filter: brightness(1.15);
   filter: brightness(1.15);
+}
+.overheard > a {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 .overheard-footer {
   position: absolute;
@@ -88,7 +102,7 @@
 }
 .overheard-footer a {
   text-decoration: underline;
-  color: #ffffff;
+  color: inherit;
 }
 .overheard-footer img {
   max-width: 100%;
@@ -96,66 +110,12 @@
 .overheard-footer:empty {
   display: none;
 }
-.overheard.mod-quote blockquote {
-  position: relative;
-  margin: 0;
-  padding: 28px 42px 15px;
-  border: none;
-  font-size: 18px;
-  font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.overheard.mod-quote.mod-large blockquote,
-.overheard.mod-quote.mod-xlarge blockquote {
-  padding-top: 40px;
-  font-size: 24px;
-  line-height: 1.2;
-  font-weight: normal;
-  font-family: "Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.overheard.mod-quote.mod-large blockquote:before,
-.overheard.mod-quote.mod-xlarge blockquote:before {
-  top: 28px;
-}
-.overheard.mod-quote.mod-xlarge blockquote {
-  font-size: 28px;
-}
-.overheard.mod-quote blockquote:before,
-.overheard.mod-quote blockquote:after {
-  display: block;
-  position: absolute;
-  opacity: 0.5;
-  font-size: 90px;
-  line-height: 1;
-  font-family: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: inherit;
-}
-.overheard.mod-quote blockquote:before {
-  content: '\0201C';
-  left: -8px;
-  top: 10px;
-}
-.overheard.mod-quote blockquote:after {
-  content: '\0201D';
-  right: 6px;
-  bottom: -10px;
-}
-.overheard.mod-quote .overheard-attribution {
-  float: right;
-  text-align: right;
-  padding-right: 42px;
-  font-size: 13px;
-}
 .overheard.mod-illuminate .overheard-footer {
   padding: 0;
+  pointer-events: none;
 }
 .overheard.mod-facebook .overheard-footer {
   padding: 9px 20px 9px 45px;
-  background-color: #35569C;
   text-align: left;
 }
 .overheard.mod-facebook .overheard-footer:before {
@@ -168,7 +128,191 @@
   transform: translateY(-50%);
   width: 32px;
   height: 32px;
-  background: url('/assets/images/social-media/facebook-64.png') center / contain no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.overheard.mod-facebook .overheard-footer {
+  background-color: #35569C;
+}
+.overheard.mod-facebook .overheard-footer:before {
+  background-image: url('/assets/images/social-media/facebook-64.png');
+}
+.overheard.mod-linkedin .overheard-footer {
+  padding: 9px 20px 9px 45px;
+  text-align: left;
+}
+.overheard.mod-linkedin .overheard-footer:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.overheard.mod-linkedin .overheard-footer {
+  background-color: #007ab8;
+}
+.overheard.mod-linkedin .overheard-footer:before {
+  background-image: url('/assets/images/social-media/linkedin-64.png');
+}
+.overheard.mod-twitter .overheard-footer {
+  padding: 9px 20px 9px 45px;
+  text-align: left;
+}
+.overheard.mod-twitter .overheard-footer:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.overheard.mod-twitter .overheard-footer {
+  background-color: #007ab8;
+}
+.overheard.mod-twitter .overheard-footer:before {
+  background-image: url('/assets/images/social-media/twitter-64.png');
+}
+.overheard.mod-flickr {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.overheard.mod-flickr .overheard-footer {
+  padding: 9px 20px 9px 45px;
+  text-align: left;
+}
+.overheard.mod-flickr .overheard-footer:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.overheard.mod-flickr .overheard-footer {
+  background-color: #0063dc;
+}
+.overheard.mod-flickr .overheard-footer:before {
+  background-image: url('/assets/images/social-media/flickr-64.png');
+  background-size: 22px;
+}
+.overheard.mod-flickr:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.overheard.mod-instagram .overheard-footer {
+  padding: 9px 20px 9px 45px;
+  text-align: left;
+}
+.overheard.mod-instagram .overheard-footer:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.overheard.mod-instagram .overheard-footer {
+  background-color: #3f729b;
+}
+.overheard.mod-instagram .overheard-footer:before {
+  background-image: url('/assets/images/social-media/instagram-64.png');
+}
+.overheard.mod-instagram .overheard-image {
+  pointer-events: none;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  max-width: 100%;
+  max-height: 78%;
+  height: auto;
+  -webkit-transform: translateX(-50%) rotateZ(-7deg);
+  transform: translateX(-50%) rotateZ(-7deg);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+.overheard.mod-youtube .overheard-footer {
+  padding: 9px 20px 9px 45px;
+  text-align: left;
+}
+.overheard.mod-youtube .overheard-footer:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.overheard.mod-youtube .overheard-footer {
+  background-color: #cd201f;
+}
+.overheard.mod-youtube .overheard-footer:before {
+  background-image: url('/assets/images/social-media/youtube-64.png');
+  background-size: 24px;
+}
+.overheard.mod-vimeo .overheard-footer {
+  padding: 9px 20px 9px 45px;
+  text-align: left;
+}
+.overheard.mod-vimeo .overheard-footer:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.overheard.mod-vimeo .overheard-footer {
+  background-color: #1ab7ea;
+}
+.overheard.mod-vimeo .overheard-footer:before {
+  background-image: url('/assets/images/social-media/vimeo-64.png');
+  background-size: 22px;
 }
 .overheard.mod-photo {
   overflow: hidden;
@@ -179,6 +323,7 @@
   top: 0;
   width: 100%;
   height: auto;
+  pointer-events: none;
 }
 .overheard.mod-photo.mod-vertical {
   overflow: visible;
@@ -208,12 +353,39 @@
 .overheard.mod-photo.mod-vertical.mod-large-photo .overheard-image {
   max-height: 103%;
 }
-.overheard.mod-quote.mod-photo {
+.overheard.mod-video {
+  overflow: hidden;
+}
+.overheard.mod-video a:after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 108px;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  width: 105px;
+  height: 105px;
+  background: url('/assets/images/overheard-video-icon.png') center / 105px no-repeat;
+}
+.overheard.mod-video.mod-feature a:after {
+  top: auto;
+  left: auto;
+  bottom: 12px;
+  right: 12px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  width: 44px;
+  height: 44px;
+  background-size: 44px;
+}
+.overheard.mod-feature {
   position: relative;
   background-size: cover;
   background-position: center;
 }
-.overheard.mod-quote.mod-photo:before {
+.overheard.mod-feature:before {
+  z-index: 1;
   content: '';
   display: block;
   position: absolute;
@@ -221,11 +393,111 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(66, 21, 21, 0.65);
 }
-.overheard.mod-quote.mod-photo .overheard-image {
-  -webkit-filter: brightness(0.7);
-  filter: brightness(0.7);
+.overheard.mod-feature:hover:before,
+.overheard.mod-feature:focus:before {
+  background-color: rgba(66, 21, 21, 0.6);
+}
+.overheard.mod-feature > a {
+  z-index: 2;
+}
+.overheard.mod-feature .overheard-image {
+  z-index: 0;
+  position: absolute;
+}
+.overheard.mod-feature .overheard-feature-header,
+.overheard.mod-feature .overheard-feature-title,
+.overheard.mod-feature .overheard-feature-summary {
+  z-index: 2;
+  position: relative;
+  display: block;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: #ffffff;
+  pointer-events: none;
+}
+.overheard.mod-feature .overheard-feature-header {
+  padding-top: 28px;
+  padding-bottom: 9px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.overheard.mod-feature .overheard-feature-title {
+  margin: 0;
+  text-transform: none;
+  font-size: 36px;
+  font-family: "Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.overheard.mod-feature .overheard-feature-summary {
+  padding-top: 15px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.overheard.mod-quote blockquote {
+  position: relative;
+  margin: 0;
+  padding: 28px 42px 15px;
+  border: none;
+  font-size: 18px;
+  font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  pointer-events: none;
+}
+.overheard.mod-quote blockquote:before,
+.overheard.mod-quote blockquote:after {
+  display: block;
+  position: absolute;
+  font-size: 90px;
+  line-height: 1;
+  font-family: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: inherit;
+  opacity: 0.5;
+}
+.overheard.mod-quote blockquote:before {
+  content: '\0201C';
+  left: -8px;
+  top: 10px;
+}
+.overheard.mod-quote blockquote:after {
+  content: '\0201D';
+  right: 6px;
+  bottom: -10px;
+}
+.overheard.mod-quote .overheard-attribution {
+  float: right;
+  text-align: right;
+  padding-right: 42px;
+  font-size: 13px;
+}
+.overheard.mod-quote.mod-large blockquote,
+.overheard.mod-quote.mod-xlarge blockquote {
+  padding-top: 40px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: normal;
+  font-family: "Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.overheard.mod-quote.mod-large blockquote:before,
+.overheard.mod-quote.mod-xlarge blockquote:before {
+  top: 26px;
+}
+.overheard.mod-quote.mod-xlarge blockquote {
+  font-size: 28px;
+}
+.overheard.mod-quote.mod-regular blockquote {
+  font-family: "Trade Gothic W01 Roman";
+}
+.overheard.mod-opaque blockquote:before,
+.overheard.mod-opaque blockquote:after {
+  opacity: 1;
 }
 .overheard.mod-gray-on-gray {
   background-image: url('/assets/images/overheard-bg-gray.png');
@@ -242,6 +514,41 @@
 .overheard.mod-gold-on-red {
   background-image: url('/assets/images/overheard-bg-red-diagonal.png');
   color: #faba4b;
+}
+.mod-black-footer .overheard-footer {
+  color: #ffffff;
+  background-color: #000;
+}
+.mod-dark-gray-footer .overheard-footer {
+  color: #ffffff;
+  background-color: #333333;
+}
+.mod-light-gray-footer .overheard-footer {
+  color: #333333;
+  background-color: #ededed;
+}
+.mod-white-footer .overheard-footer {
+  color: #333333;
+  background-color: #ffffff;
+}
+.mod-gold-footer .overheard-footer {
+  color: #333333;
+  background-color: #faba4b;
+}
+.overheard.mod-quote.mod-photo {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.overheard.mod-quote.mod-photo:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .owl-carousel {
   display: none;
