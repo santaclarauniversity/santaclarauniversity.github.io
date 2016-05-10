@@ -59,6 +59,11 @@
 .overheard-title span {
   padding: 0 2px;
 }
+@media only screen and (max-width: 360px) {
+  .overheard-title {
+    margin-left: -30px;
+  }
+}
 .overheard {
   width: 320px;
   display: block;
@@ -84,6 +89,11 @@
   top: 0;
   width: 100%;
   height: 100%;
+}
+@media only screen and (max-width: 360px) {
+  .overheard {
+    margin-left: -30px;
+  }
 }
 .overheard-footer {
   position: absolute;
@@ -427,6 +437,8 @@
   padding-top: 15px;
   font-size: 20px;
   line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .overheard.mod-quote blockquote {
   position: relative;

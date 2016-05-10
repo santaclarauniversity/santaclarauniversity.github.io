@@ -36,6 +36,13 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
 
 
+// Breakpoints
+//---------------------------------------
+
+@xs-screen: ~"only screen and (max-width: 360px)"; // iPhone 5
+
+
+
 
 
 // Global styles
@@ -104,6 +111,11 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
   span {
     padding: 0 2px;
   }
+
+  // Move title left on smallest screens
+  @media @xs-screen {
+    margin-left: -30px;
+  }
 }
 
 
@@ -140,6 +152,11 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     top: 0;
     width: 100%;
     height: 100%;
+  }
+
+  // Move left to fit on smallest screens -- don't resize element
+  @media @xs-screen {
+    margin-left: -30px;
   }
 }
 
@@ -535,6 +552,8 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     padding-top: 15px;
     font-size: 20px;
     line-height: 1.2;
+    -webkit-font-smoothing: antialiased; // smooth text
+    -moz-osx-font-smoothing: grayscale;
   }
 
 }
