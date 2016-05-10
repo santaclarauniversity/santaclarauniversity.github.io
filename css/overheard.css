@@ -12,8 +12,9 @@
   margin-left: 16px;
 }
 .overheard-demo-container > h2 {
-  margin-top: 50px;
+  margin-top: 60px;
   margin-bottom: 70px;
+  text-decoration: underline;
 }
 .overheard-demo-container > p {
   font-size: 15px;
@@ -216,16 +217,6 @@
   background-image: url('/assets/images/social-media/flickr-64.png');
   background-size: 22px;
 }
-.overheard.mod-flickr:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
 .overheard.mod-instagram .overheard-footer {
   padding: 9px 20px 9px 45px;
   text-align: left;
@@ -262,7 +253,7 @@
   -webkit-transform: translateX(-50%) rotateZ(-7deg);
   transform: translateX(-50%) rotateZ(-7deg);
   border: 3px solid #ffffff;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
 }
 .overheard.mod-youtube .overheard-footer {
   padding: 9px 20px 9px 45px;
@@ -530,6 +521,7 @@
 .mod-white-footer .overheard-footer {
   color: #333333;
   background-color: #ffffff;
+  border: 1px solid #eee;
 }
 .mod-gold-footer .overheard-footer {
   color: #333333;

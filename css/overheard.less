@@ -46,8 +46,9 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
   margin-left: 16px;
 
   > h2 {
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 70px;
+    text-decoration: underline;
   }
 
   > p {
@@ -290,18 +291,6 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
       background-size: 22px;
     }
   }
-
-  // Darken background photo
-  &:before {  // :before element sits above background, but under text and footer
-    content:'';
-    display: block;
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
 }
 
 
@@ -330,7 +319,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     -webkit-transform: translateX(-50%) rotateZ(-7deg);
             transform: translateX(-50%) rotateZ(-7deg);
     border: 3px solid @white;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -416,7 +405,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
       -moz-osx-font-smoothing: grayscale;
     }
 
-    // Vertical photos are larger without the citation box (citation box detected via JS)
+    // Vertical photos are larger when there's no citation (citation box detected via JS)
     &.mod-large-photo {
 
       .overheard-image {
@@ -719,6 +708,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
   .overheard-footer {
     color: @dark-gray;
     background-color: @white;
+    border: 1px solid #eee;
   }
 }
 
