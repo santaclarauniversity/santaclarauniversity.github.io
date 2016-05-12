@@ -4733,52 +4733,40 @@ html.flexbox .infographic.module.window .infographic-label {
 html.flexbox .infographic.module.window .infographic-label {
   padding-top: 8px;
 }
-.pull-quote {
-  padding: 0;
-  margin: 0 auto;
-  border-left: 0;
-  text-align: center;
+.pull-quote-container {
+  padding-bottom: 36px;
 }
-.pull-quote > img {
-  width: 75px;
-  height: 75px;
-  float: left;
-}
-.pull-quote > div {
-  height: 75px;
-  padding-left: 20px;
-  text-align: left;
-  overflow: hidden;
-}
-.pull-quote > div > p {
-  font-size: 18px;
-  text-align: left;
-}
-.pull-quote > div > cite {
-  display: block;
-  font-size: 12px;
-  font-style: normal;
-  letter-spacing: .15em;
-  color: #777777;
+.pull-quote-container .pull-quote h6 {
+  color: #555555;
+  font-size: 14px;
+  letter-spacing: 2.4px;
   text-transform: uppercase;
 }
-@media (min-width: 768px) {
-  .pull-quote {
-    max-width: 75%;
+.pull-quote-container .pull-quote cite {
+  color: #777777;
+  display: block;
+  font-size: 22px;
+  font-style: normal;
+}
+.pull-quote-container .pull-quote cite span {
+  font-size: 14px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.pull-quote-container .pull-quote a {
+  font-size: 16px;
+  margin: 10px 0;
+}
+@media (max-width: 1065px) {
+  .pull-quote-img {
+    padding-bottom: 20px;
   }
-  .pull-quote > img {
-    width: 100px;
-    height: 100px;
+  .pull-quote-img img {
+    height: 300px;
   }
-  .pull-quote > div {
-    height: 100px;
-  }
-  .pull-quote > div > p {
-    font-size: 20px;
-  }
-  .pull-quote > div > cite {
-    font-size: 14px;
-  }
+}
+.pull-quote-img-sm img {
+  height: 300px;
 }
 /*  Search Results  */
 h2.search_title span {
