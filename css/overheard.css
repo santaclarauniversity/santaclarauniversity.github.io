@@ -443,7 +443,7 @@
 .overheard.mod-quote blockquote {
   position: relative;
   margin: 0;
-  padding: 28px 43px 15px 46px;
+  padding: 28px 41px 15px 44px;
   border: none;
   font-size: 18px;
   font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -469,7 +469,7 @@
 }
 .overheard.mod-quote blockquote:after {
   content: '\0201D';
-  right: 5px;
+  right: 4px;
   bottom: -34px;
 }
 .overheard.mod-quote .overheard-attribution {
