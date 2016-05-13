@@ -24,7 +24,7 @@
     });
 
 
-    // Check orientation of photo posts once images have loaded
+    // Check orientation and aspect ratio of photo posts once images have loaded
     window.onload = function(){
 
         $('.overheard.mod-photo').each(function(){
@@ -33,15 +33,20 @@
                 $img = $overheard.find('.overheard-image'),
                 $citation = $overheard.find('.overheard-footer');
 
+            // wide photos
+            if ( $img.width()/$img.height() > $overheard.width()/$overheard.height() ) {
+                $overheard.addClass('mod-wide').addClass('is-visible');
+            }
+
             // vertical photos
             if ( $img.width() < $img.height() ) {
-                $overheard.addClass('mod-vertical');
+                $overheard.addClass('mod-vertical').addClass('is-visible');
             }
 
             // photos without citation box
             if ( ! $citation.length || $citation.is(':empty') ) {
 
-                $overheard.addClass('mod-large-photo');
+                $overheard.addClass('mod-large-photo').addClass('is-visible');
             }
         });
     };

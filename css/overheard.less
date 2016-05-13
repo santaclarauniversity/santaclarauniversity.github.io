@@ -293,11 +293,29 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 }
 
 
+.overheard.mod-illuminate-caption {
+
+  .social-footer;
+
+  .overheard-footer {
+    background-color: #000;
+
+    // Illuminate icon
+    &:before {
+      background-image: url('/assets/images/icon-illuminate.png');
+      -webkit-transform: translateY(-62%);
+      transform: translateY(-62%);
+    }
+  }
+}
+
+
 .overheard.mod-flickr {
   .social-footer;
   position: relative;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   .overheard-footer {
     background-color: #0063dc;
@@ -383,13 +401,44 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
   // Default horizontal photo
   overflow: hidden;
 
+
+  // Hide content until styling classes are applied
+  .overheard-image,
+  .overheard-caption,
+  .overheard-footer {
+    opacity:0;
+    -webkit-transition: opacity 0.25s ease;
+    -o-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
+  }
+
+  &.is-visible {
+    .overheard-image,
+    .overheard-caption,
+    .overheard-footer {
+      opacity: 1;
+    }
+  }
+
+
   .overheard-image {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
     width: 100%;
     height: auto;
     pointer-events: none; // clicks pass through to overheard link
+  }
+
+  // Wide photo
+  &.mod-wide {
+
+    .overheard-image {
+      height: 100%;
+      width: auto;
+    }
   }
 
 
@@ -441,12 +490,13 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 //---------------------------------------
 
 .overheard.mod-video {
-
-  // Regular video treatment with photo, citation, and large play icon
-  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   // Large video icon
-  a:after {
+  > a:after {
     z-index: 1; // above photo
     content:"";
     position: absolute;
@@ -458,7 +508,6 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     height: 105px;
     background: url('/assets/images/overheard-video-icon.png') center/105px no-repeat;
   }
-
 
   // Feature treatment with small play icon
   &.mod-feature {
@@ -482,16 +531,16 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
 
 
-// Feature Posts (applies to videos for now)
-//------------------------------------------
+// Feature Posts (applies to videos)
+//-----------------------------------
 .overheard.mod-feature {
-  position: relative; // photo can be applied as bg or img element
+  position: relative;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   // Darken background photo
   &:before {
-    z-index: 1; // above overheard image
     content:'';
     display: block;
     position:absolute;
@@ -508,15 +557,6 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     &:before {
       background-color: rgba(66, 21, 21, 0.6);
     }
-  }
-
-  > a {
-    z-index: 2; // above dark panel
-  }
-
-  .overheard-image {
-    z-index: 0; // behind dark panel
-    position: absolute;
   }
 
   .overheard-feature-header,
@@ -571,7 +611,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
   blockquote {
     position:relative;
     margin: 0;
-    padding: 28px 41px 15px 44px;
+    padding: 28px 41px 15px 50px;
     border: none;
     font-size: 18px;
     font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -597,13 +637,13 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
   blockquote:before {
     content:'\0201C';
-    left: -8px;
+    left: -5px;
     top: 10px;
   }
 
   blockquote:after {
     content:'\0201D';
-    right: 4px;
+    right: 6px;
     bottom: -34px;
   }
 
@@ -746,6 +786,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
   position: relative;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   // Darken background photo
   &:before {  // :before element sits above background, but under text and footer
