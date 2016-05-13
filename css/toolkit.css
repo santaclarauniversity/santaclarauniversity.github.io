@@ -4748,7 +4748,7 @@ html.flexbox .infographic.module.window .infographic-label {
   font-size: 22px;
   font-style: normal;
 }
-.pull-quote-container .pull-quote cite span {
+.pull-quote-container .pull-quote cite p {
   font-size: 14px;
   font-style: normal;
   text-transform: uppercase;
