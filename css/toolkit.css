@@ -4762,7 +4762,7 @@ html.flexbox .infographic.module.window .infographic-label {
     padding-bottom: 20px;
   }
   .pull-quote-img img {
-    height: 300px;
+    max-width: 300px;
   }
 }
 .pull-quote-img-sm img {
