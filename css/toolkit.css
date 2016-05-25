@@ -1,79 +1,19 @@
 @import url("//fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35");
-.thumbnail > img,
-.thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+@media screen and (max-width: 767px) {
 }
-.btn-group-lg > .btn {
-  padding: 10px 16px;
-  font-size: 20px;
-  line-height: 1.3333333;
-  border-radius: 5px;
+@media (min-width: 768px) {
 }
-.btn-group-sm > .btn {
-  padding: 5px 10px;
-  font-size: 14px;
-  line-height: 1.5;
-  border-radius: 1px;
+@media (min-width: 768px) {
 }
-.btn-group-xs > .btn {
-  padding: 1px 5px;
-  font-size: 14px;
-  line-height: 1.5;
-  border-radius: 1px;
+@media (max-width: 767px) {
 }
-.dl-horizontal dd:before,
-.dl-horizontal dd:after,
-.container:before,
-.container:after,
-.container-fluid:before,
-.container-fluid:after,
-.row:before,
-.row:after,
-.form-horizontal .form-group:before,
-.form-horizontal .form-group:after,
-.btn-toolbar:before,
-.btn-toolbar:after,
-.btn-group-vertical > .btn-group:before,
-.btn-group-vertical > .btn-group:after,
-.nav:before,
-.nav:after,
-.navbar:before,
-.navbar:after,
-.navbar-header:before,
-.navbar-header:after,
-.navbar-collapse:before,
-.navbar-collapse:after,
-.pager:before,
-.pager:after,
-.panel-body:before,
-.panel-body:after,
-.modal-header:before,
-.modal-header:after,
-.modal-footer:before,
-.modal-footer:after {
-  content: " ";
-  display: table;
+@media (min-width: 768px) {
 }
-.dl-horizontal dd:after,
-.container:after,
-.container-fluid:after,
-.row:after,
-.form-horizontal .form-group:after,
-.btn-toolbar:after,
-.btn-group-vertical > .btn-group:after,
-.nav:after,
-.navbar:after,
-.navbar-header:after,
-.navbar-collapse:after,
-.pager:after,
-.panel-body:after,
-.modal-header:after,
-.modal-footer:after {
-  clear: both;
+@media (min-width: 768px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 767px) {
 }
 /**
  * Updates to the Bootstrap framework that couldn't be done in the customization web form:
@@ -402,6 +342,9 @@ em b strong,
 i strong strong,
 i b strong {
   font-family: "Trade Gothic W01 Bold_2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.text-inverted {
+  color: #fff;
 }
 .page-title {
   border-bottom: 1px solid #e1e0e0;
@@ -4752,6 +4695,7 @@ html.flexbox .infographic.module.window .infographic-label {
   font-size: 14px;
   font-style: normal;
   text-transform: uppercase;
+  margin-top: 10px;
 }
 .pull-quote-container .pull-quote a {
   font-size: 16px;
@@ -4761,12 +4705,6 @@ html.flexbox .infographic.module.window .infographic-label {
   .pull-quote-img {
     padding-bottom: 20px;
   }
-  .pull-quote-img img {
-    max-width: 300px;
-  }
-}
-.pull-quote-img-sm img {
-  height: 300px;
 }
 /*  Search Results  */
 h2.search_title span {
