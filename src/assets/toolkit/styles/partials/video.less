@@ -17,25 +17,25 @@
  */
 
 .video.module {
-  iframe {
-    border: 1px solid @video-border;
-  }
-  .video-caption {
-    margin: 0 0 1em;
-    font-size: 14px;
-    line-height: 1.2;
-    color: #696666;
-    text-transform: uppercase;
-    a {
-      font-size: 18px;
-      color: @black;
-      text-transform: none;
-      &:hover {
-        color: lighten(@black, 15%);
-      }
+    iframe {
+        border: 1px solid @video-border;
     }
-  }
-  .embed-responsive + .video-caption {
-    margin: 1em 0 0;
-  }
+    .video-caption {
+        margin: 0 0 1em;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #696666;
+        text-transform: uppercase;
+        a {
+            font-size: 18px;
+            color: @black;
+            text-transform: none;
+            &:hover {
+                color: lighten(@black, 15%);
+            }
+        }
+    }
+    .embed-responsive + .video-caption {
+        margin: 1em 0 0;
+    }
 }

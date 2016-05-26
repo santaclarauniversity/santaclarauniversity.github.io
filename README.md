@@ -37,3 +37,10 @@ Or the whole sequence in order:
 ```sh
 $ gulp
 ```
+
+
+### Code Style
+
+To keep the codebase as clean and readable as possible, and in order to run the software (since JSHint/CSSLint will complain if rules are broken), some simple rules need to be followed.  For all HTML/CSS/JS files, use indents of **four spaces**, and do **not** use tabs.
+
+Those are the only universally true rules - all other rules are in `.jscsrc` and `.csslintrc` for further reference, which are specific to JS and CSS respectively.

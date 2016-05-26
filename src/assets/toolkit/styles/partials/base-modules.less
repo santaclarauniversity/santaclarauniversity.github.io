@@ -1,51 +1,59 @@
 /**
  * Classes for building SCU modules:
- * 
+ *
  */
 .module {
-  width: 100%;
-  margin: 1em 0 2em;
-  &:first-child {
-    margin-top: 0;
-  }
-  
-  &.one-column {
-    /* One-column modules have a maximum width, wherever they're used, in desktop layouts. */
-    //@media (min-width: @screen-sm-min) {
-      //max-width: 470px; 
-      // two-column width because a one column (4 in bootstrap) in medium or large might be two (8 in bootstrap) in small.
-      // Maybe get rid of this one.
-    //}
-    @media (min-width: @screen-md-min) {
-      max-width: 320px;
-    }
-    @media (min-width: @screen-lg-min) {
-      max-width: 360px;
-    }
-  }
-  &.two-column {
-    /* Two-column modules have a maximum width, wherever they're used, in desktop layouts. */
-    //@media (min-width: @screen-sm-min) {
-      //max-width: 470px; 
-      // two-column width because a one column (4 in bootstrap) in medium or large might be two (8 in bootstrap) in small.
-      // Maybe get rid of this one.
-    //}
-    @media (min-width: @screen-md-min) {
-      max-width: 670px;
-    }
-    @media (min-width: @screen-lg-min) {
-      max-width: 750px;
-    }
-  }
-  
-  img { /* Images in modules always rescale to be full-width: */
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-  &.image-attach-top { background-position-y: top; }
-  &.image-attach-bottom { background-position-y: bottom; }
-  &.image-attach-right { background-position-x: right; }
-  &.image-attach-left { background-position-x: left; }
+	width: 100%;
+	margin: 1em 0 2em;
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&.one-column {
+		/* One-column modules have a maximum width, wherever they're used, in desktop layouts. */
+		//@media (min-width: @screen-sm-min) {
+		//max-width: 470px;
+		// two-column width because a one column (4 in bootstrap) in medium or large might be two (8 in bootstrap) in small.
+		// Maybe get rid of this one.
+		//}
+		@media (min-width: @screen-md-min) {
+			max-width: 320px;
+		}
+		@media (min-width: @screen-lg-min) {
+			max-width: 360px;
+		}
+	}
+	&.two-column {
+		/* Two-column modules have a maximum width, wherever they're used, in desktop layouts. */
+		//@media (min-width: @screen-sm-min) {
+		//max-width: 470px;
+		// two-column width because a one column (4 in bootstrap) in medium or large might be two (8 in bootstrap) in small.
+		// Maybe get rid of this one.
+		//}
+		@media (min-width: @screen-md-min) {
+			max-width: 670px;
+		}
+		@media (min-width: @screen-lg-min) {
+			max-width: 750px;
+		}
+	}
+
+	img { /* Images in modules always rescale to be full-width: */
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+	&.image-attach-top {
+		background-position-y: top;
+	}
+	&.image-attach-bottom {
+		background-position-y: bottom;
+	}
+	&.image-attach-right {
+		background-position-x: right;
+	}
+	&.image-attach-left {
+		background-position-x: left;
+	}
 }
 

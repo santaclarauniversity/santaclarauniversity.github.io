@@ -6,24 +6,24 @@
  */
 
 .breadcrumb {
-  font-size: 13px;
-  line-height: (16em/13px);
-  & > li + li::before {
-    padding: 0 2px;
-  }
-  a {
-    color: @breadcrumb-gray;
-    &:hover {
-      color: darken(@link-red, 10%);
-    }
-  }
-  & > .active {
-    color: @link-red;
-  }
-  
-  .page-title + & {
-    margin-top: -40px;
-    margin-bottom: 0;
-  }
+	font-size: 13px;
+	line-height: (16em/13px);
+	& > li + li::before {
+		padding: 0 2px;
+	}
+	a {
+		color: @breadcrumb-gray;
+		&:hover {
+			color: darken(@link-red, 10%);
+		}
+	}
+	& > .active {
+		color: @link-red;
+	}
+
+	.page-title + & {
+		margin-top: -40px;
+		margin-bottom: 0;
+	}
 }
 

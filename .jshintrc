@@ -12,11 +12,13 @@
   "node": true,
   "noempty": true,
   "nonew": true,
-  "strict": false,
+  "strict": true,
   "trailing": true,
   "undef": true,
   "unused": true,
+  "validthis": true,
   "globals": {
 	  "$": false
-  }
+  },
+  "predef": ["define", "jRespond", "mediaCheck"]
 }

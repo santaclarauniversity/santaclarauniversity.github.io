@@ -10,138 +10,139 @@
  */
 
 .events.module {
-  
-  .events-date-page {
-    margin-top: 2px;
-    width: 42px;
-    border: 1px solid #dfdfdf;
-    .lh-border-radius(1px);
-    text-align: center;
-    background: @white;
-  }
-  .events-month {
-    background-color: #ab0028;
-    color: @white;
-    font-size: 11px;
-    line-height: (16em/11);
-    text-transform: uppercase;
-  }
-  .events-day {
-    font-size: 19px;
-    line-height: (23em/19);
-    font-family: @serif-bold-font;
-  }
-  .media-body {
-    padding-left: 3px;
-    & > *:last-child {
-      margin-bottom: 0;
-    }
-  }
-  .media-heading {
-    margin: 0;
-    font-size: 20px;
-    line-height: 1.2;
-    text-transform: none;
-  }
-  ul {
-	padding-left: 0;
-    list-style: none;
-  }
-  li+li {
-	  margin-top:15px;
-  }
-  p {
-    color: #242424;
-  }
-  a.thumbnail {
-    display: inline-block;
-    margin: 0.5em 3px 0.25em 0; // 3px is for the dropshadow
-    @media (min-width: @screen-md-min) {
-      margin-right: 50px;
-    }
-    display: block\9; // IE8 hack
-  }
-  .events-time-and-location {
-    margin: 0;
-    color: @medium-gray;
-  }
-  .featured-event {
-	  position:relative;
-	  margin-bottom:25px;
-	  overflow:visible;
-	  a.thumbnail.featured-image {
-		  bottom:0;
-		  left:0;
-		  right:0;
-		  z-index: -1;
-		  margin-right:0;
-		  img {
-			  width:100%;
-			  height:auto;
-		  }
-	  }
-	  .events-date-page {
-		  z-index: 15;
-		  zoom: 1.4;
-		  position:absolute;
-		  top:-5%;
-		  bottom:auto;
-		  left: -10px;
-	  }
-	  .media-body {
-		  z-index: 10;
-		  position:absolute;
-		  bottom:12px;
-		  width:auto;
-		  left:3px;
-		  right:3px;
-		  min-height:0;
-		  .rgba-background(169,17,43,.8);
-	  }
-	  h4 {
-	  	  width: auto;
-		  padding: 10px 20px;
-		  background-color: @brand-red;
-		  a {
-			  color: @white;
-			  .sans-serif-font;
-			  font-size:1.2em;
-		  }
-	  }
-	  p {
-		  z-index: 10;
-		   padding: 10px 20px;
-		   margin-bottom:0;
-		   color: @white;
-		   display:none;
-		   &.events-time-and-location {display:block;}
-	  }
-  }
-    @media (min-width: @screen-sm-min) {
-	    .featured-event {
-		    .media-body {
-			    padding-bottom: 20px;
-		    }
-		    .events-date-page {
-			    top:-3%;
-		    }
-		    p {
-			    display: block;
-		    }
-	    }
+
+	.events-date-page {
+		margin-top: 2px;
+		width: 42px;
+		border: 1px solid #dfdfdf;
+		.lh-border-radius(1px);
+		text-align: center;
+		background: @white;
 	}
-    @media (min-width: @screen-md-min) {
-	    .featured-event {
-		    .events-date-page {
-			    top:5%;
-			    bottom: auto;
-		    }
-		    h4 {
-		    }
-	    }
+	.events-month {
+		background-color: #ab0028;
+		color: @white;
+		font-size: 11px;
+		line-height: (16em/11);
+		text-transform: uppercase;
+	}
+	.events-day {
+		font-size: 19px;
+		line-height: (23em/19);
+		font-family: @serif-bold-font;
+	}
+	.media-body {
+		padding-left: 3px;
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.media-heading {
+		margin: 0;
+		font-size: 20px;
+		line-height: 1.2;
+		text-transform: none;
+	}
+	ul {
+		padding-left: 0;
+		list-style: none;
+	}
+	li + li {
+		margin-top: 15px;
+	}
+	p {
+		color: #242424;
+	}
+	a.thumbnail {
+		display: inline-block;
+		margin: 0.5em 3px 0.25em 0; // 3px is for the dropshadow
+		@media (min-width: @screen-md-min) {
+			margin-right: 50px;
+		}
+		display: block \9; // IE8 hack
+	}
+	.events-time-and-location {
+		margin: 0;
+		color: @medium-gray;
+	}
+	.featured-event {
+		position: relative;
+		margin-bottom: 25px;
+		overflow: visible;
+		a.thumbnail.featured-image {
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: -1;
+			margin-right: 0;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		.events-date-page {
+			z-index: 15;
+			zoom: 1.4;
+			position: absolute;
+			top: -5%;
+			bottom: auto;
+			left: -10px;
+		}
+		.media-body {
+			z-index: 10;
+			position: absolute;
+			bottom: 12px;
+			width: auto;
+			left: 3px;
+			right: 3px;
+			min-height: 0;
+			.rgba-background(169, 17, 43, .8);
+		}
+		h4 {
+			width: auto;
+			padding: 10px 20px;
+			background-color: @brand-red;
+			a {
+				color: @white;
+				.sans-serif-font;
+				font-size: 1.2em;
+			}
+		}
+		p {
+			z-index: 10;
+			padding: 10px 20px;
+			margin-bottom: 0;
+			color: @white;
+			display: none;
+			&.events-time-and-location {
+				display: block;
+			}
+		}
+	}
+	@media (min-width: @screen-sm-min) {
+		.featured-event {
+			.media-body {
+				padding-bottom: 20px;
+			}
+			.events-date-page {
+				top: -3%;
+			}
+			p {
+				display: block;
+			}
+		}
+	}
+	@media (min-width: @screen-md-min) {
+		.featured-event {
+			.events-date-page {
+				top: 5%;
+				bottom: auto;
+			}
+			h4 {
+			}
+		}
 	}
 }
-
 
 //	                  <li class="media featured-event">
 //	                    <div class="media-left">
