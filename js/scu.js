@@ -75,11 +75,10 @@ $(function() {
 /**
  * Header functionality
  */
-/*! jRespond.js v 0.10 | Author: Jeremy Fields [jeremy.fields@viget.com], 2013 |
-    License: MIT */
+/*! jRespond.js v 0.10 | Author: Jeremy Fields [jeremy.fields@viget.com], 2013 | License: MIT */
 
 // Universal Module Definition
-(function(window, name, fn) {
+;(function(window, name, fn) {
     // Node module pattern
     if (typeof module === 'object' && module && typeof module.exports === 'object') {
         module.exports = fn;
@@ -95,14 +94,13 @@ $(function() {
         }
     }
 }(this, 'jRespond', function(win, doc, undefined) {
+
     return function(breakpoints) {
+
         // array for registered functions
         var mediaListeners = [];
 
-        /*
-          array that corresponds to mediaListeners and holds the current on/off
-          state
-          */
+        // array that corresponds to mediaListeners and holds the current on/off state
         var mediaInit = [];
 
         // array of media query breakpoints; adjust as needed
@@ -128,25 +126,27 @@ $(function() {
 
             // IE
             if (typeof (window.innerWidth) !== 'number') {
+
                 if (document.documentElement.clientWidth !== 0) {
+
                     // strict mode
                     w = document.documentElement.clientWidth;
                 } else {
+
                     // quirks mode
                     w = document.body.clientWidth;
                 }
             } else {
+
                 // w3c
                 w = window.innerWidth;
             }
 
             return w;
-
         };
 
         // determine input type
         var addFunction = function(elm) {
-
             if (elm.length === undefined) {
                 addToStack(elm);
             } else {
@@ -154,12 +154,10 @@ $(function() {
                     addToStack(elm[i]);
                 }
             }
-
         };
 
         // send media to the mediaListeners array
         var addToStack = function(elm) {
-
             var brkpt = elm.breakpoint;
             var entr = elm.enter || undefined;
 
@@ -175,13 +173,9 @@ $(function() {
                 }
                 mediaInit[(mediaListeners.length - 1)] = true;
             }
-
         };
 
-        /*
-          loops through all registered functions and determines what should
-          be fired
-          */
+        // loops through all registered functions and determines what should be fired
         var cycleThrough = function() {
 
             var enterArray = [];
@@ -226,7 +220,6 @@ $(function() {
             for (var k = 0; k < enterArray.length; k++) {
                 enterArray[k].call(null, eventObject);
             }
-
         };
 
         // checks for the correct breakpoint against the mediaBreakpoints list
@@ -238,8 +231,7 @@ $(function() {
             for (var i = 0; i < mediaBreakpoints.length; i++) {
 
                 // if registered breakpoint found, break out of loop
-                if (width >= mediaBreakpoints[i].enter &&
-                    width <= mediaBreakpoints[i].exit) {
+                if (width >= mediaBreakpoints[i].enter && width <= mediaBreakpoints[i].exit) {
                     foundBrkpt = true;
 
                     break;
@@ -264,10 +256,7 @@ $(function() {
 
         };
 
-        /*
-          takes the breakpoint/s argument from an object and tests it against
-          the current state
-         */
+        // takes the breakpoint/s arguement from an object and tests it against the current state
         var testForCurr = function(elm) {
 
             // if there's an array of breakpoints
@@ -276,30 +265,25 @@ $(function() {
                     return true;
                 }
 
-            // if the string is '*' then run at every breakpoint
+                // if the string is '*' then run at every breakpoint
             } else if (elm === '*') {
                 return true;
 
-            // or if it's a single breakpoint
+                // or if it's a single breakpoint
             } else if (typeof elm === 'string') {
                 if (curr === elm) {
                     return true;
                 }
             }
-
         };
 
-        /*
-          self-calling function that checks the browser width and delegates if it detects a change
-          */
+        // self-calling function that checks the browser width and delegates if it detects a change
         var checkResize = function() {
 
             // get current width
             var w = winWidth();
 
-            /*
-              if there is a change speed up the timer and fire the returnBreakpoint function
-              */
+            // if there is a change speed up the timer and fire the returnBreakpoint function
             if (w !== resizeW) {
                 resizeTmrSpd = resizeTmrFast;
 
@@ -314,20 +298,17 @@ $(function() {
 
             // calls itself on a setTimeout
             setTimeout(checkResize, resizeTmrSpd);
-
         };
         checkResize();
 
         // return
         return {
-
             addFunc: function(elm) {
                 addFunction(elm);
             },
             getBreakpoint: function() {
                 return curr;
             },
-
         };
 
     };
@@ -366,34 +347,28 @@ $(document).ready(function() {
 
     // Offcanvas menus for mobile
     var initMobileMenus = function() {
-        var $body = $('body');
-        $body.wrapInner('<div id="js-mobile-content-wrapper"></div>');
-        $('[data-toggle="offcanvas"]').on('click.mobile', function() {
-            var $$ = $(this),
-                $menu = $($$.data('target')),
-                bodyClass = $menu.hasClass('offcanvas-left') ?
-                    'active-left' :
-                    $menu.hasClass('offcanvas-right') ? 'active-right' : false;
-            if (!bodyClass) {
-                return;
-            }
-            $body.toggleClass(bodyClass);
-        });
-    },
-    uninitMobileMenus = function() {
-        $('[data-toggle="offcanvas"]').off('.mobile').off('.mobileclose');
-        $('body').removeClass('active-left').removeClass('active-right');
-        $('#js-mobile-content-wrapper>:first-child').unwrap();
-    };
+            var $body = $('body');
+            $body.wrapInner('<div id="js-mobile-content-wrapper"></div>');
+            $('[data-toggle="offcanvas"]').on('click.mobile', function() {
+                var $$ = $(this),
+                    $menu = $($$.data('target')),
+                    bodyClass = $menu.hasClass('offcanvas-left') ? 'active-left' :
+                        $menu.hasClass('offcanvas-right') ? 'active-right' : false;
+                if (!bodyClass) {
+                    return;
+                }
+                $body.toggleClass(bodyClass);
+            });
+        },
+        uninitMobileMenus = function() {
+            $('[data-toggle="offcanvas"]').off('.mobile').off('.mobileclose');
+            $('body').removeClass('active-left').removeClass('active-right');
+            $('#js-mobile-content-wrapper>:first-child').unwrap();
+        };
 
-    /*
-      Add slidedown/slideup animations to header dropdowns using Bootstrap's
-      events:
-      */
-    $header.find('.dropdown').on('show.bs.dropdown', function() {
-        $(this).find('.dropdown-menu').first().stop(true, true).slideDown(250);
-    }).on('hide.bs.dropdown', function() {
-        $(this).find('.dropdown-menu').first().stop(true, true).slideUp(250);
+    // Add slidedown/slideup animations to header dropdowns using Bootstrap's events:
+    $('#scu-main-navigation+nav .scu-nav').hover(function() {
+        $body.toggleClass('nav-dropdown-open');
     });
 
     // Slide menus for tablet/desktop drawers in gateway navigation
@@ -403,14 +378,11 @@ $(document).ready(function() {
                 $panel = $$.find('div.slide-panel'),
                 panelH = $panel.outerHeight(),
                 $animated = $mainNav.hasClass('affix') ? $gatewayNav.add($mainNav) : $gatewayNav;
-            if ($$.hasClass('open')) {
-                // We're closing it here
+            if ($$.hasClass('open')) { // We're closing it here
                 $panel.find('.row').fadeOut(function() {
                     $panel.hide().find('.row').show();
                 });
-                /*
-                  $('body').stop().animate({"paddingTop": 0},function(){$$.removeClass('open');});
-                  */
+                // $('body').stop().animate({"paddingTop": 0},function(){$$.removeClass('open');});
                 $animated.stop().animate({top: '-=' + panelH}, {
                     complete: function() {
                         $$.removeClass('open');
@@ -421,9 +393,9 @@ $(document).ready(function() {
                     },
                     step: function(now) {
                         /*
-                          If ($this is $mainNav) and (now - $(window).scrollTop() <=
-                          $mainNav's default position ) then
-                         */
+                            If ($this is $mainNav) and (now - $(window).scrollTop() <=
+                            $mainNav's default position ) then
+                          */
                         var $this = $(this);
                         if ($this.hasClass('affix') && $this.hasClass('main-navigation') &&
                             (now + $(window).scrollTop() <= mainNavOffset.top)) {
@@ -441,22 +413,17 @@ $(document).ready(function() {
                     complete: function() {
                         initMainNavAffix();
                         if (!$mainNav.hasClass('affix')) {
-                            $mainNav.css('top',
-                                $gatewayNav.outerHeight() + $gatewayNav.offset().top -
-                                $(document).scrollTop() - 1 + 'px');
+                            $mainNav.css('top', $gatewayNav.outerHeight() +
+                                $gatewayNav.offset().top - $(document).scrollTop() - 1 + 'px');
                         }
-                        /*
-                          $mainNav.css('top',$gatewayNav.outerHeight()+$gatewayNav.offset().top-
-                          $(document).scrollTop()-1+'px');
-                         */
                     },
                     step: function(now) {
                         var $this = $(this);
                         /*
-                          If $animated does not contain $mainNav, and $this = $gatewayNav, and
-                          $gatewayNav's bottome edge is past the main nav's top offset, convert main
-                          nav to affix and animate its top:
-                         */
+                            If $animated does not contain $mainNav, and $this = $gatewayNav, and
+                            $gatewayNav's bottome edge is past the main nav's top offset, convert
+                            main nav to affix and animate its top:
+                          */
                         if (!$animated.filter('.main-navigation').length &&
                             $this.hasClass('gateway-navigation') &&
                             (now + $gatewayNav.outerHeight() - 1 >= mainNavOffset.top -
@@ -466,9 +433,9 @@ $(document).ready(function() {
                         } else if ($this.hasClass('affix') && $this.hasClass('main-navigation') &&
                             (now + $(window).scrollTop() <= mainNavOffset.top)) {
                             /*
-                              but if $this is $mainNav, and it gets to mainNavOffset.top (its
-                              original position), drop it off where it started.
-                             */
+                                but if $this is $mainNav, and it gets to mainNavOffset.top (its
+                                original position), drop it off where it started.
+                              */
                             $this.removeClass('affix').addClass('affix-top');
                         }
                     },
@@ -479,28 +446,25 @@ $(document).ready(function() {
             }
         },
         initToggleSlideMenus = function() {
-            $headerSlideMenus.on('click.tabletUp', 'a[role="button"]',
-                toggleSlideMenus);
+            $headerSlideMenus.on('click.tabletUp', 'a[role="button"]', toggleSlideMenus);
         },
         uninitToggleSlideMenus = function() {
             $headerSlideMenus.off('.tabletUp');
         };
 
     var initMainNavAffix = function() {
-
         var gOffset, newTop;
 
         // Pages that do not have a site header will break unless we check here
-        if (!$header) {
+        if (!$header.length) {
+            newTop = 0;
+        // Otherwise, operate normally
+        } else {
             gOffset = $gatewayNav.offset().top - $(document).scrollTop();
             // reaffixMain = false,
             newTop = (mainNavOffset.top > $gatewayNav.outerHeight() + gOffset - 1) ?
-                mainNavOffset.top - $gatewayNav.outerHeight() - gOffset - 1 :
-                $gatewayNav.outerHeight() + gOffset - 1;
-        } else {
-            // TODO Is there a better default value set for this case?
-            gOffset = 0;
-            newTop = 0;
+            mainNavOffset.top - $gatewayNav.outerHeight() - gOffset - 1 :
+            $gatewayNav.outerHeight() + gOffset - 1;
         }
 
         // Main nav affix:
@@ -513,24 +477,20 @@ $(document).ready(function() {
                 },
             });
         }
-
     };
 
     var adjustHeaderPositions = function() {
-
         initMainNavAffix();
         if ($headerSlideMenus.filter('.open').length) {
             $headerSlideMenus.filter('.open').each(function() {
                 var $$ = $(this),
                     panelHeight = $$.find('div.slide-panel').outerHeight();
-                $$.parents('.gateway-navigation')
-                    .css('top', panelHeight + 'px');
+                $$.parents('.gateway-navigation').css('top', panelHeight + 'px');
                 if ($mainNav.hasClass('affix')) {
                     $mainNav.css('top', panelHeight - 1 + $gatewayNav.outerHeight() + 'px');
                 }
             });
         }
-
     };
 
     // Hook up init functions with breakpoints:
@@ -556,8 +516,8 @@ $(document).ready(function() {
     });
 
     function initHomepageCanWeSwipe() {
-        var boxWrap = $('.can-we-boxes'),
-            $boxes = boxWrap.find('.can-we-box'),
+        var $boxWrap = $('.can-we-boxes'),
+            $boxes = $boxWrap.find('.can-we-box'),
             margin = 30,
             boxWidth, position;
 
@@ -568,16 +528,14 @@ $(document).ready(function() {
             position = 1;
             $boxes.width($window.width() * 0.5);
             boxWidth = $boxes.outerWidth();
-            boxWrap.css('left', $body.width() - boxWidth - margin - 25);
+            $boxWrap.css('left', $body.width() - boxWidth - margin - 25);
         }
 
         function swipeLeft() {
             if (position >= $boxes.length) {
                 return;
             }
-            boxWrap.animate({
-                left: boxWrap.position().left - boxWidth - margin,
-            }, 300);
+            $boxWrap.animate({left: $boxWrap.position().left - boxWidth - margin}, 300);
             position++;
         }
 
@@ -585,9 +543,7 @@ $(document).ready(function() {
             if (position === 1) {
                 return;
             }
-            boxWrap.animate({
-                left: boxWrap.position().left + boxWidth + margin,
-            }, 300);
+            $boxWrap.animate({left: $boxWrap.position().left + boxWidth + margin}, 300);
             position--;
         }
 
@@ -595,14 +551,16 @@ $(document).ready(function() {
             breakpoint: 'mobile',
             enter: function() {
                 init();
-                $boxes.on('swipeleft', swipeLeft).on('swiperight', swipeRight);
+                $boxes
+                    .on('swipeleft', swipeLeft)
+                    .on('swiperight', swipeRight);
                 $window.on('resize', init);
             },
             exit: function() {
                 $window.off('resize', init);
                 $boxes.off('swipeleft').off('swiperight');
                 $boxes.css('width', 'auto');
-                boxWrap.css('left', 'auto');
+                $boxWrap.css('left', 'auto');
             },
         });
     }
