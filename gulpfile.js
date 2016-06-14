@@ -55,17 +55,21 @@ var config = {
                 jquerySwipe: rootConfig.bower + 'jquery.event.swipe/js/jquery.event.swipe.js',
                 mediaCheck: rootConfig.bower + 'mediaCheck/js/mediaCheck-min.js',
                 html5shiv: rootConfig.bower + 'html5shiv/dist/html5shiv.min.js',
-            }
+            },
         },
         styles: {
             fabricator: rootConfig.fabricator + 'styles/fabricator.scss',
             bootstrap: rootConfig.less + 'bootstrap.less',
             scu: rootConfig.less + 'scu.less',
             ieCompatibility: rootConfig.less + 'ie.less',
-            landingPages: rootConfig.less + 'bootstrap/landing-pages/impl/startup.less',
+            landingPages: {
+				startup: rootConfig.less + 'bootstrap/landing-pages/impl/startup.less',
+				minimal: rootConfig.less + 'bootstrap/landing-pages/impl/minimal.less',
+				bold: rootConfig.less + 'bootstrap/landing-pages/impl/bold.less',
+			},
             bower: {
                 jqueryUi: rootConfig.bower + 'smoothness/jquery-ui.min.css',
-            }
+            },
         },
         views: [
             'src/views/**/*', '!src/views/+(layouts)/**'
@@ -111,10 +115,10 @@ gulp.task('styles:fabricator', function() {
 /**
  * Attempts to pipe data from a LESS source path into its corresponding destination path.
  *
- * @param src        The source folder of the LESS code (string).
- * @param des        The destination folder of the compiled, minified CSS file (string).
- * @param linter    Whether to run CSSLint on the inputted source code.
- * @return            Gulp pipe of output which is sent to its destination.
+ * @param src		The source folder of the LESS code (string).
+ * @param des		The destination folder of the compiled, minified CSS file (string).
+ * @param linter	Whether to run CSSLint on the inputted source code.
+ * @return			Gulp pipe of output which is sent to its destination.
  */
 function pipeLess(src, des, linter) {
     // Compile LESS
@@ -148,7 +152,9 @@ gulp.task('styles:ieCompatibility', function() {
 });
 
 gulp.task('styles:landingPages', function() {
-    return pipeLess(config.src.styles.landingPages, config.out.styles.scu, false);
+	for (var include in config.src.styles.landingPages) {
+		pipeLess(config.src.styles.landingPages[include], config.out.styles.scu, false);
+	}
 });
 
 gulp.task('styles:scu', function() {
@@ -157,7 +163,7 @@ gulp.task('styles:scu', function() {
 
 gulp.task('styles:bower', function() {
     for (var include in config.src.styles.bower) {
-        return gulp.src(config.src.styles.bower[include])
+        gulp.src(config.src.styles.bower[include])
             .pipe(clone())
             .pipe(gulp.dest(config.out.styles.scu));
     }

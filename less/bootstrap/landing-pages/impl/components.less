@@ -1,0 +1,42 @@
+// Custom theme components
+@import "../mixins/buttons-outline.less";
+@import "../icons.less";
+@import "../utilities-spacer.less";
+@import "../text-inherit.less";
+@import "../nav-bordered.less";
+@import "../buttons-outline.less";
+@import "../buttons-radius.less";
+@import "../forms-custom.less";
+@import "../container-custom.less";
+@import "../block.less";
+@import "../navbar-transparent.less";
+@import "../carousel-light.less";
+@import "../callouts.less";
+@import "../featured-list.less";
+@import "../zoom.less";
+@import "../text-ribbon.less";
+@import "../iconlist.less";
+@import "../panels-bold.less";
+@import "../statcard.less";
+@import "../pull-quote.less";
+@import "../stage.less";
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+
+	&.text-uppercase {
+		letter-spacing: .15em;
+	}
+
+	small,
+	.small {
+		font-weight: inherit;
+	}
+}
+
+h6, .h6 {
+	margin-bottom: (@spacer-y * .25);
+	color: lighten(@gray, 40%);
+	text-transform: uppercase;
+}
