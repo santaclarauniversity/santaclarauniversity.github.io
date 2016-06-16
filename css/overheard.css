@@ -116,7 +116,9 @@
   color: inherit;
 }
 .overheard-footer img {
+  display: inline-block;
   max-width: 100%;
+  width: auto;
 }
 .overheard-footer:empty {
   display: none;
