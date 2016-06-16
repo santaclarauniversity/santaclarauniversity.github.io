@@ -37,12 +37,6 @@
             if ( $img.width()/$img.height() > $overheard.width()/$overheard.height() ) {
                 $overheard.addClass('mod-wide').addClass('is-visible');
             }
-            
-            // horizontal photos with narrower aspect ratio than overheard box
-            if (  $img.width()/$img.height() < $overheard.width()/$overheard.height() 
-            			&& $img.width() >= $img.height() ) {
-                $overheard.addClass('is-visible');
-            }
 
             // vertical photos
             if ( $img.width() < $img.height() ) {
