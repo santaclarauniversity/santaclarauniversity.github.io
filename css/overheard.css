@@ -26,7 +26,7 @@
   margin-bottom: 70px;
 }
 .overheard-title {
-  width: 320px;
+  width: 100%;
   position: relative;
   margin-bottom: 0;
   padding: 3px 0 2px 62px;
@@ -65,7 +65,7 @@
   }
 }
 .overheard {
-  width: 320px;
+  width: 100%;
   display: block;
   position: relative;
   /* contains footer and photos */
@@ -124,6 +124,7 @@
 .overheard.mod-illuminate .overheard-footer {
   padding: 0;
   pointer-events: none;
+  background-color: #221E20;
 }
 .overheard.mod-facebook .overheard-footer {
   padding: 9px 20px 9px 45px;
@@ -382,6 +383,7 @@
   top: -4px;
   max-width: 50%;
   max-height: 85%;
+  width: auto;
   height: auto;
   -webkit-transform: rotateZ(-7deg);
   transform: rotateZ(-7deg);
@@ -390,7 +392,6 @@
 }
 .overheard.mod-photo.mod-vertical .overheard-caption {
   float: right;
-  max-width: 35%;
   margin-top: 45px;
   margin-right: 25px;
   font-size: 15px;
@@ -747,7 +748,7 @@
   }
 }
 .overheard-carousel {
-  width: 324px;
+  width: 100%;
   margin: -2px;
 }
 .overheard-carousel .owl-item {

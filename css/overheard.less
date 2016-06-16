@@ -73,7 +73,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
 // "OVERHEARD @ SCU" title
 .overheard-title {
-  width: 320px;
+  width: 100%;
   position: relative;
   margin-bottom: 0;
   padding: 3px 0 2px 62px;
@@ -121,7 +121,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
 // Overheard box can be a div or anchor element
 .overheard {
-  width: 320px;
+  width: 100%;
   display: block;
   position: relative; /* contains footer and photos */
   height: 250px;
@@ -211,6 +211,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
   .overheard-footer {
     padding: 0;
     pointer-events: none; // clicks pass through to overheard link
+    background-color: #221E20;
   }
 }
 
@@ -453,6 +454,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
       top: -4px;
       max-width: 50%;
       max-height: 85%;
+      width: auto;
       height: auto;
       -webkit-transform: rotateZ(-7deg);
               transform: rotateZ(-7deg);
@@ -462,8 +464,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 
     // Attribution
     .overheard-caption {
-      float: right;
-      max-width: 35%;
+      float: right; // set left margin with JS
       margin-top: 45px;
       margin-right: 25px;
       font-size: 15px;
@@ -817,7 +818,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 // Additional custom carousel styles
 
 .overheard-carousel {
-  width: 324px;
+  width: 100%;
   margin: -2px; // removes space from shadow
 
   .owl-item {

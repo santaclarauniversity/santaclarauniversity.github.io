@@ -36,17 +36,23 @@
             // wide photos
             if ( $img.width()/$img.height() > $overheard.width()/$overheard.height() ) {
                 $overheard.addClass('mod-wide').addClass('is-visible');
+            }            
+            
+            // horizontal photos with narrower aspect ratio than overheard box
+            if (  $img.width()/$img.height() < $overheard.width()/$overheard.height() && $img.width() >= $img.height() ) {
+                $overheard.addClass('is-visible');
             }
 
             // vertical photos
             if ( $img.width() < $img.height() ) {
+              
+                // vertical photos without citation box are larger
+                if ( ! $citation.length || $citation.is(':empty') ) {
+                    $overheard.addClass('mod-large-photo');
+                }
+              
                 $overheard.addClass('mod-vertical').addClass('is-visible');
-            }
-
-            // photos without citation box
-            if ( ! $citation.length || $citation.is(':empty') ) {
-
-                $overheard.addClass('mod-large-photo').addClass('is-visible');
+                $overheard.find('.overheard-caption').css('margin-left', $img.width()+30);
             }
         });
     };
