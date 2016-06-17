@@ -1,3 +1,7 @@
+```v1.0.3```
+- Added the [Windowpane](/content-types.html#windowpane) content type and [demo](/demos/roadshow-comp.html).
+- Added landing page templates: [Bold](/landing-pages/bold.html), [Minimal](/landing-pages/minimal.html), and [Startup](/landing-pages/startup.html).
+
 ```v1.0.2```
 - Reorganized our structure to be more helpful for developers that are looking to leverage our toolkit ([#42](https://github.com/santaclarauniversity/scu-web-assets/issues/42))
 - Fixed Header issues ([#46](https://github.com/santaclarauniversity/scu-web-assets/issues/46))
