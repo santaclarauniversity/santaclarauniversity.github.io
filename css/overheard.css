@@ -61,16 +61,23 @@
 }
 @media only screen and (max-width: 360px) {
   .overheard-title {
-    margin-left: -30px;
+    margin-left: -15px;
+    padding-left: 41px;
+  }
+  .overheard-title:before {
+    width: 58px;
+    height: 58px;
+  }
+  .overheard-title span {
+    padding: 0 1px;
   }
 }
 .overheard {
-  width: 100%;
   display: block;
   position: relative;
-  /* contains footer and photos */
-  height: 250px;
-  border: 3px solid #ffffff;
+  /* contains blockquote, footer and photos */
+  width: 100%;
+  border: 3px solid #fff;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4);
   background: url('/assets/images/overheard-bg-red-diagonal-vignette.png') center / cover no-repeat;
   color: #ffffff;
@@ -82,7 +89,27 @@
   -webkit-filter: brightness(1.15);
   filter: brightness(1.15);
 }
-.overheard > a {
+.overheard:before {
+  content: '';
+  display: block;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  padding-top: 76.6%;
+}
+@media only screen and (max-width: 360px) {
+  .overheard {
+    margin-left: -10px;
+  }
+}
+.overheard-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.overheard-link {
   display: block;
   position: absolute;
   left: 0;
@@ -90,13 +117,9 @@
   width: 100%;
   height: 100%;
 }
-@media only screen and (max-width: 360px) {
-  .overheard {
-    margin-left: -30px;
-  }
-}
 .overheard-footer {
   position: absolute;
+  top: auto;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -409,11 +432,11 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.overheard.mod-video > a:after {
+.overheard.mod-video .overheard-link:after {
   z-index: 1;
   content: "";
   position: absolute;
-  top: 108px;
+  top: 44.5%;
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
@@ -438,7 +461,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.overheard.mod-feature:before {
+.overheard.mod-feature .overheard-inner:before {
   content: '';
   display: block;
   position: absolute;
@@ -590,7 +613,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.overheard.mod-quote.mod-photo:before {
+.overheard.mod-quote.mod-photo .overheard-inner:before {
   content: '';
   display: block;
   position: absolute;
