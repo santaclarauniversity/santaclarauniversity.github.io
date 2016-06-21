@@ -501,6 +501,24 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
       font-size: 15px;
       -webkit-font-smoothing: antialiased; // smooth text because font is small
       -moz-osx-font-smoothing: grayscale;
+      
+      // Adjustments for larger and smaller Overheard box
+  		.grid-item.grid-03 & {
+    		
+    		@media (min-width: 870px) and (max-width:1064px),
+    		(min-width:580px) and (max-width:767px) {
+          font-size: 22px;
+        }
+        
+    		@media (min-width: 768px) and (max-width:869px),
+    		(min-width:510px) and (max-width:579px) {
+          font-size: 19px;
+        }
+        
+    		@media (min-width: 1065px) and (max-width:1199px) {
+          font-size: 16px;
+        }
+      }
     }
 
     // Vertical photos are larger when there's no citation (citation box detected via JS)
@@ -627,7 +645,59 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     -webkit-font-smoothing: antialiased; // smooth text
     -moz-osx-font-smoothing: grayscale;
   }
-
+  
+  // Adjustments for larger and smaller Overheard box
+	.grid-item.grid-03 & {
+		
+		@media (min-width: 870px) and (max-width:1064px),
+    		(min-width:580px) and (max-width:767px) {
+  		
+		  .overheard-feature-header {
+  		  font-size: 19px;
+  		}
+			
+		  .overheard-feature-title {
+  		  font-size: 44px;
+  		}
+  		
+		  .overheard-feature-summary {
+  		  font-size: 25px;
+  		}
+    }
+    
+        
+		@media (min-width: 768px) and (max-width:869px),
+		(min-width:510px) and (max-width:579px) {
+  		
+		  .overheard-feature-header {
+  		  font-size: 17px;
+  		}
+			
+		  .overheard-feature-title {
+  		  font-size: 40px;
+  		}
+  		
+		  .overheard-feature-summary {
+  		  font-size: 21px;
+  		}
+    }
+    
+    
+		@media (min-width: 1065px) and (max-width:1199px) {
+    	.overheard-feature-header {
+  		  font-size: 12px;
+  		}
+			
+		  .overheard-feature-title {
+  		  font-size: 30px;
+  		}
+  		
+		  .overheard-feature-summary {
+  		  padding-top: 11px;
+  		  font-size: 17px;
+  		}
+    }
+  }
 }
 
 
@@ -648,6 +718,28 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     font-size: 18px;
     font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     pointer-events: none; // clicks pass through to overheard link
+    
+    
+    // Adjustments for larger and smaller Overheard box
+		.grid-item.grid-03 & {
+  		
+  		@media (min-width: 870px) and (max-width:1064px),
+    		(min-width:580px) and (max-width:767px) {
+        padding: 38px 51px 25px 60px;
+        font-size: 27px;
+      }
+        
+  		@media (min-width: 768px) and (max-width:869px),
+  		(min-width:510px) and (max-width:579px) {
+        padding: 32px 46px 20px 55px;
+        font-size: 24px;
+      }
+      
+			@media (min-width: 1065px) and (max-width:1199px) {
+		    padding: 25px 38px 12px 47px;
+        font-size: 16px;
+  		}
+		}
   }
 
   // Curly quotes
@@ -665,6 +757,24 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     // Default curly quote color and opacity
     color: inherit;
     opacity:0.5;
+    
+    // Adjustments for larger and smaller Overheard box
+		.grid-item.grid-03 & {
+  		
+  		@media (min-width: 870px) and (max-width:1064px),
+    		(min-width:580px) and (max-width:767px) {
+        font-size: 109px;
+      }
+      
+  		@media (min-width: 768px) and (max-width:869px),
+  		(min-width:510px) and (max-width:579px) {
+				font-size: 99px;
+      }
+      
+			@media (min-width: 1065px) and (max-width:1199px) {
+		   	font-size: 85px;
+  		}
+		}
   }
 
   blockquote:before {
@@ -685,6 +795,24 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     text-align: right;
     padding-right: 42px;
     font-size: 13px;
+    
+    // Adjustments for larger and smaller Overheard box
+		.grid-item.grid-03 & {
+  		
+  		@media (min-width: 870px) and (max-width:1064px),
+    		(min-width:580px) and (max-width:767px) {
+        font-size: 18px;
+      }
+      
+  		@media (min-width: 768px) and (max-width:869px),
+  		(min-width:510px) and (max-width:579px) {
+				font-size: 16px;
+      }
+      
+			@media (min-width: 1065px) and (max-width:1199px) {
+		   	font-size: 12px;
+  		}
+    }
   }
 
 
@@ -705,6 +833,24 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
       &:before {
         top: 26px;
       }
+      
+      // Adjustments for larger and smaller Overheard box
+  		.grid-item.grid-03 & {
+    		
+    		@media (min-width: 870px) and (max-width:1064px),
+    		(min-width:580px) and (max-width:767px) {
+          font-size: 36px;
+        }
+        
+    		@media (min-width: 768px) and (max-width:869px),
+    		(min-width:510px) and (max-width:579px) {
+  				font-size: 32px;
+        }
+        
+  			@media (min-width: 1065px) and (max-width:1199px) {
+  		   	font-size: 22px;
+    		}
+  		}
     }
   }
 
@@ -712,7 +858,25 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
   &.mod-xlarge {
     blockquote {
       font-size: 28px;
-    }
+      
+      // Adjustments for larger and smaller Overheard box
+  		.grid-item.grid-03 & {
+    		
+    		@media (min-width: 870px) and (max-width:1064px),
+    		(min-width:580px) and (max-width:767px) {
+          font-size: 40px;
+        }
+        
+    		@media (min-width: 768px) and (max-width:869px),
+    		(min-width:510px) and (max-width:579px) {
+  				font-size: 36px;
+        }
+        
+  			@media (min-width: 1065px) and (max-width:1199px) {
+  		   	font-size: 26px;
+    		}
+      }
+    }		
   }
 
   // Trade Gothic Regular font option

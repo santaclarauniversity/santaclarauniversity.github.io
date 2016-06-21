@@ -423,6 +423,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@media (min-width: 870px) and (max-width: 1064px), (min-width: 580px) and (max-width: 767px) {
+  .grid-item.grid-03 .overheard.mod-photo.mod-vertical .overheard-caption {
+    font-size: 22px;
+  }
+}
+@media (min-width: 768px) and (max-width: 869px), (min-width: 510px) and (max-width: 579px) {
+  .grid-item.grid-03 .overheard.mod-photo.mod-vertical .overheard-caption {
+    font-size: 19px;
+  }
+}
+@media (min-width: 1065px) and (max-width: 1199px) {
+  .grid-item.grid-03 .overheard.mod-photo.mod-vertical .overheard-caption {
+    font-size: 16px;
+  }
+}
 .overheard.mod-photo.mod-vertical.mod-large-photo .overheard-image {
   max-height: 103%;
 }
@@ -508,6 +523,40 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@media (min-width: 870px) and (max-width: 1064px), (min-width: 580px) and (max-width: 767px) {
+  .grid-item.grid-03 .overheard.mod-feature .overheard-feature-header {
+    font-size: 19px;
+  }
+  .grid-item.grid-03 .overheard.mod-feature .overheard-feature-title {
+    font-size: 44px;
+  }
+  .grid-item.grid-03 .overheard.mod-feature .overheard-feature-summary {
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) and (max-width: 869px), (min-width: 510px) and (max-width: 579px) {
+  .grid-item.grid-03 .overheard.mod-feature .overheard-feature-header {
+    font-size: 17px;
+  }
+  .grid-item.grid-03 .overheard.mod-feature .overheard-feature-title {
+    font-size: 40px;
+  }
+  .grid-item.grid-03 .overheard.mod-feature .overheard-feature-summary {
+    font-size: 21px;
+  }
+}
+@media (min-width: 1065px) and (max-width: 1199px) {
+  .grid-item.grid-03 .overheard.mod-feature .overheard-feature-header {
+    font-size: 12px;
+  }
+  .grid-item.grid-03 .overheard.mod-feature .overheard-feature-title {
+    font-size: 30px;
+  }
+  .grid-item.grid-03 .overheard.mod-feature .overheard-feature-summary {
+    padding-top: 11px;
+    font-size: 17px;
+  }
+}
 .overheard.mod-quote blockquote {
   position: relative;
   margin: 0;
@@ -516,6 +565,24 @@
   font-size: 18px;
   font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   pointer-events: none;
+}
+@media (min-width: 870px) and (max-width: 1064px), (min-width: 580px) and (max-width: 767px) {
+  .grid-item.grid-03 .overheard.mod-quote blockquote {
+    padding: 38px 51px 25px 60px;
+    font-size: 27px;
+  }
+}
+@media (min-width: 768px) and (max-width: 869px), (min-width: 510px) and (max-width: 579px) {
+  .grid-item.grid-03 .overheard.mod-quote blockquote {
+    padding: 32px 46px 20px 55px;
+    font-size: 24px;
+  }
+}
+@media (min-width: 1065px) and (max-width: 1199px) {
+  .grid-item.grid-03 .overheard.mod-quote blockquote {
+    padding: 25px 38px 12px 47px;
+    font-size: 16px;
+  }
 }
 .overheard.mod-quote blockquote:before,
 .overheard.mod-quote blockquote:after {
@@ -529,6 +596,24 @@
   -moz-osx-font-smoothing: grayscale;
   color: inherit;
   opacity: 0.5;
+}
+@media (min-width: 870px) and (max-width: 1064px), (min-width: 580px) and (max-width: 767px) {
+  .grid-item.grid-03 .overheard.mod-quote blockquote:before,
+  .grid-item.grid-03 .overheard.mod-quote blockquote:after {
+    font-size: 109px;
+  }
+}
+@media (min-width: 768px) and (max-width: 869px), (min-width: 510px) and (max-width: 579px) {
+  .grid-item.grid-03 .overheard.mod-quote blockquote:before,
+  .grid-item.grid-03 .overheard.mod-quote blockquote:after {
+    font-size: 99px;
+  }
+}
+@media (min-width: 1065px) and (max-width: 1199px) {
+  .grid-item.grid-03 .overheard.mod-quote blockquote:before,
+  .grid-item.grid-03 .overheard.mod-quote blockquote:after {
+    font-size: 85px;
+  }
 }
 .overheard.mod-quote blockquote:before {
   content: '\0201C';
@@ -546,6 +631,21 @@
   padding-right: 42px;
   font-size: 13px;
 }
+@media (min-width: 870px) and (max-width: 1064px), (min-width: 580px) and (max-width: 767px) {
+  .grid-item.grid-03 .overheard.mod-quote .overheard-attribution {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) and (max-width: 869px), (min-width: 510px) and (max-width: 579px) {
+  .grid-item.grid-03 .overheard.mod-quote .overheard-attribution {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1065px) and (max-width: 1199px) {
+  .grid-item.grid-03 .overheard.mod-quote .overheard-attribution {
+    font-size: 12px;
+  }
+}
 .overheard.mod-quote.mod-large blockquote,
 .overheard.mod-quote.mod-xlarge blockquote {
   padding-top: 40px;
@@ -560,8 +660,41 @@
 .overheard.mod-quote.mod-xlarge blockquote:before {
   top: 26px;
 }
+@media (min-width: 870px) and (max-width: 1064px), (min-width: 580px) and (max-width: 767px) {
+  .grid-item.grid-03 .overheard.mod-quote.mod-large blockquote,
+  .grid-item.grid-03 .overheard.mod-quote.mod-xlarge blockquote {
+    font-size: 36px;
+  }
+}
+@media (min-width: 768px) and (max-width: 869px), (min-width: 510px) and (max-width: 579px) {
+  .grid-item.grid-03 .overheard.mod-quote.mod-large blockquote,
+  .grid-item.grid-03 .overheard.mod-quote.mod-xlarge blockquote {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1065px) and (max-width: 1199px) {
+  .grid-item.grid-03 .overheard.mod-quote.mod-large blockquote,
+  .grid-item.grid-03 .overheard.mod-quote.mod-xlarge blockquote {
+    font-size: 22px;
+  }
+}
 .overheard.mod-quote.mod-xlarge blockquote {
   font-size: 28px;
+}
+@media (min-width: 870px) and (max-width: 1064px), (min-width: 580px) and (max-width: 767px) {
+  .grid-item.grid-03 .overheard.mod-quote.mod-xlarge blockquote {
+    font-size: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 869px), (min-width: 510px) and (max-width: 579px) {
+  .grid-item.grid-03 .overheard.mod-quote.mod-xlarge blockquote {
+    font-size: 36px;
+  }
+}
+@media (min-width: 1065px) and (max-width: 1199px) {
+  .grid-item.grid-03 .overheard.mod-quote.mod-xlarge blockquote {
+    font-size: 26px;
+  }
 }
 .overheard.mod-quote.mod-regular blockquote {
   font-family: "Trade Gothic W01 Roman";
