@@ -55,6 +55,7 @@ var config = {
                 jquerySwipe: rootConfig.bower + 'jquery.event.swipe/js/jquery.event.swipe.js',
                 mediaCheck: rootConfig.bower + 'mediaCheck/js/mediaCheck-min.js',
                 html5shiv: rootConfig.bower + 'html5shiv/dist/html5shiv.min.js',
+	            holder: rootConfig.bower + 'holderjs/holder.min.js',
             },
         },
         styles: {
