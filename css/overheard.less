@@ -22,6 +22,7 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 // Colors
 //---------------------------------------
 @white: #fff;
+@black: #000;
 
 @red: #a12121;
 @dark-red: #72021B;
@@ -52,19 +53,19 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 .overheard-demo-container {
   margin-left: 16px;
 
-  > h2 {
+  > div > h2 {
     margin-top: 60px;
     margin-bottom: 70px;
     text-decoration: underline;
   }
 
-  > p {
+  > div > p {
     font-size: 15px;
     margin: 25px 0 10px;
     color: #777;
   }
 
-  > code {
+  > div > code {
     display: inline-block;
     margin-bottom: 70px;
   }
@@ -74,7 +75,8 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 // "OVERHEARD @ SCU" title
 .overheard-title {
   width: 100%;
-  position: relative;
+  position: relative; // contains icon
+  margin-top: 16px; // space for icon
   margin-bottom: 0;
   padding: 3px 0 2px 62px;
   color: @gray;
@@ -90,11 +92,9 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
     display: block;
     position: absolute;
     left: -16px;
-    top: 50%;
+    top: -16px;
     width:74px;
     height: 74px;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
     background: url('/assets/images/overheard-icon.png') center no-repeat;
     background-size: contain;
   }
@@ -528,6 +528,12 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
         max-height: 103%;
       }
     }
+
+    // Remove background on horizontal photos only
+    &:not(.mod-vertical) {
+      // Prevents issue where line of background shows below footer on hover
+      background: none;  
+    }
   }
 }
 
@@ -885,57 +891,125 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
       font-family:"Trade Gothic W01 Roman";
     }
   }
-}
-
-
-
-
-
-
-// Color Options
-//---------------------------------------
-
-.overheard.mod-opaque {
-  blockquote:before,
-  blockquote:after {
-    opacity:1;
+  
+  // Trade Gothic Bold font option
+  &.mod-bold {
+    blockquote {
+      font-family:"Trade Gothic W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased; // smooth bold fonts
+      -moz-osx-font-smoothing: grayscale;
+    }
   }
 }
 
 
-.overheard.mod-gray-on-gray {
 
+
+
+// Default Background Color for Dark Text Options
+//-------------------------------------------------
+
+// Place this above background color options so it can be overriden
+.overheard.mod-dark-gray-text,
+.overheard.mod-black-text,
+.overheard.mod-red-text,
+.overheard.mod-dark-red-text {
+  background: @light-gray;
+}
+
+
+
+
+// Background Color Options
+//---------------------------------------
+
+.overheard.mod-light-gray-bg {
+  color: @dark-gray;
   background-image: url('/assets/images/overheard-bg-gray.png');
+}
+
+.overheard.mod-dark-gray-bg {
+  background: @dark-gray;
+}
+
+.overheard.mod-black-bg {
+  background: @black;
+}
+
+.overheard.mod-red-bg {
+  background: @red;
+}
+
+.overheard.mod-white-bg {
+  color: @dark-gray;
+  background: @white;
+}
+
+.overheard.mod-gold-bg {
+  background-image: url('/assets/images/overheard-bg-gold.png');
+}
+
+
+
+
+
+// Text Color Options
+//---------------------------------------
+
+.overheard.mod-light-gray-text {
+  color: @light-gray;
+}
+
+.overheard.mod-dark-gray-text {
   color: @dark-gray;
 }
 
+.overheard.mod-black-text {
+  color: @black;
+}
 
-.overheard.mod-red-on-gray {
+.overheard.mod-red-text {
+  color: @red;
+}
 
-  background-image: url('/assets/images/overheard-bg-gray.png');
+.overheard.mod-dark-red-text {
   color: @dark-red;
 }
 
-
-.overheard.mod-white-on-gold {
-
-  background-image: url('/assets/images/overheard-bg-gold.png');
+.overheard.mod-white-text {
   color: @white;
 }
 
-
-.overheard.mod-gold-on-red {
-
-  background-image: url('/assets/images/overheard-bg-red-diagonal.png');
+.overheard.mod-gold-text {
   color: @gold;
 }
 
 
+
+
+
+// Footer Color Options
+//---------------------------------------
+
+// Default footer background for dark text
+// Place this above footer background options so it can be overriden
+
+.mod-dark-red-footer-text,
+.mod-red-footer-text,
+.mod-dark-gray-footer-text {
+
+  .overheard-footer {
+    background-color: @white;
+  }
+}
+
+
+// Footer background color options
 .mod-black-footer {
 
   .overheard-footer {
     color: @white;
-    background-color: #000;
+    background-color: @black;
   }
 }
 
@@ -977,6 +1051,54 @@ src:url("/css/assets/fonts/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix") for
 }
 
 
+.mod-dark-red-footer-text {
+  
+  .overheard-footer {
+    color: @dark-red;
+  }
+}
+
+
+.mod-red-footer-text {
+  
+  .overheard-footer {
+    color: @red;
+  }
+}
+
+
+.mod-dark-gray-footer-text {
+  
+  .overheard-footer {
+    color: @dark-gray;
+  }
+}
+
+.mod-light-gray-footer-text {
+  
+  .overheard-footer {
+    color: @light-gray;
+  }
+}
+
+
+
+
+
+
+// Additional Quote Options
+//---------------------------------------
+
+// Opaque quotation marks
+.overheard.mod-opaque {
+  blockquote:before,
+  blockquote:after {
+    opacity:1;
+  }
+}
+
+
+// Quote on top of darkened photo
 .overheard.mod-quote.mod-photo {
 
   position: relative;
