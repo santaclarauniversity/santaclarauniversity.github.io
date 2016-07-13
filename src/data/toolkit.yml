@@ -1,4 +1,4 @@
-version: "1.0.3"
+version: "1.0.4"
 colors:
   primary:
     brandRed:   "#b30738"
@@ -9,6 +9,7 @@ colors:
     stone:      "#4e4540"
     navy:       "#021d52"
     beige:      "#dfdbd3"
+    cream:      "#e9e8d5"
   grayscale:
     really-light-gray: "#e1e0e0"
     light-gray:        "#cecece"
