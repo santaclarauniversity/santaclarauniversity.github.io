@@ -3,6 +3,7 @@
 - Added new content types: [Blocks](/content-types.html#blocks), [Ribbons](/content-types.html#ribbons), [Statcards](/content-types.html#statcards).
 - Landing page prototype: [MBA](/landing-pages/mba.html)
 - Added new [Button](/content-types.html#button) styles (outline).
+- Updated the Mission logos to be the correct ones (with doors) (thanks, Linda!)
 
 ```v1.0.3```
 - Added the [Windowpane](/content-types.html#windowpane) content type and [demo](/demos/roadshow-comp.html).
