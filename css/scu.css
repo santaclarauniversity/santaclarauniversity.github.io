@@ -260,6 +260,27 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
   src: url("/assets/fonts/5907bd95-539f-4f25-b115-69c42aee6b21.eot?#iefix");
   src: url("/assets/fonts/5907bd95-539f-4f25-b115-69c42aee6b21.eot?#iefix") format("eot"), url("/assets/fonts/e41c3ce6-57bc-473c-aaf0-9e0e771bf6c8.woff2") format("woff2"), url("/assets/fonts/3bde4253-d238-40b7-b813-eea7bdd9e80d.woff") format("woff"), url("/assets/fonts/6005c161-37f3-4678-869a-1b4306ecc563.ttf") format("truetype"), url("Fonts/1301d16e-d0ec-407b-9796-677535450691.svg#1301d16e-d0ec-407b-9796-677535450691") format("svg");
 }
+.text-serif {
+  font-family: "Bauer Bodoni W01 Italic", Georgia, "Times New Roman", Times, serif;
+}
+.text-serif-bold {
+  font-family: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
+}
+.text-sans-light {
+  font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.text-sans-bold {
+  font-family: "Trade Gothic W01 Bold_2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.text-sans-italic {
+  font-family: "TradeGothicNextW01-Ital", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.text-sans-bold-italic {
+  font-family: "TradeGothicW01-Bold2Obl", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.text-trajan {
+  font-family: "Trajan W01 Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .sans-serif-light-font {
   font-family: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -1389,6 +1410,7 @@ header.site-header {
 }
 .gateway-navigation .nav > li.scu-nav .mission {
   position: absolute;
+  z-index: 2;
   float: left;
   display: inline-block;
   width: 42px;
@@ -4713,38 +4735,114 @@ html.flexbox .infographic.module.window .infographic-label {
   min-height: 330px;
   background-size: cover;
 }
-.windowpane .home {
-  height: 200px;
-  margin-top: 10px;
-}
-.windowpane .home .windowpane-background {
-  background-position: initial;
-}
 .windowpane .windowpane-desc {
   position: absolute;
   bottom: 1.5em;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 .windowpane .windowpane-desc.introduction {
-  bottom: 33.33333333333%;
-  background-color: transparent;
-  padding-left: .5em;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 .windowpane .windowpane-desc.full-panel {
-  top: 1em;
-  background-color: transparent;
   width: 100%;
+  top: 0;
 }
 .windowpane .windowpane-desc.full-panel li.list-group-item {
   background-color: transparent;
 }
-.windowpane .windowpane-desc h1 {
-  margin-bottom: 0px;
+.windowpane .windowpane-desc.full-panel li.list-group-item a {
+  color: #FFF;
 }
-.windowpane .windowpane-desc .btn {
+.windowpane .windowpane-desc .btn-default-outline {
+  color: #fff;
   background-color: transparent;
-  color: white;
-  border-color: white;
+  border-color: #fff;
+}
+.windowpane .windowpane-desc .btn-default-outline:focus,
+.windowpane .windowpane-desc .btn-default-outline.focus,
+.windowpane .windowpane-desc .btn-default-outline:hover,
+.windowpane .windowpane-desc .btn-default-outline:active,
+.windowpane .windowpane-desc .btn-default-outline.active,
+.open > .dropdown-toggle.windowpane .windowpane-desc .btn-default-outline {
+  color: #fff;
+  background-color: #fff;
+  box-shadow: none;
+}
+.windowpane .windowpane-desc .btn-default-outline.disabled,
+.windowpane .windowpane-desc .btn-default-outline[disabled],
+fieldset[disabled] .windowpane .windowpane-desc .btn-default-outline,
+.windowpane .windowpane-desc .btn-default-outline.disabled:hover,
+.windowpane .windowpane-desc .btn-default-outline[disabled]:hover,
+fieldset[disabled] .windowpane .windowpane-desc .btn-default-outline:hover,
+.windowpane .windowpane-desc .btn-default-outline.disabled:focus,
+.windowpane .windowpane-desc .btn-default-outline[disabled]:focus,
+fieldset[disabled] .windowpane .windowpane-desc .btn-default-outline:focus,
+.windowpane .windowpane-desc .btn-default-outline.disabled.focus,
+.windowpane .windowpane-desc .btn-default-outline[disabled].focus,
+fieldset[disabled] .windowpane .windowpane-desc .btn-default-outline.focus,
+.windowpane .windowpane-desc .btn-default-outline.disabled:active,
+.windowpane .windowpane-desc .btn-default-outline[disabled]:active,
+fieldset[disabled] .windowpane .windowpane-desc .btn-default-outline:active,
+.windowpane .windowpane-desc .btn-default-outline.disabled.active,
+.windowpane .windowpane-desc .btn-default-outline[disabled].active,
+fieldset[disabled] .windowpane .windowpane-desc .btn-default-outline.active {
+  border-color: #fff;
+}
+.windowpane .windowpane-desc .btn-default-outline .badge {
+  color: #fff;
+  background-color: #fff;
+}
+.windowpane .windowpane-desc .btn-default-outline:focus,
+.windowpane .windowpane-desc .btn-outline:focus,
+.windowpane .windowpane-desc .btn-default-outline.focus,
+.windowpane .windowpane-desc .btn-outline.focus,
+.windowpane .windowpane-desc .btn-default-outline:hover,
+.windowpane .windowpane-desc .btn-outline:hover,
+.windowpane .windowpane-desc .btn-default-outline:active,
+.windowpane .windowpane-desc .btn-outline:active,
+.windowpane .windowpane-desc .btn-default-outline.active,
+.windowpane .windowpane-desc .btn-outline.active,
+.open > .dropdown-toggle.windowpane .windowpane-desc .btn-default-outline,
+.open > .dropdown-toggle.windowpane .windowpane-desc .btn-outline {
+  color: #000;
+}
+.windowpane .windowpane-desc .btn-default-outline:focus:hover,
+.windowpane .windowpane-desc .btn-outline:focus:hover,
+.windowpane .windowpane-desc .btn-default-outline.focus:hover,
+.windowpane .windowpane-desc .btn-outline.focus:hover,
+.windowpane .windowpane-desc .btn-default-outline:hover:hover,
+.windowpane .windowpane-desc .btn-outline:hover:hover,
+.windowpane .windowpane-desc .btn-default-outline:active:hover,
+.windowpane .windowpane-desc .btn-outline:active:hover,
+.windowpane .windowpane-desc .btn-default-outline.active:hover,
+.windowpane .windowpane-desc .btn-outline.active:hover,
+.open > .dropdown-toggle.windowpane .windowpane-desc .btn-default-outline:hover,
+.open > .dropdown-toggle.windowpane .windowpane-desc .btn-outline:hover,
+.windowpane .windowpane-desc .btn-default-outline:focus:focus,
+.windowpane .windowpane-desc .btn-outline:focus:focus,
+.windowpane .windowpane-desc .btn-default-outline.focus:focus,
+.windowpane .windowpane-desc .btn-outline.focus:focus,
+.windowpane .windowpane-desc .btn-default-outline:hover:focus,
+.windowpane .windowpane-desc .btn-outline:hover:focus,
+.windowpane .windowpane-desc .btn-default-outline:active:focus,
+.windowpane .windowpane-desc .btn-outline:active:focus,
+.windowpane .windowpane-desc .btn-default-outline.active:focus,
+.windowpane .windowpane-desc .btn-outline.active:focus,
+.open > .dropdown-toggle.windowpane .windowpane-desc .btn-default-outline:focus,
+.open > .dropdown-toggle.windowpane .windowpane-desc .btn-outline:focus,
+.windowpane .windowpane-desc .btn-default-outline:focus.focus,
+.windowpane .windowpane-desc .btn-outline:focus.focus,
+.windowpane .windowpane-desc .btn-default-outline.focus.focus,
+.windowpane .windowpane-desc .btn-outline.focus.focus,
+.windowpane .windowpane-desc .btn-default-outline:hover.focus,
+.windowpane .windowpane-desc .btn-outline:hover.focus,
+.windowpane .windowpane-desc .btn-default-outline:active.focus,
+.windowpane .windowpane-desc .btn-outline:active.focus,
+.windowpane .windowpane-desc .btn-default-outline.active.focus,
+.windowpane .windowpane-desc .btn-outline.active.focus,
+.open > .dropdown-toggle.windowpane .windowpane-desc .btn-default-outline.focus,
+.open > .dropdown-toggle.windowpane .windowpane-desc .btn-outline.focus {
+  color: #000;
 }
 .windowpane .windowpane-background {
   position: absolute;
@@ -4756,19 +4854,6 @@ html.flexbox .infographic.module.window .infographic-label {
   background-size: cover;
   background-position: center;
 }
-.windowpane h3,
-.windowpane h2,
-.windowpane small,
-.windowpane a {
-  font-weight: 400;
-  line-height: 1.2;
-  position: relative;
-  z-index: 10;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  /* text-shadow: 1px 1px 2px rgba(0,0,0,0.5); */
-}
 .row-no-padding {
   margin-left: 0;
   margin-right: 0;
@@ -4777,9 +4862,6 @@ html.flexbox .infographic.module.window .infographic-label {
 .row-no-padding [class*="col-"] {
   padding-left: 0 !important;
   padding-right: 0 !important;
-}
-.windowpane-desc p {
-  color: white;
 }
 .windowpane-background-right {
   background-position: right center;
@@ -5032,6 +5114,9 @@ html.flexbox .infographic.module.window .infographic-label {
 .text-ribbon-cream {
   background-color: #333333;
   color: #e9e8d5;
+}
+.text-ribbon-fade {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .block {
   position: relative;
