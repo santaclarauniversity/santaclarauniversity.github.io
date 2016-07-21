@@ -5,6 +5,7 @@
 - Added new [Button](/content-types.html#button) styles (outline).
 - Updated the [Roadshow Prototype](/demos/roadshow-comp.html) to showcase some of the new padding, margin, and typography utility classes along with the new Ribbon content type.
 - Updated the Mission logos to be the correct ones (with doors) (thanks, Linda!)
+- Fixed a long-standing display issue with [Person Spotlight](/content-types.html#person-spotlight) in the Content Type view.
 
 ```v1.0.3```
 - Added the [Windowpane](/content-types.html#windowpane) content type and [demo](/demos/roadshow-comp.html).
