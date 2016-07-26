@@ -3,6 +3,7 @@
 - Removed "Profile" as a content type.
 - Content type demos now use `holder.js`.
 - [Sidebar](/content-types.html#sidebar) markup fixed, CSS adjustments made.
+- [Hero](/content-types.html#hero) content type added from White Whale's original design.
 
 ```v1.0.4```
 - Added spacer utility classes (more information on [homepage](/))
