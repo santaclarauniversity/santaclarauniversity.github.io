@@ -1,3 +1,9 @@
+```v.1.0.5```
+- New CSS for [Cards](/content-types.html#cards) based on Bootstrap 4.0-alpha2. The original CSS was based on `alpha0`, and some significant changes had been made in the meantime.
+- Removed "Profile" as a content type.
+- Content type demos now use `holder.js`.
+- [Sidebar](/content-types.html#sidebar) markup fixed, CSS adjustments made.
+
 ```v1.0.4```
 - Added spacer utility classes (more information on [homepage](/))
 - Added new content types: [Blocks](/content-types.html#blocks), [Ribbons](/content-types.html#ribbons), [Statcards](/content-types.html#statcards).
@@ -6,6 +12,7 @@
 - Updated the [Roadshow Prototype](/demos/roadshow-comp.html) to showcase some of the new padding, margin, and typography utility classes along with the new Ribbon content type.
 - Updated the Mission logos to be the correct ones (with doors) (thanks, Linda!)
 - Fixed a long-standing display issue with [Person Spotlight](/content-types.html#person-spotlight) in the Content Type view.
+- New [Instagram](/content-types.html#social-icons) logo ([#52](https://github.com/santaclarauniversity/scu-web-assets/issues/46))
 
 ```v1.0.3```
 - Added the [Windowpane](/content-types.html#windowpane) content type and [demo](/demos/roadshow-comp.html).
