@@ -1,4 +1,4 @@
-```v.1.0.5```
+```v1.0.5```
 - New CSS for [Cards](/content-types.html#cards) based on Bootstrap 4.0-alpha2. The original CSS was based on `alpha0`, and some significant changes had been made in the meantime.
 - Removed "Profile" as a content type.
 - Content type demos now use `holder.js`.
