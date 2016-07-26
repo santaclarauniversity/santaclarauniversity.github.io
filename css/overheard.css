@@ -273,7 +273,9 @@
   background-repeat: no-repeat;
 }
 .overheard.mod-flickr .overheard-footer {
-  background-color: #0063dc;
+  background-color: #ff0084;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
 }
 .overheard.mod-flickr .overheard-footer:before {
   background-image: url('/assets/images/social-media/flickr-64.png');
