@@ -13,7 +13,7 @@
 - Updated the [Roadshow Prototype](/demos/roadshow-comp.html) to showcase some of the new padding, margin, and typography utility classes along with the new Ribbon content type.
 - Updated the Mission logos to be the correct ones (with doors) (thanks, Linda!)
 - Fixed a long-standing display issue with [Person Spotlight](/content-types.html#person-spotlight) in the Content Type view.
-- New [Instagram](/content-types.html#social-icons) logo ([#52](https://github.com/santaclarauniversity/scu-web-assets/issues/46))
+- New [Instagram](/content-types.html#social-icons) logo ([#52](https://github.com/santaclarauniversity/scu-web-assets/issues/52))
 
 ```v1.0.3```
 - Added the [Windowpane](/content-types.html#windowpane) content type and [demo](/demos/roadshow-comp.html).
