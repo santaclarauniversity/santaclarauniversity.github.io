@@ -1513,12 +1513,12 @@
   display: inline-block;
   padding: 10px 0;
   font-weight: 300;
-  color: #000;
+  color: #fff;
   border-bottom: 4px solid transparent;
 }
 .nav-bordered > li > a:hover,
 .nav-bordered > li > a:focus {
-  color: #2595FF;
+  color: #b30738;
   background-color: transparent;
 }
 .nav-bordered > li + li {
@@ -1528,8 +1528,8 @@
 .nav-bordered > li.active > a:hover,
 .nav-bordered > li.active > a:focus {
   font-weight: 700;
-  color: #2595FF;
-  border-bottom-color: #2595FF;
+  color: #b30738;
+  border-bottom-color: #b30738;
 }
 .nav-bordered.nav-justified > li + li {
   margin-left: 0;
@@ -1547,7 +1547,7 @@
 .nav-bordered.nav-stacked > li.active > a,
 .nav-bordered.nav-stacked > li.active > a:hover,
 .nav-bordered.nav-stacked > li.active > a:focus {
-  border-left-color: #2595FF;
+  border-left-color: #b30738;
 }
 .nav-bordered.nav-stacked > li > a {
   display: block;
@@ -1608,9 +1608,9 @@ fieldset[disabled] .btn-default-outline.active {
   background-color: #333;
 }
 .btn-primary-outline {
-  color: #0b89ff;
+  color: #9a0630;
   background-color: transparent;
-  border-color: #0b89ff;
+  border-color: #9a0630;
 }
 .btn-primary-outline:focus,
 .btn-primary-outline.focus,
@@ -1619,7 +1619,7 @@ fieldset[disabled] .btn-default-outline.active {
 .btn-primary-outline.active,
 .open > .dropdown-toggle.btn-primary-outline {
   color: #fff;
-  background-color: #0b89ff;
+  background-color: #9a0630;
   box-shadow: none;
 }
 .btn-primary-outline.disabled,
@@ -1640,11 +1640,11 @@ fieldset[disabled] .btn-primary-outline:active,
 .btn-primary-outline.disabled.active,
 .btn-primary-outline[disabled].active,
 fieldset[disabled] .btn-primary-outline.active {
-  border-color: #0b89ff;
+  border-color: #9a0630;
 }
 .btn-primary-outline .badge {
   color: #fff;
-  background-color: #0b89ff;
+  background-color: #9a0630;
 }
 .btn-success-outline {
   color: #4cae4c;
@@ -1889,14 +1889,14 @@ fieldset[disabled] .btn-danger-outline.active {
 }
 /* Checked state */
 .custom-control input:checked ~ .custom-control-indicator {
-  background-color: #2595FF;
-  border-color: #2595FF;
+  background-color: #b30738;
+  border-color: #b30738;
   box-shadow: none;
 }
 /* Active */
 .custom-control input:active ~ .custom-control-indicator {
-  background-color: #72baff;
-  border-color: #72baff;
+  background-color: #f61152;
+  border-color: #f61152;
   box-shadow: none;
 }
 .custom-control input:disabled ~ .custom-control-indicator {
@@ -2184,7 +2184,7 @@ fieldset[disabled] .block-inverse .btn-outline.btn-default.active {
   margin-bottom: 20px;
   font-weight: 400;
   letter-spacing: 4px;
-  color: #2595FF;
+  color: #b30738;
   text-transform: uppercase;
 }
 .h1.block-title,
@@ -2371,14 +2371,14 @@ fieldset[disabled] .navbar-transparent .btn-link:focus {
 }
 .carousel-light .carousel-indicators .active {
   background-color: #fff;
-  border: 1px solid #2595FF;
+  border: 1px solid #b30738;
 }
 .callout {
   position: relative;
   display: table;
   width: 100%;
   margin-bottom: 21px;
-  color: #6C6F73;
+  color: #000;
   background-color: #fff;
   border-radius: 3px;
   border: 1px solid #eeeeee;
@@ -2558,7 +2558,7 @@ img.zoom-img {
   margin-left: 2%;
 }
 .text-ribbon-primary {
-  background-color: #2595FF;
+  background-color: #b30738;
 }
 .text-ribbon-success {
   background-color: #5cb85c;
@@ -2585,7 +2585,7 @@ img.zoom-img {
   opacity: .5;
 }
 .iconlist > .active {
-  color: #2595FF;
+  color: #b30738;
 }
 .iconlist > .active .icon {
   opacity: 1;
@@ -2604,7 +2604,7 @@ img.zoom-img {
   background-color: #ddd;
 }
 .panel-bold.panel-primary {
-  background-color: #2595FF;
+  background-color: #b30738;
 }
 .panel-bold.panel-success {
   background-color: #5cb85c;
@@ -2715,7 +2715,7 @@ img.zoom-img {
   border-top-color: rgba(255, 255, 255, 0.2);
 }
 .statcard-primary {
-  background-color: #2595FF;
+  background-color: #b30738;
 }
 .statcard-success {
   background-color: #5cb85c;
@@ -2749,7 +2749,7 @@ img.zoom-img {
   font-size: 12px;
   font-style: normal;
   letter-spacing: .15em;
-  color: #BEC8CE;
+  color: #777777;
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
