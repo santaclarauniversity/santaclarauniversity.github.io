@@ -26,14 +26,14 @@
             border-left: 8px solid @white;
             padding: 0;
             &:hover {
-                background-color: #f0efef;
+                border-left: 8px solid @really-light-gray;
             }
             a {
                 display: block;
-                color: @dark-gray;
+                color: @side-navigation-link;
                 text-decoration: none;
                 &:hover {
-                    text-decoration: underline;
+					color: black;
                 }
             }
             ////& > span > a {
@@ -49,6 +49,12 @@
                 font-size: .9em;
                 list-style: disc;
             }
+			& > span {
+				& > a {
+					padding: 13px;
+					border-bottom: 1px solid #e1e0e0;
+				}
+			}
             & > ul {
                 padding-bottom: 13px;
                 padding-right: 15px;
@@ -68,7 +74,7 @@
             ////span.currentbranch0,
             &.active { /* Active states for first level nav */
                 z-index: 0;
-                border-left-color: @side-navigation-active;
+                border-left-color: @link-hover-color;
             }
             &.active {
                 margin-top: -1px;
@@ -88,6 +94,9 @@
         & > ul {
             display: block;
         }
-
-    }
+		.side-navigation > ul > li > span > a {
+			padding: 13px;
+			border-bottom: 1px solid #e1e0e0;
+		}
+	}
 }

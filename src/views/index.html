@@ -26,17 +26,33 @@ fabricator: true
 <div class="row">
     <div class="col-md-4">
         <p>Trade Gothic Next</p>
+		<p><code class="highter-rouge">Default</code></p>
         <p class="intro">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+		<hr>
+		<p><code class="highter-rouge">.text-sans-light</code></p>
+		<p class="intro text-sans-light">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+		<hr>
+		<p><code class="highter-rouge">.text-sans-bold</code></p>
+		<p class="intro text-sans-bold">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+		<hr>
+		<p><code class="highter-rouge">.text-sans-italic</code></p>
+		<p class="intro text-sans-italic">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+		<hr>
+		<p><code class="highter-rouge">.text-sans-bold-italic</code></p>
+		<p class="intro text-sans-bold-italic">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
     </div>
     <div class="col-md-4">
         <p>Bauer Bodoni W01 Italic</p>
-        <p class="intro" style="font-family: 'Bauer Bodoni W01 Italic'">Grumpy wizards make toxic
-            brew for the evil Queen and Jack.</p>
+		<p><code class="highlighter-rouge">.text-serif</code></p>
+        <p class="intro text-serif">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+		<hr>
+		<p><code class="highlighter-rouge">.text-serif-bold</code></p>
+		<p class="intro text-serif-bold">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
     </div>
     <div class="col-md-4">
         <p>Trajan W01 Regular</p>
-        <p class="intro" style="font-family: 'Trajan W01 Regular'">Grumpy wizards make toxic brew
-            for the evil Queen and Jack.</p>
+		<p><code class="highlighter-rouge">.text-trajan</code></p>
+        <p class="intro text-trajan">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
     </div>
 </div>
 <h4>Using Fonts</h4>
@@ -94,3 +110,112 @@ fabricator: true
     <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source
         Title</cite></footer>
 </blockquote>
+
+<h2>Utilities</h2>
+<p>Utilities, or utility classes, are a series of single-purpose, immutable classes designed to reduce duplication in your compiled CSS. Each utility takes a common CSS property-value pair and turns it into a reusable class.</p>
+
+<p>These utilities are in addition to those <a href="http://getbootstrap.com/css/">provided in Bootstrap</a>.</p>
+
+<h3 id="positioning">Positioning</h3>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.pos-r</span> <span class="p">{</span> <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.pos-a</span> <span class="p">{</span> <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.pos-f</span> <span class="p">{</span> <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+
+<h3 id="width">Width</h3>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.w-sm</span>   <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">25%</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.w-md</span>   <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.w-lg</span>   <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">75%</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.w-full</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+
+<h3 id="margin-and-padding">Margin and padding</h3>
+
+<p>Assign <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to an element or a subset of it’s sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. All classes are multiples on the global default value, <code class="highlighter-rouge">20px</code>.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.m-a-0</span> <span class="p">{</span> <span class="nl">margin</span><span class="p">:</span>        <span class="m">0</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-t-0</span> <span class="p">{</span> <span class="nl">margin-top</span><span class="p">:</span>    <span class="m">0</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-r-0</span> <span class="p">{</span> <span class="nl">margin-right</span><span class="p">:</span>  <span class="m">0</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-b-0</span> <span class="p">{</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">0</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-l-0</span> <span class="p">{</span> <span class="nl">margin-left</span><span class="p">:</span>   <span class="m">0</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nc">.m-a</span> <span class="p">{</span> <span class="nl">margin</span><span class="p">:</span>        <span class="o">@</span><span class="n">spacer</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-t</span> <span class="p">{</span> <span class="nl">margin-top</span><span class="p">:</span>    <span class="o">@</span><span class="n">spacer-y</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-r</span> <span class="p">{</span> <span class="nl">margin-right</span><span class="p">:</span>  <span class="o">@</span><span class="n">spacer-x</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-b</span> <span class="p">{</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="o">@</span><span class="n">spacer-y</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-l</span> <span class="p">{</span> <span class="nl">margin-left</span><span class="p">:</span>   <span class="o">@</span><span class="n">spacer-x</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-x</span> <span class="p">{</span> <span class="nl">margin-right</span><span class="p">:</span>  <span class="o">@</span><span class="n">spacer-x</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">margin-left</span><span class="p">:</span> <span class="o">@</span><span class="n">spacer-x</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-y</span> <span class="p">{</span> <span class="nl">margin-top</span><span class="p">:</span>    <span class="o">@</span><span class="n">spacer-y</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="o">@</span><span class="n">spacer-y</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-x-auto</span> <span class="p">{</span> <span class="nl">margin-right</span><span class="p">:</span> <span class="nb">auto</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">margin-left</span><span class="p">:</span> <span class="nb">auto</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nc">.m-a-md</span> <span class="p">{</span> <span class="nl">margin</span><span class="p">:</span>        <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-t-md</span> <span class="p">{</span> <span class="nl">margin-top</span><span class="p">:</span>    <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-r-md</span> <span class="p">{</span> <span class="nl">margin-right</span><span class="p">:</span>  <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-b-md</span> <span class="p">{</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-l-md</span> <span class="p">{</span> <span class="nl">margin-left</span><span class="p">:</span>   <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-x-md</span> <span class="p">{</span> <span class="nl">margin-right</span><span class="p">:</span>  <span class="p">(</span><span class="o">@</span><span class="n">spacer-x</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">margin-left</span><span class="p">:</span>   <span class="p">(</span><span class="o">@</span><span class="n">spacer-x</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-y-md</span> <span class="p">{</span> <span class="nl">margin-top</span><span class="p">:</span>    <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nc">.m-a-lg</span> <span class="p">{</span> <span class="nl">margin</span><span class="p">:</span>        <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-t-lg</span> <span class="p">{</span> <span class="nl">margin-top</span><span class="p">:</span>    <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-r-lg</span> <span class="p">{</span> <span class="nl">margin-right</span><span class="p">:</span>  <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-b-lg</span> <span class="p">{</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-l-lg</span> <span class="p">{</span> <span class="nl">margin-left</span><span class="p">:</span>   <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-x-lg</span> <span class="p">{</span> <span class="nl">margin-right</span><span class="p">:</span>  <span class="p">(</span><span class="o">@</span><span class="n">spacer-x</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">margin-left</span><span class="p">:</span>   <span class="p">(</span><span class="o">@</span><span class="n">spacer-x</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.m-y-lg</span> <span class="p">{</span> <span class="nl">margin-top</span><span class="p">:</span>    <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.p-a-0</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span>        <span class="m">0</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-t-0</span> <span class="p">{</span> <span class="nl">padding-top</span><span class="p">:</span>    <span class="m">0</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-r-0</span> <span class="p">{</span> <span class="nl">padding-right</span><span class="p">:</span>  <span class="m">0</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-b-0</span> <span class="p">{</span> <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">0</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-l-0</span> <span class="p">{</span> <span class="nl">padding-left</span><span class="p">:</span>   <span class="m">0</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nc">.p-a</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span>        <span class="o">@</span><span class="n">spacer</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-t</span> <span class="p">{</span> <span class="nl">padding-top</span><span class="p">:</span>    <span class="o">@</span><span class="n">spacer-y</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-r</span> <span class="p">{</span> <span class="nl">padding-right</span><span class="p">:</span>  <span class="o">@</span><span class="n">spacer-x</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-b</span> <span class="p">{</span> <span class="nl">padding-bottom</span><span class="p">:</span> <span class="o">@</span><span class="n">spacer-y</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-l</span> <span class="p">{</span> <span class="nl">padding-left</span><span class="p">:</span>   <span class="o">@</span><span class="n">spacer-x</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-x</span> <span class="p">{</span> <span class="nl">padding-right</span><span class="p">:</span>  <span class="o">@</span><span class="n">spacer-x</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">padding-left</span><span class="p">:</span>   <span class="o">@</span><span class="n">spacer-x</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-y</span> <span class="p">{</span> <span class="nl">padding-top</span><span class="p">:</span>    <span class="o">@</span><span class="n">spacer-y</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">padding-bottom</span><span class="p">:</span> <span class="o">@</span><span class="n">spacer-y</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nc">.p-a-md</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span>        <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-t-md</span> <span class="p">{</span> <span class="nl">padding-top</span><span class="p">:</span>    <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-r-md</span> <span class="p">{</span> <span class="nl">padding-right</span><span class="p">:</span>  <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-b-md</span> <span class="p">{</span> <span class="nl">padding-bottom</span><span class="p">:</span> <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-l-md</span> <span class="p">{</span> <span class="nl">padding-left</span><span class="p">:</span>   <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-x-md</span> <span class="p">{</span> <span class="nl">padding-right</span><span class="p">:</span>  <span class="p">(</span><span class="o">@</span><span class="n">spacer-x</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">padding-left</span><span class="p">:</span>   <span class="p">(</span><span class="o">@</span><span class="n">spacer-x</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-y-md</span> <span class="p">{</span> <span class="nl">padding-top</span><span class="p">:</span>    <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">padding-bottom</span><span class="p">:</span> <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nc">.p-a-lg</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span>        <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-t-lg</span> <span class="p">{</span> <span class="nl">padding-top</span><span class="p">:</span>    <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-r-lg</span> <span class="p">{</span> <span class="nl">padding-right</span><span class="p">:</span>  <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-b-lg</span> <span class="p">{</span> <span class="nl">padding-bottom</span><span class="p">:</span> <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-l-lg</span> <span class="p">{</span> <span class="nl">padding-left</span><span class="p">:</span>   <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-x-lg</span> <span class="p">{</span> <span class="nl">padding-right</span><span class="p">:</span>  <span class="p">(</span><span class="o">@</span><span class="n">spacer-x</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">padding-left</span><span class="p">:</span>   <span class="p">(</span><span class="o">@</span><span class="n">spacer-x</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.p-y-lg</span> <span class="p">{</span> <span class="nl">padding-top</span><span class="p">:</span>    <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="nl">padding-bottom</span><span class="p">:</span> <span class="p">(</span><span class="o">@</span><span class="n">spacer-y</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+
+<h3 id="responsive-text-alignment">Responsive text alignment</h3>
+
+<p>Use these classes to easily switch <code class="highlighter-rouge">text-align</code> across viewports when designing responsive pages.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.text-xs-left</span>   <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.text-xs-right</span>  <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.text-xs-center</span> <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-sm-min</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.text-sm-left</span>   <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.text-sm-right</span>  <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.text-sm-center</span> <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-md-min</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.text-md-left</span>   <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.text-md-right</span>  <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.text-md-center</span> <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="o">@</span><span class="n">screen-lg-min</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.text-lg-left</span>   <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.text-lg-right</span>  <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.text-lg-center</span> <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
