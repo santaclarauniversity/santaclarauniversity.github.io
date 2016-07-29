@@ -10,6 +10,15 @@
 			line-height: (25em/17);
 		}
 	}
+	.social {
+		a {
+			width: 32px;
+			height: 32px;
+			font-size: 22px;
+			margin: 0 0px 8px 8px;
+			line-height: 1.4;
+		}
+	}
 	//  a {
 	//    text-decoration: underline;
 	//  }
@@ -61,32 +70,7 @@
 		}
 	}
 	/* Social media icons */
-	.footer-social-icons {
-		display: block;
-		line-height: 0;
-		margin-bottom: 7px;
-	}
-	.facebook {
-		background: #3B5998 url(/assets/images/social-media/facebook-32.png) 0 0 no-repeat;
-	}
-	.instagram {
-		background: #3F729B url(/assets/images/social-media/instagram-32.png) 0 0 no-repeat;
-	}
-	.linkedin {
-		background: #007FB1 url(/assets/images/social-media/linkedin-32.png) 0 0 no-repeat;
-	}
-	.pinterest {
-		background: #CB2027 url(/assets/images/social-media/pinterest-32.png) 0 0 no-repeat;
-	}
-	.twitter {
-		background: #00ACED url(/assets/images/social-media/twitter-32.png) 0 0 no-repeat;
-	}
-	.social-icon {
-		display: inline-block;
-		width: 32px;
-		height: 32px;
-		background-size: 32px 32px;
-	}
+
 	.footer-social-break {
 		display: none;
 		@media (max-width: 370px) {
@@ -105,6 +89,11 @@
 /* The whole light gray row stripe that begins the footer: */
 .site-footer-navigation {
 	background-color: @footer-navigation-gray;
+}
+.footer-social-links > a {
+	clear: both;
+	float: none;
+	display: block;
 }
 
 /* Desktop footer styles */
@@ -133,27 +122,6 @@
 		}
 		.social-icon {
 			margin: 0 0 5px;
-		}
-	}
-}
-
-/* Retina monitor/screen styles */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx) {
-	.site-footer {
-		.facebook {
-			background-image: url(/assets/images/social-media/facebook-64.png);
-		}
-		.instagram {
-			background-image: url(/assets/images/social-media/instagram-64.png);
-		}
-		.linkedin {
-			background-image: url(/assets/images/social-media/linkedin-64.png);
-		}
-		.pinterest {
-			background-image: url(/assets/images/social-media/pinterest-64.png);
-		}
-		.twitter {
-			background-image: url(/assets/images/social-media/twitter-64.png);
 		}
 	}
 }

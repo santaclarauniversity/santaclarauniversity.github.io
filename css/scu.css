@@ -1820,6 +1820,13 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
     line-height: 1.47058824em;
   }
 }
+.site-footer .social a {
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  margin: 0 0px 8px 8px;
+  line-height: 1.4;
+}
 .site-footer .footer-mission {
   text-align: center;
 }
@@ -1866,32 +1873,6 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
     margin-left: 0;
   }
 }
-.site-footer .footer-social-icons {
-  display: block;
-  line-height: 0;
-  margin-bottom: 7px;
-}
-.site-footer .facebook {
-  background: #3B5998 url(/assets/images/social-media/facebook-32.png) 0 0 no-repeat;
-}
-.site-footer .instagram {
-  background: #3F729B url(/assets/images/social-media/instagram-32.png) 0 0 no-repeat;
-}
-.site-footer .linkedin {
-  background: #007FB1 url(/assets/images/social-media/linkedin-32.png) 0 0 no-repeat;
-}
-.site-footer .pinterest {
-  background: #CB2027 url(/assets/images/social-media/pinterest-32.png) 0 0 no-repeat;
-}
-.site-footer .twitter {
-  background: #00ACED url(/assets/images/social-media/twitter-32.png) 0 0 no-repeat;
-}
-.site-footer .social-icon {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  background-size: 32px 32px;
-}
 .site-footer .footer-social-break {
   display: none;
 }
@@ -1909,6 +1890,11 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
 /* The whole light gray row stripe that begins the footer: */
 .site-footer-navigation {
   background-color: #f7f7f7;
+}
+.footer-social-links > a {
+  clear: both;
+  float: none;
+  display: block;
 }
 /* Desktop footer styles */
 @media (min-width: 1065px) {
@@ -1935,24 +1921,6 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
   }
   .site-footer .social-icon {
     margin: 0 0 5px;
-  }
-}
-/* Retina monitor/screen styles */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .site-footer .facebook {
-    background-image: url(/assets/images/social-media/facebook-64.png);
-  }
-  .site-footer .instagram {
-    background-image: url(/assets/images/social-media/instagram-64.png);
-  }
-  .site-footer .linkedin {
-    background-image: url(/assets/images/social-media/linkedin-64.png);
-  }
-  .site-footer .pinterest {
-    background-image: url(/assets/images/social-media/pinterest-64.png);
-  }
-  .site-footer .twitter {
-    background-image: url(/assets/images/social-media/twitter-64.png);
   }
 }
 body.homepage {
