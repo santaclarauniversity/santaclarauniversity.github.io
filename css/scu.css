@@ -294,9 +294,6 @@ h5 {
 h3 {
   color: #6d6d6d;
 }
-h3 .uppercase {
-  text-transform: uppercase;
-}
 h4,
 h5,
 h6 {
@@ -4438,7 +4435,7 @@ html.no-fontface .link-button.red {
   background-color: #bb0000;
 }
 .social a.vimeo {
-  background-color: #aad450;
+  background-color: #1ab7ea;
 }
 .social a.soundcloud {
   background-color: #ff3a00;
