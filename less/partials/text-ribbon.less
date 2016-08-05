@@ -6,6 +6,10 @@
   background-color: #000;
   overflow: hidden;
   color: white;
+  transition-delay: 0s;
+  transition-duration: 0.1s;
+  transition-property: all;
+  transition-timing-function: ease;
 }
 .text-ribbon:before {
   position: absolute;
@@ -16,6 +20,9 @@
   height: 100%;
   bottom: 0;
   background-color: inherit;
+}
+.text-ribbon:hover:not(.text-ribbon-success):not(.text-ribbon-info):not(.text-ribbon-danger) {
+  background-color: @link-hover-color;
 }
 .text-ribbon span {
   position: relative;

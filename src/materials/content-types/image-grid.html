@@ -1,0 +1,85 @@
+---
+notes: Image grid - think Windowpanes without the squares - uses `.block` elements. Heights should be set at the row level.
+---
+<style type="text/css">
+    .image-grid-01 > div > div {
+        height: 200px;
+    }
+    .image-grid-02 > div > div {
+        height: 400px;
+    }
+</style>
+<div class="row-no-padding image-grid image-grid-01">
+    <div class="col-md-3">
+        <div class="block p-x" style="background-image: url('/assets/images/examples/roadshow/nyc.jpg');">
+            <h2 class="m-t-0">
+                <strong class="text-ribbon text-ribbon-primary">
+                    <span>.col-md-3</span>
+                </strong>
+            </h2>
+            <p class="m-t-md">
+	            <span class="text-ribbon text-ribbon-primary">
+                    <span>Some text goes here.</span>
+	            </span>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="block p-x" style="background-image: url('/assets/images/examples/roadshow/nyc.jpg');">
+            <h2 class="m-t-0">
+                <strong class="text-ribbon text-ribbon-fade">
+                    <span>.col-md-6</span>
+                </strong>
+            </h2>
+            <p class="m-t-md">
+            <span class="text-ribbon text-ribbon-fade">
+                <span>Some text goes here.</span>
+            </span>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="block p-x" style="background-image: url('/assets/images/examples/roadshow/nyc.jpg');">
+            <h2 class="m-t-0">
+                <strong class="text-ribbon text-ribbon-cream">
+                    <span>.col-md-3</span>
+                </strong>
+            </h2>
+            <p class="m-t-md">
+	            <span class="text-ribbon text-ribbon-cream">
+                    <span>Some text goes here.</span>
+	            </span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row-no-padding image-grid-02">
+    <div class="col-md-6">
+        <div class="block p-x" style="background-image: url('/assets/images/examples/roadshow/nyc.jpg');">
+            <h2 class="m-t-0">
+                <strong class="text-ribbon text-ribbon-primary">
+                    <span>.col-md-6</span>
+                </strong>
+            </h2>
+            <p class="m-t-md">
+	            <span class="text-ribbon text-ribbon-primary">
+                    <span>Some text goes here.</span>
+	            </span>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="block p-x" style="background-image: url('/assets/images/examples/roadshow/nyc.jpg');">
+            <h2 class="m-t-0">
+                <strong class="text-ribbon text-ribbon-primary">
+                    <span>.col-md-6</span>
+                </strong>
+            </h2>
+            <p class="m-t-md">
+	            <span class="text-ribbon text-ribbon-primary">
+                    <span>Some text goes here.</span>
+	            </span>
+            </p>
+        </div>
+    </div>
+</div>

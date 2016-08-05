@@ -1,10 +1,11 @@
 ```v1.0.5```
-- New CSS for [Cards](/content-types.html#cards) based on Bootstrap 4.0-alpha2. The original CSS was based on `alpha0`, and some significant changes had been made in the meantime.
+- New CSS for [Cards](/content-types.html#card) based on Bootstrap 4.0-alpha2. The original CSS was based on `alpha0`, and some significant changes had been made in the meantime.
 - Removed "Profile" as a content type.
 - Content type demos now use `holder.js`.
 - [Sidebar](/content-types.html#sidebar) markup fixed, CSS adjustments made.
 - [Hero](/content-types.html#hero) content type added from White Whale's original design.
 - Global footer updated to use social media icons instead of static images ([#54](https://github.com/santaclarauniversity/scu-web-assets/issues/54)).
+- Added [Image Grid](/content-types.html#image-grid) content types.
 
 ```v1.0.4```
 - Added spacer utility classes (more information on [homepage](/))
