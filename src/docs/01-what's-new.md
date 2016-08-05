@@ -6,6 +6,7 @@
 - [Hero](/content-types.html#hero) content type added from White Whale's original design.
 - Global footer updated to use social media icons instead of static images ([#54](https://github.com/santaclarauniversity/scu-web-assets/issues/54)).
 - Added [Image Grid](/content-types.html#image-grid) content types.
+- Added `.bg-img` utility classes.
 
 ```v1.0.4```
 - Added spacer utility classes (more information on [homepage](/))

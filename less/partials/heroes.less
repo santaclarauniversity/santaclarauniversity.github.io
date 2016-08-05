@@ -61,14 +61,15 @@
 	.hero-body {
 		.high-contrast {
 			background-color: rgba(0, 0, 0, 0.55);
-			padding-top: 20px;
-			padding-right: 20px;
-			color: #FFF;
+			color: #FFF !important;
 			a {
 				color: #fbfb96;
 				&:hover {
 					color: darken(#fbfb96, 10%);
 				}
+			}
+			h1, h2, h3, h4, h5 {
+				color: @white;
 			}
 		}
 		.caption {
@@ -88,14 +89,7 @@
 				}
 			}
 		}
-
 		h1 {
-			position: absolute;
-			top: 100px;
-			left: 15px;
-			max-width: 60%;
-			color: #fff;
-			color: @white;
 			.centers & {
 				top: auto;
 				bottom: 20px;
