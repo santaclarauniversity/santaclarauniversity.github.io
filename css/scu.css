@@ -452,6 +452,13 @@ html.no-fontface .lw_cal_today_day {
     margin-bottom: 0;
   }
 }
+a {
+  transition: all 100ms ease;
+  transition-property: all;
+  transition-duration: 100ms;
+  transition-timing-function: ease;
+  transition-delay: initial;
+}
 .site-header {
   position: relative;
   z-index: 20;
@@ -853,54 +860,36 @@ header.site-header {
   }
 }
 .site-header-with-seal .seal {
-  position: absolute;
-  top: 20px;
-  left: 15px;
+  color: #a8a9ac;
   display: block;
-  width: 40px;
-  height: 40px;
-  margin: 0;
-  background: url(/assets/images/SCU-seal-85x85.png) 0 0 no-repeat;
-  box-sizing: content-box;
-  background-size: 100% 100%;
-  outline: 0;
 }
 @media (min-width: 390px) {
   .site-header-with-seal .seal {
-    width: 50px;
-    height: 50px;
+    font-size: 50px;
+    padding-right: 5px;
+    margin-top: 5px;
   }
 }
 @media (min-width: 470px) {
   .site-header-with-seal .seal {
-    width: 60px;
-    height: 60px;
+    font-size: 60px;
   }
 }
 @media (min-width: 768px) {
   .site-header-with-seal .seal {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: 60px;
-    height: 60px;
-    margin: 40px 0 0;
-    padding: 0 12px 0 0;
-    background-size: 60px 60px;
+    font-size: 60px;
+    margin-top: 20px;
   }
 }
 @media (min-width: 1065px) {
   .site-header-with-seal .seal {
-    width: 85px;
-    height: 85px;
-    margin: 35px 0 0;
-    background-size: 85px 85px;
+    font-size: 85px;
+    margin-top: 10px;
+    padding-right: 10px;
   }
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .site-header-with-seal .seal {
-    background-image: url(/assets/images/SCU-seal-170x170.png);
-  }
+.site-header-with-seal .seal:hover {
+  color: #555;
 }
 .site-header-with-seal .wordmarks {
   display: inline-block;
@@ -912,13 +901,13 @@ header.site-header {
 @media (min-width: 390px) {
   .site-header-with-seal .wordmarks {
     max-width: calc(100% - 55px);
-    margin: 25px 0 0 55px;
+    margin: 25px 0 0 0px;
   }
 }
 @media (min-width: 470px) {
   .site-header-with-seal .wordmarks {
     max-width: calc(100% - 70px);
-    margin: 25px 0 0 70px;
+    margin: 25px 0 0 0px;
   }
 }
 @media (min-width: 768px) {
@@ -2025,15 +2014,20 @@ html.no-fontface .evergreen.module {
 }
 .hero.module .hero-body .high-contrast {
   background-color: rgba(0, 0, 0, 0.55);
-  padding-top: 20px;
-  padding-right: 20px;
-  color: #FFF;
+  color: #FFF !important;
 }
 .hero.module .hero-body .high-contrast a {
   color: #fbfb96;
 }
 .hero.module .hero-body .high-contrast a:hover {
   color: #f9f965;
+}
+.hero.module .hero-body .high-contrast h1,
+.hero.module .hero-body .high-contrast h2,
+.hero.module .hero-body .high-contrast h3,
+.hero.module .hero-body .high-contrast h4,
+.hero.module .hero-body .high-contrast h5 {
+  color: #fff;
 }
 .hero.module .hero-body .caption {
   padding: 15px;
@@ -2062,13 +2056,6 @@ html.no-fontface .evergreen.module {
     padding-top: 40px;
     font-size: 14px;
   }
-}
-.hero.module .hero-body h1 {
-  position: absolute;
-  top: 100px;
-  left: 15px;
-  max-width: 60%;
-  color: #fff;
 }
 .centers .hero.module .hero-body h1 {
   top: auto;
@@ -4403,6 +4390,10 @@ html.no-fontface .link-button.red {
 .icon-linkedin:before {
   content: '\e809';
 }
+/* '' */
+.icon-scu:before {
+  content: '\e810';
+}
 /* '' */
 /*  Social brand colors  */
 /*  SCU-specific styles  */
@@ -4459,6 +4450,12 @@ html.no-fontface .link-button.red {
 .social a.scu {
   background-image: url(/assets/images/icon-scu.png);
   background-size: cover;
+}
+.social a.scu-seal {
+  color: #fff;
+  background-color: #b30738;
+  font-size: 63px;
+  line-height: 55px;
 }
 /**
  * Form modules:
@@ -4910,7 +4907,6 @@ fieldset[disabled] .windowpane .windowpane-desc .btn-default-outline.active {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center;
 }
 .row-no-padding {
   margin-left: 0;
@@ -4920,9 +4916,6 @@ fieldset[disabled] .windowpane .windowpane-desc .btn-default-outline.active {
 .row-no-padding [class*="col-"] {
   padding-left: 0 !important;
   padding-right: 0 !important;
-}
-.windowpane-background-right {
-  background-position: right center;
 }
 .statcard-number {
   margin-top: 0;
@@ -5077,6 +5070,10 @@ fieldset[disabled] .windowpane .windowpane-desc .btn-default-outline.active {
   background-color: #000;
   overflow: hidden;
   color: white;
+  transition-delay: 0s;
+  transition-duration: 0.1s;
+  transition-property: all;
+  transition-timing-function: ease;
 }
 .text-ribbon:before {
   position: absolute;
@@ -5087,6 +5084,9 @@ fieldset[disabled] .windowpane .windowpane-desc .btn-default-outline.active {
   height: 100%;
   bottom: 0;
   background-color: inherit;
+}
+.text-ribbon:hover:not(.text-ribbon-success):not(.text-ribbon-info):not(.text-ribbon-danger) {
+  background-color: #820529;
 }
 .text-ribbon span {
   position: relative;
@@ -5764,6 +5764,33 @@ html.no-fontface h2.search_title span {
   .hide-for-retina {
     display: none !important;
   }
+}
+.bg-img-center {
+  background-position: center !important;
+}
+.bg-img-left-center {
+  background-position: left center !important;
+}
+.bg-img-right-center {
+  background-position: right center !important;
+}
+.bg-img-bottom {
+  background-position: bottom !important;
+}
+.bg-img-bottom-left {
+  background-position: bottom left !important;
+}
+.bg-img-bottom-right {
+  background-position: bottom right !important;
+}
+.bg-img-top {
+  background-position: top !important;
+}
+.bg-img-top-right {
+  background-position: top right !important;
+}
+.bg-img-top-left {
+  background-position: top left !important;
 }
 .pos-r {
   position: relative !important;

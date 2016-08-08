@@ -347,43 +347,27 @@ header.site-header {
 		}
 	}
 	.seal {
-		position: absolute;
-		top: 20px;
-		left: 15px;
-		display: block;
-		width: 40px;
-		height: 40px;
-		margin: 0;
-		background: url(/assets/images/SCU-seal-85x85.png) 0 0 no-repeat;
-		box-sizing: content-box;
-		background-size: 100% 100%;
-		outline: 0;
+      color: #a8a9ac;
+      display: block;
 		@media (min-width: 390px) {
-			width: 50px;
-			height: 50px;
+			font-size: 50px;
+			padding-right: 5px;
+			margin-top: 5px;
 		}
 		@media (min-width: 470px) {
-			width: 60px;
-			height: 60px;
+			font-size: 60px;
 		}
 		@media (min-width: @screen-sm-min) {
-			position: relative;
-			top: auto;
-			left: auto;
-			width: 60px;
-			height: 60px;
-			margin: 40px 0 0;
-			padding: 0 12px 0 0;
-			background-size: 60px 60px;
+			font-size: 60px;
+			margin-top: 20px;
 		}
 		@media (min-width: @screen-md-min) {
-			width: 85px;
-			height: 85px;
-			margin: 35px 0 0;
-			background-size: 85px 85px;
+			font-size: 85px;
+			margin-top: 10px;
+			padding-right: 10px;
 		}
-		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx) {
-			background-image: url(/assets/images/SCU-seal-170x170.png);
+		&:hover {
+			color: #555;
 		}
 	}
 	/*.wordmark {
@@ -428,11 +412,11 @@ header.site-header {
 		padding: 0;
 		@media (min-width: 390px) {
 			max-width: calc(~"100% - 55px");
-			margin: 25px 0 0 55px;
+			margin: 25px 0 0 0px;
 		}
 		@media (min-width: 470px) {
 			max-width: calc(~"100% - 70px");
-			margin: 25px 0 0 70px;
+			margin: 25px 0 0 0px;
 		}
 		@media (min-width: @screen-sm-min) {
 			width: 400px;

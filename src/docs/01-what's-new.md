@@ -1,3 +1,8 @@
+```v1.0.6```
+- Updated Fontello - uses latest icon fonts available (most notably, Instagram is updated) and added the SCU seal.
+- Replaced the PNG logos in the header with the seal from the Fontello icon set.
+
+
 ```v1.0.5```
 - New CSS for [Cards](/content-types.html#card) based on Bootstrap 4.0-alpha2. The original CSS was based on `alpha0`, and some significant changes had been made in the meantime.
 - Removed "Profile" as a content type.
