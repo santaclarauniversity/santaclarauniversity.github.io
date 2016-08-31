@@ -1513,7 +1513,7 @@
   display: inline-block;
   padding: 10px 0;
   font-weight: 300;
-  color: #fff;
+  color: #000;
   border-bottom: 4px solid transparent;
 }
 .nav-bordered > li > a:hover,
@@ -2378,7 +2378,7 @@ fieldset[disabled] .navbar-transparent .btn-link:focus {
   display: table;
   width: 100%;
   margin-bottom: 21px;
-  color: #000;
+  color: #6C6F73;
   background-color: #fff;
   border-radius: 3px;
   border: 1px solid #eeeeee;
@@ -2749,7 +2749,7 @@ img.zoom-img {
   font-size: 12px;
   font-style: normal;
   letter-spacing: .15em;
-  color: #777777;
+  color: #BEC8CE;
   text-transform: uppercase;
 }
 @media (min-width: 768px) {

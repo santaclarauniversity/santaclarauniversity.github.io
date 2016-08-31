@@ -1,0 +1,88 @@
+.bs-card {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+
+    // Wrapper which lets us easily mesh the background image with a semitransparent color overlay
+    div {
+        background-color: rgba(0, 0, 0, 0.50);
+        padding: 18px;
+
+        // Title of event type, i.e. "racial/ethnic seminars"
+        h2 {
+            color: @beige !important;
+        }
+
+        // Encapsulates info about the specific event being advertised
+        .bs-card-event {
+            background: transparent;
+            margin: 0;
+            padding: 12px 0;
+
+            // Event title
+            h4 {
+                color: @gray-lighter;
+                display: inline;
+            }
+
+            // Event date
+            h5 {
+                color: @beige;
+                display: inline;
+            }
+
+            // Short event description
+            p {
+                color: @really-light-gray;
+            }
+
+            // If included, info about event speaker
+            div {
+                background: transparent;
+                display: flex;
+                margin: 12px 0;
+                padding: 0;
+
+                .bs-card-speaker-thumb img {
+                    -webkit-border-radius: 8px;
+                    -moz-border-radius: 8px;
+                    border-radius: 8px;
+                    height: 80px;
+                    width: auto;
+                }
+
+                // Container of info (wrapper contains this and an image of the speaker)
+                .bs-card-speaker-info {
+                    background: transparent;
+                    display: block;
+                    flex: 1;
+                    padding-left: 16px;
+
+                    // Speaker name
+                    h4 {
+                        color: @beige;
+                    }
+
+                    // Speaker description
+                    p {
+                        color: @really-light-gray;
+                    }
+                }
+            }
+        }
+
+        // Encapsulates action button(s)
+        .bs-card-btns {
+            background: transparent;
+            margin: 12px 0;
+            padding: 0;
+        }
+
+        // Hotlink to see upcoming events
+        a {
+            color: @gray-lighter;
+        }
+    }
+
+}

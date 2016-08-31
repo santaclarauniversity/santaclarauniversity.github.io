@@ -4390,10 +4390,6 @@ html.no-fontface .link-button.red {
 .icon-linkedin:before {
   content: '\e809';
 }
-/* '' */
-.icon-scu:before {
-  content: '\e810';
-}
 /* '' */
 /*  Social brand colors  */
 /*  SCU-specific styles  */
@@ -4450,12 +4446,6 @@ html.no-fontface .link-button.red {
 .social a.scu {
   background-image: url(/assets/images/icon-scu.png);
   background-size: cover;
-}
-.social a.scu-seal {
-  color: #fff;
-  background-color: #b30738;
-  font-size: 63px;
-  line-height: 55px;
 }
 /**
  * Form modules:
@@ -5701,6 +5691,68 @@ fieldset[disabled] .btn-danger-outline.active {
 .btn-danger-outline .badge {
   color: #fff;
   background-color: #d43f3a;
+}
+.bs-card {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+}
+.bs-card div {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 18px;
+}
+.bs-card div h2 {
+  color: #dfdbd3 !important;
+}
+.bs-card div .bs-card-event {
+  background: transparent;
+  margin: 0;
+  padding: 12px 0;
+}
+.bs-card div .bs-card-event h4 {
+  color: #eeeeee;
+  display: inline;
+}
+.bs-card div .bs-card-event h5 {
+  color: #dfdbd3;
+  display: inline;
+}
+.bs-card div .bs-card-event p {
+  color: #e1e0e0;
+}
+.bs-card div .bs-card-event div {
+  background: transparent;
+  display: flex;
+  margin: 12px 0;
+  padding: 0;
+}
+.bs-card div .bs-card-event div .bs-card-speaker-thumb img {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  height: 80px;
+  width: auto;
+}
+.bs-card div .bs-card-event div .bs-card-speaker-info {
+  background: transparent;
+  display: block;
+  flex: 1;
+  padding-left: 16px;
+}
+.bs-card div .bs-card-event div .bs-card-speaker-info h4 {
+  color: #dfdbd3;
+}
+.bs-card div .bs-card-event div .bs-card-speaker-info p {
+  color: #e1e0e0;
+}
+.bs-card div .bs-card-btns {
+  background: transparent;
+  margin: 12px 0;
+  padding: 0;
+}
+.bs-card div a {
+  color: #eeeeee;
 }
 /*  Search Results  */
 h2.search_title span {
