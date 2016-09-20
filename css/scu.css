@@ -4785,7 +4785,7 @@ html.flexbox .infographic.module.window .infographic-label {
   bottom: 1.5em;
 }
 .windowpane .windowpane-desc:hover > .windowpane-rollup {
-  opacity: 0.85;
+  opacity: 0.80;
 }
 .windowpane .windowpane-desc.introduction {
   top: 50%;

@@ -1,0 +1,29 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "padded-blocks": "off",
+    "no-console": "off",
+    "arrow-body-style": "off",
+    "quote-props": [
+      "error",
+      "consistent-as-needed"
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "max-len": "off",
+    "no-param-reassign": "off",
+    "consistent-return": "off",
+    "no-underscore-dangle": "off", // TODO Unsure whether these should be fixed or ignored.
+    "func-names": "off",           // TODO Unsure whether these should be fixed or ignored.
+    "prefer-arrow-callback": "off" // TODO Unsure whether these should be fixed or ignored.
+  },
+  "env": {
+    "amd": true,
+    "browser": true,
+    "es6": true,
+    "jquery": true,
+    "node": true
+  }
+}

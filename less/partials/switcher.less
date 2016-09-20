@@ -3,97 +3,97 @@
  */
 
 .switcher {
-    top: 0;
-    right: 0;
-    font-size: 24px;
-    position: absolute;
-    background-color: @light-gray;
-    z-index: 1;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  position: absolute;
+  background-color: @light-gray;
+  z-index: 1;
+  @media (min-width: @screen-sm-min) {
+    width: 200%;
+    top: 50px;
+    background: none;
+  }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-md) {
+    font-size: 16px;
+  }
+  &.on {
+    background: #fff;
     @media (min-width: @screen-sm-min) {
-        width: 200%;
-        top: 50px;
-        background: none;
+      width: 200%;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
     }
-    @media (min-width: @screen-sm-min) and (max-width: @screen-md) {
-        font-size: 16px;
+    @media (max-width: (@screen-sm - 1)) {
+      > a > span:after {
+        display: block;
+        font-size: 12px;
+        content: 'Tap anywhere to close.'
+      }
+    }
+  }
+  & > a {
+    padding: 14px 10px;
+    background: rgba(255, 255, 255, .8) !important;
+    text-align: center;
+  }
+  & h4 {
+    min-height: 0 !important;
+    padding: 0 !important;
+  }
+
+  &.link-button {
+    cursor: pointer;
+    > a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      &:focus {
+        text-decoration: none;
+      }
+    }
+    .module {
+      margin-top: 1rem;
+      padding: 0 24px;
+      ul {
+        margin-bottom: 2rem;
+      }
+      display: none;
     }
     &.on {
-        background: #fff;
-        @media (min-width: @screen-sm-min) {
-            width: 200%;
-            box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
-        }
-        @media (max-width: (@screen-sm - 1)) {
-            > a > span:after {
-                display: block;
-                font-size: 12px;
-                content: 'Tap anywhere to close.'
-            }
-        }
+      cursor: auto;
+      max-width: none;
+      text-align: left;
+      > a {
+        border-bottom: 1px solid @light-gray;
+      }
+      h4 a {
+        color: @medium-gray;
+        text-decoration: underline;
+      }
+      .module {
+        display: block;
+      }
     }
-    & > a {
-        padding: 14px 10px;
-        background: rgba(255, 255, 255, .8) !important;
-        text-align: center;
-    }
-    & h4 {
-        min-height: 0 !important;
-        padding: 0 !important;
-    }
-
-    &.link-button {
-        cursor: pointer;
-        > a {
-            display: block;
-            color: inherit;
-            text-decoration: none;
-            &:focus {
-                text-decoration: none;
-            }
-        }
-        .module {
-            margin-top: 1rem;
-            padding: 0 24px;
-            ul {
-                margin-bottom: 2rem;
-            }
-            display: none;
-        }
-        &.on {
-            cursor: auto;
-            max-width: none;
-            text-align: left;
-            > a {
-                border-bottom: 1px solid @light-gray;
-            }
-            h4 a {
-                color: @medium-gray;
-                text-decoration: underline;
-            }
-            .module {
-                display: block;
-            }
-        }
-    }
+  }
 }
 
 /* temporary code for switchers on school landing pages: keep 'em open */
 
 .col-sm-12 {
-    > .switcher, > .switcher.on {
-        width: auto !important;
-        position: relative !important;
-        box-shadow: none !important;
-        z-index: 1;
-        cursor: auto;
-        max-width: none;
-        text-align: left;
-        padding: 14px 24px;
-        > a {
-            display: none;
-        }
-        .module {
-            display: block;
-        }
+  > .switcher, > .switcher.on {
+    width: auto !important;
+    position: relative !important;
+    box-shadow: none !important;
+    z-index: 1;
+    cursor: auto;
+    max-width: none;
+    text-align: left;
+    padding: 14px 24px;
+    > a {
+      display: none;
     }
+    .module {
+      display: block;
+    }
+  }
 }

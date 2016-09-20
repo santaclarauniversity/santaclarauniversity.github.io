@@ -6,6 +6,7 @@
   text-transform: @btn-text-transform;
   letter-spacing: @btn-letter-spacing;
 }
+
 .btn-borderless {
   border: 0;
 }
@@ -14,15 +15,15 @@
   // line-height: ensure even-numbered height of button next to large input
   .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @btn-border-radius-large);
 }
+
 .btn-sm {
   // line-height: ensure proper height of button next to small input
   .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
 }
+
 .btn-xs {
   .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
 }
-
-
 
 // More buttons
 .btn-more:after {

@@ -1,102 +1,102 @@
 /* Sidebar navigation: */
 .side-navigation-header {
-    display: block;
-    padding: 0 21px 10px;
-    color: @medium-gray;
-    font-size: 16px;
-    line-height: 2em;
-    text-transform: uppercase;
+  display: block;
+  padding: 0 21px 10px;
+  color: @medium-gray;
+  font-size: 16px;
+  line-height: 2em;
+  text-transform: uppercase;
 
-    .side-navigation.match-page-title & {
-        margin-top: 23px;
-        padding-top: 10px;
-    }
+  .side-navigation.match-page-title & {
+    margin-top: 23px;
+    padding-top: 10px;
+  }
 }
 
 .side-navigation {
-    & > ul {
-        margin: 0 0 1.5em;
-        padding: 0;
-        border-right: 3px solid @really-light-gray;
-        font-size: 19px;
-        line-height: (24em/19);
-        list-style: none;
-        & > li {
-            margin: 0;
-            border-left: 8px solid @white;
-            padding: 0;
-            &:hover {
-                border-left: 8px solid @really-light-gray;
-            }
-            a {
-                display: block;
-                color: @side-navigation-link;
-                text-decoration: none;
-                &:hover {
-					color: black;
-                }
-            }
-            ////& > span > a {
-            ////  padding: 13px;
-            ////}
-            & > a {
-                padding: 13px;
-                border-bottom: 1px solid @really-light-gray;
-            }
-            ul {
-                display: none;
-                padding: 0 0 0 33px;
-                font-size: .9em;
-                list-style: disc;
-            }
-			& > span {
-				& > a {
-					padding: 13px;
-					border-bottom: 1px solid #e1e0e0;
-				}
-			}
-            & > ul {
-                padding-bottom: 13px;
-                padding-right: 15px;
-                margin-top: -1px;
-                border-top: 1px solid @white;
-                border-bottom: 1px solid @really-light-gray;
-            }
-            &:hover > ul {
-                border-top-color: #f0efef;
-            }
-            &:first-child > a {
-                border-top: 1px solid @really-light-gray;
-            }
-            ////span[class^="currentbranch"] {
-            ////  display: block;
-            ////}
-            ////span.currentbranch0,
-            &.active { /* Active states for first level nav */
-                z-index: 0;
-                border-left-color: @link-hover-color;
-            }
-            &.active {
-                margin-top: -1px;
-                & > a {
-                    border-top: 1px solid @really-light-gray;
-                }
-            }
+  & > ul {
+    margin: 0 0 1.5em;
+    padding: 0;
+    border-right: 3px solid @really-light-gray;
+    font-size: 19px;
+    line-height: (24em/19);
+    list-style: none;
+    & > li {
+      margin: 0;
+      border-left: 8px solid @white;
+      padding: 0;
+      &:hover {
+        border-left: 8px solid @really-light-gray;
+      }
+      a {
+        display: block;
+        color: @side-navigation-link;
+        text-decoration: none;
+        &:hover {
+          color: black;
         }
-    }
-    ////span[class^="currentbranch"] {
-    li.active {
+      }
+      ////& > span > a {
+      ////  padding: 13px;
+      ////}
+      & > a {
+        padding: 13px;
+        border-bottom: 1px solid @really-light-gray;
+      }
+      ul {
+        display: none;
+        padding: 0 0 0 33px;
+        font-size: .9em;
+        list-style: disc;
+      }
+      & > span {
         & > a {
-            .sans-serif-font(bold);
-            color: @side-navigation-active;
+          padding: 13px;
+          border-bottom: 1px solid #e1e0e0;
         }
-        ////span[class^="currentbranch"] + ul,
-        & > ul {
-            display: block;
+      }
+      & > ul {
+        padding-bottom: 13px;
+        padding-right: 15px;
+        margin-top: -1px;
+        border-top: 1px solid @white;
+        border-bottom: 1px solid @really-light-gray;
+      }
+      &:hover > ul {
+        border-top-color: #f0efef;
+      }
+      &:first-child > a {
+        border-top: 1px solid @really-light-gray;
+      }
+      ////span[class^="currentbranch"] {
+      ////  display: block;
+      ////}
+      ////span.currentbranch0,
+      &.active { /* Active states for first level nav */
+        z-index: 0;
+        border-left-color: @link-hover-color;
+      }
+      &.active {
+        margin-top: -1px;
+        & > a {
+          border-top: 1px solid @really-light-gray;
         }
-		.side-navigation > ul > li > span > a {
-			padding: 13px;
-			border-bottom: 1px solid #e1e0e0;
-		}
-	}
+      }
+    }
+  }
+  ////span[class^="currentbranch"] {
+  li.active {
+    & > a {
+      .sans-serif-font(bold);
+      color: @side-navigation-active;
+    }
+    ////span[class^="currentbranch"] + ul,
+    & > ul {
+      display: block;
+    }
+    .side-navigation > ul > li > span > a {
+      padding: 13px;
+      border-bottom: 1px solid #e1e0e0;
+    }
+  }
 }

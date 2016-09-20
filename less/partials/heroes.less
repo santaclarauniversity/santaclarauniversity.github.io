@@ -11,237 +11,237 @@
 @hero-xshort-height: 300px;
 
 .hero.module {
-	width: 100%;
-	background-position: 50% 20%;
-	background-size: cover;
+  width: 100%;
+  background-position: 50% 20%;
+  background-size: cover;
 
-	.site-header + & {
-		margin-top: -20px;
-		@media (min-width: @screen-sm-min) {
-			margin-top: -30px;
-		}
-		@media (min-width: @screen-md-min) {
-			margin-top: -53px;
-		}
-		@media (min-width: @screen-lg-min) {
-			margin-top: -55px;
-		}
-	}
+  .site-header + & {
+    margin-top: -20px;
+    @media (min-width: @screen-sm-min) {
+      margin-top: -30px;
+    }
+    @media (min-width: @screen-md-min) {
+      margin-top: -53px;
+    }
+    @media (min-width: @screen-lg-min) {
+      margin-top: -55px;
+    }
+  }
 
-	.container {
-		position: relative;
-		min-height: @hero-xs-height;
-		@media (min-width: @screen-sm-min) {
-			min-height: @hero-sm-height;
-			& > h1 {
-				font-size: 90px;
-			}
-		}
-		@media (min-width: @screen-md-min) {
-			min-height: @hero-md-height;
-			& > h1 {
-				font-size: 120px;
-			}
-		}
-		@media (min-width: @screen-lg-min) {
-			min-height: @hero-lg-height;
-		}
-		// tighten up feature in case of short desktop windows
-		@media (min-width: @screen-sm-min) and (max-height: @screen-short) {
-			min-height: @hero-short-height;
-		}
-		@media (min-width: @screen-sm-min) and (max-height: @screen-xshort) {
-			min-height: @hero-xshort-height;
-		}
-	}
+  .container {
+    position: relative;
+    min-height: @hero-xs-height;
+    @media (min-width: @screen-sm-min) {
+      min-height: @hero-sm-height;
+      & > h1 {
+        font-size: 90px;
+      }
+    }
+    @media (min-width: @screen-md-min) {
+      min-height: @hero-md-height;
+      & > h1 {
+        font-size: 120px;
+      }
+    }
+    @media (min-width: @screen-lg-min) {
+      min-height: @hero-lg-height;
+    }
+    // tighten up feature in case of short desktop windows
+    @media (min-width: @screen-sm-min) and (max-height: @screen-short) {
+      min-height: @hero-short-height;
+    }
+    @media (min-width: @screen-sm-min) and (max-height: @screen-xshort) {
+      min-height: @hero-xshort-height;
+    }
+  }
 
-	background-color: #dcdcdc; // fallback color
-	background-size: cover;
+  background-color: #dcdcdc; // fallback color
+  background-size: cover;
 
-	.hero-body {
-		.high-contrast {
-			background-color: rgba(0, 0, 0, 0.55);
-			color: #FFF !important;
-			a {
-				color: #fbfb96;
-				&:hover {
-					color: darken(#fbfb96, 10%);
-				}
-			}
-			h1, h2, h3, h4, h5 {
-				color: @white;
-			}
-		}
-		.caption {
-			padding: 15px;
-			.rgba-background(255, 255, 255, .85);
-			font-size: 13px;
-			p {
-				font-size: inherit;
-			}
-			& > *:last-child {
-				margin-bottom: 0;
-			}
-			@media (min-width: @screen-md-min) {
-				.site-header + & {
-					padding-top: 40px;
-					font-size: 14px;
-				}
-			}
-		}
-		h1 {
-			.centers & {
-				top: auto;
-				bottom: 20px;
-				font-size: 60px;
-			}
-		}
+  .hero-body {
+    .high-contrast {
+      background-color: rgba(0, 0, 0, 0.55);
+      color: #FFF !important;
+      a {
+        color: #fbfb96;
+        &:hover {
+          color: darken(#fbfb96, 10%);
+        }
+      }
+      h1, h2, h3, h4, h5 {
+        color: @white;
+      }
+    }
+    .caption {
+      padding: 15px;
+      .rgba-background(255, 255, 255, .85);
+      font-size: 13px;
+      p {
+        font-size: inherit;
+      }
+      & > *:last-child {
+        margin-bottom: 0;
+      }
+      @media (min-width: @screen-md-min) {
+        .site-header + & {
+          padding-top: 40px;
+          font-size: 14px;
+        }
+      }
+    }
+    h1 {
+      .centers & {
+        top: auto;
+        bottom: 20px;
+        font-size: 60px;
+      }
+    }
 
-		height: @hero-xs-height;
-		p, ol, ul {
-			margin-bottom: 1.5em;
-			font-size: 18px;
-			line-height: 1.25;
-		}
-		a {
-			text-decoration: underline;
-		}
-		&.white-text {
-			p, ol, ul {
-				color: @white;
-			}
-			a {
-				color: #fbfb96;
-				&:hover {
-					color: darken(#fbfb96, 10%);
-				}
-			}
-		}
-	}
+    height: @hero-xs-height;
+    p, ol, ul {
+      margin-bottom: 1.5em;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+    a {
+      text-decoration: underline;
+    }
+    &.white-text {
+      p, ol, ul {
+        color: @white;
+      }
+      a {
+        color: #fbfb96;
+        &:hover {
+          color: darken(#fbfb96, 10%);
+        }
+      }
+    }
+  }
 
-	&.feature {
-		.container {
-			padding-top: 25px;
-			padding-bottom: 25px;
-			@media (min-width: @screen-sm-min) {
-				min-height: @hero-sm-height;
-				padding-top: 50px;
-				padding-bottom: 50px;
-			}
-			@media (min-width: @screen-sm-min) {
-				height: @hero-sm-height;
-				max-height: @hero-sm-height;
-				/* This Flexbox styling should work in modern browsers, but IE8 and IE9 won't vertically center text if there's one line. */
-				.lh-display(flex);
-				.lh-flex-direction(column);
-				.lh-justify-content(center);
-				p, ol, ul {
-					font-size: 21px;
-				}
+  &.feature {
+    .container {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      @media (min-width: @screen-sm-min) {
+        min-height: @hero-sm-height;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+      @media (min-width: @screen-sm-min) {
+        height: @hero-sm-height;
+        max-height: @hero-sm-height;
+        /* This Flexbox styling should work in modern browsers, but IE8 and IE9 won't vertically center text if there's one line. */
+        .lh-display(flex);
+        .lh-flex-direction(column);
+        .lh-justify-content(center);
+        p, ol, ul {
+          font-size: 21px;
+        }
 
-				.no-flexbox & {
-					display: table-cell;
-					vertical-align: middle;
-				}
-			}
-			@media (min-width: @screen-md-min) {
-				height: @hero-md-height;
-				max-height: @hero-md-height;
-				p, ol, ul {
-					font-size: 24px;
-				}
-			}
-			@media (min-width: @screen-lg-min) {
-				height: @hero-lg-height;
-				max-height: @hero-lg-height;
-			}
-		}
-	}
+        .no-flexbox & {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+      @media (min-width: @screen-md-min) {
+        height: @hero-md-height;
+        max-height: @hero-md-height;
+        p, ol, ul {
+          font-size: 24px;
+        }
+      }
+      @media (min-width: @screen-lg-min) {
+        height: @hero-lg-height;
+        max-height: @hero-lg-height;
+      }
+    }
+  }
 
-	&.landing {
-		.container {
-			position: relative;
-			& > h1 {
-				position: absolute;
-				bottom: 0;
-				left: 15px;
-				z-index: 1;
-				margin: 0;
-				font-size: 50px;
-				line-height: 0.7;
-				color: @white;
-				text-shadow: 0 -2px 3px rgba(0, 0, 0, .22);
-				.serif-font(bold);
-			}
-			@media (min-width: @screen-sm-min) {
-				& > h1 {
-					font-size: 90px;
-				}
-			}
-			@media (min-width: @screen-md-min) {
-				& > h1 {
-					font-size: 120px;
-				}
-			}
-		}
+  &.landing {
+    .container {
+      position: relative;
+      & > h1 {
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        z-index: 1;
+        margin: 0;
+        font-size: 50px;
+        line-height: 0.7;
+        color: @white;
+        text-shadow: 0 -2px 3px rgba(0, 0, 0, .22);
+        .serif-font(bold);
+      }
+      @media (min-width: @screen-sm-min) {
+        & > h1 {
+          font-size: 90px;
+        }
+      }
+      @media (min-width: @screen-md-min) {
+        & > h1 {
+          font-size: 120px;
+        }
+      }
+    }
 
-		.hero-body {
-			.strip {
-				height: @hero-xs-height;
-				padding: 15px 20px;
-				background-color: #1b1b1b;
-				/* This Flexbox styling should work in modern browsers, but IE8 and IE9 won't vertically center text if there's one line. */
-				.lh-display(flex);
-				.lh-flex-direction(column);
-				.lh-justify-content(center);
-				h5 {
-					color: #555;
-					font-size: 13px;
-					text-transform: uppercase;
-					.sans-serif-font();
-				}
-				h6 {
-					color: #d0d0d0;
-					font-size: 20px;
-				}
-				h5 + h6 {
-					margin-top: 0;
-				}
-				p, ol, ul {
-					color: @white;
-					font-size: 13px;
-				}
-				a {
-					color: #fbfb96;
-					&:hover {
-						color: darken(#fbfb96, 10%);
-					}
-				}
-				@media (min-width: @screen-sm-min) {
-					height: @hero-sm-height;
-					h5 {
-						font-size: 15px;
-					}
+    .hero-body {
+      .strip {
+        height: @hero-xs-height;
+        padding: 15px 20px;
+        background-color: #1b1b1b;
+        /* This Flexbox styling should work in modern browsers, but IE8 and IE9 won't vertically center text if there's one line. */
+        .lh-display(flex);
+        .lh-flex-direction(column);
+        .lh-justify-content(center);
+        h5 {
+          color: #555;
+          font-size: 13px;
+          text-transform: uppercase;
+          .sans-serif-font();
+        }
+        h6 {
+          color: #d0d0d0;
+          font-size: 20px;
+        }
+        h5 + h6 {
+          margin-top: 0;
+        }
+        p, ol, ul {
+          color: @white;
+          font-size: 13px;
+        }
+        a {
+          color: #fbfb96;
+          &:hover {
+            color: darken(#fbfb96, 10%);
+          }
+        }
+        @media (min-width: @screen-sm-min) {
+          height: @hero-sm-height;
+          h5 {
+            font-size: 15px;
+          }
 
-					h6 {
-						font-size: 26px;
-					}
+          h6 {
+            font-size: 26px;
+          }
 
-					p, ol, ul {
-						font-size: 14px;
-					}
-				}
-				@media (min-width: @screen-md-min) {
-					height: @hero-md-height;
-					padding: 35px 20px;
-					p, ol, ul {
-						font-size: 15px;
-					}
-				}
-				@media (min-width: @screen-lg-min) {
-					height: @hero-lg-height;
-				}
-			}
-		}
-	}
+          p, ol, ul {
+            font-size: 14px;
+          }
+        }
+        @media (min-width: @screen-md-min) {
+          height: @hero-md-height;
+          padding: 35px 20px;
+          p, ol, ul {
+            font-size: 15px;
+          }
+        }
+        @media (min-width: @screen-lg-min) {
+          height: @hero-lg-height;
+        }
+      }
+    }
+  }
 }

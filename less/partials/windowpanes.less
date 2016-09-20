@@ -1,89 +1,90 @@
 .windowpane {
-	position: relative;
-	padding-bottom: 33.3333333%;
-	overflow: hidden;
-	min-height: 330px;
-	background-size: cover;
+  position: relative;
+  padding-bottom: 33.3333333%;
+  overflow: hidden;
+  min-height: 330px;
+  background-size: cover;
 
-	.windowpane-desc {
-		position: absolute;
-		bottom: 1.5em;
+  .windowpane-desc {
+    position: absolute;
+    bottom: 1.5em;
 
-        &:hover > .windowpane-rollup {
-            opacity: 0.85;
+    &:hover > .windowpane-rollup {
+      opacity: 0.80;
+    }
+
+    &.introduction {
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &.full-panel {
+      width: 100%;
+      top: 0;
+
+      li.list-group-item {
+        background-color: transparent;
+
+        a {
+          color: #FFF
         }
+      }
 
-		&.introduction {
-			top: 50%;
-			transform: translate(0, -50%);
-		}
+    }
 
-		&.full-panel {
-			width: 100%;
-			top: 0;
+    .windowpane-rollup {
+      background-color: #000;
+      color: #fff;
+      padding: 8px;
+      opacity: 0;
 
-			li.list-group-item {
-				background-color: transparent;
+      -webkit-transition: opacity 0.7s;
+      -moz-transition: opacity 0.7s;
+      -o-transition: opacity 0.7s;
+      -ms-transition: opacity 0.7s;
+      transition: opacity 0.7s;
+    }
 
-				a {
-					color: #FFF
-				}
-			}
+    .btn-default-outline {
+      .button-outline-variant(#fff);
+    }
 
-		}
+    .btn-default-outline,
+    .btn-outline {
+      &:focus,
+      &.focus,
+      &:hover,
+      &:active,
+      &.active,
+      .open > .dropdown-toggle& {
+        color: #000;
 
-		.windowpane-rollup {
-            background-color: #000;
-            color: #fff;
-            padding: 8px;
-            opacity: 0;
-
-            -webkit-transition: opacity 0.7s;
-            -moz-transition: opacity 0.7s;
-            -o-transition: opacity 0.7s;
-            -ms-transition: opacity 0.7s;
-            transition: opacity 0.7s;
+        &:hover,
+        &:focus,
+        &.focus {
+          color: #000;
         }
-
-		.btn-default-outline {
-			.button-outline-variant(#fff);
-		}
-
-		.btn-default-outline,
-		.btn-outline {
-			&:focus,
-			&.focus,
-			&:hover,
-			&:active,
-			&.active,
-			.open > .dropdown-toggle& {
-				color: #000;
-
-				&:hover,
-				&:focus,
-				&.focus {
-					color: #000;
-				}
-			}
-		}
-	}
-	.windowpane-background {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 0;
-		width: 100%;
-		height: 100%;
-		background-size: cover;
-	}
+      }
+    }
+  }
+  .windowpane-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
 }
 
 .row-no-padding {
-	margin-left: 0;
-	margin-right: 0;
-	padding-bottom: 0 !important;
+  margin-left: 0;
+  margin-right: 0;
+  padding-bottom: 0 !important;
 }
+
 .row-no-padding [class*="col-"] {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

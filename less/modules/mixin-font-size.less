@@ -2,6 +2,6 @@
 .font-size(@sizeValue) {
   @remValue: @sizeValue / @baseHtmlFontSize; // The constant here should be changed if the font-size on the html element is changed.
   @pxValue: (@sizeValue);
-  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{pxValue}px";
   font-size: ~"@{remValue}rem";
 }
