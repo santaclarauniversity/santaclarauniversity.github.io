@@ -4,24 +4,47 @@
 	overflow: hidden;
 	min-height: 330px;
 	background-size: cover;
+
 	.windowpane-desc {
 		position: absolute;
 		bottom: 1.5em;
+
+        &:hover > .windowpane-rollup {
+            opacity: 0.85;
+        }
+
 		&.introduction {
 			top: 50%;
 			transform: translate(0, -50%);
 		}
+
 		&.full-panel {
 			width: 100%;
 			top: 0;
+
 			li.list-group-item {
 				background-color: transparent;
+
 				a {
 					color: #FFF
 				}
 			}
 
 		}
+
+		.windowpane-rollup {
+            background-color: #000;
+            color: #fff;
+            padding: 8px;
+            opacity: 0;
+
+            -webkit-transition: opacity 0.7s;
+            -moz-transition: opacity 0.7s;
+            -o-transition: opacity 0.7s;
+            -ms-transition: opacity 0.7s;
+            transition: opacity 0.7s;
+        }
+
 		.btn-default-outline {
 			.button-outline-variant(#fff);
 		}

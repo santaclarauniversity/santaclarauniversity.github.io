@@ -4784,6 +4784,9 @@ html.flexbox .infographic.module.window .infographic-label {
   position: absolute;
   bottom: 1.5em;
 }
+.windowpane .windowpane-desc:hover > .windowpane-rollup {
+  opacity: 0.85;
+}
 .windowpane .windowpane-desc.introduction {
   top: 50%;
   transform: translate(0, -50%);
@@ -4797,6 +4800,17 @@ html.flexbox .infographic.module.window .infographic-label {
 }
 .windowpane .windowpane-desc.full-panel li.list-group-item a {
   color: #FFF;
+}
+.windowpane .windowpane-desc .windowpane-rollup {
+  background-color: #000;
+  color: #fff;
+  padding: 8px;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s;
+  -moz-transition: opacity 0.7s;
+  -o-transition: opacity 0.7s;
+  -ms-transition: opacity 0.7s;
+  transition: opacity 0.7s;
 }
 .windowpane .windowpane-desc .btn-default-outline {
   color: #fff;
