@@ -76,10 +76,7 @@ const config = {
   },
   // Paths to "output" files that either do not get compiled/have already been compiled
   out: {
-    scripts: {
-      bower: `${rootConfig.js}bower/`,
-      scu: `${rootConfig.js}min/`,
-    },
+    scripts: rootConfig.js,
     styles: {
       fabricator: `${rootConfig.css}fabricator/`,
       scu: rootConfig.css,
@@ -167,7 +164,7 @@ gulp.task('styles', ['styles:fabricator', 'styles:bootstrap', 'styles:ieCompatib
 
 
 // scripts
-const webpackConfig = require('./webpack.config')(config);
+const webpackConfig = require('./webpack.config.js')(config);
 
 gulp.task('scripts:fabricator', function (done) {
   webpack(webpackConfig, (err, stats) => {
@@ -188,18 +185,20 @@ gulp.task('scripts:scu', () => {
   for (let include in config.src.scripts.bower) {
     gulp.src(config.src.scripts.bower[include])
       .pipe(clone())
-      .pipe(gulp.dest(config.out.scripts.bower));
+      .pipe(gulp.dest(config.out.scripts));
   }
 
-  // Before we write the JS out in scripts:fabricator, we want to validate it all
   return gulp.src(config.src.scripts.scu)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
     .pipe(babel({
-      presets: ['babili']
+      presets: ['babili'],
     }))
-    .pipe(gulp.dest(config.out.scripts.scu));
+    .pipe(rename({
+      extname: '.min.js',
+    }))
+    .pipe(gulp.dest(config.out.scripts));
 });
 
 gulp.task('scripts', ['scripts:scu', 'scripts:fabricator']);
@@ -247,8 +246,10 @@ gulp.task('serve', () => {
   gulp.watch([`${rootConfig.less}**/*.less`, `!${rootConfig.assets}bootstrap/**/*.less`],
     ['styles:scu:watch']);
 
-  gulp.task('scripts:watch', ['scripts'], browserSync.reload);
-  gulp.watch(config.src.scripts.scu, ['scripts:watch']);
+  // There could be a scripts:fabricator:watch here, but we don't really need it.
+
+  gulp.task('scripts:scu:watch', ['scripts:scu'], browserSync.reload);
+  gulp.watch(config.src.scripts.scu, ['scripts:scu:watch']);
 });
 
 

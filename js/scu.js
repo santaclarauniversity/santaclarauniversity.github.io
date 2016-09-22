@@ -1,7 +1,6 @@
 /**
  * Toolkit JavaScript
  */
-console.log('hello');
 
 /**
  * Feature Gallery / Jumbotron
@@ -450,7 +449,7 @@ $(document).ready(() => {
           initMainNavAffix();
           if (!$mainNav.hasClass('affix')) {
             $mainNav.css('top', `${$gatewayNav.outerHeight() + $gatewayNav.offset().top -
-              $(document).scrollTop() - 1}px`);
+            $(document).scrollTop() - 1}px`);
           }
         },
         step(now) {
