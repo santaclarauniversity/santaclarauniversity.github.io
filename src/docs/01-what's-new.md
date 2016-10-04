@@ -1,6 +1,7 @@
 ```v1.0.6```
 - Updated Fontello - uses latest icon fonts available (most notably, Instagram is updated) and added the SCU seal.
 - Replaced the PNG logos in the header with the seal from the Fontello icon set.
+- Fixed the social demos to reintroduce the icon-based seal.
 
 
 ```v1.0.5```
