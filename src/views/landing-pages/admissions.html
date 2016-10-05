@@ -6,6 +6,50 @@ layout: demo
   .site-header.uses-core-navigation {
     margin-bottom: -25px;
   }
+  .academics {
+    padding: 20px;
+    border: 1px solid black;
+    -webkit-transition: all 100ms;
+    transition: all 100ms;
+  }
+  .links {
+    -webkit-transition: all 100ms;
+    transition: all 100ms;
+    background: rgba(255,255,255,0.95);
+    margin-top: 7px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .links li {
+    border-bottom: 1px solid #e0dedf;
+    list-style: none;
+    margin: 0;
+    min-width: 100%;
+  }
+
+  .links li a {
+    color: #4c4e4d;
+    display: block;
+    /* font-size: 1.2em; */
+    padding: 10px 20px 10px 20px;
+  }
+
+  .links li a:hover {
+    background: #5bc0de;
+    text-decoration: none;
+  }
+  .academics a {
+    color: black;
+  }
+  .academics a:hover {
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .academics:hover {
+    background-color: #FFC107;
+  }
 </style>
 <div class="block text-center"
      style="background-image: url('/assets/images/examples/admissions_cover.png')">
@@ -45,7 +89,7 @@ layout: demo
     </div>
   </div>
 </div>
-<div class="row" style="background-color:#8dccda">
+<div class="row" style="background-color:#91d6e4">
   <div class="col-sm-8 col-md-offset-2 p-y-lg">
     <h2 class="text-inverted text-sans-bold text-center">Hey There</h2>
     <p class="intro" style="color: #000;">We're students, teachers, and mentors headquarted in the most innovative place on earth: Silicon Valley. Different people flourish here. Santa Clara University people - with their gifts and goals - drivent to build a better, kinder, more humane, and sustainable planet. We come from all walks of life. We travel seas, coasts, highways, and city blocks to call SCU home. And when we're together, home is exactly what this place feels like.</p>
@@ -160,7 +204,7 @@ layout: demo
     </div>
     <div class="col-sm-4">
       <h4 class="text-inverted">Resources</h4>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled links">
           <li><a href="/admission/undergraduate/choosing-scu/">Choosing SCU</a></li>
           <li><a href="/admission/undergraduate/first-year-students/">First-Year Students</a></li>
           <li><a href="/admission/undergraduate/transfer-students/">Transfer Students</a></li>
@@ -193,39 +237,27 @@ layout: demo
     </div>
   </div>
 </div>
-<div class="block block-inverse block-secondary app-code-block">
+<div class="block block-secondary app-code-block" style="background-color: #fbb720;">
   <div class="container">
-    <div class="row app-align-center">
-      <div class="col-sm-5 col-sm-push-7">
-        <pre class="app-code">
-<span>1</span> <span class="hidden-xs">goAnalytics</span> “who are the latest 3 users?”
-<span>2</span>
-<span>3</span>  {
-<span>4</span>    "Dave": {
-<span>5</span>      "fullName": "Dave Gamache",
-<span>6</span>      "twitterHandle": "@dhg",
-<span>7</span>    }
-<span>8</span>    "Mark": {
-<span>9</span>      "fullName": "Mark Otto",
-<span>10</span>      "twitterHandle": "@mdo",
-<span>11</span>    }
-<span>12</span>    "Jacob": {
-<span>13</span>      "fullName": "Jacob Thornton",
-<span>14</span>      "twitterHandle": "@fat",
-<span>15</span>    }
-<span>16</span>  }</pre>
-      </div>
+    <div class="row">
+      <div class="col-sm-8 col-md-offset-2">
+        <h1 class="text-serif-bold">Academics</h1>
+        <p class="lead">We're students, teachers, and mentors headquarted in the most innovative place on earth: Silicon
+          Valley. Different people flourish here. Santa Clara University people - with their gifts and goals - drivent
+          to build a better, kinder, more humane, and sustainable planet.</p>
+        <hr class="dots-left" style="border-top: 1px dashed black;">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4 class="text-sans-light academics" style="color: black;"><a href="#">College of Arts and Sciences</a></h4>
+            <h4 class="text-sans-light academics" style="color: black;"><a href="#">Leavey School of Business</a></h4>
+            <h4 class="text-sans-light academics" style="color: black;"><a href="#">School of Law</a></h4>
+          </div>
+          <div class="col-sm-6">
+            <h4 class="text-sans-light academics" style="color: black;">School of Engineering</h4>
+            <h4 class="text-sans-light academics" style="color: black;">Jesuit School of Theology</h4>
+            <h4 class="text-sans-light academics" style="color: black;">School of Education and Counseling Psychology</h4></div>
 
-      <div class="col-sm-6 col-sm-pull-5">
-        <h6 class="text-muted text-uppercase">Easy development</h6>
-        <h3 class="m-t-0">Natural language queries make mining data easy for
-          anyone.</h3>
-        <p class="lead m-b-md text-muted">Rather than force everyone at your company to
-          learn incredibly difficult terminal commands, we allow anyone to query the
-          data with natural language to return data.</p>
-        <button class="btn btn-default btn-lg btn-borderless">
-          Read our docs
-        </button>
+        </div>
       </div>
     </div>
   </div>
@@ -235,10 +267,8 @@ layout: demo
   <div class="container">
     <div class="row app-align-center">
       <div class="col-sm-5 col-sm-push-7">
-        <h6 class="text-muted text-uppercase">High Praise</h6>
-        <h3 class="m-t-0 m-b-md">“Go Analytics is amazing. Decisions that used to take
-          weeks, now only takes minutes and is available to everyone on my team.”</h3>
-        <p class="m-b-md text-muted">Cindy Smith, founder of Cool Startup</p>
+        <h1 class="text-serif-bold">Campus Life</h1>
+        <p class="lead">Welcome to the heart of Silicon Valley. Catch a Giants game at AT&T park, a wave at Half Moon Bay, or some snow at nearby Lake Tahoe.</p>
       </div>
       <div class="col-sm-6 col-sm-pull-5">
         <img src="holder.js/490x563" class="img-responsive"/>
@@ -248,7 +278,7 @@ layout: demo
 </div>
 
 <div class="block app-ribbon p-y-lg">
-  <div class="container text-center">
+  <div class="container">
     <img src="holder.js/210x30"/>
     <img src="holder.js/210x30"/>
     <img src="holder.js/210x30"/>
@@ -257,15 +287,14 @@ layout: demo
   </div>
 </div>
 
-<div class="block block-secondary app-block-marketing-grid">
+<div class="block block-secondary app-block-marketing-grid" style="background-color: #d6dfac">
   <div class="container text-center">
 
     <div class="row m-b-lg">
       <div
         class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
-        <h6 class="text-muted text-uppercase">Inside the machine</h6>
-        <h3 class="m-t-0 m-b">It’s not hard to see how we make your life easier every
-          day.</h3>
+        <h1 class="text-serif-bold">This could be your view.</h1>
+        <h3 class="m-t-0 m-b">Are you one of us?</h3>
       </div>
     </div>
 
