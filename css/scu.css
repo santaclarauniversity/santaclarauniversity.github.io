@@ -4390,6 +4390,9 @@ html.no-fontface .link-button.red {
 .icon-linkedin:before {
   content: '\e809';
 }
+.icon-scu:before {
+  content: '\e810';
+}
 /* '' */
 /*  Social brand colors  */
 /*  SCU-specific styles  */
@@ -4444,8 +4447,9 @@ html.no-fontface .link-button.red {
   background-size: cover;
 }
 .social a.scu {
-  background-image: url(/assets/images/icon-scu.png);
-  background-size: cover;
+  background-color: #b30738;
+  font-size: 60px;
+  line-height: 55px;
 }
 /**
  * Form modules:
