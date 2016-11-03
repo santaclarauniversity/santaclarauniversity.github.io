@@ -1,4 +1,8 @@
 <style type="text/css">
+  .content p {
+    color: #444444;
+  }
+
   i {
     color: #fff;
   }
@@ -19,10 +23,7 @@
   }
 
   header {
-    background-color: rgba(0, 0, 0, 0.15);
-    height: 4em;
-    padding-top: .5em;
-    text-align: center;
+    padding-top: 1em;
   }
 
   hr {
@@ -30,8 +31,11 @@
   }
 
   h2 {
+    background-color: #b30738;
     color: #fff;
     display: inline;
+    margin: 0;
+    padding: .125em;
   }
 
   h3 {
@@ -55,7 +59,8 @@
   }
 
   .landing {
-    background: url(https://magazine.scu.edu/docs/images/rte/blogapp_img/b439/lg-1610-wranglerstevens.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .2)),
+      url(https://magazine.scu.edu/docs/images/rte/blogapp_img/b439/lg-1610-wranglerstevens.jpg) no-repeat;
     background-size: cover;
     height: 40em;
   }
@@ -63,7 +68,7 @@
   .landing-text {
     align-items: flex-end;
     display: flex;
-    height: 38em;
+    height: 38.25em;
   }
 
   .landing-text h1 {
@@ -122,12 +127,58 @@
     text-align: center;
     text-transform: uppercase;
   }
+
+  .full-width-content {
+    background: radial-gradient(circle, #3a3a3a, #3e3e3e);
+    margin: 1.5em 0;
+    padding: 4em 0;
+  }
+
+  .full-width-content span {
+    color: #e9e9e9;
+    font-family: serif;
+    font-size: 8em;
+    vertical-align: middle;
+  }
+
+  .full-width-content cite {
+    color: #fff;
+    display: inline;
+    font-size: 4em;
+    font-style: normal;
+    vertical-align: middle;
+  }
+
+  .full-width-content cite strong {
+    font-size: 30%;
+    text-transform: uppercase;
+  }
+
+  .subfooter {
+    background-color: #eeeeee;
+    margin-top: 2em;
+    padding: 2em 0;
+  }
+
+  .subfooter h4 {
+    color: #1b1b1b;
+  }
+
+  .related-story img {
+    float: left;
+    margin-right: .5em;
+  }
+
+  .footer {
+    background-color: #393939;
+    padding: 2em 0;
+  }
 </style>
 <div class="landing fluid-container">
   <header>
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
-        <h2>Santa Clara University</h2>
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2><i class="icon-scu"></i>&nbsp;Santa Clara University Magazine</h2>
         <a href="#" style="font-size:1.6em;float:right;"><i class="fa fa-search"></i></a>
       </div>
     </div>
@@ -236,7 +287,20 @@
       <p>At his masters recital, the pianist played a Brahms ballade whose final note he wanted to fade away for about 30 seconds. But because the buzzing of the lights in the theater would quickly drown out the dissipating note—“the piano was in B and the lights were buzzing in B-flat,” he playfully points out—he got the OK to play the concert in the dark (the ushers had flashlights).</p>
 
       <p>“I wanted the sound of the piece dying away, and I wasn’t willing to compromise,” he says. “Without Deep Listening, I never would’ve keyed into that.”</p>
-
+    </div>
+  </div>
+</div>
+<div class="full-width-content container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <span>&ldquo;</span>
+      <cite>Quote goes here.</cite>
+    </div>
+  </div>
+</div>
+<div class="content container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
       <h3>Shall we Dance?</h3>
 
       <p>While working with Oliveros, Stevens began writing his holistic text, <em>Jazz Musicianship, A Guidebook for Integrated Learning</em>.</p>
@@ -249,10 +313,32 @@
 
       <p>“We recorded a video with shots of me dancing. It’s in the process of being edited,” Stevens says.</p>
 
-
       <p>You can read more about Stevens and Wrangler and listen to some of Bill’s music at <a href="http://billstevensjazz.com/">billstevensjazz.com</a>.</p>
 
-      <p><em>Jesse Hamlin is a Bay Area journalist who wrote about music and art as a staff writer at the </em>San Francisco Chronicle<em>, where he still writes a weekly arts column and covers a range of stories for various print and online publications. </em></p>
+      <br /><p><em>Jesse Hamlin is a Bay Area journalist who wrote about music and art as a staff writer at the </em>San Francisco Chronicle<em>, where he still writes a weekly arts column and covers a range of stories for various print and online publications. </em></p>
+    </div>
+  </div>
+</div>
+<div class="subfooter fluid-container">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-2">
+      <h4>Comments</h4>
+      <p>Comment.</p>
+    </div>
+    <div class="col-md-3">
+      <h4>Related Stories</h4>
+      <div class="related-story">
+        <img src="http://placehold.it/80x80" />
+        <h5>Related Story Title</h5>
+        <p>Some text about the related story could be found here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer fluid-container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <i class="fa fa-facebook"></i><span style="padding-left:12px;"></span><i class="fa fa-twitter"></i><span style="padding-left:12px;"></span><i class="fa fa-instagram"></i>
     </div>
   </div>
 </div>
