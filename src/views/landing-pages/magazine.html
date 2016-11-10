@@ -1,18 +1,6 @@
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet" />
 <style type="text/css">
-  .content p {
-    color: #444444;
-  }
-
-  header i {
-    color: #444444;
-    vertical-align: bottom;
-  }
-
-  .footer i {
-    color: #fff;
-  }
-
+  /* Global */
   em {
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -28,149 +16,241 @@
     width: 100%;
   }
 
-  header {
-    padding: 1em 0;
+
+  /* Navbar */
+  .navbar {
+    background: radial-gradient(circle, #f2f2f2, #fff);
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .25);
+    margin-bottom: 0;
+    z-index: 10;
   }
 
-  hr {
-    border: 1px solid rgba(179, 7, 56, .2);
+  .navbar input, .navbar button {
+    border-radius: 0;
   }
 
-  h2 {
-    color: #585858;
-    display: inline;
-    font-size: 2em;
-    margin: 0;
+
+  /* Main Story Section */
+  .main-story, .digital-print {
+    height: 40rem;
+    padding: 0;
   }
 
-  h3 {
-    color: #b30738;
-    font-size: 250%;
-    font-weight: 300;
-    margin: 2em 0 1em 0;
-    text-indent: -2em;
-  }
-
-  h4 {
-    color: #585858;
-  }
-
-  nav ul li {
-    display: inline;
-    padding: 0 1em;
-  }
-
-  nav ul li a {
-    color: white;
-    font-size: 85%;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-
-  .landing {
-    background: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .15)),
-    url(https://magazine.scu.edu/docs/images/rte/blogapp_img/b439/lg-1610-wranglerstevens.jpg) no-repeat;
+  .main-story {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, .15)),
+      url(https://magazine.scu.edu/docs/images/rte/blogapp_img/b439/lg-1610-wranglerstevens.jpg) no-repeat;
     background-size: cover;
-    height: 40em;
   }
 
-  .landing-text {
+  .main-story-overlay, .digital-print-overlay {
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+  }
+
+  .main-story:hover > .main-story-overlay, .digital-print:hover > .digital-print-overlay {
+    background-color: #000;
+    cursor: pointer;
+    height: 100%;
+    opacity: .2;
+    position: absolute;
+    width: 100%;
+  }
+
+  .main-story-text {
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 37.5em;
     text-align: center;
   }
 
-  .landing-text h1 {
+  .main-story-text h1 {
     color: #fff;
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;
     font-style: italic;
+    z-index: 3;
   }
 
-  .landing-text cite {
+  .main-story-text h1 span {
+    padding: 2px;
+  }
+
+  .main-story-text cite {
     background-color: #fff;
     color: #3c3c3c;
-    padding: 6px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    margin: 0 auto;
+    max-width: 75%;
+    padding: 1px;
+    z-index: 3;
   }
 
-  .landing-text .subtitle {
+  .main-story-text .subtitle {
     display: block;
     font-family: sans-serif;
     font-size: 180%;
     font-style: normal;
-    margin-top: 6px;
     text-transform: uppercase;
   }
 
+
+  /* Digital Print Cover Photo */
+  .digital-print {
+    margin: 0;
+    padding: 0;
+  }
+
+  .digital-print img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .content p {
+    color: #444444;
+  }
+
+  .footer i {
+    color: #fff;
+  }
+
+
+  /* All types of main content (below landing) */
   .content {
     font-family: 'Playfair Display', serif;
     padding-top: 2em;
   }
 
-  cite {
-    font-family: 'Playfair Display', serif;
-    font-size: 2em;
-  }
-
-  .quote {
-    border-left: 4px solid #b30738;
-    float: right;
-    font-weight: bold;
-    margin: 2em -10em 2em 2em;
-    padding-left: 1em;
+  /* Cool utility class which lets us add an inline "hr" emulator next to a header element */
+  .hr-inline {
+    overflow: hidden;
     position: relative;
   }
 
-  .photo {
-    float: right;
-    margin: 2em -10em 2em 2em;
+  .hr-inline h4 {
+    background-color: #fff;
+    display: inline-block;
+    font-size: 150%;
+    padding-right: 1em;
+    margin-bottom: 0;
     position: relative;
   }
 
-  .caption {
-    border-left: 4px solid #b30738;
-    color: #999;
-    margin-top: 1em;
-    padding: 1em;
+  .hr-inline:before {
+    border-top: 1px solid #eaeaea;
+    content: '';
+    height: 0;
+    left: auto;
+    position: absolute;
+    right: 1em;
+    top: 49%;
+    width: 100%;
   }
 
-  .caption h4 {
-    color: #999;
+
+  /* Fluid, full-width content section which uniquely pops out from rest of main content: here, it's latest news */
+  .latest-news {
+    background-color: #494949;
+    margin: 0;
+    padding: 2em 0;
   }
 
-  .author {
-    font-weight: bolder;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  .full-width-content {
-    background: radial-gradient(circle, #3a3a3a, #3e3e3e);
-    margin: 1.5em 0;
-    padding: 4em 0;
-  }
-
-  .full-width-content span {
-    color: #e9e9e9;
-    font-family: 'Playfair Display', serif;
-    font-size: 8em;
-    vertical-align: middle;
-  }
-
-  .full-width-content cite {
+  .latest-news h4 {
     color: #fff;
-    display: inline;
-    font-size: 4em;
-    font-style: normal;
-    vertical-align: middle;
   }
 
-  .full-width-content cite strong {
-    font-size: 30%;
+  .latest-news hr {
+    border-top: 1px solid #785d5d;
+    display: block;
+    height: 1px;
+    margin: -.5em 0 1em 0;
+    width: 100%;
+  }
+
+  .latest-news .story h5 {
+    color: #eaeaea;
+  }
+
+  .latest-news .story h4 {
+    color: #fff;
+  }
+
+  .latest-news .story p {
+    color: #e3e3e3;
+  }
+
+
+  /* Story elements which are on the light, default background color */
+  .story img {
+    margin-bottom: 1em;
+    width: 100%;
+  }
+
+  .story h4, .story h5, .story p {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .story h5 {
+    color: #666666;
+    font-size: .75em;
+    margin: 0;
     text-transform: uppercase;
   }
+
+  .story h4 {
+    color: #131313;
+    font-weight: bolder;
+    margin: 0 0 .35em 0;
+  }
+
+  .story p {
+    color: #2d2d2d;
+  }
+
+  .story-popular h4 {
+    align-items: center;
+    display: flex;
+    font-size: 85%;
+  }
+
+  .story-popular > div > div:last-child {
+    margin-top: .75em;
+    margin-left: -18px;
+  }
+
+
+  .category {
+    margin-top: 2em;
+  }
+
+  .category:first-child {
+    margin-top: 0;
+  }
+
+  .categories table {
+    margin-bottom: .5em;
+  }
+
+  .categories table tr td {
+    border: 0;
+  }
+
+  .categories table tr td a {
+    color: #101010;
+  }
+
+  .categories table tr td a:hover {
+    color: #636363;
+    text-decoration: underline;
+  }
+
+  .categories table tr td:before {
+    content: '\00bb\00a0';
+  }
+
 
   .subfooter {
     background-color: #eeeeee;
@@ -182,82 +262,217 @@
     color: #1b1b1b;
   }
 
-  .related-story img {
-    float: left;
-    margin-right: .5em;
-  }
-
   .footer {
     background-color: #393939;
     margin: 0;
     padding: 2em 0;
   }
-
-  .story h5 {
-    color: #585858;
-    font-size: .75em;
-    margin: 0;
-    text-transform: uppercase;
-  }
-
-  .story h4 {
-    color: #000;
-    font-weight: bolder;
-    margin: 0 0 .35em 0;
-  }
-
-  .story p {
-
-  }
 </style>
-<div class="landing fluid-container">
-  <div class="row" style="background-color:#fff">
-    <div class="col-sm-8 col-sm-offset-2">
-      <header>
-        <h2><i class="icon-scu"></i>&nbsp;Santa Clara University Magazine</h2>
-        <a href="#" style="font-size:1.6em;float:right;"><i class="fa fa-search"></i></a>
-      </header>
+<div class="fluid-container">
+  <div class="row">
+    <div class="col-sm-12">
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><i class="icon-scu"></i>&nbsp;SCU Magazine</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search" />
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>
+      </nav>
     </div>
   </div>
-  <div class="row">
-    <div class="landing-text">
-      <div class="col-md-12">
-        <h1><span style="background-color:#b30738;padding:4px;">Bill Stevens</span> <span class="subtitle"><span style="background-color:#b30738;padding:4px;">and Wrangler</span></span></h1>
+  <div class="row landing-split">
+    <div class="col-md-7 col-md-offset-1 main-story">
+      <div class="main-story-overlay"></div>
+      <div class="main-story-text">
+          <h1>
+            <span style="background-color:#b30738">Bill Stevens</span>
+            <span class="subtitle">
+              <span style="background-color:#b30738">and Wrangler</span>
+            </span>
+          </h1>
+      </div>
+      <div class="main-story-text">
         <cite>A dog with millions of fans. And a blind jazz pianist teaching students to do more than they imagined possible.</cite>
       </div>
     </div>
+    <div class="col-md-3 digital-print">
+      <div class="digital-print-overlay"></div>
+      <a href="#"><img src="/assets/images/scu-mag-cover.png" alt="SCU Magazine Digital Print" /></a>
+    </div>
   </div>
 </div>
-<div class="content container">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-2">
-      <h4>Latest News</h4>
+<div class="content categories fluid-container">
+  <div class="row category">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="hr-inline">
+            <h4 class="text-sans-light">Athletics</h4>
+          </div>
+        </div>
+        <div class="row" style="margin-top:1em">
+          <div class="col-md-4 story">
+            <img src="http://placehold.it/300x180" />
+            <h5>November 3, 2016</h5>
+            <h4>Story Example</h4>
+            <p class="text-sans-light">Text for the example story would go here.</p>
+          </div>
+          <div class="col-md-4 story">
+            <img src="http://placehold.it/300x180" />
+            <h5>November 3, 2016</h5>
+            <h4>Story Example</h4>
+            <p class="text-sans-light">Text for the example story would go here.</p>
+          </div>
+          <div class="col-md-4 story">
+            <img src="http://placehold.it/300x180" />
+            <h5>November 3, 2016</h5>
+            <h4>Story Example</h4>
+            <p class="text-sans-light">Text for the example story would go here.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h4 class="text-sans-light">Categories</h4>
+        <table class="table table-responsive">
+          <tr>
+            <td><a href="#">Athletics</a></td>
+            <td><a href="#">Category 2</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Category 3</a></td>
+            <td><a href="#">Category 4</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Category 5</a></td>
+            <td><a href="#">Category 6</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Category 7</a></td>
+            <td><a href="#">Category 8</a></td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-2 col-md-offset-2 story">
-      <h5>November 3, 2016</h5>
-      <h4>Story Example</h4>
-      <p class="text-sans-light">Text for the example story would go here.</p>
-    </div>
-    <div class="col-md-2 story">
-      <h5>November 3, 2016</h5>
-      <h4>Story Example</h4>
-      <p class="text-sans-light">Text for the example story would go here.</p>
-    </div>
-    <div class="col-md-2 story">
-      <h5>November 3, 2016</h5>
-      <h4>Story Example</h4>
-      <p class="text-sans-light">Text for the example story would go here.</p>
-    </div>
-    <div class="col-md-2 story">
-      <h5>November 3, 2016</h5>
-      <h4>Story Example</h4>
-      <p class="text-sans-light">Text for the example story would go here.</p>
+  <div class="row category">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="hr-inline">
+            <h4 class="text-sans-light">Category 2</h4>
+          </div>
+        </div>
+        <div class="row" style="margin-top:1em">
+          <div class="col-md-4 story">
+            <img src="http://placehold.it/300x180" />
+            <h5>November 3, 2016</h5>
+            <h4>Story Example</h4>
+            <p class="text-sans-light">Text for the example story would go here.</p>
+          </div>
+          <div class="col-md-4 story">
+            <img src="http://placehold.it/300x180" />
+            <h5>November 3, 2016</h5>
+            <h4>Story Example</h4>
+            <p class="text-sans-light">Text for the example story would go here.</p>
+          </div>
+          <div class="col-md-4 story">
+            <img src="http://placehold.it/300x180" />
+            <h5>November 3, 2016</h5>
+            <h4>Story Example</h4>
+            <p class="text-sans-light">Text for the example story would go here.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h4 class="text-sans-light">Popular</h4>
+        <div class="row">
+          <div class="story story-popular">
+            <div class="row">
+              <div class="col-md-3 col-md-offset-1">
+                <img src="http://placehold.it/100x50" />
+              </div>
+              <div class="col-md-8">
+                <a href="#">Story Example</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="story story-popular">
+            <div class="row">
+              <div class="col-md-3 col-md-offset-1">
+                <img src="http://placehold.it/100x50" />
+              </div>
+              <div class="col-md-8">
+                <a href="#">Story Example</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+  <div class="row category">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="hr-inline">
+            <h4 class="text-sans-light">Category 2</h4>
+          </div>
+        </div>
+        <div class="row" style="margin-top:1em">
+          <div class="col-md-4 story">
+            <img src="http://placehold.it/300x180" />
+            <h5>November 3, 2016</h5>
+            <h4>Story Example</h4>
+            <p class="text-sans-light">Text for the example story would go here.</p>
+          </div>
+          <div class="col-md-4 story">
+            <img src="http://placehold.it/300x180" />
+            <h5>November 3, 2016</h5>
+            <h4>Story Example</h4>
+            <p class="text-sans-light">Text for the example story would go here.</p>
+          </div>
+          <div class="col-md-4 story">
+            <img src="http://placehold.it/300x180" />
+            <h5>November 3, 2016</h5>
+            <h4>Story Example</h4>
+            <p class="text-sans-light">Text for the example story would go here.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h4 class="text-sans-light">Class Notes</h4>
+        <table class="table table-responsive table-smaller">
+          <tr>
+            <td><a href="#">2016</a></td>
+            <td><a href="#">2015</a></td>
+            <td><a href="#">2014</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">2013</a></td>
+            <td><a href="#">2012</a></td>
+            <td><a href="#">2011</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">2010</a></td>
+            <td><a href="#">2009</a></td>
+            <td><a href="#">2008</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">2007</a></td>
+            <td><a href="#">2006</a></td>
+            <td><a href="#">2005</a></td>
+          </tr>
+        </table>
+        <a href="#">View More..</a>
+      </div>
     </div>
   </div>
 </div>
