@@ -3,6 +3,27 @@ title: Find My Counselor
 layout: demo
 ---
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#locate-me").on( "click", function () {
+      $(".counselor-search").hide();
+      $(".zip-code").show();
+      $(".my-counselor").show("slow");
+    });
+    $("#counselor-search-input").keypress(function (event) {
+      $(".counselor-search").hide();
+      $(".zip-code").show();
+      $(".my-counselor").show("slow");
+    });
+    $("#contact-counselor").on( "click", function () {
+      $(".zip-code").hide();
+      $(".counselor-search").hide();
+      $(".contact-block").show();
+    });
+  });
+</script>
 <style type="text/css">
   .card-text a {
     color: #ffffff;
@@ -38,6 +59,36 @@ layout: demo
     border-top: solid 1px white;
     z-index: -1;
   }
+  .contact-block,
+  .zip-code,
+  .my-counselor{
+    display: none;
+  }
+  .contact-block input {
+    display:inline-block;
+    clear: both;
+    margin-bottom: 10px;
+    width: 45%;
+  }
+  #form-message {
+    margin-bottom: 10px;
+  }
+  .counselor-img {
+    display: block;
+  }
+  .counselor-card {
+    padding: 10px;
+  }
+  #all-counselors{
+    margin: 10px 0 10px 0;
+    float: left;
+  }
+
+  #international-students{
+    margin: 10px 0 10px 0;
+    float: right;
+  }
+
 </style>
 <div class="container" id="content">
   <div class="row">
@@ -50,51 +101,84 @@ layout: demo
         <li><a href="/admitted/events-for-admitted-students/">Contact Us</a></li>
       </ol>
       <div class="col-md-6 centered">
-        <div class="card card-inverse card-primary text-xs-center text-center">
+        <div class="card card-inverse card-primary">
           <div class="card-block">
-            <h4 class="card-title" >Find Your Counselor </h4>
-            <button class="btn btn-default btn-outline">Use My Location <i class="fa fa-map-marker" aria-hidden="true"></i></button>
-            <p class="horizontal-text"><span class="horizontal-line">Or</span></p>
-            <p class="card-text">Find by Zip or Address</p>
-            <form action="/search/" method="get">
+            <div class="counselor-search text-xs-center text-center" >
+              <h4 class="card-title" >Find Your Counselor </h4>
+              <button id="locate-me" class="btn btn-default btn-outline">Use My Location <i class="fa fa-map-marker" aria-hidden="true"></i></button>
+              <p class="horizontal-text"><span class="horizontal-line">Or</span></p>
+              <h6 class="card-title">Find by Zip or Address</h6>
+              <form method="get">
                 <div class="input-group">
-                  <input type="search" class="form-control" id="counselor-search" placeholder="e.g. 95128, 95053, 46077, etc. ">
+                  <input type="search" class="form-control" id="counselor-search-input" placeholder="e.g. 95128, 95053, 46077, etc. ">
                   <span class="input-group-btn">
                     <button class="btn btn-default search-icon" type="submit" aria-label="Submit"><span
-                            class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                      class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                   </span>
                 </div>
-            </form>
-            <p class="card-text">Your counselor is</p>
-            <p class="card-text"><a href="/admission/international" class="pull-right" >International</a></p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="row">
-            <div class="col-md-3">
-              <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Card image cap">
+              </form>
+              <button id="all-counselors" class="btn btn-default">All Counselors</button>
+              <p id="international-students" class="card-text"><a href="/admission/international" class="pull-right" >International</a></p>
             </div>
-            <div class="col-md-5">
+            <div class="contact-block">
               <div class="card-block">
-                <h4 class="card-title">Eva Blanco</h4>
-                <p class="card-text">Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.</p>
+                <h4 class="card-title" >Contact Eva Blanco </h4>
+                <form action="" method="post">
+                  <input type="text" name="name" class="form-control" placeholder="First Name">
+                  <input type="text" name="last-name" class="form-control " placeholder="Last Name">
+                  <input type="email" name="email" class="form-control" placeholder="Email">
+                  <input type="text" name="zip-code" class="form-control" placeholder="95128">
+                  <textarea name="textarea"  class="form-control" id="form-message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                </form>
+                <button class="btn btn-default btn-outline">Send</button>
+              </div>
+            </div>
+            <div class="zip-code">
+              <input type="search" class="form-control" placeholder="95128">
+            </div>
+            <div class="my-counselor text-center">
+              <h6 class="card-text">Your counselor is</h6>
+            </div>
+            <div class="card my-counselor" id="counselor-card-block">
+              <div class="row">
+                <div class="col-md-5">
+                  <img class="counselor-img" src="http://placehold.it/200x200" alt="Card image cap">
+                </div>
+                <div class="col-md-7">
+                  <div class="counselor-info">
+                    <h4 class="">Eva Blanco</h4>
+                    <p class="">Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.</p>
+                    <button id="contact-counselor" class="btn btn-primary">Contact Eva</button>
+                    <button class="btn btn-default">All Counselors</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="card card-inverse card-primary">
-            <div class="card-block">
-              <h4 class="card-title" >Contact Us </h4>
-              <form action="" method="post">
-                <input type="text" class="form-control" placeholder="First Name">
-                <input type="text" class="form-control" placeholder="Last Name">
-                <input type="email" class="form-control" placeholder="Email">
-
-              </form>
+      </div>
+      <div class="col-md-8 centered">
+        <div class="card card-primary card-inverse">
+          <div class="card-block">
+            <h4 class="card-title" >Our Counselors</h4>
+            <div class="counselor-list">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img class="card-img-top" src="http://placehold.it/212x180" alt="Card image cap">
+                    <div class="card-block">
+                      <h4>Eva Blanco</h4>
+                      <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
+                      </p>
+                      <a href="#" class="btn btn-primary">Contact Eva</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
