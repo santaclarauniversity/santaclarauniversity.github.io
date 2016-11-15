@@ -5772,6 +5772,11 @@ fieldset[disabled] .btn-danger-outline.active {
 .bs-card div a {
   color: #eeeeee;
 }
+.agenda .row {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
 /*  Search Results  */
 h2.search_title span {
   font-family: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
