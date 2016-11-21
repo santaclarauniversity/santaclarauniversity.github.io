@@ -1,6 +1,7 @@
 ```v1.0.7```
 - Removed extraneous images and prototypes from launched projects.
 - Added the [Agenda](/content-types.html#agenda) content type.
+- Added [Print Style Guide](/docs.html#print-style-guide) documentation.
 
 ```v1.0.6```
 - Updated Fontello - uses latest icon fonts available (most notably, Instagram is updated) and added the SCU seal.
