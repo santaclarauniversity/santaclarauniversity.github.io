@@ -3,56 +3,20 @@ title: Find My Counselor
 layout: demo
 ---
 <!--
+  Instructions:
   Press any key or Use My Location to test functionality if there is only a single result.
   For multiple results press the spacebar.
 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-<script>
-  $(document).ready(function(){
-    $("#locate-me").on( "click", function () {
-      $(".counselor-search").hide();
-      $(".counselor-filter").show();
-      $(".my-counselor").show("slow");
-    });
-    $("#counselor-search-input").keypress(function (event) {
-        if(event.which == 32){
-          $(".counselor-filter").show();
-          $(".counselor-search").hide();
-          $(".our-counselors").show("slow");
-        }
-        else {
-          $(".counselor-search").hide();
-          $(".counselor-filter").show();
-          $(".my-counselor").show("slow");
-        }
-    });
-    $(".contact-counselor").on( "click", function () {
-        $(".counselor-filter").hide();
-        $(".counselor-search").hide();
-        $(".contact-block").show("slow");
-    });
-    $("#all-counselors").on("click", function(){
-        $("#fmc-main-block").hide();
-        $(".counselor-search").hide();
-        $(".all-counselors").show();
-    });
-    $("#fmc-button").on("click", function () {
-        $(".all-counselors").hide();
-        $("#fmc-main-block").show();
-        $(".counselor-search").show();
-    });
-  });
-</script>
 <style type="text/css">
+
   .card-text a {
-    color: #ffffff;
+    color: #000;
     text-decoration: underline;
     padding: 5px 10px 5px 10px;
   }
   .card-text a:hover {
-    background-color:#690521;
+    background-color:#7F2B25;
     color: #fff;
   }
   .centered {
@@ -130,9 +94,14 @@ layout: demo
   .counselor-header{
     margin-bottom: 10px;
   }
-  .card-fmc {
+  .card-fmc,
+  .btn-fmc{
     background-color: #d9534f;
     border-color: #d9534f;
+  }
+  .btn-fmc:hover{
+    background-color: #7F2B25;
+    border-color: #a53129;
   }
   .counselor-name {
     color: #46b6ac;
@@ -156,9 +125,15 @@ layout: demo
         <li><a href="/admitted/events-for-admitted-students/">Undergraduate</a></li>
         <li><a href="/admitted/events-for-admitted-students/">Contact Us</a></li>
       </ol>
+      <div id="instructions">
+        <h4>Instructions</h4>
+        <p>To simulate a single counselor press "Use My Location" or enter any key into the search bar. </p>
+        <p>To simulate multiple counselors press the space bar. With multiple counselor results, filtering by counselor is activated.</p>
+        <p>To see all counselors, press all-counselors.</p>
+      </div>
       <div class="row" id="fmc-main-block">
         <div class="col-md-6 centered">
-          <div class="card card-inverse card-primary card-fmc">
+          <div class="card card-primary card-fmc">
             <div class="card-block">
               <div class="counselor-search text-xs-center text-center" >
                 <h4 class="fyc-title">Find Your Counselor </h4>
@@ -177,9 +152,8 @@ layout: demo
                 <button id="all-counselors" class="btn btn-default">All Counselors</button>
                 <p id="international-students" class="card-text"><a href="/admission/international" class="pull-right" >International</a></p>
               </div>
-              <div class="contact-block">
-                <div class="card-block">
-                  <h4 class="card-title" >Contact Eva Blanco </h4>
+              <div class="contact-block card-block">
+                  <h4 class="fyc-title">Contact Eva Blanco </h4>
                   <form action="" method="post">
                     <input type="text" name="name" class="form-control" placeholder="First Name">
                     <input type="text" name="last-name" class="form-control " placeholder="Last Name">
@@ -188,7 +162,6 @@ layout: demo
                     <textarea name="textarea"  class="form-control" id="form-message" cols="30" rows="10" placeholder="Your Message"></textarea>
                   </form>
                   <button class="btn btn-default btn-outline">Send</button>
-                </div>
               </div>
               <div class="counselor-filter text-center">
                 <label class="zip-code-label">Zip Code</label>
@@ -204,8 +177,8 @@ layout: demo
           </div>
         </div>
       </div>
-      <div class="row" >
-        <div class="my-counselor col-md-12" id="counselor-card-block">
+      <div class="my-counselor row" >
+        <div class="col-md-12" id="counselor-card-block">
           <h4 class="text-center">Your counselor is</h4>
           <div class="counselor-info">
             <div class="col-md-4 centered ">
@@ -223,9 +196,9 @@ layout: demo
           </div>
         </div>
       </div>
-      <div class="row our-counselors">
+      <div class="our-counselors row">
         <div class="col-md-12 centered">
-          <h4 class="card-title" >Our Counselors</h4>
+          <h4 class="card-title" >Your Counselors</h4>
           <div class="counselor-list">
             <div class="row">
               <div class="col-md-4">
@@ -268,21 +241,21 @@ layout: demo
           </div>
         </div>
       </div>
-      <div class="row all-counselors">
-        <div class="row counselor-header">
+      <div class="all-counselors row">
+        <div class="counselor-header row">
           <h4 class="fmc-title">All Counselors</h4>
-          <button id="fmc-button" class="btn btn-primary">Find My Counselor</button>
+          <button id="fmc-button" class="btn btn-primary btn-fmc">Find My Counselor</button>
         </div>
         <div class="row">
           <div class="col-md-4">
             <div class="card">
               <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
               <div class="card-block text-center">
-                <h4>Eva Blanco</h4>
-                <h6><em>Dean of Undergraduate Admission</em></h6>
+                <h4 class="counselor-name">Eva Blanco</h4>
+                <h6 class="counselor-title"><em>Dean of Undergraduate Admission</em></h6>
                 <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
                 </p>
-                <a href="#" class="btn btn-primary">Contact Eva</a>
+                <a href="#" class="btn btn-info contact-counselor">Contact Eva</a>
               </div>
             </div>
           </div>
@@ -290,11 +263,11 @@ layout: demo
             <div class="card">
               <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
               <div class="card-block text-center">
-                <h4>Eva Blanco</h4>
-                <h6><em>Dean of Undergraduate Admission</em></h6>
+                <h4 class="counselor-name">Eva Blanco</h4>
+                <h6 class="counselor-title"><em>Dean of Undergraduate Admission</em></h6>
                 <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
                 </p>
-                <a href="#" class="btn btn-primary">Contact Eva</a>
+                <a href="#" class="btn btn-info contact-counselor">Contact Eva</a>
               </div>
             </div>
           </div>
@@ -302,49 +275,11 @@ layout: demo
             <div class="card">
               <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
               <div class="card-block text-center">
-                <h4>Eva Blanco</h4>
-                <h6><em>Dean of Undergraduate Admission</em></h6>
+                <h4 class="counselor-name">Eva Blanco</h4>
+                <h6 class="counselor-title"><em>Dean of Undergraduate Admission</em></h6>
                 <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
                 </p>
-                <a href="#" class="btn btn-primary">Contact Eva</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
-              <div class="card-block text-center">
-                <h4>Eva Blanco</h4>
-                <h6><em>Dean of Undergraduate Admission</em></h6>
-                <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
-                </p>
-                <a href="#" class="btn btn-primary">Contact Eva</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
-              <div class="card-block text-center">
-                <h4>Eva Blanco</h4>
-                <h6><em>Dean of Undergraduate Admission</em></h6>
-                <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
-                </p>
-                <a href="#" class="btn btn-primary">Contact Eva</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
-              <div class="card-block text-center">
-                <h4>Eva Blanco</h4>
-                <h6><em>Dean of Undergraduate Admission</em></h6>
-                <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
-                </p>
-                <a href="#" class="btn btn-primary">Contact Eva</a>
+                <a href="#" class="btn btn-info contact-counselor">Contact Eva</a>
               </div>
             </div>
           </div>
@@ -354,11 +289,11 @@ layout: demo
             <div class="card">
               <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
               <div class="card-block text-center">
-                <h4>Eva Blanco</h4>
-                <h6><em>Dean of Undergraduate Admission</em></h6>
+                <h4 class="counselor-name">Eva Blanco</h4>
+                <h6 class="counselor-title"><em>Dean of Undergraduate Admission</em></h6>
                 <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
                 </p>
-                <a href="#" class="btn btn-primary">Contact Eva</a>
+                <a href="#" class="btn btn-info contact-counselor">Contact Eva</a>
               </div>
             </div>
           </div>
@@ -366,11 +301,11 @@ layout: demo
             <div class="card">
               <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
               <div class="card-block text-center">
-                <h4>Eva Blanco</h4>
-                <h6><em>Dean of Undergraduate Admission</em></h6>
+                <h4 class="counselor-name">Eva Blanco</h4>
+                <h6 class="counselor-title"><em>Dean of Undergraduate Admission</em></h6>
                 <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
                 </p>
-                <a href="#" class="btn btn-primary">Contact Eva</a>
+                <a href="#" class="btn btn-info contact-counselor">Contact Eva</a>
               </div>
             </div>
           </div>
@@ -378,11 +313,11 @@ layout: demo
             <div class="card">
               <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
               <div class="card-block text-center">
-                <h4>Eva Blanco</h4>
-                <h6><em>Dean of Undergraduate Admission</em></h6>
+                <h4 class="counselor-name">Eva Blanco</h4>
+                <h6 class="counselor-title"><em>Dean of Undergraduate Admission</em></h6>
                 <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
                 </p>
-                <a href="#" class="btn btn-primary">Contact Eva</a>
+                <a href="#" class="btn btn-info contact-counselor">Contact Eva</a>
               </div>
             </div>
           </div>
@@ -392,11 +327,11 @@ layout: demo
             <div class="card">
               <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
               <div class="card-block text-center">
-                <h4>Eva Blanco</h4>
-                <h6><em>Dean of Undergraduate Admission</em></h6>
+                <h4 class="counselor-name">Eva Blanco</h4>
+                <h6 class="counselor-title"><em>Dean of Undergraduate Admission</em></h6>
                 <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
                 </p>
-                <a href="#" class="btn btn-primary">Contact Eva</a>
+                <a href="#" class="btn btn-info contact-counselor">Contact Eva</a>
               </div>
             </div>
           </div>
@@ -404,11 +339,11 @@ layout: demo
             <div class="card">
               <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
               <div class="card-block text-center">
-                <h4>Eva Blanco</h4>
-                <h6><em>Dean of Undergraduate Admission</em></h6>
+                <h4 class="counselor-name">Eva Blanco</h4>
+                <h6 class="counselor-title"><em>Dean of Undergraduate Admission</em></h6>
                 <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
                 </p>
-                <a href="#" class="btn btn-primary">Contact Eva</a>
+                <a href="#" class="btn btn-info contact-counselor">Contact Eva</a>
               </div>
             </div>
           </div>
@@ -416,11 +351,49 @@ layout: demo
             <div class="card">
               <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
               <div class="card-block text-center">
-                <h4>Eva Blanco</h4>
-                <h6><em>Dean of Undergraduate Admission</em></h6>
+                <h4 class="counselor-name">Eva Blanco</h4>
+                <h6 class="counselor-title"><em>Dean of Undergraduate Admission</em></h6>
                 <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
                 </p>
-                <a href="#" class="btn btn-primary">Contact Eva</a>
+                <a href="#" class="btn btn-info contact-counselor">Contact Eva</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
+              <div class="card-block text-center">
+                <h4 class="counselor-name">Eva Blanco</h4>
+                <h6 class="counselor-title"><em>Dean of Undergraduate Admission</em></h6>
+                <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
+                </p>
+                <a href="#" class="btn btn-info contact-counselor">Contact Eva</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
+              <div class="card-block text-center">
+                <h4 class="counselor-name">Eva Blanco</h4>
+                <h6 class="counselor-title"><em>Dean of Undergraduate Admission</em></h6>
+                <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
+                </p>
+                <a href="#" class="btn btn-info contact-counselor">Contact Eva</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class=" centered counselor-img img-circle img-responsive" src="http://placehold.it/150x150" alt="Card image cap">
+              <div class="card-block text-center">
+                <h4 class="counselor-name">Eva Blanco</h4>
+                <h6 class="counselor-title"><em>Dean of Undergraduate Admission</em></h6>
+                <p>Eva has been with the Undergraduate Admission Office since 2003, formerly serving as Senior Associate Dean of Undergraduate Admission.
+                </p>
+                <a href="#" class="btn btn-info contact-counselor">Contact Eva</a>
               </div>
             </div>
           </div>
@@ -429,3 +402,46 @@ layout: demo
     </div>
   </div>
 </div>
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#locate-me").on( "click", function () {
+      $(".counselor-search").hide();
+      $(".counselor-filter").show();
+      $(".my-counselor").show("slow");
+    });
+    $("#counselor-search-input").keypress(function (event) {
+      if(event.which == 32){
+        $(".counselor-filter").show();
+        $(".counselor-search").hide();
+        $(".our-counselors").show("slow");
+      }
+      else {
+        $(".counselor-search").hide();
+        $(".counselor-filter").show();
+        $(".my-counselor").show("slow");
+      }
+    });
+    $(".contact-counselor").on( "click", function () {
+      $(".counselor-filter").hide();
+      $(".counselor-search").hide();
+      $("#fmc-main-block").show();
+      $(".contact-block").show("slow");
+    });
+    $("#all-counselors").on("click", function(){
+      $("#fmc-main-block").hide();
+      $(".counselor-search").hide();
+      $(".all-counselors").show();
+    });
+    $("#fmc-button").on("click", function () {
+      $(".all-counselors").hide();
+      $(".contact-block").hide();
+      $("#fmc-main-block").show();
+      $(".counselor-search").show();
+    });
+    $("#county-filter").change(function () {
+      $(".our-counselors").hide();
+      $(".my-counselor").show();
+    });
+  });
+</script>
