@@ -54,6 +54,7 @@ const config = {
         mediaCheck: `${rootConfig.bower}mediaCheck/js/mediaCheck-min.js`,
         html5shiv: `${rootConfig.bower}html5shiv/dist/html5shiv.min.js`,
         holder: `${rootConfig.bower}holderjs/holder.min.js`,
+        tether: `${rootConfig.bower}tether/dist/js/tether.js/tether.min.js`
       },
     },
     styles: {
