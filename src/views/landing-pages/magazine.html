@@ -19,10 +19,9 @@
 
   /* Navbar */
   .navbar {
-    background: radial-gradient(circle, #f2f2f2, #fff);
+    background-color: #5a5a5a;
     border: 0;
     border-radius: 0;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .25);
     margin-bottom: 0;
     z-index: 10;
   }
@@ -31,11 +30,23 @@
     border-radius: 0;
   }
 
+  .navbar a, .navbar i {
+    color: #fff;
+  }
+
+  .navbar a {
+    padding-right: .5em;
+  }
+
 
   /* Main Story Section */
   .main-story, .digital-print {
-    height: 40rem;
+    height: 50rem;
     padding: 0;
+  }
+
+  .main-story:hover, .digital-print:hover {
+    cursor: pointer;
   }
 
   .main-story {
@@ -46,13 +57,12 @@
 
   .main-story-overlay, .digital-print-overlay {
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 1s ease-in-out;
     z-index: 1;
   }
 
   .main-story:hover > .main-story-overlay, .digital-print:hover > .digital-print-overlay {
     background-color: #000;
-    cursor: pointer;
     height: 100%;
     opacity: .2;
     position: absolute;
@@ -99,14 +109,9 @@
 
 
   /* Digital Print Cover Photo */
-  .digital-print {
-    margin: 0;
-    padding: 0;
-  }
-
   .digital-print img {
-    max-height: 100%;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
   }
 
   .content p {
@@ -120,7 +125,9 @@
 
   /* All types of main content (below landing) */
   .content {
+    color: #444;
     font-family: 'Playfair Display', serif;
+    line-height: 1.6;
     padding-top: 2em;
   }
 
@@ -151,38 +158,6 @@
   }
 
 
-  /* Fluid, full-width content section which uniquely pops out from rest of main content: here, it's latest news */
-  .latest-news {
-    background-color: #494949;
-    margin: 0;
-    padding: 2em 0;
-  }
-
-  .latest-news h4 {
-    color: #fff;
-  }
-
-  .latest-news hr {
-    border-top: 1px solid #785d5d;
-    display: block;
-    height: 1px;
-    margin: -.5em 0 1em 0;
-    width: 100%;
-  }
-
-  .latest-news .story h5 {
-    color: #eaeaea;
-  }
-
-  .latest-news .story h4 {
-    color: #fff;
-  }
-
-  .latest-news .story p {
-    color: #e3e3e3;
-  }
-
-
   /* Story elements which are on the light, default background color */
   .story img {
     margin-bottom: 1em;
@@ -208,17 +183,6 @@
 
   .story p {
     color: #2d2d2d;
-  }
-
-  .story-popular h4 {
-    align-items: center;
-    display: flex;
-    font-size: 85%;
-  }
-
-  .story-popular > div > div:last-child {
-    margin-top: .75em;
-    margin-left: -18px;
   }
 
 
@@ -253,17 +217,25 @@
 
 
   .subfooter {
-    background-color: #eeeeee;
+    background-color: #575757;
+    color: #fff;
     margin-top: 2em;
     padding: 2em 0;
   }
 
-  .subfooter h4 {
-    color: #1b1b1b;
+  .subfooter i:first-child {
+    padding: 0;
+  }
+
+  .subfooter i {
+    font-size: 1.5em;
+    padding-left: 1em;
   }
 
   .footer {
     background-color: #393939;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 2em 0;
   }
@@ -271,12 +243,23 @@
 <div class="fluid-container">
   <div class="row">
     <div class="col-sm-12">
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-inverse">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#"><i class="icon-scu"></i>&nbsp;SCU Magazine</a>
+          <a class="navbar-brand" href="#"><i class="icon-scu"></i>&nbsp;&nbsp;SCU Magazine</a>
         </div>
         <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                 aria-expanded="false">Issue <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">October 2016</a></li>
+                <li><a href="#">November 2016</a></li>
+              </ul>
+            </li>
+          </ul>
           <form class="navbar-form navbar-right">
+            <i class="fa fa-long-arrow-left"></i>&nbsp;<a href="#">Return to scu.edu</a>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search" />
             </div>
@@ -390,31 +373,30 @@
         </div>
       </div>
       <div class="col-md-4">
-        <h4 class="text-sans-light">Popular</h4>
-        <div class="row">
-          <div class="story story-popular">
-            <div class="row">
-              <div class="col-md-3 col-md-offset-1">
-                <img src="http://placehold.it/100x50" />
-              </div>
-              <div class="col-md-8">
-                <a href="#">Story Example</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="story story-popular">
-            <div class="row">
-              <div class="col-md-3 col-md-offset-1">
-                <img src="http://placehold.it/100x50" />
-              </div>
-              <div class="col-md-8">
-                <a href="#">Story Example</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h4 class="text-sans-light">Class Notes</h4>
+        <table class="table table-responsive table-smaller">
+          <tr>
+            <td><a href="#">2016</a></td>
+            <td><a href="#">2015</a></td>
+            <td><a href="#">2014</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">2013</a></td>
+            <td><a href="#">2012</a></td>
+            <td><a href="#">2011</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">2010</a></td>
+            <td><a href="#">2009</a></td>
+            <td><a href="#">2008</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">2007</a></td>
+            <td><a href="#">2006</a></td>
+            <td><a href="#">2005</a></td>
+          </tr>
+        </table>
+        <a href="#">View More..</a>
       </div>
     </div>
   </div>
@@ -447,39 +429,23 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <h4 class="text-sans-light">Class Notes</h4>
-        <table class="table table-responsive table-smaller">
-          <tr>
-            <td><a href="#">2016</a></td>
-            <td><a href="#">2015</a></td>
-            <td><a href="#">2014</a></td>
-          </tr>
-          <tr>
-            <td><a href="#">2013</a></td>
-            <td><a href="#">2012</a></td>
-            <td><a href="#">2011</a></td>
-          </tr>
-          <tr>
-            <td><a href="#">2010</a></td>
-            <td><a href="#">2009</a></td>
-            <td><a href="#">2008</a></td>
-          </tr>
-          <tr>
-            <td><a href="#">2007</a></td>
-            <td><a href="#">2006</a></td>
-            <td><a href="#">2005</a></td>
-          </tr>
-        </table>
-        <a href="#">View More..</a>
-      </div>
+
+    </div>
+  </div>
+</div>
+<div class="subfooter fluid-container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-twitter"></i>
     </div>
   </div>
 </div>
 <div class="footer fluid-container">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <i class="fa fa-facebook"></i><span style="padding-left:12px;"></span><i class="fa fa-twitter"></i><span style="padding-left:12px;"></span><i class="fa fa-instagram"></i>
+    <div class="col-md-10 col-md-offset-1">
+      Copyright &copy; 2016.
     </div>
   </div>
 </div>
