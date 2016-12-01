@@ -30,29 +30,81 @@ layout: landing-page
     width: 100%;
   }
 
-  body {
-    padding-top: 50px;
+
+  /* Header */
+  .page-header {
+    border: 0;
+    margin: 23px 0 11px;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 3.5em;
+    margin-bottom: 0;
+  }
+
+  .page-header h1 span {
+    color: #4f0216;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    transition: color .5s;
+  }
+
+  .page-header h1 span:hover {
+    color: #ca0538;
+    cursor: pointer;
+  }
+
+  .page-header h1 i {
+    color: #a9a9a9;
+  }
+
+  .page-header small {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
 
   /* Navbar */
   .navbar {
-    background-color: #393939;
     border: 0;
     border-radius: 0;
-    z-index: 10;
+    margin-bottom: 0;
   }
 
-  .navbar input, .navbar button {
-    border-radius: 0;
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
   }
 
-  .navbar a, .navbar i {
-    color: #fff;
+  .navbar-collapse {
+    border-bottom: .05em solid rgba(0, 0, 0, .15);
+    border-top: 2px solid rgba(0, 0, 0, .85);
+    text-align: center;
   }
 
-  .navbar a {
-    padding-right: .5em;
+  .navbar-collapse ul {
+    margin-top: .25em;
+  }
+
+  .navbar i {
+    cursor: pointer;
+  }
+
+  .navbar li a {
+    color: #4f0216;
+    font-size: .8em;
+    padding: .2em .75em;
+  }
+
+  .navbar-form {
+    padding-left: 0;
+  }
+
+  .navbar-form span {
+    font-size: .8em;
+    padding: 0 .65em;
   }
 
 
@@ -93,7 +145,13 @@ layout: landing-page
   }
 
   .text-float-shadow {
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+    transition: all .3s ease-out;
+  }
+
+  .text-float-shadow:hover {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .14), 0 1px 7px 0 rgba(0, 0, 0, .12), 0 3px 1px -1px rgba(0, 0, 0, .2);
+    padding: 1px 8px;
   }
 
   .text-float cite a {
@@ -115,17 +173,18 @@ layout: landing-page
 
 
   .main-story-overlay, .digital-print-overlay {
+    background-color: #000;
+    height: 100%;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    transition: opacity .5s ease-in-out;
+    width: 100%;
     z-index: 1;
   }
 
-  .main-story:hover > .main-story-overlay, .digital-print:hover > .digital-print-overlay {
-    background-color: #000;
-    height: 100%;
-    opacity: .2;
-    position: absolute;
-    width: 100%;
+  .main-story:hover .main-story-overlay, .digital-print:hover .digital-print-overlay {
+    opacity: .6;
   }
 
   .main-story, .digital-print {
@@ -151,12 +210,16 @@ layout: landing-page
 
 
   /* Digital Print Cover Photo */
+  .digital-print {
+    overflow: hidden;
+    padding-left: 1em;
+  }
+
   .digital-print-content {
     background-image: url(/assets/images/scu-mag-cover.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    margin-left: 1em;
   }
 
   @media screen and (max-width: 768px) {
@@ -295,36 +358,37 @@ layout: landing-page
     font-family: 'Playfair Display', serif;
   }
 </style>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="page-header">
+  <h1><i class="icon-scu"></i>&nbsp;<span>Santa Clara Magazine</span></h1>
+  <small>Fall 2016</small>
+</div>
+<nav class="navbar">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#"><i class="icon-scu"></i>&nbsp;&nbsp;SCU Magazine</a>
-      <button type="button" class="navbar-toggle collapsed btn-inverted" data-toggle="collapse"
-              data-target="#navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-             aria-expanded="false">Issue <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">October 2016</a></li>
-            <li><a href="#">November 2016</a></li>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <button type="button" class="navbar-toggle collapsed btn-inverted" data-toggle="collapse"
+                data-target="#navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Athletics</a></li>
+            <li><a href="#">Lorem</a></li>
+            <li><a href="#">Ipsum</a></li>
+            <li><a href="#">Merolipsu</a></li>
+            <li><a href="#">Ipsuromel</a></li>
           </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-right">
-        <i class="fa fa-long-arrow-left"></i>&nbsp;<a href="#">Return to scu.edu</a>
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" />
+          <form class="navbar-form navbar-left">
+            <i class="fa fa-archive"></i><span>Archive</span>
+          </form>
+          <form class="navbar-form navbar-right">
+            <span>Search</span><i class="fa fa-search"></i>
+          </form>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      </div>
     </div>
   </div>
 </nav>
@@ -354,7 +418,7 @@ layout: landing-page
         <div class="col-md-4 digital-print">
           <div class="digital-print-overlay"></div>
           <div class="text-float digital-print-content">
-            <cite class="text-float-shadow"><a href="#">View the Latest Digital Print</a></cite>
+            <cite class="text-float-shadow"><a href="#">View the Digital Print</a></cite>
           </div>
         </div>
       </div>
@@ -365,26 +429,31 @@ layout: landing-page
   <div class="row category">
     <div class="col-xs-10 col-xs-offset-1">
       <div class="row">
-        <div class="col-md-4 col-md-push-8 wrap-categories">
-          <h4 class="text-sans-light">Categories</h4>
-          <table class="table table-responsive">
+        <div class="col-md-4 col-md-push-8 wrap-classnotes">
+          <h4 class="text-sans-light">Class Notes</h4>
+          <table class="table table-responsive table-smaller">
             <tr>
-              <td><a href="#">Athletics</a></td>
-              <td><a href="#">Category 2</a></td>
+              <td><a href="#">2016</a></td>
+              <td><a href="#">2015</a></td>
+              <td><a href="#">2014</a></td>
             </tr>
             <tr>
-              <td><a href="#">Category 3</a></td>
-              <td><a href="#">Category 4</a></td>
+              <td><a href="#">2013</a></td>
+              <td><a href="#">2012</a></td>
+              <td><a href="#">2011</a></td>
             </tr>
             <tr>
-              <td><a href="#">Category 5</a></td>
-              <td><a href="#">Category 6</a></td>
+              <td><a href="#">2010</a></td>
+              <td><a href="#">2009</a></td>
+              <td><a href="#">2008</a></td>
             </tr>
             <tr>
-              <td><a href="#">Category 7</a></td>
-              <td><a href="#">Category 8</a></td>
+              <td><a href="#">2007</a></td>
+              <td><a href="#">2006</a></td>
+              <td><a href="#">2005</a></td>
             </tr>
           </table>
+          <a href="#">View More..</a>
         </div>
         <div class="col-md-8 col-md-pull-4">
           <div class="row">
@@ -446,32 +515,6 @@ layout: landing-page
             </div>
           </div>
         </div>
-        <div class="col-md-4 wrap-classnotes">
-        <h4 class="text-sans-light">Class Notes</h4>
-        <table class="table table-responsive table-smaller">
-          <tr>
-            <td><a href="#">2016</a></td>
-            <td><a href="#">2015</a></td>
-            <td><a href="#">2014</a></td>
-          </tr>
-          <tr>
-            <td><a href="#">2013</a></td>
-            <td><a href="#">2012</a></td>
-            <td><a href="#">2011</a></td>
-          </tr>
-          <tr>
-            <td><a href="#">2010</a></td>
-            <td><a href="#">2009</a></td>
-            <td><a href="#">2008</a></td>
-          </tr>
-          <tr>
-            <td><a href="#">2007</a></td>
-            <td><a href="#">2006</a></td>
-            <td><a href="#">2005</a></td>
-          </tr>
-        </table>
-        <a href="#">View More..</a>
-      </div>
       </div>
     </div>
   </div>
