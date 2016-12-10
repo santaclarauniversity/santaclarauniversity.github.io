@@ -6,7 +6,6 @@ layout: demo
   Instructions:
   Press any key or Use My Location to test functionality if there is only a single result.
   For multiple results press the spacebar.
-  TODO: Integrate autocomplete using Google Maps? See: https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform  - this may change the interface.
 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 <style type="text/css">
@@ -46,7 +45,7 @@ layout: demo
   }
   #locationField {
     height: 20px;
-    margin-bottom: 2px;
+    margin-bottom: 15px;
   }
   .card-text a {
     color: #000;
@@ -104,13 +103,14 @@ layout: demo
     margin-top: 10px;
   }
   #all-counselors{
-    margin: 10px 0 10px 0;
+    margin: 10px 0 10px 25px;
     float: left;
   }
 
   #international-students{
     margin: 10px 0 10px 0;
     float: right;
+    visibility: hidden;
   }
   .zip-code-label{
     clear: both;
@@ -161,12 +161,10 @@ layout: demo
         <li><a href="/">Home</a></li>
         <li><a href="/admitted/">Admission</a></li>
         <li><a href="/admitted/events-for-admitted-students/">Undergraduate</a></li>
-        <li><a href="/admitted/events-for-admitted-students/">Contact Us</a></li>
       </ol>
       <div id="instructions">
         <h4>Instructions</h4>
-        <p>To simulate a single counselor press "Use My Location" or enter any key into the search bar. </p>
-        <p>To simulate multiple counselors press the space bar. With multiple counselor results, filtering by counselor is activated.</p>
+        <p>Enter your address to find your counselor.</p>
         <p>To see all counselors, press all-counselors.</p>
       </div>
       <div class="row" id="fmc-main-block">
@@ -175,17 +173,13 @@ layout: demo
             <div class="card-block">
               <div class="counselor-search text-xs-center text-center" >
                 <h4 class="fyc-title">Find Your Counselor </h4>
-                <button id="locate-me" class="btn btn-default btn-outline">Use My Location <i class="fa fa-map-marker" aria-hidden="true"></i></button>
+                <!--<button id="locate-me" class="btn btn-default btn-outline">Use My Location <i class="fa fa-map-marker" aria-hidden="true"></i></button>
                 <p class="horizontal-text"><span class="horizontal-line">Or</span></p>
-                <h6 class="fyc-subtitle">Find by Zip or Address</h6>
+                <h6 class="fyc-subtitle">Find by Zip or Address</h6>-->
                 <form method="get">
-                  <div id="locationField" class="input-group">
-                      <input id="autocomplete" placeholder="Enter your address"
+                  <div id="locationField" class="input-group centered">
+                      <input id="autocomplete" class="form-control" placeholder="Enter your address"
                              onFocus="geolocate()" type="text">
-                      <span class="input-group-btn">
-                      <button id="locationSubmit" class="btn btn-default search-icon" type="submit" aria-label="Submit"><span
-                        class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                    </span>
                   </div>
                 </form>
                 <button id="all-counselors" class="btn btn-default">All Counselors</button>
@@ -197,14 +191,15 @@ layout: demo
                     <input type="text" name="name" class="form-control" placeholder="First Name">
                     <input type="text" name="last-name" class="form-control " placeholder="Last Name">
                     <input type="email" name="email" class="form-control" placeholder="Email">
-                    <input class="field" id="postal_code" disabled="true">
+                    <input id="postal_code" class="form-control" disabled="true">
                     <textarea name="textarea"  class="form-control" id="form-message" cols="30" rows="10" placeholder="Your Message"></textarea>
                   </form>
                   <button class="btn btn-default btn-outline">Send</button>
               </div>
               <div class="counselor-filter text-center">
-                <label class="zip-code-label">Zip Code</label>
-                <input class="field form-control zip-code" id="postal_code" disabled="true">
+                <label class="zip-code-label">Postal Code</label>
+                <input class="field form-control zip-code" disabled="true">
+                <!-- Filter by County should only appear if a zip code is linked to multiple counselors -->
                 <label>Filter by County</label>
                 <select name="county-filter" id="county-filter" >
                   <option value="">Alameda (North)</option>
@@ -453,6 +448,7 @@ layout: demo
           $(".counselor-filter").show();
           $(".counselor-search").hide();
           $(".our-counselors").show("slow");
+          console.log()
       /*
       else {
         $(".counselor-search").hide();
@@ -491,16 +487,11 @@ layout: demo
   // parameter when you first load the API. For example:
   // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
+
   var placeSearch, autocomplete;
   var componentForm = {
-    street_number: 'short_name',
-    route: 'long_name',
-    locality: 'long_name',
-    administrative_area_level_1: 'short_name',
-    country: 'long_name',
     postal_code: 'short_name'
   };
-
   function initAutocomplete() {
     // Create the autocomplete object, restricting the search to geographical
     // location types.
@@ -520,12 +511,6 @@ layout: demo
     for (var component in componentForm) {
       document.getElementById(component).value = '';
       document.getElementById(component).disabled = false;
-      if(component == 'postal_code'){
-          var stored_form = {
-              zip_code: component.toString()
-          };
-          console.log(stored_form);
-      }
     }
 
     // Get each component of the address from the place details
@@ -535,6 +520,12 @@ layout: demo
       if (componentForm[addressType]) {
         var val = place.address_components[i][componentForm[addressType]];
         document.getElementById(addressType).value = val;
+        if(addressType === "postal_code"){
+          var zip_codes = document.getElementsByClassName("zip-code");
+          for(var j = 0; j<zip_codes.length; j++){
+            zip_codes[j].setAttribute("value", val);
+          }
+        }
       }
     }
   }
@@ -560,33 +551,4 @@ layout: demo
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ9fkYIxwDSEtiBZ5Y6pIVMngu5W76bVM&libraries=places&callback=initAutocomplete"
         async defer></script>
 
-
-<table id="address">
-  <tr>
-    <td class="label">Street address</td>
-    <td class="slimField"><input class="field" id="street_number"
-                                 disabled="true"></input></td>
-    <td class="wideField" colspan="2"><input class="field" id="route"
-                                             disabled="true"></input></td>
-  </tr>
-  <tr>
-    <td class="label">City</td>
-    <!-- Note: Selection of address components in this example is typical.
-         You may need to adjust it for the locations relevant to your app. See
-         https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
-    -->
-    <td class="wideField" colspan="3"><input class="field" id="locality"
-                                             disabled="true"></input></td>
-  </tr>
-  <tr>
-    <td class="label">State</td>
-    <td class="slimField"><input class="field"
-                                 id="administrative_area_level_1" disabled="true"></input></td>ß
-  </tr>
-  <tr>
-    <td class="label">Country</td>
-    <td class="wideField" colspan="3"><input class="field"
-                                             id="country" disabled="true"></input></td>
-  </tr>
-</table>
 
