@@ -32,37 +32,43 @@ layout: landing-page
 
 
   /* Header */
-  .page-header {
-    border: 0;
-    margin: 23px 0 11px;
-    text-align: center;
+  .header-row {
+    align-items: center;
+    display: flex;
+    margin: 1em 0;
   }
 
-  .page-header h1 {
-    font-size: 3.5em;
-    margin-bottom: 0;
+  .header-row div {
   }
 
-  .page-header h1 span {
+  .header-row h1 {
     color: #4f0216;
     font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
     font-weight: bold;
+    margin: 0;
     transition: color .5s;
+    line-height: 1em;
+
   }
 
-  .page-header h1 span:hover {
+  .header-row h1:hover {
     color: #ca0538;
     cursor: pointer;
   }
 
-  .page-header h1 i {
-    color: #a9a9a9;
-  }
-
-  .page-header small {
+  .header-row small {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     text-transform: uppercase;
+    line-height: 1em;
+
+  }
+
+  .header-icon {
+    font-size: 2.5em;
+    line-height: .5em;
+
   }
 
 
@@ -79,8 +85,8 @@ layout: landing-page
   }
 
   .navbar-collapse {
-    border-bottom: .05em solid rgba(0, 0, 0, .15);
-    border-top: 2px solid rgba(0, 0, 0, .85);
+    border-bottom: 0.05em solid rgba(0, 0, 0, .15);
+    border-top: 0.05em solid rgba(0, 0, 0, .15);
     text-align: center;
   }
 
@@ -94,7 +100,7 @@ layout: landing-page
 
   .navbar li a {
     color: #4f0216;
-    font-size: .8em;
+    font-size: 1em;
     padding: .2em .75em;
   }
 
@@ -358,14 +364,23 @@ layout: landing-page
     font-family: 'Playfair Display', serif;
   }
 </style>
-<div class="page-header">
-  <h1><i class="icon-scu"></i>&nbsp;<span>Santa Clara Magazine</span></h1>
-  <small>Fall 2016</small>
-</div>
-<nav class="navbar">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1">
+<div class="container">
+  <div class="row header-row">
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-md-2">
+          <a href="#"><i class="icon-scu header-icon"></i></a>
+        </div>
+        <div class="col-md-9 col-md-offset-1">
+          <a href="#">
+            <h1>Santa Clara Magazine</h1>
+            <small>Fall 2016</small>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <nav class="navbar">
         <button type="button" class="navbar-toggle collapsed btn-inverted" data-toggle="collapse"
                 data-target="#navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
@@ -388,10 +403,10 @@ layout: landing-page
             <span>Search</span><i class="fa fa-search"></i>
           </form>
         </div>
-      </div>
+      </nav>
     </div>
   </div>
-</nav>
+</div>
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-12 col-md-10 col-md-offset-1">
