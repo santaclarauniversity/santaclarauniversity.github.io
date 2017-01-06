@@ -452,6 +452,9 @@ html.no-fontface .lw_cal_today_day {
     margin-bottom: 0;
   }
 }
+p a {
+  text-decoration: underline;
+}
 a {
   transition: all 100ms ease;
   transition-property: all;
@@ -1797,7 +1800,7 @@ html.no-fontface .gateway-navigation .nav > .slide-menu .slide-panel h6 {
 .site-footer nav {
   font-size: 14px;
   line-height: 1.42857143em;
-  color: #7b7b7b;
+  color: #595959;
 }
 @media (min-width: 768px) {
   .site-footer p,
@@ -2333,7 +2336,7 @@ html.no-fontface .hero.module.landing .container > h1 {
   padding: 0 2px;
 }
 .breadcrumb a {
-  color: #9c9c9c;
+  color: #595959;
 }
 .breadcrumb a:hover {
   color: #721424;

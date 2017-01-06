@@ -25,6 +25,7 @@ const less = require('gulp-less');
 const lessReporter = require('gulp-csslint-less-reporter');
 const lint = require('gulp-csslint');
 const nano = require('gulp-cssnano');
+const a11y = require('gulp-accessibility');
 
 // configuration
 // Top-level navigation
@@ -220,6 +221,18 @@ gulp.task('assembler', function (done) {
   done();
 });
 
+gulp.task('a11y', function() {
+  return gulp.src('./dist/**/*.html')
+    .pipe(a11y({
+      force: true
+    }))
+    .on('error', console.log)
+    .pipe(a11y.report({reportType: 'txt'}))
+    .pipe(rename({
+      extname: '.txt'
+    }))
+    .pipe(gulp.dest('reports/txt'));
+});
 
 // server
 gulp.task('serve', () => {
@@ -260,7 +273,7 @@ gulp.task('default', ['clean'], () => {
   const tasks = [
     'styles',
     'scripts',
-    'assembler',
+    'assembler'
   ];
 
   // run build
