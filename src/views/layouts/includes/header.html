@@ -3,16 +3,10 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-9 site-header-titles">
-          <a href="/" class="pull-left seal"><i class="icon-scu"></i></a>
-          <a href="/" class="wordmarks">
-            <img
-              src="/assets/images/header-large-Santa-Clara-University.png"
-              srcset="/assets/images/header-large-Santa-Clara-University@2x.png 1.5x"
-              alt="Santa Clara University" width="572" height="28">
-            <img
-              src="/assets/images/header-small-the-jesuit-university-in-silicon-valley.png"
-              srcset="/assets/images/header-small-the-jesuit-university-in-silicon-valley@2x.png 1.5x"
-              alt="The Jesuit University In Silicon Valley" width="433" height="20">
+          <a href="/" class="pull-left seal"><i class="icon-scu"></i><span class="sr-only">Santa Clara University Homepage</span></a>
+          <a href="/" class="wordmarks text-trajan">
+            <span class="scu-primary">Santa Clara University</span><br>
+            <span class="scu-tagline">The Jesuit University in Silicon Valley</span>
           </a>
         </div>
         <div class="col-xs-12 col-sm-3 clearfix site-header-search-and-toggles">
@@ -30,6 +24,7 @@
           <form action="/search/" method="get" class="pull-right site-header-search"
                 id="header-search-form">
             <div class="input-group">
+              <label for="header-search" class="sr-only">Search</label>
               <input type="search" class="form-control" name="q" id="header-search"
                      placeholder="SEARCH">
               <span class="input-group-btn">

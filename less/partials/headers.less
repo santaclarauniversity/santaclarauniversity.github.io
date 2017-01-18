@@ -95,12 +95,19 @@
 
 /* FONT */
 
-/* default is Trajan */
-.wordmarks, .font-trajan .wordmarks {
-  font-family: 'Trajan W01 Regular';
+.wordmarks {
   text-transform: uppercase;
-  letter-spacing: 1px;
   text-rendering: optimizeLegibility;
+  text-decoration: none !important;
+  .scu-primary {
+    font-size: 33px;
+    letter-spacing: 3px;
+  }
+  .scu-tagline {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: black;
+  }
 }
 
 /* other options are Trade Gothic, Bodoni Black Italic, Helvetica */
@@ -334,28 +341,18 @@ header.site-header {
       padding: 15px 0 0 0;
     }
   }
-  .site-header-titles {
-    min-height: 70px;
-    @media (min-width: 390px) {
-      min-height: 90px;
-    }
-    @media (min-width: 470px) {
-      min-height: 100px;
-    }
-    @media (min-width: @screen-sm-min) {
-      min-height: 0;
-    }
-  }
   .seal {
     color: #a8a9ac;
-    display: block;
+    display: none;
     @media (min-width: 390px) {
       font-size: 50px;
       padding-right: 5px;
       margin-top: 5px;
     }
     @media (min-width: 470px) {
+      display: block;
       font-size: 60px;
+      margin-top: 0;
     }
     @media (min-width: @screen-sm-min) {
       font-size: 60px;
@@ -406,30 +403,51 @@ header.site-header {
     }*/
   .wordmarks {
     display: inline-block;
-    width: auto;
-    max-width: calc(~"100% - 45px");
-    margin: 25px 0 15px 45px;
-    padding: 0;
-    @media (min-width: 390px) {
-      max-width: calc(~"100% - 55px");
-      margin: 25px 0 0 0px;
+    margin: 0;
+    padding: 1em 0;
+    text-align: center;
+    width: 100%;
+
+    .scu-primary {
+      font-size: 19px;
+      letter-spacing: 3px;
     }
+
+    .scu-tagline {
+      color: @gray-light;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
     @media (min-width: 470px) {
       max-width: calc(~"100% - 70px");
-      margin: 25px 0 0 0px;
+      margin: 30px 0 0 5px;
+      padding: 0;
+      text-align: left;
     }
+
     @media (min-width: @screen-sm-min) {
       width: 400px;
       width: calc(~"100% - 72px");
       max-width: 572px;
       margin: 50px 0 0;
+      letter-spacing: 2px;
+      text-align: left;
     }
+
     @media (min-width: @screen-md-min) {
+      .scu-primary {
+        font-size: 33px;
+      }
+      .scu-tagline {
+        font-size: 16px;
+      }
+      text-align: left;
       width: 572px;
       width: calc(~"100% - 97px");
-      max-width: none;
     }
   }
+
   .site-header-search {
     margin-left:;
     @media (min-width: @screen-sm-min) {
