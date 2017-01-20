@@ -344,17 +344,14 @@ header.site-header {
   .seal {
     color: #a8a9ac;
     display: none;
+    position: absolute;
     @media (min-width: 390px) {
       font-size: 50px;
       padding-right: 5px;
       margin-top: 5px;
     }
-    @media (min-width: 470px) {
-      display: block;
-      font-size: 60px;
-      margin-top: 0;
-    }
     @media (min-width: @screen-sm-min) {
+      display: block;
       font-size: 60px;
       margin-top: 20px;
     }
@@ -367,40 +364,6 @@ header.site-header {
       color: #555;
     }
   }
-  /*.wordmark {
-      display: inline-block;
-      width: 100%;
-      max-width: 572px;
-      height: 0;
-      max-height: 62px;
-      margin: 25px 0 0;
-      padding: 0 0 11%;
-      background: url(assets/bg-core-site-wordmark.png) 0 0 no-repeat;
-      background-size: 100% auto;
-      outline: 0;
-      @media (min-width: @screen-sm-min) {
-        width: 400px;
-        height: 44px;
-        margin: 50px 0 0;
-        padding: 0;
-        background-size: 400px 44px;
-      }
-      @media (min-width: @screen-md-min) {
-        width: 572px;
-        max-width: none;
-        height: 62px;
-        background-size: 572px 62px;
-      }
-      @media
-      only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (   min--moz-device-pixel-ratio: 2),
-      only screen and (     -o-min-device-pixel-ratio: 2/1),
-      only screen and (        min-device-pixel-ratio: 2),
-      only screen and (                min-resolution: 192dpi),
-      only screen and (                min-resolution: 2dppx) {
-        background-image: url(assets/bg-core-site-wordmark@2x.png);
-      }
-    }*/
   .wordmarks {
     display: inline-block;
     margin: 0;
@@ -420,17 +383,18 @@ header.site-header {
     }
 
     @media (min-width: 470px) {
-      max-width: calc(~"100% - 70px");
-      margin: 30px 0 0 5px;
+      margin: 30px 0;
       padding: 0;
-      text-align: left;
+      .scu-primary {
+        font-size: 26px;
+      }
+      .scu-tagline {
+        font-size: 14px;
+      }
     }
 
     @media (min-width: @screen-sm-min) {
-      width: 400px;
-      width: calc(~"100% - 72px");
-      max-width: 572px;
-      margin: 50px 0 0;
+      margin: 50px 0 0 72px;
       letter-spacing: 2px;
       text-align: left;
     }
@@ -443,8 +407,7 @@ header.site-header {
         font-size: 16px;
       }
       text-align: left;
-      width: 572px;
-      width: calc(~"100% - 97px");
+      margin-left: 97px;
     }
   }
 
