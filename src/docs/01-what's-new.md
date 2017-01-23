@@ -2,6 +2,9 @@
 - Removed extraneous images and prototypes from launched projects.
 - Added the [Agenda](/content-types.html#agenda) content type.
 - Added [Print Style Guide](/docs.html#print-style-guide) documentation.
+- Refactored headers and footers - both now use type instead of images.
+- Added new email templates.
+- Moved landing page JS out of global JS files.
 
 ```v1.0.6```
 - Updated Fontello - uses latest icon fonts available (most notably, Instagram is updated) and added the SCU seal.
