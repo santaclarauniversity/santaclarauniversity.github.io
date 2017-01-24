@@ -806,42 +806,6 @@ header.site-header {
 .no-flexbox .site-header-custom-title .site-header-text-and-search .group-logo {
   display: block;
 }
-.site-header-with-seal {
-  /*.wordmark {
-      display: inline-block;
-      width: 100%;
-      max-width: 572px;
-      height: 0;
-      max-height: 62px;
-      margin: 25px 0 0;
-      padding: 0 0 11%;
-      background: url(assets/bg-core-site-wordmark.png) 0 0 no-repeat;
-      background-size: 100% auto;
-      outline: 0;
-      @media (min-width: @screen-sm-min) {
-        width: 400px;
-        height: 44px;
-        margin: 50px 0 0;
-        padding: 0;
-        background-size: 400px 44px;
-      }
-      @media (min-width: @screen-md-min) {
-        width: 572px;
-        max-width: none;
-        height: 62px;
-        background-size: 572px 62px;
-      }
-      @media
-      only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (   min--moz-device-pixel-ratio: 2),
-      only screen and (     -o-min-device-pixel-ratio: 2/1),
-      only screen and (        min-device-pixel-ratio: 2),
-      only screen and (                min-resolution: 192dpi),
-      only screen and (                min-resolution: 2dppx) {
-        background-image: url(assets/bg-core-site-wordmark@2x.png);
-      }
-    }*/
-}
 @media (min-width: 768px) {
   .site-header-with-seal .site-header-text-and-search {
     padding: 0 0 30px;
@@ -856,6 +820,7 @@ header.site-header {
 .site-header-with-seal .seal {
   color: #a8a9ac;
   display: none;
+  position: absolute;
 }
 @media (min-width: 390px) {
   .site-header-with-seal .seal {
@@ -864,15 +829,9 @@ header.site-header {
     margin-top: 5px;
   }
 }
-@media (min-width: 470px) {
-  .site-header-with-seal .seal {
-    display: block;
-    font-size: 60px;
-    margin-top: 0;
-  }
-}
 @media (min-width: 768px) {
   .site-header-with-seal .seal {
+    display: block;
     font-size: 60px;
     margin-top: 20px;
   }
@@ -905,18 +864,19 @@ header.site-header {
 }
 @media (min-width: 470px) {
   .site-header-with-seal .wordmarks {
-    max-width: calc(100% - 70px);
-    margin: 30px 0 0 5px;
+    margin: 30px 0;
     padding: 0;
-    text-align: left;
+  }
+  .site-header-with-seal .wordmarks .scu-primary {
+    font-size: 26px;
+  }
+  .site-header-with-seal .wordmarks .scu-tagline {
+    font-size: 14px;
   }
 }
 @media (min-width: 768px) {
   .site-header-with-seal .wordmarks {
-    width: 400px;
-    width: calc(100% - 72px);
-    max-width: 572px;
-    margin: 50px 0 0;
+    margin: 50px 0 0 72px;
     letter-spacing: 2px;
     text-align: left;
   }
@@ -924,8 +884,7 @@ header.site-header {
 @media (min-width: 1065px) {
   .site-header-with-seal .wordmarks {
     text-align: left;
-    width: 572px;
-    width: calc(100% - 97px);
+    margin-left: 97px;
   }
   .site-header-with-seal .wordmarks .scu-primary {
     font-size: 33px;
