@@ -1,0 +1,37 @@
+.pull-quote-container {
+    padding-bottom: 36px;
+
+    .pull-quote {
+        h6 {
+            color: $gray;
+            font-size: 14px;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+        }
+
+        cite {
+            color: $gray-light;
+            display: block;
+            font-size: 22px;
+            font-style: normal;
+
+            p {
+                font-size: 14px;
+                font-style: normal;
+                text-transform: uppercase;
+                margin-top: 10px;
+            }
+        }
+
+        a {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+    }
+}
+
+.pull-quote-img {
+    @include media-breakpoint-down(md) {
+        padding-bottom: 20px;
+    }
+}

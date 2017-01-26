@@ -1,3 +1,22 @@
+```v2.0.0```
+- Upgraded to Bootstrap 4 alpha 6 (all `.less` -> `.scss`))
+  - Stylesheets are the same, but are now SCSS files; still need to fully "upgrade" to BS4
+- `/js/` and `/css/` are now reserved entirely for completed scripts and stylesheets; moved custom script sources in `/js/` to `/src/assets/toolkit/`
+- Cleaned gulpfile and extraneous Node deps from `package.json`
+  - Changed `for..in` loops on Bower to ES6 `forEach`
+  - Added check on Bower tasks to prevent them from running unless necessary (only the first time it is run)
+  - Now utilizing `run-sequence` for tasks that **should** be executed successively rather than simultaneously
+  - Now utilizing `done` promise under Gulp tasks which cannot have a simple return statement
+- Removed CSSLint for SASSLint; removed JSHint for ESLint
+- Removed extraneous JS code from `toolkit.js` which was meant for leftover parts of Bootstrap landing pages
+- Updated `toolkit.js` to ES6 standard
+- Changed `toolkit.js` and `fabricator.js` to properly **both** use Webpack for compilation
+- Changed Babel preset to `es2016` from `babili` so `toolkit.js` won't be minified in development mode
+- Updated `.gitignore` to exclude `/css/` and `/js/` since there is no longer a reason to track them
+- Bootstrap loads all but `_variables.scss` and `_custom.scss` from Bower (these files are our custom overrides, which should remain tracked)
+  - In other words, all files inside `/scss/bootstrap/` *except* these two will **not be tracked** (they should **never** be changed anyway)
+
+
 ```v1.0.7```
 - Removed extraneous images and prototypes from launched projects.
 - Added the [Agenda](/content-types.html#agenda) content type.

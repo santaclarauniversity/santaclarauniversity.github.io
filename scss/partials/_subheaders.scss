@@ -1,0 +1,140 @@
+.project-title {
+    background-color: rgba($black, 0.7);
+    margin-bottom: 2em;
+    margin-top: -2em;
+
+    h1 {
+        color: #fff;
+        font-size: 60px;
+    }
+
+    h2 {
+        color: #fff;
+        font-size: 40px;
+    }
+
+    .hero.module + & {
+        margin-top: -8.7em;
+        position: relative;
+    }
+}
+
+.subheader.module {
+    background-color: #611b25;
+    background-position: 50%;
+    background-size: cover;
+    margin-top: -20px;
+    min-height: 150px;
+    position: relative;
+    width: 100%;
+
+    .subheader-caption {
+        background: rgba($black, 0.6);
+        color: $white !important;
+        display: inline-block;
+        display: none;
+        font-size: 14px;
+        padding: 3px 6px;
+        position: absolute;
+        right: 0;
+        top: 250px;
+    }
+
+    &.office {
+        background-color: #464646;
+    }
+
+    &.tall {
+        height: 300px;
+
+        h1 {
+            height: auto;
+            padding-top: 16px;
+            text-shadow: 1px 1px 4px rgba($black, 0.8);
+        }
+
+        .subheader-caption {
+            display: block;
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+    }
+
+    & + .hero.module {
+        margin-top: -2em;
+    }
+
+    .container {
+        min-height: 150px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        clear: left;
+        color: $white;
+        display: table-cell;
+        font-size: 45px;
+        line-height: 1;
+        margin: 0;
+        min-height: 150px;
+        padding: 10px 0 20px;
+        vertical-align: bottom;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 55px;
+        }
+
+        &.long {
+            font-size: 34px;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 42px;
+            }
+        }
+
+        span {
+            background: rgba($black, .5);
+            color: #e9e8d5;
+            display: inline-block;
+            font-size: 18px;
+            margin-right: 90%;
+            margin-top: -2px;
+            padding: 2px;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            &:empty {
+                padding: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        margin-top: -35px;
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-top: -58px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-top: -60px;
+    }
+
+    .site-header.uses-core-navigation + & {
+        margin-top: -20px;
+
+        @include media-breakpoint-up(sm) {
+            margin-top: -30px;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-top: -53px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-top: -55px;
+        }
+    }
+}

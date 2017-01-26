@@ -1,0 +1,109 @@
+.side-navigation-header {
+    color: $medium-gray;
+    display: block;
+    font-size: 16px;
+    line-height: 2em;
+    padding: 0 21px 10px;
+    text-transform: uppercase;
+
+    .side-navigation.match-page-title & {
+        margin-top: 23px;
+        padding-top: 10px;
+    }
+}
+
+.side-navigation {
+    & > ul {
+        border-right: 3px solid $really-light-gray;
+        font-size: 19px;
+        line-height: (24em/19);
+        list-style: none;
+        margin: 0 0 1.5em;
+        padding: 0;
+
+        & > li {
+            border-left: 8px solid $white;
+            margin: 0;
+            padding: 0;
+
+            &:hover {
+                border-left: 8px solid $really-light-gray;
+            }
+
+            a {
+                display: block;
+                color: $side-navigation-link;
+                text-decoration: none;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+
+            & > span {
+                & > a {
+                    border-bottom: 1px solid #e1e0e0;
+                    padding: 13px;
+                }
+            }
+
+            & > a {
+                border-bottom: 1px solid $really-light-gray;
+                padding: 13px;
+            }
+
+            ul {
+                display: none;
+                font-size: .9em;
+                list-style: disc;
+                padding: 0 0 0 33px;
+            }
+
+            & > ul {
+                border-bottom: 1px solid $really-light-gray;
+                border-top: 1px solid $white;
+                margin-top: -1px;
+                padding-bottom: 13px;
+                padding-right: 15px;
+            }
+
+            &:hover > ul {
+                border-top-color: #f0efef;
+            }
+
+            &:first-child > a {
+                border-top: 1px solid $really-light-gray;
+            }
+
+            &.active {
+                border-left-color: $link-hover-color;
+                z-index: 0;
+            }
+
+            &.active {
+                margin-top: -1px;
+
+                & > a {
+                    border-top: 1px solid $really-light-gray;
+                }
+            }
+
+            .side-navigation > ul > li > span > a {
+                border-bottom: 1
+            }
+        }
+    }
+
+    li.active {
+        & > a {
+            @extend .sans-serif-font-bold;
+
+            color: $side-navigation-active;
+        }
+
+        & > ul {
+            display: block;
+        }
+
+    }
+}

@@ -1,0 +1,32 @@
+body.homepage {
+    background-color: #f7f7f7;
+}
+
+.section-header {
+    border-bottom: 3px double $really-light-gray;
+    height: 12px;
+    margin-bottom: 25px;
+    overflow: visible;
+    text-align: center;
+
+    h3 {
+        @extend .trajan-font;
+
+        background-color: #f7f7f7;
+        color: $medium-gray;
+        display: inline-block;
+        font-size: 14px;
+        margin-bottom: 0;
+        padding: 0 10px;
+    }
+}
+
+// Evergreen module for perma-content on homepage; this styling is temporary
+.evergreen.module {
+    @extend .sans-serif-font-bold;
+
+    padding: 50px 20px;
+    background-color: $medium-gray;
+    color: $white;
+    text-align: center;
+}

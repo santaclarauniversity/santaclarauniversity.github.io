@@ -41,7 +41,7 @@ function getLoaders() {
   const loaders = [{
     test: /(\.js)/,
     exclude: /(node_modules)/,
-    loaders: ['babel'],
+    loaders: ['babel-loader'],
   }, {
     test: /(\.jpg|\.png)$/,
     loader: 'url-loader?limit=10000',
@@ -55,16 +55,16 @@ function getLoaders() {
 }
 
 
-module.exports = (config) => {
+module.exports = (configRoot, config) => {
   return {
     entry: {
-      'fabricator': config.src.scripts.fabricator,
+      'fabricator': configRoot.src + config.src.scripts.fabricator,
+      'toolkit': configRoot.src + config.src.scripts.toolkit
     },
     output: {
-      path: config.out.scripts,
+      path: configRoot.js,
       filename: '[name].js',
     },
-    devtool: 'source-map',
     resolve: {
       extensions: ['', '.js'],
     },

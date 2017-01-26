@@ -15,9 +15,11 @@
     "max-len": "off",
     "no-param-reassign": "off",
     "consistent-return": "off",
-    "no-underscore-dangle": "off", // TODO Unsure whether these should be fixed or ignored.
-    "func-names": "off",           // TODO Unsure whether these should be fixed or ignored.
-    "prefer-arrow-callback": "off" // TODO Unsure whether these should be fixed or ignored.
+    "no-plusplus": "off",
+    "no-mixed-operators": "off",    // TODO Unsure whether these should be fixed or ignored.
+    "no-underscore-dangle": "off",  // TODO Unsure whether these should be fixed or ignored.
+    "func-names": "off",            // TODO Unsure whether these should be fixed or ignored.
+    "prefer-arrow-callback": "off"  // TODO Unsure whether these should be fixed or ignored.
   },
   "env": {
     "amd": true,

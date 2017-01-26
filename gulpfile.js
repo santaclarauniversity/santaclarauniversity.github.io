@@ -1,282 +1,236 @@
 'use strict';
 
-// fabricator modules
+// fabricator packages
 const assembler = require('fabricator-assemble');
-const browserSync = require('browser-sync');
-const csso = require('gulp-csso');
+const browserSync = require('browser-sync').create();
 const del = require('del');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
-const gulpif = require('gulp-if');
-const imagemin = require('gulp-imagemin');
-const prefix = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
-const reload = browserSync.reload;
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('webpack');
 
-// custom modules
-const babel = require('gulp-babel');
-const clone = require('gulp-clone');
-const eslint = require('gulp-eslint');
-const less = require('gulp-less');
-const lessReporter = require('gulp-csslint-less-reporter');
-const lint = require('gulp-csslint');
-const nano = require('gulp-cssnano');
-const a11y = require('gulp-accessibility');
+// custom packages
+// CSS
+const bourbon = require('node-bourbon').includePaths;
 
-// configuration
-// Top-level navigation
-const rootConfig = {
+// ES6
+const babel = require('gulp-babel');
+const uglifyJs = require('gulp-uglify');
+
+// linters
+const sassLint = require('gulp-sass-lint');
+const eslint = require('gulp-eslint');
+
+// utils
+const clone = require('gulp-clone');
+const fs = require('fs');
+
+
+// paths to code that gets copied/linted/etc. in the process of launching toolkit
+const configRoot = {
   assets: './assets/',
   bower: './bower_components/',
   css: './css/',
   dist: './dist/',
-  fabricator: './src/assets/fabricator/',
+  src: './src/assets/',
   js: './js/',
-  less: './less/',
-  sass: './sass',
+  scss: './scss/'
 };
 
-// Subsets of root navigation
 const config = {
   dev: gutil.env.dev,
   src: {
     scripts: {
-      fabricator: `${rootConfig.fabricator}scripts/fabricator.js`,
-      scu: `${rootConfig.js}scu.js`,
-      bower: {
-        jquery: `${rootConfig.bower}jquery/dist/jquery.min.js`,
-        jqueryUi: `${rootConfig.bower}jquery-ui/jquery-ui.min.js`,
-        bootstrap: `${rootConfig.bower}bootstrap/dist/js/bootstrap.min.js`,
-        jquerySwipe: `${rootConfig.bower}jquery.event.swipe/js/jquery.event.swipe.js`,
-        mediaCheck: `${rootConfig.bower}mediaCheck/js/mediaCheck-min.js`,
-        html5shiv: `${rootConfig.bower}html5shiv/dist/html5shiv.min.js`,
-        holder: `${rootConfig.bower}holderjs/holder.min.js`,
-        tether: `${rootConfig.bower}tether/dist/js/tether.js/tether.min.js`
-      },
+      bower: [
+        'bootstrap/dist/js/bootstrap.min.js',
+        'holderjs/holder.min.js',
+        'html5shiv/dist/html5shiv.min.js',
+        'jquery/dist/jquery.min.js',
+        'jquery-ui/jquery-ui.min.js',
+        'jquery.event.swipe/js/jquery.event.swipe.js',
+        'mediaCheck/js/mediaCheck-min.js'
+      ],
+      fabricator: 'fabricator/scripts/fabricator.js',
+      toolkit: 'toolkit/scripts/toolkit.js'
     },
     styles: {
-      fabricator: `${rootConfig.fabricator}styles/fabricator.scss`,
-      bootstrap: `${rootConfig.less}bootstrap.less`,
-      scu: `${rootConfig.less}scu.less`,
-      ieCompatibility: `${rootConfig.less}ie.less`,
-      landingPages: {
-        startup: `${rootConfig.less}bootstrap/landing-pages/impl/startup.less`,
-        minimal: `${rootConfig.less}bootstrap/landing-pages/impl/minimal.less`,
-        bold: `${rootConfig.less}'bootstrap/landing-pages/impl/bold.less`,
-      },
-      bower: {
-        jqueryUi: `${rootConfig.bower}smoothness/jquery-ui.min.css`,
-      },
-    },
-    views: [
-      'src/views/**/*', '!src/views/+(layouts)/**'
-    ],
-  },
-  // Paths to "output" files that either do not get compiled/have already been compiled
-  out: {
-    scripts: rootConfig.js,
-    styles: {
-      fabricator: `${rootConfig.css}fabricator/`,
-      scu: rootConfig.css,
-    },
-  },
+      bower: [
+        'jquery-ui/themes/smoothness/jquery-ui.min.css'
+      ],
+      fabricator: 'fabricator/styles/fabricator.scss',
+      toolkit: 'toolkit.scss'
+    }
+  }
 };
 
-
-// clean
-gulp.task('clean', del.bind(null, [rootConfig.dist]));
+const webpackConfig = require('./webpack.config.js')(configRoot, config);
 
 
-// styles
-gulp.task('styles:fabricator', () => {
-  gulp.src(config.src.styles.fabricator)
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(prefix('last 1 version'))
-    .pipe(gulpif(!config.dev, csso()))
-    .pipe(rename('f.css'))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(config.out.styles.fabricator))
-    .pipe(gulpif(config.dev, reload({stream: true})));
-});
-
-/**
- * Attempts to pipe data from a LESS source path into its corresponding destination path.
- *
- * @param src    The source folder of the LESS code (string).
- * @param des    The destination folder of the compiled, minified CSS file (string).
- * @param linter  Whether to run CSSLint on the inputted source code.
- * @return      Gulp pipe of output which is sent to its destination.
- */
-function pipeLess(src, des, linter) {
-  // Compile LESS
-  var css = gulp.src([src, '!' + src + '**/*.min.css'])
-    .pipe(sourcemaps.init())
-    .pipe(less());
-
-  // Run CSSLint is designated
-  if (linter) {
-    css.pipe(lint())
-      .pipe(lessReporter(src));
+// styles (.scss -> .css)
+gulp.task('styles:bower', (done) => {
+  // this task does not need to be repeated if we've already populated /css/
+  if (fs.existsSync(configRoot.css)) {
+    done();
+    return;
   }
 
-  // Return output after it has been minified and copied from *.css to *.min.css
-  // Note that this produces both unminified and minified due to clone()
-  return css.pipe(clone())
-    .pipe(gulp.dest(des))
-    .pipe(nano())
-    .pipe(rename({
-      suffix: '.min',
-    }))
-    .pipe(gulp.dest(des));
-}
-
-gulp.task('styles:bootstrap', () => {
-  return pipeLess(config.src.styles.bootstrap, config.out.styles.scu, false);
-});
-
-gulp.task('styles:ieCompatibility', () => {
-  return pipeLess(config.src.styles.ieCompatibility, config.out.styles.scu, true);
-});
-
-gulp.task('styles:landingPages', () => {
-  for (var include in config.src.styles.landingPages) {
-    pipeLess(config.src.styles.landingPages[include], config.out.styles.scu, false);
-  }
-});
-
-gulp.task('styles:scu', () => {
-  return pipeLess(config.src.styles.scu, config.out.styles.scu, true);
-});
-
-gulp.task('styles:bower', () => {
-  for (var include in config.src.styles.bower) {
-    gulp.src(config.src.styles.bower[include])
+  config.src.styles.bower.forEach((style) => {
+    gulp.src(configRoot.bower + style)
       .pipe(clone())
-      .pipe(gulp.dest(config.out.styles.scu));
-  }
+      .pipe(gulp.dest(configRoot.css));
+  });
+
+  done();
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:bootstrap', 'styles:ieCompatibility',
-  'styles:landingPages', 'styles:scu', 'styles:bower']);
+gulp.task('styles:fabricator', () => {
+  return gulp.src(configRoot.src + config.src.styles.fabricator)
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(rename('f.css'))
+    .pipe(gulp.dest(configRoot.css));
+});
+
+gulp.task('styles:bootstrap', (done) => {
+  if (fs.existsSync(configRoot.scss + 'bootstrap/bootstrap.scss')) {
+    done();
+    return;
+  }
+
+  return gulp.src(configRoot.bower + 'bootstrap/scss/**/*')
+    .pipe(clone())
+    .pipe(gulp.dest(configRoot.scss + 'bootstrap/'));
+});
+
+gulp.task('styles:toolkit:lint', () => {
+  return gulp.src(configRoot.scss + config.src.styles.toolkit)
+    .pipe(sassLint({ configFile: '.sass-lint.yml' }))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
+});
+
+gulp.task('styles:toolkit:compile', () => {
+  return gulp.src(configRoot.scss + config.src.styles.toolkit)
+    .pipe(sass({
+      includePaths: bourbon,
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(configRoot.css));
+});
+
+gulp.task('styles:toolkit', (done) => {
+  runSequence('styles:toolkit:lint', 'styles:toolkit:compile', done);
+});
+
+gulp.task('styles', ['styles:bower', 'styles:fabricator', 'styles:toolkit']);
 
 
-// scripts
-const webpackConfig = require('./webpack.config.js')(config);
+// scripts (.js, ES6 standard)
+gulp.task('scripts:bower', (done) => {
+  if (fs.existsSync(configRoot.js)) {
+    done();
+    return;
+  }
 
-gulp.task('scripts:fabricator', function (done) {
+  config.src.scripts.bower.forEach((script) => {
+    gulp.src(configRoot.bower + script)
+      .pipe(clone())
+      .pipe(gulp.dest(configRoot.js));
+  });
+
+  done();
+});
+
+// lint toolkit.js first..
+gulp.task('scripts:webpack:lint', () => {
+  return gulp.src(configRoot.src + config.src.scripts.toolkit)
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
+
+// ..then compile all scripts to one (via webpack)
+gulp.task('scripts:webpack:compile', (done) => {
   webpack(webpackConfig, (err, stats) => {
     if (err) {
       gutil.log(gutil.colors.red(err()));
     }
-    const result = stats.toJson();
-    if (result.errors.length) {
-      result.errors.forEach((error) => {
+
+    const results = stats.toJson();
+
+    if (results.errors.length) {
+      results.errors.forEach((error) => {
         gutil.log(gutil.colors.red(error));
-      });
+      })
     }
+
     done();
   });
 });
 
-gulp.task('scripts:scu', () => {
-  for (let include in config.src.scripts.bower) {
-    gulp.src(config.src.scripts.bower[include])
-      .pipe(clone())
-      .pipe(gulp.dest(config.out.scripts));
-  }
-
-  return gulp.src(config.src.scripts.scu)
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
-    .pipe(babel({
-      presets: ['babili'],
-    }))
-    .pipe(rename({
-      extname: '.min.js',
-    }))
-    .pipe(gulp.dest(config.out.scripts));
+gulp.task('scripts:webpack', (done) => {
+  runSequence('scripts:webpack:lint', 'scripts:webpack:compile', done);
 });
 
-gulp.task('scripts', ['scripts:scu', 'scripts:fabricator']);
+gulp.task('scripts', ['scripts:bower', 'scripts:webpack']);
 
 
-// favicon
-gulp.task('favicon', () => {
-  return gulp.src('./src/favicon.ico')
-    .pipe(gulp.dest(rootConfig.dist));
-});
+/**
+ * Reload the BrowserSync module exactly once, which is executed whenever a web file is updated.
+ */
+function reload(done) {
+  browserSync.reload();
+  done();
+}
 
+gulp.task('clean', del.bind(null, [configRoot.dist]));
 
-// assembler
-gulp.task('assembler', function (done) {
+gulp.task('assembler', (done) => {
   assembler({
-    logErrors: config.dev,
+    logErrors: config.dev
   });
   done();
 });
 
-gulp.task('a11y', function() {
-  return gulp.src('./dist/**/*.html')
-    .pipe(a11y({
-      force: true
-    }))
-    .on('error', console.log)
-    .pipe(a11y.report({reportType: 'txt'}))
-    .pipe(rename({
-      extname: '.txt'
-    }))
-    .pipe(gulp.dest('reports/txt'));
-});
-
-// server
+// start BrowserSync and begin watching files
 gulp.task('serve', () => {
-  browserSync({
+  browserSync.init({
+    notify: false,
+    logPrefix: 'Toolkit',
+    // we do the 'server' configs here to allow ourselves to reference /js/, /css/ from /src/views/
     server: {
       baseDir: '.',
       routes: {
-        '/': 'dist',
-      },
-    },
-    notify: false,
-    logPrefix: 'FABRICATOR',
+        '/': configRoot.dist
+      }
+    }
   });
 
-  gulp.task('assembler:watch', ['assembler'], browserSync.reload);
+  // watch for changes to markup
+  gulp.task('assembler:watch', ['assembler'], reload);
   gulp.watch('src/**/*.{html,md,json,yml}', ['assembler:watch']);
 
-  gulp.task('styles:fabricator:watch', ['styles:fabricator'], browserSync.reload);
-  gulp.watch(`${rootConfig.sass.fabricator}**/*.scss`, ['styles:fabricator:watch']);
+  // watch for toolkit .scss changes (EXCLUDE /scss/bootstrap/ - these files should not be changed!)
+  gulp.task('styles:toolkit:watch', ['styles:toolkit'], reload);
+  gulp.watch([configRoot.scss + '**/*.scss', `!${configRoot.scss}bootstrap/**/*.scss`], ['styles:toolkit:watch']);
 
-  gulp.task('styles:bootstrap:watch', ['styles:bootstrap'], browserSync.reload);
-  gulp.watch(`${rootConfig.less}bootstrap/**/*.less`, ['styles:bootstrap:watch']);
+  gulp.task('styles:bootstrap:watch', ['styles:b'])
 
-  gulp.task('styles:scu:watch', ['styles:scu'], browserSync.reload);
-  gulp.watch([`${rootConfig.less}**/*.less`, `!${rootConfig.assets}bootstrap/**/*.less`],
-    ['styles:scu:watch']);
-
-  // There could be a scripts:fabricator:watch here, but we don't really need it.
-
-  gulp.task('scripts:scu:watch', ['scripts:scu'], browserSync.reload);
-  gulp.watch(config.src.scripts.scu, ['scripts:scu:watch']);
+  // watch for toolkit .js changes
+  gulp.task('scripts:watch', ['scripts:lint', 'scripts:compile'], reload);
+  gulp.watch(configRoot.src + config.src.scripts.toolkit, ['scripts:watch']);
 });
 
-
-// default build task
+// this is the task gulp actually runs from `gulp` command
 gulp.task('default', ['clean'], () => {
-  // define build tasks
   const tasks = [
     'styles',
     'scripts',
     'assembler'
   ];
 
-  // run build
   runSequence(tasks, () => {
     if (config.dev) {
       gulp.start('serve');

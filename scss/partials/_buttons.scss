@@ -1,0 +1,125 @@
+@import "../../bower_components/bourbon/app/assets/stylesheets/css3/transform";
+
+/**
+ * These need a rework. Originally thought to extend Bootstrap's .btn class,
+ * we've decided against it. Old notes:
+ *
+ * The default SCU button is text left aligned, with a &raquo; ::after element.
+ * This is usually used as a link, rather than a <button>, and with the
+ * additional Bootstrap classes .btn and .btn-block:
+ * ex. <a href="/link" class="btn btn-scu btn-block">Button text here</a>
+ *
+ * Note that Bootstrap's .btn-block class causes text to not wrap and remain
+ * on one line, so keep these short.
+ */
+.link-button {
+    display: block;
+    text-align: center;
+    width: 100%;
+
+    @include media-breakpoint-up(sm) {
+        max-width: 320px;
+    }
+    @include media-breakpoint-up(lg) {
+        max-width: 360px;
+    }
+
+    &.inline {
+        background-clip: border-box;
+        display: inline-block;
+    }
+
+    &.maroon {
+        background-color: $maroon;
+        border: 1px solid $maroon;
+        color: $white !important;
+        font-size: 20px;
+        line-height: 1.2;
+        margin: 0 0 .5em;
+        padding: 10px 25px 9px 15px;
+        position: relative;
+        text-align: left;
+        text-decoration: none !important;
+
+        &::after {
+            content: '\00bb';
+            position: absolute;
+            right: 15px;
+
+            // Begin - Fix to make chevrons align correctly regardless of text length
+            top: 50%;
+            @include transform(translate(0, -50%));
+            // End Fix
+        }
+        &:hover {
+            background-color: darken($maroon, 5%);
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+    &.stroked {
+        border: 6px solid $white;
+        margin: 0 0 10px;
+        outline: 1px solid #bdbdbd;
+        position: relative;
+
+        &:before {
+            border: 1px solid $brand-red;
+            bottom: 0;
+            content: '';
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        &:hover {
+            outline-color: darken($link-red, 15%);
+            text-decoration: none;
+        }
+    }
+
+    &.white {
+        background-color: $white;
+        color: #8c8a8a;
+        font-size: 37px;
+        padding: 14px 10px;
+
+        span {
+            @extend .serif-font;
+
+            color: $brand-red;
+        }
+
+        &:hover {
+            background-color: darken($white, 5%);
+            color: #8c8a8a;
+            text-decoration: none;
+
+            span {
+                color: $brand-red;
+            }
+        }
+    }
+
+    &.red {
+        @extend .sans-serif-font-bold;
+
+        background-color: $brand-red;
+        color: $white !important;
+        font-size: 27px;
+        padding: 17px 10px;
+
+        &:before {
+            border-color: $maroon;
+        }
+
+        &:hover {
+            background-color: darken($brand-red, 5%);
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}

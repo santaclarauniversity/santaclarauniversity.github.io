@@ -1,0 +1,47 @@
+/* Classes for building SCU modules */
+.module {
+    width: 100%;
+    margin: 1em 0 2em;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    /* Images in modules always rescale to be full-width */
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+
+        &.image-attach-top {
+            background-position-y: top;
+        }
+        &.image-attach-bottom {
+            background-position-y: bottom;
+        }
+        &.image-attach-right {
+            background-position-x: right;
+        }
+        &.image-attach-left {
+            background-position-x: left;
+        }
+    }
+
+    &.one-column {
+        @include media-breakpoint-up(md) {
+            max-width: 320px;
+        }
+        @include media-breakpoint-up(lg) {
+            max-width: 360px;
+        }
+    }
+    &.two-column {
+        @include media-breakpoint-up(md) {
+            max-width: 670px;
+        }
+        @include media-breakpoint-up(lg) {
+            max-width: 750px;
+        }
+    }
+}
+
