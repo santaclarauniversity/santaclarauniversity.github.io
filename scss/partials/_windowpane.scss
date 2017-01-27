@@ -1,95 +1,73 @@
 .windowpane {
-    background-size: cover;
-    min-height: 330px;
-    overflow: hidden;
-    padding-bottom: 33.3333333%;
-    position: relative;
+  background-size: cover;
+  min-height: 330px;
+  overflow: hidden;
+  padding-bottom: 33.3333333%;
+  position: relative;
 
-    .home {
-        height: 200px;
-        margin-top: 10px;
-
-        .windowpane-background {
-            background-position: initial;
-        }
-    }
-
-    .windowpane-desc {
-        bottom: 1.5em;
-        position: absolute;
-
-        &:hover > .windowpane-rollup {
-            opacity: 0.85;
-        }
-
-        &.introduction {
-            top: 50%;
-            transform: translate(0, -50%);
-        }
-
-        &.full-panel {
-            top: 0;
-            width: 100%;
-
-            li.list-group-item {
-                background-color: transparent;
-
-                a {
-                    color: $white;
-                }
-            }
-        }
-
-        .windowpane-rollup {
-            @include transition(opacity .7s);
-
-            background-color: #000;
-            color: #fff;
-            padding: 8px;
-            opacity: 0;
-        }
-
-        .btn-default-outline {
-            // .button-outline-variant(#fff);
-        }
-
-        .btn-default-outline,
-        .btn-outline {
-            &:focus,
-            &.focus,
-            &:hover,
-            &:active,
-            &.active,
-            .open > .dropdown-toggle & {
-                color: #000;
-
-                &:hover,
-                &:focus,
-                &.focus {
-                    color: #000;
-                }
-            }
-        }
-    }
+  .home {
+    height: 200px;
+    margin-top: 10px;
 
     .windowpane-background {
-        background-size: cover;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 0;
+      background-position: initial;
     }
+  }
+
+  .windowpane-desc {
+    bottom: 1.5em;
+    position: absolute;
+
+    &:hover > .windowpane-rollup {
+      opacity: 0.85;
+    }
+
+    &.introduction {
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &.full-panel {
+      top: 0;
+      width: 100%;
+
+      li.list-group-item {
+        background-color: transparent;
+
+        a {
+          color: $white;
+        }
+      }
+    }
+
+    .windowpane-rollup {
+      @include transition(opacity .7s);
+
+      background-color: #000;
+      color: #fff;
+      padding: 8px;
+      opacity: 0;
+    }
+  }
+
+  .windowpane-background {
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
 }
 
 .row-no-padding {
-    margin-left: 0;
-    margin-right: 0;
-    padding-bottom: 0 !important;
+  margin-left: 0;
+  margin-right: 0;
+  padding-bottom: 0 !important;
 }
 
 .row-no-padding [class*="col-"] {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

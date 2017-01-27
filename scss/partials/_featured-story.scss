@@ -1,15 +1,15 @@
 .featured-story.module {
-    .thumbnail {
-        margin-bottom: 1em;
-    }
+  .thumbnail {
+    margin-bottom: 1em;
+  }
 
-    .featured-story-heading {
-        font-size: 18px;
-        margin: 0;
-        text-transform: none;
-    }
+  .featured-story-heading {
+    font-size: 18px;
+    margin: 0;
+    text-transform: none;
+  }
 
-    & > *:last-child {
-        margin-bottom: 0;
-    }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
 }

@@ -1,24 +1,24 @@
 .related-links.module {
-    .related-links-header {
-        color: $medium-gray;
-        display: block;
-        font-size: 16px;
-        line-height: 2em;
-        text-transform: uppercase;
-    }
+  .related-links-header {
+    color: $medium-gray;
+    display: block;
+    font-size: 16px;
+    line-height: 2em;
+    text-transform: uppercase;
+  }
 
-    ul {
-        color: $link-red;
-        font-size: 16px;
-        line-height: 1.25;
-        padding-left: 1.25em;
-    }
+  ul {
+    color: $link-red;
+    font-size: 16px;
+    line-height: 1.25;
+    padding-left: 1.25em;
+  }
 
-    .related-links-header, li {
-        margin: 0 0 .75em;
-    }
+  .related-links-header, li {
+    margin: 0 0 .75em;
+  }
 
-    & > *:last-child, & > *:last-child > *:last-child {
-        margin-bottom: 0;
-    }
+  & > *:last-child, & > *:last-child > *:last-child {
+    margin-bottom: 0;
+  }
 }

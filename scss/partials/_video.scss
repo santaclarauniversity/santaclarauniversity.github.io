@@ -16,29 +16,29 @@
  *
  */
 .video.module {
-    iframe {
-        border: 1px solid $video-border;
+  iframe {
+    border: 1px solid $video-border;
+  }
+
+  .video-caption {
+    color: #696666;
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0 0 1em;
+    text-transform: uppercase;
+
+    a {
+      color: $black;
+      font-size: 18px;
+      text-transform: none;
+
+      &:hover {
+        color: lighten($black, 15%);
+      }
     }
+  }
 
-    .video-caption {
-        color: #696666;
-        font-size: 14px;
-        line-height: 1.2;
-        margin: 0 0 1em;
-        text-transform: uppercase;
-
-        a {
-            color: $black;
-            font-size: 18px;
-            text-transform: none;
-
-            &:hover {
-                color: lighten($black, 15%);
-            }
-        }
-    }
-
-    .embed-responsive + .video-caption {
-        margin: 1em 0 0;
-    }
+  .embed-responsive + .video-caption {
+    margin: 1em 0 0;
+  }
 }

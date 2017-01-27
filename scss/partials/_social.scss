@@ -23,152 +23,152 @@ $rss: #ff7600;
 $soundcloud: #ff3a00;
 
 @font-face {
-    font-family: 'fontello';
-    font-style: normal;
-    font-weight: normal;
-    src: url('/assets/fonts/fontello/fontello.eot?88632057');
-    src: url('/assets/fonts/fontello/fontello.eot?88632057#iefix') format('embedded-opentype'),
-        url('/assets/fonts/fontello/fontello.woff?88632057') format('woff'),
-        url('/assets/fonts/fontello/fontello.ttf?88632057') format('truetype'),
-        url('/assets/fonts/fontello/fontello.svg?88632057#fontello') format('svg');
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/fontello/fontello.eot?88632057');
+  src: url('/assets/fonts/fontello/fontello.eot?88632057#iefix') format('embedded-opentype'),
+  url('/assets/fonts/fontello/fontello.woff?88632057') format('woff'),
+  url('/assets/fonts/fontello/fontello.ttf?88632057') format('truetype'),
+  url('/assets/fonts/fontello/fontello.svg?88632057#fontello') format('svg');
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
-    display: inline-block;
-    font-family: "fontello";
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    text-align: center;
-    text-decoration: inherit;
-    width: 1em;
+  display: inline-block;
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  text-align: center;
+  text-decoration: inherit;
+  width: 1em;
 
-    /* For safety - reset parent styles, that can break glyph codes*/
-    font-variant: normal;
-    text-transform: none;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
 
-    /* fix buttons height, for twitter bootstrap */
-    line-height: 1em;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
 
-    /* Font smoothing. That was taken from TWBS */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
 }
 
 .icon-flickr:before {
-    content: '\e800';
+  content: '\e800';
 }
 
 .icon-twitter:before {
-    content: '\e801';
+  content: '\e801';
 }
 
 .icon-vimeo:before {
-    content: '\e802';
+  content: '\e802';
 }
 
 .icon-facebook-squared:before {
-    content: '\e803';
+  content: '\e803';
 }
 
 .icon-instagram:before {
-    content: '\e804';
+  content: '\e804';
 }
 
 .icon-pinterest:before {
-    content: '\e805';
+  content: '\e805';
 }
 
 .icon-rss:before {
-    content: '\e806';
+  content: '\e806';
 }
 
 .icon-soundcloud:before {
-    content: '\e807';
+  content: '\e807';
 }
 
 .icon-youtube:before {
-    content: '\e808';
+  content: '\e808';
 }
 
 .icon-linkedin:before {
-    content: '\e809';
+  content: '\e809';
 }
 
 .icon-scu:before {
-    content: '\e810';
+  content: '\e810';
 }
 
 /*  SCU-specific styles  */
 
 .social a {
-    @include transition(opacity 0.3s);
+  @include transition(opacity 0.3s);
 
-    color: #fff;
-    display: block;
-    float: left;
-    font-size: 40px;
-    height: 64px;
-    margin: 0 8px 8px 0;
-    opacity: 1;
-    text-align: center;
-    width: 64px;
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: 40px;
+  height: 64px;
+  margin: 0 8px 8px 0;
+  opacity: 1;
+  text-align: center;
+  width: 64px;
 
-    &.facebook {
-        background-color: $facebook;
-    }
+  &.facebook {
+    background-color: $facebook;
+  }
 
-    &.twitter {
-        background-color: $twitter;
-    }
+  &.twitter {
+    background-color: $twitter;
+  }
 
-    &.pinterest {
-        background-color: $pinterest;
-    }
+  &.pinterest {
+    background-color: $pinterest;
+  }
 
-    &.linkedin {
-        background-color: $linkedin;
-    }
+  &.linkedin {
+    background-color: $linkedin;
+  }
 
-    &.youtube {
-        background-color: $youtube;
-    }
+  &.youtube {
+    background-color: $youtube;
+  }
 
-    &.vimeo {
-        background-color: $vimeo;
-    }
+  &.vimeo {
+    background-color: $vimeo;
+  }
 
-    &.soundcloud {
-        background-color: $soundcloud;
-    }
+  &.soundcloud {
+    background-color: $soundcloud;
+  }
 
-    &.flickr {
-        background-color: $flickr;
-    }
+  &.flickr {
+    background-color: $flickr;
+  }
 
-    &.rss {
-        background-color: $rss;
-    }
+  &.rss {
+    background-color: $rss;
+  }
 
-    &.instagram {
-        background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
-    }
+  &.instagram {
+    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+  }
 
-    &:hover {
-        opacity: 0.7;
-    }
+  &:hover {
+    opacity: 0.7;
+  }
 
-    &.illuminate {
-        background-image: url(/assets/images/icon-illuminate.png);
-        background-size: cover;
-    }
+  &.illuminate {
+    background-image: url(/assets/images/icon-illuminate.png);
+    background-size: cover;
+  }
 
-    &.scu {
-        background-color: $brand-primary;
-        font-size: 60px;
-        line-height: 55px;
-    }
+  &.scu {
+    background-color: $brand-primary;
+    font-size: 60px;
+    line-height: 55px;
+  }
 }
 
 

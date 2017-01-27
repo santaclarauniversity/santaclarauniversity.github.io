@@ -1,121 +1,121 @@
 .feature-gallery.module {
-    .thumbnail {
-        margin-bottom: 0;
+  .thumbnail {
+    margin-bottom: 0;
+  }
+
+  &.two-column {
+    @include box-shadow(0 1px 5px rgba($black, 0.18));
+
+    border: 3px solid $white;
+  }
+
+  .carousel-inner {
+    .item {
+      @include transition(opacity 0.4s ease-in-out);
+
+      opacity: 0;
     }
 
-    &.two-column {
-        @include box-shadow(0 1px 5px rgba($black, 0.18));
+    .active {
+      opacity: 1;
 
-        border: 3px solid $white;
-    }
+      &.left, &.right {
+        @include transform(none);
 
-    .carousel-inner {
-        .item {
-            @include transition(opacity 0.4s ease-in-out);
-
-            opacity: 0;
-        }
-
-        .active {
-            opacity: 1;
-
-            &.left, &.right {
-                @include transform(none);
-
-                left: 0;
-                opacity: 0;
-                z-index: 1;
-            }
-        }
-
-        .next.left, .prev.right {
-            opacity: 1;
-        }
-    }
-
-    .carousel-caption {
-        @include display(flex);
-        @include flex-direction(column);
-        @include justify-content(center);
-        @include background(rgba($white, 0.85));
-
-        bottom: 0;
-        color: #231f20;
-        min-height: (49em / 12);
         left: 0;
-        padding: 10px 49px 9px;
-        right: 0;
-        text-shadow: none;
-
-        &, * {
-            font-size: 12px;
-            line-height: 1.2;
-        }
-
-        & > *:last-child {
-            margin-bottom: 0;
-        }
-
-        @include media-breakpoint-up(sm) {
-            min-height: (55em / 14);
-
-            &, * {
-                font-size: 14px;
-                line-height: (17 / 14);
-            }
-        }
+        opacity: 0;
+        z-index: 1;
+      }
     }
 
-    .carousel-control {
-        @include display(flex);
-        @include flex-direction(column);
-        @include justify-content(center);
-        @include filter(none);
-
-        background-image: none;
-        color: #ab0028;
-        height: 49px;
-        opacity: 1;
-        text-shadow: none;
-        top: auto;
-        width: 34px;
-        z-index: 11;
-
-        html.no-flexbox & {
-            line-height: 49px;
-        }
-
-        @include media-breakpoint-up(sm) {
-            height: 55px;
-
-            html.no-flexbox & {
-                line-height: 55px;
-            }
-        }
+    .next.left, .prev.right {
+      opacity: 1;
     }
+  }
+
+  .carousel-caption {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include background(rgba($white, 0.85));
+
+    bottom: 0;
+    color: #231f20;
+    min-height: (49em / 12);
+    left: 0;
+    padding: 10px 49px 9px;
+    right: 0;
+    text-shadow: none;
+
+    &, * {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+
+    @include media-breakpoint-up(sm) {
+      min-height: (55em / 14);
+
+      &, * {
+        font-size: 14px;
+        line-height: (17 / 14);
+      }
+    }
+  }
+
+  .carousel-control {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include filter(none);
+
+    background-image: none;
+    color: #ab0028;
+    height: 49px;
+    opacity: 1;
+    text-shadow: none;
+    top: auto;
+    width: 34px;
+    z-index: 11;
+
+    html.no-flexbox & {
+      line-height: 49px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      height: 55px;
+
+      html.no-flexbox & {
+        line-height: 55px;
+      }
+    }
+  }
 }
 
 .feature-gallery-source {
-    @extend .sans-serif-font-italic;
+  @extend .sans-serif-font-italic;
 
-    color: $medium-gray;
-    text-decoration: underline;
-    text-transform: uppercase;
+  color: $medium-gray;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 
 // If the jumbotron comes after a subheader, it overlaps a bit
 .subheader.module + .container > .row > .col-xs-12 > .full-width.feature-gallery.module {
-    border: 3px 3px 0 0 solid $white;
-    box-sizing: content-box;
-    margin-left: -3px;
-    margin-top: -45px;
-    margin-right: -3px;
+  border: 3px 3px 0 0 solid $white;
+  box-sizing: content-box;
+  margin-left: -3px;
+  margin-top: -45px;
+  margin-right: -3px;
 }
 
 .site-header:not(.uses-core-navigation) + .container > .row > .col-xs-12 > .full-width.feature-gallery.module {
-    margin-top: -20px;
+  margin-top: -20px;
 
-    @include media-breakpoint-up(md) {
-        margin-top: -55px;
-    }
+  @include media-breakpoint-up(md) {
+    margin-top: -55px;
+  }
 }

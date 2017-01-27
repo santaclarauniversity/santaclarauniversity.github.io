@@ -7,279 +7,278 @@ $hero-short-height: 355px;
 $hero-xshort-height: 300px;
 
 .hero.module {
-    background-color: #dcdcdc; // Fallback color
-    background-position: 50% 20%;
-    background-size: cover;
-    width: 100%;
+  background-color: #dcdcdc; // Fallback color
+  background-position: 50% 20%;
+  background-size: cover;
+  width: 100%;
 
+  .site-header + & {
+    margin-top: -20px;
 
-    .site-header + & {
-        margin-top: -20px;
-
-        @include media-breakpoint-up(sm) {
-            margin-top: -30px;
-        }
-
-        @include media-breakpoint-up(md) {
-            margin-top: -53px;
-        }
-
-        @include media-breakpoint-up(lg) {
-            margin-top: -55px;
-        }
+    @include media-breakpoint-up(sm) {
+      margin-top: -30px;
     }
 
+    @include media-breakpoint-up(md) {
+      margin-top: -53px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: -55px;
+    }
+  }
+
+  .container {
+    min-height: $hero-xs-height;
+    position: relative;
+
+    @include media-breakpoint-up(sm) {
+      min-height: $hero-sm-height;
+
+      & > h1 {
+        font-size: 90px;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      min-height: $hero-md-height;
+
+      & > h1 {
+        font-size: 120px;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      min-height: $hero-lg-height;
+    }
+
+    // Tighten up feature in case of short desktop windows
+    @media (min-width: sm) and (max-width: $screen-short) {
+      min-height: $hero-short-height;
+    }
+
+    @media (min-width: sm) and (max-width: $screen-xshort) {
+      min-height: $hero-xshort-height;
+    }
+  }
+
+  .hero-body {
+    height: $hero-xs-height;
+
+    .high-contrast {
+      background-color: rgba($black, 0.55);
+      color: $white !important;
+
+      a {
+        color: #fbfb96;
+
+        &:hover {
+          color: darken(#fbfb96, 10%);
+        }
+      }
+
+      h1, h2, h3, h4, h5 {
+        color: $white;
+      }
+    }
+
+    .caption {
+      @include background(rgba($white, 0.85));
+
+      font-size: 13px;
+      padding: 15px;
+
+      p {
+        font-size: inherit;
+      }
+
+      & > *:last-child {
+        margin-bottom: 0;
+      }
+
+      @include media-breakpoint-up(sm) {
+        .site-header + & {
+          font-size: 14px;
+          padding-top: 40px;
+        }
+      }
+    }
+
+    h1 {
+      .centers & {
+        bottom: 20px;
+        font-size: 60px;
+        top: auto;
+      }
+    }
+
+    p, ol, ul {
+      font-size: 18px;
+      line-height: 1.25;
+      margin-bottom: 1.5em;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    &.white-text {
+      p, ol, ul {
+        color: $white;
+      }
+
+      a {
+        color: #fbfb96;
+
+        &:hover {
+          color: darken(#fbfb96, 10%);
+        }
+      }
+    }
+  }
+
+  &.feature {
     .container {
-        min-height: $hero-xs-height;
-        position: relative;
+      padding-bottom: 25px;
+      padding-top: 25px;
 
-        @include media-breakpoint-up(sm) {
-            min-height: $hero-sm-height;
+      @include media-breakpoint-up(sm) {
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(center);
 
-            & > h1 {
-                font-size: 90px;
-            }
+        height: $hero-sm-height;
+        max-height: $hero-sm-height;
+        min-height: $hero-sm-height;
+        padding-bottom: 50px;
+        padding-top: 50px;
+
+        p, ol, ul {
+          font-size: 21px;
         }
 
-        @include media-breakpoint-up(md) {
-            min-height: $hero-md-height;
-
-            & > h1 {
-                font-size: 120px;
-            }
+        .no-flexbox & {
+          display: table-cell;
+          vertical-align: middle;
         }
+      }
 
-        @include media-breakpoint-up(lg) {
-            min-height: $hero-lg-height;
-        }
+      @include media-breakpoint-up(md) {
+        height: $hero-md-height;
+        max-height: $hero-md-height;
 
-        // Tighten up feature in case of short desktop windows
-        @media (min-width: sm) and (max-width: $screen-short) {
-            min-height: $hero-short-height;
+        p, ol, ul {
+          font-size: 24px;
         }
+      }
 
-        @media (min-width: sm) and (max-width: $screen-xshort) {
-            min-height: $hero-xshort-height;
+      @include media-breakpoint-up(lg) {
+        height: $hero-lg-height;
+        max-height: $hero-lg-height;
+      }
+    }
+  }
+
+  &.landing {
+    .container {
+      position: relative;
+
+      & > h1 {
+        @extend .serif-font-bold;
+
+        bottom: 0;
+        color: $white;
+        font-size: 50px;
+        left: 15px;
+        line-height: 0.7;
+        margin: 0;
+        position: absolute;
+        text-shadow: 0 -2px 3px rgba($black, .22);
+        z-index: 1;
+      }
+
+      @include media-breakpoint-up(sm) {
+        & > h1 {
+          font-size: 90px;
         }
+      }
+
+      @include media-breakpoint-up(md) {
+        & > h1 {
+          font-size: 120px;
+        }
+      }
     }
 
     .hero-body {
+      .strip {
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(center);
+
+        background-color: #1b1b1b;
         height: $hero-xs-height;
+        padding: 15px 20px;
 
-        .high-contrast {
-            background-color: rgba($black, 0.55);
-            color: $white !important;
+        h5 {
+          @extend .sans-serif-font;
 
-            a {
-                color: #fbfb96;
-
-                &:hover {
-                    color: darken(#fbfb96, 10%);
-                }
-            }
-
-            h1, h2, h3, h4, h5 {
-                color: $white;
-            }
+          color: #555;
+          font-size: 13px;
+          text-transform: uppercase;
         }
 
-        .caption {
-            @include background(rgba($white, 0.85));
-
-            font-size: 13px;
-            padding: 15px;
-
-            p {
-                font-size: inherit;
-            }
-
-            & > *:last-child {
-                margin-bottom: 0;
-            }
-
-            @include media-breakpoint-up(sm) {
-                .site-header + & {
-                    font-size: 14px;
-                    padding-top: 40px;
-                }
-            }
+        h6 {
+          color: #d0d0d0;
+          font-size: 20px;
         }
 
-        h1 {
-            .centers & {
-                bottom: 20px;
-                font-size: 60px;
-                top: auto;
-            }
+        h5 + h6 {
+          margin-top: 0;
         }
 
         p, ol, ul {
-            font-size: 18px;
-            line-height: 1.25;
-            margin-bottom: 1.5em;
+          color: $white;
+          font-size: 13px;
         }
 
         a {
-            text-decoration: underline;
+          color: #fbfb96;
+
+          &:hover {
+            color: darken(#fbfb96, 10%);
+          }
         }
 
-        &.white-text {
-            p, ol, ul {
-                color: $white;
-            }
+        @include media-breakpoint-up(sm) {
+          height: $hero-sm-height;
 
-            a {
-                color: #fbfb96;
+          h5 {
+            font-size: 15px;
+          }
 
-                &:hover {
-                    color: darken(#fbfb96, 10%);
-                }
-            }
+          h6 {
+            font-size: 26px;
+          }
+
+          p, ol, ul {
+            font-size: 14px;
+          }
         }
+
+        @include media-breakpoint-up(md) {
+          height: $hero-md-height;
+          padding: 35px 20px;
+
+          p, ol, ul {
+            font-size: 15px;
+          }
+        }
+
+        @include media-breakpoint-up(lg) {
+          height: $hero-lg-height;
+        }
+      }
     }
-
-    &.feature {
-        .container {
-            padding-bottom: 25px;
-            padding-top: 25px;
-
-            @include media-breakpoint-up(sm) {
-                @include display(flex);
-                @include flex-direction(column);
-                @include justify-content(center);
-
-                height: $hero-sm-height;
-                max-height: $hero-sm-height;
-                min-height: $hero-sm-height;
-                padding-bottom: 50px;
-                padding-top: 50px;
-
-                p, ol, ul {
-                    font-size: 21px;
-                }
-
-                .no-flexbox & {
-                    display: table-cell;
-                    vertical-align: middle;
-                }
-            }
-
-            @include media-breakpoint-up(md) {
-                height: $hero-md-height;
-                max-height: $hero-md-height;
-
-                p, ol, ul {
-                    font-size: 24px;
-                }
-            }
-
-            @include media-breakpoint-up(lg) {
-                height: $hero-lg-height;
-                max-height: $hero-lg-height;
-            }
-        }
-    }
-
-    &.landing {
-        .container {
-            position: relative;
-
-            & > h1 {
-                @extend .serif-font-bold;
-
-                bottom: 0;
-                color: $white;
-                font-size: 50px;
-                left: 15px;
-                line-height: 0.7;
-                margin: 0;
-                position: absolute;
-                text-shadow: 0 -2px 3px rgba($black, .22);
-                z-index: 1;
-            }
-
-            @include media-breakpoint-up(sm) {
-                & > h1 {
-                    font-size: 90px;
-                }
-            }
-
-            @include media-breakpoint-up(md) {
-                & > h1 {
-                    font-size: 120px;
-                }
-            }
-        }
-
-        .hero-body {
-            .strip {
-                @include display(flex);
-                @include flex-direction(column);
-                @include justify-content(center);
-
-                background-color: #1b1b1b;
-                height: $hero-xs-height;
-                padding: 15px 20px;
-
-                h5 {
-                    @extend .sans-serif-font;
-
-                    color: #555;
-                    font-size: 13px;
-                    text-transform: uppercase;
-                }
-
-                h6 {
-                    color: #d0d0d0;
-                    font-size: 20px;
-                }
-
-                h5 + h6 {
-                    margin-top: 0;
-                }
-
-                p, ol, ul {
-                    color: $white;
-                    font-size: 13px;
-                }
-
-                a {
-                    color: #fbfb96;
-
-                    &:hover {
-                        color: darken(#fbfb96, 10%);
-                    }
-                }
-
-                @include media-breakpoint-up(sm) {
-                    height: $hero-sm-height;
-
-                    h5 {
-                        font-size: 15px;
-                    }
-
-                    h6 {
-                        font-size: 26px;
-                    }
-
-                    p, ol, ul {
-                        font-size: 14px;
-                    }
-                }
-
-                @include media-breakpoint-up(md) {
-                    height: $hero-md-height;
-                    padding: 35px 20px;
-
-                    p, ol, ul {
-                        font-size: 15px;
-                    }
-                }
-
-                @include media-breakpoint-up(lg) {
-                    height: $hero-lg-height;
-                }
-            }
-        }
-    }
+  }
 }

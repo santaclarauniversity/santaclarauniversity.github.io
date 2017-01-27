@@ -10,50 +10,50 @@
  * don't make it too long!
  */
 .image.module {
-    position: relative;
+  position: relative;
 
-    /* Only need to use the .caption class if the caption element is a div -- <figcaption> for when
-        the .image.module element is a figure element. */
-    figcaption, .caption {
-        background: rgba($white, .8);
-        bottom: 2px;
-        left: 2px;
-        padding: 12px 10px 11px;
-        position: absolute;
-        right: 2px;
+  /* Only need to use the .caption class if the caption element is a div -- <figcaption> for when
+      the .image.module element is a figure element. */
+  figcaption, .caption {
+    background: rgba($white, .8);
+    bottom: 2px;
+    left: 2px;
+    padding: 12px 10px 11px;
+    position: absolute;
+    right: 2px;
 
-        * {
-            font-size: 12px;
-            line-height: 1.2em;
-        }
-
-        & > *:last-child {
-            margin-bottom: 0;
-        }
+    * {
+      font-size: 12px;
+      line-height: 1.2em;
     }
 
-    &.one-column {
-        @include media-breakpoint-up(sm) {
-            &.pull-right {
-                margin: 0 0 1em 1.5em;
-            }
-
-            &.pull-left {
-                margin: 0 1.5em 1em 0;
-            }
-        }
+    & > *:last-child {
+      margin-bottom: 0;
     }
+  }
 
-    &.two-column {
-        @include media-breakpoint-up(md) {
-            &.pull-right {
-                margin: 0 0 1em 1.5em;
-            }
+  &.one-column {
+    @include media-breakpoint-up(sm) {
+      &.pull-right {
+        margin: 0 0 1em 1.5em;
+      }
 
-            &.pull-left {
-                margin: 0 1.5em 1em 0;
-            }
-        }
+      &.pull-left {
+        margin: 0 1.5em 1em 0;
+      }
     }
+  }
+
+  &.two-column {
+    @include media-breakpoint-up(md) {
+      &.pull-right {
+        margin: 0 0 1em 1.5em;
+      }
+
+      &.pull-left {
+        margin: 0 1.5em 1em 0;
+      }
+    }
+  }
 }
 

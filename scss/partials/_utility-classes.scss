@@ -1,44 +1,51 @@
 .retina-only {
-    display: none !important;
+  display: none !important;
 }
 
 @include retina {
-    .retina-only {
-        display: block !important;
-    }
+  .retina-only {
+    display: block !important;
+  }
 
-    .hide-for-retina {
-        display: none !important;
-    }
+  .hide-for-retina {
+    display: none !important;
+  }
 }
 
 // Background Positioning
 
 .bg-img-center {
-    background-position: center !important;
+  background-position: center !important;
 }
+
 .bg-img-left-center {
-    background-position: left center !important;
+  background-position: left center !important;
 }
+
 .bg-img-right-center {
-    background-position: right center !important;
+  background-position: right center !important;
 }
+
 .bg-img-bottom {
-    background-position: bottom !important;
+  background-position: bottom !important;
 }
+
 .bg-img-bottom-left {
-    background-position: bottom left !important;
+  background-position: bottom left !important;
 }
+
 .bg-img-bottom-right {
-    background-position: bottom right !important;
+  background-position: bottom right !important;
 }
 
 .bg-img-top {
-    background-position: top !important;
+  background-position: top !important;
 }
+
 .bg-img-top-right {
-    background-position: top right !important;
+  background-position: top right !important;
 }
+
 .bg-img-top-left {
-    background-position: top left !important;
+  background-position: top left !important;
 }

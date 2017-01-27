@@ -1,3 +1,7 @@
+```v2.0.2```
+- Converted `.scss` partials to 2 spaces for consistency across the rest of the codebase (including Bootstrap's `.scss`)
+- Added some small Bootstrap 4 tweaks on certain content types (demos on toolkit views not updated yet)
+
 ```v2.0.1```
 - Completely stopped tracking `/scss/bootstrap/`
 - Now using method of creating our own Bootstrap loader to subvert using its `_variables.scss` and `_custom.scss`

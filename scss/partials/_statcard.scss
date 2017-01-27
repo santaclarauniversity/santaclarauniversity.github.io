@@ -1,46 +1,48 @@
 .statcard-number {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 
-    .label {
-        padding: .125em .5em;
-        font-size: 50%;
-        vertical-align: middle;
-    }
+  .label {
+    padding: .125em .5em;
+    font-size: 50%;
+    vertical-align: middle;
+  }
 }
 
 .statcard-desc {
-    font-size: 85%;
-    letter-spacing: .15em;
-    color: lighten($gray, 20%);
-    text-transform: uppercase;
+  font-size: 85%;
+  letter-spacing: .15em;
+  color: lighten($gray, 20%);
+  text-transform: uppercase;
 }
 
 .delta-indicator {
-    display: inline-block;
-    padding: .4em;
-    font-size: 12px;
-    vertical-align: middle;
+  display: inline-block;
+  padding: .4em;
+  font-size: 12px;
+  vertical-align: middle;
 }
 
 .delta-positive {
-    color: $brand-success;
+  color: $brand-success;
 
-    &:after {
-        .caret();
-        content: "";
-        border-top: 0;
-        border-bottom: $caret-width-base solid;
-    }
+  &:after {
+    .caret
+  ();
+    content: "";
+    border-top: 0;
+    border-bottom: $caret-width-base solid;
+  }
 }
 
 .delta-negative {
-    color: $brand-danger;
+  color: $brand-danger;
 
-    &:after {
-        .caret();
-        content: "";
-    }
+  &:after {
+    .caret
+  ();
+    content: "";
+  }
 }
 
 .statcard-primary,
@@ -48,44 +50,44 @@
 .statcard-info,
 .statcard-warning,
 .statcard-danger {
-    color: #fff;
-    border-radius: 3px;
+  color: #fff;
+  border-radius: 3px;
 
-    .delta-negative,
-    .delta-positive,
-    .statcard-number {
-        font-weight: normal;
-        color: inherit;
-    }
+  .delta-negative,
+  .delta-positive,
+  .statcard-number {
+    font-weight: normal;
+    color: inherit;
+  }
 
-    .statcard-desc {
-        font-weight: normal;
-        color: rgba(255, 255, 255, 0.65);
-    }
+  .statcard-desc {
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.65);
+  }
 
-    .statcard-hr {
-        margin-left: -20px;
-        margin-right: -20px;
-        border-top-color: rgba(255, 255, 255, .2);
-    }
+  .statcard-hr {
+    margin-left: -20px;
+    margin-right: -20px;
+    border-top-color: rgba(255, 255, 255, .2);
+  }
 }
 
 .statcard-primary {
-    background-color: $brand-primary;
+  background-color: $brand-primary;
 }
 
 .statcard-success {
-    background-color: $brand-success;
+  background-color: $brand-success;
 }
 
 .statcard-info {
-    background-color: $brand-info;
+  background-color: $brand-info;
 }
 
 .statcard-warning {
-    background-color: $brand-warning;
+  background-color: $brand-warning;
 }
 
 .statcard-danger {
-    background-color: $brand-danger;
+  background-color: $brand-danger;
 }

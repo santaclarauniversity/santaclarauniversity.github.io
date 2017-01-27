@@ -6,13 +6,13 @@
  *
  */
 .map.module {
-    @include border-radius(1px);
+  @include border-radius(1px);
 
-    border: 1px solid $light-gray;
+  border: 1px solid $light-gray;
 
-    iframe {
-        display: block;
-        max-width: 100%;
-        width: 100%;
-    }
+  iframe {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
 }

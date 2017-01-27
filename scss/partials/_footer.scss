@@ -1,139 +1,138 @@
 $footer-navigation-gray: #f7f7f7;
 
 .site-footer {
-    p, nav {
-        color: $footer-text-gray;
-        font-size: 14px;
-        line-height: (20em / 14);
+  p, nav {
+    color: $footer-text-gray;
+    font-size: 14px;
+    line-height: (20em / 14);
 
-        @include media-breakpoint-up(sm) {
-            font-size: 17px;
-            line-height: (25em / 17);
-        }
+    @include media-breakpoint-up(sm) {
+      font-size: 17px;
+      line-height: (25em / 17);
+    }
+  }
+
+  .social {
+    a {
+      width: 32px;
+      height: 32px;
+      font-size: 22px;
+      margin: 0 0 8px 8px;
+      line-height: 1.4;
+    }
+  }
+
+  .footer-mission {
+    text-align: center;
+
+    .footer-mission-wrapper {
+      margin: 0 auto;
     }
 
-    .social {
-        a {
-            width: 32px;
-            height: 32px;
-            font-size: 22px;
-            margin: 0 0 8px 8px;
-            line-height: 1.4;
-        }
+    img {
+      display: block;
+      margin: -16px auto 0;
+    }
+  }
+
+  .footer-title-row {
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 12px;
+  }
+
+  .footer-title {
+    text-align: center;
+
+    img {
+      display: block;
     }
 
-    .footer-mission {
-        text-align: center;
+    // mobile and tablet screens only
+    @include media-breakpoint-down(sm) {
+      img {
+        height: auto;
+        margin: .5em auto;
+        max-width: 100%;
+      }
 
-        .footer-mission-wrapper {
-            margin: 0 auto;
-        }
-
-        img {
-            display: block;
-            margin: -16px auto 0;
-        }
+      &.col-md-pull-2 img {
+        margin-bottom: 0;
+      }
     }
 
-    .footer-title-row {
-        border-bottom: 1px solid #dedede;
-        margin-bottom: 12px;
+    & + .footer-title {
+      padding-bottom: 10px;
     }
+  }
 
-    .footer-title {
-        text-align: center;
-
-        img {
-            display: block;
-        }
-
-        // mobile and tablet screens only
-        @include media-breakpoint-down(sm) {
-            img {
-                height: auto;
-                margin: .5em auto;
-                max-width: 100%;
-            }
-
-            &.col-md-pull-2 img {
-                margin-bottom: 0;
-            }
-        }
-
-        & + .footer-title {
-            padding-bottom: 10px;
-        }
+  @include media-breakpoint-up(md) {
+    .footer-tagline {
+      margin-left: -39px;
     }
+  }
 
-    @include media-breakpoint-up(md) {
-        .footer-tagline {
-            margin-left: -39px;
-        }
+  @include media-breakpoint-up(lg) {
+    .footer-tagline {
+      margin-left: 0;
     }
+  }
 
-    @include media-breakpoint-up(lg) {
-        .footer-tagline {
-            margin-left: 0;
-        }
+  .footer-social-break {
+    display: none;
+
+    @media (max-width: 370px) {
+      display: inline;
     }
+  }
 
-    .footer-social-break {
-        display: none;
-
-        @media (max-width: 370px) {
-            display: inline;
-        }
-    }
-
-    .copyright {
-        color: #696666;
-        font-size: 13px;
-        line-height: (36em/13);
-        margin: 0;
-    }
+  .copyright {
+    color: #696666;
+    font-size: 13px;
+    line-height: (36em/13);
+    margin: 0;
+  }
 }
 
 /* The whole light gray row stripe that begins the footer: */
 .site-footer-navigation {
-    background-color: $footer-navigation-gray;
+  background-color: $footer-navigation-gray;
 }
 
 .footer-social-links > a {
-    clear: both;
-    display: block;
-    float: none;
+  clear: both;
+  display: block;
+  float: none;
 }
 
-
 @include media-breakpoint-up(md) {
-    .site-footer {
-        .people-place-navigation, .footer-social-navigation {
-            width: 457px;
-        }
-
-        .footer-mission {
-            height: 61px;
-            margin-bottom: -1px;
-            overflow: visible;
-        }
-
-        .footer-title {
-            padding-bottom: 14px;
-            padding-top: 31px;
-            text-align: left;
-            width: 457px;
-
-            & + .footer-title {
-                float: right;
-            }
-        }
-
-        .footer-social-navigation {
-            float: right;
-        }
-
-        .social-icon {
-            margin: 0 0 5px;
-        }
+  .site-footer {
+    .people-place-navigation, .footer-social-navigation {
+      width: 457px;
     }
+
+    .footer-mission {
+      height: 61px;
+      margin-bottom: -1px;
+      overflow: visible;
+    }
+
+    .footer-title {
+      padding-bottom: 14px;
+      padding-top: 31px;
+      text-align: left;
+      width: 457px;
+
+      & + .footer-title {
+        float: right;
+      }
+    }
+
+    .footer-social-navigation {
+      float: right;
+    }
+
+    .social-icon {
+      margin: 0 0 5px;
+    }
+  }
 }
