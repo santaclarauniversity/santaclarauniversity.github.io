@@ -96,16 +96,6 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
   url("/assets/fonts/1301d16e-d0ec-407b-9796-677535450691.svg#1301d16e-d0ec-407b-9796-677535450691") format("svg");
 }
 
-// Font variables/mixins:
-$serif-font: "Bauer Bodoni W01 Italic", Georgia, "Times New Roman", Times, serif;
-$serif-bold-font: "BauerBodoniW01-BlackIta", Georgia, "Times New Roman", Times, serif;
-$sans-serif-font: "Trade Gothic Next W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$sans-serif-light-font: "Trade Gothic W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$sans-serif-bold-font: "Trade Gothic W01 Bold_2", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$sans-serif-italic-font: "TradeGothicNextW01-Ital", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$sans-serif-bold-italic-font: "TradeGothicW01-Bold2Obl", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$trajan-font: "Trajan W01 Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 .text-serif {
   font-family: $serif-font
 }
