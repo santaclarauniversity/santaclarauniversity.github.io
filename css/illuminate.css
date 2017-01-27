@@ -144,7 +144,7 @@ body {
   font-style:normal;
   font-size:14px;
   line-height:16px;
-  color:#767676;
+  color: hsl(0, 0%, 46%);
   letter-spacing:.02em;
 }
 
@@ -192,7 +192,7 @@ body {
   line-height:14px;
   margin:10px 20px;
   font-weight:bold;
-  color:#D54400;
+  color: hsl(19, 100%, 42%);
   text-transform:uppercase;
   font-family: "Roboto Condensed",sans-serif,Arial,Helvetica;
   letter-spacing:.15em;
@@ -1119,3 +1119,5 @@ div.jqcloud{overflow:visible;position:relative}div.jqcloud span{padding:0}div.jq
 
   .home-feature .title_block .summary {
     width: 65%;
+  }
+}
