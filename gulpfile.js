@@ -17,7 +17,6 @@ const bourbon = require('node-bourbon').includePaths;
 
 // ES6
 const babel = require('gulp-babel');
-const uglifyJs = require('gulp-uglify');
 
 // linters
 const sassLint = require('gulp-sass-lint');
@@ -82,6 +81,9 @@ gulp.task('styles:bower', (done) => {
       .pipe(gulp.dest(configRoot.css));
   });
 
+  // note that we call done() to conclude a gulp task which otherwise can't absolutely return a successful operation
+  // in other words, we supply the task with done() and then use it as a success callback at the end of the fn.
+  // (the reason we can't return here is that our last part of the task is a for-each)
   done();
 });
 
@@ -92,9 +94,8 @@ gulp.task('styles:fabricator', () => {
     .pipe(gulp.dest(configRoot.css));
 });
 
-gulp.task('styles:bootstrap', (done) => {
-  if (fs.existsSync(configRoot.scss + 'bootstrap/bootstrap.scss')) {
-    done();
+gulp.task('styles:bootstrap', () => {
+  if (fs.existsSync(configRoot.scss + 'bootstrap/')) {
     return;
   }
 
@@ -215,8 +216,6 @@ gulp.task('serve', () => {
   // watch for toolkit .scss changes (EXCLUDE /scss/bootstrap/ - these files should not be changed!)
   gulp.task('styles:toolkit:watch', ['styles:toolkit'], reload);
   gulp.watch([configRoot.scss + '**/*.scss', `!${configRoot.scss}bootstrap/**/*.scss`], ['styles:toolkit:watch']);
-
-  gulp.task('styles:bootstrap:watch', ['styles:b'])
 
   // watch for toolkit .js changes
   gulp.task('scripts:watch', ['scripts:lint', 'scripts:compile'], reload);

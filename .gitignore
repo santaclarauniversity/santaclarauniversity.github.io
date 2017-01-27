@@ -11,5 +11,3 @@ dist/
 js/
 
 /scss/bootstrap/
-!/scss/bootstrap/_variables.scss
-!/scss/bootstrap/_custom.scss

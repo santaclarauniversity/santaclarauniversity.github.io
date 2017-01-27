@@ -1,6 +1,10 @@
+/// First, load Bootstrap in the order of: our custom 'override' variables after Bootstrap's default variables, then
+/// Bootstrap's components.  Inside `variables.scss`, we load `bootstrap/variables` (the default variables).
+///
+/// By using this order, Bootstrap knows to use our colors, etc. for its components.
+
 // Bootstrap
 @import 'variables';
-@import 'bootstrap/mixins';
 @import 'components';
 
 // Bourbon, provides common mixins
@@ -11,6 +15,7 @@
 $screen-short: 900px;
 $screen-xshort: 600px;
 
+// TODO Probably not necessary anymore
 // sass-lint:disable no-vendor-prefixes
 @mixin retina {
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -26,6 +31,9 @@ $screen-xshort: 600px;
 
 // SCU colors
 @import 'partials/colors';
+
+// SCU typography
+@import 'partials/typography';
 
 // Headers and footer
 @import 'partials/headers';

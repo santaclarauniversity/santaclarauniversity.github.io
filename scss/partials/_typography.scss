@@ -209,28 +209,6 @@ $trajan-font: "Trajan W01 Regular", "Helvetica Neue", Helvetica, Arial, sans-ser
     font-family: $sans-serif-font;
 }
 
-// Specific heading tag updates
-h1, h5 {
-    color: $black;
-}
-
-h3 {
-    color: $medium-gray;
-}
-
-h4, h5, h6 {
-    @extend .sans-serif-font-bold;
-}
-
-/* Headers that are the first item in their grid column, remove the top margin: */
-div[class*='col-'] {
-    h2, h3, h4, h5, h6 {
-        &:first-child {
-            margin-top: 0;
-        }
-    }
-}
-
 b, strong {
     @extend .sans-serif-font-bold;
 

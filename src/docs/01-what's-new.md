@@ -1,3 +1,10 @@
+```v2.0.1```
+- Completely stopped tracking `/scss/bootstrap/`
+- Now using method of creating our own Bootstrap loader to subvert using its `_variables.scss` and `_custom.scss`
+  - Load in `toolkit.scss` then load Bootstrap ourselves (e.g. avoiding `/scss/bootstrap/bootstrap.scss`) via `components.scss` and `variables.scss`
+- Made some minor optimizations to `gulpfile`
+- Added `partials/_typography.scss` back to pipeline (bold font now works properly, too)
+
 ```v2.0.0```
 - Upgraded to Bootstrap 4 alpha 6 (all `.less` -> `.scss`))
   - Stylesheets are the same, but are now SCSS files; still need to fully "upgrade" to BS4
