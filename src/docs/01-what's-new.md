@@ -1,3 +1,8 @@
+```v2.0.3```
+- Fixed broken JavaScript links
+- Made **some** updates to our in-progress `/scss/_variables.scss`; still needs to be checked thoroughly
+- Fixed `gulp --dev` not adding `/scss/bootstrap/` if it did not already exist
+
 ```v2.0.2```
 - Converted `.scss` partials to 2 spaces for consistency across the rest of the codebase (including Bootstrap's `.scss`)
 - Added some small Bootstrap 4 tweaks on certain content types (demos on toolkit views not updated yet)

@@ -125,7 +125,7 @@ gulp.task('styles:toolkit', (done) => {
   runSequence('styles:toolkit:lint', 'styles:toolkit:compile', done);
 });
 
-gulp.task('styles', ['styles:bower', 'styles:fabricator', 'styles:toolkit']);
+gulp.task('styles', ['styles:bootstrap', 'styles:bower', 'styles:fabricator', 'styles:toolkit']);
 
 
 // scripts (.js, ES6 standard)
@@ -218,8 +218,8 @@ gulp.task('serve', () => {
   gulp.watch([configRoot.scss + '**/*.scss', `!${configRoot.scss}bootstrap/**/*.scss`], ['styles:toolkit:watch']);
 
   // watch for toolkit .js changes
-  gulp.task('scripts:watch', ['scripts:lint', 'scripts:compile'], reload);
-  gulp.watch(configRoot.src + config.src.scripts.toolkit, ['scripts:watch']);
+  gulp.task('scripts:webpack:watch', ['scripts:webpack:lint', 'scripts:webpack:compile'], reload);
+  gulp.watch(configRoot.src + config.src.scripts.toolkit, ['scripts:webpack:watch']);
 });
 
 // this is the task gulp actually runs from `gulp` command
