@@ -10,12 +10,12 @@
           </a>
         </div>
         <div class="col-xs-12 col-sm-3 clearfix site-header-search-and-toggles">
-          <button type="button" class="visible-xs-block menu-toggle menu-toggle-main"
+          <button type="button" class="hidden-sm-up menu-toggle menu-toggle-main"
                   data-toggle="offcanvas" data-target="#scu-main-navigation">
             <span class="caret left-caret"></span> <span class="menu-label"><span
             class="sr-only">Toggle navigation</span> Menu</span>
           </button>
-          <button type="button" class="visible-xs-block menu-toggle menu-toggle-gateways"
+          <button type="button" class="hidden-sm-up menu-toggle menu-toggle-gateways"
                   data-toggle="offcanvas" data-target="#scu-gateway-navigation">
                         <span class="menu-label text-hide"><span
                           class="sr-only">Toggle navigation</span> Gateways</span> <span
@@ -24,13 +24,9 @@
           <form action="/search/" method="get" class="pull-right site-header-search"
                 id="header-search-form">
             <div class="input-group">
-              <label for="header-search" class="sr-only">Search</label>
-              <input type="search" class="form-control" name="q" id="header-search"
-                     placeholder="SEARCH">
-              <span class="input-group-btn">
-                    <button class="btn btn-default" type="submit" aria-label="Submit"><span
-                      class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                  </span>
+              <label for="q" class="sr-only">Search</label>
+              <input type="text" class="form-control" name="header-search" id="q" placeholder="Search" aria-describedby="basic-addon2">
+              <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search"></i></span>
             </div>
           </form>
         </div>
