@@ -2,9 +2,8 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  .label {
-    padding: .125em .5em;
-    font-size: 50%;
+  .badge {
+    font-size: 45%;
     vertical-align: middle;
   }
 }
@@ -16,22 +15,33 @@
   text-transform: uppercase;
 }
 
+
 .delta-indicator {
   display: inline-block;
   padding: .4em;
   font-size: 12px;
   vertical-align: middle;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+
 }
 
 .delta-positive {
   color: $brand-success;
 
   &:after {
-    .caret
-  ();
-    content: "";
     border-top: 0;
-    border-bottom: $caret-width-base solid;
+    border-bottom: 4px solid;
   }
 }
 
@@ -39,9 +49,8 @@
   color: $brand-danger;
 
   &:after {
-    .caret
-  ();
-    content: "";
+    border-bottom: 0;
+    border-top: 4px solid;
   }
 }
 
@@ -62,32 +71,18 @@
 
   .statcard-desc {
     font-weight: normal;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255,255,255,0.65);
   }
 
   .statcard-hr {
-    margin-left: -20px;
-    margin-right: -20px;
-    border-top-color: rgba(255, 255, 255, .2);
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-top-color: rgba(255,255,255,.2);
   }
 }
 
-.statcard-primary {
-  background-color: $brand-primary;
-}
-
-.statcard-success {
-  background-color: $brand-success;
-}
-
-.statcard-info {
-  background-color: $brand-info;
-}
-
-.statcard-warning {
-  background-color: $brand-warning;
-}
-
-.statcard-danger {
-  background-color: $brand-danger;
-}
+.statcard-primary { background-color: $brand-primary; }
+.statcard-success { background-color: $brand-success; }
+.statcard-info    { background-color: $brand-info; }
+.statcard-warning { background-color: $brand-warning; }
+.statcard-danger  { background-color: $brand-danger; }

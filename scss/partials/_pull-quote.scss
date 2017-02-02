@@ -1,37 +1,43 @@
-.pull-quote-container {
-  padding-bottom: 36px;
+.pull-quote {
+  padding: 0;
+  margin: 0 auto;
+  border-left: 0;
+  text-align: center;
 
-  .pull-quote {
-    h6 {
-      color: $gray;
-      font-size: 14px;
-      letter-spacing: 2.4px;
-      text-transform: uppercase;
-    }
-
-    cite {
-      color: $gray-light;
-      display: block;
-      font-size: 22px;
-      font-style: normal;
-
-      p {
-        font-size: 14px;
-        font-style: normal;
-        text-transform: uppercase;
-        margin-top: 10px;
-      }
-    }
-
-    a {
-      font-size: 16px;
-      margin: 10px 0;
-    }
+  > p {
+    font-size: 1.25rem;
+    margin-top: ($spacer-y * 1.5);
   }
-}
 
-.pull-quote-img {
-  @include media-breakpoint-down(md) {
-    padding-bottom: 20px;
+  > img {
+    width: 75px;
+    height: 75px;
+  }
+
+  > cite {
+    display: block;
+    margin-top: ($spacer-y * 1.5);
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: .15em;
+    color: $gray-light;
+    text-transform: uppercase;
+  }
+
+  @include media-breakpoint-up(sm) {
+    max-width: 75%;
+
+    > cite {
+      font-size: 14px;
+    }
+
+    > img {
+      width: 100px;
+      height: 100px;
+    }
+
+    > p {
+      font-size: 1.5rem;
+    }
   }
 }
