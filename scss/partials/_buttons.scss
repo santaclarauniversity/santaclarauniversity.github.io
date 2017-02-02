@@ -1,21 +1,29 @@
 @import "../../bower_components/bourbon/app/assets/stylesheets/css3/transform";
 
-/**
- * These need a rework. Originally thought to extend Bootstrap's .btn class,
- * we've decided against it. Old notes:
- *
- * The default SCU button is text left aligned, with a &raquo; ::after element.
- * This is usually used as a link, rather than a <button>, and with the
- * additional Bootstrap classes .btn and .btn-block:
- * ex. <a href="/link" class="btn btn-scu btn-block">Button text here</a>
- *
- * Note that Bootstrap's .btn-block class causes text to not wrap and remain
- * on one line, so keep these short.
- */
+@mixin button-colors($color) {
+  background-color: $color;
+  border: 1px solid $color;
+  &:hover {
+    background-color: darken($color, 5%);
+  }
+}
+
+.btn {
+  font-family: "Trade Gothic Next W01";
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
 .link-button {
   display: block;
-  text-align: center;
   width: 100%;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0 0 .5em;
+  padding: 10px 25px 9px 15px;
+  position: relative;
+  text-decoration: none !important;
+  color: $white;
 
   @include media-breakpoint-up(sm) {
     max-width: 320px;
@@ -23,103 +31,36 @@
   @include media-breakpoint-up(lg) {
     max-width: 360px;
   }
+  &::after {
+    content: '\00bb';
+    position: absolute;
+    right: 15px;
 
-  &.inline {
-    background-clip: border-box;
-    display: inline-block;
+    // Begin - Fix to make chevrons align correctly regardless of text length
+    top: 50%;
+    @include transform(translate(0, -50%));
+    // End Fix
   }
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+
+  // Color Classes
 
   &.maroon {
-    background-color: $maroon;
-    border: 1px solid $maroon;
-    color: $white !important;
-    font-size: 20px;
-    line-height: 1.2;
-    margin: 0 0 .5em;
-    padding: 10px 25px 9px 15px;
-    position: relative;
-    text-align: left;
-    text-decoration: none !important;
-
-    &::after {
-      content: '\00bb';
-      position: absolute;
-      right: 15px;
-
-      // Begin - Fix to make chevrons align correctly regardless of text length
-      top: 50%;
-      @include transform(translate(0, -50%));
-      // End Fix
-    }
-    &:hover {
-      background-color: darken($maroon, 5%);
-      color: $white;
-      text-decoration: none;
-    }
+    @include button-colors($maroon);
   }
-
-  &.stroked {
-    border: 6px solid $white;
-    margin: 0 0 10px;
-    outline: 1px solid #bdbdbd;
-    position: relative;
-
-    &:before {
-      border: 1px solid $brand-red;
-      bottom: 0;
-      content: '';
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 0;
-    }
-
-    &:hover {
-      outline-color: darken($link-red, 15%);
-      text-decoration: none;
-    }
+  &.brand-primary {
+    @include button-colors($brand-primary);
   }
-
-  &.white {
-    background-color: $white;
-    color: #8c8a8a;
-    font-size: 37px;
-    padding: 14px 10px;
-
-    span {
-      @extend .serif-font;
-
-      color: $brand-red;
-    }
-
+  &.brand-secondary {
+    background-color: transparent;
+    border: 1px solid $brand-primary;
+    color: $brand-primary;
     &:hover {
-      background-color: darken($white, 5%);
-      color: #8c8a8a;
-      text-decoration: none;
-
-      span {
-        color: $brand-red;
-      }
-    }
-  }
-
-  &.red {
-    @extend .sans-serif-font-bold;
-
-    background-color: $brand-red;
-    color: $white !important;
-    font-size: 27px;
-    padding: 17px 10px;
-
-    &:before {
-      border-color: $maroon;
-    }
-
-    &:hover {
-      background-color: darken($brand-red, 5%);
-      color: $white;
-      text-decoration: none;
+      background-color: darken(white, 2%);
     }
   }
 }
+
