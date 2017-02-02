@@ -60,14 +60,3 @@
     z-index: 0;
   }
 }
-
-.row-no-padding {
-  margin-left: 0;
-  margin-right: 0;
-  padding-bottom: 0 !important;
-}
-
-.row-no-padding [class*="col-"] {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
