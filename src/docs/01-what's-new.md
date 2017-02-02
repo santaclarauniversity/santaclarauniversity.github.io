@@ -1,23 +1,13 @@
-```v2.0.3```
-- Fixed broken JavaScript links
-- Made **some** updates to our in-progress `/scss/_variables.scss`; still needs to be checked thoroughly
-- Fixed `gulp --dev` not adding `/scss/bootstrap/` if it did not already exist
-
-```v2.0.2```
-- Converted `.scss` partials to 2 spaces for consistency across the rest of the codebase (including Bootstrap's `.scss`)
-- Added some small Bootstrap 4 tweaks on certain content types (demos on toolkit views not updated yet)
-
-```v2.0.1```
-- Completely stopped tracking `/scss/bootstrap/`
-- Now using method of creating our own Bootstrap loader to subvert using its `_variables.scss` and `_custom.scss`
-  - Load in `toolkit.scss` then load Bootstrap ourselves (e.g. avoiding `/scss/bootstrap/bootstrap.scss`) via `components.scss` and `variables.scss`
-- Made some minor optimizations to `gulpfile`
-- Added `partials/_typography.scss` back to pipeline (bold font now works properly, too)
-
 ```v2.0.0```
-- Upgraded to Bootstrap 4 alpha 6 (all `.less` -> `.scss`))
-  - Stylesheets are the same, but are now SCSS files; still need to fully "upgrade" to BS4
-- `/js/` and `/css/` are now reserved entirely for completed scripts and stylesheets; moved custom script sources in `/js/` to `/src/assets/toolkit/`
+
+Release Highlights:
+
+- Migrated from Bootstrap 3 to Bootstrap 4.
+- Audited content types.
+- Better CSS/JS performance.
+- New templates and documentation.
+
+**Fabricator and Build**
 - Cleaned gulpfile and extraneous Node deps from `package.json`
   - Changed `for..in` loops on Bower to ES6 `forEach`
   - Added check on Bower tasks to prevent them from running unless necessary (only the first time it is run)
@@ -32,6 +22,25 @@
 - Bootstrap loads all but `_variables.scss` and `_custom.scss` from Bower (these files are our custom overrides, which should remain tracked)
   - In other words, all files inside `/scss/bootstrap/` *except* these two will **not be tracked** (they should **never** be changed anyway)
 
+**Bootstrap 4**
+- Upgraded to Bootstrap 4 alpha 6 (all `.less` -> `.scss`))
+
+**Content Type Changes**
+- **Buttons**
+  - Large "stroked" style is now deprecated.
+  - Added new standard and outline buttons.
+  - Increased the options for the the existing SCU custom buttons.
+- **Panels**
+  - Panels are now deprecated in favor of Cards.
+- **Pull Quotes**
+  - Pull Quotes are deprecated - they should be a type of stylized block.
+
+**Templates and Documentation**
+- Added Accessibility Guidelines (TODO)
+- Added new Email templates
+
+**Code Style**
+- Converted `.scss` partials to 2 spaces for consistency across the rest of the codebase (including Bootstrap's `.scss`)
 
 ```v1.0.7```
 - Removed extraneous images and prototypes from launched projects.
