@@ -7,6 +7,36 @@ Release Highlights:
 - Better CSS/JS performance.
 - New templates and documentation.
 
+**Bootstrap 4**
+- Upgraded to Bootstrap 4 alpha 6 (all `.less` -> `.scss`)
+
+**Content Type Changes**
+
+- **Grid System and Layout**
+  - One column/two column "module" designations are deprecated in favor of columns. See: Site Pointer, Infographics, List Items, more.
+- **Accordion**
+  - Marked for deprecation - is now a Card with a special collapsible attribute.
+- **Buttons**
+  - Large "stroked" style is now deprecated.
+  - Added new standard and outline buttons.
+  - Increased the options for the the existing SCU custom buttons.
+- **Panels**
+  - Panels are now deprecated in favor of Cards.
+- **Pull Quotes**
+  - Pull Quotes are deprecated - they should be a type of stylized block.
+- **Hero**
+  - Renamed Jumbotron and uses BS4-standard code.
+- **Image Gallery**
+  - Renamed Carousel using BS4-shipped code.
+- **Image Grid**
+  - Removed in favor of gutter-less grids.
+
+**Templates and Documentation**
+- Typography: Reset to Bootstrap standards, most notably, made headers less opinionated (no color or transform)
+- Typography: Headers now use a true bold font (used a browser-filled Trade Gothic previously).
+- Added Accessibility Guidelines (TODO)
+- Added new Email templates
+
 **Fabricator and Build**
 - Cleaned gulpfile and extraneous Node deps from `package.json`
   - Changed `for..in` loops on Bower to ES6 `forEach`
@@ -22,22 +52,6 @@ Release Highlights:
 - Bootstrap loads all but `_variables.scss` and `_custom.scss` from Bower (these files are our custom overrides, which should remain tracked)
   - In other words, all files inside `/scss/bootstrap/` *except* these two will **not be tracked** (they should **never** be changed anyway)
 
-**Bootstrap 4**
-- Upgraded to Bootstrap 4 alpha 6 (all `.less` -> `.scss`))
-
-**Content Type Changes**
-- **Buttons**
-  - Large "stroked" style is now deprecated.
-  - Added new standard and outline buttons.
-  - Increased the options for the the existing SCU custom buttons.
-- **Panels**
-  - Panels are now deprecated in favor of Cards.
-- **Pull Quotes**
-  - Pull Quotes are deprecated - they should be a type of stylized block.
-
-**Templates and Documentation**
-- Added Accessibility Guidelines (TODO)
-- Added new Email templates
 
 **Code Style**
 - Converted `.scss` partials to 2 spaces for consistency across the rest of the codebase (including Bootstrap's `.scss`)

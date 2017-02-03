@@ -1,3 +1,5 @@
+@import 'backgrounds';
+
 $hero-xs-height: 300px;
 $hero-sm-height: 375px;
 $hero-md-height: 400px;
@@ -5,6 +7,33 @@ $hero-lg-height: 450px;
 
 $hero-short-height: 355px;
 $hero-xshort-height: 300px;
+
+.jumbotron.hero {
+  background-color: #dcdcdc; // Fallback color
+  background-position: 50% 20%;
+  background-size: cover;
+
+  .container {
+    position: relative;
+    min-height: 400px;
+  }
+
+  h1 {
+    @extend .serif-font-bold;
+    bottom: 0;
+    color: $white;
+    left: 15px;
+    line-height: 0.7;
+    margin: 0;
+    position: absolute;
+    text-shadow: 0 -2px 3px rgba($black, .22);
+    z-index: 1;
+  }
+}
+.jumbotron.gradient {
+  background: $bg-gradient-scu;
+  color: white;
+}
 
 .hero.module {
   background-color: #dcdcdc; // Fallback color

@@ -43,31 +43,25 @@ $screen-xshort: 600px;
 @import 'partials/heroes';
 
 // Site modules
-@import 'partials/base-modules';
 @import 'partials/sidebar-navigation';
-@import 'partials/news';
 @import 'partials/can-we';
 @import 'partials/switcher';
 @import 'partials/featured-story';
-@import 'partials/feature-gallery';
-@import 'partials/gallery';
 @import 'partials/events';
 @import 'partials/person-spotlight';
-@import 'partials/image';
 @import 'partials/video';
 @import 'partials/single-image-with-link';
 @import 'partials/announcement';
 @import 'partials/related-links';
 @import 'partials/buttons';
 @import 'partials/social';
-@import 'partials/forms';
-@import 'partials/maps';
 @import 'partials/infographics';
 @import 'partials/pull-quote';
 @import 'partials/windowpane';
 @import 'partials/statcard';
 @import 'partials/text-ribbon';
 @import 'partials/block';
+@import 'partials/backgrounds';
 
 // Search results
 @import 'partials/search';
