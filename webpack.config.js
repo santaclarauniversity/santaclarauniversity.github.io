@@ -55,14 +55,14 @@ function getLoaders() {
 }
 
 
-module.exports = (configRoot, config) => {
+module.exports = (config) => {
   return {
     entry: {
-      'fabricator': configRoot.src + config.src.scripts.fabricator,
-      'toolkit': configRoot.src + config.src.scripts.toolkit
+      'fabricator': config.scripts.fabricator,
+      'toolkit': config.scripts.toolkit
     },
     output: {
-      path: configRoot.js,
+      path: config.scripts.dest,
       filename: '[name].js',
     },
     resolve: {

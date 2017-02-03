@@ -3,12 +3,12 @@
 ///
 /// By using this order, Bootstrap knows to use our colors, etc. for its components.
 
+// Bourbon, provides common mixins
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+
 // Bootstrap
 @import 'variables';
 @import 'components';
-
-// Bourbon, provides common mixins
-@import 'bourbon';
 
 // Custom breakpoints
 // Short desktop windows (netbook, etc.)

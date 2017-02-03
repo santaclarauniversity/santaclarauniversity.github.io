@@ -12,9 +12,6 @@ const sass = require('gulp-sass');
 const webpack = require('webpack');
 
 // custom packages
-// CSS
-const bourbon = require('node-bourbon').includePaths;
-
 // ES6
 const babel = require('gulp-babel');
 
@@ -28,79 +25,58 @@ const fs = require('fs');
 
 
 // paths to code that gets copied/linted/etc. in the process of launching toolkit
-const configRoot = {
-  assets: './assets/',
-  bower: './bower_components/',
-  css: './css/',
-  dist: './dist/',
-  src: './src/assets/',
-  js: './js/',
-  scss: './scss/'
-};
-
 const config = {
   dev: gutil.env.dev,
-  src: {
-    scripts: {
-      fabricator: 'fabricator/scripts/fabricator.js',
-      toolkit: 'toolkit/scripts/toolkit.js'
-    },
-    styles: {
-      fabricator: 'fabricator/styles/fabricator.scss',
-      toolkit: 'toolkit.scss'
-    }
+  dest: './dist/',
+  styles: {
+    dest: './css/',
+    fabricator: './src/assets/fabricator/styles/fabricator.scss',
+    toolkit: './scss/toolkit.scss',
+    bootstrap: './bower_components/bootstrap/scss/'
+  },
+  scripts: {
+    dest: './js/',
+    fabricator: './src/assets/fabricator/scripts/fabricator.js',
+    toolkit: './src/assets/toolkit/scripts/toolkit.js'
   }
 };
 
-const webpackConfig = require('./webpack.config.js')(configRoot, config);
+const webpackConfig = require('./webpack.config.js')(config);
 
 
 // styles (.scss -> .css)
 gulp.task('styles:fabricator', () => {
-  return gulp.src(configRoot.src + config.src.styles.fabricator)
+  return gulp.src(config.styles.fabricator)
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(rename('f.css'))
-    .pipe(gulp.dest(configRoot.css));
-});
-
-gulp.task('styles:bootstrap', () => {
-  if (fs.existsSync(configRoot.scss + 'bootstrap/')) {
-    return;
-  }
-
-  return gulp.src(configRoot.bower + 'bootstrap/scss/**/*')
-    .pipe(clone())
-    .pipe(gulp.dest(configRoot.scss + 'bootstrap/'));
+    .pipe(gulp.dest(config.styles.dest));
 });
 
 gulp.task('styles:toolkit:lint', () => {
-  return gulp.src(configRoot.scss + config.src.styles.toolkit)
+  return gulp.src(config.styles.toolkit)
     .pipe(sassLint({ configFile: '.sass-lint.yml' }))
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError());
 });
 
 gulp.task('styles:toolkit:compile', () => {
-  return gulp.src(configRoot.scss + config.src.styles.toolkit)
-    .pipe(sass({
-      includePaths: bourbon,
-      outputStyle: 'compressed'
-    }).on('error', sass.logError))
+  return gulp.src(config.styles.toolkit)
+    .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(configRoot.css));
+    .pipe(gulp.dest(config.styles.dest));
 });
 
 gulp.task('styles:toolkit', (done) => {
   runSequence('styles:toolkit:lint', 'styles:toolkit:compile', done);
 });
 
-gulp.task('styles', ['styles:bootstrap', 'styles:fabricator', 'styles:toolkit']);
+gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
 
 
 // scripts (.js, ES6 standard)
 // lint toolkit.js first..
 gulp.task('scripts:lint', () => {
-  return gulp.src(configRoot.src + config.src.scripts.toolkit)
+  return gulp.src(config.scripts.toolkit)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -136,7 +112,7 @@ function reload(done) {
   done();
 }
 
-gulp.task('clean', del.bind(null, [configRoot.dist]));
+gulp.task('clean', del.bind(null, [config.dest]));
 
 gulp.task('assembler', (done) => {
   assembler({
@@ -154,22 +130,22 @@ gulp.task('serve', () => {
     server: {
       baseDir: '.',
       routes: {
-        '/': configRoot.dist
+        '/': config.dest
       }
     }
   });
 
   // watch for changes to markup
   gulp.task('assembler:watch', ['assembler'], reload);
-  gulp.watch('src/**/*.{html,md,json,yml}', ['assembler:watch']);
+  gulp.watch('./src/**/*.{html,md,json,yml}', ['assembler:watch']);
 
   // watch for toolkit .scss changes (EXCLUDE /scss/bootstrap/ - these files should not be changed!)
   gulp.task('styles:toolkit:watch', ['styles:toolkit'], reload);
-  gulp.watch([configRoot.scss + '**/*.scss', `!${configRoot.scss}bootstrap/**/*.scss`], ['styles:toolkit:watch']);
+  gulp.watch('./scss/**/*.scss', ['styles:toolkit:watch']);
 
   // watch for toolkit .js changes
   gulp.task('scripts:watch', ['scripts:lint', 'scripts:compile'], reload);
-  gulp.watch(configRoot.src + config.src.scripts.toolkit, ['scripts:watch']);
+  gulp.watch(config.scripts.toolkit, ['scripts:watch']);
 });
 
 // this is the task gulp actually runs from `gulp` command
