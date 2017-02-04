@@ -12,6 +12,9 @@ const sass = require('gulp-sass');
 const webpack = require('webpack');
 
 // custom packages
+// CSS
+const autoprefixer = require('gulp-autoprefixer');
+
 // ES6
 const babel = require('gulp-babel');
 
@@ -63,6 +66,7 @@ gulp.task('styles:toolkit:compile', () => {
   return gulp.src(config.styles.toolkit)
     .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(rename({ suffix: '.min' }))
+    .pipe(autoprefixer({ browsers: 'last 2 version' }))
     .pipe(gulp.dest(config.styles.dest));
 });
 

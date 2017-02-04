@@ -48,9 +48,9 @@ $can-we-lg-height: 575px;
     }
 
     .can-we-body {
-      @include display(flex);
-      @include flex-direction(column);
-      @include justify-content(center);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       height: $can-we-xs-height;
       position: relative;
@@ -329,9 +329,9 @@ $can-we-lg-height: 575px;
     }
 
     .carousel-caption {
-      @include display(flex);
-      @include flex-direction(column);
-      @include justify-content(center);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       background: #ddd;
       bottom: 0;
@@ -355,7 +355,7 @@ $can-we-lg-height: 575px;
       }
 
       @include media-breakpoint-up(sm) {
-        @include background(rgba($black, 0.1));
+        background: rgba($black, 0.1);
 
         bottom: 20px;
         min-height: (55em / 14);

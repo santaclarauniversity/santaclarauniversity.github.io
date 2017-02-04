@@ -95,7 +95,7 @@
     }
 
     .media-body {
-      @include background(rgba(169, 17, 43, 0.8));
+      background: rgba(169, 17, 43, 0.8);
 
       bottom: 12px;
       left: 3px;

@@ -112,7 +112,7 @@ $hero-xshort-height: 300px;
     }
 
     .caption {
-      @include background(rgba($white, 0.85));
+      background: rgba($white, 0.85);
 
       font-size: 13px;
       padding: 15px;
@@ -172,9 +172,9 @@ $hero-xshort-height: 300px;
       padding-top: 25px;
 
       @include media-breakpoint-up(sm) {
-        @include display(flex);
-        @include flex-direction(column);
-        @include justify-content(center);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         height: $hero-sm-height;
         max-height: $hero-sm-height;
@@ -241,9 +241,9 @@ $hero-xshort-height: 300px;
 
     .hero-body {
       .strip {
-        @include display(flex);
-        @include flex-direction(column);
-        @include justify-content(center);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         background-color: #1b1b1b;
         height: $hero-xs-height;

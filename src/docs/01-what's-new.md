@@ -38,20 +38,37 @@ Release Highlights:
 - Added new Email templates
 
 **Fabricator and Build**
-- Cleaned gulpfile and extraneous Node deps from `package.json`
-  - Changed `for..in` loops on Bower to ES6 `forEach`
-  - Added check on Bower tasks to prevent them from running unless necessary (only the first time it is run)
-  - Now utilizing `run-sequence` for tasks that **should** be executed successively rather than simultaneously
-  - Now utilizing `done` promise under Gulp tasks which cannot have a simple return statement
-- Removed CSSLint for SASSLint; removed JSHint for ESLint
-- Removed extraneous JS code from `toolkit.js` which was meant for leftover parts of Bootstrap landing pages
-- Updated `toolkit.js` to ES6 standard
-- Changed `toolkit.js` and `fabricator.js` to properly **both** use Webpack for compilation
-- Changed Babel preset to `es2016` from `babili` so `toolkit.js` won't be minified in development mode
-- Updated `.gitignore` to exclude `/css/` and `/js/` since there is no longer a reason to track them
-- Bootstrap loads all but `_variables.scss` and `_custom.scss` from Bower (these files are our custom overrides, which should remain tracked)
-  - In other words, all files inside `/scss/bootstrap/` *except* these two will **not be tracked** (they should **never** be changed anyway)
 
+- `gulpfile.js`
+  - Changed `bourbon` to load solely from `toolkit.scss` *(removed from gulpfile)*
+  - Minimized complicated/large `config` JSON structure
+  - Removed `bower` tasks.  `bower` scripts/styles are now loaded directly *(removed from gulpfile)*
+    - Did the same for Bootstrap `.scss`
+  - Now utilizing `run-sequence` for tasks that should be executed successively rather than simultaneously
+  - Now utilizing `done` promise under `gulp` tasks which cannot have a simple return statement
+  - Swapped `csslint` for `sass-lint`; swapped `jshint` for `eslint`
+  - Changed `toolkit.js` and `fabricator.js` to properly **both** use `webpack` for compilation
+  - Changed `babel` preset to `es2016` from `babili` so `toolkit.js` won't be minified in development mode
+  - Added `gulp-autoprefixer` which removes need to write browser-specific CSS prefix rules entirely
+
+
+- `package.json`
+  - Removed extraneous Node deps
+  - Added `gulp-autoprefixer`
+  
+- `./src/assets/toolkit/scripts/toolkit.js`
+  - Removed extraneous JS code which was meant for leftover parts of Bootstrap landing pages
+  - Updated to ES6 standard
+  
+  
+- `.gitignore`
+  - Updated to exclude `/css/` and `/js/` since there is no longer a reason to track them
+  
+  
+- `bower.json`
+  - Forcing bourbon to its `v5 beta` in anticipation of a full release
+  
+  
 
 **Code Style**
 - Converted `.scss` partials to 2 spaces for consistency across the rest of the codebase (including Bootstrap's `.scss`)

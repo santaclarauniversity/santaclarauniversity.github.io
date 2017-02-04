@@ -74,9 +74,9 @@
       top: 10%;
 
       html.flexbox & {
-        @include display(flex);
-        @include flex-direction(column);
-        @include justify-content(center);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         top: 0;
       }
@@ -155,9 +155,9 @@
 
     html.flexbox & {
       .infographic-statistic, .infographic-label {
-        @include display(flex);
-        @include flex-direction(column);
-        @include justify-content(center);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         margin: 0;
         padding: 0;
@@ -188,9 +188,9 @@
 
     html.flexbox & {
       .infographic-statistic, .infographic-label {
-        @include display(flex);
-        @include flex-direction(column);
-        @include justify-content(center);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
       .infographic-label {
