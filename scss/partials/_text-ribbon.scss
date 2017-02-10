@@ -1,10 +1,15 @@
 .text-ribbon {
+  color: $white;
   position: relative;
   left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #000;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: $black;
   overflow: hidden;
+
+  &:hover {
+    background-color: darken($brand-primary, 10%);
+  }
 }
 .text-ribbon:before {
   position: absolute;
@@ -46,7 +51,7 @@
   padding: 10px;
   font-weight: normal;
   color: inherit;
-  background-color: #000;
+  background-color: $black;
   border: 0;
   -webkit-appearance: none;
   border-radius: 0;
