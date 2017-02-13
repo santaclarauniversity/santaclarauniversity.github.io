@@ -1,14 +1,12 @@
 .featured-story.module {
-  .thumbnail {
-    margin-bottom: 1em;
+  h4 {
+    font-size: 1.1em;
   }
 
-  .featured-story-heading {
-    font-size: 18px;
-    margin: 0;
-    text-transform: none;
-  }
-
+  // selects the last child of the featured story
+  // & .. indicates we wanted .feature-story and .module both
+  // > .. selects child of .featured-story.module
+  // *:last-child .. selects last child regardless of <type>
   & > *:last-child {
     margin-bottom: 0;
   }
