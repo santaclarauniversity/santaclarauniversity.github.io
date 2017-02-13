@@ -1,25 +1,21 @@
-$footer-navigation-gray: #f7f7f7;
-
 .site-footer {
   p, nav {
     color: $footer-text-gray;
-    font-size: 14px;
-    line-height: (20em / 14);
+    font-size: .9em;
+    line-height: 1.4em;
 
     @include media-breakpoint-up(sm) {
-      font-size: 17px;
-      line-height: (25em / 17);
+      font-size: 1em;
+      line-height: 1.5em;
     }
   }
 
-  .social {
-    a {
-      width: 32px;
-      height: 32px;
-      font-size: 22px;
-      margin: 0 0 8px 8px;
-      line-height: 1.4;
-    }
+  .social a {
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+    margin: 0 0 8px 8px;
+    line-height: 1.4;
   }
 
   .footer-mission {
@@ -31,13 +27,13 @@ $footer-navigation-gray: #f7f7f7;
 
     img {
       display: block;
-      margin: -16px auto 0;
+      margin: -1em auto 0;
     }
   }
 
   .footer-title-row {
-    border-bottom: 1px solid #dedede;
-    margin-bottom: 12px;
+    border-bottom: 1px solid $really-light-gray;
+    margin-bottom: .75em;
   }
 
   .footer-title {
@@ -60,8 +56,9 @@ $footer-navigation-gray: #f7f7f7;
       }
     }
 
+    // TODO can be replaced with class="pb-#"
     & + .footer-title {
-      padding-bottom: 10px;
+      padding-bottom: .5em;
     }
   }
 
@@ -86,16 +83,25 @@ $footer-navigation-gray: #f7f7f7;
   }
 
   .copyright {
-    color: #696666;
-    font-size: 13px;
-    line-height: (36em/13);
+    color: $gray;
+    font-size: .8em;
+    line-height: 2.75em;
     margin: 0;
   }
 }
 
 /* The whole light gray row stripe that begins the footer: */
 .site-footer-navigation {
-  background-color: $footer-navigation-gray;
+  background-color: darken($white, 2%);
+
+  nav.flex-column a {
+    padding: 0;
+
+    &:hover {
+      // BS4 assumes text-decoration: none now; in this case, though, underlines are probably better
+      text-decoration: underline;
+    }
+  }
 }
 
 .footer-social-links > a {
