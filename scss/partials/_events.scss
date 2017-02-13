@@ -1,26 +1,25 @@
 .events.module {
   .events-date-page {
-    @include border-radius(1px);
-
     background: $white;
-    border: 1px solid #dfdfdf;
+    border: 1px solid $really-light-gray;
+    border-radius: 1px;
     margin-top: 2px;
     text-align: center;
     width: 42px;
   }
 
   .events-month {
-    background-color: #ab0028;
+    background-color: $brand-primary;
     color: $white;
-    font-size: 11px;
-    line-height: (16em / 11);
+    font-size: .6em;
+    line-height: 1.5em;
     text-transform: uppercase;
   }
 
   .events-day {
     font-family: $serif-bold-font;
-    font-size: 19px;
-    line-height: (23em / 19);
+    font-size: 1.25em;
+    line-height: 1.2em;
   }
 
   .media-body {
@@ -32,7 +31,7 @@
   }
 
   .media-heading {
-    font-size: 20px;
+    font-size: 1.25em;
     line-height: 1.2;
     margin: 0;
     text-transform: none;
@@ -44,18 +43,17 @@
   }
 
   li + li {
-    margin-top: 15px;
+    // TODO replaceable with class="mt-#"
+    margin-top: 1em;
   }
 
   p {
-    color: #242424;
+    color: $black;
   }
 
   a.thumbnail {
     display: inline-block;
-    display: block \9
-  ; // IE8 hack
-    margin: 0.5em 3px 0.25em 0; // 3px is for the dropshadow
+    margin: .5em 3px .25em 0; // 3px is for the dropshadow
 
     @include media-breakpoint-up(md) {
       margin-right: 50px;
@@ -68,7 +66,7 @@
   }
 
   .featured-event {
-    margin-bottom: 25px;
+    margin-bottom: 1.5em;
     overflow: visible;
     position: relative;
 
@@ -95,8 +93,7 @@
     }
 
     .media-body {
-      background: rgba(169, 17, 43, 0.8);
-
+      background: rgba($brand-primary, 0.8);
       bottom: 12px;
       left: 3px;
       min-height: 0;
@@ -108,7 +105,7 @@
 
     h4 {
       background-color: $brand-red;
-      padding: 10px 20px;
+      padding: .5em 1.25em;
       width: auto;
 
       a {
@@ -123,7 +120,7 @@
       color: $white;
       display: none;
       margin-bottom: 0;
-      padding: 10px 20px;
+      padding: .5em 1.25em;
       z-index: 10;
 
       &.events-time-and-location {
@@ -135,7 +132,7 @@
   @include media-breakpoint-up(sm) {
     .featured-event {
       .media-body {
-        padding-bottom: 20px;
+        padding-bottom: 1.25em;
       }
 
       .events-date-page {
