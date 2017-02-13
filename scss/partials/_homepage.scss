@@ -10,27 +10,18 @@ body.homepage {
   text-align: center;
 
   h3 {
-    @extend .trajan-font;
-
-    background-color: #f7f7f7;
+    background-color: darken($white, 2%);
     color: $medium-gray;
     display: inline-block;
+    font-family: $trajan-font;
     font-size: 1em;
     margin-bottom: 0;
     padding: 0 .5em;
   }
 }
 
-// Evergreen module for perma-content on homepage; this styling is temporary
-.evergreen.module {
-  @extend .sans-serif-font-bold;
-
-  padding: 50px 20px;
-  background-color: $medium-gray;
-  color: $white;
-  text-align: center;
-}
-
-.media img {
-  width: 192px;
+.news.module {
+  .media a {
+    width: 40%;
+  }
 }
