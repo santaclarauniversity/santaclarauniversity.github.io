@@ -1,11 +1,11 @@
 body.homepage {
-  background-color: #f7f7f7;
+  background-color: darken($white, 2%);
 }
 
 .section-header {
   border-bottom: 3px double $really-light-gray;
-  height: 12px;
-  margin-bottom: 25px;
+  height: .75em;
+  margin-bottom: 1.5em;
   overflow: visible;
   text-align: center;
 
@@ -15,9 +15,9 @@ body.homepage {
     background-color: #f7f7f7;
     color: $medium-gray;
     display: inline-block;
-    font-size: 14px;
+    font-size: 1em;
     margin-bottom: 0;
-    padding: 0 10px;
+    padding: 0 .5em;
   }
 }
 
