@@ -1,43 +1,19 @@
 .pull-quote {
-  padding: 0;
-  margin: 0 auto;
-  border-left: 0;
-  text-align: center;
-
-  > p {
-    font-size: 1.25rem;
-    margin-top: ($spacer-y * 1.5);
+  img {
+    width: 300px;
   }
 
-  > img {
-    width: 75px;
-    height: 75px;
-  }
-
-  > cite {
+  cite {
+    background-color: $brand-primary;
+    color: $white;
     display: block;
-    margin-top: ($spacer-y * 1.5);
-    font-size: 12px;
-    font-style: normal;
-    letter-spacing: .15em;
-    color: $gray-light;
-    text-transform: uppercase;
+    padding: 6px;
   }
 
-  @include media-breakpoint-up(sm) {
-    max-width: 75%;
-
-    > cite {
-      font-size: 14px;
-    }
-
-    > img {
-      width: 100px;
-      height: 100px;
-    }
-
-    > p {
-      font-size: 1.5rem;
-    }
+  p {
+    display: inline-block;
+    font-style: italic;
+    padding: 2px;
+    width: auto;
   }
 }
