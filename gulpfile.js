@@ -18,6 +18,7 @@ const autoprefixer = require('gulp-autoprefixer');
 
 // linters
 const sassLint = require('gulp-sass-lint');
+const eslint = require('gulp-eslint');
 
 // utils
 const clone = require('gulp-clone');
@@ -91,6 +92,11 @@ gulp.task('scripts:compile', (done) => {
 
     done();
   });
+});
+gulp.task('scripts:lint', (done) => {
+  gulp.src(config.scripts.dest)
+    .pipe(eslint.failAfterError());
+  done();
 });
 
 gulp.task('scripts', ['scripts:lint', 'scripts:compile']);
