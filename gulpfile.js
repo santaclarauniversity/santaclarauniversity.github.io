@@ -15,12 +15,9 @@ const webpack = require('webpack');
 // CSS
 const autoprefixer = require('gulp-autoprefixer');
 
-// ES6
-const babel = require('gulp-babel');
 
 // linters
 const sassLint = require('gulp-sass-lint');
-const eslint = require('gulp-eslint');
 
 // utils
 const clone = require('gulp-clone');
@@ -76,15 +73,6 @@ gulp.task('styles:toolkit', (done) => {
 
 gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
 
-
-// scripts (.js, ES6 standard)
-// lint toolkit.js first..
-gulp.task('scripts:lint', () => {
-  return gulp.src(config.scripts.toolkit)
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
 
 // ..then compile all scripts to one (via webpack)
 gulp.task('scripts:compile', (done) => {
