@@ -15,8 +15,6 @@ const webpack = require('webpack');
 // CSS
 const autoprefixer = require('gulp-autoprefixer');
 
-// ES6
-const babel = require('gulp-babel');
 
 // linters
 const sassLint = require('gulp-sass-lint');
@@ -77,15 +75,6 @@ gulp.task('styles:toolkit', (done) => {
 gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
 
 
-// scripts (.js, ES6 standard)
-// lint toolkit.js first..
-gulp.task('scripts:lint', () => {
-  return gulp.src(config.scripts.toolkit)
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
-
 // ..then compile all scripts to one (via webpack)
 gulp.task('scripts:compile', (done) => {
   webpack(webpackConfig, (err, stats) => {
@@ -103,6 +92,11 @@ gulp.task('scripts:compile', (done) => {
 
     done();
   });
+});
+gulp.task('scripts:lint', (done) => {
+  gulp.src(config.scripts.dest)
+    .pipe(eslint.failAfterError());
+  done();
 });
 
 gulp.task('scripts', ['scripts:lint', 'scripts:compile']);
