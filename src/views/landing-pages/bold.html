@@ -1,9 +1,8 @@
 ---
-title: Bold Landing Page
+title: Bold
 layout: landing-page
 ---
-<link rel="stylesheet" href="/css/bold.min.css"/>
-<style>
+<style type="text/css">
   /* note: this is a hack for ios iframe for bootstrap themes shopify page */
   /* this chunk of css is not part of the toolkit :) */
   /* …curses ios, etc… */
@@ -13,7 +12,6 @@ layout: landing-page
       min-width: 100%;
       *width: 100%;
     }
-
     #stage {
       height: 1px;
       overflow: auto;
@@ -22,80 +20,30 @@ layout: landing-page
     }
   }
 </style>
-
-<div class="stage-shelf hidden" id="sidebar">
-  <ul class="nav nav-bordered nav-stacked">
-    <li class="nav-header">
-      <small>Examples</small>
-    </li>
-    <li class="active">
-      <a href="../bold/index.html">Bold</a>
-    </li>
-    <li>
-      <a href="../index.html">Startup</a>
-    </li>
-    <li>
-      <a href="../minimal/index.html">Minimal</a>
-    </li>
-
-    <li class="nav-divider"></li>
-
-    <li class="nav-header">
-      <small>Sections</small>
-    </li>
-
-    <li>
-      <a href="#grid" data-target="#stage" data-toggle="stage">Grid</a>
-    </li>
-    <li>
-      <a href="#chainz" data-target="#stage" data-toggle="stage">2 Chainz</a>
-    </li>
-    <li>
-      <a href="#pricing" data-target="#stage" data-toggle="stage">Pricing</a>
-    </li>
-    <li>
-      <a href="#footer" data-target="#stage" data-toggle="stage">About</a>
-    </li>
-
-    <li class="nav-divider"></li>
-
-    <li class="nav-header">
-      <small>Docs</small>
-    </li>
-
-    <li>
-      <a href="../docs/index.html">Theme</a>
-    </li>
-    <li>
-      <a href="http://getbootstrap.com">Bootstrap</a>
-    </li>
-
-  </ul>
-</div>
-
-
 <div class="stage" id="stage">
 
   <div class="block block-fill-height app-block-wayne"
-       style="background-image: url('/assets/images/examples/sparks.jpg')">
+       style="background-image: url(/assets/images/landing/lilwayne.jpg)">
 
     <button class="btn btn-link stage-toggle" data-target="#stage" data-toggle="stage">
-      <i class="fa fa-bars" aria-hidden="true"></i>
+      <span class="icon icon-menu stage-toggle-icon"></span>
       Menu
     </button>
 
     <div class="block-sm-middle block-xs-bottom">
       <div class="container">
         <div class="row">
-          <div class="col-sm-5">
-            <h1 class="block-title m-b-md">
+          <div class="col-lg-5">
+            <h1 class="block-title mb-4">
               <span class="text-ribbon text-ribbon-primary">
-                <span>Emergence</span>
+                <span>Music. Live.</span>
               </span>
             </h1>
-            <p class="lead">
+            <p class="lead mt-1">
               <span class="text-ribbon text-ribbon-primary">
-                <span>The New Era of Arts at SCU</span>
+                <span>
+                  Live recordings of your favorite artists before their hit albums drop.
+                </span>
               </span>
             </p>
           </div>
@@ -105,7 +53,7 @@ layout: landing-page
   </div>
 
 
-  <div class="block block-inverse block-transparent p-y-0 app-block-grid">
+  <div class="block block-inverse block-transparent py-0 app-block-grid">
 
     <div class="block-bg-clip">
       <div class="block-bg">
@@ -115,47 +63,42 @@ layout: landing-page
 
     <div class="container" id="grid">
       <div class="row">
-        <div class="col-lg-4 col-sm-6">
-          <div class="row m-b">
+        <div class="col-lg-4 col-md-6">
+          <div class="row mb-3 mb-md-5">
             <div class="col-lg-12">
-              <div class="panel panel-bold panel-danger m-b-0 app-box-shadow">
-                <img src="holder.js/holder.js/100px320?textmode=literal"/>
-                <div class="panel-body p-b-lg">
-                  <h4 class="m-b-0">Iggy Azalea</h4>
-                  <p class="text-serif"><em>Released on Dropp 6 weeks early</em>
-                  </p>
+              <div class="card card-bold card-danger mb-0 app-box-shadow">
+                <img src="/assets/images/landing/azalea.jpg">
+                <div class="card-block pb-5">
+                  <h4 class="mb-0">Iggy Azalea</h4>
+                  <p class="text-serif"><em>Released on Dropp 6 weeks early</em></p>
                   <hr>
-                  <p class="text-serif"><em>Ms. Azalea was the first artist to
-                    reach out to Dropp to coordinate her leak. We knew it was
-                    going to be the largest unofficial album drop in history. We
-                    doubled server capacity and made a lot ton of coffee.</em>
-                  </p>
+                  <p class="text-serif"><em>Ms. Azalea was the first artist to reach out to Dropp to coordinate her leak. We knew it was going to be the largest unofficial album drop in history. We doubled server capacity and made a lot ton of coffee.</em></p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row m-b hidden-xs">
+          <div class="row hidden-md-down">
             <div class="col-lg-12">
-              <img src="holder.js/100px320?textmode=literal"/>
+              <img src="/assets/images/landing/minaj.jpg">
             </div>
           </div>
         </div>
-        <div class="col-lg-8 col-sm-6">
+        <div class="col-lg-8 col-md-6">
           <div class="row">
-            <div class="col-lg-6 m-b">
+            <div class="col-lg-6 mb-3 mb-md-5">
               <div class="app-box-shadow">
-                <img src="holder.js/100px320?textmode=literal"/>
+                <img src="/assets/images/landing/childish.jpg">
               </div>
             </div>
-            <div class="col-lg-6 m-b">
+            <div class="col-lg-6 mb-3 mb-md-5">
               <div class="app-box-shadow">
-                <img src="holder.js/100px320?textmode=literal"/>
+                <img src="/assets/images/landing/yeezus.jpg">
               </div>
             </div>
           </div>
-          <div class="row hidden-xs">
+          <div class="row hidden-md-down">
             <div class="col-lg-12">
-              <img src="holder.js/100px660?textmode=literal"/>
+              <img src="/assets/images/landing/cudi.jpg">
             </div>
           </div>
         </div>
@@ -168,7 +111,7 @@ layout: landing-page
     <div class="block-bg-clip">
       <div class="block-bg">
         <div class="block-bg-img block-bg-img-top"
-             style="background-image: url('/assets/images/examples/northern_lights.jpg')">
+             style="background-image: url(/assets/images/landing/2chainz.jpg)">
         </div>
       </div>
     </div>
@@ -176,8 +119,8 @@ layout: landing-page
     <div class="block-sm-middle block-xs-top">
       <div class="container">
         <div class="row">
-          <div class="col-sm-5 col-sm-offset-7">
-            <h1 class="block-title m-b-md">
+          <div class="col-md-5 offset-sm-7">
+            <h1 class="block-title mb-4">
               <span class="text-ribbon text-ribbon-primary">
                 <span>Hand Picked.</span>
               </span>
@@ -195,12 +138,11 @@ layout: landing-page
     </div>
   </div>
 
-  <div
-    class="block block-fill-height block-transparent block-inverse block-angle app-block-kanye">
+  <div class="block block-fill-height block-transparent block-inverse block-angle app-block-kanye">
     <div class="block-bg-clip">
       <div class="block-bg">
         <div class="block-bg-img block-bg-img-top"
-             style="background-image: url('/assets/images/examples/fireworks.jpg')">
+             style="background-image: url(/assets/images/landing/kanye.jpg)">
         </div>
       </div>
     </div>
@@ -208,8 +150,8 @@ layout: landing-page
     <div class="block-xs-middle">
       <div class="container">
         <div class="row">
-          <div class="col-sm-5">
-            <h1 class="block-title m-b-md">
+          <div class="col-md-5">
+            <h1 class="block-title mb-4">
               <span class="text-ribbon">
                 <span>Music Videos.</span>
               </span>
@@ -223,24 +165,22 @@ layout: landing-page
             </p>
           </div>
         </div>
-        <div class="row m-b-lg">
-          <div class="col-sm-8">
+        <div class="row mb-3">
+          <div class="col-md-8">
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe width="682" height="384"
-                      src="https://www.youtube.com/embed/Bm5iA4Zupek?rel=0&amp;controls=0&amp;showinfo=0"
-                      frameborder="0" allowfullscreen></iframe>
+              <iframe width="682" height="384" src="https://www.youtube.com/embed/Bm5iA4Zupek?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="block block-transparent block-fill-height block-angle block-app-mosdef">
     <div class="block-bg-clip">
       <div class="block-bg">
         <div class="block-bg-img block-bg-img-top"
-             style="background-image: url('/assets/images/examples/stage_lighting.JPG')">
-
+             style="background-image: url(/assets/images/landing/mosdef.jpg)">
         </div>
       </div>
     </div>
@@ -248,22 +188,18 @@ layout: landing-page
     <div class="block-xs-middle">
       <div class="container">
         <div class="row">
-          <div class="col-sm-6 col-sm-offset-6">
-            <h1 class="block-title m-b-md">
+          <div class="col-md-6 offset-md-6">
+            <h1 class="block-title mb-4">
               <span class="text-ribbon text-ribbon-primary">
                 <span>Sign up now.</span>
               </span>
             </h1>
 
             <div class="text-ribbon-inputs-split">
-              <input type="text" class="h4 text-ribbon-input text-ribbon-primary"
-                     placeholder="Name">
-              <input type="text" class="h4 text-ribbon-input text-ribbon-primary"
-                     placeholder="Email">
+              <input type="text" class="h4 text-ribbon-input text-ribbon-primary" placeholder="Name">
+              <input type="text" class="h4 text-ribbon-input text-ribbon-primary" placeholder="Email">
             </div>
-            <input type="text"
-                   class="h4 text-ribbon-input text-ribbon-input-half text-ribbon-primary"
-                   placeholder="Promo code">
+            <input type="text" class="h4 text-ribbon-input text-ribbon-input-half text-ribbon-primary" placeholder="Promo code">
             <button type="button" class="btn btn-square btn-primary btn-lg btn-block">
               Get the beta early
             </button>
@@ -274,13 +210,13 @@ layout: landing-page
   </div>
 
   <div class="block block-fill-height block-inverse app-block-nicki"
-       style="background-image: url(../assets/img/nicki.jpg)"
+       style="background-image: url(/assets/images/landing/nicki.jpg)"
        id="pricing">
     <div class="block-xs-middle">
       <div class="container">
-        <div class="row m-b-md">
+        <div class="row mb-4">
           <div class="col-lg-5">
-            <h1 class="block-title m-b-md">
+            <h1 class="block-title mb-4">
               <span class="text-ribbon">
                 <span>Easy Pricing.</span>
               </span></h1>
@@ -294,21 +230,20 @@ layout: landing-page
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-4">
-            <div class="panel">
-              <div class="panel-body">
-                <h3 class="panel-title">Basic Trial</h3>
-                <h4 class="text-muted text-serif m-t-0 m-b">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-block">
+                <h3 class="card-title">Basic Trial</h3>
+                <h4 class="text-muted text-serif mt-0 mb-3">
                   <em>$0/yr</em>
                 </h4>
-                <p class="text-serif m-b">
+                <p class="text-serif mb-1">
                   <em>
-                    Endless stations based on artists, genres, and moods,
-                    including You FM, your own personalized station.
+                    Endless stations based on artists, genres, and moods, including You FM, your own personalized station.
                   </em>
                 </p>
                 <hr>
-                <ul class="iconlist text-serif m-b-md">
+                <ul class="iconlist text-serif mb-4">
                   <li class="active">
                     <span class="icon icon-check"></span>
                     <em>Unlimited streaming</em>
@@ -322,27 +257,24 @@ layout: landing-page
                     <em>Offline sync</em>
                   </li>
                 </ul>
-                <button class="btn btn-default btn-square btn-block btn-lg">Start a
-                  basic trial
-                </button>
+                <button class="btn btn-secondary btn-square btn-block btn-lg">Start a basic trial</button>
               </div>
             </div>
           </div>
-          <div class="col-sm-4">
-            <div class="panel accent-primary">
-              <div class="panel-body">
-                <h3 class="panel-title">Anual Access</h3>
-                <h4 class="text-primary text-serif m-t-0 m-b">
+          <div class="col-lg-4">
+            <div class="card accent-primary">
+              <div class="card-block">
+                <h3 class="card-title">Anual Access</h3>
+                <h4 class="text-primary text-serif mt-0 mb-3">
                   <em>$99/yr</em>
                 </h4>
-                <p class="text-serif m-b">
+                <p class="text-serif mb-1">
                   <em>
-                    Endless stations based on artists, genres, and moods,
-                    including You FM, your own personalized station.
+                    Endless stations based on artists, genres, and moods, including You FM, your own personalized station.
                   </em>
                 </p>
                 <hr>
-                <ul class="iconlist text-serif m-b-md">
+                <ul class="iconlist text-serif mb-4">
                   <li class="active">
                     <span class="icon icon-check"></span>
                     <em>Unlimited streaming</em>
@@ -356,26 +288,23 @@ layout: landing-page
                     <em>Offline sync</em>
                   </li>
                 </ul>
-                <button class="btn btn-primary btn-square btn-block btn-lg">Start a
-                  basic trial
-                </button>
+                <button class="btn btn-primary btn-square btn-block btn-lg">Start a basic trial</button>
               </div>
             </div>
           </div>
-          <div class="col-sm-4">
-            <div class="panel">
-              <div class="panel-body">
-                <h3 class="panel-title">Celebrity Look</h3>
-                <h4 class="text-muted text-serif m-t-0 m-b">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-block">
+                <h3 class="card-title">Celebrity Look</h3>
+                <h4 class="text-muted text-serif mt-0 mb-2">
                   <em>$299/yr</em>
                 </h4>
-                <p class="text-serif m-b">
+                <p class="text-serif mb-1">
                   <em>
-                    Endless stations based on artists, genres, and moods,
-                    including You FM, your own personalized station.
+                    Endless stations based on artists, genres, and moods, including You FM, your own personalized station.
                   </em>
                 <hr>
-                <ul class="iconlist text-serif m-b-md">
+                <ul class="iconlist text-serif mb-4">
                   <li class="active">
                     <span class="icon icon-check"></span>
                     <em>Unlimited streaming</em>
@@ -389,9 +318,7 @@ layout: landing-page
                     <em>Offline sync</em>
                   </li>
                 </ul>
-                <button class="btn btn-default btn-square btn-block btn-lg">Start a
-                  basic trial
-                </button>
+                <button class="btn btn-secondary btn-square btn-block btn-lg">Start a basic trial</button>
               </div>
             </div>
           </div>
@@ -404,7 +331,7 @@ layout: landing-page
   <div class="block block-inverse accent-primary" id="footer">
     <div class="container">
       <div class="row text-serif">
-        <div class="col-sm-2 m-b-md">
+        <div class="col-md-2 mb-4">
           <ul class="list-unstyled list-spaced">
             <li><h4>Tech</h4></li>
             <li class="text-muted"><em>Overview</em></li>
@@ -413,7 +340,7 @@ layout: landing-page
             <li class="text-muted"><em>Technology</em></li>
           </ul>
         </div>
-        <div class="col-sm-2 m-b-md">
+        <div class="col-md-2 mb-4">
           <ul class="list-unstyled list-spaced">
             <li><h4>Press</h4></li>
             <li class="text-muted"><em>Overview</em></li>
@@ -422,7 +349,7 @@ layout: landing-page
             <li class="text-muted"><em>Technology</em></li>
           </ul>
         </div>
-        <div class="col-sm-2 m-b-md">
+        <div class="col-md-2 mb-4">
           <ul class="list-unstyled list-spaced">
             <li><h4>Other</h4></li>
             <li class="text-muted"><em>Overview</em></li>
@@ -431,39 +358,11 @@ layout: landing-page
             <li class="text-muted"><em>Technology</em></li>
           </ul>
         </div>
-        <div class="col-sm-6 m-b-md">
+        <div class="col-md-6 mb-4">
           <ul class="list-unstyled list-spaced">
             <li><h4>Photography</h4></li>
             <li class="text-muted">
-              <em>Background photos: <a
-                href="https://www.flickr.com/photos/demxx/8702542709/">2 Chainz by
-                demxx</a> and <a
-                href="https://www.flickr.com/photos/carnivalridexx/6048218344/">Nicki
-                Minaj by Jennifer</a> are shared under the <a
-                href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0
-                license</a>. <a
-                href="https://www.flickr.com/photos/ddalledo/2204168450/">Kanye West
-                by Daniele Dalledonne</a> is shared under the <a
-                href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0
-                license<a>. <a
-                  href="https://commons.wikimedia.org/wiki/Category:Lil_Wayne#/media/File:Lil_Wayne.jpg">Lil
-                  Wayne by RJ Shaughnessy</a>, and <a
-                  href="https://www.flickr.com/photos/didy_b/8150029917">Mos Def
-                  by Eddy BERTHIER</a> are public domain works. Concert portraits:
-                  <a href="https://www.flickr.com/photos/histrionicss/13951485730">Iggy
-                    Azalea by Laura Murray</a>, <a
-                    href="https://www.flickr.com/photos/32999928@N05/7213700394/">Childish
-                    Gambino by Eli Watson</a>, and <a
-                    href="https://www.flickr.com/photos/scissorfighter/5169715083/">Kid
-                    Cudi by Dana Beveridge</a> are shared under the <a
-                    href="https://creativecommons.org/licenses/by/2.0/">CC BY
-                    2.0 license</a>.<a
-                    href="https://www.flickr.com/photos/jasonpersse/5710284405/">
-                    Kanye West by Jason Persse</a> and <a
-                    href="https://www.flickr.com/photos/tamtam7683/5990345195">Nicki
-                    Minaj by tamtam7683</a> are shared under the <a
-                    href="https://creativecommons.org/licenses/by-sa/2.0/">CC
-                    BY-SA 2.0 license</a>.</em>
+              <em>Background photos: <a href="https://www.flickr.com/photos/demxx/8702542709/">2 Chainz by demxx</a> and <a href="https://www.flickr.com/photos/carnivalridexx/6048218344/">Nicki Minaj by Jennifer</a> are shared under the <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 license</a>. <a href="https://www.flickr.com/photos/ddalledo/2204168450/">Kanye West by Daniele Dalledonne</a> is shared under the <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license<a>. <a href="https://commons.wikimedia.org/wiki/Category:Lil_Wayne#/media/File:Lil_Wayne.jpg">Lil Wayne by RJ Shaughnessy</a>, and <a href="https://www.flickr.com/photos/didy_b/8150029917">Mos Def by Eddy BERTHIER</a> are public domain works. Concert portraits: <a href="https://www.flickr.com/photos/histrionicss/13951485730">Iggy Azalea by Laura Murray</a>, <a href="https://www.flickr.com/photos/32999928@N05/7213700394/">Childish Gambino by Eli Watson</a>, and <a href="https://www.flickr.com/photos/scissorfighter/5169715083/">Kid Cudi by Dana Beveridge</a> are shared under the <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 license</a>.<a href="https://www.flickr.com/photos/jasonpersse/5710284405/"> Kanye West by Jason Persse</a> and <a href="https://www.flickr.com/photos/tamtam7683/5990345195">Nicki Minaj by tamtam7683</a> are shared under the <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license</a>.</em>
             </li>
           </ul>
         </div>
