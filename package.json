@@ -56,5 +56,10 @@
     "node-bourbon": "^4.2.8",
     "run-sequence": "^1.2.2",
     "webpack": "^1.14.0"
+  },
+  "babel": {
+    "presets": [
+      "es2016"
+    ]
   }
 }
