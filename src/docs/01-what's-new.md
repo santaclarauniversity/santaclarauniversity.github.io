@@ -30,6 +30,9 @@ Release Highlights:
   - Renamed Carousel using BS4-shipped code.
 - **Image Grid**
   - Removed in favor of gutter-less grids.
+- **Person Spotlight**
+  - Person Spotlight will be refactored for flexbox; if it cannot be achieved using flex, it will be deprecated.
+  - Removed "compact" version of person spotlight, as it utilizes media list code.
 
 **Templates and Documentation**
 - Typography: Reset to Bootstrap standards, most notably, made headers less opinionated (no color or transform)
