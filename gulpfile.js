@@ -33,7 +33,7 @@ const config = {
     dest: './css/',
     fabricator: './src/assets/fabricator/styles/fabricator.scss',
     toolkit: './scss/toolkit.scss',
-    landingStartup: './scss/landing/landing-startup.scss',
+    landing: './scss/landing/landing-*.scss',
     bootstrap: './bower_components/bootstrap/scss/'
   },
   scripts: {
@@ -70,7 +70,7 @@ gulp.task('styles:toolkit:compile', () => {
 });
 
 gulp.task('styles:landing', () => {
-  return gulp.src(config.styles.landingStartup)
+  return gulp.src(config.styles.landing)
     .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(rename({ suffix: '.min' }))
     .pipe(autoprefixer({ browsers: 'last 2 version' }))
