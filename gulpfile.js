@@ -33,6 +33,7 @@ const config = {
     dest: './css/',
     fabricator: './src/assets/fabricator/styles/fabricator.scss',
     toolkit: './scss/toolkit.scss',
+    landingStartup: './scss/landing/landing-startup.scss',
     bootstrap: './bower_components/bootstrap/scss/'
   },
   scripts: {
@@ -68,11 +69,19 @@ gulp.task('styles:toolkit:compile', () => {
     .pipe(gulp.dest(config.styles.dest));
 });
 
+gulp.task('styles:landing', () => {
+  return gulp.src(config.styles.landingStartup)
+    .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(autoprefixer({ browsers: 'last 2 version' }))
+    .pipe(gulp.dest(config.styles.dest));
+});
+
 gulp.task('styles:toolkit', (done) => {
   runSequence('styles:toolkit:lint', 'styles:toolkit:compile', done);
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
+gulp.task('styles', ['styles:fabricator', 'styles:toolkit', 'styles:landing']);
 
 
 // ..then compile all scripts to one (via webpack)
