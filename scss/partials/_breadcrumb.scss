@@ -1,0 +1,8 @@
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '\00bb'; // &raquo;
+}
