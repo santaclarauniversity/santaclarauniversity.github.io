@@ -5,42 +5,78 @@ Release Highlights:
 - Migrated from Bootstrap 3 to Bootstrap 4.
 - Audited content types.
 - Better CSS/JS performance.
+- Quicker toolkit run/refresh time.
 - New templates and documentation.
 
 **Bootstrap 4**
-- Upgraded to Bootstrap 4 alpha 6 (all `.less` -> `.scss`)
+- [Upgraded to Bootstrap 4 alpha 6](https://v4-alpha.getbootstrap.com/getting-started/introduction/)
+
 
 **Content Type Changes**
 
 - **Grid System and Layout**
   - One column/two column "module" designations are deprecated in favor of columns. See: Site Pointer, Infographics, List Items, more.
 - **Accordion**
-  - Marked for deprecation - is now a Card with a special collapsible attribute.
+  - _Marked for deprecation_ - is now a Card with a special collapsible attribute.
+- **Agenda**
+  - Simple responsive table (built with Bootstrap grid) which is intended for scheduling events that have several parts.
+- **Block**
+  - Full-width block content featuring a button and the option for an interactive background (e.g. a map)
 - **Buttons**
   - Large "stroked" style is now deprecated.
   - Added new standard and outline buttons.
   - Increased the options for the the existing SCU custom buttons.
-- **Panels**
-  - Panels are now deprecated in favor of Cards.
-- **Pull Quotes**
-  - Pull Quotes are deprecated - they should be a type of stylized block.
 - **Hero**
   - Renamed Jumbotron and uses BS4-standard code.
 - **Image Gallery**
   - Renamed Carousel using BS4-shipped code.
 - **Image Grid**
   - Removed in favor of gutter-less grids.
+- **Panels**
+  - Panels are now deprecated in favor of Cards.
 - **Person Spotlight**
   - Person Spotlight will be refactored for flexbox; if it cannot be achieved using flex, it will be deprecated.
   - Removed "compact" version of person spotlight, as it utilizes media list code.
+- **Pull Quotes**
+  - Pull Quotes are deprecated - they should be a type of stylized block.  2.0 implementation currently copy of pull quote found in `minimal` landing page.
+  
+Other content types **not** mentioned in this list were either untouched or, in some capacity, tweaked to work properly on Bootstrap 4.
+
 
 **Templates and Documentation**
 - Typography: Reset to Bootstrap standards, most notably, made headers less opinionated (no color or transform)
-- Typography: Headers now use a true bold font (used a browser-filled Trade Gothic previously).
+- Typography: Headers now use a true bold font (used a browser-filled Trade Gothic previously)
 - Added Accessibility Guidelines (TODO)
 - Added new Email templates
+- Migrated Style Guide to a single file for semantic reasons.  Still found in Fabricator left-hand nav
+
 
 **Fabricator and Build**
+
+- `./scss/`contains Sass files, which are identical to Less in purpose but with (*very*) slightly different syntax/execution in general
+  - `./scss/landing/`
+    - Contains landing page styles; these are compiled to their respective files (only `landing-*.scss`)
+  - `./scss/partials/`
+    - All of our (SCU) partial styles, just like they were in the original toolkit except Sass now
+  - `./scss/_components.scss`
+      - Bootstrap components we use on the site
+  - `./scss/toolkit.scss`
+    - Sass entry point; this is the file that gets compiled into `toolkit.css`.  It "loads" Bootstrap into itself, then
+    applies our partials on top, which lets us use Bootstrap but with our customizations (notably, color, typography, etc.)
+  - `./scss/variables.scss`
+    - Our Bootstrap variable overrides
+
+
+- HTML changes (views, etc.)
+  - Various changes to demos to make them work properly on Bootstrap 4
+  - Upgraded landing pages to their Bootstrap 4 versions
+  - Moved style guide to `./src/views/style-guide.html`, which sources from `./src/materials/style-guide/*.html`; this resolves
+  a navigation issue caused by the style guide's original format
+
+
+- `.eslintrc.json`
+  - Moved from `.eslintrc` to help resolve strange issues with ESLint not working on some hosts
+
 
 - `gulpfile.js`
   - Changed `bourbon` to load solely from `toolkit.scss` *(removed from gulpfile)*
@@ -50,18 +86,21 @@ Release Highlights:
   - Now utilizing `run-sequence` for tasks that should be executed successively rather than simultaneously
   - Now utilizing `done` promise under `gulp` tasks which cannot have a simple return statement
   - Swapped `csslint` for `sass-lint`; swapped `jshint` for `eslint`
-  - Changed `toolkit.js` and `fabricator.js` to properly **both** use `webpack` for compilation
+  - Changed `toolkit.js` and `fabricator.js` to properly **both (together)** use `webpack` for compilation
   - Changed `babel` preset to `es2016` from `babili` so `toolkit.js` won't be minified in development mode
-  - Added `gulp-autoprefixer` which removes need to write browser-specific CSS prefix rules entirely
+  - Added `gulp-autoprefixer` module which removes need to write browser-specific CSS prefix rules entirely
+  - Added task `style:landing` to compile landing page CSS in parallel (also: files are now <1 KB each)
 
 
 - `package.json`
   - Removed extraneous Node deps
   - Added `gulp-autoprefixer`
-  
+  - Now using this file to describe Babel preset instead of having a `.babelrc`
+ 
+ 
 - `./src/assets/toolkit/scripts/toolkit.js`
   - Removed extraneous JS code which was meant for leftover parts of Bootstrap landing pages
-  - Updated to ES6 standard
+  - Upgraded to ES6 standard
   
   
 - `.gitignore`
@@ -71,10 +110,6 @@ Release Highlights:
 - `bower.json`
   - Forcing bourbon to its `v5 beta` in anticipation of a full release
   
-  
-
-**Code Style**
-- Converted `.scss` partials to 2 spaces for consistency across the rest of the codebase (including Bootstrap's `.scss`)
 
 ```v1.0.7```
 - Removed extraneous images and prototypes from launched projects.
