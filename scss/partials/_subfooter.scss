@@ -1,0 +1,24 @@
+.subfooter {
+  background-color:#333;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
+  .social a {
+    display: inline;
+    float: none;
+    text-decoration: none;
+  }
+
+  .subfooter-title {
+    color: white;
+  }
+  .subfooter-links {
+    color: white;
+    font-size: 15px;
+  }
+  a.transparent {
+    font-size: 22px;
+  }
+}
