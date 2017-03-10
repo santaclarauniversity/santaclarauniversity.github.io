@@ -49,7 +49,7 @@ Other content types **not** mentioned in this list were either untouched or, in 
 - Added Accessibility Guidelines (TODO)
 - Added new Email templates
 - Migrated Style Guide to a single file for semantic reasons.  Still found in Fabricator left-hand nav
-
+- Subfooter provides large departments with additional space for essential information
 
 **Fabricator and Build**
 
