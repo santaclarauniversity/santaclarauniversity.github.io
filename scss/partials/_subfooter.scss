@@ -17,6 +17,10 @@
   .subfooter-links {
     color: white;
     font-size: 15px;
+    i {
+      text-align:  center;
+      min-width: 15px;
+    }
   }
   a.transparent {
     font-size: 22px;
