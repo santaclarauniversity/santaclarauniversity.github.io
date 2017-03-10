@@ -1,0 +1,7 @@
+.person-spotlight {
+  background-image: linear-gradient(to right, darken($brand-primary, 3%) 0%, $brand-primary 100%);
+
+  hr {
+    background-color: darken($brand-primary, 5%);
+  }
+}
