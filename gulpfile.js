@@ -14,7 +14,7 @@ const webpack = require('webpack');
 // custom packages
 // CSS
 const autoprefixer = require('gulp-autoprefixer');
-
+const sourcemaps = require('gulp-sourcemaps');
 
 // linters
 const sassLint = require('gulp-sass-lint');
@@ -63,7 +63,9 @@ gulp.task('styles:toolkit:lint', () => {
 
 gulp.task('styles:toolkit:compile', () => {
   return gulp.src(config.styles.toolkit)
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(rename({ suffix: '.min' }))
     .pipe(autoprefixer({ browsers: 'last 2 version' }))
     .pipe(gulp.dest(config.styles.dest));
@@ -71,7 +73,9 @@ gulp.task('styles:toolkit:compile', () => {
 
 gulp.task('styles:landing', () => {
   return gulp.src(config.styles.landing)
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(rename({ suffix: '.min' }))
     .pipe(autoprefixer({ browsers: 'last 2 version' }))
     .pipe(gulp.dest(config.styles.dest));
