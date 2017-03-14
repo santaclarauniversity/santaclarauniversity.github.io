@@ -1,91 +1,155 @@
-<footer class="site-footer">
-  <div class="site-footer-navigation container">
-    <div class="row footer-title-row">
-      <div class="col-sm-2 push-sm-5 footer-mission">
-        <div class="footer-mission-wrapper">
-          <a href="/">
-            <img class="hide-for-retina"
-                 src="/assets/images/footer-mission.png"
-                 width="100" height="109" alt="Santa Clara University Mission Logo">
-            <img class="retina-only"
-                 src="/assets/images/footer-mission@2x.png"
-                 width="100" height="109" alt="Santa Clara University Mission Logo">
-          </a>
-        </div>
-      </div>
-      <div class="col-12 col-md-5 pull-md-2 footer-title">
-        <a href="/" class="h6 text-trajan text-uppercase" style="letter-spacing: 3px;">Santa Clara University</a>
-      </div>
-      <div class="col-12 col-md-5 footer-tagline footer-title">
-          <a href="/" class="h6 text-trajan text-uppercase" style="letter-spacing: 1px;">
-            The Jesuit University in Silicon Valley
-          </a>
-        </div>
-    </div>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    $('#footer-toggler').click(function (e) {
+      $('.footer-core').toggle();
+      $('.footer-subfooter').toggle();
+    });
+  });
+</script>
+<div class="block footer-core app-block-footer bg-primary py-5 text-sans-light">
+  <div class="container">
     <div class="row">
-      <div class="col-md-5 people-place-navigation">
-        <div class="row">
-          <div class="col-6">
-            <p class="h-adr adr">
-              <span class="p-street-address street-address">500 El Camino Real</span>,<br />
-              <span class="p-locality locality">Santa Clara</span>,
-              <span class="p-region">CA</span> <span class="p-postal-code">95053</span><br />
-              <a href="tel:+14085544000">(408) 554-4400</a>
-            </p>
-          </div>
-          <nav class="col-6 nav flex-column text-right">
-            <a href="#" class="nav-link">Contact Us</a>
-            <a href="#" class="nav-link">Maps & Directions</a>
-            <a href="#" class="nav-link">People Directory</a>
-          </nav>
-        </div>
+      <div class="col-sm-6">
+        <h4 class="text-uppercase text-white text-trajan wordmark">Santa Clara University</h4>
+        <p class="text-white">
+         500 El Camino Real<br>
+         Santa Clara, CA 95053<br>
+          (408) 554-4400
+        </p>
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item"><a class="facebook" href="http://www.facebook.com">
+            <i class="demo-icon icon-facebook-squared"></i>
+            <span class="sr-only">SCU on Facebook</span>
+          </a></li>
+          <li class="list-inline-item"><a class="twitter" href="http://www.twitter.com">
+            <i class="demo-icon icon-twitter"></i>
+            <span class="sr-only">SCU on Twitter</span>
+          </a></li>
+          <li class="list-inline-item"><a class="youtube" href="http://youtube.com">
+            <i class="demo-icon icon-youtube"></i>
+            <span class="sr-only">SCU on YouTube</span>
+          </a></li>
+          <li class="list-inline-item"><a class="pinterest" href="http://www.pinterest.com">
+            <i class="demo-icon icon-pinterest"></i>
+            <span class="sr-only">SCU on Pinterest</span>
+          </a></li>
+          <li class="list-inline-item">
+            <a class="instagram" href="http://www.instagram.com">
+              <i class="demo-icon icon-instagram"></i>
+              <span class="sr-only">SCU on Instagram</span>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="col-md-5 push-md-2 footer-social-navigation">
-        <div class="row">
-          <nav class="col-5 nav flex-column">
-            <a href="#">Emergency Info</a>
-            <a href="#">Employment</a>
-            <a href="#">Logins</a>
-          </nav>
-          <nav class="col-7 footer-social-links text-right">
-            <div class="footer-social-icons pull-right">
-              <span class="social">
-                <a class="facebook" href="http://www.facebook.com">
-                  <i class="demo-icon icon-facebook-squared"></i>
-                  <span class="sr-only">SCU on Facebook</span>
-                </a>
-              </span>
-              <span class="social">
-                <a class="twitter" href="http://www.twitter.com">
-                  <i class="demo-icon icon-twitter"></i>
-                  <span class="sr-only">SCU on Twitter</span>
-                </a>
-              </span>
-              <span class="social">
-                <a class="youtube" href="http://youtube.com">
-                  <i class="demo-icon icon-youtube"></i>
-                  <span class="sr-only">SCU on YouTube</span>
-                </a>
-              </span>
-              <span class="social">
-                <a class="pinterest" href="http://www.pinterest.com">
-                  <i class="demo-icon icon-pinterest"></i>
-                  <span class="sr-only">SCU on Pinterest</span>
-                </a>
-              </span>
-              <span class="social">
-                <a class="instagram" href="http://www.instagram.com">
-                  <i class="demo-icon icon-instagram"></i>
-                  <span class="sr-only">SCU on Instagram</span>
-                </a>
-              </span>
-            </div>
-            <a href="#">Social Media</a>
-          </nav>
+      <div class="col-sm-2">
+        <ul class="list-unstyled list-spaced">
+          <li><h6 class="text-uppercase text-white">Our Campus</h6></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Maps &amp; Directions</a></li>
+          <li><a href="#">People Directory</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <ul class="list-unstyled list-spaced">
+          <li><h6 class="text-uppercase text-white">Resources</h6></li>
+          <li><a href="#">Emergency Info</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-subfooter" style="display: none">
+  <div class="block app-block-footer bg-secondary py-5 text-sans-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h4 class="text-sans-light text-uppercase wordmark">Leavey School of Business</h4>
+          <p>
+            Lucas Hall<br>
+            500 El Camino Real<br>
+            Santa Clara, CA 95053<br>
+            (408) 554-4400
+          </p>
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a class="facebook" href="http://www.facebook.com">
+              <i class="demo-icon icon-facebook-squared"></i>
+              <span class="sr-only">SCU on Facebook</span>
+            </a></li>
+            <li class="list-inline-item"><a class="twitter" href="http://www.twitter.com">
+              <i class="demo-icon icon-twitter"></i>
+              <span class="sr-only">SCU on Twitter</span>
+            </a></li>
+            <li class="list-inline-item"><a class="youtube" href="http://youtube.com">
+              <i class="demo-icon icon-youtube"></i>
+              <span class="sr-only">SCU on YouTube</span>
+            </a></li>
+            <li class="list-inline-item"><a class="pinterest" href="http://www.pinterest.com">
+              <i class="demo-icon icon-pinterest"></i>
+              <span class="sr-only">SCU on Pinterest</span>
+            </a></li>
+            <li class="list-inline-item">
+              <a class="instagram" href="http://www.instagram.com">
+                <i class="demo-icon icon-instagram"></i>
+                <span class="sr-only">SCU on Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Our Campus</h6></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Maps &amp; Directions</a></li>
+            <li><a href="#">People Directory</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Resources</h6></li>
+            <li><a href="#">Emergency Info</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Look, one more</h6></li>
+            <li><a href="#">Emergency Info</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
+  <div class="block footer-core-mini bg-primary py-3 text-sans-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h6 class="text-uppercase text-white text-trajan wordmark">Santa Clara University</h6>
+          <ul class="list-inline pull-right mb-0">
+            <li class="list-inline-item text-white">Login</li>
+            <li class="list-inline-item text-white">|</li>
+            <li class="list-inline-item"><a class="facebook text-white" href="http://www.facebook.com">
+              <i class="demo-icon icon-facebook-squared"></i>
+              <span class="sr-only">SCU on Facebook</span>
+            </a></li>
+            <li class="list-inline-item"><a class="text-white twitter" href="http://www.twitter.com">
+              <i class="demo-icon icon-twitter"></i>
+              <span class="sr-only">SCU on Twitter</span>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="footer-copyright text-center">&copy; 2017 SCU - <span id="footer-toggler">Toggle Footer Style</span></p>
 
-  <p class="copyright text-center">&copy; 2017 SCU</p>
-</footer>
