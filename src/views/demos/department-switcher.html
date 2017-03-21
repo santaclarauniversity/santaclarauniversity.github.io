@@ -2,17 +2,83 @@
 title: Can We
 layout: demo
 ---
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.9/select2-bootstrap.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#departments').select2({
+      theme: "bootstrap",
+      placeholder: 'Departments and Programs',
+    });
+    $('#departments').on('select2:select', function (evt) {
+      var dest = $(evt.params.data.element).data('target');
+      // window.location = dest;
+    });
+  });
+</script>
+<style type="text/css">
+  #content {
+    background-color: white;
+  }
+</style>
 <div class="subheader module"
      style="background-image:url('/assets/images/electrical-engineering.jpg');">
   <div class="container">
-    <div class="row">
+    <div class="row align-items-center pb-3">
       <div class="col-sm-8">
-        <h1>
+        <h1 class="text-sans-light pb-3 pb-md-0">
           <span>Department of </span>Electrical Engineering
         </h1>
       </div>
       <div class="col-sm-4">
-        <div class="link-button switcher module">
+        <select name="departments" id="departments" class="custom-select form-control-lg">
+          <option></option>
+          <optgroup label="College of Arts and Sciences">
+              <option data-target="/cas/anthropology">Anthropology</option>
+              <option>Art and Art History</option>
+              <option>Biology</option>
+              <option>Chemistry and Biochemistry</option>
+              <option>Classics</option>
+              <option>Communication</option>
+              <option>English</option>
+              <option>Environmental Studies</option>
+              <option>Ethnic Studies</option>
+              <option>History</option>
+              <option>Liberal Studies</option>
+              <option>Math and Computer Science</option>
+              <option>Military Science</option>
+              <option>Modern Languages and Literatures</option>
+              <option>Music</option>
+              <option>Philosophy</option>
+              <option>Physics</option>
+              <option>Political Science</option>
+              <option>Psychology</option>
+              <option>Public Health</option>
+              <option>Religious Studies</option>
+              <option>Sociology</option>
+              <option>Theatre and Dance</option>
+              <option>Women's and Gender Studies</option>
+            </optgroup>
+            <optgroup label="School of Engineering">
+              <option>Bioengineering</option>
+              <option>Civil Engineering</option>
+              <option>Computer Science and Engineering</option>
+              <option>Electrical Engineering</option>
+              <option>Mechanical Engineering</option>
+              <option>Web Design and Engineering</option>
+            </optgroup>
+            <optgroup label="Leavey School of Business">
+              <option>Accounting</option>
+              <option>Accounting & Information Systems</option>
+              <option>Economics</option>
+              <option>Finance</option>
+              <option>Management</option>
+              <option>Marketing</option>
+              <option>Management Information Systems (in the department of OMIS)</option>
+            </optgroup>
+        </select>
+        <!--<div class="link-button switcher module">
           <a href="javascript:;"><span>Departments &amp; Programs</span></a>
           <div class="row">
             <div class="one-column related-links module col-sm-6">
@@ -102,9 +168,116 @@ layout: demo
                 Education and Counseling Psychology</a></h4>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
 </div>
+<div class="container" id="content">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1 class="page-title" id="page-title">Department of Electrical Engineering</h1>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/engineering/">School of Engineering</a></li>
+        <li class="breadcrumb-item"><a href="/engineering/academic-programs/">Academic Programs</a></li>
+        <li class="breadcrumb-item active">Department of Electrical Engineering</li>
+      </ol>
+      <div id="d.en.39590"><!-- General Content --></div>
+      <div class="intro"><p>From nanobots to the national grid, electrical engineers create the systems that power our
+        world.</p></div>
+      <p>The field of electrical engineering is vast. It covers the design, construction, and operation of every kind of
+        electrical component, circuit, and system. It's integral to modern life and necessary if we are to build a more
+        sustainable world. Where better to become an electrical engineer than in the heart of Silicon Valley?</p>
+      <p>At Santa Clara, you'll study with distinguished&nbsp;<a
+        href="/engineering/academic-programs/department-of-electrical-engineering/faculty--staff/">faculty members</a>
+        who bring industry challenges to their classrooms and research. They've developed a curriculum that is both
+        practical and innovative, and takes care to address ethical and societal impacts.</p>
+      <p>You'll get hands-on experience in <a
+        href="/engineering/academic-programs/department-of-electrical-engineering/laboratories/">facilities</a>&nbsp;like
+        the Nanoelectronics, Intelligent Control, and Electron Device Laboratories as well as through our <a
+          href="/engineering/beyond-the-classroom/co-ops-and-internships/">co-op program</a>, internship opportunities,
+        and independent projects.</p>
+      <p>Our <a href="/engineering/academic-programs/department-of-electrical-engineering/undergraduate/">Bachelor's</a>,
+        <a href="/engineering/academic-programs/department-of-electrical-engineering/graduate/ms-program/">Master's</a>,
+        and <a
+          href="/engineering/academic-programs/department-of-electrical-engineering/graduate/phd-program/">Ph.D.</a>&nbsp;degrees
+        all offer specializations, and our <a
+          href="/engineering/academic-programs/department-of-electrical-engineering/graduate/certificate-programs/">graduate
+          certificate programs</a>&nbsp;provide a quick way to become skilled in a specific area.</p>
+      <p>SCU EE graduates are highly sought-after for their technical knowledge and leadership skills here in the Valley
+        and beyond.</p>
 
+
+      <script>$(document).ready(function () {
+        $('.page-title').addClass('sr-only');
+      });</script>
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <div id="message-67278"></div>
+          <div class="pagedrows-67278">
+            <div class="featured-story module"><a
+              href="/engineering/stories/engineering-news-fall-2016/electrical-engineering-adjunct-leads-by-example.html"
+              class="thumbnail"><span class="sr-only">Image link to full article</span></a>
+              <h4 class="featured-story-heading"><a
+                href="/engineering/stories/engineering-news-fall-2016/electrical-engineering-adjunct-leads-by-example.html">Electrical
+                Engineering Adjunct Leads by Example</a></h4>
+              <p>The School of Engineering is fortunate to draw top talent from industry as adjunct faculty for our
+                graduate program. Read about Electrical Engineering’s Bob Schaffer, Ph.D., who exemplifies the best in
+                engineering education and the Jesuit tradition of helping others.</p><a
+                href="/engineering/stories/engineering-news-fall-2016/electrical-engineering-adjunct-leads-by-example.html">More
+                »</a></div>
+            <script>console.log('RE-LOADED STORIES FROM T4: ');</script>
+          </div>
+        </div>
+        <div class="col-md-6">
+
+
+          <div id="message-55138"></div>
+          <script>console.log('LAYOUT MODE v2.0');</script>
+          <div class="pagedrows-55138">
+            <div class="featured-story module"><a
+              href="/engineering/stories/engineering-news-spring-2015/building-a-better-nest.html"
+              class="thumbnail"><span class="sr-only">Image link to full article</span></a><h4
+              class="featured-story-heading"><a
+              href="/engineering/stories/engineering-news-spring-2015/building-a-better-nest.html">Building A Better
+              Nest</a></h4>
+              <p>Noticing so much popular attention paid to the Nest Learning Thermostat and facing the challenge of
+                their year-long capstone project, electrical engineering seniors Matthew Allen, Sam Billett, and Kevin
+                Read fixed their laser-like focus on fuzzy logic.</p><a
+                href="/engineering/stories/engineering-news-spring-2015/building-a-better-nest.html">More »</a></div>
+            <script>console.log('RE-LOADED STORIES FROM T4: ');</script>
+          </div>
+          <ul id="paging-55138" class="pagination pull-right" data-rowspp="25"></ul>
+          <div class="pull-right" id="ct-55138"></div>
+          <div style="clear:both"></div>
+
+        </div>
+      </div>
+      <div class="pull-right"></div>
+    </div>
+    <div class="col-sm-4">
+      <nav class="side-navigation match-page-title">
+
+        <!-- End: Programmable Layout Nav Object Here -->
+        <a class="side-navigation-header" href="/engineering/academic-programs/department-of-electrical-engineering/">Department
+          of Electrical Engineering</a>
+        <ul>
+          <li><a href="/engineering/academic-programs/department-of-electrical-engineering/about-us/">About Us</a></li>
+          <li><a
+            href="/engineering/academic-programs/department-of-electrical-engineering/undergraduate/">Undergraduate</a>
+          </li>
+          <li><a href="/engineering/academic-programs/department-of-electrical-engineering/graduate/">Graduate</a></li>
+          <li><a href="/engineering/academic-programs/department-of-electrical-engineering/faculty--staff/">Faculty
+            &amp; Staff</a></li>
+          <li><a
+            href="/engineering/academic-programs/department-of-electrical-engineering/laboratories/">Laboratories</a>
+          </li>
+          <li><a href="/engineering/academic-programs/department-of-electrical-engineering/research/">Research</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

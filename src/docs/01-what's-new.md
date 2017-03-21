@@ -14,7 +14,8 @@ Release Highlights:
 
 **Content Type Changes**
 
-- **Grid System and Layout**
+- **General Content Type Changes**
+  - Updated Content Types for Bootstrap 4.
   - One column/two column "module" designations are deprecated in favor of columns. See: Site Pointer, Infographics, List Items, more.
 - **Accordion**
   - _Marked for deprecation_ - is now a Card with a special collapsible attribute.
@@ -32,24 +33,27 @@ Release Highlights:
   - Renamed Carousel using BS4-shipped code.
 - **Image Grid**
   - Removed in favor of gutter-less grids.
+- **Infographics**
+  - Deprecated prix/window style.
+  - Created new styles based on BS badges.
 - **Panels**
   - Panels are now deprecated in favor of Cards.
 - **Person Spotlight**
-  - Person Spotlight will be refactored for flexbox; if it cannot be achieved using flex, it will be deprecated.
+  - Redesigned Person Spotlight to be more universal; removes overlay and introduces left/right card style.
   - Removed "compact" version of person spotlight, as it utilizes media list code.
 - **Pull Quotes**
   - Pull Quotes are deprecated - they should be a type of stylized block.  2.0 implementation currently copy of pull quote found in `minimal` landing page.
-  
-Other content types **not** mentioned in this list were either untouched or, in some capacity, tweaked to work properly on Bootstrap 4.
 
 
 **Templates and Documentation**
-- Typography: Reset to Bootstrap standards, most notably, made headers less opinionated (no color or transform)
-- Typography: Headers now use a true bold font (used a browser-filled Trade Gothic previously)
+- **Typography**
+  - Reset to Bootstrap standards, most notably, made headers less opinionated (no color or transform), headers now use a true bold font (used a browser-filled Trade Gothic previously)
+- **Templates**
+  - Added new footer system with flexibility for major-unit branding.
+  - Beta: [Department Switcher](/demos/department-switcher.html) using `select2`.
+  - Alpha: New header system.
+  - New email template (Solid)
 - Added Accessibility Guidelines (TODO)
-- Added new Email templates
-- Migrated Style Guide to a single file for semantic reasons.  Still found in Fabricator left-hand nav
-- Subfooter provides large departments with additional space for essential information
 
 **Fabricator and Build**
 
@@ -101,14 +105,6 @@ Other content types **not** mentioned in this list were either untouched or, in 
 - `./src/assets/toolkit/scripts/toolkit.js`
   - Removed extraneous JS code which was meant for leftover parts of Bootstrap landing pages
   - Upgraded to ES6 standard
-  
-  
-- `.gitignore`
-  - Updated to exclude `/css/` and `/js/` since there is no longer a reason to track them
-  
-  
-- `bower.json`
-  - Forcing bourbon to its `v5 beta` in anticipation of a full release
   
 
 ```v1.0.7```

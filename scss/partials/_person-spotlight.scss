@@ -1,15 +1,10 @@
 .person-spotlight {
-  div:first-child {
-    background-position: 0 100%;
-    background-size: cover;
-    min-height: 270px;
+  .spotlight-image-left {
+    min-height: 250px;
   }
-
-  div:last-child {
-    background-image: linear-gradient(to right, darken($brand-primary, 3%) 0%, $brand-primary 100%);
-
-    hr {
-      background: darken($brand-primary, 5%);
-    }
+  .spotlight-image-right {
+    min-height: 250px;
+    background-position: 100%;
+    background-size: cover;
   }
 }
