@@ -1,17 +1,18 @@
-@import './landing/variables-inverse';
-@import './components';
+// Bootstrap
+@import 'variables-inverse';
+@import 'components';
 
 //
 // Custom form overrides
 //
 
 .custom-select {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEX////////////////1pQ5zAAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC);
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEX////////////////1pQ5zAAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC');
 
   &:focus {
     color: $body-bg;
     background-color: #fff;
-    background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC);
+    background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC');
     box-shadow: none;
   }
 }
@@ -100,9 +101,42 @@
   }
 }
 
+
+
+
+@import 'partials/type-custom';
+@import 'partials/alerts-custom';
+@import 'partials/buttons-custom';
+@import 'partials/nav-heading';
+@import 'partials/navbar-utilities';
+
+
+@import 'partials/alerts-custom';
+@import 'partials/buttons-custom';
+@import 'partials/nav-heading';
+@import 'partials/nav-bordered';
+@import 'partials/navbar-utilities';
+@import 'partials/navs-custom';
+@import 'partials/list-group-custom';
+@import 'partials/modals-custom';
+@import 'partials/tables-custom';
+@import 'partials/container-custom';
+
+
+@import 'partials/utilities-spacer';
+@import 'partials/type-custom';
+@import 'partials/icons';
+@import 'partials/flex-table';
+@import 'partials/text-inherit';
 @import 'partials/datepicker';
+@import 'partials/tablesorter';
+@import 'partials/nav-toggler';
+@import 'partials/statlist';
 @import 'partials/statcard';
 @import 'partials/graphs';
+@import 'partials/divider';
+@import 'partials/input-icon';
+@import 'partials/sidebar';
+@import 'partials/iconav';
 @import 'partials/dashhead';
-
-
+@import 'partials/buttons-radius';

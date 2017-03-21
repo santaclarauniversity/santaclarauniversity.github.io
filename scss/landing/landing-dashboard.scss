@@ -1,5 +1,4 @@
-@import '../variables.scss';
-// Colors
+//Colors
 //
 // Overrides Bootstrap defaults.
 $body-color:             #000;
@@ -19,7 +18,7 @@ $brand-info:             #9F86FF;
 $brand-warning:          #E4D836;
 $brand-danger:           #E64759;
 
-@import 'variables';
+@import '../variables.scss';
 
 // Local variables
 //

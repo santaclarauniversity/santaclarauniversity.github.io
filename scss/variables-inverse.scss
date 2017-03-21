@@ -1,4 +1,9 @@
-@import "./variables";
+@import '../bower_components/bootstrap/scss/variables';
+
+// icons
+$icon-font-path: "../fonts/";
+$icon-font-name: "toolkit-entypo";
+
 
 // Gray scale
 $gray-base:    #252830;

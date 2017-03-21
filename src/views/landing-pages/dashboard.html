@@ -2,7 +2,6 @@
 title: Dashboard
 layout: landing-page
 ---
-
 <title>
 
   Overview &middot;
@@ -13,7 +12,7 @@ layout: landing-page
 
 <link href="/css/toolkit-inverse.min.css" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="/css/landing-dashboard.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/landing-dashboard.min.css"/>
 
 
 <style>
@@ -25,16 +24,18 @@ layout: landing-page
     *width: 100%;
   }
 </style>
+<body>
 
 <div class="container">
   <div class="row">
     <div class="col-md-3 sidebar">
       <nav class="sidebar-nav">
         <div class="sidebar-header">
-          <button class="nav-toggler nav-toggler-md sidebar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-md">
+          <button class="nav-toggler nav-toggler-md sidebar-toggler" type="button" data-toggle="collapse"
+                  data-target="#nav-toggleable-md">
             <span class="sr-only">Toggle nav</span>
           </button>
-          <a class="sidebar-brand img-responsive" href="index.html">
+          <a class="sidebar-brand img-responsive" href="dashboard.html">
             <span class="icon icon-leaf sidebar-brand-icon"></span>
           </a>
         </div>
@@ -49,24 +50,19 @@ layout: landing-page
           <ul class="nav nav-pills nav-stacked flex-column">
             <li class="nav-header">Dashboards</li>
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Overview</a>
+              <a class="nav-link active" href="dashboard.html">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="order-history/index.html">Order history</a>
+              <a class="nav-link " href="order-history.html">Order history</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link "href="fluid/index.html">Fluid layout</a>
+              <a class="nav-link " href="fluid.html">Fluid layout</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="icon-nav/index.html">Icon nav</a>
+              <a class="nav-link " href="icon-nav.html">Icon nav</a>
             </li>
 
             <li class="nav-header">More</li>
-            <li class="nav-item">
-              <a class="nav-link "href="docs/index.html">
-                Toolkit docs
-              </a>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href="http://getbootstrap.com" target="blank">
                 Bootstrap docs
@@ -423,7 +419,8 @@ layout: landing-page
     <div class="modal-content">
 
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+          aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Example modal</h4>
       </div>
       <div class="modal-body">
@@ -435,16 +432,21 @@ layout: landing-page
     </div>
   </div>
 </div>
-
+</body>
 
 <script src="/bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="/assets/scripts/landing/tether.min.js"></script>
 <script type="text/javascript" src="/assets/scripts/landing/chart.js"></script>
+<script type="text/javascript" src="/assets/scripts/landing/datepicker.js"></script>
 <script type="text/javascript" src="/assets/scripts/landing/tablesorter.min.js"></script>
 <script type="text/javascript" src="/assets/scripts/landing/toolkit.js"></script>
-<script type="text/javascript" src="/assets/scripts/landing/application.js"></script>
+<script type="text/javascript" src="/assets/scripts/landing/application-dashboard.js"></script>
 
 <script>
   // execute/clear BS loaders for docs
-  $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})
+  $(function () {
+    while (window.BS && window.BS.loader && window.BS.loader.length) {
+      (window.BS.loader.pop())()
+    }
+  })
 </script>
