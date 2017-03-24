@@ -9,6 +9,7 @@ const gutil = require('gulp-util');
 const rename = require('gulp-rename');
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
+const size = require('gulp-size');
 const webpack = require('webpack');
 
 // custom packages
@@ -65,20 +66,26 @@ gulp.task('styles:toolkit:compile', () => {
   return gulp.src(config.styles.toolkit)
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(sourcemaps.write())
     .pipe(rename({ suffix: '.min' }))
     .pipe(autoprefixer({ browsers: 'last 2 version' }))
-    .pipe(gulp.dest(config.styles.dest));
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest(config.styles.dest))
+    .pipe(size({
+      showFiles: true
+    }));
 });
 
 gulp.task('styles:landing', () => {
   return gulp.src(config.styles.landing)
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(sourcemaps.write())
     .pipe(rename({ suffix: '.min' }))
     .pipe(autoprefixer({ browsers: 'last 2 version' }))
-    .pipe(gulp.dest(config.styles.dest));
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest(config.styles.dest))
+    .pipe(size({
+      showFiles: true
+    }));
 });
 
 gulp.task('styles:toolkit', (done) => {

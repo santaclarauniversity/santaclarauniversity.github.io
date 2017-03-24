@@ -1,3 +1,4 @@
+// TODO Toolkit inverse generating 63 warnings, needs adjustments??
 // Bootstrap
 @import 'variables-inverse';
 @import 'components';
@@ -102,15 +103,14 @@
 }
 
 
-
-
+// Extended Boostrap Components
 @import 'partials/type-custom';
 @import 'partials/alerts-custom';
 @import 'partials/buttons-custom';
 @import 'partials/nav-heading';
 @import 'partials/navbar-utilities';
 
-
+// Extended Bootstrap Components
 @import 'partials/alerts-custom';
 @import 'partials/buttons-custom';
 @import 'partials/nav-heading';
@@ -122,9 +122,8 @@
 @import 'partials/tables-custom';
 @import 'partials/container-custom';
 
-
+// Dashboard Theme Components
 @import 'partials/utilities-spacer';
-@import 'partials/type-custom';
 @import 'partials/icons';
 @import 'partials/flex-table';
 @import 'partials/text-inherit';
