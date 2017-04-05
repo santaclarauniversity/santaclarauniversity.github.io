@@ -49,11 +49,7 @@
 
   // Color Classes
 
-  &.maroon {
-    @include button-colors($maroon);
-  }
-
-  &.brand-primary {
+  &.brand-primary, &.maroon {
     @include button-colors($brand-primary);
   }
 

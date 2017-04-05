@@ -1,4 +1,4 @@
-@import '../bower_components/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/variables';
 
 // Table of Contents
 //
@@ -43,7 +43,7 @@ $brand-primary:             #b30738;
 $brand-success:             #058a16;
 $brand-info:                #2e6bff;
 $brand-warning:             #f39237;
-$brand-danger:              #e91541;
+$brand-danger:              #f00;
 
 $gateway-bar-background: #fcfcfc;
 $brand-red: #b30738;
@@ -67,7 +67,6 @@ $video-border: #d2d2d2;
 $side-navigation-active: $link-red;
 $side-navigation-link: #444;
 $emergency-color: #f00;
-
 
 // Fonts
 

@@ -25,6 +25,7 @@ Release Highlights:
   - Full-width block content featuring a button and the option for an interactive background (e.g. a map)
 - **Buttons**
   - Large "stroked" style is now deprecated.
+  - Maroon buttons are now deprecated (aliased to `brand-primary` to aid in the transition).
   - Added new standard and outline buttons.
   - Increased the options for the the existing SCU custom buttons.
 - **Hero**
