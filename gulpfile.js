@@ -63,10 +63,11 @@ gulp.task('styles:toolkit:lint', () => {
 });
 
 gulp.task('styles:toolkit:compile', () => {
+  // TODO either find a solution to output both compressed and nested, or switch to compressed for scu.edu live
   return gulp.src(config.styles.toolkit)
     .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(sass({ outputStyle: 'nested'}).on('error', sass.logError))
+    // .pipe(rename({ suffix: '.min' }))
     .pipe(autoprefixer({ browsers: 'last 2 version' }))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(config.styles.dest))
