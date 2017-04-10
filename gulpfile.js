@@ -40,7 +40,8 @@ const config = {
   scripts: {
     dest: './js/',
     fabricator: './src/assets/fabricator/scripts/fabricator.js',
-    toolkit: './src/assets/toolkit/scripts/toolkit.js'
+    toolkit: './src/assets/toolkit/scripts/toolkit.js',
+    vendor: './src/assets/toolkit/scripts/vendor.js'
   }
 };
 
@@ -114,6 +115,7 @@ gulp.task('scripts:compile', (done) => {
     done();
   });
 });
+
 gulp.task('scripts:lint', (done) => {
   gulp.src(config.scripts.dest)
     .pipe(eslint.failAfterError());
@@ -131,7 +133,7 @@ function reload(done) {
   done();
 }
 
-gulp.task('clean', del.bind(null, [config.dest]));
+gulp.task('clean', del.bind(null, [config.dest, config.styles.dest, config.scripts.dest]));
 
 gulp.task('assembler', (done) => {
   assembler({

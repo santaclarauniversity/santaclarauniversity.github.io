@@ -14,6 +14,12 @@ function getPlugins(isDev) {
     new webpack.DefinePlugin({}),
   ];
 
+  plugins.push(new webpack.ProvidePlugin({
+    $: 'jquery/dist/jquery',
+    jQuery: 'jquery/dist/jquery',
+    'window.jQuery': 'jquery/dist/jquery'
+  }));
+
   if (isDev) {
     plugins.push(new webpack.NoErrorsPlugin());
   } else {
@@ -38,17 +44,21 @@ function getPlugins(isDev) {
  */
 function getLoaders() {
 
-  const loaders = [{
-    test: /(\.js)/,
-    exclude: /(node_modules)/,
-    loaders: ['babel-loader'],
-  }, {
-    test: /(\.jpg|\.png)$/,
-    loader: 'url-loader?limit=10000',
-  }, {
-    test: /\.json/,
-    loader: 'json-loader',
-  }];
+  const loaders = [
+    {
+      test: /(\.js)/,
+      exclude: /(node_modules)/,
+      loaders: ['babel-loader'],
+    },
+    {
+      test: /(\.jpg|\.png)$/,
+      loader: 'url-loader?limit=10000',
+    },
+    {
+      test: /\.json/,
+      loader: 'json-loader',
+    }
+  ];
 
   return loaders;
 
@@ -58,8 +68,8 @@ function getLoaders() {
 module.exports = (config) => {
   return {
     entry: {
-      'fabricator': config.scripts.fabricator,
-      'toolkit': config.scripts.toolkit
+      fabricator: config.scripts.fabricator,
+      toolkit: config.scripts.toolkit
     },
     output: {
       path: config.scripts.dest,
@@ -67,6 +77,7 @@ module.exports = (config) => {
     },
     resolve: {
       extensions: ['', '.js'],
+      root: path.resolve('./bower_components/') // establish root as common path to our vendor JS files
     },
     plugins: getPlugins(config.dev),
     module: {
