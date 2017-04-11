@@ -40,8 +40,7 @@ const config = {
   scripts: {
     dest: './js/',
     fabricator: './src/assets/fabricator/scripts/fabricator.js',
-    toolkit: './src/assets/toolkit/scripts/toolkit.js',
-    vendor: './src/assets/toolkit/scripts/vendor.js'
+    toolkit: './src/assets/toolkit/scripts/toolkit.js'
   }
 };
 
