@@ -4,16 +4,83 @@
   crossorigin="anonymous"></script>
 <style class="text/css">
   header .wordmark {
-    max-width: 275px;
-    white-space: normal;
+    margin-top: 0.35rem;
   }
+
   .core-nav .navbar-inverse .navbar-nav .nav-link {
     color: white;
   }
+
   .core-nav .navbar-inverse .navbar-nav .nav-link {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
   }
 
+  .drawer {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: hsla(0, 0%, 100%, .98);
+    color: #1a1a1a;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: opacity .15s, height 0s .15s;
+  }
+
+  .drawer.open {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .15s, height 0s;
+  }
+
+  .drawer a {
+    transition: initial;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    fill: #1a1a1a;
+    transition: fill .15s;
+  }
+
+  .close-btn {
+    border: 0;
+    background: none;
+    display: inline-block;
+    padding: .5rem;
+    cursor: pointer;
+  }
+
+  .search-module--open {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity .35s ease-in-out, transform .3s;
+    visibility: visible;
+  }
+
+  .search-module {
+    transition: opacity .35s ease-in-out, transform .35s step-end, max-height .35s step-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100vw;
+    font-family: Walfork, Walsheim, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    transform: translateY(2.025rem) scale(1.1);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
 </style>
 <script type="text/javascript">
   jQuery(document).ready(function () {
@@ -21,8 +88,102 @@
       $('.core-nav').toggle();
       $('.compact-nav').toggle();
     });
+    $('.fa-search').click(function (e) {
+      e.preventDefault();
+      $('.search-module').toggleClass('search-module--open');
+    });
+    $('.fa-bars').click(function (e) {
+      e.preventDefault();
+      $('.drawer').toggleClass('open');
+    });
+    $('.close-btn').click(function (e) {
+      e.preventDefault();
+      $('.drawer').toggleClass('open');
+    });
   });
 </script>
+<div class="search-module" class="search-module search-module--open">
+  <div id="input-container" class="search-module__input-container" data-reactid="6">
+    <div class="container-fluid" data-reactid="7">
+      <button class="close-btn" data-reactid="8">
+        <svg class="close" viewBox="0 0 21.3 19.5" data-reactid="9">
+          <g data-reactid="10">
+            <path
+              d="M17.8,3.7L4.6,16.9c-0.3,0.3-0.8,0.3-1.1,0c-0.3-0.3-0.3-0.8,0-1.1L16.7,2.6c0.3-0.3,0.8-0.3,1.1,0C18.1,2.9,18.1,3.4,17.8,3.7z"
+              data-reactid="11"></path>
+            <path
+              d="M16.7,16.9L3.5,3.7c-0.3-0.3-0.3-0.8,0-1.1s0.8-0.3,1.1,0l13.2,13.2c0.3,0.3,0.3,0.8,0,1.1C17.5,17.2,17,17.2,16.7,16.9z"
+              data-reactid="12"></path>
+          </g>
+        </svg>
+      </button>
+      <div id="search-input" class="search-input" data-reactid="13"><span class="search-input__highlight"
+                                                                          data-reactid="14"></span>
+        <form class="search-form search-input__form" data-reactid="15"><input type="text" placeholder="Search"
+                                                                              id="search-module-input"
+                                                                              class="search-input__input" maxlength="40"
+                                                                              data-reactid="16"><label
+          for="search-module-input" class="sr-only" data-reactid="17">Search query</label>
+          <button class="search-input__all" data-reactid="18"><a class="search-input__all-link" href="/search/?query="
+                                                                 data-reactid="19">All Results</a>
+            <svg class="search-input__all-svg" data-reactid="20">
+              <g data-reactid="21">
+                <line x1="0" y1="0" x2="6" y2="6" class="search-input__all-svg-line" data-reactid="22"></line>
+                <line x1="0" y1="12" x2="6" y2="6" class="search-input__all-svg-line" data-reactid="23"></line>
+              </g>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="search-module-results" class="search-module__results"><!-- react-text: 1505 --><!-- /react-text --></div>
+</div>
+<div class="drawer">
+  <div class="block">
+    <button class="close-btn text-muted"><i class="fa fa-times"></i></button>
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col">
+          <h2 class="text-primary text-trajan text-uppercase wordmark">Santa Clara University</h2>
+          <p class="text-muted">The Jesuit University in Silicon Valley.</p>
+        </div>
+        <div class="col">
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Information for</h6></li>
+            <li><a href="#">Prospective Students</a></li>
+            <li><a href="#">Current Students</a></li>
+            <li><a href="#">Parents</a></li>
+            <li><a href="#">Alumni</a></li>
+            <li><a href="#">Visitors</a></li>
+            <li>&nbsp;</li>
+          </ul>
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Departments and Services</h6></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Schools and Colleges</h6></li>
+            <li><a href="#">College of Arts and Sciences</a></li>
+            <li><a href="#">Education and Counseling Psychology</a></li>
+            <li><a href="#">Leavey School of Business</a></li>
+            <li><a href="#">School of Engineering</a></li>
+            <li><a href="#">Jesuit School of Theology</a></li>
+            <li><a href="#">School of Law</a></li>
+          </ul>
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Centers of Distinction</h6></li>
+            <li><a href="#">Miller Center for Social Entrepreneurship</a></li>
+            <li><a href="#">Ignatian Center for Jesuit Education</a></li>
+            <li><a href="#">Markkula Center for Applied Ethics</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <header class="navigation bg-primary core-nav">
   <div class="container">
     <nav class="navbar navbar-toggleable-md navbar-inverse mr-auto" style="padding-left: 0px;">
@@ -56,7 +217,11 @@
         <ul class="navbar-nav text-white text-sans-light text-right small mt-1">
           <li class="nav-item"><a href="#" class="nav-link text-white">Login</a></li>
           <li class="nav-item"><a href="#" class="nav-link text-white"><i class="fa fa-search"></i></a></li>
-          <li class="nav-item"><a href="#" class="nav-link"><span class="header-toggler">Toggle</span></a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white"><i class="fa fa-bars" aria-hidden="true"></i></a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link"><span class="header-toggler"><i class="fa fa-retweet"
+                                                                                            aria-hidden="true"></i></span></a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -68,13 +233,16 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <h6 class="text-uppercase text-white text-trajan wordmark"><a href="#" class="text-white">Santa Clara University</a></h6>
+          <h6 class="text-uppercase text-white text-trajan wordmark"><a href="#" class="text-white">Santa Clara
+            University</a></h6>
         </div>
         <div class="col-md-4 offset-md-4 py-1">
           <ul class="list-inline text-white text-sans-light text-right mb-0 small">
             <li class="list-inline-item">Login</li>
             <li class="list-inline-item"><i class="fa fa-search"></i></li>
-            <li class="list-inline-item"><span class="header-toggler">Toggle</span></li>
+            <li class="list-inline-item"><i class="fa fa-bars" aria-hidden="true"></i></li>
+            <li class="list-inline-item"><span class="header-toggler"><i class="fa fa-retweet"
+                                                                         aria-hidden="true"></i></span></li>
           </ul>
         </div>
       </div>
