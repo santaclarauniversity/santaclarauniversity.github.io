@@ -9008,6 +9008,32 @@ h1.block-title {
   background-position: 100%;
   background-size: cover; }
 
+.pull-quote {
+  background: #b30738;
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  padding: .5em 2em;
+  transition: background 1s; }
+  .pull-quote p {
+    font-size: 3em;
+    line-height: 1.25;
+    margin-top: .5em;
+    padding: .25em; }
+  .pull-quote h4, .pull-quote h5 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    text-align: right; }
+  .pull-quote img {
+    border: 12px solid #e40947;
+    border-radius: 100%;
+    display: block;
+    text-align: right;
+    transition: border .5s; }
+  .pull-quote:hover {
+    background: #e40947; }
+
 .search_title, .search_nav {
   color: #000;
   margin-bottom: 0;
