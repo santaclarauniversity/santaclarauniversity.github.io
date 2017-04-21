@@ -1890,24 +1890,24 @@ fieldset[disabled] a.btn {
     border-color: #780526; }
 
 .btn-secondary {
-  color: #b30738;
+  color: #292b2c;
   background-color: #fff;
-  border-color: #f7f7f7; }
+  border-color: #ccc; }
   .btn-secondary:hover {
-    color: #b30738;
+    color: #292b2c;
     background-color: #e6e6e6;
-    border-color: #d8d8d8; }
+    border-color: #adadad; }
   .btn-secondary:focus, .btn-secondary.focus {
-    box-shadow: 0 0 0 2px rgba(247, 247, 247, 0.5); }
+    box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5); }
   .btn-secondary.disabled, .btn-secondary:disabled {
     background-color: #fff;
-    border-color: #f7f7f7; }
+    border-color: #ccc; }
   .btn-secondary:active, .btn-secondary.active,
   .show > .btn-secondary.dropdown-toggle {
-    color: #b30738;
+    color: #292b2c;
     background-color: #e6e6e6;
     background-image: none;
-    border-color: #d8d8d8; }
+    border-color: #adadad; }
 
 .btn-info {
   color: #fff;
@@ -2010,24 +2010,24 @@ fieldset[disabled] a.btn {
     border-color: #b30738; }
 
 .btn-outline-secondary {
-  color: #f7f7f7;
+  color: #ccc;
   background-image: none;
   background-color: transparent;
-  border-color: #f7f7f7; }
+  border-color: #ccc; }
   .btn-outline-secondary:hover {
     color: #fff;
-    background-color: #f7f7f7;
-    border-color: #f7f7f7; }
+    background-color: #ccc;
+    border-color: #ccc; }
   .btn-outline-secondary:focus, .btn-outline-secondary.focus {
-    box-shadow: 0 0 0 2px rgba(247, 247, 247, 0.5); }
+    box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5); }
   .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
-    color: #f7f7f7;
+    color: #ccc;
     background-color: transparent; }
   .btn-outline-secondary:active, .btn-outline-secondary.active,
   .show > .btn-outline-secondary.dropdown-toggle {
     color: #fff;
-    background-color: #f7f7f7;
-    border-color: #f7f7f7; }
+    background-color: #ccc;
+    border-color: #ccc; }
 
 .btn-outline-info {
   color: #2e6bff;
@@ -3153,7 +3153,7 @@ tbody.collapse.show {
 
 .card-outline-secondary {
   background-color: transparent;
-  border-color: #f7f7f7; }
+  border-color: #ccc; }
 
 .card-outline-info {
   background-color: transparent;
