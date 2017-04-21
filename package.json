@@ -57,7 +57,6 @@
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.0.1",
     "gulp-util": "^3.0.8",
-    "node-bourbon": "^4.2.8",
     "run-sequence": "^1.2.2",
     "webpack": "^1.14.0"
   },
