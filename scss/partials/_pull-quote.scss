@@ -1,26 +1,26 @@
 .pull-quote {
 
-  background: $brand-primary;
+  background: lighten($brand-primary, 2%);
   color: $white;
   display: flex;
   overflow: hidden;
   padding: .5em 2em;
-  transition: background 1s;
+  transition: background .5s;
 
   p {
-    font-size: 3em;
+    border-left: .25em solid lighten($brand-primary, 5%);
+    font-size: 2.5em;
     line-height: 1.25;
     margin-top: .5em;
-    padding: .25em;
+    padding: .25em 0 0 .5em;
   }
 
   h4, h5 {
-    align-self: flex-end;
     text-align: right;
   }
 
   img {
-    border: 12px solid lighten($brand-primary, 10%);
+    border: .75em solid lighten($brand-primary, 5%);
     border-radius: 100%;
     display: block;
     text-align: right;
