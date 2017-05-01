@@ -6,6 +6,9 @@ colors:
     maroon:     "#72001b"
     burgundy:   "#690521"
   secondary:
+    success:    "#07b31b"
+    warning:    "#f28300"
+    info:       "#0754b3"
     stone:      "#4e4540"
     navy:       "#021d52"
     beige:      "#dfdbd3"
