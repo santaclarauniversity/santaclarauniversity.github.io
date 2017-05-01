@@ -43,7 +43,7 @@ Release Highlights:
   - Redesigned Person Spotlight to be more universal; removes overlay and introduces left/right card style.
   - Removed "compact" version of person spotlight, as it utilizes media list code.
 - **Pull Quotes**
-  - Pull Quotes are deprecated - they should be a type of stylized block.  2.0 implementation currently copy of pull quote found in `minimal` landing page.
+  - https://github.com/santaclarauniversity/scu-web-assets/issues/78 (undergoing redesign)
 
 
 **Templates and Documentation**
@@ -58,7 +58,7 @@ Release Highlights:
 
 **Fabricator and Build**
 
-- `./scss/`contains Sass files, which are identical to Less in purpose but with (*very*) slightly different syntax/execution in general
+- `./scss/` contains Sass files, which are identical to Less in purpose but with (*very*) slightly different syntax/execution in general
   - `./scss/landing/`
     - Contains landing page styles; these are compiled to their respective files (only `landing-*.scss`)
   - `./scss/partials/`
@@ -70,6 +70,12 @@ Release Highlights:
     applies our partials on top, which lets us use Bootstrap but with our customizations (notably, color, typography, etc.)
   - `./scss/variables.scss`
     - Our Bootstrap variable overrides
+    
+- `./js/` contains
+  - `./js/toolkit.js`
+    - Our custom JS output by Webpack to include Bootstrap, jQuery, etc. code which it depends on
+  - `./js/fabricator.js`
+    - Fabricator's Webpack output JS
 
 
 - HTML changes (views, etc.)
@@ -84,7 +90,6 @@ Release Highlights:
 
 
 - `gulpfile.js`
-  - Changed `bourbon` to load solely from `toolkit.scss` *(removed from gulpfile)*
   - Minimized complicated/large `config` JSON structure
   - Removed `bower` tasks.  `bower` scripts/styles are now loaded directly *(removed from gulpfile)*
     - Did the same for Bootstrap `.scss`
@@ -95,17 +100,19 @@ Release Highlights:
   - Changed `babel` preset to `es2016` from `babili` so `toolkit.js` won't be minified in development mode
   - Added `gulp-autoprefixer` module which removes need to write browser-specific CSS prefix rules entirely
   - Added task `style:landing` to compile landing page CSS in parallel (also: files are now <1 KB each)
+  - Added `gulp-size` to measure the size of output CSS files to `./css/`
 
 
 - `package.json`
   - Removed extraneous Node deps
-  - Added `gulp-autoprefixer`
+  - Added `gulp-autoprefixer` (CSS automatic vendor prefixes), `gulp-size` (track sizes of compiled CSS files)
   - Now using this file to describe Babel preset instead of having a `.babelrc`
  
  
 - `./src/assets/toolkit/scripts/toolkit.js`
   - Removed extraneous JS code which was meant for leftover parts of Bootstrap landing pages
   - Upgraded to ES6 standard
+  - Removed header code (vast majority of this file)
   
 
 ```v1.0.7```
