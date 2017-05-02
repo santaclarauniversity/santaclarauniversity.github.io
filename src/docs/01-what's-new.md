@@ -7,6 +7,7 @@ Release Highlights:
 - Better CSS/JS performance.
 - Quicker toolkit run/refresh time.
 - New templates and documentation.
+- Deprecated Trajan and removed from font stack.
 
 **Bootstrap 4**
 - [Upgraded to Bootstrap 4 alpha 6](https://v4-alpha.getbootstrap.com/getting-started/introduction/)
