@@ -14,11 +14,12 @@ function getPlugins(isDev) {
     new webpack.DefinePlugin({}),
   ];
 
-  plugins.push(new webpack.ProvidePlugin({
+  // TODO Revisit to fix Webpack loading required external JS
+  /*plugins.push(new webpack.ProvidePlugin({
     $: 'jquery/dist/jquery',
     jQuery: 'jquery/dist/jquery',
     'window.jQuery': 'jquery/dist/jquery'
-  }));
+  }));*/
 
   if (isDev) {
     plugins.push(new webpack.NoErrorsPlugin());

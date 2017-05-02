@@ -1,7 +1,42 @@
-require('imports-loader?$=jquery!bootstrap/js/dist/util');
+// TODO Revisit to fix Webpack loading required external JS
+/*require('imports-loader?$=jquery!bootstrap/js/dist/util');
 require('imports-loader?$=jquery!bootstrap/js/dist/collapse');
 require('imports-loader?$=jquery!bootstrap/js/dist/carousel');
-require('imports-loader!holderjs/holder');
+require('imports-loader!holderjs/holder');*/
+
+/**
+ * Header and footer button functionality
+ */
+$(document).ready(() => {
+  $('.header-toggler').click(() => {
+    $('.core-nav').toggle();
+    $('.compact-nav').toggle();
+  });
+
+  $('.fa-search').click((e) => {
+    e.preventDefault();
+
+    $('.search-module').toggleClass('search-module--open');
+  });
+
+  $('.fa-bars').click((e) => {
+    e.preventDefault();
+
+    $('.drawer').toggleClass('open');
+  });
+
+  $('.close-btn').click((e) => {
+    e.preventDefault();
+
+    $('.drawer').removeClass('open');
+    $('.search-module').removeClass('search-module--open');
+  });
+
+  $('#footer-toggler').click(() => {
+    $('.footer-core').toggle();
+    $('.footer-subfooter').toggle();
+  });
+});
 
 /**
  * Feature Gallery / Jumbotron

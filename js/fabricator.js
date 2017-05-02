@@ -46,7 +46,7 @@
 
 	var _this = this;
 
-	__webpack_require__(3);
+	__webpack_require__(1);
 
 	/**
 	 * Global `fabricator` object
@@ -356,9 +356,7 @@
 	fabricator.setInitialMenuState().menuToggle().allItemsToggles().singleItemToggle().buildColorChips().setActiveItem().bindCodeAutoSelect();
 
 /***/ },
-/* 1 */,
-/* 2 */,
-/* 3 */
+/* 1 */
 /***/ function(module, exports) {
 
 	/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
