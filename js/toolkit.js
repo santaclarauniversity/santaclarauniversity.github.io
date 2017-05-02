@@ -56,6 +56,10 @@
 	 * Header and footer button functionality
 	 */
 	$(document).ready(() => {
+	  $('.navbar-toggler').click(() => {
+	    $('');
+	  });
+
 	  $('.header-toggler').click(() => {
 	    $('.core-nav').toggle();
 	    $('.compact-nav').toggle();
@@ -65,6 +69,7 @@
 	    e.preventDefault();
 
 	    $('.search-module').toggleClass('search-module--open');
+	    $('.search-input__input').focus();
 	  });
 
 	  $('.fa-bars').click(e => {
