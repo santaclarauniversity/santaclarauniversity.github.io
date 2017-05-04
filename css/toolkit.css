@@ -6690,6 +6690,25 @@ a {
 .search-form {
   position: relative; }
 
+@media (max-width: 767px) {
+  .navbar-toggler-icon {
+    height: 1em;
+    width: 1em; } }
+
+@media (max-width: 575px) {
+  .navbar-brand {
+    font-size: 1rem; } }
+
+@media (max-width: 991px) {
+  #navbarCollapse div:first-child {
+    text-align: center; } }
+
+#navbarCollapse ul.list-inline {
+  font-size: 1.1rem; }
+
+#navbarCollapse a:hover {
+  color: #cccccc; }
+
 .search-input__highlight--static, .search-input__input--static {
   font-size: 3.6rem; }
 

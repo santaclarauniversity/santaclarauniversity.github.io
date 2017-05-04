@@ -111,7 +111,7 @@
   opacity: 1;
   transform: translateY(0) scale(1);
   transition: opacity .35s ease-in-out,transform .3s;
-  visibility: visible
+  visibility: visible;
 }
 
 .search-input {
@@ -150,6 +150,40 @@
   position: relative;
 }
 
+
+// navbar
+// fix navbar toggle icon too big on sm, xs
+@include media-breakpoint-down(sm) {
+  .navbar-toggler-icon {
+    height: 1em;
+    width: 1em;
+  }
+}
+
+// fix brand text being too large on xs (iPhone 5, ..), obstructing navbar toggle
+.navbar-brand {
+  @include media-breakpoint-down(xs) {
+    font-size: 1rem;
+  }
+}
+
+#navbarCollapse {
+  // center align (About SCU, ..) links on mobile
+  @include media-breakpoint-down(md) {
+    div:first-child {
+      text-align: center;
+    }
+  }
+
+  // slightly increase icon size (and scale by rem's)
+  ul.list-inline {
+    font-size: 1.1rem;
+  }
+
+  a:hover {
+    color: darken($white, 20%);
+  }
+}
 
 // TODO after we get some data coming into results
 .search-input__highlight--static,.search-input__input--static {
