@@ -78,7 +78,7 @@ module.exports = (config) => {
     },
     resolve: {
       extensions: ['', '.js'],
-      root: path.resolve('./bower_components/') // establish root as common path to our vendor JS files
+      // root: path.resolve('./bower_components/') // establish root as common path to our vendor JS files
     },
     plugins: getPlugins(config.dev),
     module: {
