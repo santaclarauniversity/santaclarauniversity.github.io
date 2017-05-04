@@ -6653,7 +6653,7 @@ a {
   visibility: visible; }
 
 .search-input {
-  border-bottom: 2px solid #bfbfbf;
+  border-bottom: 1px solid #d9d9d9;
   border-radius: 1px;
   margin-right: 5%;
   position: relative;
