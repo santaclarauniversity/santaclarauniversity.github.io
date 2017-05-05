@@ -7057,6 +7057,12 @@ a {
   letter-spacing: 2px;
   display: inline; }
 
+.footer-subfooter {
+  display: none; }
+  @media (max-width: 767px) {
+    .footer-subfooter {
+      text-align: center; } }
+
 body.homepage {
   background-color: #fafafa; }
 

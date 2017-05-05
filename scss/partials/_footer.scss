@@ -1,3 +1,4 @@
+// actual footer
 .footer-core {
   // container which includes branding & social media
   div:first-child div:first-child {
@@ -17,5 +18,14 @@
   .wordmark {
     letter-spacing: 2px;
     display: inline;
+  }
+}
+
+// dept.-specific subfooters
+.footer-subfooter {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
   }
 }
