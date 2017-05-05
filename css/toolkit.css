@@ -8546,7 +8546,7 @@ h1.block-title {
   background-position: 100%;
   background-size: cover; }
 
-.pull-quote {
+.pull-quote, .pull-quote-inv {
   background: #bd073b;
   color: #fff;
   display: -ms-flexbox;
@@ -8554,22 +8554,30 @@ h1.block-title {
   overflow: hidden;
   padding: .5em 2em;
   transition: background .5s; }
-  .pull-quote p {
+  .pull-quote p, .pull-quote-inv p {
     border-left: 0.25em solid #cc0840;
-    font-size: 2.5em;
-    line-height: 1.25;
+    font-size: 2em;
+    line-height: 1.2;
     margin-top: .5em;
     padding: .25em 0 0 .5em; }
-  .pull-quote h4, .pull-quote h5 {
+  .pull-quote h4, .pull-quote-inv h4, .pull-quote h5, .pull-quote-inv h5 {
     text-align: right; }
-  .pull-quote img {
+  .pull-quote img, .pull-quote-inv img {
     border: 0.75em solid #cc0840;
     border-radius: 100%;
     display: block;
     text-align: right;
     transition: border .5s; }
-  .pull-quote:hover {
+  .pull-quote:hover, .pull-quote-inv:hover {
     background: #e40947; }
+
+.pull-quote-inv {
+  background: #fcfcfc;
+  color: #b30738; }
+  .pull-quote-inv img {
+    border-color: #fff; }
+  .pull-quote-inv:hover {
+    background: #f1f1f1; }
 
 .search_title, .search_nav {
   color: #000;

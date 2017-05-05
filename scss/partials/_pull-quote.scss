@@ -1,5 +1,4 @@
 .pull-quote {
-
   background: lighten($brand-primary, 2%);
   color: $white;
   display: flex;
@@ -9,8 +8,8 @@
 
   p {
     border-left: .25em solid lighten($brand-primary, 5%);
-    font-size: 2.5em;
-    line-height: 1.25;
+    font-size: 2em;
+    line-height: 1.2;
     margin-top: .5em;
     padding: .25em 0 0 .5em;
   }
@@ -31,4 +30,19 @@
     background: lighten($brand-primary, 10%);
   }
 
+}
+
+.pull-quote-inv {
+  @extend .pull-quote;
+
+  background: darken($white, 1%);
+  color: $brand-primary;
+
+  img {
+    border-color: $white;
+  }
+
+  &:hover {
+    background: #f1f1f1;
+  }
 }
