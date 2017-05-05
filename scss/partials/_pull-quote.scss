@@ -12,18 +12,30 @@
     line-height: 1.2;
     margin-top: .5em;
     padding: .25em 0 0 .5em;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.7em;
+    }
   }
 
   h4, h5 {
     text-align: right;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1em;
+    }
   }
 
   img {
     border: .75em solid lighten($brand-primary, 5%);
     border-radius: 100%;
     display: block;
-    text-align: right;
     transition: border .5s;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: flex;
+    flex-flow: column-reverse;
   }
 
   &:hover {

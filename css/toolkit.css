@@ -8560,14 +8560,25 @@ h1.block-title {
     line-height: 1.2;
     margin-top: .5em;
     padding: .25em 0 0 .5em; }
+    @media (max-width: 991px) {
+      .pull-quote p, .pull-quote-inv p {
+        font-size: 1.7em; } }
   .pull-quote h4, .pull-quote-inv h4, .pull-quote h5, .pull-quote-inv h5 {
     text-align: right; }
+    @media (max-width: 991px) {
+      .pull-quote h4, .pull-quote-inv h4, .pull-quote h5, .pull-quote-inv h5 {
+        font-size: 1em; } }
   .pull-quote img, .pull-quote-inv img {
     border: 0.75em solid #cc0840;
     border-radius: 100%;
     display: block;
-    text-align: right;
     transition: border .5s; }
+  @media (max-width: 991px) {
+    .pull-quote, .pull-quote-inv {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse; } }
   .pull-quote:hover, .pull-quote-inv:hover {
     background: #e40947; }
 
