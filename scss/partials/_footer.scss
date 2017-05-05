@@ -1,10 +1,21 @@
-.footer-core a {
-  color: white;
-}
-.footer-core-mini {
-  font-size: .80rem;
-}
-.wordmark {
-  letter-spacing: 2px;
-  display: inline;
+.footer-core {
+  // container which includes branding & social media
+  div:first-child div:first-child {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+
+  a {
+    color: white;
+  }
+
+  .footer-core-mini {
+    font-size: .80rem;
+  }
+
+  .wordmark {
+    letter-spacing: 2px;
+    display: inline;
+  }
 }

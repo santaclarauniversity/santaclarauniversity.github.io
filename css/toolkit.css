@@ -7043,13 +7043,17 @@ a {
       .subheader h1 span:empty {
         padding: 0; }
 
+@media (max-width: 767px) {
+  .footer-core div:first-child div:first-child {
+    text-align: center; } }
+
 .footer-core a {
   color: white; }
 
-.footer-core-mini {
+.footer-core .footer-core-mini {
   font-size: .80rem; }
 
-.wordmark {
+.footer-core .wordmark {
   letter-spacing: 2px;
   display: inline; }
 
