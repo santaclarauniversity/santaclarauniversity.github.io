@@ -162,19 +162,15 @@
 
 // fix brand text being too large on xs (iPhone 5, ..), obstructing navbar toggle
 .navbar-brand {
+  letter-spacing: 3px;
+
   @include media-breakpoint-down(xs) {
     font-size: 1rem;
+    letter-spacing: 1px;
   }
 }
 
 #navbarCollapse {
-  // center align (About SCU, ..) links on mobile
-  @include media-breakpoint-down(md) {
-    div:first-child {
-      text-align: center;
-    }
-  }
-
   // slightly increase icon size (and scale by rem's)
   ul.list-inline {
     font-size: 1.1rem;

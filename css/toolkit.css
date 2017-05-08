@@ -6695,13 +6695,12 @@ a {
     height: 1em;
     width: 1em; } }
 
-@media (max-width: 575px) {
-  .navbar-brand {
-    font-size: 1rem; } }
-
-@media (max-width: 991px) {
-  #navbarCollapse div:first-child {
-    text-align: center; } }
+.navbar-brand {
+  letter-spacing: 3px; }
+  @media (max-width: 575px) {
+    .navbar-brand {
+      font-size: 1rem;
+      letter-spacing: 1px; } }
 
 #navbarCollapse ul.list-inline {
   font-size: 1.1rem; }
