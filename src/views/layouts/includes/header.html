@@ -8,6 +8,7 @@
             <path d="M16.7,16.9L3.5,3.7c-0.3-0.3-0.3-0.8,0-1.1s0.8-0.3,1.1,0l13.2,13.2c0.3,0.3,0.3,0.8,0,1.1C17.5,17.2,17,17.2,16.7,16.9z"></path>
           </g>
         </svg>
+        <span class="sr-only">Close Search Overlay</span>
       </button>
       <div id="search-input" class="search-input">
         <span class="search-input__highlight"></span>
@@ -33,7 +34,7 @@
 
 <div class="drawer">
   <div class="block">
-    <button class="close-btn text-muted"><i class="fa fa-times"></i></button>
+    <button class="close-btn text-muted"><i class="fa fa-times"></i><span class="sr-only">Close Overlay</span></button>
     <div class="container">
       <div class="row mt-3">
         <div class="col">
@@ -95,21 +96,13 @@
         </div>
         <div class="navbar-nav text-sans-light hidden-md-down">
           <a href="#" class="nav-item nav-link">Login</a>
-          <a href="#" class="nav-item nav-link"><i class="fa fa-search"></i></a>
-          <a href="#" class="nav-item nav-link"><i class="fa fa-bars" aria-hidden="true"></i></a>
-          <a href="#" class="nav-item nav-link">
-            <span class="header-toggler">
-              <i class="fa fa-retweet" aria-hidden="true"></i>
-            </span>
-          </a>
+          <a href="#" class="nav-item nav-link"><i class="fa fa-search"></i><span class="sr-only">Search</span></a>
+          <a href="#" class="nav-item nav-link"><i class="fa fa-bars" aria-hidden="true"></i><span class="sr-only">Site Map</span></a>
         </div>
         <ul class="list-inline text-sans-light text-center mb-0 mt-3 hidden-lg-up">
           <li class="list-inline-item"><a href="/login" class="nav-link text-white">Login</a></li>
-          <li class="list-inline-item"><a href="/search" class="nav-link text-white"><i class="fa fa-search"></i></a></li>
-          <li class="list-inline-item"><a href="/sitemap" class="nav-link text-white"><i class="fa fa-map" aria-hidden="true"></i></a></li>
-          <li class="list-inline-item"><a href="#" class="nav-link text-white">
-            <span class="header-toggler"><i class="fa fa-retweet" aria-hidden="true"></i></span>
-          </a></li>
+          <li class="list-inline-item"><a href="/search" class="nav-link text-white"><i class="fa fa-search"></i><span class="sr-only">Search</span></a></li>
+          <li class="list-inline-item"><a href="/sitemap" class="nav-link text-white"><i class="fa fa-map" aria-hidden="true"></i><span class="sr-only">Site Map</span></a></li>
         </ul>
       </div>
     </nav>
@@ -126,10 +119,10 @@
         <div class="col-md-4 offset-md-4 py-1">
           <ul class="list-inline text-white text-sans-light text-right mb-0 small">
             <li class="list-inline-item">Login</li>
-            <li class="list-inline-item"><i class="fa fa-search"></i></li>
-            <li class="list-inline-item"><i class="fa fa-bars" aria-hidden="true"></i></li>
+            <li class="list-inline-item"><i class="fa fa-search"></i><span class="sr-only">Search</span></li>
+            <li class="list-inline-item"><i class="fa fa-bars" aria-hidden="true"></i><span class="sr-only">Site Map</span></li>
             <li class="list-inline-item">
-              <span class="header-toggler"><i class="fa fa-retweet" aria-hidden="true"></i></span>
+              <span class="header-toggler"><i class="fa fa-retweet" aria-hidden="true"></i><span class="sr-only">Toggle Header</span></span>
             </li>
           </ul>
         </div>
@@ -158,3 +151,17 @@
     </nav>
   </div>
 </header>
+
+<!-- TODO: Remove for Launch -->
+
+<style type="text/css">
+  .header-toggler {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 99;
+    background-color: #b30738;
+    color: white;
+  }
+</style>
+<span class="header-toggler p-3">Toggle Header</span>
