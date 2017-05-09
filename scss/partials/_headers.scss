@@ -93,7 +93,7 @@
   }
 
   .search-module-results {
-    background: rgba($gray, .85);
+    background: white;
     height: calc(100vh - 13.5rem);
     overflow: hidden;
     position: relative;
@@ -104,6 +104,10 @@
       background: rgba(9, 9, 9, .98);
     }
   }
+}
+
+.gsc-search-button, .gsc-clear-button {
+  visibility: hidden;
 }
 
 .search-module--open {
@@ -122,13 +126,14 @@
   z-index: 5;
 
   .search-input__highlight,
+  .gsc-input,
   .search-input__input {
-    background: transparent;
+    background: transparent !important;
     border: 0;
     color: $white;
     font-size: 4rem;
     font-weight: 300;
-    line-height: 1.04167;
+    line-height: 1.3;
     outline: none;
     position: relative;
 

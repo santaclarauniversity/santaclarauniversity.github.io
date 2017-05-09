@@ -1,3 +1,52 @@
+<div id="test"></div>
+
+<script>
+  var myCallback = function() {
+    if (document.readyState == 'complete') {
+      // Document is ready when CSE element is initialized.
+      // Render an element with both search box and search results in div with id 'test'.
+      google.search.cse.element.render(
+        {
+          div: 'search-input',
+          tag: 'searchbox'
+        },
+        {
+          div: "search-module-results",
+          tag: 'searchresults'
+        });
+    } else {
+      // Document is not ready yet, when CSE element is initialized.
+      google.setOnLoadCallback(function() {
+        // Render an element with both search box and search results in div with id 'test'.
+        google.search.cse.element.render(
+          {
+            div: 'search-input',
+            tag: 'searchbox'
+          },
+          {
+            div: "search-module-results",
+            tag: 'searchresults'
+          });
+      }, true);
+    }
+  };
+
+  // Insert it before the CSE code snippet so that cse.js can take the script
+  // parameters, like parsetags, callbacks.
+  window.__gcse = {
+    parsetags: 'explicit',
+    callback: myCallback
+  };
+
+  (function() {
+    var cx = '015735913753929981099:fyhgumyaibi'; // Insert your own Custom Search engine ID here
+    var gcse = document.createElement('script'); gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
 <div id="search-module" class="search-module">
   <div id="input-container" class="search-module-input-container">
     <div class="container-fluid">
@@ -10,23 +59,7 @@
         </svg>
         <span class="sr-only">Close Search Overlay</span>
       </button>
-      <div id="search-input" class="search-input">
-        <span class="search-input__highlight"></span>
-        <form class="search-form search-input-form">
-          <input type="text" placeholder="Search" id="search-module-input" class="search-input__input text-sans-light pb-2" maxlength="40">
-          <label for="search-module-input" class="sr-only">Search query</label>
-
-          <button class="search-input__all">
-            <a class="search-input__all-link" href="/search/?query=">All Results</a>
-            <svg class="search-input__all-svg">
-              <g>
-                <line x1="0" y1="0" x2="6" y2="6" class="search-input__all-svg-line"></line>
-                <line x1="0" y1="12" x2="6" y2="6" class="search-input__all-svg-line"></line>
-              </g>
-            </svg>
-          </button>
-        </form>
-      </div>
+      <div id="search-input" class="search-input"></div>
     </div>
   </div>
   <div id="search-module-results" class="search-module-results"></div>
