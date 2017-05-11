@@ -24,16 +24,18 @@ $(document).ready(() => {
 
   // toggles search overlay
   $('.fa-search').click((e) => {
+    // TODO fix event listener not removing
     e.preventDefault();
+
+    $('.search-module').toggleClass('search-module--open');
+    $('input.gsc-input').focus();
 
     if ($('.search-module--open')) {
       document.addEventListener("keyup", searchEsc);
     } else {
+      console.log('removed');
       document.removeEventListener("keyup", searchEsc);
     }
-
-    $('.search-module').toggleClass('search-module--open');
-    $('input.gsc-input').focus();
   });
 
   // closes search via X button
@@ -46,7 +48,7 @@ $(document).ready(() => {
   });
 
   // toggles quick links drawer
-  $('.fa-bars').click((e) => {
+  $('.fa-map').click((e) => {
     e.preventDefault();
 
     $('.drawer').toggleClass('open');
