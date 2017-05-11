@@ -52,20 +52,36 @@
 	require('imports-loader?$=jquery!bootstrap/js/dist/carousel');
 	require('imports-loader!holderjs/holder');*/
 
+	function searchEsc(e) {
+	  if (e.which === 27) {
+	    e.preventDefault();
+
+	    $('.fa-search').click();
+	  }
+	}
+
 	/**
 	 * Header and footer button functionality
 	 */
 	$(document).ready(() => {
+	  // TODO temp: toggle subheader/normal header
 	  $('.header-toggler').click(() => {
 	    $('.core-nav').toggle();
 	    $('.compact-nav').toggle();
 	  });
 
+	  // toggles search overlay
 	  $('.fa-search').click(e => {
 	    e.preventDefault();
 
 	    $('.search-module').toggleClass('search-module--open');
-	    $('.search-input__input').focus();
+	    $('input.gsc-input').focus();
+
+	    if ($('.search-module--open')) {
+	      document.addEventListener("keyup", searchEsc);
+	    } else {
+	      document.removeEventListener("keyup", searchEsc);
+	    }
 	  });
 
 	  $('.fa-bars').click(e => {
