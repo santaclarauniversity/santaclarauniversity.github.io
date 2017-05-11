@@ -6635,7 +6635,7 @@ a {
         min-height: 12.5rem;
         padding-top: 3rem; } }
   .search-module .search-module-results {
-    background: rgba(70, 74, 76, 0.85);
+    background: white;
     height: calc(100vh - 13.5rem);
     overflow: hidden;
     position: relative;
@@ -6644,6 +6644,9 @@ a {
     @media (max-width: 767px) {
       .search-module .search-module-results {
         background: rgba(9, 9, 9, 0.98); } }
+
+.gsc-search-button, .gsc-clear-button {
+  visibility: hidden; }
 
 .search-module--open {
   max-height: 100vh;
@@ -6659,29 +6662,35 @@ a {
   position: relative;
   z-index: 5; }
   .search-input .search-input__highlight,
+  .search-input .gsc-input,
   .search-input .search-input__input {
-    background: transparent;
+    background: transparent !important;
     border: 0;
     color: #fff;
     font-size: 4rem;
     font-weight: 300;
-    line-height: 1.04167;
+    line-height: 1.3;
     outline: none;
     position: relative; }
     @media (max-width: 767px) {
       .search-input .search-input__highlight,
+      .search-input .gsc-input,
       .search-input .search-input__input {
         font-size: 3rem; } }
     .search-input .search-input__highlight::-webkit-input-placeholder,
+    .search-input .gsc-input::-webkit-input-placeholder,
     .search-input .search-input__input::-webkit-input-placeholder {
       color: #cecece; }
     .search-input .search-input__highlight::-moz-placeholder,
+    .search-input .gsc-input::-moz-placeholder,
     .search-input .search-input__input::-moz-placeholder {
       color: #cecece; }
     .search-input .search-input__highlight:-ms-input-placeholder,
+    .search-input .gsc-input:-ms-input-placeholder,
     .search-input .search-input__input:-ms-input-placeholder {
       color: #cecece; }
     .search-input .search-input__highlight::placeholder,
+    .search-input .gsc-input::placeholder,
     .search-input .search-input__input::placeholder {
       color: #cecece; }
   .search-input .search-input-form {
@@ -6707,6 +6716,10 @@ a {
 
 #navbarCollapse a:hover {
   color: #cccccc; }
+
+.compact-nav {
+  display: none;
+  line-height: 1; }
 
 .search-input__highlight--static, .search-input__input--static {
   font-size: 3.6rem; }

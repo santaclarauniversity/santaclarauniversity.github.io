@@ -186,6 +186,11 @@
   }
 }
 
+.compact-nav {
+  display: none;
+  line-height: 1;
+}
+
 // TODO after we get some data coming into results
 .search-input__highlight--static,.search-input__input--static {
   font-size: 3.6rem
