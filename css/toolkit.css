@@ -6386,6 +6386,13 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .hidden-print {
     display: none !important; } }
 
+.wordmark {
+  letter-spacing: 3px; }
+  @media (max-width: 575px) {
+    .wordmark {
+      font-size: 1rem;
+      letter-spacing: 1px; } }
+
 /*
 This CSS resource incorporates links to font software which is the valuable copyrighted
 property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
@@ -6703,13 +6710,6 @@ a {
   .navbar-toggler-icon {
     height: 1em;
     width: 1em; } }
-
-.navbar-brand {
-  letter-spacing: 3px; }
-  @media (max-width: 575px) {
-    .navbar-brand {
-      font-size: 1rem;
-      letter-spacing: 1px; } }
 
 #navbarCollapse ul.list-inline {
   font-size: 1.1rem; }

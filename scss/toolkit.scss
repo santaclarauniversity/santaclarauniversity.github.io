@@ -12,6 +12,16 @@
 $screen-short: 900px;
 $screen-xshort: 600px;
 
+// Wordmark class adds responsive letter spacing
+.wordmark {
+  letter-spacing: 3px;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+}
+
 // TODO Probably not necessary anymore
 // sass-lint:disable no-vendor-prefixes
 @mixin retina {

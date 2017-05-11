@@ -165,16 +165,6 @@
   }
 }
 
-// fix brand text being too large on xs (iPhone 5, ..), obstructing navbar toggle
-.navbar-brand {
-  letter-spacing: 3px;
-
-  @include media-breakpoint-down(xs) {
-    font-size: 1rem;
-    letter-spacing: 1px;
-  }
-}
-
 #navbarCollapse {
   // slightly increase icon size (and scale by rem's)
   ul.list-inline {
