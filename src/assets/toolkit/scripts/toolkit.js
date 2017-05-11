@@ -26,27 +26,42 @@ $(document).ready(() => {
   $('.fa-search').click((e) => {
     e.preventDefault();
 
-    $('.search-module').toggleClass('search-module--open');
-    $('input.gsc-input').focus();
-
     if ($('.search-module--open')) {
       document.addEventListener("keyup", searchEsc);
     } else {
       document.removeEventListener("keyup", searchEsc);
     }
+
+    $('.search-module').toggleClass('search-module--open');
+    $('input.gsc-input').focus();
   });
 
+  // closes search via X button
+  $('.close-btn').click((e) => {
+    e.preventDefault();
+
+    $('.drawer').removeClass('open');
+    $('.search-module').removeClass('search-module--open');
+    document.removeEventListener("keyup", searchEsc);
+  });
+
+  // toggles quick links drawer
   $('.fa-bars').click((e) => {
     e.preventDefault();
 
     $('.drawer').toggleClass('open');
   });
 
-  $('.close-btn').click((e) => {
-    e.preventDefault();
-
-    $('.drawer').removeClass('open');
-    $('.search-module').removeClass('search-module--open');
+  // dept switcher
+  $(document).ready(function () {
+    $('#departments').select2({
+      theme: "bootstrap",
+      placeholder: 'Departments and Programs',
+    });
+    $('#departments').on('select2:select', function (evt) {
+      var dest = $(evt.params.data.element).data('target');
+      // window.location = dest;
+    });
   });
 
   $('#footer-toggler').click(() => {

@@ -1,6 +1,7 @@
 <div id="test"></div>
 
 <script>
+  // gse
   var myCallback = function() {
     if (document.readyState === 'complete') {
       // Document is ready when CSE element is initialized.
@@ -85,6 +86,52 @@
           </ul>
           <ul class="list-unstyled list-spaced">
             <li><h6 class="text-uppercase">Departments and Services</h6></li>
+            <li><select name="departments" id="departments" class="custom-select form-control">
+              <option></option>
+              <optgroup label="College of Arts and Sciences">
+                <option data-target="/cas/anthropology">Anthropology</option>
+                <option>Art and Art History</option>
+                <option>Biology</option>
+                <option>Chemistry and Biochemistry</option>
+                <option>Classics</option>
+                <option>Communication</option>
+                <option>English</option>
+                <option>Environmental Studies</option>
+                <option>Ethnic Studies</option>
+                <option>History</option>
+                <option>Liberal Studies</option>
+                <option>Math and Computer Science</option>
+                <option>Military Science</option>
+                <option>Modern Languages and Literatures</option>
+                <option>Music</option>
+                <option>Philosophy</option>
+                <option>Physics</option>
+                <option>Political Science</option>
+                <option>Psychology</option>
+                <option>Public Health</option>
+                <option>Religious Studies</option>
+                <option>Sociology</option>
+                <option>Theatre and Dance</option>
+                <option>Women's and Gender Studies</option>
+              </optgroup>
+              <optgroup label="School of Engineering">
+                <option>Bioengineering</option>
+                <option>Civil Engineering</option>
+                <option>Computer Science and Engineering</option>
+                <option>Electrical Engineering</option>
+                <option>Mechanical Engineering</option>
+                <option>Web Design and Engineering</option>
+              </optgroup>
+              <optgroup label="Leavey School of Business">
+                <option>Accounting</option>
+                <option>Accounting & Information Systems</option>
+                <option>Economics</option>
+                <option>Finance</option>
+                <option>Management</option>
+                <option>Marketing</option>
+                <option>Management Information Systems (in the department of OMIS)</option>
+              </optgroup>
+            </select></li>
           </ul>
         </div>
         <div class="col">
