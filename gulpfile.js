@@ -12,6 +12,9 @@ const sass = require('gulp-sass');
 const size = require('gulp-size');
 const webpack = require('webpack');
 
+const concat = require("gulp-concat");
+const uglify = require("gulp-uglify");
+
 // custom packages
 // CSS
 const autoprefixer = require('gulp-autoprefixer');
@@ -110,7 +113,6 @@ gulp.task('scripts:compile', (done) => {
         gutil.log(gutil.colors.red(error));
       })
     }
-
     done();
   });
 });
@@ -121,7 +123,25 @@ gulp.task('scripts:lint', (done) => {
   done();
 });
 
-gulp.task('scripts', ['scripts:lint', 'scripts:compile']);
+gulp.task('scripts:new', () => {
+  return gulp.src([
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/select2/dist/js/select2.js',
+    'src/assets/toolkit/scripts/toolkit.js',
+    'node_modules/bootstrap/js/dist/util.js',
+    'node_modules/bootstrap/js/dist/carousel.js',
+    'node_modules/bootstrap/js/dist/collapse.js'
+  ])
+  .pipe(sourcemaps.init())
+  .pipe(concat("compiled-bundle.js"))
+  .pipe(gulp.dest("js"))
+  .pipe(rename("compiled-bundle.min.js"))
+  .pipe(uglify())
+  .pipe(sourcemaps.write("./"))
+  .pipe(gulp.dest("js"));
+});
+
+gulp.task('scripts', ['scripts:lint', 'scripts:compile', 'scripts:new']);
 
 
 /**
