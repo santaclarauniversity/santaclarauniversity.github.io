@@ -12,8 +12,9 @@ const sass = require('gulp-sass');
 const size = require('gulp-size');
 const webpack = require('webpack');
 
-const concat = require("gulp-concat");
-const uglify = require("gulp-uglify");
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const access = require('gulp-accessibility');
 
 // custom packages
 // CSS
@@ -161,6 +162,13 @@ gulp.task('assembler', (done) => {
   done();
 });
 
+gulp.task('a11y', function() {
+  return gulp.src('./dist/**/*.html')
+    .pipe(access({
+      force: true
+    }))
+    .on('error', console.log)
+});
 // start BrowserSync and begin watching files
 gulp.task('serve', () => {
   browserSync.init({
