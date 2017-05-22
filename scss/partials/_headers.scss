@@ -1,3 +1,37 @@
+// new upper navbar
+.navbar-upper {
+  background-color: #1f1f1f;
+  display: flex;
+  height: 40px;
+
+  a {
+    color: #f7f7f7;
+  }
+
+  div {
+    align-items: center;
+    flex: 1;
+  }
+
+  button {
+    background-color: #3d3d3d;
+    border: 0;
+    padding: .3rem 1.5rem;
+
+    a {
+      padding: 0;
+    }
+
+    &:hover {
+      background-color: #a10434;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 // "global"
 .core-nav .navbar-inverse .navbar-nav .nav-link {
   color: white;
