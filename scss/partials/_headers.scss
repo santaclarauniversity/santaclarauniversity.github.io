@@ -2,10 +2,11 @@
 .navbar-upper {
   background-color: #1f1f1f;
   display: flex;
-  height: 40px;
+  height: 36px;
 
   a {
     color: #f7f7f7;
+    font-size: .9rem;
   }
 
   div {
@@ -16,14 +17,15 @@
   button {
     background-color: #3d3d3d;
     border: 0;
-    padding: .3rem 1.5rem;
+    margin-top: -.25rem;
+    padding: .25rem 1rem;
 
     a {
       padding: 0;
     }
 
     &:hover {
-      background-color: #a10434;
+      background-color: #575757; // a10434
 
       a {
         text-decoration: none;
@@ -40,13 +42,19 @@
 .close-btn {
   background: transparent;
   border: 0;
-  fill: darken($white, 10%);
+  fill: darken($white, 5%);
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 2rem;
+  top: 2rem;
 
   &:hover {
     fill: $white;
+  }
+
+  &:after {
+    color: $white;
+    content: "esc";
+    display: block;
   }
 
   svg {
@@ -91,13 +99,18 @@
 
 .drawer.open {
   height: 100%;
-  opacity: 1;
+  opacity: .98;
   visibility: visible;
   transition: opacity .15s, height 0s;
 }
 
 
 // search
+.search-module-container {
+  background-color: rgba(#f1f0e9, .98);
+  margin-top: -.5rem;
+}
+
 .search-module {
   font-weight: 600;
   left: 0;
@@ -114,7 +127,6 @@
 
   .search-module-input-container {
     background: $brand-primary;
-    border-bottom: 2px solid lighten($brand-primary, 5%);
     min-height: 13.5rem;
     padding-top: 40px;
     position: relative;
@@ -127,7 +139,6 @@
   }
 
   .search-module-results {
-    background: white;
     height: calc(100vh - 13.5rem);
     overflow: hidden;
     position: relative;
@@ -142,6 +153,11 @@
 
 .gsc-search-button, .gsc-clear-button {
   visibility: hidden;
+}
+
+.gsc-control-cse {
+  background: transparent !important;
+  border: none !important;
 }
 
 .search-module--open {

@@ -12,11 +12,11 @@ $(function () {
 
   // toggles search overlay
   $('.fa-search').click(function (e) {
-    // TODO fix event listener not removing
     e.preventDefault();
 
     $('.search-module').toggleClass('search-module--open');
     $('input.gsc-input').focus();
+    $('input.gsc-input').val('');
 
     if ($('.search-module--open')) {
       document.addEventListener("keyup", searchEsc);
@@ -31,8 +31,8 @@ $(function () {
     $('.search-module').removeClass('search-module--open');
   });
 
-  // toggles quick links drawer
-  $('.fa-map').click(function (e) {
+  // toggles sitemap
+  $('.fa-bars').click(function (e) {
     e.preventDefault();
     $('.drawer').toggleClass('open');
     document.addEventListener("keyup", searchEsc);
