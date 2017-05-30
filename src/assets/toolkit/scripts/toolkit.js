@@ -4,6 +4,10 @@
 $(function () {
   // TODO temp: toggle subheader/normal header
 
+  $('#navbarCollapse').click(function() {
+    $('#navbarCollapse2').toggle();
+  });
+
   $('.header-toggler').click(function () {
     console.log("triggered");
     $('.core-nav').toggle();

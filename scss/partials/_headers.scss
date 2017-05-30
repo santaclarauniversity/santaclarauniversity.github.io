@@ -14,7 +14,6 @@
     @extend .navbar-upper-text;
 
     background-color: #3d3d3d;
-    border: 0;
 
     &:hover {
       background-color: lighten(#3d3d3d, 10%);
@@ -24,6 +23,10 @@
       }
     }
   }
+}
+
+.navbar-toggler-right {
+  right: 0; // fixes toggler not aligning correctly - default is 1rem for some reason?
 }
 
 // "global"
