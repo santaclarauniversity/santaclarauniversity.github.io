@@ -4,8 +4,8 @@
 $(function () {
   // TODO temp: toggle subheader/normal header
 
-  $('#navbarCollapse').click(function() {
-    $('#navbarCollapse2').toggle();
+  $('.navbar-toggler-right').click(function() {
+    $('#navbarCollapseLower').delay(600).toggle();
   });
 
   $('.header-toggler').click(function () {
