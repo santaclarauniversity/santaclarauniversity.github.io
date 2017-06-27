@@ -2,16 +2,21 @@
  * Header and footer button functionality
  */
 $(function () {
-  // TODO temp: toggle subheader/normal header
-
+  // toggles the mobile fa-bars menu
   $('.navbar-toggler-right').click(function() {
     $('#navbarCollapseLower').delay(600).toggle();
   });
 
+  // temp: toggles header/footer formats between unit-specific (e.g. School of Engineering) h/f and normal h/f
+  // (e.g. homepage)
   $('.header-toggler').click(function () {
-    console.log("triggered");
     $('.core-nav').toggle();
     $('.compact-nav').toggle();
+  });
+
+  $('#footer-toggler').click(function () {
+    $('.footer-core').toggle();
+    $('.footer-subfooter').toggle();
   });
 
   // toggles search overlay
@@ -49,11 +54,6 @@ $(function () {
   }).on('select2:select', function (evt) {
     var dest = $(evt.params.data.element).data('target');
     // window.location = dest;
-  });
-
-  $('#footer-toggler').click(function () {
-    $('.footer-core').toggle();
-    $('.footer-subfooter').toggle();
   });
 });
 
