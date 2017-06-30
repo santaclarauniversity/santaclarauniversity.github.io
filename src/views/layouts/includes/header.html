@@ -47,13 +47,14 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
   })();
 </script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.css" />
 
 <div id="search-module" class="search-module">
   <div id="input-container" class="search-module-input-container">
     <div class="container-fluid">
-      <button class="close-btn">
+      <button class="close-btn b-0">
         <svg class="close" viewBox="0 0 21.3 19.5">
           <g>
             <path d="M17.8,3.7L4.6,16.9c-0.3,0.3-0.8,0.3-1.1,0c-0.3-0.3-0.3-0.8,0-1.1L16.7,2.6c0.3-0.3,0.8-0.3,1.1,0C18.1,2.9,18.1,3.4,17.8,3.7z"></path>
@@ -78,7 +79,7 @@
 
 <div class="drawer">
   <div class="block">
-    <button class="close-btn hidden-sm-down">
+    <button class="close-btn b-0 hidden-sm-down">
       <svg class="close" viewBox="0 0 21.3 19.5">
         <g>
           <path d="M17.8,3.7L4.6,16.9c-0.3,0.3-0.8,0.3-1.1,0c-0.3-0.3-0.3-0.8,0-1.1L16.7,2.6c0.3-0.3,0.8-0.3,1.1,0C18.1,2.9,18.1,3.4,17.8,3.7z"></path>
@@ -281,10 +282,16 @@
         </div>
         <div class="col text-right">
           <button type="button" class="btn btn-default align-middle py-1 px-3 b-0">
-            <a href="#" class="p-0">Login</a>
+            <a href="/login" class="p-0">Login</a>
           </button>
-          <a href="#" class="pl-4 pr-2 align-middle" style="line-height:1.1rem"><i class="fa fa-search" style="color:#bbb;font-size:1.1rem"></i><span class="sr-only">Search</span></a>
-          <a href="/sitemap" class="pl-3 align-middle" style="line-height:1.1rem"><i class="fa fa-bars" aria-hidden="true" style="color:#bbb;font-size:1.1rem"></i><span class="sr-only">Site Map</span></a>
+          <a href="#" class="pl-4 pr-2 align-middle">
+            <i class="fa fa-search"></i>
+            <span class="sr-only">Search</span>
+          </a>
+          <a href="/sitemap" class="pl-3 align-middle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <span class="sr-only">Site Map</span>
+          </a>
         </div>
       </div>
     </div>
@@ -307,17 +314,13 @@
           <a class="nav-link nav-item" href="#">News &amp; Events</a>
         </div>
       </div>
-      <div class="hidden-lg-up" id="navbarCollapseLower" style="display:none">
+      <div class="hidden-md-up" id="navbarCollapseLower">
         <hr class="mt-1 mb-2" />
         <ul class="list-unstyled">
           <li class="pb-2"><a href="#" class="text-white">Current Students</a></li>
           <li class="pb-2"><a href="#" class="text-white">Faculty</a></li>
           <li class="pb-2"><a href="#" class="text-white">Families</a></li>
           <li><a href="#" class="text-white">Visitors</a></li>
-        </ul>
-        <ul class="list-inline text-sans-light my-0 text-center">
-          <li class="list-inline-item"><a href="/search" class="nav-link text-white"><i class="fa fa-search"></i><span class="sr-only">Search</span></a></li>
-          <li class="list-inline-item"><a href="/sitemap" class="nav-link text-white"><i class="fa fa-bars" aria-hidden="true"></i><span class="sr-only">Site Map</span></a></li>
         </ul>
       </div>
     </nav>
@@ -329,19 +332,27 @@
     <div class="container py-3">
       <div class="row">
         <div class="col-8 col-md-8">
-          <a href="#" class="p-0 text-white text-uppercase wordmark align-middle">Santa Clara University</a>
+          <h5 class="m-0"><a href="#" class="text-white text-uppercase wordmark align-middle p-0">Santa Clara University</a></h5>
         </div>
         <div class="col-4 col-md-4">
           <ul class="list-inline overlay-triggers text-white text-sans-light text-right mb-0">
             <li class="list-inline-item">
-              <button type="button" class="btn align-middle py-1 px-3 b-0" style="background-color:#fff;font-size:.9rem">
+              <button type="button" class="btn align-middle px-3 py-1 b-0">
                 <a href="#" class="p-0">Login</a>
               </button>
             </li>
-            <li class="list-inline-item px-2"><i class="fa fa-search"></i><span class="sr-only">Search</span></li>
-            <li class="list-inline-item pl-2"><i class="fa fa-bars" aria-hidden="true"></i><span class="sr-only">Site Map</span></li>
+            <li class="list-inline-item px-2">
+              <i class="fa fa-search"></i>
+              <span class="sr-only">Search</span>
+            </li>
+            <li class="list-inline-item pl-2">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+              <span class="sr-only">Site Map</span>
+            </li>
             <li class="list-inline-item">
-              <span class="header-toggler"><i class="fa fa-retweet" aria-hidden="true"></i><span class="sr-only">Toggle Header</span></span>
+              <span class="header-toggler">
+                <i class="fa fa-retweet" aria-hidden="true"></i><span class="sr-only">Toggle Header</span>
+              </span>
             </li>
           </ul>
         </div>
