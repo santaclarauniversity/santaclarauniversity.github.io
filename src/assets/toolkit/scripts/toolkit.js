@@ -3,7 +3,7 @@
  */
 $(function () {
   // toggles the mobile fa-bars menu
-  $('.navbar-toggler-right').click(function() {
+  $('.navbar-toggler-hook').click(function() {
     $('#navbarCollapseLower').delay(600).toggle();
   });
 
