@@ -1,21 +1,54 @@
-/// First, load Bootstrap in the order of: our custom 'override' variables after Bootstrap's default variables, then
-/// Bootstrap's components.  Inside `variables.scss`, we load `bootstrap/variables` (the default variables).
-///
-/// By using this order, Bootstrap knows to use our colors, etc. for its components.
+@import '../bower_components/bootstrap/scss/functions'; // Bootstrap Sass utilities
+@import '../bower_components/bootstrap/scss/variables'; // Default Bootstrap variables
+@import '../bower_components/bootstrap/scss/mixins'; // More Sass utilities
 
-// Bootstrap
-@import 'variables';
-@import 'components';
+@import 'variables'; // our Bootstrap variable overrides
 
+// Bootstrap modules
+@import '../bower_components/bootstrap/scss/print';
+@import '../bower_components/bootstrap/scss/reboot';
+@import '../bower_components/bootstrap/scss/type';
+@import '../bower_components/bootstrap/scss/images';
+@import '../bower_components/bootstrap/scss/code';
+@import '../bower_components/bootstrap/scss/grid';
+@import '../bower_components/bootstrap/scss/tables';
+@import '../bower_components/bootstrap/scss/forms';
+@import '../bower_components/bootstrap/scss/buttons';
+@import '../bower_components/bootstrap/scss/transitions';
+@import '../bower_components/bootstrap/scss/dropdown';
+@import '../bower_components/bootstrap/scss/button-group';
+@import '../bower_components/bootstrap/scss/input-group';
+@import '../bower_components/bootstrap/scss/custom-forms';
+@import '../bower_components/bootstrap/scss/nav';
+@import '../bower_components/bootstrap/scss/navbar';
+@import '../bower_components/bootstrap/scss/card';
+@import '../bower_components/bootstrap/scss/breadcrumb';
+@import '../bower_components/bootstrap/scss/pagination';
+@import '../bower_components/bootstrap/scss/badge';
+@import '../bower_components/bootstrap/scss/jumbotron';
+@import '../bower_components/bootstrap/scss/alert';
+@import '../bower_components/bootstrap/scss/progress';
+@import '../bower_components/bootstrap/scss/media';
+@import '../bower_components/bootstrap/scss/list-group';
+@import '../bower_components/bootstrap/scss/close';
+@import '../bower_components/bootstrap/scss/modal';
+@import '../bower_components/bootstrap/scss/tooltip';
+@import '../bower_components/bootstrap/scss/popover';
+@import '../bower_components/bootstrap/scss/carousel';
+@import '../bower_components/bootstrap/scss/utilities';
+
+// SCU typography
 // Custom breakpoints
 // Short desktop windows (netbook, etc.)
 $screen-short: 900px;
 $screen-xshort: 600px;
 
 // Wordmark class adds responsive letter spacing
+// sass-lint:disable no-vendor-prefixes
+// sass-lint:disable indentation
+// sass-lint:disable mixins-before-declarations
 .wordmark {
   letter-spacing: 3px;
-
   @include media-breakpoint-down(xs) {
     font-size: 1rem;
     letter-spacing: 1px;
@@ -23,21 +56,19 @@ $screen-xshort: 600px;
 }
 
 // TODO Probably not necessary anymore
-// sass-lint:disable no-vendor-prefixes
 @mixin retina {
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 2 / 1),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx) {
-      @content;
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2 / 1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    @content;
   }
 }
+// sass-lint:enable mixins-before-declarations
+// sass-lint:enable indentation
 // sass-lint:enable no-vendor-prefixes
-
-// SCU typography
-@import 'partials/typography';
 
 // Headers and footer
 @import 'partials/headers';

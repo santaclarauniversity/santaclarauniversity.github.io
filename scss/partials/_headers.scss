@@ -1,24 +1,16 @@
+.header-fa-icon {
+  color: $light-gray;
+  font-size: 1rem;
+
+  &:hover {
+    color: $really-light-gray;
+    cursor: pointer;
+  }
+}
+
 // black background uppermost navbar
 .navbar-upper {
-  .text-right a {
-    line-height: 1.1rem;
-    text-decoration: none;
-
-    i {
-      color: $light-gray;
-      font-size: 1.1rem;
-
-      &:hover {
-        color: $really-light-gray;
-      }
-    }
-  }
-
-  a {
-    color: $white;
-    font-size: .9rem;
-  }
-
+  // Login button
   button {
     background-color: #3d3d3d;
 
@@ -30,37 +22,80 @@
       }
     }
   }
-}
 
-// primary navbar
-.core-nav .navbar-nav .nav-link {
-  color: $really-light-gray;
+  // All right-hand stuff (login button and icons)
+  .text-right a {
+    font-size: .9rem;
+    line-height: 1.6rem;
+    text-decoration: none;
 
-  &:hover {
+    // Menu icons (fa-bars, fa-search)
+    i {
+      @extend .header-fa-icon;
+    }
+  }
+
+  // Left-hand links
+  a {
     color: $white;
+    font-size: 1rem;
   }
 }
 
-// mobile navbar menu toggler
-.navbar-toggler-right {
-  right: 0; // fixes toggler not aligning correctly - default is 1rem for some reason?
+.core-nav {
+  // primary navbar
+  .navbar-nav .nav-link {
+    color: $really-light-gray;
+
+    &:hover {
+      color: $white;
+    }
+  }
 }
 
 // alternative primary navbar
 .core-nav-compact {
-  h5 a:hover {
-    text-decoration: none;
+  // branding
+  h5 {
+    a:hover {
+      text-decoration: none;
+    }
   }
 
+  h6 a {
+    font-size: .6rem;
+  }
+
+  // login button
   button {
     background-color: $white;
     font-size: .9rem;
+
+    &:hover {
+      background-color: darken($white, 3%);
+
+      > a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  // icons
+  a {
+    text-decoration: none;
+
+    i {
+      @extend .header-fa-icon;
+
+      color: $white;
+    }
   }
 }
 
 // close button on sitemap, search
 .close-btn {
   background: transparent;
+  border: 0; // b-0 class doesn't work anymore?
   fill: darken($white, 5%);
   position: absolute;
   right: 2rem;
@@ -100,7 +135,7 @@
 }
 
 #navbarCollapseLower {
-  display: none;
+  display: none !important;
 }
 
 .compact-nav {
