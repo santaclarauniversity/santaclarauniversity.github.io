@@ -23,6 +23,17 @@
   }
 }
 
+.navbar-upper {
+  // Login button
+  a.btn {
+    background-color: #3d3d3d;
+    text-decoration: none;
+    &:hover {
+      background-color: lighten(#3d3d3d, 10%);
+    }
+  }
+}
+
 // Login button in uppermost section of both headers
 a.btn-default {
   background-color: #3d3d3d;
