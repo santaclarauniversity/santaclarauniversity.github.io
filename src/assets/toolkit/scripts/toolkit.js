@@ -41,7 +41,7 @@ $(function () {
   });
 
   // toggles sitemap
-  $('.fa-bars').click(function (e) {
+  $('.sitemap-toggle').click(function (e) {
     e.preventDefault();
     $('.drawer').toggleClass('open');
     document.addEventListener("keyup", searchEsc);
