@@ -11,15 +11,11 @@
 // black background uppermost navbar
 .navbar-upper {
   // Login button
-  button {
+  a.btn {
     background-color: #3d3d3d;
-
+    text-decoration: none;
     &:hover {
       background-color: lighten(#3d3d3d, 10%);
-
-      a {
-        text-decoration: none;
-      }
     }
   }
 
