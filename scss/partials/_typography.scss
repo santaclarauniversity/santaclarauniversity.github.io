@@ -259,16 +259,7 @@ b i, b em, strong i, strong em, em strong, em b, i strong, i b {
 
 // Intro Paragraphs
 .intro {
-  &, & > * {
-    color: #666;
-    font-size: 24px;
-    line-height: (30em/24);
-  }
-
-  p {
-    margin-bottom: 20px;
-  }
-
+ @extend .lead;
   @include media-breakpoint-up(md) {
     .subheader.tall + .container#content & {
       background: rgba(255, 255, 255, .9);
@@ -277,18 +268,22 @@ b i, b em, strong i, strong em, em strong, em b, i strong, i b {
       line-height: 1.5;
       margin: -78px 0 30px 0;
       padding: 12px 15px;
-
-      p {
-        margin-bottom: 0;
-      }
     }
   }
 }
-
+#content p a {
+  background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#fff)),-webkit-gradient(linear,left top,left bottom,from(#fff),to(#fff)),-webkit-gradient(linear,left top,left bottom,from($brand-primary),to($brand-primary));
+  background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($brand-primary,$brand-primary);
+  background-size: .05em 1px,.05em 1px,1px 1px;
+  background-repeat: no-repeat,no-repeat,repeat-x;
+  text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;
+  background-position: 0 95%,100% 95%,0 95%;
+  &:hover {
+    text-decoration: none;
+    background: none;
+  }
+}
 a {
-  transition: all 100ms ease;
-  transition-property: all;
-  transition-duration: 100ms;
-  transition-timing-function: ease;
-  transition-delay: initial;
+  -webkit-transition: color .15s;
+  transition: color .15s;
 }
