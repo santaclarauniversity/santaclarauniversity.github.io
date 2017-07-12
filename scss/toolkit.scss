@@ -48,9 +48,9 @@ $screen-xshort: 600px;
 // sass-lint:disable indentation
 // sass-lint:disable mixins-before-declarations
 .wordmark {
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   @include media-breakpoint-down(xs) {
-    font-size: 1rem;
     letter-spacing: 1px;
   }
 }

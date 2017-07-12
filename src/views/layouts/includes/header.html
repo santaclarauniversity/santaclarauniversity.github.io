@@ -299,7 +299,7 @@
   </div>
   <div class="container py-1">
     <nav class="navbar navbar-toggleable-md navbar-dark mr-auto px-0">
-      <a class="navbar-brand text-uppercase text-white wordmark" href="#"><strong>Santa Clara University</strong></a>
+      <a class="navbar-brand text-uppercase text-white wordmark" href="#">Santa Clara University</a>
       <button class="navbar-toggler-hook navbar-toggler d-block d-md-none" type="button" data-target="#navbarCollapse" data-toggle="collapse"
               aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -333,13 +333,15 @@
 
 <header class="navigation compact-nav">
   <div class="bg-primary core-nav-compact">
-    <div class="container py-2">
-      <div class="row">
-        <div class="col col-md-8 pr-0 align-middle">
-          <h5 class="m-0 d-none d-md-block"><a href="#" class="text-white text-uppercase wordmark align-middle p-0">Santa Clara University</a></h5>
-          <h6 class="m-0 d-block d-md-none pt-1"><a href="#" class="text-white text-uppercase wordmark">Santa Clara University</a></h6>
+    <div class="container" style="
+    padding-top: 15px;
+    padding-bottom: 15px;
+">
+      <div class="no-gutters row">
+        <div class="col-8">
+          <a href="#" class="wordmark align-middle">Santa Clara University</a>
         </div>
-        <div class="col col-md-4 pl-0 align-middle text-right">
+        <div class="align-middle col-4 text-right">
           <button type="button" class="btn btn-default px-2 px-md-3 py-1 b-0">
             <a href="/login" class="p-0">Login</a>
           </button>
@@ -347,8 +349,8 @@
             <i class="fa fa-search"></i>
             <span class="sr-only">Search</span>
           </a>
-          <a href="/sitemap" class="pl-2">
-            <i class="fa fa-bars" aria-hidden="true"></i>
+          <a href="/sitemap" class="sitemap-toggle pl-2">
+            <img src="../../../../assets/images/address.svg" alt="Sitemap" style="width:1.1rem;height:1.1rem;">
             <span class="sr-only">Site Map</span>
           </a>
         </div>
