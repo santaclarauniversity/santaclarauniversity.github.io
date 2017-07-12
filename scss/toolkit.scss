@@ -50,6 +50,7 @@ $screen-xshort: 600px;
 .wordmark {
   letter-spacing: 2px;
   text-transform: uppercase;
+
   @include media-breakpoint-down(xs) {
     letter-spacing: 1px;
   }

@@ -1,5 +1,4 @@
 .header-fa-icon {
-  color: $light-gray;
   font-size: 1rem;
 
   &:hover {
@@ -8,48 +7,28 @@
   }
 }
 
-// black background uppermost navbar
-.navbar-upper {
-  // Login button
-  button {
-    background-color: #3d3d3d;
+.sitemap-toggle object {
+  width: 24px;
+  height: 16px;
+}
 
-    &:hover {
-      background-color: lighten(#3d3d3d, 10%);
+// Login, sitemap, search block in uppermost section of both headers
+.text-right a {
+  font-size: .9rem;
+  line-height: 1.6rem;
 
-      a {
-        text-decoration: none;
-      }
-    }
-  }
-
-  // All right-hand stuff (login button and icons)
-  .text-right a {
-    font-size: .9rem;
-    line-height: 1.6rem;
-    text-decoration: none;
-
-    // Menu icons (fa-bars, fa-search)
-    i {
-      @extend .header-fa-icon;
-    }
-  }
-
-  // Left-hand links
-  a {
-    color: $white;
-    font-size: 1rem;
+  // Menu icons (fa-bars, fa-search)
+  i {
+    @extend .header-fa-icon;
   }
 }
 
-.core-nav {
-  // primary navbar
-  .navbar-nav .nav-link {
-    color: $really-light-gray;
+// Login button in uppermost section of both headers
+a.btn-default {
+  background-color: #3d3d3d;
 
-    &:hover {
-      color: $white;
-    }
+  &:hover {
+    background-color: lighten(#3d3d3d, 10%);
   }
 }
 
