@@ -1,85 +1,47 @@
-.header-fa-icon {
-  font-size: 1rem;
+// Standard header (navbar section)
+#navbarCollapse .nav-link {
+  color: $white;
 
   &:hover {
-    color: $really-light-gray;
-    cursor: pointer;
+    color: rgba($white, .75);
   }
 }
 
+// Sitemap toggle icon
 .sitemap-toggle img {
   width: 24px;
   height: 16px;
 }
 
-// Login, sitemap, search block in uppermost section of both headers
+// Icon portion of both standard and dept.-specific headers
 .text-right a {
-  font-size: .9rem;
+  color: $white;
   line-height: 1.6rem;
 
-  // Menu icons (fa-bars, fa-search)
+  // Search icon (font awesome)
   i {
-    @extend .header-fa-icon;
+    font-size: 1rem;
   }
-}
-
-.navbar-upper {
-  // Login button
-  a.btn {
-    background-color: #3d3d3d;
-    text-decoration: none;
-    &:hover {
-      background-color: lighten(#3d3d3d, 10%);
-    }
-  }
-}
-
-// Login button in uppermost section of both headers
-a.btn-default {
-  background-color: #3d3d3d;
 
   &:hover {
-    background-color: lighten(#3d3d3d, 10%);
+    color: $really-light-gray;
+    text-decoration: none;
   }
 }
 
-// alternative primary navbar
-.core-nav-compact {
-  // branding
-  h5 {
-    a:hover {
-      text-decoration: none;
-    }
+// Login button
+.navbar-upper a.btn {
+  background-color: lighten($black, 17%);
+  text-decoration: none;
+
+  &:hover {
+    background-color: lighten($black, 25%);
   }
+}
 
-  h6 a {
-    font-size: .6rem;
-  }
-
-  // login button
-  button {
-    background-color: $white;
-    font-size: .9rem;
-
-    &:hover {
-      background-color: darken($white, 3%);
-
-      > a {
-        text-decoration: none;
-      }
-    }
-  }
-
-  // icons
-  a {
-    text-decoration: none;
-
-    i {
-      @extend .header-fa-icon;
-
-      color: $white;
-    }
-  }
+// department-specific header branding
+.core-nav-compact h5 a:hover {
+  text-decoration: none;
 }
 
 // close button on sitemap, search
@@ -96,7 +58,7 @@ a.btn-default {
   }
 
   &:after {
-    color: #ddd;
+    color: $really-light-gray;
     content: "esc";
     display: block;
   }
