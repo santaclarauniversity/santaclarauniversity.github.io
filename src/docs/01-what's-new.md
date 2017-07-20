@@ -31,6 +31,8 @@ Release Highlights:
   - Increased the options for the the existing SCU custom buttons.
 - **Hero**
   - Renamed Jumbotron and uses BS4-standard code.
+  - Transitioned `.high-contrast` to `.has-dim` for better accessibility.
+  - Added background options for Jumbotrons, including `.bg-primary` and others.
 - **Image Gallery**
   - Renamed Carousel using BS4-shipped code.
 - **Image Grid**
