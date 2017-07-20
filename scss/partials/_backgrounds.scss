@@ -4,10 +4,6 @@ $bg-gradient-scu: linear-gradient(135deg, #9e1b32,#021d52);
   background: linear-gradient(to left, darken($color, 7%), $color);
 }
 
-.high-contrast {
-  background: rgba(0, 0, 0, 0.80);
-  color: #FFF;
-}
 .bg-gradient {
   background: $bg-gradient-scu;
   color: white;
