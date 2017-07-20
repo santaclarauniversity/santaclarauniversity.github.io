@@ -9,7 +9,6 @@ $hero-short-height: 355px;
 $hero-xshort-height: 300px;
 
 .jumbotron.hero {
-  background-color: #dcdcdc; // Fallback color
   background-position: 50% 20%;
   background-size: cover;
   @extend .text-white;
