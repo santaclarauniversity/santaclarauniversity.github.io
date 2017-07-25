@@ -80,6 +80,7 @@ $screen-xshort: 600px;
 @import 'partials/homepage';
 @import 'partials/templates';
 @import 'partials/heroes';
+@import 'partials/cover-image';
 
 // Site modules
 @import 'partials/breadcrumb';
@@ -97,7 +98,7 @@ $screen-xshort: 600px;
 @import 'partials/infographics';
 @import 'partials/windowpane';
 @import 'partials/statcard';
-@import 'partials/text-ribbon';
+@import 'partials/text-highlight';
 @import 'partials/block';
 @import 'partials/backgrounds';
 @import 'partials/person-spotlight';

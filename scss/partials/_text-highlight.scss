@@ -1,0 +1,38 @@
+$pad-wide: 20px;
+$color-white: #fff;
+$title-pad: 0.25em;
+$title-lineheight: $title-pad + 1.5;
+
+.text-highlight {
+  .highlight {
+    display: inline;
+    background: $brand-primary;
+    color: $color-white;
+    padding: $title-pad;
+  }
+  .highlight--wrapping {
+    position: relative;
+    left: $title-pad;
+    padding-left: 0;
+    box-shadow: $title-pad 0 0 $brand-primary,
+    $title-pad*-1 0 0 $brand-primary;
+    box-decoration-break: clone;
+  }
+}
+
+.text-highlight-black {
+  .highlight {
+    display: inline;
+    background: black;
+    color: $color-white;
+    padding: $title-pad;
+  }
+  .highlight--wrapping {
+    position: relative;
+    left: $title-pad;
+    padding-left: 0;
+    box-shadow: $title-pad 0 0 black,
+    $title-pad*-1 0 0 black;
+    box-decoration-break: clone;
+  }
+}

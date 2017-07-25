@@ -16,7 +16,7 @@
   }
 
   .wordmark {
-    font-size: 1rem;
+    @extend .text-sans-light;
     letter-spacing: 2px;
   }
 }
@@ -28,4 +28,7 @@
   @include media-breakpoint-down(sm) {
     text-align: center;
   }
+}
+.footer-social-icons a {
+  font-size: 1.75rem;
 }

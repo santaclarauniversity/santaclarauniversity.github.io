@@ -1,0 +1,24 @@
+body.cover-image {
+  background-color: $gray-100;
+  #content {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 15rem;
+    .content-block {
+      background: white;
+      padding-top: 1rem;
+    }
+    .widgets {
+      &> div, nav {
+        background: white;
+      }
+      .side-navigation-header {
+        padding-top: 10px;
+      }
+    }
+  }
+  h1.cover-image-title {
+    @extend .display-2;
+    text-shadow: 0 -2px 3px rgba(0, 0, 0, 0.22);
+  }
+}

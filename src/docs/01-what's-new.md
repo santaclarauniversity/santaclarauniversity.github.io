@@ -9,11 +9,11 @@ Release Highlights:
 - New templates and documentation.
 - Deprecated Trajan and removed from font stack.
 
-**Bootstrap 4**
-- [Upgraded to Bootstrap 4 alpha 6](https://v4-alpha.getbootstrap.com/getting-started/introduction/)
+### Bootstrap 4
+- [Upgraded to Bootstrap 4](https://v4-alpha.getbootstrap.com/getting-started/introduction/)
 
 
-**Content Type Changes**
+### Content Type Changes
 
 - **General Content Type Changes**
   - Updated Content Types for Bootstrap 4.
@@ -29,7 +29,7 @@ Release Highlights:
   - Maroon buttons are now deprecated (aliased to `brand-primary` to aid in the transition).
   - Added new standard and outline buttons.
   - Increased the options for the the existing SCU custom buttons.
-- **Hero**
+- **Jumbotron (formerly Hero)**
   - Renamed Jumbotron and uses BS4-standard code.
   - Transitioned `.high-contrast` to `.has-dim` for better accessibility.
   - Added background options for Jumbotrons, including `.bg-primary` and others.
@@ -47,19 +47,24 @@ Release Highlights:
   - Removed "compact" version of person spotlight, as it utilizes media list code.
 - **Pull Quotes**
   - https://github.com/santaclarauniversity/scu-web-assets/issues/78 (undergoing redesign)
+- **Highlight (formerly Ribbons)**
+  - Refactored ribbon code to work correctly across all browsers; renamed to Highlight. See [Wrapping Highlighted Text.](https://codepen.io/hotmeteor/pen/ibvJs)
 
-
-**Templates and Documentation**
+### Templates and Documentation
 - **Typography**
   - Reset to Bootstrap standards, most notably, made headers less opinionated (no color or transform), headers now use a true bold font (used a browser-filled Trade Gothic previously)
 - **Templates**
   - Added new footer system with flexibility for major-unit branding.
   - Beta: [Department Switcher](/demos/department-switcher.html) using `select2`.
-  - Alpha: New header system.
-  - New email template (Solid)
-- Added Accessibility Guidelines (TODO)
+  - Beta: New header system.
+  - New email template (Solid).
+  - New [Cover Image](/demos/cover-image-layout.html) layout.
+- **Documentation**
+  - Added [Accessibility](docs.html#accessibility) guidelines.
+  - Added [Header and Footer Guidelines](/docs.html#header-and-footer-guidelines).
+  
 
-**Fabricator and Build**
+### Fabricator and Build
 
 - `./scss/` contains Sass files, which are identical to Less in purpose but with (*very*) slightly different syntax/execution in general
   - `./scss/landing/`
@@ -79,8 +84,7 @@ Release Highlights:
     - Our custom JS output by Webpack to include Bootstrap, jQuery, etc. code which it depends on
   - `./js/fabricator.js`
     - Fabricator's Webpack output JS
-
-
+    
 - HTML changes (views, etc.)
   - Various changes to demos to make them work properly on Bootstrap 4
   - Upgraded landing pages to their Bootstrap 4 versions
