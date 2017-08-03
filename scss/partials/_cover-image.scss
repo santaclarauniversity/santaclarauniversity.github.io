@@ -19,6 +19,6 @@ body.cover-image {
   }
   h1.cover-image-title {
     @extend .display-2;
-    text-shadow: 0 -2px 3px rgba(0, 0, 0, 0.22);
+    text-shadow: 0 -2px 3px rgba(0, 0, 0, 0.5);
   }
 }
