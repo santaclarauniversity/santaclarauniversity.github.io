@@ -128,6 +128,7 @@ gulp.task('scripts:new', () => {
   return gulp.src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/select2/dist/js/select2.js',
+    'bower_components/holderjs/holder.min.js',
     'src/assets/toolkit/scripts/toolkit.js',
     'node_modules/bootstrap/js/dist/util.js',
     'node_modules/bootstrap/js/dist/carousel.js',
