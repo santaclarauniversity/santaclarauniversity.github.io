@@ -3,7 +3,10 @@ body.cover-image {
   #content {
     background-repeat: no-repeat;
     background-size: 100%;
-    padding-top: 15rem;
+    padding-top: 20rem;
+    @include media-breakpoint-up(md) {
+      padding-top: 17rem;
+    }
     .content-block {
       background: white;
       padding-top: 1rem;

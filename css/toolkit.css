@@ -173,7 +173,15 @@ a {
 @media print {
   *,
   *::before,
-  *::after {
+  *::after,
+  p::first-letter,
+  div::first-letter,
+  blockquote::first-letter,
+  li::first-letter,
+  p::first-line,
+  div::first-line,
+  blockquote::first-line,
+  li::first-line {
     text-shadow: none !important;
     box-shadow: none !important; }
   a,
@@ -6596,7 +6604,10 @@ body.cover-image {
   body.cover-image #content {
     background-repeat: no-repeat;
     background-size: 100%;
-    padding-top: 15rem; }
+    padding-top: 20rem; }
+    @media (min-width: 768px) {
+      body.cover-image #content {
+        padding-top: 17rem; } }
     body.cover-image #content .content-block {
       background: white;
       padding-top: 1rem; }
