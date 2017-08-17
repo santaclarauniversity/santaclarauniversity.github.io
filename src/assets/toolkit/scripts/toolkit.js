@@ -48,7 +48,7 @@ $(function () {
   });
 
   // dept switcher
-  $('.custom-select').select2({
+  $('.custom-select').selectWoo({
     theme: "bootstrap",
     placeholder: 'Departments, Services, and Programs'
   }).on('select2:select', function (evt) {
