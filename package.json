@@ -36,7 +36,7 @@
     "babel-loader": "^6.2.10",
     "babel-plugin-transform-es2015-modules-strip": "^0.1.1",
     "babel-preset-es2016": "^6.22.0",
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.0.0-beta",
     "bower": "^1.8.0",
     "browser-sync": "^2.18.6",
     "del": "^2.2.2",
