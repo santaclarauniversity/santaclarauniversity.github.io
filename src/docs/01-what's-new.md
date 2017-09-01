@@ -12,7 +12,6 @@ Release Highlights:
 ### Bootstrap 4
 - [Upgraded to Bootstrap 4](https://v4-alpha.getbootstrap.com/getting-started/introduction/)
 
-
 ### Content Type Changes
 
 - **General Content Type Changes**
@@ -35,6 +34,7 @@ Release Highlights:
   - Added background options for Jumbotrons, including `.bg-primary` and others.
 - **Image Gallery**
   - Renamed Carousel using BS4-shipped code.
+  - Otherwise unchanged in functionality, but has a slightly more modern look.
 - **Image Grid**
   - Removed in favor of gutter-less grids.
 - **Infographics**
@@ -46,7 +46,8 @@ Release Highlights:
   - Redesigned Person Spotlight to be more universal; removes overlay and introduces left/right card style.
   - Removed "compact" version of person spotlight, as it utilizes media list code.
 - **Pull Quotes**
-  - https://github.com/santaclarauniversity/scu-web-assets/issues/78 (undergoing redesign)
+  - Redesigned to be a more attention-grabbing type with space for a very large photo and quote.
+  - https://github.com/santaclarauniversity/scu-web-assets/issues/78
 - **Highlight (formerly Ribbons)**
   - Refactored ribbon code to work correctly across all browsers; renamed to Highlight. See [Wrapping Highlighted Text.](https://codepen.io/hotmeteor/pen/ibvJs)
 

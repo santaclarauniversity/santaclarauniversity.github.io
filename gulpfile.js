@@ -25,10 +25,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const sassLint = require('gulp-sass-lint');
 const eslint = require('gulp-eslint');
 
-// utils
-const clone = require('gulp-clone');
-const fs = require('fs');
-
 
 // paths to code that gets copied/linted/etc. in the process of launching toolkit
 const config = {
@@ -119,14 +115,14 @@ gulp.task('scripts:compile', (done) => {
 });
 
 gulp.task('scripts:lint', (done) => {
-  gulp.src(config.scripts.dest)
+  gulp.src(config.scripts.toolkit)
     .pipe(eslint.failAfterError());
   done();
 });
 
 gulp.task('scripts:new', () => {
   return gulp.src([
-    'node_modules/jquery/dist/jquery.js',
+    'bower_components/jquery/dist/jquery.js',
     'bower_components/holderjs/holder.min.js',
     'bower_components/select2/dist/js/selectWoo.min.js',
     'src/assets/toolkit/scripts/toolkit.js',
@@ -193,7 +189,7 @@ gulp.task('serve', () => {
   gulp.watch('./scss/**/*.scss', ['styles:toolkit:watch']);
 
   // watch for toolkit .js changes
-  gulp.task('scripts:watch', ['scripts:lint', 'scripts:compile'], reload);
+  gulp.task('scripts:watch', ['scripts'], reload);
   gulp.watch(config.scripts.toolkit, ['scripts:watch']);
 });
 

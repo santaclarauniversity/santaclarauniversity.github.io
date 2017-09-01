@@ -44,6 +44,10 @@
   text-decoration: none;
 }
 
+.compact-nav .wordmark {
+  max-width: 275px;
+}
+
 // close button on sitemap, search
 .close-btn {
   background: transparent;
@@ -134,7 +138,7 @@
 
 // search
 .search-module-container {
-  background-color: rgba(#f1f0e9, .98);
+  background-color: rgba(239, 239, 239, .98);
   margin-top: -.5rem;
 }
 

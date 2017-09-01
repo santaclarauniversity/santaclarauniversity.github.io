@@ -1,3 +1,7 @@
+.carousel-caption {
+  color: $black;
+}
+
 $can-we-xs-height: 425px;
 $can-we-sm-height: 475px;
 $can-we-md-height: 525px;
@@ -6,25 +10,8 @@ $can-we-lg-height: 575px;
 .can-we.module {
   background-position: 50% 50%;
   background-size: cover;
-  margin-bottom: 80px;
-  position: relative;
+  margin-bottom: 5rem;
   width: 100%;
-
-  .site-header + & {
-    margin-top: -20px;
-
-    @include media-breakpoint-up(sm) {
-      margin-top: -30px;
-    }
-
-    @include media-breakpoint-up(md) {
-      margin-top: -53px;
-    }
-
-    @include media-breakpoint-up(lg) {
-      margin-top: -55px;
-    }
-  }
 
   &.feature {
     .container {
@@ -48,17 +35,7 @@ $can-we-lg-height: 575px;
     }
 
     .can-we-body {
-      display: flex;
-      flex-direction: column;
       justify-content: center;
-
-      height: $can-we-xs-height;
-      position: relative;
-
-      .no-flexbox & {
-        display: table-cell;
-        vertical-align: middle;
-      }
 
       p, ol, ul {
         font-size: 14px;
@@ -75,13 +52,11 @@ $can-we-lg-height: 575px;
       }
 
       .can-we-headline {
-        left: 0;
         padding: 20px;
-        position: absolute;
-        top: 20px;
 
         &, a {
           color: $white;
+          display: block;
           text-decoration: none;
         }
 
@@ -90,14 +65,12 @@ $can-we-lg-height: 575px;
           font-size: 14px;
           line-height: 1;
           padding: 3px 5px 1px;
-          white-space: nowrap;
         }
 
         h2 {
           @extend .serif-font;
 
           color: $white;
-          margin-top: 0;
           text-shadow: 0 0 5px #000;
         }
 
@@ -108,14 +81,8 @@ $can-we-lg-height: 575px;
 
       .can-we-box {
         background-color: $white;
-        margin-right: 3em;
         min-height: 180px;
         padding: 10px 20px;
-        position: relative;
-
-        &:last-child {
-          margin-right: 0;
-        }
 
         p {
           font-size: 16px;
@@ -145,9 +112,9 @@ $can-we-lg-height: 575px;
         }
 
         .can-we-credit {
-          bottom: 10px;
+          bottom: .5rem;
           font-size: 12px;
-          left: 20px;
+          left: 1.5rem;
           max-width: 60%;
           position: absolute;
           text-transform: uppercase;
@@ -168,6 +135,7 @@ $can-we-lg-height: 575px;
           bottom: -30px;
           box-shadow: 2px 2px 7px rgba(0, 0, 0, .3);
           height: 80px;
+          margin-right: 1rem;
           overflow: hidden;
           position: absolute;
           right: -15px;
@@ -184,146 +152,6 @@ $can-we-lg-height: 575px;
           }
         }
       }
-
-      .can-we-boxes {
-        bottom: 25px;
-        left: 30%;
-        position: absolute;
-        width: 10000px;
-
-        .col-xs-4 {
-          width: auto;
-        }
-      }
-
-      .can-we-box {
-        min-width: 240px;
-      }
-
-      @include media-breakpoint-up(md) {
-        height: $can-we-sm-height;
-        max-height: $can-we-sm-height;
-
-        .can-we-headline {
-          position: absolute;
-        }
-
-        .can-we-boxes {
-          left: auto;
-          position: static;
-          width: auto;
-
-          .col-xs-4 {
-            width: 33.33333333%;
-          }
-        }
-
-        .can-we-box {
-          min-height: 200px;
-          min-width: 0;
-
-          .schools-colleges &, .centers & {
-            min-height: 180px !important;
-          }
-
-          p {
-            font-size: 14px;
-            margin-bottom: 0;
-          }
-
-          .can-we-credit {
-            font-size: 12px;
-          }
-
-          .can-we-photo {
-            height: 80px;
-            width: 80px;
-          }
-        }
-
-        .vertical & {
-          .can-we-boxes {
-            bottom: 1em;
-            left: 0;
-            position: absolute;
-            right: 1em;
-            top: 1em;
-          }
-
-          .col-xs-4 {
-            clear: right;
-            float: right;
-          }
-
-          .can-we-box {
-            margin-bottom: 1em;
-            min-height: 140px;
-          }
-
-          .can-we-photo, .can-we-credit {
-            display: none;
-          }
-        }
-      }
-
-      @include media-breakpoint-up(sm) {
-        height: $can-we-md-height;
-        max-height: $can-we-md-height;
-
-        .can-we-headline {
-          top: 100px;
-        }
-
-        p, ol, ul {
-          font-size: 18px;
-        }
-
-        h2 {
-          font-size: 36px;
-        }
-
-        .can-we-box {
-          min-height: 180px;
-
-          .can-we-credit {
-            font-size: 14px;
-          }
-
-          .can-we-photo {
-            height: 100px;
-            width: 100px;
-          }
-        }
-      }
-
-      @include media-breakpoint-up(lg) {
-        height: $can-we-lg-height;
-        max-height: $can-we-lg-height;
-
-        h2 {
-          font-size: 48px;
-        }
-
-        .can-we-box {
-          min-height: 226px;
-
-          p {
-            font-size: 16px;
-          }
-
-          .can-we-credit {
-            &, p {
-              font-size: 1em;
-            }
-
-          }
-
-          .can-we-photo {
-            height: 140px;
-            width: 140px;
-          }
-        }
-      }
     }
 
     .carousel-caption {
@@ -337,7 +165,6 @@ $can-we-lg-height: 575px;
       left: 0;
       min-height: 0;
       padding: 10px 49px 9px;
-      position: relative;
       right: 0;
       text-shadow: none;
       top: 100%;
@@ -357,7 +184,6 @@ $can-we-lg-height: 575px;
 
         bottom: 20px;
         min-height: (55em / 14);
-        position: absolute;
 
         &, * {
           font-size: 14px;

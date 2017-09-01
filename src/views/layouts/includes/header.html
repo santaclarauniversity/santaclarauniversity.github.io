@@ -1,60 +1,4 @@
-<div id="test"></div>
-
-<script>
-  // gse
-  var myCallback = function() {
-    if (document.readyState === 'complete') {
-      // Document is ready when CSE element is initialized.
-      // Render an element with both search box and search results in div with id 'test'.
-      google.search.cse.element.render(
-        {
-          div: 'search-input',
-          tag: 'searchbox'
-        },
-        {
-          div: "search-module-results",
-          tag: 'searchresults'
-        });
-    } else {
-      // Document is not ready yet, when CSE element is initialized.
-      google.setOnLoadCallback(function() {
-        // Render an element with both search box and search results in div with id 'test'.
-        google.search.cse.element.render(
-          {
-            div: 'search-input',
-            tag: 'searchbox'
-          },
-          {
-            div: "search-module-results",
-            tag: 'searchresults'
-          });
-      }, true);
-    }
-  };
-
-  // Insert it before the CSE code snippet so that cse.js can take the script
-  // parameters, like parsetags, callbacks.
-  window.__gcse = {
-    parsetags: 'explicit',
-    callback: myCallback
-  };
-
-  (function() {
-    var cx = '015735913753929981099:fyhgumyaibi'; // Insert your own Custom Search engine ID here
-    var gcse = document.createElement('script'); gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.css" />
-
-<span class="header-toggler">
-  <i class="fa fa-retweet" aria-hidden="true"></i><span class="sr-only">Toggle Header</span>
-</span>
-
+<!-- Google Search module -->
 <div id="search-module" class="search-module">
   <div id="input-container" class="search-module-input-container">
     <div class="container-fluid">
@@ -72,15 +16,22 @@
   </div>
   <div class="container-fluid search-module-container">
     <div class="row">
-      <div class="col-12 md-offset-1 col-md-7">
+      <div class="col-12 col-md-7">
         <div id="search-module-results" class="search-module-results"></div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-5 py-3">
+        <div class="block text-center">
+          <h1 class="block-title">Relevant</h1>
+          <h4 class="text-muted">Search content goes here.</h4>
+          <button class="btn btn-primary mt">With a simple button</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<!-- /Google Search module -->
 
+<!-- Sitemap drawer -->
 <div class="drawer">
   <div class="block">
     <button class="close-btn b-0">
@@ -267,7 +218,9 @@
     </div>
   </div>
 </div>
+<!-- /Sitemap drawer -->
 
+<!-- Normal header -->
 <header class="navigation core-nav bg-primary">
   <div style="background-color:#1f1f1f"><!-- TODO -->
     <div class="container py-2 navbar-upper">
@@ -321,7 +274,9 @@
     </nav>
   </div>
 </header>
+<!-- /Normal header -->
 
+<!-- Dept. specific header -->
 <header class="navigation compact-nav">
   <div class="bg-primary core-nav-compact">
     <div class="container py-2">
@@ -352,7 +307,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav mr-auto">
+        <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="#">About</a>
           <a class="nav-item nav-link" href="#">Academics</a>
           <a class="nav-item nav-link" href="#">Admission</a>
@@ -365,9 +320,9 @@
     </nav>
   </div>
 </header>
+<!-- /Dept. specific header -->
 
 <!-- TODO: Remove for Launch -->
-
 <style type="text/css">
   .header-toggler {
     position: fixed;
@@ -379,3 +334,51 @@
   }
 </style>
 <span class="header-toggler p-3">Toggle Header</span>
+
+<script type="text/javascript">
+  // gse
+  let myCallback = function() {
+    if (document.readyState === 'complete') {
+      // Document is ready when CSE element is initialized.
+      // Render an element with both search box and search results in div with id 'test'.
+      google.search.cse.element.render(
+        {
+          div: 'search-input',
+          tag: 'searchbox'
+        },
+        {
+          div: "search-module-results",
+          tag: 'searchresults'
+        });
+    } else {
+      // Document is not ready yet, when CSE element is initialized.
+      google.setOnLoadCallback(function() {
+        // Render an element with both search box and search results in div with id 'test'.
+        google.search.cse.element.render(
+          {
+            div: 'search-input',
+            tag: 'searchbox'
+          },
+          {
+            div: "search-module-results",
+            tag: 'searchresults'
+          });
+      }, true);
+    }
+  };
+
+  // Insert it before the CSE code snippet so that cse.js can take the script
+  // parameters, like parsetags, callbacks.
+  window.__gcse = {
+    parsetags: 'explicit',
+    callback: myCallback
+  };
+
+  (function() {
+    let cx = '015735913753929981099:fyhgumyaibi'; // Insert your own Custom Search engine ID here
+    let gcse = document.createElement('script'); gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    let s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+  })();
+</script>

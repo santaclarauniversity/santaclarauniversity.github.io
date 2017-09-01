@@ -40,6 +40,11 @@
 
   &:hover {
     background: lighten($brand-primary, 10%);
+    cursor: pointer;
+
+    h4 {
+      text-decoration: underline;
+    }
   }
 
 }
