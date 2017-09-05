@@ -7777,6 +7777,9 @@ h1.block-title {
   .pull-quote-inv:hover {
     background: #f1f1f1; }
 
+.agenda .row:nth-child(odd) {
+  background-color: #fffcfd; }
+
 .search_title, .search_nav {
   color: #000;
   margin-bottom: 0;
