@@ -28,7 +28,10 @@ $(function () {
     $('input.gsc-input').val('');
 
     if ($('.search-module--open')) {
+      $('body').css('overflow', 'hidden');
       document.addEventListener("keyup", searchEsc);
+    } else {
+      $('body').css('overflow', 'visible');
     }
   });
 
@@ -76,5 +79,6 @@ function searchEsc(e) {
     document.removeEventListener("keyup", searchEsc);
     $('.search-module').removeClass('search-module--open');
     $('.drawer').removeClass('open');
+    $('body').css('overflow', 'visible');
   }
 }

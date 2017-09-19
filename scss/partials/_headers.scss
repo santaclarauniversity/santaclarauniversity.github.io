@@ -78,6 +78,7 @@
 
   @include media-breakpoint-down(sm) {
     right: .5rem;
+    top: 1rem;
   }
 }
 
@@ -162,23 +163,26 @@
 
   .search-module-input-container {
     background: $brand-primary;
-    min-height: 13.5rem;
-    padding-top: 40px;
+    min-height: 9rem;
+    padding-top: 1rem;
     position: relative;
     z-index: 10;
 
     @include media-breakpoint-down(sm) {
-      min-height: 9rem;
-      padding-top: 1.5rem;
+      min-height: 5rem;
     }
   }
 
   .search-module-results {
-    height: calc(100vh - 13.5rem);
-    overflow: hidden;
+    height: calc(100vh - 9rem);
+    overflow: scroll;
     position: relative;
     transition: height .3s, background-color .2s ease-out;
     z-index: 10;
+
+    @include media-breakpoint-down(sm) {
+      height: calc(100vh - 5rem);
+    }
   }
 }
 

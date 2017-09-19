@@ -32,6 +32,7 @@
     "jrespond": "https://github.com/ten1seven/jRespond.git#^1.0.0",
     "modernizr": "^3.3.1",
     "bootstrap": "v4-dev",
-    "holderjs": "^2.9.4"
+    "holderjs": "^2.9.4",
+    "select2": "https://github.com/woocommerce/selectWoo.git#master"
   }
 }
