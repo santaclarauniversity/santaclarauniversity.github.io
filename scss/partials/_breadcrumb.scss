@@ -2,11 +2,11 @@
   background: transparent;
   padding: 0;
   font-size: .9rem;
-  opacity: 0.7;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
   content: '\203A'; // &raquo;
+  opacity: 0.7;
 }
 .breadcrumb-item.active {
   color: #4b5157;
