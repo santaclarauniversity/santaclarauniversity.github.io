@@ -63,7 +63,8 @@ Release Highlights:
 - **Documentation**
   - Added [Accessibility](docs.html#accessibility) guidelines.
   - Added [Header and Footer Guidelines](/docs.html#header-and-footer-guidelines).
-  
+- **Landing Pages**
+  - Landing page templates have been removed from the public build but are still available in local code branches; the licenses for these templates do not specify if they can be made available within our toolkit and have been removed.
 
 ### Fabricator and Build
 
