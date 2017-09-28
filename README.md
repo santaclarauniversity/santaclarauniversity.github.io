@@ -2,17 +2,13 @@
 
 A toolkit with the power to construct pages as they would appear on `scu.edu` in order to rapidly prototype new ideas for the website.
 
-
 ### Installation
 
-#### macOS / OS X
+#### Prerequisites
 
-First, install [Homebrew](http://brew.sh/).  This is a package manager for Macs, so we can download what we need through the terminal.
+To begin, you will need to have [Node.js](https://nodejs.org/en/download/) and [Git](https://git-scm.com/downloads) installed. Downloads are available for both Windows and Mac OS.
 
-Next, install Git and [Node.js](http://nodejs.org/).  Git is what we use to maintain control of versions of this software, and Node.js is what we use to run the software itself.
-```sh
-$ brew install git nodejs
-```
+#### Installing Dependencies
 
 Next, using Nodejs' internal package manager, *NPM*, you'll need [Gulp](http://gulpjs.com/) and [Bower](http://bower.io/) installed "globally" (`-g`):
 
@@ -32,21 +28,17 @@ Get the project's dependencies:
 $ npm install && bower install
 ```
 
+#### Running the Toolkit
 
-Finally, to run the application:
+To build the toolkit:
 ```sh
 $ gulp --dev
 ```
 
 Successful launch will open a browser window to `http://localhost:3000` or `http://0.0.0.0:3000`.
 
+### Prototyping
 
-#### Windows
-
-First, [download Git](https://git-scm.com/download/win).
-
-Then, [download Node.js](http://blog.teamtreehouse.com/install-node-js-npm-windows).
-
-There may be some steps like changing Windows environment variables so that commands are available in PATH, etc.  This is difficult to document since it seems to occur on a case-by-case basis.
-
-Once you are able to run, e.g., `npm -v` from the command line, you can begin at step 3 (first time using `npm`) in the Mac guide.
+1. Create a new HTML document with `src/views/demos`. 
+2. Any open browsers will refresh with the page you've created available.
+3. Making changes to your file will trigger a rebuild of the assets and a refresh of the page.
