@@ -17,13 +17,11 @@ const uglify = require('gulp-uglify');
 const access = require('gulp-accessibility');
 
 // custom packages
-// CSS
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
-
-// linters
 const sassLint = require('gulp-sass-lint');
 const eslint = require('gulp-eslint');
+const cleanCss = require('gulp-clean-css');
 
 
 // paths to code that gets copied/linted/etc. in the process of launching toolkit
@@ -63,11 +61,10 @@ gulp.task('styles:toolkit:lint', () => {
 });
 
 gulp.task('styles:toolkit:compile', () => {
-  // TODO make this minify again
   return gulp.src('./scss/toolkit.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'nested'}).on('error', sass.logError))
-    // .pipe(rename({ suffix: '.min' }))
+    .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(cleanCss())
     .pipe(autoprefixer({ browsers: 'last 2 version' }))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(config.styles.dest))

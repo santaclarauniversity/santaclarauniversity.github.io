@@ -53,21 +53,21 @@
 .has-dim {
   position: relative;
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($black, 0.5);
+    background: rgba($black, .5);
   }
 }
 
 .has-dim-2 {
   @extend .has-dim;
 
-  &:before {
+  &::before {
     background: rgba($black, .2);
   }
 }
@@ -75,7 +75,7 @@
 .has-dim-4 {
   @extend .has-dim;
 
-  &:before {
+  &::before {
     background: rgba($black, .4);
   }
 }
@@ -83,14 +83,15 @@
 .has-dim-6 {
   @extend .has-dim;
 
-  &:before {
+  &::before {
     background: rgba($black, .6);
   }
 }
+
 .has-dim-8 {
   @extend .has-dim;
 
-  &:before {
+  &::before {
     background: rgba($black, .8);
   }
 }
