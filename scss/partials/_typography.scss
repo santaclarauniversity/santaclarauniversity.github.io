@@ -1,10 +1,18 @@
+// sass-lint:disable no-duplicate-properties
+// sass-lint:disable no-url-domains
+// sass-lint:disable no-url-protocols
+// sass-lint:disable quotes
+
+// sass-lint:disable no-css-comments
 /*
-This CSS resource incorporates links to font software which is the valuable copyrighted
-property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
-redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
-Imaging with any questions regarding Web Fonts:  http://www.fonts.com
+  This CSS resource incorporates links to font software which is the valuable copyrighted
+  property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+  redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+  Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 */
+// sass-lint:enable no-css-comments
 @import url("//fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35");
+
 
 @font-face {
   font-family: "Bauer Bodoni W01 Italic";
@@ -113,7 +121,7 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 .serif-font-bold {
   font-family: $serif-bold-font;
 
-  html.no-fontface & {
+  .no-fontface & {
     font-weight: 600;
     font-style: italic;
   }
@@ -122,7 +130,7 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 .serif-font {
   font-family: $serif-font;
 
-  html.no-fontface & {
+  .no-fontface & {
     font-style: italic;
   }
 }
@@ -130,7 +138,7 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 .sans-serif-font-bold-italic {
   font-family: $sans-serif-bold-italic-font;
 
-  html.no-fontface & {
+  .no-fontface & {
     font-weight: 600;
     font-style: italic;
   }
@@ -143,7 +151,7 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 .sans-serif-font-bold {
   font-family: $sans-serif-bold-font;
 
-  html.no-fontface & {
+  .no-fontface & {
     font-weight: 600;
   }
 }
@@ -151,7 +159,7 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 .sans-serif-font-italic {
   font-family: $sans-serif-italic-font;
 
-  html.no-fontface & {
+  .no-fontface & {
     font-style: italic;
   }
 }
@@ -159,7 +167,7 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 .sans-serif-light-font {
   font-family: $sans-serif-light-font;
 
-  html.no-fontface & {
+  .no-fontface & {
     font-weight: 200;
   }
 }
@@ -167,7 +175,7 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 .sans-serif-light-font-italic {
   font-family: $sans-serif-italic-font;
 
-  html.no-fontface & {
+  .no-fontface & {
     font-weight: 200;
   }
 }
@@ -176,114 +184,60 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
   font-family: $sans-serif-font;
 }
 
-b, strong {
+b,
+strong {
   @extend .sans-serif-font-bold;
 
   font-weight: 400;
 }
 
-i, em {
-  font-style: normal;
+i,
+em {
   @extend .sans-serif-font-italic;
+
+  font-style: normal;
 }
 
-b i, b em, strong i, strong em, em strong, em b, i strong, i b {
+b i,
+b em,
+strong i,
+strong em,
+em strong,
+em b,
+i strong,
+i b {
   @extend .sans-serif-font-bold-italic;
 }
 
 .text-inverted {
-  color: #fff;
+  color: $white;
 }
 
-// Page Title
-.page-title {
-  @extend .sans-serif-light-font;
 
-  border-bottom: 1px solid $really-light-gray;
-  margin-bottom: 40px;
-  margin-top: 0;
 
-  h1 {
-    margin: 0;
-  }
-
-  &, * {
-    color: $black;
-    font-size: 36px;
-    line-height: 1.25;
-
-    @include media-breakpoint-up(sm) {
-      font-size: 49px;
-      line-height: (75em/52);
-    }
-
-    @include media-breakpoint-up(md) {
-      font-size: 52px;
-    }
-  }
-
-  .back-to-site-home {
-    a {
-      color: #242424;
-      display: block;
-      font-size: 14px;
-
-      span {
-        @extend .sans-serif-font-bold;
-
-        color: $brand-red;
-        font-size: 14px;
-        line-height: inherit;
-      }
-    }
-
-    @include media-breakpoint-up(sm) {
-      text-align: right;
-
-      a {
-        display: inline;
-      }
-    }
-
-    @include media-breakpoint-up(md) {
-      a, a span {
-        font-size: 18px;
-      }
-    }
-  }
-}
-
-.lw_cal_today_day {
-  @extend .serif-font-bold;
-}
-
-// Intro Paragraphs
-.intro {
- @extend .lead;
-  @include media-breakpoint-up(md) {
-    .subheader.tall + .container#content & {
-      background: rgba(255, 255, 255, .9);
-      border: 1px solid #ccc;
-      font-size: 28px;
-      line-height: 1.5;
-      margin: -78px 0 30px 0;
-      padding: 12px 15px;
-    }
-  }
-}
+// sass-lint:disable no-vendor-prefixes
 #content p a {
-  background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#fff)),-webkit-gradient(linear,left top,left bottom,from(#fff),to(#fff)),-webkit-gradient(linear,left top,left bottom,from($brand-primary),to($brand-primary));
-  background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($brand-primary,$brand-primary);
+  background: -webkit-gradient(linear,left top,left bottom,from($white),to($white)),-webkit-gradient(linear,left top,left bottom,from($white),to($white)),-webkit-gradient(linear,left top,left bottom,from($brand-primary),to($brand-primary));
+  background: linear-gradient($white,$white),linear-gradient($white,$white),linear-gradient($brand-primary,$brand-primary);
   background-size: .05em 1px,.05em 1px,1px 1px;
   background-repeat: no-repeat,no-repeat,repeat-x;
-  text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;
+  text-shadow: .03em 0 $white, -.03em 0 $white, 0 .03em $white, 0 -.03em $white, .06em 0 $white, -.06em 0 $white, .09em 0 $white, -.09em 0 $white, .12em 0 $white, -.12em 0 $white, .15em 0 $white, -.15em 0 $white;
   background-position: 0 95%,100% 95%,0 95%;
+
   &:hover {
     text-decoration: none;
     background: none;
   }
 }
+
 a {
   -webkit-transition: color .15s;
   transition: color .15s;
 }
+// sass-lint:enable no-vendor-prefixes
+// sass-lint:enable no-ids
+
+// sass-lint:enable quotes
+// sass-lint:enable no-duplicate-properties
+// sass-lint:enable no-url-domains
+// sass-lint:enable no-url-protocols

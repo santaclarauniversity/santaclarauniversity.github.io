@@ -1,11 +1,12 @@
 .subheader {
-  background-color: #611b25;
+  background-color: darken($brand-primary, 10%); //611b25
   background-position: 50%;
   background-size: cover;
   width: 100%;
 
   &.office {
-    background-color: #464646;
+    background-color: lighten($black, 5%); //464646
+
     h1 {
       background: transparent;
     }
@@ -18,7 +19,7 @@
     padding: 0 0 20px;
 
     span {
-      color: #e9e8d5;
+      color: darken($white, 2%);
       display: inline-block;
       font-size: 18px;
       margin-right: 90%;

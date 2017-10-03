@@ -1,27 +1,35 @@
-body.cover-image {
+.cover-image {
   background-color: $gray-100;
+
   #content {
     background-repeat: no-repeat;
     background-size: 100%;
     padding-top: 20rem;
+
     @include media-breakpoint-up(md) {
       padding-top: 17rem;
     }
+
     .content-block {
-      background: white;
+      background: $white;
       padding-top: 1rem;
     }
+
     .widgets {
-      &> div, nav {
-        background: white;
+      &> div,
+      nav {
+        background: $white;
       }
+
       .side-navigation-header {
         padding-top: 10px;
       }
     }
   }
-  h1.cover-image-title {
+
+  .cover-image-title {
     @extend .display-2;
-    text-shadow: 0 -2px 3px rgba(0, 0, 0, 0.5);
+
+    text-shadow: 0 -2px 3px rgba($black, .5);
   }
 }

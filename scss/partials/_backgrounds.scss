@@ -1,4 +1,4 @@
-$bg-gradient-scu: linear-gradient(135deg, #9e1b32,#021d52);
+$bg-gradient-scu: linear-gradient(135deg, #9e1b32, #021d52);
 
 @mixin lg($color) {
   background: linear-gradient(to left, darken($color, 7%), $color);
@@ -6,24 +6,29 @@ $bg-gradient-scu: linear-gradient(135deg, #9e1b32,#021d52);
 
 .bg-gradient {
   background: $bg-gradient-scu;
-  color: white;
+  color: $white;
 }
+
 .bg-gradient-primary {
   @extend .bg-gradient;
   @include lg($brand-primary);
 }
+
 .bg-gradient-danger {
   @extend .bg-gradient;
   @include lg($brand-danger);
 }
+
 .bg-gradient-info {
   @extend .bg-gradient;
   @include lg($brand-info);
 }
+
 .bg-gradient-warning {
   @extend .bg-gradient;
   @include lg($brand-warning);
 }
+
 .bg-gradient-success {
   @extend .bg-gradient;
   @include lg($brand-success);

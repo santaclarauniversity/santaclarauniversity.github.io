@@ -30,7 +30,7 @@
 }
 
 // Login button
-.navbar-upper a.btn {
+.navbar-upper .btn {
   background-color: lighten($black, 17%);
   text-decoration: none;
 
@@ -61,9 +61,9 @@
     fill: $white;
   }
 
-  &:after {
+  &::after {
     color: $really-light-gray;
-    content: "esc";
+    content: 'esc';
     display: block;
   }
 
@@ -186,13 +186,14 @@
   }
 }
 
-.gsc-search-button, .gsc-clear-button {
+.gsc-search-button,
+.gsc-clear-button {
   visibility: hidden;
 }
 
 .gsc-control-cse {
   background: transparent !important;
-  border: none !important;
+  border: 0 !important;
 }
 
 .search-module--open {
@@ -203,7 +204,7 @@
   visibility: visible;
 }
 
-td.gsc-input {
+.gsc-input {
   border-bottom: 1px solid darken($white, 15%);
   border-radius: 1px;
   margin-right: 5%;
@@ -211,7 +212,7 @@ td.gsc-input {
   text-indent: 0;
   z-index: 5;
 
-  input.gsc-input {
+  .gsc-input {
     background: transparent !important;
     border: 0;
     color: $white;

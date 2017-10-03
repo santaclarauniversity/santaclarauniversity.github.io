@@ -17,7 +17,7 @@
   }
 
   &.on {
-    background: #fff;
+    background: $white;
 
     @include media-breakpoint-up(sm) {
       box-shadow: 1px 1px 3px rgba($black, .4);
@@ -25,7 +25,7 @@
     }
 
     @include media-breakpoint-down(sm) {
-      > a > span:after {
+      > a > span::after {
         content: 'Tap anywhere to close.';
         display: block;
         font-size: 12px;
@@ -34,7 +34,7 @@
   }
 
   & > a {
-    background: rgba($white, 0.8) !important;
+    background: rgba($white, .8) !important;
     padding: 14px 10px;
     text-align: center;
   }
@@ -88,9 +88,10 @@
   }
 }
 
-/* temporary code for switchers on school landing pages: keep 'em open */
+// temporary code for switchers on school landing pages: keep 'em open
 .col-sm-12 {
-  > .switcher, > .switcher.on {
+  > .switcher,
+  > .switcher.on {
     box-shadow: none !important;
     cursor: auto;
     max-width: none;

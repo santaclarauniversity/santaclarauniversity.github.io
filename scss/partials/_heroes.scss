@@ -1,7 +1,8 @@
 .jumbotron.hero {
+  @extend .text-white;
+
   background-position: 50% 20%;
   background-size: cover;
-  @extend .text-white;
 
   .container {
     position: relative;
@@ -9,25 +10,29 @@
 
   h1 {
     @extend .serif-font-bold;
-    font-size: 4rem;
+
     bottom: 0;
     color: $white;
+    font-size: 4rem;
     left: 15px;
-    line-height: 0.7;
+    line-height: .7;
     margin: 0;
     position: absolute;
     text-shadow: 0 -2px 3px rgba($black, .22);
     z-index: 1;
+
     @include media-breakpoint-up(md) {
       font-size: 5rem;
     }
+
     @include media-breakpoint-up(lg) {
       font-size: 6rem;
     }
   }
+
   .caption {
-    background: rgba($white, 0.85);
-    color: black;
+    background: rgba($white, .85);
+    color: $black;
     font-size: 13px;
     padding: 15px;
   }

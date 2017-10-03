@@ -49,7 +49,8 @@
 
   // Color Classes
 
-  &.brand-primary, &.maroon {
+  &.brand-primary,
+  &.maroon {
     @include button-colors($brand-primary);
   }
 
@@ -59,7 +60,7 @@
     color: $brand-primary;
 
     &:hover {
-      background-color: darken(white, 2%);
+      background-color: darken($white, 2%);
     }
   }
 }

@@ -22,12 +22,11 @@
   font-size: 12px;
   vertical-align: middle;
 
-  &:after {
-    content: "";
+  &::after {
+    content: '';
     display: inline-block;
     width: 0;
     height: 0;
-    margin-left: 2px;
     margin-left: 2px;
     vertical-align: middle;
     border-right: 4px solid transparent;
@@ -39,7 +38,7 @@
 .delta-positive {
   color: $brand-success;
 
-  &:after {
+  &::after {
     border-top: 0;
     border-bottom: 4px solid;
   }
@@ -48,7 +47,7 @@
 .delta-negative {
   color: $brand-danger;
 
-  &:after {
+  &::after {
     border-bottom: 0;
     border-top: 4px solid;
   }
@@ -59,7 +58,7 @@
 .statcard-info,
 .statcard-warning,
 .statcard-danger {
-  color: #fff;
+  color: $white;
   border-radius: 3px;
 
   .delta-negative,
@@ -71,13 +70,13 @@
 
   .statcard-desc {
     font-weight: normal;
-    color: rgba(255,255,255,0.65);
+    color: rgba($white, .65);
   }
 
   .statcard-hr {
     margin-left: -1rem;
     margin-right: -1rem;
-    border-top-color: rgba(255,255,255,.2);
+    border-top-color: rgba($white, .2);
   }
 }
 

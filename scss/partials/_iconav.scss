@@ -6,6 +6,7 @@
   margin-top: -20px; // offset the min body padding
   margin-bottom: 30px;
 
+  // sass-lint:disable no-vendor-prefixes
   @include media-breakpoint-up(md) {
     position: fixed;
     top: 0;
@@ -18,6 +19,7 @@
     overflow-y: auto;
     -webkit-transform: translate3d(0,0,0); // Make the sidebar scrollable at all times in Safari
   }
+  // sass-lint:enable no-vendor-prefixes
 
   .tooltip {
     white-space: nowrap;
@@ -145,10 +147,12 @@
 }
 
 // Make it slide
+// sass-lint:disable no-vendor-prefixes
 @include media-breakpoint-down(sm) {
   .iconav-slider {
-    overflow: auto;
     -webkit-overflow-scrolling: touch;
+    overflow: auto;
     white-space: nowrap;
   }
 }
+// sass-lint:enable no-vendor-prefixes

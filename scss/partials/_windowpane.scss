@@ -19,7 +19,7 @@
     position: absolute;
 
     &:hover > .windowpane-rollup {
-      opacity: 0.85;
+      opacity: .85;
     }
 
     &.introduction {
@@ -31,7 +31,7 @@
       top: 0;
       width: 100%;
 
-      li.list-group-item {
+      .list-group-item {
         background-color: transparent;
 
         a {
@@ -43,8 +43,8 @@
     .windowpane-rollup {
       @include transition(opacity .7s);
 
-      background-color: #000;
-      color: #fff;
+      background-color: $black;
+      color: $white;
       padding: 8px;
       opacity: 0;
     }

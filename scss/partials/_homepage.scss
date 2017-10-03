@@ -1,4 +1,4 @@
-body.homepage {
+.homepage {
   background-color: darken($white, 2%);
 }
 
@@ -25,3 +25,87 @@ body.homepage {
     width: 40%;
   }
 }
+
+// Page Title
+.page-title {
+  @extend .sans-serif-light-font;
+
+  border-bottom: 1px solid $really-light-gray;
+  margin-bottom: 40px;
+  margin-top: 0;
+
+  h1 {
+    margin: 0;
+  }
+
+  &,
+  * {
+    color: $black;
+    font-size: 36px;
+    line-height: 1.25;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 49px;
+      line-height: (75em/52);
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 52px;
+    }
+  }
+
+  .back-to-site-home {
+    a {
+      color: lighten($black, 5%);
+      display: block;
+      font-size: 14px;
+
+      span {
+        @extend .sans-serif-font-bold;
+
+        color: $brand-red;
+        font-size: 14px;
+        line-height: inherit;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      text-align: right;
+
+      a {
+        display: inline;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      a,
+      a span {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+// sass-lint:disable class-name-format
+.lw_cal_today_day {
+  @extend .serif-font-bold;
+}
+// sass-lint:enable class-name-format
+
+// Intro Paragraphs
+// sass-lint:disable no-ids
+.intro {
+  @extend .lead;
+
+  @include media-breakpoint-up(md) {
+    .subheader.tall + .container#content & {
+      background: rgba($white, .9);
+      border: 1px solid #ccc;
+      font-size: 28px;
+      line-height: 1.5;
+      margin: -78px 0 30px;
+      padding: 12px 15px;
+    }
+  }
+}
+// sass-lint:enable no-ids

@@ -23,7 +23,7 @@ $white: #fff;
 $really-light-gray: #e1e0e0;
 $light-gray: #cecece;
 $medium-gray: #6d6d6d;
-$dark-gray: #333333;
+$dark-gray: #333;
 $breadcrumb-gray: #9c9c9c;
 $footer-text-gray: #7b7b7b;
 
@@ -65,19 +65,19 @@ $link-hover-color:      darken($link-color, 15%);
 $link-hover-decoration: underline;
 
 // TODO: Font stack for text utility classes (deprecated)
-$serif-font: "Bauer Bodoni W01 Italic";
-$serif-bold-font: "BauerBodoniW01-BlackIta";
-$sans-serif-font: "Trade Gothic Next W01";
-$sans-serif-light-font: "Trade Gothic W01 Light";
-$sans-serif-bold-font: "Trade Gothic W01 Bold_2";
-$sans-serif-italic-font: "TradeGothicNextW01-Ital";
-$sans-serif-bold-italic-font: "TradeGothicW01-Bold2Obl";
-$trajan-font: "Trajan W01 Regular";
+$serif-font: 'Bauer Bodoni W01 Italic';
+$serif-bold-font: 'BauerBodoniW01-BlackIta';
+$sans-serif-font: 'Trade Gothic Next W01';
+$sans-serif-light-font: 'Trade Gothic W01 Light';
+$sans-serif-bold-font: 'Trade Gothic W01 Bold_2';
+$sans-serif-italic-font: 'TradeGothicNextW01-Ital';
+$sans-serif-bold-italic-font: 'TradeGothicW01-Bold2Obl';
+$trajan-font: 'Trajan W01 Regular';
 
 // Overrides for Bootstrap
-$font-family-sans-serif: $sans-serif-font, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$font-family-serif:      $serif-font, Georgia, "Times New Roman", Times, serif;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-sans-serif: $sans-serif-font, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-serif:      $serif-font, Georgia, 'Times New Roman', Times, serif;
+$font-family-monospace:  Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 $font-family-base:       $font-family-sans-serif;
 $headings-font-family:   $sans-serif-bold-font;
 

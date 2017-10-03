@@ -1,15 +1,8 @@
-/**
- * Single-image-with-link module (Sometimes referred to as "site pointer")
- *
- * The single-image-with-link is a link containing a photo and a title, used to link to another SCU
- * site.
- *
- * For proper display all around, the image should be at least 657 pixels wide.
- */
+// For proper display all around, the image should be at least 657 pixels wide
 .single-image-with-link.module {
-  @include transition(border 0.2s ease-in-out);
+  @include transition(border .2s ease-in-out);
 
-  border: 1px solid #bdbdbd;
+  border: 1px solid $light-gray;
   display: block;
   padding: 5px;
 

@@ -42,7 +42,7 @@
 
       & > span {
         & > a {
-          border-bottom: 1px solid #e1e0e0;
+          border-bottom: 1px solid $light-gray;
           padding: 13px;
         }
       }
@@ -68,7 +68,7 @@
       }
 
       &:hover > ul {
-        border-top-color: #f0efef;
+        border-top-color: $light-gray;
       }
 
       &:first-child > a {
@@ -77,11 +77,8 @@
 
       &.active {
         border-left-color: $link-hover-color;
-        z-index: 0;
-      }
-
-      &.active {
         margin-top: -1px;
+        z-index: 0;
 
         & > a {
           border-top: 1px solid $really-light-gray;
@@ -89,12 +86,12 @@
       }
 
       .side-navigation > ul > li > span > a {
-        border-bottom: 1
+        border-bottom: 1;
       }
     }
   }
 
-  li.active {
+  .active {
     & > a {
       @extend .sans-serif-font-bold;
 

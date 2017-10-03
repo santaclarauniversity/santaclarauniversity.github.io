@@ -18,6 +18,14 @@
   > li > a > .badge {
     margin-left: 5px;
   }
+
+  > .active > a {
+    &,
+    &:hover,
+    &:focus {
+      font-weight: $navbar-nav-active-font-weight; // inherit
+    }
+  }
 }
 
 .navbar-brand > img {
@@ -45,8 +53,18 @@
     &,
     &:hover,
     &:focus {
-      color: #fff;
+      color: $white;
       background-color: $navbar-inverse-border;
+    }
+  }
+
+  .navbar-form-control {
+    background-color: lighten($navbar-inverse-bg, 7%);
+
+    &:focus {
+      color: $navbar-inverse-bg;
+      background-color: $white;
+      box-shadow: 0 0 6px rgba($white, .5);
     }
   }
 }
@@ -69,39 +87,20 @@
   box-shadow: none;
 }
 
-.navbar-dark {
-  .navbar-form-control {
-    background-color: lighten($navbar-inverse-bg, 7%);
-
-    &:focus {
-      color: $navbar-inverse-bg;
-      background-color: #fff;
-      box-shadow: 0 0 6px rgba(255,255,255,0.5);
-    }
-  }
-}
-
-.navbar-nav {
-  > .active > a {
-    &,
-    &:hover,
-    &:focus {
-      font-weight: $navbar-nav-active-font-weight; // inherit
-    }
-  }
-}
-
-.navbar-btn-avatar,
-.navbar-btn-avatar:active,
-.navbar-btn-avatar:hover,
-.navbar-btn-avatar:focus,
-.navbar-btn-avatar:hover:active,
-.navbar-btn-avatar:active:focus {
+.navbar-btn-avatar {
   padding: 0;
   border: 0;
   background: transparent;
   outline: none !important;
   box-shadow: none !important;
+
+  &:active,
+  &:hover,
+  &:focus,
+  &:hover:active,
+  &:active:focus {
+    @extend .navbar-btn-avatar;
+  }
 }
 
 // TODO:

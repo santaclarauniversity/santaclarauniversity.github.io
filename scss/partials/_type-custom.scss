@@ -20,7 +20,7 @@ textarea {
   letter-spacing: $lead-letter-spacing;
 
   @include media-breakpoint-up(sm) {
-    font-size: $lead-font-size-sm
+    font-size: $lead-font-size-sm;
   }
 }
 
@@ -30,10 +30,11 @@ textarea {
 }
 
 .list-bordered li {
-  border-top: 1px solid $gray-light;
-}
-.list-bordered li:last-child {
-  border-bottom: 1px solid $gray-light;
+  border-top: 1px solid $light-gray;
+
+  &:last-child {
+    border-bottom: 1px solid $light-gray;
+  }
 }
 
 // serif family helper

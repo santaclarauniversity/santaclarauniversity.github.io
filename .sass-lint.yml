@@ -1,5 +1,14 @@
-rules:
-  indentation:
-    - 2
-    -
-      size: 2
+{
+  rules: {
+    # value 0 indicates rule DISABLED
+    'force-element-nesting': 0,       # e.g. div h1 {..} -> div { h1 {..} }
+    'mixins-before-declarations': 0,  # e.g. nested @include 'should' come first
+    'nesting-depth': 0,               # fewer than 3 levels of depth allowed
+    'no-important': 0,                # !important
+    'property-sort-order': 0,         # alphabetical order for properties
+    'space-after-comma': 0,           # in decl. of multiple selectors
+    'force-pseudo-nesting': 0,        # .cls:hover {..} -> .cls { &:hover { .. }}
+    'no-color-literals': 0,           # allow use of rgba(..) in rules (not just vars)
+    'placeholder-in-extend': 0        # allow old-school @extend calls
+  }
+}

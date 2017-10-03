@@ -5,25 +5,25 @@
   text-transform: $btn-text-transform;
   letter-spacing: $btn-letter-spacing;
 }
+
 .btn-borderless {
   border: 0;
 }
-
 
 .btn-xs {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-border-radius-sm);
 }
 
-
-
 // More buttons
-.btn-more:after {
-  position: relative;
-  top: 1px;
-  content: '〉';
-  display: inline-block;
-  padding-left: .3em;
-  color: inherit;
+.btn-more {
+  &::after {
+    position: relative;
+    top: 1px;
+    content: '〉';
+    display: inline-block;
+    padding-left: .3em;
+    color: inherit;
+  }
 }
 
 //

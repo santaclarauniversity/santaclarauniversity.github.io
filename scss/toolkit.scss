@@ -37,12 +37,6 @@
 @import '../bower_components/bootstrap/scss/carousel';
 @import '../bower_components/bootstrap/scss/utilities';
 
-// SCU typography
-// Custom breakpoints
-// Short desktop windows (netbook, etc.)
-$screen-short: 900px;
-$screen-xshort: 600px;
-
 // Wordmark class adds responsive letter spacing
 // sass-lint:disable no-vendor-prefixes
 // sass-lint:disable indentation
@@ -56,7 +50,6 @@ $screen-xshort: 600px;
   }
 }
 
-// TODO Probably not necessary anymore
 @mixin retina {
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (min--moz-device-pixel-ratio: 2),

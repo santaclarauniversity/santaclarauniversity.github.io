@@ -7,15 +7,15 @@
   width: 40px;
   padding: 10px;
   font-size: 16px;
-  color: $gray;
+  color: $light-gray;
   background: transparent; // remove *all* bg properties
-  border: 1px solid #e5e5e5;
+  border: 1px solid darken($white, 3%);
   border-radius: $border-radius;
 
   // Generate the three lines
-  &:before {
+  &::before {
     display: block;
-    content: "";
+    content: '';
     width: 100%;
     padding-bottom: .125em;
     border-top: .375em double;
@@ -24,8 +24,8 @@
 
   &:hover,
   &:focus {
-    color: #fff;
-    background-color: $gray;
+    color: $white;
+    background-color: $light-gray;
   }
 
   &-sm {
@@ -60,12 +60,14 @@
       height: auto !important;
     }
   }
+
   &-sm {
     @include media-breakpoint-up(sm) {
       display: block !important;
       height: auto !important;
     }
   }
+
   &-md {
     @include media-breakpoint-up(md) {
       display: block !important;

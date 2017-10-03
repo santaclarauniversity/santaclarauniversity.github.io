@@ -44,7 +44,7 @@
   &:focus,
   &:active {
     text-decoration: none;
-    background-color: #f5f5f5;
+    background-color: darken($white, 3%);
     border-color: $modal-footer-border-color;
   }
 }

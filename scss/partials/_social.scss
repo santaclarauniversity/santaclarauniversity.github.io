@@ -1,8 +1,7 @@
-/**
- * Social Media Icons
- * Uses Fontello: fontello.com
- * Add to and modify this customized font set using /assets/fonts/fontello/config.json
- */
+// sass-lint:disable no-duplicate-properties
+// sass-lint:disable indentation
+// sass-lint:disable no-color-literals
+// sass-lint:disable no-vendor-prefixes
 
 // Social brand colors
 $twitter: #00aced;
@@ -10,15 +9,15 @@ $facebook: #3b5998;
 $googleplus: #dd4b39;
 $pinterest: #cb2027;
 $linkedin: #007bb6;
-$youtube: #bb0000;
+$youtube: #b00;
 $vimeo: #1ab7ea;
 $tumblr: #32506d;
 $instagram: #517fa4;
 $flickr: #ff0084;
 $foursquare: #0072b1;
 $wordpress: #21759b;
-$stumbleupon: #EB4823;
-$yahoo: #7B0099;
+$stumbleupon: #eb4823;
+$yahoo: #7b0099;
 $rss: #ff7600;
 $soundcloud: #ff3a00;
 
@@ -28,14 +27,15 @@ $soundcloud: #ff3a00;
   font-weight: normal;
   src: url('/assets/fonts/fontello/fontello.eot?88632057');
   src: url('/assets/fonts/fontello/fontello.eot?88632057#iefix') format('embedded-opentype'),
-  url('/assets/fonts/fontello/fontello.woff?88632057') format('woff'),
-  url('/assets/fonts/fontello/fontello.ttf?88632057') format('truetype'),
-  url('/assets/fonts/fontello/fontello.svg?88632057#fontello') format('svg');
+    url('/assets/fonts/fontello/fontello.woff?88632057') format('woff'),
+    url('/assets/fonts/fontello/fontello.ttf?88632057') format('truetype'),
+    url('/assets/fonts/fontello/fontello.svg?88632057#fontello') format('svg');
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^='icon-']::before,
+[class*=' icon-']::before {
   display: inline-block;
-  font-family: "fontello";
+  font-family: 'fontello';
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -43,69 +43,68 @@ $soundcloud: #ff3a00;
   text-decoration: inherit;
   width: 1em;
 
-  /* For safety - reset parent styles, that can break glyph codes*/
+  // For safety - reset parent styles, that can break glyph codes
   font-variant: normal;
   text-transform: none;
 
-  /* fix buttons height, for twitter bootstrap */
+  // fix buttons height, for twitter bootstrap
   line-height: 1em;
 
-  /* Font smoothing. That was taken from TWBS */
+  // Font smoothing. That was taken from TWBS
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
-.icon-flickr:before {
+.icon-flickr::before {
   content: '\e800';
 }
 
-.icon-twitter:before {
+.icon-twitter::before {
   content: '\e801';
 }
 
-.icon-vimeo:before {
+.icon-vimeo::before {
   content: '\e802';
 }
 
-.icon-facebook-squared:before {
+.icon-facebook-squared::before {
   content: '\e803';
 }
 
-.icon-instagram:before {
+.icon-instagram::before {
   content: '\e804';
 }
 
-.icon-pinterest:before {
+.icon-pinterest::before {
   content: '\e805';
 }
 
-.icon-rss:before {
+.icon-rss::before {
   content: '\e806';
 }
 
-.icon-soundcloud:before {
+.icon-soundcloud::before {
   content: '\e807';
 }
 
-.icon-youtube:before {
+.icon-youtube::before {
   content: '\e808';
 }
 
-.icon-linkedin:before {
+.icon-linkedin::before {
   content: '\e809';
 }
 
-.icon-scu:before {
+.icon-scu::before {
   content: '\e810';
 }
 
-/*  SCU-specific styles  */
+// SCU-specific styles
 
 .social a {
-  @include transition(opacity 0.3s);
+  @include transition(opacity .3s);
 
-  color: #fff;
+  color: $white;
   display: block;
   float: left;
   font-size: 40px;
@@ -156,11 +155,11 @@ $soundcloud: #ff3a00;
   }
 
   &:hover {
-    opacity: 0.7;
+    opacity: .7;
   }
 
   &.illuminate {
-    background-image: url(/assets/images/icon-illuminate.png);
+    background-image: url('/assets/images/icon-illuminate.png');
     background-size: cover;
   }
 
@@ -171,5 +170,7 @@ $soundcloud: #ff3a00;
   }
 }
 
-
-
+// sass-lint:enable no-vendor-prefixes
+// sass-lint:enable no-duplicate-properties
+// sass-lint:enable indentation
+// sass-lint:enable no-color-literals

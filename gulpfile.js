@@ -33,7 +33,7 @@ const config = {
   styles: {
     dest: './css/',
     fabricator: './src/assets/fabricator/styles/fabricator.scss',
-    toolkit: './scss/toolkit.scss',
+    toolkit: ['./scss/**/*.scss', '!./scss/landing/*.scss'],
     landing: './scss/landing/landing-*.scss',
     bootstrap: './bower_components/bootstrap/scss/'
   },
@@ -63,8 +63,8 @@ gulp.task('styles:toolkit:lint', () => {
 });
 
 gulp.task('styles:toolkit:compile', () => {
-  // TODO either find a solution to output both compressed and nested, or switch to compressed for scu.edu live
-  return gulp.src(config.styles.toolkit)
+  // TODO make this minify again
+  return gulp.src('./scss/toolkit.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'nested'}).on('error', sass.logError))
     // .pipe(rename({ suffix: '.min' }))
@@ -93,7 +93,7 @@ gulp.task('styles:toolkit', (done) => {
   runSequence('styles:toolkit:lint', 'styles:toolkit:compile', done);
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit', 'styles:landing']);
+gulp.task('styles', ['styles:fabricator', 'styles:toolkit'/*, 'styles:landing'*/]);
 
 
 // ..then compile all scripts to one (via webpack)
@@ -126,9 +126,9 @@ gulp.task('scripts:new', () => {
     'bower_components/holderjs/holder.min.js',
     'bower_components/select2/dist/js/selectWoo.min.js',
     'src/assets/toolkit/scripts/toolkit.js',
-    'node_modules/bootstrap/js/dist/util.js',
-    'node_modules/bootstrap/js/dist/carousel.js',
-    'node_modules/bootstrap/js/dist/collapse.js'
+    'bower_components/bootstrap/js/dist/util.js',
+    'bower_components/bootstrap/js/dist/carousel.js',
+    'bower_components/bootstrap/js/dist/collapse.js'
   ])
   .pipe(sourcemaps.init())
   .pipe(concat("compiled-bundle.js"))
@@ -184,7 +184,7 @@ gulp.task('serve', () => {
   gulp.task('assembler:watch', ['assembler'], reload);
   gulp.watch('./src/**/*.{html,md,json,yml}', ['assembler:watch']);
 
-  // watch for toolkit .scss changes (EXCLUDE /scss/bootstrap/ - these files should not be changed!)
+  // watch for toolkit .scss changes
   gulp.task('styles:toolkit:watch', ['styles:toolkit'], reload);
   gulp.watch('./scss/**/*.scss', ['styles:toolkit:watch']);
 

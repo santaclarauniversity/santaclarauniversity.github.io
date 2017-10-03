@@ -18,7 +18,8 @@
     }
   }
 
-  h4, h5 {
+  h4,
+  h5 {
     text-align: right;
 
     @include media-breakpoint-down(md) {
