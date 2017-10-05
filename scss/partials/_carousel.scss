@@ -1,0 +1,14 @@
+.carousel-indicators {
+  flex-direction: column;
+  position: static;
+}
+
+.carousel-indicators > li {
+  height: initial;
+  text-indent: initial;
+  width: initial;
+}
+
+.carousel-indicators > .active img {
+  opacity: .7;
+}
