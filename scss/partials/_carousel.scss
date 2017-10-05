@@ -1,14 +1,22 @@
 .carousel-indicators {
   flex-direction: column;
   position: static;
+
+  > li {
+    height: initial;
+    text-indent: initial;
+    width: initial;
+  }
+
+  .active img {
+    opacity: .7;
+  }
 }
 
-.carousel-indicators > li {
-  height: initial;
-  text-indent: initial;
-  width: initial;
-}
-
-.carousel-indicators > .active img {
-  opacity: .7;
+.carousel-caption {
+  background-color: $really-light-gray;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
