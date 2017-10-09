@@ -1,17 +1,17 @@
 {
-    "extends": "airbnb-base",
-    "plugins": [
-        "import"
-    ],
-    "globals": {
-        "$": true,
-        "document": true,
-        "jQuery": true
-    },
-    "rules": {
-        "func-names": 0,
-        "no-unused-vars": 0,
-        "no-var": 0,
-        "prefer-arrow-callback": 0
-    }
+  "extends": "airbnb-base",
+  "plugins": [
+    "import"
+  ],
+  "globals": {
+    "$": true,
+    "document": true,
+    "jQuery": true
+  },
+  "rules": {
+    "func-names": 0,
+    "no-unused-vars": 0,
+    "no-var": 0,
+    "prefer-arrow-callback": 0
+  }
 }
