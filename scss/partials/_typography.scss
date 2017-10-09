@@ -213,16 +213,12 @@ i b {
   color: $white;
 }
 
-
-
-// sass-lint:disable no-vendor-prefixes
 #content p a {
-  background: -webkit-gradient(linear,left top,left bottom,from($white),to($white)),-webkit-gradient(linear,left top,left bottom,from($white),to($white)),-webkit-gradient(linear,left top,left bottom,from($brand-primary),to($brand-primary));
-  background: linear-gradient($white,$white),linear-gradient($white,$white),linear-gradient($brand-primary,$brand-primary);
-  background-size: .05em 1px,.05em 1px,1px 1px;
-  background-repeat: no-repeat,no-repeat,repeat-x;
+  background: linear-gradient($white, $white), linear-gradient($white, $white), linear-gradient($brand-primary, $brand-primary);
+  background-position: 0 95%, 100% 95%, 0 95%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: .05em 1px, .05em 1px, 1px 1px;
   text-shadow: .03em 0 $white, -.03em 0 $white, 0 .03em $white, 0 -.03em $white, .06em 0 $white, -.06em 0 $white, .09em 0 $white, -.09em 0 $white, .12em 0 $white, -.12em 0 $white, .15em 0 $white, -.15em 0 $white;
-  background-position: 0 95%,100% 95%,0 95%;
 
   &:hover {
     text-decoration: none;
@@ -231,10 +227,8 @@ i b {
 }
 
 a {
-  -webkit-transition: color .15s;
   transition: color .15s;
 }
-// sass-lint:enable no-vendor-prefixes
 // sass-lint:enable no-ids
 
 // sass-lint:enable quotes

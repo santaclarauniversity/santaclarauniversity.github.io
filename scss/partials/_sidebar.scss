@@ -8,9 +8,10 @@
 }
 
 .sidebar-header {
+  @include clearfix;
+
   position: relative;
   padding-bottom: $spacer;
-  @include clearfix;
 }
 
 .sidebar-toggler {
