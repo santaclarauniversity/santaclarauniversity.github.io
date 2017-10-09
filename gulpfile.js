@@ -41,11 +41,8 @@ const config = {
     toolkit: './src/assets/toolkit/scripts/toolkit.js'
   }
 };
-
 const webpackConfig = require('./webpack.config.js')(config);
 
-
-// styles (.scss -> .css)
 gulp.task('styles:fabricator', () => {
   return gulp.src(config.styles.fabricator)
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
@@ -53,14 +50,14 @@ gulp.task('styles:fabricator', () => {
     .pipe(gulp.dest(config.styles.dest));
 });
 
-gulp.task('styles:toolkit:lint', () => {
+gulp.task('styles:lint', () => {
   return gulp.src(config.styles.toolkit)
     .pipe(sassLint({ configFile: '.sass-lint.yml' }))
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError());
 });
 
-gulp.task('styles:toolkit:compile', () => {
+gulp.task('styles:compile', ['styles:lint'], () => {
   return gulp.src('./scss/toolkit.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
@@ -86,15 +83,10 @@ gulp.task('styles:landing', () => {
     }));
 });
 
-gulp.task('styles:toolkit', (done) => {
-  runSequence('styles:toolkit:lint', 'styles:toolkit:compile', done);
-});
-
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit'/*, 'styles:landing'*/]);
+gulp.task('styles', ['styles:fabricator', 'styles:compile']);
 
 
-// ..then compile all scripts to one (via webpack)
-gulp.task('scripts:compile', (done) => {
+gulp.task('scripts:fabricator', (done) => {
   webpack(webpackConfig, (err, stats) => {
     if (err) {
       gutil.log(gutil.colors.red(err()));
@@ -111,32 +103,32 @@ gulp.task('scripts:compile', (done) => {
   });
 });
 
-gulp.task('scripts:lint', (done) => {
-  gulp.src(config.scripts.toolkit)
-    .pipe(eslint.failAfterError());
-  done();
+gulp.task('scripts:lint', () => {
+  return gulp.src(config.scripts.toolkit)
+    .pipe(eslint())
+    .pipe(eslint.format());
 });
 
-gulp.task('scripts:new', () => {
+gulp.task('scripts:compile', ['scripts:lint'], () => {
   return gulp.src([
     'bower_components/jquery/dist/jquery.js',
     'bower_components/holderjs/holder.min.js',
     'bower_components/select2/dist/js/selectWoo.min.js',
-    'src/assets/toolkit/scripts/toolkit.js',
+    config.scripts.toolkit,
     'bower_components/bootstrap/js/dist/util.js',
     'bower_components/bootstrap/js/dist/carousel.js',
     'bower_components/bootstrap/js/dist/collapse.js'
   ])
-  .pipe(sourcemaps.init())
-  .pipe(concat("compiled-bundle.js"))
-  .pipe(gulp.dest("js"))
-  .pipe(rename("compiled-bundle.min.js"))
-  .pipe(uglify())
-  .pipe(sourcemaps.write("./"))
-  .pipe(gulp.dest("js"));
+    .pipe(sourcemaps.init())
+    .pipe(concat('compiled-bundle.js'))
+    .pipe(gulp.dest("js"))
+    .pipe(rename('compiled-bundle.min.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('js'));
 });
 
-gulp.task('scripts', ['scripts:lint', 'scripts:compile', 'scripts:new']);
+gulp.task('scripts', ['scripts:fabricator', 'scripts:compile']);
 
 
 /**
@@ -163,6 +155,7 @@ gulp.task('a11y', function() {
     }))
     .on('error', console.log)
 });
+
 // start BrowserSync and begin watching files
 gulp.task('serve', () => {
   browserSync.init({
@@ -182,11 +175,11 @@ gulp.task('serve', () => {
   gulp.watch('./src/**/*.{html,md,json,yml}', ['assembler:watch']);
 
   // watch for toolkit .scss changes
-  gulp.task('styles:toolkit:watch', ['styles:toolkit'], reload);
-  gulp.watch('./scss/**/*.scss', ['styles:toolkit:watch']);
+  gulp.task('styles:watch', ['styles:compile'], reload);
+  gulp.watch('./scss/**/*.scss', ['styles:watch']);
 
   // watch for toolkit .js changes
-  gulp.task('scripts:watch', ['scripts'], reload);
+  gulp.task('scripts:watch', ['scripts:compile'], reload);
   gulp.watch(config.scripts.toolkit, ['scripts:watch']);
 });
 

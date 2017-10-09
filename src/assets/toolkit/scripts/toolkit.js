@@ -1,14 +1,22 @@
-/**
- * Header and footer button functionality
- */
+function searchEsc(e) {
+  if (e.which === 27) {
+    e.preventDefault();
+    document.removeEventListener('keyup', searchEsc);
+    $('.search-module').removeClass('search-module--open');
+    $('.drawer').removeClass('open');
+    $('body').css('overflow', 'visible');
+  }
+}
+
+// header and footer
 $(function () {
   // toggles the mobile fa-bars menu
-  $('.navbar-toggler').click(function() {
+  $('.navbar-toggler').click(function () {
     $('#navbarCollapseLower').delay(600).toggle();
   });
 
-  // temp: toggles header/footer formats between unit-specific (e.g. School of Engineering) h/f and normal h/f
-  // (e.g. homepage)
+  // temp: toggles header/footer formats between unit-specific
+  // (e.g. School of Engineering) h/f and normal h/f (e.g. homepage)
   $('.header-toggler').click(function () {
     $('.core-nav').toggle();
     $('.compact-nav').toggle();
@@ -29,7 +37,7 @@ $(function () {
 
     if ($('.search-module--open')) {
       $('body').css('overflow', 'hidden');
-      document.addEventListener("keyup", searchEsc);
+      document.addEventListener('keyup', searchEsc);
     } else {
       $('body').css('overflow', 'visible');
     }
@@ -47,23 +55,20 @@ $(function () {
   $('.sitemap-toggle').click(function (e) {
     e.preventDefault();
     $('.drawer').toggleClass('open');
-    document.addEventListener("keyup", searchEsc);
+    document.addEventListener('keyup', searchEsc);
   });
 
   // dept switcher
   $('.custom-select').selectWoo({
-    theme: "bootstrap",
-    placeholder: 'Departments, Services, and Programs'
+    theme: 'bootstrap',
+    placeholder: 'Departments, Services, and Programs',
   }).on('select2:select', function (evt) {
     var dest = $(evt.params.data.element).data('target');
     // window.location = dest;
   });
 });
 
-
-/**
- * Department Switcher
- */
+// department switcher
 $(function () {
   var $switcher = $('.switcher');
 
@@ -72,13 +77,3 @@ $(function () {
     $switcher.toggleClass('two-column');
   });
 });
-
-function searchEsc(e) {
-  if (e.which === 27) {
-    e.preventDefault();
-    document.removeEventListener("keyup", searchEsc);
-    $('.search-module').removeClass('search-module--open');
-    $('.drawer').removeClass('open');
-    $('body').css('overflow', 'visible');
-  }
-}

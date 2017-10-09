@@ -82,7 +82,7 @@ Release Highlights:
     - Our Bootstrap variable overrides
     
 - `./js/` contains
-  - `./js/toolkit.js`
+  - `./js/compiled-bundle.js`
     - Our custom JS output by Webpack to include Bootstrap, jQuery, etc. code which it depends on
   - `./js/fabricator.js`
     - Fabricator's Webpack output JS

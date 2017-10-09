@@ -13,7 +13,7 @@ function getPlugins(isDev) {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({}),
   ];
-  
+
   if (isDev) {
     plugins.push(new webpack.NoErrorsPlugin());
   } else {
@@ -70,7 +70,6 @@ module.exports = (config) => {
     },
     resolve: {
       extensions: ['', '.js'],
-      // root: path.resolve('./bower_components/') // establish root as common path to our vendor JS files
     },
     plugins: getPlugins(config.dev),
     module: {
