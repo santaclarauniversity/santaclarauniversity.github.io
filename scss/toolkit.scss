@@ -37,10 +37,11 @@
 @import '../bower_components/bootstrap/scss/carousel';
 @import '../bower_components/bootstrap/scss/utilities';
 
-// Wordmark class adds responsive letter spacing
 // sass-lint:disable no-vendor-prefixes
 // sass-lint:disable indentation
 // sass-lint:disable mixins-before-declarations
+
+// Wordmark class adds responsive letter spacing
 .wordmark {
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -60,6 +61,7 @@
     @content;
   }
 }
+
 // sass-lint:enable mixins-before-declarations
 // sass-lint:enable indentation
 // sass-lint:enable no-vendor-prefixes
