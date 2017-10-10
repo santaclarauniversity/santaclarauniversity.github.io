@@ -26,7 +26,7 @@ $ cd scu-web-assets
 
 To build the toolkit:
 ```sh
-$ npm build
+$ npm start
 ```
 
 Successful launch will open a browser window to `http://localhost:3000` or `http://0.0.0.0:3000`.

@@ -103,13 +103,13 @@ gulp.task('scripts:fabricator', (done) => {
   });
 });
 
-gulp.task('scripts:lint', () => {
-  return gulp.src(config.scripts.toolkit)
-    .pipe(eslint())
-    .pipe(eslint.format());
-});
+// gulp.task('scripts:lint', () => {
+//   return gulp.src(config.scripts.toolkit)
+//     .pipe(eslint())
+//     .pipe(eslint.format());
+// });
 
-gulp.task('scripts:compile', ['scripts:lint'], () => {
+gulp.task('scripts:compile', () => {
   return gulp.src([
     'bower_components/jquery/dist/jquery.js',
     'bower_components/holderjs/holder.min.js',
