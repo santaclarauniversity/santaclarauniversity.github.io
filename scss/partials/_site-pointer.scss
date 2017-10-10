@@ -1,0 +1,64 @@
+.site-pointer {
+  @include transition(border .2s ease-in-out);
+
+  border: 1px solid $light-gray;
+  display: block;
+  padding: 5px;
+
+  &:hover {
+    border-color: darken($link-red, 15%);
+    text-decoration: none;
+
+    .single-image-with-link-body {
+      background-color: darken($brand-red, 5%);
+    }
+  }
+
+  .site-pointer-body {
+    @include transition(background-color .2s ease-in-out);
+
+    background-color: $brand-red;
+    border: 1px solid $maroon;
+    color: $white;
+    display: block;
+    font-size: 20px;
+    line-height: 1.2;
+    padding: 20px 19px 19px;
+  }
+}
+
+.site-pointer-navy {
+  @extend .site-pointer;
+
+  &:hover {
+    border-color: darken($navy, 15%);
+
+    .single-image-with-link-body {
+      background-color: darken($navy, 5%);
+    }
+  }
+  .site-pointer-body {
+    @include transition(background-color .2s ease-in-out);
+
+    background-color: $navy;
+    border: 1px solid darken($navy, 5%);
+  }
+}
+
+.site-pointer-stone {
+  @extend .site-pointer;
+
+  &:hover {
+    border-color: darken($stone, 15%);
+
+    .single-image-with-link-body {
+      background-color: darken($stone, 5%);
+    }
+  }
+  .site-pointer-body {
+    @include transition(background-color .2s ease-in-out);
+
+    background-color: $stone;
+    border: 1px solid darken($stone, 5%);
+  }
+}

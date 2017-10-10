@@ -42,6 +42,8 @@ Release Highlights:
   - Created new styles based on BS badges.
 - **Panels**
   - Panels are now deprecated in favor of Cards.
+- **Site Pointer**
+  - New secondary styles for site pointers.
 - **Person Spotlight**
   - Redesigned Person Spotlight to be more universal; removes overlay and introduces left/right card style.
   - Removed "compact" version of person spotlight, as it utilizes media list code.
