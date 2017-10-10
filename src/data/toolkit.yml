@@ -1,20 +1,20 @@
 version: "2.0.0-beta"
 colors:
-  primary:
+  Primary:
     brandRed:   "#b30738"
     linkRed:    "#9e1b32"
     maroon:     "#72001b"
     burgundy:   "#690521"
-  secondary:
+  Secondary:
     stone:      "#4e4540"
     navy:       "#021d52"
     beige:      "#dfdbd3"
     cream:      "#e9e8d5"
-  ui:
+  UI:
     success:    "#07b31b"
     warning:    "#f28300"
     info:       "#0754b3"
-  grayscale:
+  Grayscale:
     really-light-gray: "#e1e0e0"
     light-gray:        "#cecece"
     medium-gray:       "#6d6d6d"

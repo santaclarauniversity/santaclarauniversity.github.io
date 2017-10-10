@@ -19,6 +19,7 @@ $navy: #021d52;
 $beige: #dfdbd3;
 $black: #000;
 $white: #fff;
+$cream: #e9e8d5;
 
 $really-light-gray: #e1e0e0;
 $light-gray: #cecece;
@@ -42,7 +43,11 @@ $theme-colors: (
   warning: $brand-warning,
   danger: $brand-danger,
   light: $really-light-gray,
-  dark: $dark-gray
+  dark: $dark-gray,
+  navy: $navy,
+  stone: $stone,
+  beige: $beige,
+  cream: $cream
 );
 
 // Block
