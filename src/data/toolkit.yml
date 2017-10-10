@@ -6,13 +6,14 @@ colors:
     maroon:     "#72001b"
     burgundy:   "#690521"
   secondary:
-    success:    "#07b31b"
-    warning:    "#f28300"
-    info:       "#0754b3"
     stone:      "#4e4540"
     navy:       "#021d52"
     beige:      "#dfdbd3"
     cream:      "#e9e8d5"
+  ui:
+    success:    "#07b31b"
+    warning:    "#f28300"
+    info:       "#0754b3"
   grayscale:
     really-light-gray: "#e1e0e0"
     light-gray:        "#cecece"
