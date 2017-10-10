@@ -9,8 +9,8 @@
     border-color: darken($link-red, 15%);
     text-decoration: none;
 
-    .single-image-with-link-body {
-      background-color: darken($brand-red, 5%);
+    .site-pointer-body {
+      background-color: darken($brand-red, 3%);
     }
   }
 
@@ -23,7 +23,6 @@
     display: block;
     font-size: 20px;
     line-height: 1.2;
-    padding: 20px 19px 19px;
   }
 }
 
@@ -33,10 +32,11 @@
   &:hover {
     border-color: darken($navy, 15%);
 
-    .single-image-with-link-body {
-      background-color: darken($navy, 5%);
+    .site-pointer-body {
+      background-color: darken($navy, 3%);
     }
   }
+
   .site-pointer-body {
     @include transition(background-color .2s ease-in-out);
 
@@ -51,10 +51,11 @@
   &:hover {
     border-color: darken($stone, 15%);
 
-    .single-image-with-link-body {
-      background-color: darken($stone, 5%);
+    .site-pointer-body {
+      background-color: darken($stone, 3%);
     }
   }
+
   .site-pointer-body {
     @include transition(background-color .2s ease-in-out);
 
