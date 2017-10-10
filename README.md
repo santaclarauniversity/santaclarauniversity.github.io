@@ -22,17 +22,11 @@ $ git clone https://github.com/santaclarauniversity/scu-web-assets scu-web-asset
 $ cd scu-web-assets
 ```
 
-Get the project's dependencies:
-
-```sh
-$ npm install && bower install
-```
-
 #### Running the Toolkit
 
 To build the toolkit:
 ```sh
-$ gulp --dev
+$ npm build
 ```
 
 Successful launch will open a browser window to `http://localhost:3000` or `http://0.0.0.0:3000`.
