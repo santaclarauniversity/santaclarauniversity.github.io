@@ -5,22 +5,32 @@
   padding-bottom: 33.3333333%;
   position: relative;
 
-  .home {
-    height: 200px;
-    margin-top: 10px;
+  &.has-overlay {
+    &:hover,
+    &:active {
+      .windowpane-overlay {
+        opacity: 1;
+      }
 
-    .windowpane-background {
-      background-position: initial;
+      .windowpane-desc {
+        opacity: 0;
+      }
+    }
+
+    .windowpane-overlay {
+      position: absolute;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .75);
+      color: #fff;
+      opacity: 0;
+      transition: opacity .2s ease-in-out;
     }
   }
 
   .windowpane-desc {
     bottom: 1.5em;
     position: absolute;
-
-    &:hover > .windowpane-rollup {
-      opacity: .85;
-    }
+    transition: opacity .2s ease-in-out;
 
     &.introduction {
       top: 50%;
@@ -38,15 +48,6 @@
           color: $white;
         }
       }
-    }
-
-    .windowpane-rollup {
-      @include transition(opacity .7s);
-
-      background-color: $black;
-      color: $white;
-      padding: 8px;
-      opacity: 0;
     }
   }
 

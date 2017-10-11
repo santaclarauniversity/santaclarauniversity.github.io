@@ -8,39 +8,37 @@ notes: Windowpanes are bootstrap columns without padding/margins, which can crea
       <h1 class="text-serif text-inverted mt-4">Roadshow</h1>
     </div>
   </div>
-  <div class="col-md-4 col-sm-6 windowpane bg-img-left-center"
+  <div class="col-md-4 col-sm-6 windowpane has-overlay bg-img-left-center"
        style="background-image: url('/assets/images/examples/roadshow/seattle.jpg');">
-    <div class="windowpane-desc p-2">
-      <p class="windowpane-rollup">
-        Here's some information about this event. Here's some information about this event.Here's some information about
-        this event.Here's some information about this event.
-      </p>
-      <h1 class="text-highlight-black">
-				<strong class="highlight">
-					Seattle
-				</strong>
-      </h1>
-      <p class="mt-3 text-highlight-black">
-				<strong class="highlight">
-					Wiley Home - August 21, 2016
-				</strong>
-      </p>
+    <div class="windowpane-overlay p-3 text-sans-light">
+      <p class="h3 mb-0">Seattle</p>
+      <p class="small">Wiley Home</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cumque dolore dolorum expedita illo illum modi, molestias nam necessitatibus nemo nihil nisi odit officiis perspiciatis quae quibusdam suscipit totam, vero.</p>
       <p class="mt-3">
         <button type="button" class="btn btn-primary btn-sm">Event Details</button>
       </p>
     </div>
+    <div class="windowpane-desc p-2">
+      <p class="h2 text-highlight-black">
+				<span class="highlight">
+					Seattle
+				</span>
+      </p>
+      <p class="mt-3 text-highlight-black">
+				<span class="highlight">
+					Wiley Home - August 21, 2016
+				</span>
+      </p>
+      <p class="mt-3">
+        <button type="button" class="btn btn-primary btn-sm d-md-none">Details</button>
+      </p>
+    </div>
   </div>
-  <div class="col-md-4 col-sm-6 windowpane" style="background-color: lightslategrey">
-    <div class="windowpane-desc full-panel p-2">
-      <h2 class="text-sans-light text-inverted">2016 Roadshow</h2>
-      <br>
-      <div class="list-group">
-        <li class="list-group-item"><a href="#">About</a></li>
-        <li class="list-group-item"><a href="#">Event Registration</a></li>
-        <li class="list-group-item"><a href="#">Volunteer</a></li>
-        <li class="list-group-item"><a href="#">Our Stories</a></li>
-        <li class="list-group-item"><a href="#">Contact</a></li>
-      </div>
+  <div class="col-md-4 col-sm-6 windowpane bg-cream">
+    <div class="windowpane-desc full-panel p-4">
+      <h3>A Text Header</h3>
+      <p>Short text works best here. Text can be cutoff on mobile and some desktop displays, so keep copy concise.</p>
+      <p>If you have more to say, you may want to try an overlay.</p>
     </div>
   </div>
 </div>

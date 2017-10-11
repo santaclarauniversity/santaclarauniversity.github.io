@@ -52,6 +52,9 @@ Release Highlights:
   - https://github.com/santaclarauniversity/scu-web-assets/issues/78
 - **Highlight (formerly Ribbons)**
   - Refactored ribbon code to work correctly across all browsers; renamed to Highlight. See [Wrapping Highlighted Text.](https://codepen.io/hotmeteor/pen/ibvJs)
+- **Windowpane**
+  - A new UI interaction has been added to Windowpanes. Using the `.has-overlay` class, an overlay will appear when hovering over a windowpane. This was often requested as a way to add more information about an item without going to a page. The overlay must have a call-to-action. This call to action will show on mobile devices where `:hover` states are not shown. The `list-group` option, though still supported, is not shown in the demo. These items would often overflow the Windowpane container.
+
 
 ### Templates and Documentation
 - **Typography**
@@ -67,6 +70,7 @@ Release Highlights:
   - Added [Header and Footer Guidelines](/docs.html#header-and-footer-guidelines).
 - **Landing Pages**
   - Landing page templates have been removed from the public build but are still available in local code branches; the licenses for these templates do not specify if they can be made available within our toolkit and have been removed.
+  - A number of prototypes have been removed from the Toolkit.
 
 ### Fabricator and Build
 
