@@ -4,7 +4,9 @@
 
 Our header system is designed to be user-friendly, accessible, and flexible. The header design has two primary layouts, **core layout** and **customized layout**:
 
-#### Core Layout
+---
+
+<h4 class="text-primary">Core Layout</h4>
 
 The core layout is a general SCU header and navigation.
 
@@ -19,7 +21,9 @@ The core layout is a general SCU header and navigation.
 **Not used for:**
 * Schools, initiatives, or centers (use Customized Layout)
 
-#### Customized Layout
+---
+
+<h4 class="text-primary">Customized Layout</h4>
 
 The customized layout is intended for use on pages with their own visual identity or where a segment-specific navigation improves user experience.
 
@@ -35,7 +39,7 @@ The branding section, by default, is a text-based logo set in Trade Light with t
 
 This header is designed to flex vertically if your content exceeds the height of the bar. If you are looking to use a graphic, it should be **280px** wide. 
 
-<TODO: screenshots of graphic headers>
+<img src="/assets/images/template-examples/custom-layout-with-graphic.png" alt="Customized Layout with Image Logo" style="width: 100%">
 
 ###### Navigation Options
 
@@ -43,7 +47,7 @@ We have tested the header with up to **seven (7)** navigation items, and encoura
 
 **Do not:**
 * Modify or remove the "Santa Clara University" branding/homepage link in the topmost bar.
-* Remove or change the Search icon or the signpost icon.
+* Remove or change the Search icon or modify the search placeholders or behavior.
 
 ### Footer Guidelines
 
@@ -67,6 +71,6 @@ Here are some examples of common pages that work well in a footer:
 * Contact Us
 
 **Do not:**
-* Modify or remove the "Santa Clara University" branding/homepage link in the bottom-most bar.
-* Remove or change the Login, Facebook, or Twitter bar icons in the bottom-most bar.
-* Remove the accessibility link or copyright information.
+* Modify or remove the **Santa Clara University** branding/homepage link in the bottom-most bar.
+* Remove or change the **Login**, **Facebook**, or **Twitter** icons in the bottom-most bar.
+* Remove the Accessibility link or copyright information.

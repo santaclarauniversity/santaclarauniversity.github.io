@@ -1,71 +1,133 @@
-function searchEsc(e) {
-  if (e.which === 27) {
-    e.preventDefault();
-    document.removeEventListener('keyup', searchEsc);
-    $('.search-module').removeClass('search-module--open');
-    $('.drawer').removeClass('open');
-    $('body').css('overflow', 'visible');
+var SCU = {
+  dev: function () {
+    $('.navbar-toggler').click(function () {
+      $('#navbarCollapseLower').delay(600).toggle();
+    });
+
+    $('.header-toggler').show().click(function () {
+      $('.core-nav').toggle();
+      $('.compact-nav').toggle();
+    });
+
+    $('#footer-toggler').show().click(function () {
+      $('.footer-core').toggle();
+      $('.footer-subfooter').toggle();
+    });
   }
-}
+};
+
+var Search = {
+  init: function () {
+    this.attachListener();
+  },
+  openSearch: function () {
+    $('.search-module').toggleClass('search-module--open');
+    $('input.gsc-input').focus().val('');
+    $('body').css('overflow', 'hidden');
+    this.searchOpenListeners();
+    this.setupDepartments();
+  },
+  attachListener: function () {
+    $('.fa-search').click(function (e) {
+      e.preventDefault();
+      Search.openSearch();
+    });
+  },
+  searchOpenListeners: function () {
+    this.searchOpenEscListener();
+    this.searchCloseListener();
+    this.searchClearFieldListener();
+    $(".gsc-input").on("change paste keyup", function () {
+      $('.search-header').fadeOut();
+      $('.search-module-results').show();
+    });
+  },
+  searchCloseListener: function () {
+    $('.close-btn').click(function (e) {
+      e.preventDefault();
+      $('.search-module-results').hide();
+      $('.search-module').removeClass('search-module--open');
+      $('.search-header').show();
+      $('body').css('overflow', 'visible');
+    });
+  },
+  resetSearch: function () {
+    $(document).off('keyup');
+    $(".gsc-input").off("change paste keyup");
+  },
+  setupDepartments: function () {
+    $('.custom-select').selectWoo({
+      theme: 'bootstrap',
+      placeholder: 'Departments, Services, and Programs',
+    }).on('select2:select', function (evt) {
+      var dest = $(evt.params.data.element).data('target');
+      // window.location = dest;
+    });
+  },
+  searchOpenEscListener: function () {
+    $(document).on('keyup', function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        $('.search-module').removeClass('search-module--open');
+        $('.search-module-results').hide();
+        $('body').css('overflow', 'visible');
+        Search.resetSearch();
+      }
+    });
+  },
+  searchClearFieldListener: function () {
+    $(document).on('keyup', function (evt) {
+      // (ignore ESC key)
+      if (evt.keyCode !== 27 && !$('input.gsc-input').val()) {
+        $('.search-header').show();
+      }
+    });
+  }
+};
 
 // header and footer
 $(function () {
-  // toggles the mobile fa-bars menu
-  $('.navbar-toggler').click(function () {
-    $('#navbarCollapseLower').delay(600).toggle();
-  });
-
-  // temp: toggles header/footer formats between unit-specific
-  // (e.g. School of Engineering) h/f and normal h/f (e.g. homepage)
-  $('.header-toggler').click(function () {
-    $('.core-nav').toggle();
-    $('.compact-nav').toggle();
-  });
-
-  $('#footer-toggler').click(function () {
-    $('.footer-core').toggle();
-    $('.footer-subfooter').toggle();
-  });
-
-  // toggles search overlay
-  $('.fa-search').click(function (e) {
-    e.preventDefault();
-
-    $('.search-module').toggleClass('search-module--open');
-    $('input.gsc-input').focus();
-    $('input.gsc-input').val('');
-
-    if ($('.search-module--open')) {
-      $('body').css('overflow', 'hidden');
-      document.addEventListener('keyup', searchEsc);
+  Search.init();
+  var myCallback = function myCallback() {
+    if (document.readyState === 'complete') {
+      // Document is ready when CSE element is initialized.
+      // Render an element with both search box and search results in div with id 'test'.
+      google.search.cse.element.render({
+        div: 'search-input',
+        tag: 'searchbox'
+      }, {
+        div: "search-module-results",
+        tag: 'searchresults'
+      });
     } else {
-      $('body').css('overflow', 'visible');
+      // Document is not ready yet, when CSE element is initialized.
+      google.setOnLoadCallback(function () {
+        // Render an element with both search box and search results in div with id 'test'.
+        google.search.cse.element.render({
+          div: 'search-input',
+          tag: 'searchbox'
+        }, {
+          div: "search-module-results",
+          tag: 'searchresults'
+        });
+      }, true);
     }
-  });
+  };
 
-  // closes search via X button
-  $('.close-btn').click(function (e) {
-    e.preventDefault();
+// Insert it before the CSE code snippet so that cse.js can take the script
+// parameters, like parsetags, callbacks.
+  window.__gcse = {
+    parsetags: 'explicit',
+    callback: myCallback
+  };
 
-    $('.drawer').removeClass('open');
-    $('.search-module').removeClass('search-module--open');
-  });
+  var cx = '015735913753929981099:fyhgumyaibi'; // Insert your own Custom Search engine ID here
+  var gcse = document.createElement('script');gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
 
-  // toggles sitemap
-  $('.sitemap-toggle').click(function (e) {
-    e.preventDefault();
-    $('.drawer').toggleClass('open');
-    document.addEventListener('keyup', searchEsc);
-  });
-
-  // dept switcher
-  $('.custom-select').selectWoo({
-    theme: 'bootstrap',
-    placeholder: 'Departments, Services, and Programs',
-  }).on('select2:select', function (evt) {
-    var dest = $(evt.params.data.element).data('target');
-    // window.location = dest;
-  });
 });
 
 // department switcher

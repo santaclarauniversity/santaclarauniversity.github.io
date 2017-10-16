@@ -1,6 +1,6 @@
 <!-- Google Search module -->
 <div id="search-module" class="search-module">
-  <div id="input-container" class="search-module-input-container">
+  <div id="input-container" class="search-module-input-container bg-primary">
     <div class="container-fluid">
       <button class="close-btn">
         <svg class="close" viewBox="0 0 21.3 19.5">
@@ -14,34 +14,11 @@
       <div id="search-input" class="search-input"></div>
     </div>
   </div>
-  <div class="container-fluid search-module-container">
-    <div class="row">
-      <div class="col-12 col-md-8 mx-auto">
-        <div id="search-module-results" class="search-module-results"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- /Google Search module -->
-
-<!-- Sitemap drawer -->
-<div class="drawer">
-  <div class="block">
-    <button class="close-btn b-0">
-      <svg class="close" viewBox="0 0 21.3 19.5">
-        <g>
-          <path d="M17.8,3.7L4.6,16.9c-0.3,0.3-0.8,0.3-1.1,0c-0.3-0.3-0.3-0.8,0-1.1L16.7,2.6c0.3-0.3,0.8-0.3,1.1,0C18.1,2.9,18.1,3.4,17.8,3.7z"></path>
-          <path d="M16.7,16.9L3.5,3.7c-0.3-0.3-0.3-0.8,0-1.1s0.8-0.3,1.1,0l13.2,13.2c0.3,0.3,0.3,0.8,0,1.1C17.5,17.2,17,17.2,16.7,16.9z"></path>
-        </g>
-      </svg>
-      <span class="sr-only">Close Search Overlay</span>
-    </button>
-    <div class="container pt-2 pt-md-0">
-      <div class="row mt-3">
-        <div class="col">
-          <h2 class="text-primary text-uppercase wordmark">Santa Clara University</h2>
-          <p class="text-muted">The Jesuit University in Silicon Valley.</p>
-        </div>
+  <div class="container search-module-container">
+    <div class="pt-5 search-header">
+      <h3 class="text-serif text-primary">Search SCU</h3>
+      <hr>
+      <div class="row">
         <div class="col">
           <ul class="list-unstyled list-spaced">
             <li><h6 class="text-uppercase">Information for</h6></li>
@@ -51,142 +28,144 @@
             <li><a href="#">Alumni</a></li>
             <li><a href="#">Visitors</a></li>
           </ul>
+        </div>
+        <div class="col">
           <ul class="list-unstyled list-spaced">
             <li><h6 class="text-uppercase">Departments and Services</h6></li>
             <li><select name="departments" id="departments-and-services" class="custom-select form-control">
               <option></option>
               <optgroup label="Programs and Services">
-              <option data-target=/is/academic-technology/>Academic Technology</option>
-              <option data-target=/access/>ACCESS Card Office</option>
-              <option data-target=/admitted/>Admitted Students</option>
-              <option data-target=/alumni/>Alumni Association</option>
-              <option data-target=/arts/>Arts at SCU</option>
-              <option data-target=/auxiliary-services/>Auxiliary Services</option>
-              <option data-target=/benson/>Benson Center</option>
-              <option data-target=/fellows/>Board of Fellows</option>
-              <option data-target=/auxiliary-services/bookstore/>Bookstore</option>
-              <option data-target=/athletics/broncobench/>Bronco Bench Foundation</option>
-              <option data-target=/ubo/>Budget Office</option>
-              <option data-target=/bursar/>Bursar</option>
-              <option data-target=/cm/>Campus Ministry</option>
-              <option data-target=https://university-operations.scu.edu//campus-safety/>Campus Safety</option>
-              <option data-target=/careercenter/>Career Center</option>
-              <option data-target=/globalengagement/study-abroad/casa/>Casa de la Solaridad</option>
-              <option data-target=/csi/>Center for Student Involvement</option>
-              <option data-target=/character/>Character Education</option>
-              <option data-target=/commencement/>Commencement</option>
-              <option data-target=/auxiliary-services/conference-services/>Conference Services</option>
-              <option data-target=/controller/>Controller's Office</option>
-              <option data-target=/provost/core/>Core Curriculum</option>
-              <option data-target=/cowell/>Cowell Center for Health</option>
-              <option data-target=/desaisset/>de Saisset Museum</option>
-              <option data-target=/disabilities/>Disabilities Resources</option>
-              <option data-target=/drahmann/>Drahmann Center for Advising and Learning</option>
-              <option data-target=/title-ix/>EEO and Title IX</option>
-              <option data-target=/epo/>Event Planning</option>
-              <option data-target=/university-operations/facilities/>Facilities</option>
-              <option data-target=/provost/teaching-and-learning/faculty-collaborative-for-teaching-innovation/>Faculty Collaborative for Teaching Innovation</option>
-              <option data-target=/provost/teaching-and-learning/faculty-development/>Faculty Development</option>
-              <option data-target=/faculty-senate/>Faculty Senate</option>
-              <option data-target=/familyweekend/>Family Weekend</option>
-              <option data-target=/fellowships/>Fellowships</option>
-              <option data-target=/fa/>Finance & Administration</option>
-              <option data-target=/financialaid/>Financial Aid</option>
-              <option data-target=/generalcounsel/>General Counsel</option>
-              <option data-target=/globalengagement/>Global Engagement Office</option>
-              <option data-target=/golden-circle/>Golden Circle</option>
-              <option data-target=/governance/>Governance</option>
-              <option data-target=/honors/>Honors Program</option>
-              <option data-target=/provost/writingcenter/>HUB Writing Center</option>
-              <option data-target=/hr/>Human Resources</option>
-              <option data-target=/is/secure/>Information Security</option>
-              <option data-target=/is/>Information Services</option>
-              <option data-target=/is/it/>Information Technology</option>
-              <option data-target=/provost/institutional-effectiveness/>Institutional Effectiveness</option>
-              <option data-target=/institutional-research/>Institutional Research</option>
-              <option data-target=/globalengagement/international-students/>International Student Services</option>
-              <option data-target=/scujesuits/>Jesuit Community</option>
-              <option data-target=/johnsonscholars/>Johnson Scholars</option>
-              <option data-target=/kids-on-campus/>Kids on Campus</option>
-              <option data-target=/lead/>LEAD Scholars</option>
-              <option data-target=/locatelli-center/>Locatelli Student Activity Center</option>
-              <option data-target=/is/academic-technology/>Media Services</option>
-              <option data-target=/missionchurch/>Mission Church</option>
-              <option data-target=/osl/off-campus-living/>Off-Campus Living</option>
-              <option data-target=/provost/institutional-effectiveness/assessment/>Office of Assessment</option>
-              <option data-target=/diversity/>Office for Diversity and Inclusion</option>
-              <option data-target=/oml/>Office for Multicultural Learning</option>
-              <option data-target=/president/>Office of the President</option>
-              <option data-target=/provost/>Office of the Provost</option>
-              <option data-target=/osl/>Office of Student Life</option>
-              <option data-target=/living/>On-Campus Living</option>
-              <option data-target=/onestop/>One Stop Enrollment</option>
-              <option data-target=/admitted/new-student-orientation/>Orientation</option>
-              <option data-target=/osher/>OSHER Center for Lifelong Learning</option>
-              <option data-target=/provost/peer-educator/>Peer Educator Program</option>
-              <option data-target=/provost/policies-and-procedures/>Policies and Procedures</option>
-              <option data-target=/speakerseries/>President’s Speaker Series</option>
-              <option data-target=/uss/purchasing/>Purchasing</option>
-              <option data-target=/recreation/>Recreation</option>
-              <option data-target=/registrar/>Registrar</option>
-              <option data-target=/provost/research/>Research</option>
-              <option data-target=/login/>SCU Login</option>
-              <option data-target=http://scupresents.org/>SCU Presents</option>
-              <option data-target=/staffsenate/>Staff Senate</option>
-              <option data-target=/globalengagement/study-abroad/>Study Abroad</option>
-              <option data-target=/summer/>Summer Sessions</option>
-              <option data-target=/sustainability/>Sustainability</option>
-              <option data-target=/technology/>Technology at SCU</option>
-              <option data-target=/training/>Technology Training</option>
-              <option data-target=/finance/>University Finance Office</option>
-              <option data-target=/library/>University Library</option>
-              <option data-target=/umc/>University Marketing and Communications</option>
-              <option data-target=/university-operations/>University Operations</option>
-              <option data-target=/uss/>University Support Services</option>
-              <option data-target=/vice-provost-for-student-life/>Vice Provost for Student Life</option><option data-target=/wellness/>Wellness</option>
-              <optgroup label="College of Arts and Sciences">
-                <option data-target="/cas/anthropology">Anthropology</option>
-                <option>Art and Art History</option>
-                <option>Biology</option>
-                <option>Chemistry and Biochemistry</option>
-                <option>Classics</option>
-                <option>Communication</option>
-                <option>English</option>
-                <option>Environmental Studies</option>
-                <option>Ethnic Studies</option>
-                <option>History</option>
-                <option>Liberal Studies</option>
-                <option>Math and Computer Science</option>
-                <option>Military Science</option>
-                <option>Modern Languages and Literatures</option>
-                <option>Music</option>
-                <option>Philosophy</option>
-                <option>Physics</option>
-                <option>Political Science</option>
-                <option>Psychology</option>
-                <option>Public Health</option>
-                <option>Religious Studies</option>
-                <option>Sociology</option>
-                <option>Theatre and Dance</option>
-                <option>Women's and Gender Studies</option>
-              </optgroup>
-              <optgroup label="School of Engineering">
-                <option>Bioengineering</option>
-                <option>Civil Engineering</option>
-                <option>Computer Science and Engineering</option>
-                <option>Electrical Engineering</option>
-                <option>Mechanical Engineering</option>
-                <option>Web Design and Engineering</option>
-              </optgroup>
-              <optgroup label="Leavey School of Business">
-                <option>Accounting</option>
-                <option>Accounting & Information Systems</option>
-                <option>Economics</option>
-                <option>Finance</option>
-                <option>Management</option>
-                <option>Marketing</option>
-                <option>Management Information Systems (in the department of OMIS)</option>
-              </optgroup>
+                <option data-target=/is/academic-technology/>Academic Technology</option>
+                <option data-target=/access/>ACCESS Card Office</option>
+                <option data-target=/admitted/>Admitted Students</option>
+                <option data-target=/alumni/>Alumni Association</option>
+                <option data-target=/arts/>Arts at SCU</option>
+                <option data-target=/auxiliary-services/>Auxiliary Services</option>
+                <option data-target=/benson/>Benson Center</option>
+                <option data-target=/fellows/>Board of Fellows</option>
+                <option data-target=/auxiliary-services/bookstore/>Bookstore</option>
+                <option data-target=/athletics/broncobench/>Bronco Bench Foundation</option>
+                <option data-target=/ubo/>Budget Office</option>
+                <option data-target=/bursar/>Bursar</option>
+                <option data-target=/cm/>Campus Ministry</option>
+                <option data-target=https://university-operations.scu.edu//campus-safety/>Campus Safety</option>
+                <option data-target=/careercenter/>Career Center</option>
+                <option data-target=/globalengagement/study-abroad/casa/>Casa de la Solaridad</option>
+                <option data-target=/csi/>Center for Student Involvement</option>
+                <option data-target=/character/>Character Education</option>
+                <option data-target=/commencement/>Commencement</option>
+                <option data-target=/auxiliary-services/conference-services/>Conference Services</option>
+                <option data-target=/controller/>Controller's Office</option>
+                <option data-target=/provost/core/>Core Curriculum</option>
+                <option data-target=/cowell/>Cowell Center for Health</option>
+                <option data-target=/desaisset/>de Saisset Museum</option>
+                <option data-target=/disabilities/>Disabilities Resources</option>
+                <option data-target=/drahmann/>Drahmann Center for Advising and Learning</option>
+                <option data-target=/title-ix/>EEO and Title IX</option>
+                <option data-target=/epo/>Event Planning</option>
+                <option data-target=/university-operations/facilities/>Facilities</option>
+                <option data-target=/provost/teaching-and-learning/faculty-collaborative-for-teaching-innovation/>Faculty Collaborative for Teaching Innovation</option>
+                <option data-target=/provost/teaching-and-learning/faculty-development/>Faculty Development</option>
+                <option data-target=/faculty-senate/>Faculty Senate</option>
+                <option data-target=/familyweekend/>Family Weekend</option>
+                <option data-target=/fellowships/>Fellowships</option>
+                <option data-target=/fa/>Finance & Administration</option>
+                <option data-target=/financialaid/>Financial Aid</option>
+                <option data-target=/generalcounsel/>General Counsel</option>
+                <option data-target=/globalengagement/>Global Engagement Office</option>
+                <option data-target=/golden-circle/>Golden Circle</option>
+                <option data-target=/governance/>Governance</option>
+                <option data-target=/honors/>Honors Program</option>
+                <option data-target=/provost/writingcenter/>HUB Writing Center</option>
+                <option data-target=/hr/>Human Resources</option>
+                <option data-target=/is/secure/>Information Security</option>
+                <option data-target=/is/>Information Services</option>
+                <option data-target=/is/it/>Information Technology</option>
+                <option data-target=/provost/institutional-effectiveness/>Institutional Effectiveness</option>
+                <option data-target=/institutional-research/>Institutional Research</option>
+                <option data-target=/globalengagement/international-students/>International Student Services</option>
+                <option data-target=/scujesuits/>Jesuit Community</option>
+                <option data-target=/johnsonscholars/>Johnson Scholars</option>
+                <option data-target=/kids-on-campus/>Kids on Campus</option>
+                <option data-target=/lead/>LEAD Scholars</option>
+                <option data-target=/locatelli-center/>Locatelli Student Activity Center</option>
+                <option data-target=/is/academic-technology/>Media Services</option>
+                <option data-target=/missionchurch/>Mission Church</option>
+                <option data-target=/osl/off-campus-living/>Off-Campus Living</option>
+                <option data-target=/provost/institutional-effectiveness/assessment/>Office of Assessment</option>
+                <option data-target=/diversity/>Office for Diversity and Inclusion</option>
+                <option data-target=/oml/>Office for Multicultural Learning</option>
+                <option data-target=/president/>Office of the President</option>
+                <option data-target=/provost/>Office of the Provost</option>
+                <option data-target=/osl/>Office of Student Life</option>
+                <option data-target=/living/>On-Campus Living</option>
+                <option data-target=/onestop/>One Stop Enrollment</option>
+                <option data-target=/admitted/new-student-orientation/>Orientation</option>
+                <option data-target=/osher/>OSHER Center for Lifelong Learning</option>
+                <option data-target=/provost/peer-educator/>Peer Educator Program</option>
+                <option data-target=/provost/policies-and-procedures/>Policies and Procedures</option>
+                <option data-target=/speakerseries/>President’s Speaker Series</option>
+                <option data-target=/uss/purchasing/>Purchasing</option>
+                <option data-target=/recreation/>Recreation</option>
+                <option data-target=/registrar/>Registrar</option>
+                <option data-target=/provost/research/>Research</option>
+                <option data-target=/login/>SCU Login</option>
+                <option data-target=http://scupresents.org/>SCU Presents</option>
+                <option data-target=/staffsenate/>Staff Senate</option>
+                <option data-target=/globalengagement/study-abroad/>Study Abroad</option>
+                <option data-target=/summer/>Summer Sessions</option>
+                <option data-target=/sustainability/>Sustainability</option>
+                <option data-target=/technology/>Technology at SCU</option>
+                <option data-target=/training/>Technology Training</option>
+                <option data-target=/finance/>University Finance Office</option>
+                <option data-target=/library/>University Library</option>
+                <option data-target=/umc/>University Marketing and Communications</option>
+                <option data-target=/university-operations/>University Operations</option>
+                <option data-target=/uss/>University Support Services</option>
+                <option data-target=/vice-provost-for-student-life/>Vice Provost for Student Life</option><option data-target=/wellness/>Wellness</option>
+                <optgroup label="College of Arts and Sciences">
+                  <option data-target="/cas/anthropology">Anthropology</option>
+                  <option>Art and Art History</option>
+                  <option>Biology</option>
+                  <option>Chemistry and Biochemistry</option>
+                  <option>Classics</option>
+                  <option>Communication</option>
+                  <option>English</option>
+                  <option>Environmental Studies</option>
+                  <option>Ethnic Studies</option>
+                  <option>History</option>
+                  <option>Liberal Studies</option>
+                  <option>Math and Computer Science</option>
+                  <option>Military Science</option>
+                  <option>Modern Languages and Literatures</option>
+                  <option>Music</option>
+                  <option>Philosophy</option>
+                  <option>Physics</option>
+                  <option>Political Science</option>
+                  <option>Psychology</option>
+                  <option>Public Health</option>
+                  <option>Religious Studies</option>
+                  <option>Sociology</option>
+                  <option>Theatre and Dance</option>
+                  <option>Women's and Gender Studies</option>
+                </optgroup>
+                <optgroup label="School of Engineering">
+                  <option>Bioengineering</option>
+                  <option>Civil Engineering</option>
+                  <option>Computer Science and Engineering</option>
+                  <option>Electrical Engineering</option>
+                  <option>Mechanical Engineering</option>
+                  <option>Web Design and Engineering</option>
+                </optgroup>
+                <optgroup label="Leavey School of Business">
+                  <option>Accounting</option>
+                  <option>Accounting & Information Systems</option>
+                  <option>Economics</option>
+                  <option>Finance</option>
+                  <option>Management</option>
+                  <option>Marketing</option>
+                  <option>Management Information Systems (in the department of OMIS)</option>
+                </optgroup>
             </select></li>
           </ul>
         </div>
@@ -209,9 +188,14 @@
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-12 col-md-8 mx-auto">
+        <div id="search-module-results" class="search-module-results" style="display: none;"></div>
+      </div>
+    </div>
   </div>
 </div>
-<!-- /Sitemap drawer -->
+<!-- /Google Search module -->
 
 <!-- Normal header -->
 <header class="navigation core-nav bg-primary">
@@ -229,10 +213,6 @@
           <a href="#" class="px-3">
             <i class="fa fa-search"></i>
             <span class="sr-only">Search</span>
-          </a>
-          <a href="/sitemap" class="sitemap-toggle">
-            <img src="../../../../assets/images/address.svg" alt="Sitemap" />
-            <span class="sr-only">Site Map</span>
           </a>
         </div>
       </div>
@@ -284,10 +264,6 @@
             <i class="fa fa-search"></i>
             <span class="sr-only">Search</span>
           </a>
-          <a href="/sitemap" class="sitemap-toggle">
-            <img src="../../../../assets/images/address.svg" alt="Sitemap" />
-            <span class="sr-only">Site Map</span>
-          </a>
         </div>
       </div>
     </div>
@@ -324,54 +300,15 @@
     z-index: 99;
     background-color: #b30738;
     color: white;
+    display: none;
+  }
+  #footer-toggler {
+    display: none;
   }
 </style>
 <span class="header-toggler p-3">Toggle Header</span>
 
 <script type="text/javascript">
   // gse
-  let myCallback = function() {
-    if (document.readyState === 'complete') {
-      // Document is ready when CSE element is initialized.
-      // Render an element with both search box and search results in div with id 'test'.
-      google.search.cse.element.render(
-        {
-          div: 'search-input',
-          tag: 'searchbox'
-        },
-        {
-          div: "search-module-results",
-          tag: 'searchresults'
-        });
-    } else {
-      // Document is not ready yet, when CSE element is initialized.
-      google.setOnLoadCallback(function() {
-        // Render an element with both search box and search results in div with id 'test'.
-        google.search.cse.element.render(
-          {
-            div: 'search-input',
-            tag: 'searchbox'
-          },
-          {
-            div: "search-module-results",
-            tag: 'searchresults'
-          });
-      }, true);
-    }
-  };
 
-  // Insert it before the CSE code snippet so that cse.js can take the script
-  // parameters, like parsetags, callbacks.
-  window.__gcse = {
-    parsetags: 'explicit',
-    callback: myCallback
-  };
-
-  (function() {
-    let cx = '015735913753929981099:fyhgumyaibi'; // Insert your own Custom Search engine ID here
-    let gcse = document.createElement('script'); gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    let s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
-  })();
 </script>

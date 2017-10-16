@@ -95,60 +95,12 @@
   line-height: 1;
 }
 
-
-// drawer
-.drawer {
-  background: rgba(255, 255, 255, .98);
-  color: $black;
-  height: 0;
-  left: 0;
-  opacity: 0;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  transition: opacity .15s, height 0s .15s;
-  visibility: hidden;
-  width: 100%;
-  z-index: 50;
-
-  a {
-    transition: initial;
-  }
-
-  .close-btn {
-    background: none;
-    border: 0;
-    cursor: pointer;
-    display: inline-block;
-    fill: $black;
-    padding: .5rem;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    transition: fill .15s;
-  }
-}
-
-.drawer.open {
-  height: 100%;
-  opacity: .98;
-  visibility: visible;
-  transition: opacity .15s, height 0s;
-}
-
-
-// search
-.search-module-container {
-  background-color: rgba(239, 239, 239, .98);
-  margin-top: -.5rem;
-}
-
 .search-form {
   position: relative;
 }
 
 .search-module {
-  font-weight: 600;
+  background-color: rgba(255, 255, 255, .98);
   left: 0;
   max-height: 0;
   opacity: 0;
@@ -156,13 +108,12 @@
   position: fixed;
   top: 0;
   transform: translateY(2.025rem) scale(1.1);
-  transition: opacity .35s ease-in-out, transform .35s step-end, max-height .35s step-end;
+  transition: opacity .2s ease-in-out, transform .2s step-end, max-height .2s step-end;
   visibility: hidden;
   width: 100vw;
   z-index: 50;
 
   .search-module-input-container {
-    background: $brand-primary;
     min-height: 9rem;
     padding-top: 1rem;
     position: relative;
@@ -177,7 +128,6 @@
     height: calc(100vh - 9rem);
     overflow: scroll;
     position: relative;
-    transition: height .3s, background-color .2s ease-out;
     z-index: 10;
 
     @include media-breakpoint-down(sm) {
@@ -200,7 +150,7 @@
   max-height: 100vh;
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition: opacity .35s ease-in-out, transform .3s;
+  transition: opacity .2s ease-in-out, transform .2s;
   visibility: visible;
 }
 
