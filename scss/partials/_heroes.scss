@@ -1,11 +1,29 @@
+$hero-xs-height: 300px;
+$hero-sm-height: 375px;
+$hero-md-height: 400px;
+$hero-lg-height: 450px;
+
 .jumbotron.hero {
   @extend .text-white;
 
   background-position: 50% 20%;
   background-size: cover;
+  min-height: $hero-xs-height;
 
   .container {
     position: relative;
+  }
+
+  @include media-breakpoint-up(sm) {
+    min-height: $hero-sm-height;
+  }
+
+  @include media-breakpoint-up(md) {
+    min-height: $hero-md-height;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: $hero-lg-height;
   }
 
   h1 {
