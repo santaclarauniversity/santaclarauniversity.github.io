@@ -187,8 +187,6 @@
 b,
 strong {
   @extend .sans-serif-font-bold;
-
-  font-weight: 400;
 }
 
 i,
@@ -228,6 +226,15 @@ i b {
 
 a {
   transition: color .15s;
+}
+
+.text-white a:not(.btn) {
+  text-decoration: underline;
+  color: #dfdbd3;
+
+  &:hover {
+    color: darken(#dfdbd3, 15%);
+  }
 }
 // sass-lint:enable no-ids
 

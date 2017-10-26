@@ -1,5 +1,5 @@
 .side-navigation-header {
-  color: $medium-gray;
+  color: $gray-700;
   display: block;
   font-size: 16px;
   line-height: 2em;
@@ -14,7 +14,7 @@
 
 .side-navigation {
   & > ul {
-    border-right: 3px solid $really-light-gray;
+    border-right: 3px solid $gray-200;
     font-size: 19px;
     line-height: (24em/19);
     list-style: none;
@@ -27,7 +27,7 @@
       padding: 0;
 
       &:hover {
-        border-left: 8px solid $really-light-gray;
+        border-left: 8px solid $gray-200;
       }
 
       a {
@@ -42,13 +42,13 @@
 
       & > span {
         & > a {
-          border-bottom: 1px solid $light-gray;
+          border-bottom: 1px solid $gray-300;
           padding: 13px;
         }
       }
 
       & > a {
-        border-bottom: 1px solid $really-light-gray;
+        border-bottom: 1px solid $gray-200;
         padding: 13px;
       }
 
@@ -60,7 +60,7 @@
       }
 
       & > ul {
-        border-bottom: 1px solid $really-light-gray;
+        border-bottom: 1px solid $gray-200;
         border-top: 1px solid $white;
         margin-top: -1px;
         padding-bottom: 13px;
@@ -68,11 +68,11 @@
       }
 
       &:hover > ul {
-        border-top-color: $light-gray;
+        border-top-color: $gray-300;
       }
 
       &:first-child > a {
-        border-top: 1px solid $really-light-gray;
+        border-top: 1px solid $gray-200;
       }
 
       &.active {
@@ -81,7 +81,7 @@
         z-index: 0;
 
         & > a {
-          border-top: 1px solid $really-light-gray;
+          border-top: 1px solid $gray-200;
         }
       }
 

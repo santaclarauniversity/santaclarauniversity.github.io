@@ -7,7 +7,7 @@
   width: 40px;
   padding: 10px;
   font-size: 16px;
-  color: $light-gray;
+  color: $gray-200;
   background: transparent; // remove *all* bg properties
   border: 1px solid darken($white, 3%);
   border-radius: $border-radius;
@@ -25,7 +25,7 @@
   &:hover,
   &:focus {
     color: $white;
-    background-color: $light-gray;
+    background-color: $gray-200;
   }
 
   &-sm {

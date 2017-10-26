@@ -1,7 +1,7 @@
 .site-pointer {
   @include transition(border .2s ease-in-out);
 
-  border: 1px solid $light-gray;
+  border: 1px solid $gray-200;
   display: block;
   padding: 5px;
 
@@ -10,14 +10,14 @@
     text-decoration: none;
 
     .site-pointer-body {
-      background-color: darken($brand-red, 3%);
+      background-color: darken($brand-primary, 3%);
     }
   }
 
   .site-pointer-body {
     @include transition(background-color .2s ease-in-out);
 
-    background-color: $brand-red;
+    background-color: $brand-primary;
     border: 1px solid $maroon;
     color: $white;
     display: block;

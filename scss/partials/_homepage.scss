@@ -3,7 +3,7 @@
 }
 
 .section-header {
-  border-bottom: 3px double $really-light-gray;
+  border-bottom: 3px double $gray-200;
   height: .75em;
   margin-bottom: 1.5em;
   overflow: visible;
@@ -11,7 +11,7 @@
 
   h3 {
     background-color: darken($white, 2%);
-    color: $medium-gray;
+    color: $gray-700;
     display: inline-block;
     font-family: $trajan-font;
     font-size: 1em;
@@ -30,7 +30,7 @@
 .page-title {
   @extend .sans-serif-light-font;
 
-  border-bottom: 1px solid $really-light-gray;
+  border-bottom: 1px solid $gray-200;
   margin-bottom: 40px;
   margin-top: 0;
 
@@ -63,7 +63,7 @@
       span {
         @extend .sans-serif-font-bold;
 
-        color: $brand-red;
+        color: $brand-primary;
         font-size: 14px;
         line-height: inherit;
       }

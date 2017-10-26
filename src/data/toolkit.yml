@@ -1,4 +1,4 @@
-version: "2.0.0-beta"
+version: "2.0.0-beta.2"
 colors:
   Primary:
     brandRed:   "#b30738"
@@ -10,15 +10,19 @@ colors:
     navy:       "#021d52"
     beige:      "#dfdbd3"
     cream:      "#e9e8d5"
+    slate:      "#546575"
   UI:
     success:    "#07b31b"
     warning:    "#f28300"
     info:       "#0754b3"
+    danger:     "#d9534f"
   Grayscale:
-    really-light-gray: "#e1e0e0"
-    light-gray:        "#cecece"
-    medium-gray:       "#6d6d6d"
-    dark-gray:         "#333333"
-    breadcrumb-gray:   "#9c9c9c"
-    footer-text-gray:  "#7b7b7b"
-    video-border:      "#d2d2d2"
+    100:        "#f8f9fa"
+    200:        "#e9ecef"
+    300:        "#dee2e6"
+    400:        "#ced4da"
+    500:        "#adb5bd"
+    600:        "#868e96"
+    700:        "#495057"
+    800:        "#343a40"
+    900:        "#212529"

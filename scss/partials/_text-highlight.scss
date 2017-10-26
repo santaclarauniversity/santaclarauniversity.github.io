@@ -1,5 +1,17 @@
 // sass-lint:disable space-around-operator
 
+@mixin highlight-variant($bg) {
+
+  .highlight {
+    background: $bg;
+    color: color-yiq($bg);
+  }
+
+  .highlight--wrapping {
+    box-shadow: $title-pad 0 0 $bg, $title-pad*-1 0 0 $bg;
+  }
+}
+
 $pad-wide: 20px;
 $title-pad: .25em;
 $title-lineheight: $title-pad + 1.5;
@@ -7,34 +19,24 @@ $title-lineheight: $title-pad + 1.5;
 .text-highlight {
   .highlight {
     display: inline;
-    background: $brand-primary;
     color: $white;
     padding: $title-pad;
+    background: $brand-primary;
   }
 
   .highlight--wrapping {
     position: relative;
     left: $title-pad;
     padding-left: 0;
-    box-shadow: $title-pad 0 0 $brand-primary, $title-pad*-1 0 0 $brand-primary;
+    padding-right: 0;
     box-decoration-break: clone;
+    box-shadow: $title-pad 0 0 $brand-primary, $title-pad*-1 0 0 $brand-primary;
   }
 }
 
-.text-highlight-black {
-  .highlight {
-    display: inline;
-    background: $black;
-    color: $white;
-    padding: $title-pad;
-  }
-
-  .highlight--wrapping {
-    position: relative;
-    left: $title-pad;
-    padding-left: 0;
-    box-shadow: $title-pad 0 0 $black, $title-pad*-1 0 0 $black;
-    box-decoration-break: clone;
+@each $color, $value in $theme-colors {
+  .text-highlight-#{$color} {
+    @include highlight-variant($value);
   }
 }
 

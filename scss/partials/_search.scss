@@ -26,7 +26,7 @@ h2.search_title span {
   }
 
   &::before {
-    border-top: 1px solid $light-gray;
+    border-top: 1px solid $gray-200;
     content: ' ';
     display: block;
     height: 1px;
@@ -37,10 +37,10 @@ h2.search_title span {
   }
 
   &:first-child {
-    border-left: 10px solid $brand-red;
+    border-left: 10px solid $brand-primary;
 
     a {
-      color: $brand-red;
+      color: $brand-primary;
     }
   }
 

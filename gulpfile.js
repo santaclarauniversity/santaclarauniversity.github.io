@@ -111,13 +111,13 @@ gulp.task('scripts:fabricator', (done) => {
 
 gulp.task('scripts:compile', () => {
   return gulp.src([
-    'bower_components/jquery/dist/jquery.js',
-    'bower_components/holderjs/holder.min.js',
-    'bower_components/select2/dist/js/selectWoo.min.js',
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/holderjs/holder.min.js',
+    'node_modules/select2/dist/js/selectWoo.min.js',
     config.scripts.toolkit,
-    'bower_components/bootstrap/js/dist/util.js',
-    'bower_components/bootstrap/js/dist/carousel.js',
-    'bower_components/bootstrap/js/dist/collapse.js'
+    'node_modules/bootstrap/js/dist/util.js',
+    'node_modules/bootstrap/js/dist/carousel.js',
+    'node_modules/bootstrap/js/dist/collapse.js'
   ])
     .pipe(sourcemaps.init())
     .pipe(concat('compiled-bundle.js'))

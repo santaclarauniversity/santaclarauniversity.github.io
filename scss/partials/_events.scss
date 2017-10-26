@@ -1,7 +1,7 @@
 .events.module {
   .events-date-page {
     background: $white;
-    border: 1px solid $really-light-gray;
+    border: 1px solid $gray-200;
     border-radius: 1px;
     margin-top: 2px;
     text-align: center;
@@ -61,7 +61,7 @@
   }
 
   .events-time-and-location {
-    color: $medium-gray;
+    color: $gray-700;
     margin: 0;
   }
 
@@ -104,7 +104,7 @@
     }
 
     h4 {
-      background-color: $brand-red;
+      background-color: $brand-primary;
       padding: .5em 1.25em;
       width: auto;
 

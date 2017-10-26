@@ -62,6 +62,10 @@
     left: 0;
     background: rgba($black, .5);
   }
+
+  .container {
+    position: relative;
+  }
 }
 
 .has-dim-2 {

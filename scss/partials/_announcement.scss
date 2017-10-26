@@ -1,13 +1,16 @@
-.announcement.module {
-  border-left: 1px solid $brand-red;
+@mixin announcement-variant($bg) {
 
-  &.emergency {
-    border-left-color: $emergency-color;
+  border-left-color: $bg;
+  color: color-yiq($bg);
 
-    h3 {
-      background-color: $emergency-color;
-    }
+  h3 {
+    color: color-yiq($bg);
+    background-color: $bg;
   }
+}
+
+.announcement {
+  border-left: 1px solid $brand-primary;
 
   h3 {
     display: inline-block;
@@ -16,18 +19,24 @@
     font-size: 1em;
     line-height: 1.5;
     color: $white;
-    background-color: $brand-red;
+    background-color: $brand-primary;
   }
 
   p {
     font-size: 1.25em;
     line-height: 1.25;
-    color: $dark-gray;
+    color: $gray-800;
   }
 
   @include media-breakpoint-up(sm) {
     p {
       font-size: 1.5em;
     }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .announcement-#{$color} {
+    @include announcement-variant($value);
   }
 }

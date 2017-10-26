@@ -24,7 +24,7 @@
   }
 
   &:hover {
-    color: $really-light-gray;
+    color: $gray-200;
     text-decoration: none;
   }
 }
@@ -62,7 +62,7 @@
   }
 
   &::after {
-    color: $really-light-gray;
+    color: $gray-200;
     content: 'esc';
     display: block;
   }
@@ -148,6 +148,7 @@
 
 .search-module--open {
   max-height: 100vh;
+  height: 100vh;
   opacity: 1;
   transform: translateY(0) scale(1);
   transition: opacity .2s ease-in-out, transform .2s;
@@ -178,7 +179,7 @@
     }
 
     &::placeholder {
-      color: $light-gray;
+      color: $gray-200;
     }
   }
 

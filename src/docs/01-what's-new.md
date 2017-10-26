@@ -1,4 +1,10 @@
-```v2.0.0```
+```v2.0.0-beta.2```
+- Bootstrap dependency bump to BS4 Beta 2.
+- Updated grayscale palette to use a swatch.
+- Further improved the search experience in the new header.
+- Toolkit optimizations for developers.
+
+```v2.0.0-beta```
 
 Release Highlights:
 
