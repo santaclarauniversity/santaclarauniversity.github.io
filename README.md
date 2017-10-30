@@ -10,10 +10,10 @@ To begin, you will need to have [Node.js](https://nodejs.org/en/download/) and [
 
 #### Installing Dependencies
 
-Next, using Nodejs' internal package manager, *NPM*, you'll need [Gulp](http://gulpjs.com/) and [Bower](http://bower.io/) installed "globally" (`-g`):
+Next, using Nodejs' internal package manager, *NPM*, you'll need [Gulp](http://gulpjs.com/) installed "globally" (`-g`):
 
 ```sh
-$ npm install -g gulp bower
+$ npm install -g gulp
 ```
 
 Download the project itself:
