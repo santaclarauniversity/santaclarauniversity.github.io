@@ -31,11 +31,10 @@ For example, if I want to add a new **Button**, I would:
   <button type="button" class="btn btn-primary">Primary</button>
 ```
 
-
 ## Structuring content
 
 https://getbootstrap.com/docs/4.0/getting-started/introduction/
 
-Toolkit is designed with **Bootstrap 4**. The documentation above provides all you need to know about manipulating Bootstrap 4. You might need to use the documentation to help you lay out pages or adjust content types.
+Toolkit 2.0 is designed with **Bootstrap 4**. The documentation above provides all you need to know about manipulating Bootstrap 4. You might need to use those docs to help you lay out pages or adjust content types.
 
-**You can also check brand.scu.edu for demos of full pages and more docs on stuff like our typography.** Everything on Brand is navigable in the same left-hand menu you found the Content Types in, just scroll down to view the [Style Guide](/style-guide.html), [Demos](/demos.html), and [Docs](/docs.html) sections.
+You can visit brand.scu.edu to view the [Style Guide](/style-guide.html), [Demos](/demos.html), and [Docs](/docs.html) as well as the [Content Types](/content-types.html).
