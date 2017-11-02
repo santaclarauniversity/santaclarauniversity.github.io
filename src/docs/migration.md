@@ -1,4 +1,4 @@
-This doc covers some of the things we expect most pages will have to reconcile, but [there is way more detail in the Bootstrap 4 docs](https://v4-alpha.getbootstrap.com/migration/) which discusses everything you might need to do to migrate.
+This doc covers some of the things we expect most pages will have to reconcile, but [there is way more detail in the Bootstrap 4 docs](https://getbootstrap.com/docs/4.0/migration/) which discusses everything you might need to do to migrate.
 
 ## Grid
 
@@ -31,3 +31,9 @@ Note that SCU colors are different from default Bootstrap 4 colors. Go to brand.
 ## Utilities
 
 - `.pull-left` and `.pull-right` have been replaced by `.float-{sm,md,lg,xl}-{left,right,none}`
+
+## Using Legacy Headers
+
+You can add class `.legacy-headers` to `h1`..`h6` content to force the header to display in its legacy style.
+
+e.g., `h2`, `h4`, and `h6` become the `primary` brand color.
