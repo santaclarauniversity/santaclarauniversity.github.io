@@ -335,5 +335,5 @@ fabricator
   .allItemsToggles()
   .singleItemToggle()
   .buildColorChips()
-  .setActiveItem()
-  .bindCodeAutoSelect();
+  .setActiveItem();
+  //.bindCodeAutoSelect(); // See issue #121

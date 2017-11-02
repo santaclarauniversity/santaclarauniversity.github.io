@@ -353,7 +353,8 @@
 	/**
 	 * Initialization
 	 */
-	fabricator.setInitialMenuState().menuToggle().allItemsToggles().singleItemToggle().buildColorChips().setActiveItem().bindCodeAutoSelect();
+	fabricator.setInitialMenuState().menuToggle().allItemsToggles().singleItemToggle().buildColorChips().setActiveItem();
+	//.bindCodeAutoSelect(); // See issue #121
 
 /***/ }),
 /* 1 */
