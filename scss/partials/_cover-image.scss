@@ -4,10 +4,14 @@
   #content {
     background-repeat: no-repeat;
     background-size: 100%;
-    padding-top: 20rem;
+    padding-top: 5rem;
+
+    @include media-breakpoint-up(sm) {
+      padding-top: 10rem;
+    }
 
     @include media-breakpoint-up(md) {
-      padding-top: 17rem;
+      padding-top: 15rem;
     }
 
     .content-block {
@@ -28,8 +32,12 @@
   }
 
   .cover-image-title {
-    @extend .display-2;
+    @extend .display-3;
 
     text-shadow: 0 -2px 3px rgba($black, .5);
+
+    @include media-breakpoint-up(md) {
+      font-size: 5.5rem;
+    }
   }
 }

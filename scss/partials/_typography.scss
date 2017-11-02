@@ -230,10 +230,10 @@ a {
 
 .text-white a:not(.btn) {
   text-decoration: underline;
-  color: #dfdbd3;
+  color: $gray-100;
 
   &:hover {
-    color: darken(#dfdbd3, 15%);
+    color: darken($gray-100, 15%);
   }
 }
 // sass-lint:enable no-ids
