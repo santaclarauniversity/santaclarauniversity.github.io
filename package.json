@@ -60,6 +60,7 @@
     "popper.js": "^1.12.5",
     "run-sequence": "^1.2.2",
     "select2": "git://github.com/woocommerce/selectWoo.git#master",
+    "semantic-ui-sass": "^2.2.11",
     "webpack": "^1.14.0"
   },
   "babel": {
