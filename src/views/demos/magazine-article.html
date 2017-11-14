@@ -4,103 +4,60 @@ layout: demo
 ---
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet" />
 <style type="text/css">
-  /* Global */
-  i {
-    color: #3e3e3e;
-  }
-
-  em {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-  }
-
-  strong {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-  }
-
-  html, body {
+  /* global */
+  html,
+  body {
     overflow-x: hidden;
     width: 100%;
   }
 
-
-  /* Navbar */
-  .navbar {
-    background-color: #5a5a5a;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    z-index: 10;
+  .landing {
+    background: linear-gradient(rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, .5)),
+    url(https://magazine.scu.edu/docs/images/rte/blogapp_img/b439/lg-1610-wranglerstevens.jpg) no-repeat;
+    background-size: cover;
+    height: 42em;
   }
 
-  .navbar input, .navbar button {
-    border-radius: 0;
+  .landing .row:first-child {
+    align-items: center;
+    display: flex;
+    height: 34rem;
   }
 
-  .navbar a, .navbar i {
+  .landing .col-12 {
+    text-align: center;
+  }
+
+  .landing h1 {
+    font-size: 4rem;
+  }
+
+  .landing span {
+    background-color: #202020;
     color: #fff;
+    padding: 1rem;
   }
 
-  .navbar a {
-    padding-right: .5em;
-  }
-
-
-  /* All types of main content (below landing) */
   .content {
     color: #444;
     font-family: 'Playfair Display', serif;
-    line-height: 1.6;
-    padding-top: 2em;
+    line-height: 1.8;
+    padding-top: 1rem;
   }
 
   hr {
-    border: 1px solid rgba(179, 7, 56, .2);
+    border: 2px solid rgba(225, 225, 225, 0.25);
   }
 
-  h2 {
-    color: #585858;
-    display: inline;
-    font-size: 2em;
-    margin: 0;
+  .author {
+    text-align: center;
   }
 
   h3 {
     color: #b30738;
     font-size: 250%;
-    font-weight: 300;
-    margin: 2em 0 1em 0;
+    margin: 2rem 0;
     text-indent: -2em;
-  }
-
-  /* Landing (large article photo with short description) */
-  .landing {
-    background: linear-gradient(rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, .5)),
-      url(https://magazine.scu.edu/docs/images/rte/blogapp_img/b439/lg-1610-wranglerstevens.jpg) no-repeat;
-    background-size: cover;
-    height: 40em;
-  }
-
-  .landing-text {
-    align-items: flex-end;
-    display: flex;
-    height: 42em;
-  }
-
-  .landing-text h1 {
-    color: #fff;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5em;
-    font-style: italic;
-  }
-
-  .landing-text span {
-    display: block;
-    font-family: sans-serif;
-    font-size: 180%;
-    font-style: normal;
-    text-transform: uppercase;
   }
 
   cite {
@@ -111,7 +68,6 @@ layout: demo
   .quote {
     border-left: 4px solid #b30738;
     float: right;
-    font-weight: bold;
     margin: 2em -10em 2em 2em;
     padding-left: 1em;
     position: relative;
@@ -123,136 +79,73 @@ layout: demo
     position: relative;
   }
 
-  .caption {
-    border-left: 4px solid #b30738;
-    color: #999;
-    margin-top: 1em;
-    padding: 1em;
-  }
-
+  .caption,
   .caption h4 {
     color: #999;
   }
 
-  .author {
-    font-weight: bolder;
-    text-align: center;
-    text-transform: uppercase;
+  .caption {
+    margin-top: .5rem;
   }
 
-
-  /* Full-width "fluid" content break-up sections */
-  .full-width-content {
-    background: radial-gradient(circle, #454545, #424242);
-    margin: 1.5em 0;
-    padding: 2em 0;
+  .blockquote {
+    background-color: #f9f9f9;
   }
 
-  .full-width-content span {
-    color: #f5f5f5;
-    font-family: 'Playfair Display', serif;
-    font-size: 6em;
+  .blockquote cite:before {
+    content: '"';
+    font-size: 5rem;
+    padding-right: 1rem;
     vertical-align: middle;
   }
 
-  .full-width-content cite {
-    color: #fff;
-    display: inline;
-    font-size: 3em;
-    font-style: normal;
-    vertical-align: middle;
-  }
-
-
-  /* Footers */
   .subfooter {
-    background-color: #575757;
-    color: #fff;
+    background-color: #fafafa;
     margin-top: 2em;
     padding: 2em 0;
-  }
-
-  .subfooter h4, .subfooter h5 {
-    color: #e8e8e8;
   }
 
   .subfooter p {
     font-family: 'Playfair Display', serif;
   }
-
-  .footer i:first-child {
-    padding: 0;
-  }
-
-  .footer i {
-    color: #fff;
-    font-size: 1.5em;
-    padding-left: 1em;
-  }
-
-  .footer {
-    background-color: #393939;
-    color: #fff;
-    font-family: 'Playfair Display', serif;
-    margin: 0;
-    padding: 2em 0;
-  }
 </style>
-<div class="fluid-container">
+
+<div class="landing fluid-container">
   <div class="row">
-    <div class="col-sm-12">
-      <nav class="navbar navbar-inverse">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#"><i class="icon-scu"></i>&nbsp;&nbsp;SCU Magazine</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <form class="navbar-form navbar-right">
-            <i class="fa fa-long-arrow-left"></i>&nbsp;<a href="#">Return to scu.edu</a>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search" />
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-        </div>
-      </nav>
+    <div class="col-12">
+      <h1><span>Bill Stevens</span></h1>
+      <h1 style="margin-top:1.5rem"><span>and Wrangler</span></h1>
     </div>
   </div>
-</div>
-<div class="landing fluid-container">
-  <div class="landing-text">
-    <div class="col-md-8 col-md-offset-2">
-      <h1>Bill Stevens <span>and Wrangler</span></h1>
+  <div class="row">
+    <div class="col-sm-2 offset-md-5">
+      <hr />
+      <h5 class="text-white text-sans-bold text-uppercase author">By Jesse Hamlin</h5>
+      <hr />
     </div>
   </div>
 </div>
 <div class="content container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2" style="text-align: center;">
+  <div class="row my-4">
+    <div class="col-md-8 offset-md-2" style="text-align: center;">
       <cite>A dog with millions of fans. And a blind jazz pianist teaching students to do more than they imagined possible.</cite>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-2 col-md-offset-5">
-      <hr />
-      <p class="author">By Jesse Hamlin</p>
-      <hr />
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <p>It was just a few months ago that Wrangler first joined <strong>Bill Stevens</strong>, the vital double-fisted jazz pianist and SCU music lecturer.</p>
+    <div class="col-md-8 offset-md-2">
+      <p>It was just a few months ago that Wrangler first joined <span class="text-serif-bold">Bill Stevens</span>, the vital double-fisted jazz pianist and SCU music lecturer.</p>
 
-      <p>If you don’t already know Wrangler, odds are one of your friends does. The dog became a star on <em>Today</em>, the NBC morning television show, where he appeared daily for more than a year with a trainer from Guiding Eyes for the Blind. Wrangler won hearts around the nation before leaving showbiz to start six months of rigorous training at Guiding Eyes in Yorktown Heights, N.Y. He and Stevens are the subject of a segment of <em>Today</em> recently filmed on and around the Mission campus.</p>
+      <p>If you don’t already know Wrangler, odds are one of your friends does. The dog became a star on <span class="text-serif">Today</span>, the NBC morning television show, where he appeared daily for more than a year with a trainer from Guiding Eyes for the Blind. Wrangler won hearts around the nation before leaving showbiz to start six months of rigorous training at Guiding Eyes in Yorktown Heights, N.Y. He and Stevens are the subject of a segment of <em>Today</em> recently filmed on and around the Mission campus.</p>
 
-      <p>“He loves the work and is doing really well,” Stevens says of Wrangler, an energetic yellow Lab who likes be where the action is. “Because he grew up on the <em>Today</em> show he thinks everything is about him,” Stevens says. “He’s definitely a ham.”</p>
+      <p>“He loves the work and is doing really well,” Stevens says of Wrangler, an energetic yellow Lab who likes be where the action is. “Because he grew up on the <span class="text-serif">Today</span> show he thinks everything is about him,” Stevens says. “He’s definitely a ham.”</p>
 
-      <p>Stevens has been working with Wrangler to develop a rapport, which normally takes three to six months. “When the <em>Today</em> show was here trailing us around, he was in his element, just loving it.”</p>
+      <p>Stevens has been working with Wrangler to develop a rapport, which normally takes three to six months. “When the <span class="text-serif">Today</span> show was here trailing us around, he was in his element, just loving it.”</p>
 
       <p>At SCU, Stevens is very much in his element, too. He loves to swim, body surf, and practice the intuitive dance form called Contact Improvisation. He brings the same joyous energy and spirit of discovery to his classroom teaching and his SCU concert performances.</p>
 
-      <p>His fluid playing, with its bracing block chords and long melodic lines, draws on a wide range of sources, from Bill Evans and Keith Jarrett to Oscar Peterson and Earl “Fatha” Hines. Stevens has a new CD out, <em>A Blues By Any Other Name</em>, recorded live at SCU in 2014 with bassist <strong>Ryan Lukas</strong> and drummer <strong>Frank Wyant</strong>, who also teach in the music department.</p>
+      <p>His fluid playing, with its bracing block chords and long melodic lines, draws on a wide range of sources, from Bill Evans and Keith Jarrett to Oscar Peterson and Earl “Fatha” Hines. Stevens has a new CD out, <span class="text-serif">A Blues By Any Other Name</span>, recorded live at SCU in 2014 with bassist <span class="text-serif-bold">Ryan Lukas</span> and drummer <span class="text-serif-bold">Frank Wyant</span>, who also teaches in the music department.</p>
 
-      <p>On January 26 in the Music Recital Hall, he plays a free concert at 5:15 p.m. with Lukas and guitarist Chip Newton, an old colleague from North Carolina, featuring the new Wrangler-themed tunes Stevens has been writing. Dancer <strong>Kristin Kusanovich</strong> of the SCU faculty, who improvised with Stevens last year when he performed Wayne Shorter’s music, will join them for a number.</p>
+      <p>On January 26 in the Music Recital Hall, he plays a free concert at 5:15 p.m. with Lukas and guitarist Chip Newton, an old colleague from North Carolina, featuring the new Wrangler-themed tunes Stevens has been writing. Dancer <span class="text-serif-bold">Kristin Kusanovich</span> of the SCU faculty, who improvised with Stevens last year when he performed Wayne Shorter’s music, will join them for a number.</p>
 
       <div class="quote"><cite>“I'm there to guide them on that journey.”</cite></div>
 
@@ -268,13 +161,13 @@ layout: demo
         <a href="#"><img alt="" src="http://placehold.it/390x390" /></a>
         <div class="caption">
           <h4>Bill and Wrangler in the SCU recital hall.</h4>
-          <em>Photo by Joanne Lee</em>
+          <span class="text-serif">Photo by Joanne Lee</span>
         </div>
       </div>
 
       <p>“If I don’t know how to do something, it doesn’t mean I can’t do it, if I know how to learn,” Stevens says. “Be comfortable with partial progress. Keep showing up on good days and bad days ... I’m there to guide them on that journey. Music skills are the occasion for teaching that.”</p>
 
-      <p>After the pianist learned he was getting Wrangler—whose name had been chosen by <em>Today</em> show viewers—he listened to a few of the show’s clips and was stirred by the outpouring of love for this dog.</p>
+      <p>After the pianist learned he was getting Wrangler—whose name had been chosen by <span class="text-serif">Today</span> show viewers—he listened to a few of the show’s clips and was stirred by the outpouring of love for this dog.</p>
 
       <p>“I’m hoping it’s an opportunity to do more outreach about blindness,” Stevens says, “and create more empathy in our culture about guide dogs and blindness and about diversity and difference in general.”</p>
 
@@ -310,7 +203,7 @@ layout: demo
         <a href="#"><img alt="" src="http://placehold.it/390x390" /></a>
         <div class="caption">
           <h4>Wrangler on the set of <em>Today</em>.</h4>
-          <em>Photo courtesy “TodayPuppy” on Instagram</em>
+          <span class="text-serif">Photo courtesy “TodayPuppy” on Instagram</span>
         </div>
       </div>
 
@@ -325,23 +218,18 @@ layout: demo
       <p>“I wanted the sound of the piece dying away, and I wasn’t willing to compromise,” he says. “Without Deep Listening, I never would’ve keyed into that.”</p>
     </div>
   </div>
-</div>
-<div class="full-width-content container-fluid">
   <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <span>&ldquo;</span>
+    <div class="col-12 py-3 px-5 my-5 blockquote">
       <cite>Quote goes here.</cite>
     </div>
   </div>
-</div>
-<div class="content container">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-8 offset-md-2">
       <h3>Shall we Dance?</h3>
 
       <p>While working with Oliveros, Stevens began writing his holistic text, <em>Jazz Musicianship, A Guidebook for Integrated Learning</em>.</p>
 
-      <p>“I felt like I had to learn how to teach that music in order to learn how to study it,” says Stevens, who doesn’t teach jazz per se at SCU but brings its spirit and spontaneity to the table. His style is continually evolving, and he has picked up invaluable tips in casual conversation with pianist and music department chair <strong>Hans Boepple</strong> regarding the athleticism of playing the piano.</p>
+      <p>“I felt like I had to learn how to teach that music in order to learn how to study it,” says Stevens, who doesn’t teach jazz per se at SCU but brings its spirit and spontaneity to the table. His style is continually evolving, and he has picked up invaluable tips in casual conversation with pianist and music department chair <span class="text-serif-bold">Hans Boepple</span> regarding the athleticism of playing the piano.</p>
 
       <p>“It’s been hugely transformative for me,” Stevens says.</p>
 
@@ -351,30 +239,27 @@ layout: demo
 
       <p>You can read more about Stevens and Wrangler and listen to some of Bill’s music at <a href="http://billstevensjazz.com/">billstevensjazz.com</a>.</p>
 
-      <br /><p><em>Jesse Hamlin is a Bay Area journalist who wrote about music and art as a staff writer at the </em>San Francisco Chronicle<em>, where he still writes a weekly arts column and covers a range of stories for various print and online publications. </em></p>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12">
+      <span class="text-serif">Jesse Hamlin is a Bay Area journalist who wrote about music and art as a staff writer at the </span>San Francisco Chronicle<span class="text-serif">, where he still writes a weekly arts column and covers a range of stories for various print and online publications. </span>
     </div>
   </div>
 </div>
 <div class="subfooter fluid-container">
   <div class="row">
-    <div class="col-md-5 col-md-offset-2">
+    <div class="col-md-6 offset-md-1">
       <h4>Comments</h4>
       <p>Comment.</p>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
       <h4>Related Stories</h4>
       <div class="related-story">
         <img src="http://placehold.it/80x80" />
-        <h5>Related Story Title</h5>
+        <h5 class="mt-2">Related Story Title</h5>
         <p>Some text about the related story could be found here.</p>
       </div>
-    </div>
-  </div>
-</div>
-<div class="footer fluid-container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <i class="fa fa-facebook"></i><span style="padding-left:12px;"></span><i class="fa fa-twitter"></i><span style="padding-left:12px;"></span><i class="fa fa-instagram"></i>
     </div>
   </div>
 </div>
