@@ -47,6 +47,11 @@
 .compact-nav .wordmark {
   max-width: 300px;
   white-space: normal;
+
+  // for image-based headers
+  img {
+    width: 300px;
+  }
 }
 
 // close button on sitemap, search
