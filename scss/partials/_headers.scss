@@ -1,63 +1,64 @@
-// Standard header (navbar section)
-#navbarCollapse .nav-link {
-  color: $white;
-
-  &:hover {
-    color: rgba($white, .75);
-  }
+// prevent body scroll in the background of search module
+body.search-module-opened {
+  overflow: hidden;
+  position: fixed;
 }
 
-// Sitemap toggle icon
-.sitemap-toggle img {
-  width: 24px;
-  height: 16px;
-}
+.header-scu {
 
-// Icon portion of both standard and dept.-specific headers
-.text-right a {
-  color: $white;
-  line-height: 1.6rem;
+  .nav-top {
+    background-color: $gray-900;
 
-  // Search icon (font awesome)
-  i {
-    font-size: 1rem;
+    .audiences {
+      font-size: .9rem;
+    }
   }
 
-  &:hover {
-    color: $gray-200;
-    text-decoration: none;
+  .nav-fixed {
+    border-top: 5px solid $gray-900;
+
+    &.initial {
+      top: 32px;
+    }
   }
-}
 
-// Login button
-.navbar-upper .btn {
-  background-color: lighten($black, 17%);
-  text-decoration: none;
-
-  &:hover {
-    background-color: lighten($black, 25%);
+  .nav-top-custom {
+    border-top: 5px solid $brand-primary;
+    line-height: 1;
   }
-}
 
-// department-specific header branding
-.core-nav-compact h5 a:hover {
-  text-decoration: none;
-}
+  .nav-fixed-custom {
+    border-top: 5px solid $brand-primary;
 
-.compact-nav .wordmark {
-  max-width: 300px;
-  white-space: normal;
+    .wordmark {
+      max-width: 300px;
+      white-space: normal;
 
-  // for image-based headers
-  img {
-    width: 300px;
+      // for image-based headers
+      img {
+        width: 300px;
+      }
+    }
+
+    &.initial {
+      border-top: 0;
+      top: 49px;
+    }
   }
+
+  .nav-fixed,
+  .nav-fixed-custom {
+    box-shadow: 0 5px 10px -6px rgba($black, .15);
+    transition: top 400ms ease 0s;
+  }
+
 }
 
-// close button on sitemap, search
+// Google Search module
+
 .close-btn {
   background: transparent;
-  border: 0; // b-0 class doesn't work anymore?
+  border: 0;
   fill: darken($white, 5%);
   position: absolute;
   right: 2rem;
@@ -88,25 +89,12 @@
   }
 }
 
-// fix navbar toggle icon too big on sm, xs
-@include media-breakpoint-down(sm) {
-  .navbar-toggler-icon {
-    height: 1em;
-    width: 1em;
-  }
-}
-
-.compact-nav {
-  display: none;
-  line-height: 1;
-}
-
 .search-form {
   position: relative;
 }
 
 .search-module {
-  background-color: rgba(255, 255, 255, .98);
+  background-color: rgba($white, .98);
   left: 0;
   max-height: 0;
   opacity: 0;
@@ -117,13 +105,21 @@
   transition: opacity .2s ease-in-out, transform .2s step-end, max-height .2s step-end;
   visibility: hidden;
   width: 100vw;
-  z-index: 50;
+  z-index: $zindex-fixed + 1; // z-index should be above fixed header when search is opened
+
+  &.search-module--open {
+    max-height: 100vh;
+    height: 100vh;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity .2s ease-in-out, transform .2s;
+    visibility: visible;
+  }
 
   .search-module-input-container {
     min-height: 9rem;
     padding-top: 1rem;
     position: relative;
-    z-index: 10;
 
     @include media-breakpoint-down(sm) {
       min-height: 5rem;
@@ -152,17 +148,8 @@
   border: 0 !important;
 }
 
-.search-module--open {
-  max-height: 100vh;
-  height: 100vh;
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  transition: opacity .2s ease-in-out, transform .2s;
-  visibility: visible;
-}
-
 .gsc-input {
-  border-bottom: 1px solid darken($white, 15%);
+  border-bottom: 1px solid $gray-200;
   border-radius: 1px;
   margin-right: 5%;
   position: relative;

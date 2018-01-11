@@ -1,12 +1,15 @@
 var SCU = {
   dev: function () {
     $('.navbar-toggler').click(function () {
-      $('#navbarCollapseLower').delay(600).toggle();
+      $('#navbarCollapseAudiences').delay(600).toggle();
     });
 
     $('.header-toggler').show().click(function () {
-      $('.core-nav').toggle();
-      $('.compact-nav').toggle();
+      $('.nav-top').toggle();
+      $('.nav-top-custom').toggle();
+
+      $('.nav-fixed').toggle();
+      $('.nav-fixed-custom').toggle();
     });
 
     $('#footer-toggler').show().click(function () {
@@ -23,7 +26,7 @@ var Search = {
   openSearch: function () {
     $('.search-module').toggleClass('search-module--open');
     $('input.gsc-input').focus().val('');
-    $('body').css('overflow', 'hidden');
+    $('body').toggleClass('search-module-opened');
     this.searchOpenListeners();
     this.setupDepartments();
   },
@@ -87,6 +90,14 @@ var Search = {
 
 // header and footer
 $(function () {
+  $(window).on('scroll', function() {
+    if (Math.round($(window).scrollTop()) > 100) {
+      $('.nav-fixed, .nav-fixed-custom').removeClass('initial');
+    } else {
+      $('.nav-fixed, .nav-fixed-custom').addClass('initial');
+    }
+  });
+
   Search.init();
   var myCallback = function myCallback() {
     if (document.readyState === 'complete') {
