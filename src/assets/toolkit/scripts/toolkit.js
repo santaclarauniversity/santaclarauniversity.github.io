@@ -19,45 +19,93 @@ var SCU = {
   }
 };
 
+var body,
+  searchOverlay,
+  overlayOpen;
+
 var Search = {
+  // prepares the overlay to be interacted w/ on document load
   init: function () {
     this.attachListener();
+
+    body = document.body;
+    searchOverlay = document.querySelector('.search-module');
+    overlayOpen = false;
   },
+
+  // toggles the search overlay in/out of view
+  toggleSearchOverlay: function () {
+    console.log('-- overlay toggle: ' + !overlayOpen);
+    overlayOpen = !overlayOpen;
+
+    // prevent background scrolling while overlay open
+    body.classList.toggle('no-scroll', overlayOpen);
+    searchOverlay.setAttribute('aria-hidden', !overlayOpen);
+    searchOverlay.scrollTop = 0;
+
+    // toggle overlay
+    document.querySelector('.search-module').classList.toggle('search-module--open');
+    $('.search-module-results').toggle();
+  },
+
+  // resets (cancels) search overlay listeners
+  resetSearch: function () {
+    $(document).off('keyup');
+    $('.close-btn').off('click');
+    $('.gsc-input').off('change paste keyup');
+  },
+
+  // opens overlay and its components
   openSearch: function () {
-    $('.search-module').toggleClass('search-module--open');
-    $('input.gsc-input').focus().val('');
-    $('body').toggleClass('search-module-opened');
+    this.toggleSearchOverlay();
     this.searchOpenListeners();
     this.setupDepartments();
+
+    $('input.gsc-input').focus().val('');
   },
+
+  // activates search icon on header to toggle overlay
   attachListener: function () {
     $('.fa-search').click(function (e) {
       e.preventDefault();
       Search.openSearch();
     });
   },
+
+  // creates listeners that allow user to close search overlay (ESC button on keyboard and top right)
   searchOpenListeners: function () {
-    this.searchOpenEscListener();
-    this.searchCloseListener();
-    this.searchClearFieldListener();
-    $(".gsc-input").on("change paste keyup", function () {
+    this.searchCloseEscListener();
+    this.searchCloseBtnListener();
+
+    $('.gsc-input').on('change paste keyup', function () {
       $('.search-header').fadeOut();
       $('.search-module-results').show();
     });
   },
-  searchCloseListener: function () {
-    $('.close-btn').click(function (e) {
-      e.preventDefault();
-      $('.search-module-results').hide();
-      $('.search-module').removeClass('search-module--open');
-      $('.search-header').show();
-      $('body').css('overflow', 'visible');
+
+  // closes overlay when ESC is pressed on keyboard
+  searchCloseEscListener: function () {
+    $(document).on('keyup', function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+
+        Search.resetSearch();
+        Search.toggleSearchOverlay();
+      }
     });
   },
-  resetSearch: function () {
-    $(document).off('keyup');
-    $(".gsc-input").off("change paste keyup");
+
+  // closes overlay when the button in the top right is clicked
+  searchCloseBtnListener: function () {
+    $('.close-btn').click(function (e) {
+      e.preventDefault();
+
+      Search.resetSearch();
+      Search.toggleSearchOverlay();
+    });
   },
+
+  // inits department switcher (which is external JS)
   setupDepartments: function () {
     $('.custom-select').selectWoo({
       theme: 'bootstrap',
@@ -65,25 +113,6 @@ var Search = {
     }).on('select2:select', function (evt) {
       var dest = $(evt.params.data.element).data('target');
       // window.location = dest;
-    });
-  },
-  searchOpenEscListener: function () {
-    $(document).on('keyup', function (evt) {
-      if (evt.keyCode === 27) {
-        evt.preventDefault();
-        $('.search-module').removeClass('search-module--open');
-        $('.search-module-results').hide();
-        $('body').css('overflow', 'visible');
-        Search.resetSearch();
-      }
-    });
-  },
-  searchClearFieldListener: function () {
-    $(document).on('keyup', function (evt) {
-      // (ignore ESC key)
-      if (evt.keyCode !== 27 && !$('input.gsc-input').val()) {
-        $('.search-header').show();
-      }
     });
   }
 };
@@ -108,7 +137,7 @@ $(function () {
         div: 'search-input',
         tag: 'searchbox'
       }, {
-        div: "search-module-results",
+        div: 'search-module-results',
         tag: 'searchresults'
       });
     } else {
@@ -119,7 +148,7 @@ $(function () {
           div: 'search-input',
           tag: 'searchbox'
         }, {
-          div: "search-module-results",
+          div: 'search-module-results',
           tag: 'searchresults'
         });
       }, true);

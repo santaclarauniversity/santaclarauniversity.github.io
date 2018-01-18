@@ -1,12 +1,18 @@
-// prevent body scroll in the background of search module
+// provides better support against this issue with fullscreen search overlay:
+// https://getbootstrap.com/docs/4.0/getting-started/browsers-devices/#overflow-and-scrolling
+[aria-hidden="true"] {
+  display: none;
+}
+[aria-hidden="false"] {
+  display: block;
+}
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
 
 $nav-top-height: 40px;
 $nav-fixed-height: $nav-top-height * 1.50;
-
-body.search-module-opened {
-  overflow: hidden;
-  position: fixed;
-}
 
 .header-scu {
   min-height: $nav-top-height + $nav-fixed-height;
@@ -84,6 +90,13 @@ body.search-module-opened {
       border-top: 1px solid $gray-200;
     }
   }
+
+  // Increase search icon size for better mobile usability
+  .fa-search {
+    @include media-breakpoint-down(md) {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 // Google Search module
@@ -127,11 +140,12 @@ body.search-module-opened {
 
 .search-module {
   background-color: rgba($white, .98);
+  bottom: 0;
   left: 0;
   max-height: 0;
   opacity: 0;
-  overflow: hidden;
   position: fixed;
+  right: 0;
   top: 0;
   transform: translateY(2.025rem) scale(1.1);
   transition: opacity .2s ease-in-out, transform .2s step-end, max-height .2s step-end;
@@ -159,9 +173,14 @@ body.search-module-opened {
   }
 
   .search-module-results {
+    // enables user to scroll more freely through results
+    -webkit-overflow-scrolling: touch; // this should be kept as a pseudo (-webkit) for now
+
+    // helps prevent mobile users from scrolling out of the overlay by accident
+    padding-bottom: 5rem;
+
     height: calc(100vh - 9rem);
-    overflow: scroll;
-    position: relative;
+    overflow-y: scroll;
     z-index: 10;
 
     @include media-breakpoint-down(sm) {
