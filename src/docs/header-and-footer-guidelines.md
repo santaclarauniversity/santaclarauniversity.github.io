@@ -27,7 +27,7 @@ The core layout is a general SCU header and navigation.
 
 The customized layout is intended for use on pages with their own visual identity or where a segment-specific navigation improves user experience.
 
-<img src="/assets/images/template-examples/customized-layout.png" alt="Example of Customized Page Layout" style="width: 100%">
+<img src="/assets/images/template-examples/core-customized.png" alt="Example of Customized Page Layout" style="width: 100%">
 
 ##### Customization Options
 
@@ -39,7 +39,7 @@ The branding section, by default, is a text-based logo set in Trade Light with t
 
 This header is designed to flex vertically if your content exceeds the height of the bar. If you are looking to use a graphic, it should be **280px** wide. 
 
-<img src="/assets/images/template-examples/custom-layout-with-graphic.png" alt="Customized Layout with Image Logo" style="width: 100%">
+<img src="/assets/images/template-examples/core-image-header.png" alt="Customized Layout with Image Logo" style="width: 100%">
 
 ###### Navigation Options
 

@@ -5,11 +5,11 @@ var SCU = {
     });
 
     $('.header-toggler').show().click(function () {
-      $('.nav-top').toggle();
-      $('.nav-top-custom').toggle();
+      $('.nav-top:not(.nav-top-custom)').toggle();
+      $('.nav-top.nav-top-custom').toggle();
 
-      $('.nav-fixed').toggle();
-      $('.nav-fixed-custom').toggle();
+      $('.nav-fixed:not(.nav-fixed-custom)').toggle();
+      $('.nav-fixed.nav-fixed-custom').toggle();
     });
 
     $('#footer-toggler').show().click(function () {
@@ -90,6 +90,7 @@ var Search = {
 
 // header and footer
 $(function () {
+
   $(window).on('scroll', function() {
     if (Math.round($(window).scrollTop()) > 100) {
       $('.nav-fixed, .nav-fixed-custom').removeClass('initial');

@@ -1,30 +1,57 @@
 // prevent body scroll in the background of search module
+
+$nav-top-height: 40px;
+$nav-fixed-height: $nav-top-height * 1.50;
+
 body.search-module-opened {
   overflow: hidden;
   position: fixed;
 }
 
 .header-scu {
+  min-height: $nav-top-height + $nav-fixed-height;
 
   .nav-top {
     background-color: $gray-900;
+    font-size: .9rem;
+    position: relative;
 
-    .audiences {
-      font-size: .9rem;
+    .container {
+      height: $nav-top-height;
     }
   }
 
   .nav-fixed {
     border-top: 5px solid $gray-900;
+    min-height: $nav-fixed-height;
+    box-shadow: 0 5px 10px -6px rgba($black, .15);
+    transition: all 400ms ease 0s;
 
     &.initial {
-      top: 32px;
+      border-top: 0;
+      position: relative;
+    }
+
+    // applies specifically to standard (non custom) header
+    &.bg-primary {
+      a {
+        color: #f1f1f1;
+
+        &:active {
+          color: $white;
+        }
+      }
     }
   }
 
+  // Customized headers have some adjustments to heights due to borders
+
   .nav-top-custom {
     border-top: 5px solid $brand-primary;
-    line-height: 1;
+
+    .container {
+      min-height: $nav-top-height - 5px;
+    }
   }
 
   .nav-fixed-custom {
@@ -34,6 +61,19 @@ body.search-module-opened {
       max-width: 300px;
       white-space: normal;
 
+      @include media-breakpoint-down(lg) {
+        max-width: 80%;
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 1rem;
+        max-width: 75%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: .85rem;
+      }
+
       // for image-based headers
       img {
         width: 300px;
@@ -41,17 +81,9 @@ body.search-module-opened {
     }
 
     &.initial {
-      border-top: 0;
-      top: 49px;
+      border-top: 1px solid $gray-200;
     }
   }
-
-  .nav-fixed,
-  .nav-fixed-custom {
-    box-shadow: 0 5px 10px -6px rgba($black, .15);
-    transition: top 400ms ease 0s;
-  }
-
 }
 
 // Google Search module
