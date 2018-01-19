@@ -1,3 +1,6 @@
+```v2.0.0```
+- Bootstrap dependency bump to BS4 stable.
+
 ```v2.0.0-beta.3```
 - Bootstrap dependency bump to BS4 Beta 3.
 
@@ -6,11 +9,6 @@
 - Updated grayscale palette to use a swatch.
 - Further improved the search experience in the new header.
 - Toolkit optimizations for developers.
-
-```markup
-<h1>h1. Bootstrap Header</h2>
-```
-
 
 ```v2.0.0-beta```
 
