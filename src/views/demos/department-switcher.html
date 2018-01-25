@@ -2,21 +2,6 @@
 title: Can We
 layout: demo
 ---
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.9/select2-bootstrap.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function () {
-    $('#departments').selectWoo({
-      theme: "bootstrap",
-      placeholder: 'Departments and Programs',
-    });
-    $('#departments').on('select2:select', function (evt) {
-      var dest = $(evt.params.data.element).data('target');
-      // window.location = dest;
-    });
-  });
-</script>
 <style type="text/css">
   #content {
     background-color: white;
@@ -32,11 +17,11 @@ layout: demo
         </h1>
       </div>
       <div class="col-sm-4">
-        <select name="departments" id="departments" class="custom-select form-control-lg">
+        <select name="departments" id="departments" class="custom-select form-control-lg" data-placeholder="Departments and Programs">
           <option></option>
           <optgroup label="College of Arts and Sciences">
-              <option data-target="/cas/anthropology">Anthropology</option>
-              <option>Art and Art History</option>
+              <option value="/cas/anthropology">Anthropology</option>
+              <option value="/cas/art-and-art-history">Art and Art History</option>
               <option>Biology</option>
               <option>Chemistry and Biochemistry</option>
               <option>Classics</option>
@@ -78,97 +63,6 @@ layout: demo
               <option>Management Information Systems (in the department of OMIS)</option>
             </optgroup>
         </select>
-        <!--<div class="link-button switcher module">
-          <a href="javascript:;"><span>Departments &amp; Programs</span></a>
-          <div class="row">
-            <div class="one-column related-links module col-sm-6">
-              <h4 class="related-links-header"><a href="/headers/cas/index.php">College
-                of Arts and Sciences</a></h4>
-              <ul>
-                <li><a href="/headers/cas/anthropology">Anthropology</a></li>
-                <li><a href="/headers/cas/art-and-art-history">Art and Art
-                  History</a></li>
-                <li><a href="/headers/cas/biology">Biology</a></li>
-                <li><a href="/headers/cas/chemistry-and-biochemistry">Chemistry and
-                  Biochemistry</a></li>
-                <li><a href="/headers/cas/classics">Classics</a></li>
-                <li><a href="/headers/cas/communication">Communication</a></li>
-                <li><a href="/headers/cas/english">English</a></li>
-                <li><a href="/headers/cas/environmental-studies">Environmental
-                  Studies</a></li>
-                <li><a href="/headers/cas/ethnic-studies">Ethnic Studies</a></li>
-                <li><a href="/headers/cas/history">History</a></li>
-                <li><a href="/headers/cas/liberal-studies">Liberal Studies</a></li>
-                <li><a href="/headers/cas/math-and-computer-science">Math and
-                  Computer Science</a></li>
-                <li><a href="/headers/cas/military-science">Military Science</a>
-                </li>
-                <li><a href="/headers/cas/modern-languages-and-literatures">Modern
-                  Languages and Literatures</a></li>
-                <li><a href="/headers/cas/music">Music</a></li>
-                <li><a href="/headers/cas/philosophy">Philosophy</a></li>
-                <li><a href="/headers/cas/physics">Physics</a></li>
-                <li><a href="/headers/cas/political-science">Political Science</a>
-                </li>
-                <li><a href="/headers/cas/psychology">Psychology</a></li>
-                <li><a href="/headers/cas/public-health">Public Health</a></li>
-                <li><a href="/headers/cas/religious-studies">Religious Studies</a>
-                </li>
-                <li><a href="/headers/cas/sociology">Sociology</a></li>
-                <li><a href="/headers/cas/theatre-and-dance">Theatre and Dance</a>
-                </li>
-                <li><a href="/headers/cas/womens-and-gender-studies">Women's and
-                  Gender Studies</a></li>
-              </ul>
-            </div>
-
-            <div class="one-column related-links module col-sm-6">
-              <h4 class="related-links-header"><a
-                href="/headers/engineering/index.php">School of Engineering</a></h4>
-              <ul>
-                <li><a href="/headers/engineering/applied-mathematics">Applied
-                  Mathematics</a></li>
-                <li><a href="/headers/engineering/bioengineering">Bioengineering</a>
-                </li>
-                <li><a href="/headers/engineering/civil-engineering">Civil
-                  Engineering</a></li>
-                <li><a href="/headers/engineering/computer-engineering">Computer
-                  Engineering</a></li>
-                <li><a href="/headers/engineering/electrical-engineering">Electrical
-                  Engineering</a></li>
-                <li>Engineering Management and Leadership</li>
-                <li><a href="/headers/engineering/mechanical-engineering">Mechanical
-                  Engineering</a></li>
-                <li><a href="/headers/engineering/sustainable-energy">Sustainable
-                  Energy</a></li>
-              </ul>
-              <h4 class="related-links-header"><a href="/headers/business/index.php">Leavey
-                School of Business</a></h4>
-              <ul>
-                <li><a href="/headers/business/accounting">Accounting</a></li>
-                <li><a href="/headers/business/accounting-and-information-systems">Accounting
-                  and Information Systems</a></li>
-                <li><a href="/headers/business/economics">Economics</a></li>
-                <li><a href="/headers/business/finance">Finance</a></li>
-                <li><a href="/headers/business/management">Management</a></li>
-                <li><a href="/headers/business/marketing">Marketing</a></li>
-                <li><a href="/headers/business/mba">MBA</a></li>
-                <li><a href="/headers/business/ms-finance">MS Finance</a></li>
-                <li><a href="/headers/business/ms-information-systems">MS
-                  Information Systems</a></li>
-                <li><a
-                  href="/headers/business/operations-management-and-information-systems">Operations
-                  Management and Information Systems</a></li>
-              </ul>
-              <h4 class="related-links-header">School of Law</h4>
-
-              <h4 class="related-links-header"><a href="/headers/jst/">Jesuit School
-                of Theology</a></h4>
-              <h4 class="related-links-header"><a href="/headers/ecp/">School of
-                Education and Counseling Psychology</a></h4>
-            </div>
-          </div>
-        </div>-->
       </div>
     </div>
   </div>
@@ -186,6 +80,52 @@ layout: demo
       <div id="d.en.39590"><!-- General Content --></div>
       <div class="intro"><p>From nanobots to the national grid, electrical engineers create the systems that power our
         world.</p></div>
+      <select name="departments" id="more-departments" class="custom-select form-control-lg" data-placeholder="More Departments and Programs">
+        <option></option>
+        <optgroup label="College of Arts and Sciences">
+          <option value="/cas/anthropology">Anthropology</option>
+          <option value="/cas/art-and-art-history">Art and Art History</option>
+          <option>Biology</option>
+          <option>Chemistry and Biochemistry</option>
+          <option>Classics</option>
+          <option>Communication</option>
+          <option>English</option>
+          <option>Environmental Studies</option>
+          <option>Ethnic Studies</option>
+          <option>History</option>
+          <option>Liberal Studies</option>
+          <option>Math and Computer Science</option>
+          <option>Military Science</option>
+          <option>Modern Languages and Literatures</option>
+          <option>Music</option>
+          <option>Philosophy</option>
+          <option>Physics</option>
+          <option>Political Science</option>
+          <option>Psychology</option>
+          <option>Public Health</option>
+          <option>Religious Studies</option>
+          <option>Sociology</option>
+          <option>Theatre and Dance</option>
+          <option>Women's and Gender Studies</option>
+        </optgroup>
+        <optgroup label="School of Engineering">
+          <option>Bioengineering</option>
+          <option>Civil Engineering</option>
+          <option>Computer Science and Engineering</option>
+          <option>Electrical Engineering</option>
+          <option>Mechanical Engineering</option>
+          <option>Web Design and Engineering</option>
+        </optgroup>
+        <optgroup label="Leavey School of Business">
+          <option>Accounting</option>
+          <option>Accounting & Information Systems</option>
+          <option>Economics</option>
+          <option>Finance</option>
+          <option>Management</option>
+          <option>Marketing</option>
+          <option>Management Information Systems (in the department of OMIS)</option>
+        </optgroup>
+      </select>
       <p>The field of electrical engineering is vast. It covers the design, construction, and operation of every kind of
         electrical component, circuit, and system. It's integral to modern life and necessary if we are to build a more
         sustainable world. Where better to become an electrical engineer than in the heart of Silicon Valley?</p>

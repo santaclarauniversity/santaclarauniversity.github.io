@@ -59,7 +59,7 @@ var Search = {
   openSearch: function () {
     this.toggleSearchOverlay();
     this.searchOpenListeners();
-    this.setupDepartments();
+    this.setupSelect2();
 
     $('input.gsc-input').focus().val('');
   },
@@ -106,13 +106,12 @@ var Search = {
   },
 
   // inits department switcher (which is external JS)
-  setupDepartments: function () {
-    $('.custom-select').selectWoo({
+  setupSelect2: function () {
+    $('#select2-header').selectWoo({
       theme: 'bootstrap',
-      placeholder: 'Departments, Services, and Programs',
+      placeholder: $(this).data('placeholder')
     }).on('select2:select', function (evt) {
-      var dest = $(evt.params.data.element).data('target');
-      // window.location = dest;
+      window.location = $(evt.target).val();
     });
   }
 };
@@ -179,4 +178,16 @@ $(function () {
     $switcher.toggleClass('on');
     $switcher.toggleClass('two-column');
   });
+
+  // note: may be more than one
+  var $otherSelect2 = $('.custom-select:not(#select2-header)');
+
+  if ($otherSelect2.length) {
+    $otherSelect2.selectWoo({
+      theme: 'bootstrap',
+      placeholder: $(this).data('placeholder')
+    }).on('select2:select', function (evt) {
+      window.location = $(evt.target).val();
+    });
+  }
 });
