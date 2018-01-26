@@ -1,35 +1,27 @@
-// actual footer
+// standard footer
 .footer-core {
-  // container which includes branding & social media
-  div:first-child div:first-child {
-    @include media-breakpoint-down(sm) {
-      text-align: center;
-    }
-  }
-
-  a {
-    color: $white;
-  }
-
-  .footer-core-mini {
-    font-size: .8rem;
-  }
-
-  .wordmark {
-    @extend .text-sans-light;
-    letter-spacing: 2px;
-  }
-}
-
-// dept.-specific subfooters
-.footer-subfooter {
-  display: none;
-
   @include media-breakpoint-down(sm) {
     text-align: center;
   }
-}
 
-.footer-social-icons a {
-  font-size: 1.75rem;
+  .wordmark {
+    letter-spacing: 2px;
+    font-family: 'Trade Gothic W01 Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .footer-social-icons a {
+    font-size: 1.5rem;
+  }
+
+  .footer-wordmark {
+    @extend .text-white;
+    text-decoration: none;
+
+    &:hover {
+      color: transparentize($white, .1) !important;
+      text-decoration: dotted;
+    }
+  }
 }

@@ -11,11 +11,6 @@ var SCU = {
       $('.nav-fixed:not(.nav-fixed-custom)').toggle();
       $('.nav-fixed.nav-fixed-custom').toggle();
     });
-
-    $('#footer-toggler').show().click(function () {
-      $('.footer-core').toggle();
-      $('.footer-subfooter').toggle();
-    });
   }
 };
 
