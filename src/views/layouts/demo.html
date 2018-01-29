@@ -4,14 +4,24 @@
 
   {{> head}}
 
-  {{> scripts}}
-
 </head>
-<body class="{{body-class}}" aria-hidden="false">
+<body class="{{body-class}}">
 
-  {{> header}}
+  {{> search-module}}
+
+  {{#if custom}}
+    {{> header.header-custom custom-title=custom-title}}
+  {{else}}
+    {{> header.header}}
+  {{/if}}
+
   {% body %}
-  {{> footer}}
+
+  {{#if custom}}
+    {{> footer.footer-custom custom-title=custom-title}}
+  {{else}}
+    {{> footer.footer}}
+  {{/if}}
 
 </body>
 </html>

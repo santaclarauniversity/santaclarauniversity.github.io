@@ -1,12 +1,25 @@
 ---
 notes: The customized footer offers unit-specific branding, including customizable contact information and social media links to your pages. Footer **must** have an Accessibility link.
 ---
+
 <footer class="footer-core subfooter border-top bg-white pt-4">
   <div class="container">
-    <a href="/" class="h4 text-dark text-uppercase wordmark d-block mb-4">My Own Business Institute</a>
+    <a href="/" class="h4 text-dark text-uppercase wordmark d-block mb-4">
+      {{#if custom-title}}
+        {{custom-title}}
+      {{else}}
+        School of Engineering
+      {{/if}}
+    </a>
     <div class="row">
       <div class="col-12 col-md-6">
-        <p class="mb-0">Leavey School of Business</p>
+        <p class="mb-0">
+          {{#if custom-title}}
+            {{custom-title}}
+          {{else}}
+            School of Engineering
+          {{/if}}
+        </p>
         <p class="mb-0">
           500 El Camino Real<br>
           Santa Clara, CA 95053<br>

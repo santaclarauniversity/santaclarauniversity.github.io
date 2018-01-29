@@ -1,0 +1,60 @@
+---
+notes: Header with a light color scheme.
+---
+
+<header class="header-scu">
+  <div class="nav-top nav-top-custom fixed-top bg-white">
+    <div class="container d-flex py-2 align-items-center">
+      <span class="mr-auto text-uppercase wordmark link-home">
+        <a href="/" class="text-primary">Santa Clara University</a>
+      </span>
+      <div class="ml-auto">
+        <a href="/login" class="px-2">Login</a>
+        <a href="/search" class="px-2">
+          <i class="fa fa-search"></i>
+          <span class="sr-only">Search</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Note: the nav class requires .nav-fixed and .fixed-top, which have been removed for the content types. -->
+  <nav class="nav-fixed-custom initial navbar navbar-light navbar-expand-xl bg-light">
+    <div class="container px-0 px-sm-3">
+      <a class="navbar-brand text-sans-light wordmark" href="#">
+        {{#if custom-title}}
+          {{custom-title}}
+        {{else}}
+          School of Engineering
+        {{/if}}
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Academics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Admission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Current Students</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Business Offices</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News and Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Giving</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

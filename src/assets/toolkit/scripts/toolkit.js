@@ -30,7 +30,6 @@ var Search = {
 
   // toggles the search overlay in/out of view
   toggleSearchOverlay: function () {
-    console.log('-- overlay toggle: ' + !overlayOpen);
     overlayOpen = !overlayOpen;
 
     // prevent background scrolling while overlay open
@@ -115,10 +114,13 @@ var Search = {
 $(function () {
 
   $(window).on('scroll', function() {
+
+    var $nav = $('.nav-fixed, .nav-fixed.nav-fixed-custom');
+
     if (Math.round($(window).scrollTop()) > 100) {
-      $('.nav-fixed, .nav-fixed-custom').removeClass('initial');
+      $nav.removeClass('initial');
     } else {
-      $('.nav-fixed, .nav-fixed-custom').addClass('initial');
+      $nav.addClass('initial');
     }
   });
 
