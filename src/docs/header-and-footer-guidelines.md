@@ -1,5 +1,3 @@
-`Draft Guidelines`
-
 ### Header Guidelines
 
 Our header system is designed to be user-friendly, accessible, and flexible. The header design has two primary layouts, **core layout** and **customized layout**:
@@ -9,8 +7,6 @@ Our header system is designed to be user-friendly, accessible, and flexible. The
 <h4 class="text-primary">Core Layout</h4>
 
 The core layout is a general SCU header and navigation.
-
-<img src="/assets/images/template-examples/core-header.png" alt="Core header example" style="width: 100%">
 
 **Used For:**
 
@@ -27,8 +23,6 @@ The core layout is a general SCU header and navigation.
 
 The customized layout is intended for use on pages with their own visual identity or where a segment-specific navigation improves user experience.
 
-<img src="/assets/images/template-examples/core-customized.png" alt="Example of Customized Page Layout" style="width: 100%">
-
 ##### Customization Options
 
 The custom layout is designed to accommodate a number of elements.
@@ -39,11 +33,11 @@ The branding section, by default, is a text-based logo set in Trade Light with t
 
 This header is designed to flex vertically if your content exceeds the height of the bar. If you are looking to use a graphic, it should be **280px** wide. 
 
-<img src="/assets/images/template-examples/core-image-header.png" alt="Customized Layout with Image Logo" style="width: 100%">
-
 ###### Navigation Options
 
 We have tested the header with up to **seven (7)** navigation items, and encourage you to use up to that amount. The customized footer also contains up to nine (9) different navigation elements.
+
+See the [Navbar](http://getbootstrap.com/docs/4.0/components/navbar/) section in [Bootstrap's documentation](http://getbootstrap.com/docs) for more details on what the navigation supports, including calls-to-action, inline text, and other elements.
 
 **Do not:**
 * Modify or remove the "Santa Clara University" branding/homepage link in the topmost bar.
