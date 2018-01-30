@@ -211,7 +211,7 @@ i b {
   color: $white;
 }
 
-#content p a {
+#content > p > a {
   background: linear-gradient($white, $white), linear-gradient($white, $white), linear-gradient($brand-primary, $brand-primary);
   background-position: 0 95%, 100% 95%, 0 95%;
   background-repeat: no-repeat, no-repeat, repeat-x;
