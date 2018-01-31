@@ -26,6 +26,8 @@ Release Highlights:
 
 ### Content Type Changes
 
+- **New Content Types**
+  - [Comparison Table](/content-types.html#comparison-table)
 - **General Content Type Changes**
   - Updated Content Types for Bootstrap 4.
   - One column/two column "module" designations are deprecated in favor of columns. See: Site Pointer, Infographics, List Items, more.
@@ -40,6 +42,7 @@ Release Highlights:
   - Maroon buttons are now deprecated (aliased to `brand-primary` to aid in the transition).
   - Added new standard and outline buttons.
   - Increased the options for the the existing SCU custom buttons.
+  - Added `.btn-shadow` class for a drop shadow effect on buttons.
 - **Jumbotron (formerly Hero)**
   - Renamed Jumbotron and uses BS4-standard code.
   - Transitioned `.high-contrast` to `.has-dim` for better accessibility.
@@ -54,6 +57,8 @@ Release Highlights:
   - Created new styles based on BS badges.
 - **Panels**
   - Panels are now deprecated in favor of Cards.
+- **Sidebar**
+  - A new, lightweight sidebar design has been adopted that will allow for greater responsive behavior.
 - **Site Pointer**
   - New secondary styles for site pointers.
 - **Person Spotlight**
@@ -61,7 +66,6 @@ Release Highlights:
   - Removed "compact" version of person spotlight, as it utilizes media list code.
 - **Pull Quotes**
   - Redesigned to be a more attention-grabbing type with space for a very large photo and quote.
-  - https://github.com/santaclarauniversity/scu-web-assets/issues/78
 - **Highlight (formerly Ribbons)**
   - Refactored ribbon code to work correctly across all browsers; renamed to Highlight. See [Wrapping Highlighted Text.](https://codepen.io/hotmeteor/pen/ibvJs)
 - **Windowpane**
@@ -71,10 +75,11 @@ Release Highlights:
 ### Templates and Documentation
 - **Typography**
   - Reset to Bootstrap standards, most notably, made headers less opinionated (no color or transform), headers now use a true bold font (used a browser-filled Trade Gothic previously)
+  - Added `.legacy-headers` class for matching the pre-2.0 header styles. [More information](/style-guide.html#utilities).
 - **Templates**
   - Added new footer system with flexibility for major-unit branding.
-  - Beta: [Department Switcher](/demos/department-switcher.html) using `select2`.
-  - Beta: New header system.
+  - New [Department Switcher](/demos/department-switcher.html) using `select2`.
+  - New [headers](content-types.html#header) and [footers](content-types.html#footer).
   - New email template (Solid).
   - New [Cover Image](/demos/cover-image-layout.html) layout.
 - **Documentation**
@@ -143,6 +148,8 @@ Release Highlights:
   
 
 ```v1.0.7```
+
+Released November 15, 2016
 - Removed extraneous images and prototypes from launched projects.
 - Added the [Agenda](/content-types.html#agenda) content type.
 - Added [Print Style Guide](/docs.html#print-style-guide) documentation.
@@ -157,6 +164,8 @@ Release Highlights:
 
 
 ```v1.0.5```
+
+Released Jul 26, 2016
 - New CSS for [Cards](/content-types.html#card) based on Bootstrap 4.0-alpha2. The original CSS was based on `alpha0`, and some significant changes had been made in the meantime.
 - Removed "Profile" as a content type.
 - Content type demos now use `holder.js`.
@@ -177,6 +186,8 @@ Release Highlights:
 - New [Instagram](/content-types.html#social-icons) logo ([#52](https://github.com/santaclarauniversity/scu-web-assets/issues/52))
 
 ```v1.0.3```
+
+Released June 17, 2016
 - Added the [Windowpane](/content-types.html#windowpane) content type and [demo](/demos/roadshow-comp.html).
 - Added landing page templates: [Bold](/landing-pages/bold.html), [Minimal](/landing-pages/minimal.html), and [Startup](/landing-pages/startup.html).
 
@@ -185,6 +196,8 @@ Release Highlights:
 - Fixed Header issues ([#46](https://github.com/santaclarauniversity/scu-web-assets/issues/46))
 
 ```v1.0.1```
+
+Released May 20, 2016
 - Added some packages and dependencies to make the install process easier.
 - Added Pull Quote content type.
 - Added "Startup" style marketing landing page.
