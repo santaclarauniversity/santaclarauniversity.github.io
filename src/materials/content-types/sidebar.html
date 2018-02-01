@@ -1,17 +1,17 @@
 <nav class="sidebar">
-  <div class="sidebar__top">
-    <h5 class="sidebar__title">
-      <a href="#!" class="link--dropdown" data-toggle="collapse" data-target="#sidebarLinks" aria-expanded="false" aria-controls="sidebarLinks">News & Events</a>
+  <div class="sidebar-top">
+    <h5 class="sidebar-title">
+      <a href="#!" class="sidebar-link-dropdown" data-toggle="collapse" data-target="#sidebarLinks" aria-expanded="{{#if expanded}}true{{else}}false{{/if}}" aria-controls="sidebarLinks">News & Events</a>
     </h5>
-    <div class="collapse" id="sidebarLinks">
-      <ul class="sidebar__links">
+    <div class="collapse {{#if expanded}}show{{/if}}" id="sidebarLinks">
+      <ul class="sidebar-links">
         <li>
           <a href="#!">Feature Stories</a>
         </li>
         <li>
-          <a href="#!" class="link--dropdown" data-toggle="collapse" data-target="#sidebarSubLinks" aria-expanded="false" aria-controls="sidebarSubLinks">Press Releases</a>
+          <a href="#!" class="sidebar-link-dropdown" data-toggle="collapse" data-target="#sidebarSubLinks" aria-expanded="{{#if expanded}}true{{else}}false{{/if}}" aria-controls="sidebarSubLinks">Press Releases</a>
 
-          <ul class="collapse sidebar__links" id="sidebarSubLinks">
+          <ul class="collapse {{#if expanded}}show{{/if}} sidebar-links" id="sidebarSubLinks">
             <li>
               <a href="#">2018</a>
             </li>
@@ -19,9 +19,9 @@
               <a href="#!">2017</a>
             </li>
             <li>
-              <a href="#!" class="link--dropdown" data-toggle="collapse" data-target="#sidebarSubSubLinks" aria-expanded="false" aria-controls="sidebarSubSubLinks">2016</a>
+              <a href="#!" class="sidebar-link-dropdown" data-toggle="collapse" data-target="#sidebarSubSubLinks" aria-expanded="{{#if expanded}}true{{else}}false{{/if}}" aria-controls="sidebarSubSubLinks">2016</a>
 
-              <ul class="collapse sidebar__links" id="sidebarSubSubLinks">
+              <ul class="collapse {{#if expanded}}show{{/if}} sidebar-links" id="sidebarSubSubLinks">
                 <li>
                   <a href="#!">January</a>
                 </li>
