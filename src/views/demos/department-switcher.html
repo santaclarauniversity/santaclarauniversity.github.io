@@ -7,7 +7,7 @@ layout: demo
     background-color: white;
   }
 </style>
-<div class="subheader module"
+<div class="subheader mb-3"
      style="background-image:url('/assets/images/electrical-engineering.jpg');">
   <div class="container">
     <div class="row align-items-center pb-3">
@@ -70,7 +70,7 @@ layout: demo
 <div class="container" id="content">
   <div class="row">
     <div class="col-sm-8">
-      <h1 class="page-title" id="page-title">Department of Electrical Engineering</h1>
+      <h1 class="page-title d-none" id="page-title">Department of Electrical Engineering</h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item"><a href="/engineering/">School of Engineering</a></li>
@@ -79,53 +79,8 @@ layout: demo
       </ol>
       <div id="d.en.39590"><!-- General Content --></div>
       <div class="intro"><p>From nanobots to the national grid, electrical engineers create the systems that power our
-        world.</p></div>
-      <select name="departments" id="more-departments" class="custom-select form-control-lg" data-placeholder="More Departments and Programs">
-        <option></option>
-        <optgroup label="College of Arts and Sciences">
-          <option value="/cas/anthropology">Anthropology</option>
-          <option value="/cas/art-and-art-history">Art and Art History</option>
-          <option>Biology</option>
-          <option>Chemistry and Biochemistry</option>
-          <option>Classics</option>
-          <option>Communication</option>
-          <option>English</option>
-          <option>Environmental Studies</option>
-          <option>Ethnic Studies</option>
-          <option>History</option>
-          <option>Liberal Studies</option>
-          <option>Math and Computer Science</option>
-          <option>Military Science</option>
-          <option>Modern Languages and Literatures</option>
-          <option>Music</option>
-          <option>Philosophy</option>
-          <option>Physics</option>
-          <option>Political Science</option>
-          <option>Psychology</option>
-          <option>Public Health</option>
-          <option>Religious Studies</option>
-          <option>Sociology</option>
-          <option>Theatre and Dance</option>
-          <option>Women's and Gender Studies</option>
-        </optgroup>
-        <optgroup label="School of Engineering">
-          <option>Bioengineering</option>
-          <option>Civil Engineering</option>
-          <option>Computer Science and Engineering</option>
-          <option>Electrical Engineering</option>
-          <option>Mechanical Engineering</option>
-          <option>Web Design and Engineering</option>
-        </optgroup>
-        <optgroup label="Leavey School of Business">
-          <option>Accounting</option>
-          <option>Accounting & Information Systems</option>
-          <option>Economics</option>
-          <option>Finance</option>
-          <option>Management</option>
-          <option>Marketing</option>
-          <option>Management Information Systems (in the department of OMIS)</option>
-        </optgroup>
-      </select>
+        world.</p>
+      </div>
       <p>The field of electrical engineering is vast. It covers the design, construction, and operation of every kind of
         electrical component, circuit, and system. It's integral to modern life and necessary if we are to build a more
         sustainable world. Where better to become an electrical engineer than in the heart of Silicon Valley?</p>
@@ -149,10 +104,6 @@ layout: demo
         and beyond.</p>
 
 
-      <script>$(document).ready(function () {
-        $('.page-title').addClass('sr-only');
-      });</script>
-
 
       <div class="row">
         <div class="col-md-6">
@@ -173,10 +124,6 @@ layout: demo
           </div>
         </div>
         <div class="col-md-6">
-
-
-          <div id="message-55138"></div>
-          <script>console.log('LAYOUT MODE v2.0');</script>
           <div class="pagedrows-55138">
             <div class="featured-story module"><a
               href="/engineering/stories/engineering-news-spring-2015/building-a-better-nest.html"
@@ -199,25 +146,7 @@ layout: demo
       <div class="pull-right"></div>
     </div>
     <div class="col-sm-4">
-      <nav class="side-navigation match-page-title">
-
-        <!-- End: Programmable Layout Nav Object Here -->
-        <a class="side-navigation-header" href="/engineering/academic-programs/department-of-electrical-engineering/">Department
-          of Electrical Engineering</a>
-        <ul>
-          <li><a href="/engineering/academic-programs/department-of-electrical-engineering/about-us/">About Us</a></li>
-          <li><a
-            href="/engineering/academic-programs/department-of-electrical-engineering/undergraduate/">Undergraduate</a>
-          </li>
-          <li><a href="/engineering/academic-programs/department-of-electrical-engineering/graduate/">Graduate</a></li>
-          <li><a href="/engineering/academic-programs/department-of-electrical-engineering/faculty--staff/">Faculty
-            &amp; Staff</a></li>
-          <li><a
-            href="/engineering/academic-programs/department-of-electrical-engineering/laboratories/">Laboratories</a>
-          </li>
-          <li><a href="/engineering/academic-programs/department-of-electrical-engineering/research/">Research</a></li>
-        </ul>
-      </nav>
+      {{> sidebar}}
     </div>
   </div>
 </div>

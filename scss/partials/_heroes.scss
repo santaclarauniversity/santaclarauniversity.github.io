@@ -8,22 +8,22 @@ $hero-lg-height: 450px;
 
   background-position: 50% 20%;
   background-size: cover;
-  min-height: $hero-xs-height;
 
   .container {
     position: relative;
-  }
+    min-height: $hero-xs-height;
 
-  @include media-breakpoint-up(sm) {
-    min-height: $hero-sm-height;
-  }
+    @include media-breakpoint-up(sm) {
+      min-height: $hero-sm-height;
+    }
 
-  @include media-breakpoint-up(md) {
-    min-height: $hero-md-height;
-  }
+    @include media-breakpoint-up(md) {
+      min-height: $hero-md-height;
+    }
 
-  @include media-breakpoint-up(lg) {
-    min-height: $hero-lg-height;
+    @include media-breakpoint-up(lg) {
+      min-height: $hero-lg-height;
+    }
   }
 
   h1 {
