@@ -10,7 +10,7 @@ custom-title: Cover Image Homepage
 <div id="content" style="background-image: url('/assets/images/examples/stage_lighting.JPG');" class="legacy-headers">
   <div class="container">
     <h1 class="cover-image-title text-serif-bold text-white pb-2">Page Title</h1>
-    <div class="row d-flex flex-column-reverse flex-md-row">
+    <div class="row">
       <div class="col-12 col-md-8 bg-white p-5">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -52,69 +52,24 @@ custom-title: Cover Image Homepage
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4 bg-light px-5 py-3 py-md-5">
-        <nav class="sidebar">
-          <div class="sidebar-top">
-            <h5 class="sidebar-title">
-              <a href="#!" class="sidebar-link-dropdown text-uppercase" data-toggle="collapse" data-target="#sidebarLinks" aria-expanded="false" aria-controls="sidebarLinks">News & Events</a>
-            </h5>
-            <div class="collapse" id="sidebarLinks">
-              <ul class="sidebar-links">
-                <li>
-                  <a href="#!">Feature Stories</a>
-                </li>
-                <li>
-                  <a href="#!" class="sidebar-link-dropdown" data-toggle="collapse" data-target="#sidebarSubLinks" aria-expanded="false" aria-controls="sidebarSubLinks">Press Releases</a>
-
-                  <ul class="collapse sidebar-links" id="sidebarSubLinks">
-                    <li>
-                      <a href="#">2018</a>
-                    </li>
-                    <li>
-                      <a href="#!">2017</a>
-                    </li>
-                    <li>
-                      <a href="#!" class="sidebar-link-dropdown" data-toggle="collapse" data-target="#sidebarSubSubLinks" aria-expanded="false" aria-controls="sidebarSubSubLinks">2016</a>
-
-                      <ul class="collapse sidebar-links" id="sidebarSubSubLinks">
-                        <li>
-                          <a href="#!">January</a>
-                        </li>
-                        <li class="active">February</li>
-                        <li>
-                          <a href="#!">March</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#!">2015</a>
-                    </li>
-                    <li>
-                      <a href="#!">2014</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#!">Social Media</a>
-                </li>
-                <li>
-                  <a href="#!">Faculty Experts</a>
-                </li>
-                <li>
-                  <a href="#!">Publications</a>
-                </li>
-                <li>
-                  <a href="#!">Events</a>
-                </li>
-              </ul>
-            </div>
-            <button type="button" class="btn btn-primary mt-5">Useful Action Button</button>
-            <div class="badge badge-navy infographic p-3 mt-5 text-center">
-              <p class="statcard-number display-4 text-sans-light">1.0k</p>
-              <p class="infographic-label text-sans-light text-uppercase mt-2 mb-0">Squirrels on Campus</p>
-            </div>
-          </div>
-        </nav>
+      <div class="col-12 col-md-4">
+        <div class="cover-image-widget bg-white p-3">
+          {{> sidebar expanded=true}}
+        </div>
+        <div class="cover-image-widget bg-white p-3 mt-3">
+          <h4 class="text-sans-light">Cover Image Widgets</h4>
+          <p>I'm a Cover Image Widget.</p>
+          <p>Cover Image Widgets need a container with a .bg-white and utility classes (margin for separation, padding for some content types) to separate them from other blocks.</p>
+        </div>
+        <div class="cover-image-widget bg-white mt-3">
+          <a href="#" class="maroon link-button" role="button">.maroon</a>
+        </div>
+        <div class="cover-image-widget bg-white mt-3">
+          <a href="https://www.scu.edu/rooms/" class="site-pointer">
+            <img data-src="holder.js/100px350/" alt="100%x350" class="img-fluid" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22285%22%20height%3D%22350%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20285%20350%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1615321597a%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A18pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1615321597a%22%3E%3Crect%20width%3D%22285%22%20height%3D%22350%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2295.7890625%22%20y%3D%22183.1%22%3E285x350%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 350px; width: 100%; display: block;">
+            <span class="site-pointer-body p-3">Library Room Reservations</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
