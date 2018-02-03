@@ -63,8 +63,7 @@
 
 .sidebar-title {
   border-bottom: 1px solid $gray-300;
-  color: $gray-600;
-  font-weight: 300 !important;
+  font-family: $sans-serif-light-font;
   margin-bottom: 0;
 
   @include media-breakpoint-down(md) {
@@ -73,7 +72,7 @@
 
   @include media-breakpoint-up(md) {
     .sidebar-link-dropdown {
-      color: $gray-600 !important;
+      color: $gray-800 !important;
       pointer-events: none;
 
       &::after {
