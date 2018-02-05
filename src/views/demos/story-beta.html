@@ -2,13 +2,38 @@
 title: Story Layout Concept
 layout: demo
 ---
-<div class="container px-0 px-md-3">
-    <figure class="figure">
-      <img src="https://www.scu.edu/media/institutional-pages/news-ampamp-events/sustainability-760x480.jpg" alt="" class="img-fluid">
-      <figcaption class="figure-caption text-right">This is a caption.</figcaption>
-    </figure>
+<style type="text/css">
+  picture img {
+    height: 70vh;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  picture + div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 1rem;
+  }
+</style>
+<div class="container-fluid has-dim-4 px-0" style="position: relative;">
+  <picture>
+    <img src="/assets/images/examples/banner-mag.jpg" alt="" />
+  </picture>
+  <div>
+    <div class="container">
+      <h1 class="text-white" style="font-size:2.778rem">Dirty Work</h1>
+      <h3 class="text-sans-light text-white">Lindsey Kalkbrenner has helped grow a culture of sustainability at SCU—and she has the hardware to prove it.</h3>
+      <div class="story-byline small text-right mt-4" style="color:#ececec">by Tina Vossugh |
+        <time class="c-byline__item" data-ui="timestamp" style="color:#ececec">
+          Jul 12, 2017, 6:30am EDT
+        </time>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="container" id="content">
+<div class="container pt-4" id="content">
   <div class="col-12 mb-4 pl-0 story-top">
     <!-- Optional breadcrumb, should not be displayed by default -->
     <ol class="breadcrumb d-none d-md-flex">
@@ -17,15 +42,11 @@ layout: demo
       <li class="breadcrumb-item active">Feature Stories</li>
     </ol>
     <!-- End Breadcrumb -->
-    <h1>Dirty Work</h1>
-    <h2 class="text-sans-light">Lindsey Kalkbrenner has helped grow a culture of sustainability at SCU—and she has the hardware to prove it.</h2>
-    <div class="story-byline small">by Tina Vossugh |
-      <time class="c-byline__item" data-ui="timestamp">
-        Jul 12, 2017, 6:30am EDT
-      </time>
-    </div>
   </div>
-  <div class="row">
+  <div class="row d-flex flex-md-row-reverse">
+    <div class="col-12 col-md-4">
+      {{> sidebar}}
+    </div>
     <div class="col-12 col-md-8">
       <div id="storyBody">
        <p>Under the desk in her office, <strong>Lindsey Kalkbrenner</strong> has a compost bin swimming with worms. The bin is pretty gross, Kalkbrenner admits. There are mounds of food scraps and damp newspaper to prevent fruit flies. Even she uses gloves to open it up, exposing the mass of worms still working on last week’s corn cobs.</p>
@@ -49,8 +70,5 @@ layout: demo
 
       </div>
   </div>
-  <div class="col-sm-4">
-    {{> sidebar}}
   </div>
-</div>
 </div>

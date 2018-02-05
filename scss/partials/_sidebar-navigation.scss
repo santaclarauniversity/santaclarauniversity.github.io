@@ -65,6 +65,9 @@
   border-bottom: 1px solid $gray-300;
   font-family: $sans-serif-light-font;
   margin-bottom: 0;
+  color: $gray-600;
+  font-weight: 300 !important;
+  padding-bottom: 1rem;
 
   @include media-breakpoint-down(md) {
     font-size: 1rem;
@@ -83,13 +86,13 @@
 
   .sidebar-link-dropdown {
     display: block;
-    padding-bottom: 1.5rem;
+    //padding-bottom: 1.5rem;
     position: relative;
 
     @include media-breakpoint-down(xs) {
       padding-left: 15px;
       padding-right: 15px;
-      padding-top: 1.5rem;
+      //padding-top: 1.5rem;
 
       &::after {
         right: 15px;
@@ -105,7 +108,7 @@
     }
 
     @include media-breakpoint-down(md) {
-      padding-top: 1.5rem;
+      //padding-top: 1.5rem;
     }
   }
 }
