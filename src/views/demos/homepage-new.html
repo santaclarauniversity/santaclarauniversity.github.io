@@ -1,7 +1,9 @@
 ---
-title: Can We
+title: New Homepage
 layout: demo
 ---
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <style>
   .jumbotron.home {
     padding-top: 6rem;
@@ -21,23 +23,85 @@ layout: demo
     width: auto;
     height: auto;
   }
+  .no-video .video-container video,
+  .touch .video-container video {
+    display: none;
+  }
+  .no-video .video-container .poster,
+  .touch .video-container .poster {
+    display: block !important;
+  }
+  .video-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    min-height: 100vh;
+  }
+  .video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+  }
+  .video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    top: 0;
+    height: 100%;
+    padding-top: 20%;
+  }
+  .video-container video {
+    position: sticky;
+    z-index: 0;
+    top: 0;
+  }
+  video.fillWidth {
+    width: 100%;
+    transition: 300ms filter linear;
+  }
+  .filtered {
+    -webkit-filter: blur(32px) !important;
+    filter: blur(32px) !important;
+    opacity: 0.5 !important;
+  }
+  .fadeInUp {
+    animation-duration: 500ms;
+  }
+  @media screen and (max-width: 991px) {
+    .video-container h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .video-container .filter {
+      padding-top: 40%;
+    }
+  }
 </style>
-<div class="jumbotron home">
-  <video id="video-background" preload="" muted="" autoplay="" loop="">
-  <source src="/assets/videos/Fade-To-Black/MP4/Fade-To-Black.mp4" type="video/mp4">
-  <source src="/assets/videos/Fade-To-Black/MP4/Fade-To-Black.webm" type="video/webm">
+<div class="video-container">
+  <video autoplay loop class="fillWidth">
+    <source src="/assets/videos/Fade-To-Black/MP4/Fade-To-Black.mp4" type="video/mp4"/>
+    Your browser does not support the video tag. I suggest you upgrade your browser.
+    <source src="/assets/videos/Fade-To-Black/WEBM/Fade-To-Black.webm" type="video/webm"/>
+    Your browser does not support the video tag. I suggest you upgrade your browser.
   </video>
-  <div class="container text-center">
-    <h1 class="text-uppercase text-sans-light display-4" style="z-index: 80">Invent the Life You Want to Lead</h1>
-    <div class="row">
-      <div class="col-sm-4 text-left">
-        <a href="/cas" class="btn btn-lg btn-outline-light mb-3 d-block">Apply</a>
-      </div>
-      <div class="col-sm-4 text-left">
-        <a href="/engineering" class="btn btn-lg btn-outline-light mb-3 d-block">Visit</a>
-      </div>
-      <div class="col-sm-4 text-left">
-        <a href="/engineering" class="btn btn-lg btn-outline-light mb-3 d-block">Contact Us</a>
+  <div class="text-center filter">
+    <h1 class="text-uppercase text-sans-light display-3 text-white animated fadeInUp mb-4">Invent the Life You Want to Lead</h1>
+    <div class="container animated" style="opacity: 0">
+      <div class="row">
+        <div class="col-sm-4 text-left">
+          <a href="/cas" class="btn btn-lg btn-outline-light mb-3 d-block">Apply</a>
+        </div>
+        <div class="col-sm-4 text-left">
+          <a href="/engineering" class="btn btn-lg btn-outline-light mb-3 d-block">Visit</a>
+        </div>
+        <div class="col-sm-4 text-left">
+          <a href="/engineering" class="btn btn-lg btn-outline-light mb-3 d-block">Contact Us</a>
+        </div>
       </div>
     </div>
   </div>
@@ -291,17 +355,44 @@ layout: demo
   <!--</div>-->
   <div class="">
     <div class="row no-gutters">
-      <div class="col-6 story-pane text-white p-3" style="background-image: url(https://www.scu.edu/media/institutional-pages/news-ampamp-events/audrey-760x480.jpg)">
-        <h4 class="text-serif">The Gift of Water</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <div class="col-md-6 col-12 windowpane has-overlay bg-img-left-center has-dim" style="background-image: url('https://www.scu.edu/media/institutional-pages/news-ampamp-events/audrey-760x480.jpg');">
+        <div class="windowpane-overlay p-3 text-sans-light">
+          <p class="h3 mb-0">The Gift of Water</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cumque dolore dolorum expedita illo illum modi, molestias nam necessitatibus nemo nihil nisi odit officiis perspiciatis quae quibusdam suscipit totam, vero.</p>
+          <p class="mt-3">
+            <button type="button" class="btn btn-primary btn-sm">Event Details</button>
+          </p>
+        </div>
+        <div class="windowpane-desc p-3 text-white">
+          <h2 class="text-sans-light text-uppercase">The Gift of Water</h2>
+          <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
       </div>
-      <div class="col-3 story-pane text-white p-3" style="background-image: url(https://lwcal.scu.edu/live/image/gid/10/width/250/2260_Dan-Hoyle-Her.jpg)">
-        <h4 class="text-serif">The Real Americans</h4>
-        <p>February 20, 2018</p>
+      <div class="col-md-3 col-12 windowpane has-overlay bg-img-left-center has-dim" style="background-image: url(https://lwcal.scu.edu/live/image/gid/10/width/250/2260_Dan-Hoyle-Her.jpg);">
+        <div class="windowpane-overlay p-3 text-sans-light">
+          <p class="h3 mb-0">The Real Americans</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cumque dolore dolorum expedita illo illum modi, molestias nam necessitatibus nemo nihil nisi odit officiis perspiciatis quae quibusdam suscipit totam, vero.</p>
+          <p class="mt-3">
+            <button type="button" class="btn btn-primary btn-sm">Event Details</button>
+          </p>
+        </div>
+        <div class="windowpane-desc p-3 text-white">
+          <h4 class="text-sans-light text-uppercase">The Real Americans</h4>
+          <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
       </div>
-      <div class="col-3 story-pane text-white p-3" style="background-image: url(https://scu.edu/media/institutional-pages/news-ampamp-events/CB180213_StateOfUniv760x480.jpg")">
-        <h4 class="text-serif">Bearing One Another’s Burdens</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <div class="col-md-3 col-12 windowpane has-overlay bg-img-left-center has-dim" style="background-image: url(https://scu.edu/media/institutional-pages/news-ampamp-events/CB180213_StateOfUniv760x480.jpg);">
+        <div class="windowpane-overlay p-3 text-sans-light">
+          <p class="h3 mb-0">Bearing One Another's Burdens</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cumque dolore dolorum expedita illo illum modi, molestias nam necessitatibus nemo nihil nisi odit officiis perspiciatis quae quibusdam suscipit totam, vero.</p>
+          <p class="mt-3">
+            <button type="button" class="btn btn-primary btn-sm">Event Details</button>
+          </p>
+        </div>
+        <div class="windowpane-desc p-3 text-white">
+          <h4 class="text-sans-light text-uppercase">Bearing One Another’s Burdens</h4>
+          <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
       </div>
     </div>
     <div class="row no-gutters">
