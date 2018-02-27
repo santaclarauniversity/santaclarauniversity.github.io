@@ -59,6 +59,7 @@
     "jquery": "^3.2.1",
     "popper.js": "^1.13.0",
     "run-sequence": "^1.2.2",
+    "scrollmagic": "^2.0.5",
     "select2": "git://github.com/woocommerce/selectWoo.git#master",
     "webpack": "^1.14.0"
   },

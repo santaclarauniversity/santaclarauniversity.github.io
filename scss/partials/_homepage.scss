@@ -1,3 +1,89 @@
+// start  new video homepage code
+
+body.homepage {
+  overflow-x: hidden;
+}
+
+.scrollContent {
+  .panel {
+    height: 100vh;
+    min-height: 100vh;
+    margin-bottom: 100vh;
+  }
+
+  .wrapper {
+    height: 100%;
+  }
+
+  video {
+    background-size: cover;
+    height: 100vh;
+    object-fit: fill;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: 100%;
+    z-index: -1;
+
+    @include media-breakpoint-down(md) {
+      filter: blur(3px);
+    }
+  }
+
+  video + div {
+    background-color: rgba($black, .75);
+    height: calc(100vh - 100px);
+    opacity: 0.01;
+    transition: opacity .75s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include media-breakpoint-down(sm) {
+      background-color: rgba($black, .4);
+      opacity: 1;
+      transition: none;
+    }
+  }
+
+  .icon-down {
+    right: 0; bottom: 2.5rem; left: 0;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+
+    i {
+      color: darken($white, 50%);
+      font-size: 3rem;
+      transition: color .5s;
+
+      &:hover {
+        color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.no-video .video-container video,
+.touch .video-container video {
+  display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+  display: block !important;
+}
+
+.academics a.d-block {
+  white-space: normal;
+}
+.story-pane {
+  min-height: 350px;
+  background-size: cover;
+}
+
+// end    new video homepage code
+
 .homepage {
   background-color: darken($white, 2%);
 }

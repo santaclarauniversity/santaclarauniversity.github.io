@@ -188,29 +188,3 @@ $(function () {
     });
   }
 });
-
-// homepage
-$(function () {
-  function fadeIn() {
-    $('.container.animated').removeClass('fadeOutDown').addClass('fadeInUp');
-    $('video').addClass('filtered').trigger('pause');
-    $('.video-container').css('position', 'relative');
-  }
-
-  function fadeOut() {
-    $('.container.animated').removeClass('fadeInUp').addClass('fadeOutDown');
-    $('video').removeClass('filtered').trigger('play');
-    $('.video-container').css('position', 'sticky');
-  }
-
-  var scrollLock = false;
-  $(window).on('scroll', function () {
-    if ($(this).scrollTop() === 0) {
-      scrollLock = false;
-      fadeOut();
-    } else if (!scrollLock) {
-      scrollLock = true;
-      fadeIn();
-    }
-  });
-});
