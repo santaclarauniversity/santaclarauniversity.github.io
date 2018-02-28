@@ -17,9 +17,23 @@ footer {
   position: relative;
 }
 
+.video-container .sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 100px);
+}
+.video-container {
+  position: relative;
+  min-height: 221vh;
+}
+.fadeable {
+  width: 100%;
+  height: calc(100vh - 100px);
+}
 video {
   background-size: cover;
-  height: calc(100vh - 100px);
+  height: 100vh;
   object-fit: fill;
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;

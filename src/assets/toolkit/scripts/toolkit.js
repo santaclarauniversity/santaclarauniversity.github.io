@@ -198,8 +198,8 @@ $(function () {
   var triggerEnd    = $(window).height() * (3/4);
 
   var target        = $('.sticky-trigger');
-  var targetOverlay = target.find('video + div');
-  var targetVideo   = target.find('video');
+  var targetOverlay = $('.fadeable');
+  var targetVideo   = $('video');
 
   var hidden        = false; // hide both video and overlay when user scrolls down enough, unhide when they go back up
   var paused        = false; // pause video when user scrolls down enough, unpause when they go back up
@@ -218,8 +218,16 @@ $(function () {
       }
 
       var alpha = (scrollPos - triggerStart) / triggerEnd;
-
+      console.log(alpha);
       targetOverlay.css('background', 'rgba(0,0,0,' + alpha + ')');
+
+      if (alpha > 0.5) {
+        console.log("triggered");
+        $('.actions').fadeIn();
+      }
+      else {
+        $('.actions').fadeOut();
+      }
 
       if (!paused)
       {
