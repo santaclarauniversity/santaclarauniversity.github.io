@@ -203,6 +203,9 @@ $(function () {
   var targetBtn     = targetOverlay.find('.actions');
   var targetVideo   = $('video');
 
+  var btnPlay       = $('.fa-play');
+  var btnPause      = $('.fa-pause');
+
   var hidden        = false; // hide both video and overlay when user scrolls down enough, unhide when they go back up
   var paused        = false; // pause video when user scrolls down enough, unpause when they go back up
 
@@ -235,5 +238,17 @@ $(function () {
     $('html, body').animate({
       scrollTop: $('.content-start').offset().top
     }, 500);
+  });
+
+  // let user toggle video play on mobile (note: it won't auto start on mobile, but will on desktop devices)
+  btnPause.click(function () {
+    targetVideo.get(0).pause();
+    btnPause.hide();
+    btnPlay.show();
+  });
+  btnPlay.click(function () {
+    targetVideo.get(0).play();
+    btnPlay.hide();
+    btnPause.show();
   });
 });

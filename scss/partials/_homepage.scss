@@ -40,7 +40,8 @@ footer {
   color: darken($white, 25%);
   cursor: pointer;
   font-size: 3rem;
-  position: absolute;
+  height: auto;
+  position: fixed;
   right: 0; bottom: 2rem; left: 0;
   text-align: center;
 
