@@ -120,8 +120,6 @@ gulp.task('scripts:compile', () => {
     'node_modules/bootstrap/js/dist/dropdown.js',
     'node_modules/bootstrap/js/dist/carousel.js',
     'node_modules/bootstrap/js/dist/collapse.js',
-    'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-    'node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
   ])
     .pipe(sourcemaps.init())
     .pipe(concat('compiled-bundle.js'))

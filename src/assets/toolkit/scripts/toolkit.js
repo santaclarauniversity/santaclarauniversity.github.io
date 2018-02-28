@@ -188,3 +188,55 @@ $(function () {
     });
   }
 });
+
+// homepage
+$(function () {
+  //
+  // creates a window of 100vh - 100px (the viewport, excluding the header) over which to gradually black out content
+  //
+  var triggerStart  = 100;
+  var triggerEnd    = $(window).height() * (3/4);
+
+  var target        = $('.sticky-trigger');
+  var targetOverlay = target.find('video + div');
+  var targetVideo   = target.find('video');
+
+  var hidden        = false; // hide both video and overlay when user scrolls down enough, unhide when they go back up
+  var paused        = false; // pause video when user scrolls down enough, unpause when they go back up
+
+  $(window).on('scroll', function ()
+  {
+    var scrollPos = $(this).scrollTop();
+
+    if (scrollPos >= triggerStart && scrollPos <= triggerEnd)
+    {
+      if (hidden)
+      {
+        target.css('opacity', '1');
+
+        hidden = false;
+      }
+
+      var alpha = (scrollPos - triggerStart) / triggerEnd;
+
+      targetOverlay.css('background', 'rgba(0,0,0,' + alpha + ')');
+
+      if (!paused)
+      {
+        targetVideo.get(0).pause();
+        paused = true;
+      }
+    }
+    else if (paused && scrollPos <= triggerStart)
+    {
+      targetVideo.get(0).play();
+      paused = false;
+    }
+    else if (scrollPos > triggerEnd - triggerStart)
+    {
+      target.css('opacity', '0');
+
+      hidden = true;
+    }
+  });
+});
