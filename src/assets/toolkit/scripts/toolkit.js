@@ -218,9 +218,9 @@ $(function () {
       targetOverlay.css('background', 'rgba(0,0,0,' + alpha + ')');
 
       if (alpha > 0.5) {
-        targetBtn.fadeIn();
+        targetBtn.removeClass('fadeOut').addClass('fadeIn');
       } else {
-        targetBtn.fadeOut();
+        targetBtn.removeClass('fadeIn').addClass('fadeOut');
       }
 
       if (!paused) {
