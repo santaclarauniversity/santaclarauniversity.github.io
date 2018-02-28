@@ -73,6 +73,10 @@ video {
   }
 }
 
+.video-snapshot {
+  @extend video;
+}
+
 .panel { display: none }
 
 .no-video .video-container video,
