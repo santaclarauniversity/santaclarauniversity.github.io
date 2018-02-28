@@ -1,5 +1,7 @@
 // start  new video homepage code
 
+$viewport: calc(100vh - 100px);
+
 .homepage {
   overflow-x: hidden;
 }
@@ -17,20 +19,45 @@ footer {
   position: relative;
 }
 
-.video-container .sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  height: calc(100vh - 100px);
-}
 .video-container {
-  position: relative;
   min-height: 221vh;
+  position: relative;
+
+  h2 {
+    @include media-breakpoint-down(md) {
+      font-size: 3rem;
+    }
+  }
+
+  .sticky {
+    height: $viewport;
+    position: sticky;
+    top: 0;
+  }
 }
+
+.video-controls {
+  color: darken($white, 25%);
+  cursor: pointer;
+  font-size: 3rem;
+  position: absolute;
+  right: 0; bottom: 2rem; left: 0;
+  text-align: center;
+
+  @include media-breakpoint-down(md) {
+    color: $white;
+  }
+
+  &:hover {
+    color: $white;
+  }
+}
+
 .fadeable {
+  height: $viewport;
   width: 100%;
-  height: calc(100vh - 100px);
 }
+
 video {
   background-size: cover;
   height: 100vh;
@@ -41,7 +68,7 @@ video {
   z-index: -1;
 
   + div {
-    height: calc(100vh - 100px);
+    height: $viewport;
     width: 100%;
   }
 }

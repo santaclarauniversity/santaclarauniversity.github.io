@@ -191,60 +191,49 @@ $(function () {
 
 // homepage
 $(function () {
+  // TODO this -needs- to be scoped to -ONLY- the homepage
+
   //
   // creates a window of 100vh - 100px (the viewport, excluding the header) over which to gradually black out content
   //
-  var triggerStart  = 100;
+  var triggerStart  = $('header').height();
   var triggerEnd    = $(window).height() * (3/4);
 
-  var target        = $('.sticky-trigger');
   var targetOverlay = $('.fadeable');
+  var targetBtn     = targetOverlay.find('.actions');
   var targetVideo   = $('video');
 
   var hidden        = false; // hide both video and overlay when user scrolls down enough, unhide when they go back up
   var paused        = false; // pause video when user scrolls down enough, unpause when they go back up
 
-  $(window).on('scroll', function ()
-  {
+  $(window).on('scroll', function () {
     var scrollPos = $(this).scrollTop();
 
-    if (scrollPos >= triggerStart && scrollPos <= triggerEnd)
-    {
-      if (hidden)
-      {
-        target.css('opacity', '1');
-
-        hidden = false;
-      }
-
+    if (scrollPos >= triggerStart && scrollPos <= triggerEnd) {
       var alpha = (scrollPos - triggerStart) / triggerEnd;
-      console.log(alpha);
+
       targetOverlay.css('background', 'rgba(0,0,0,' + alpha + ')');
 
       if (alpha > 0.5) {
-        console.log("triggered");
-        $('.actions').fadeIn();
-      }
-      else {
-        $('.actions').fadeOut();
+        targetBtn.fadeIn();
+      } else {
+        targetBtn.fadeOut();
       }
 
-      if (!paused)
-      {
+      if (!paused) {
         targetVideo.get(0).pause();
         paused = true;
       }
-    }
-    else if (paused && scrollPos <= triggerStart)
-    {
+    } else if (paused && scrollPos <= triggerStart) {
       targetVideo.get(0).play();
       paused = false;
     }
-    else if (scrollPos > triggerEnd - triggerStart)
-    {
-      target.css('opacity', '0');
+  });
 
-      hidden = true;
-    }
+  // let user skip down past video
+  $('.fa-chevron-down').click(function () {
+    $('html, body').animate({
+      scrollTop: $('.content-start').offset().top
+    }, 500);
   });
 });
