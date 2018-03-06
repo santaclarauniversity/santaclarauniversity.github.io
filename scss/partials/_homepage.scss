@@ -23,16 +23,22 @@ footer {
   min-height: 221vh;
   position: relative;
 
-  h2 {
-    @include media-breakpoint-down(md) {
-      font-size: 3rem;
-    }
-  }
-
   .sticky {
     height: $viewport;
     position: sticky;
     top: 0;
+  }
+
+  .actions {
+    opacity: 0;
+  }
+
+  h2 {
+    animation-duration: 2s;
+
+    @include media-breakpoint-down(md) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -55,6 +61,7 @@ footer {
 }
 
 .fadeable {
+  background-color: rgba(0,0,0,.01);
   height: $viewport;
   width: 100%;
 }

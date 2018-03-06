@@ -197,7 +197,7 @@ $(function () {
   // creates a window of 100vh - 100px (the viewport, excluding the header) over which to gradually black out content
   //
   var triggerStart  = $('header').height();
-  var triggerEnd    = $(window).height() * (3/4);
+  var triggerEnd    = $(window).height();
 
   var targetOverlay = $('.fadeable');
   var targetBtn     = targetOverlay.find('.actions');
@@ -206,30 +206,63 @@ $(function () {
   var btnPlay       = $('.fa-play');
   var btnPause      = $('.fa-pause');
 
-  var hidden        = false; // hide both video and overlay when user scrolls down enough, unhide when they go back up
-  var paused        = false; // pause video when user scrolls down enough, unpause when they go back up
+  var lastScrollPos = 0;
+
+  function animIn()
+  {
+    // darken background
+    targetOverlay.animate({ backgroundColor: 'rgba(0,0,0,.85)' });
+
+    // fade in
+    targetBtn.removeClass('fadeOut').addClass('fadeInUp');
+  }
+
+  function animOut( lighten )
+  {
+    if (lighten)
+    {
+      // lighten background (to invisible)
+      targetOverlay.animate({ backgroundColor: 'rgba(0,0,0,.01)' });
+    }
+
+    // fade out
+    targetBtn.removeClass('fadeInUp').addClass('fadeOut');
+  }
 
   $(window).on('scroll', function () {
     var scrollPos = $(this).scrollTop();
 
-    if (scrollPos >= triggerStart && scrollPos <= triggerEnd) {
-      var alpha = (scrollPos - triggerStart) / triggerEnd;
+    // if moving past site load pos, anim in
+    if (lastScrollPos === 0 && scrollPos >= triggerStart && scrollPos <= triggerEnd)
+    {
+      animIn();
+      targetVideo.get(0).pause();
 
-      targetOverlay.css('background', 'rgba(0,0,0,' + alpha + ')');
+      lastScrollPos = scrollPos;
+    }
+    // if moving from target area past first pane, anim out
+    else if (lastScrollPos >= triggerStart && lastScrollPos <= triggerEnd && scrollPos > triggerEnd)
+    {
+      animOut();
+      targetVideo.get(0).pause();
 
-      if (alpha > 0.5) {
-        targetBtn.removeClass('fadeOut').addClass('fadeIn');
-      } else {
-        targetBtn.removeClass('fadeIn').addClass('fadeOut');
-      }
+      lastScrollPos = scrollPos;
+    }
+    // if moving back to target area from past it, anim in
+    else if (lastScrollPos >= triggerEnd && scrollPos >= triggerStart && scrollPos <= triggerEnd)
+    {
+      animIn();
+      targetVideo.get(0).pause();
 
-      if (!paused) {
-        targetVideo.get(0).pause();
-        paused = true;
-      }
-    } else if (paused && scrollPos <= triggerStart) {
+      lastScrollPos = scrollPos;
+    }
+    // if moving back to site load pos, anim out
+    else if (lastScrollPos > triggerStart && scrollPos <= triggerStart)
+    {
+      animOut(true);
       targetVideo.get(0).play();
-      paused = false;
+
+      lastScrollPos = 0;
     }
   });
 
