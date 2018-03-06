@@ -13,7 +13,7 @@ layout: demo
             <h2 class="text-uppercase text-white text-sans-light mb-4 display-3">Invent the Life You Want to Lead</h2>
           </div>
         </div>
-        <div class="row animated fadeOut actions">
+        <div class="row animated actions" style="opacity: 0">
           <div class="col-sm-4 text-left">
             <a href="/apply" class="btn btn-lg btn-outline-light mb-3 d-block">Apply</a>
           </div>
@@ -103,7 +103,7 @@ layout: demo
         <hr class="dots-left" style="border-top: 1px dashed black;">
         <h2 class="text-sans-light mb-3">SCU offers 113 majors and minors. Find yours.</h2>
         <div class="col-8 text-left mx-auto">
-          <select name="departments" id="departments" class="custom-select form-control-lg">
+          <select name="departments" id="departments" class="custom-select form-control-lg" data-placeholder="Majors, Minors, and Programs">
             <option></option>
             <optgroup label="College of Arts and Sciences">
               <option data-target="/cas/anthropology">Anthropology</option>
@@ -195,88 +195,71 @@ layout: demo
     </div>
   </div>
 </div>
-<section class="panel">
-  <div class="wrapper row pull-quote-inv d-flex flex-column">
-    <div class="col text-center">
-      <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%22300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fb7eb4c44%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A15pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fb7eb4c44%22%3E%3Crect%20width%3D%22300%22%20height%3D%22300%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22111.0703125%22%20y%3D%22156.6%22%3E300x300%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="400x400" class="rounded-circle img-fluid" data-src="holder.js/400x400?auto=yes" data-holder-rendered="true">
-    </div>
-    <div class="col">
-      <blockquote class="blockquote text-sans-light">
-        <p class="pt-3 pl-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda dolorem ducimus ex hic id iste itaque molestias nam nesciunt, quas quod rem. Asperiores autem et mollitia natus nisi, non.</p>
-        <footer class="blockquote-footer text-right">
-          <cite title="Source Title">Speaker Name</cite>, (their title)
-          <p>Relevant University Department</p>
-        </footer>
-      </blockquote>
-    </div>
-  </div>
-</section>
+{{> pull-quote.pull-quote-inv }}
 <section>
   <div class="bg-light wrapper">
     <!--<div class="col-8 mx-auto text-center">-->
     <!--<h2 class="mb-3">SCU Live</h2>-->
     <!--<p class="mb-5">Find out the latest or attend your next favorite show.</p>-->
     <!--</div>-->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6 col-12 windowpane has-overlay bg-img-left-center has-dim" style="background-image: url('https://www.scu.edu/media/institutional-pages/news-ampamp-events/audrey-760x480.jpg');">
-          <div class="windowpane-overlay p-3 text-sans-light">
-            <p class="h3 mb-0">The Gift of Water</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cumque dolore dolorum expedita illo illum modi, molestias nam necessitatibus nemo nihil nisi odit officiis perspiciatis quae quibusdam suscipit totam, vero.</p>
-            <p class="mt-3">
-              <button type="button" class="btn btn-primary btn-sm">Event Details</button>
-            </p>
-          </div>
-          <div class="windowpane-desc p-3 text-white">
-            <h2 class="text-sans-light text-uppercase">The Gift of Water</h2>
-            <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
+    <div class="row no-gutters">
+      <div class="col-md-6 col-12 windowpane has-overlay bg-img-left-center has-dim" style="background-image: url('https://www.scu.edu/media/institutional-pages/news-ampamp-events/audrey-760x480.jpg');">
+        <div class="windowpane-overlay p-3 text-sans-light">
+          <p class="h3 mb-0">The Gift of Water</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cumque dolore dolorum expedita illo illum modi, molestias nam necessitatibus nemo nihil nisi odit officiis perspiciatis quae quibusdam suscipit totam, vero.</p>
+          <p class="mt-3">
+            <button type="button" class="btn btn-primary btn-sm">Event Details</button>
+          </p>
         </div>
-        <div class="col-md-3 col-12 windowpane has-overlay bg-img-left-center has-dim" style="background-image: url(https://lwcal.scu.edu/live/image/gid/10/width/250/2260_Dan-Hoyle-Her.jpg);">
-          <div class="windowpane-overlay p-3 text-sans-light">
-            <p class="h3 mb-0">The Real Americans</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cumque dolore dolorum expedita illo illum modi, molestias nam necessitatibus nemo nihil nisi odit officiis perspiciatis quae quibusdam suscipit totam, vero.</p>
-            <p class="mt-3">
-              <button type="button" class="btn btn-primary btn-sm">Event Details</button>
-            </p>
-          </div>
-          <div class="windowpane-desc p-3 text-white">
-            <h4 class="text-sans-light text-uppercase">The Real Americans</h4>
-            <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-12 windowpane has-overlay bg-img-left-center has-dim" style="background-image: url(https://scu.edu/media/institutional-pages/news-ampamp-events/CB180213_StateOfUniv760x480.jpg);">
-          <div class="windowpane-overlay p-3 text-sans-light">
-            <p class="h3 mb-0">Bearing One Another's Burdens</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cumque dolore dolorum expedita illo illum modi, molestias nam necessitatibus nemo nihil nisi odit officiis perspiciatis quae quibusdam suscipit totam, vero.</p>
-            <p class="mt-3">
-              <button type="button" class="btn btn-primary btn-sm">Event Details</button>
-            </p>
-          </div>
-          <div class="windowpane-desc p-3 text-white">
-            <h4 class="text-sans-light text-uppercase">Bearing One Another’s Burdens</h4>
-            <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
+        <div class="windowpane-desc p-3 text-white">
+          <h2 class="text-sans-light text-uppercase">The Gift of Water</h2>
+          <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-3 story-pane text-white p-3" style="background-image: url(https://www.scu.edu/media/institutional-pages/news-ampamp-events/audrey-760x480.jpg)">
-          <h4 class="text-serif">The Gift of Water</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <div class="col-md-3 col-12 windowpane has-overlay bg-img-left-center has-dim" style="background-image: url(https://lwcal.scu.edu/live/image/gid/10/width/250/2260_Dan-Hoyle-Her.jpg);">
+        <div class="windowpane-overlay p-3 text-sans-light">
+          <p class="h3 mb-0">The Real Americans</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cumque dolore dolorum expedita illo illum modi, molestias nam necessitatibus nemo nihil nisi odit officiis perspiciatis quae quibusdam suscipit totam, vero.</p>
+          <p class="mt-3">
+            <button type="button" class="btn btn-primary btn-sm">Event Details</button>
+          </p>
         </div>
-        <div class="col-3 story-pane text-white p-3" style="background-image: url(https://lwcal.scu.edu/live/image/gid/10/width/250/2260_Dan-Hoyle-Her.jpg)">
-          <h4 class="text-serif">The Real Americans</h4>
-          <p>February 20, 2018</p>
+        <div class="windowpane-desc p-3 text-white">
+          <h4 class="text-sans-light text-uppercase">The Real Americans</h4>
+          <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
-        <div class="col-3 story-pane text-white p-3 bg-gradient-primary">
-          <h4 class="text-serif">Announcing the 2018 Sinatra Chair</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <a href="#" class="btn btn-dark">Read the Announcement</a>
+      </div>
+      <div class="col-md-3 col-12 windowpane has-overlay bg-img-left-center has-dim" style="background-image: url(https://scu.edu/media/institutional-pages/news-ampamp-events/CB180213_StateOfUniv760x480.jpg);">
+        <div class="windowpane-overlay p-3 text-sans-light">
+          <p class="h3 mb-0">Bearing One Another's Burdens</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cumque dolore dolorum expedita illo illum modi, molestias nam necessitatibus nemo nihil nisi odit officiis perspiciatis quae quibusdam suscipit totam, vero.</p>
+          <p class="mt-3">
+            <button type="button" class="btn btn-primary btn-sm">Event Details</button>
+          </p>
         </div>
-        <div class="col-3 story-pane text-white p-3" style="background-image: url(https://scu.edu/media/institutional-pages/news-ampamp-events/CB180213_StateOfUniv760x480.jpg")">
-        <h4 class="text-serif">Bearing One Another’s Burdens</h4>
+        <div class="windowpane-desc p-3 text-white">
+          <h4 class="text-sans-light text-uppercase">Bearing One Another’s Burdens</h4>
+          <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-3 story-pane text-white p-3" style="background-image: url(https://www.scu.edu/media/institutional-pages/news-ampamp-events/audrey-760x480.jpg)">
+        <h4 class="text-serif">The Gift of Water</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div>
+      <div class="col-3 story-pane text-white p-3" style="background-image: url(https://lwcal.scu.edu/live/image/gid/10/width/250/2260_Dan-Hoyle-Her.jpg)">
+        <h4 class="text-serif">The Real Americans</h4>
+        <p>February 20, 2018</p>
+      </div>
+      <div class="col-3 story-pane text-white p-3 bg-gradient-primary">
+        <h4 class="text-serif">Announcing the 2018 Sinatra Chair</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <a href="#" class="btn btn-dark">Read the Announcement</a>
+      </div>
+      <div class="col-3 story-pane text-white p-3" style="background-image: url(https://scu.edu/media/institutional-pages/news-ampamp-events/CB180213_StateOfUniv760x480.jpg")">
+      <h4 class="text-serif">Bearing One Another’s Burdens</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
   </div>
 </section>
