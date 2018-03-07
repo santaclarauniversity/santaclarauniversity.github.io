@@ -193,9 +193,9 @@ $(function () {
 $(function () {
   // TODO this -needs- to be scoped to -ONLY- the homepage
 
-  //
-  // creates a window of 100vh - 100px (the viewport, excluding the header) over which to gradually black out content
-  //
+  /*
+    animation window of 100vh - 100px (the viewport, excluding the header)
+   */
   var triggerStart  = $('header').height();
   var triggerEnd    = $(window).height();
 
@@ -203,13 +203,13 @@ $(function () {
   var targetBtn     = targetOverlay.find('.actions');
   var targetVideo   = $('video');
 
-  var btnPlay       = $('.fa-play');
-  var btnPause      = $('.fa-pause');
-
+  /*
+    the last marked vertical scroll position, which helps the scroll listener
+    determine how to animate
+   */
   var lastScrollPos = 0;
 
-  function animIn()
-  {
+  function animIn() {
     // darken background
     targetOverlay.animate({ backgroundColor: 'rgba(0,0,0,.85)' });
 
@@ -217,10 +217,9 @@ $(function () {
     targetBtn.removeClass('fadeOut').addClass('fadeInUp');
   }
 
-  function animOut( lighten )
-  {
-    if (lighten)
-    {
+  // lighten: whether to hide the dark overlay over the video
+  function animOut( lighten ) {
+    if (lighten) {
       // lighten background (to invisible)
       targetOverlay.animate({ backgroundColor: 'rgba(0,0,0,.01)' });
     }
@@ -271,17 +270,5 @@ $(function () {
     $('html, body').animate({
       scrollTop: $('.content-start').offset().top
     }, 500);
-  });
-
-  // let user toggle video play on mobile (note: it won't auto start on mobile, but will on desktop devices)
-  btnPause.click(function () {
-    targetVideo.get(0).pause();
-    btnPause.hide();
-    btnPlay.show();
-  });
-  btnPlay.click(function () {
-    targetVideo.get(0).play();
-    btnPlay.hide();
-    btnPause.show();
   });
 });

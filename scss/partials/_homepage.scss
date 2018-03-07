@@ -1,26 +1,9 @@
-// start  new video homepage code
+// --- start --- new video homepage code
 
 $viewport: calc(100vh - 100px);
 
-.homepage {
-  overflow-x: hidden;
-}
-
-.sticky-trigger {
-  position: sticky;
-  top: 0;
-}
-
-.block {
-  min-width: 100%;
-}
-
-footer {
-  position: relative;
-}
-
 .video-container {
-  min-height: 221vh;
+  min-height: 200vh; // enables video container to "hold" onto scroll a little longer
   position: relative;
 
   .sticky {
@@ -29,8 +12,11 @@ footer {
     top: 0;
   }
 
-  .actions {
-    opacity: 0;
+  // the overlay that can "fade" into the background (faded: rgba(0,0,0,.01))
+  .fadeable {
+    background-color: rgba(0, 0, 0, .01);
+    height: $viewport;
+    width: 100%;
   }
 
   h2 {
@@ -40,74 +26,85 @@ footer {
       font-size: 3rem;
     }
   }
-}
 
-.video-controls {
-  color: darken($white, 25%);
-  cursor: pointer;
-  font-size: 3rem;
-  height: auto;
-  position: fixed;
-  right: 0; bottom: 2rem; left: 0;
-  text-align: center;
-
-  @include media-breakpoint-down(md) {
-    color: $white;
+  .actions {
+    opacity: 0;
   }
 
-  &:hover {
-    color: $white;
-  }
-}
-
-.fadeable {
-  background-color: rgba(0,0,0,.01);
-  height: $viewport;
-  width: 100%;
-}
-
-video {
-  background-size: cover;
-  height: 100vh;
-  object-fit: fill;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  width: 100%;
-  z-index: -1;
-
-  + div {
-    height: $viewport;
+  video {
+    background-size: cover;
+    height: 100vh;
+    object-fit: fill;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    z-index: -1;
+
+    + div {
+      height: $viewport;
+      width: 100%;
+    }
+
+    .video-snapshot {
+      @extend video;
+    }
+  }
+
+  // icons that are fixed to the bottom of .video-container
+  .video-controls {
+    color: darken($white, 25%);
+    cursor: pointer;
+    font-size: 3rem;
+    height: auto;
+    position: fixed;
+    right: 0;
+    bottom: 2rem;
+    left: 0;
+    text-align: center;
+
+    @include media-breakpoint-down(md) {
+      color: $white;
+    }
+
+    &:hover {
+      color: $white;
+    }
   }
 }
 
-.video-snapshot {
-  @extend video;
+// forces homepage blocks to full width
+.block {
+  min-width: 100%;
+  width: 100%;
 }
 
-.panel { display: none }
+// ---homepage content specific stuff
 
-.no-video .video-container video,
-.touch .video-container video {
-  display: none;
-}
-.no-video .video-container .poster,
-.touch .video-container .poster {
-  display: block !important;
-}
-
-.academics a.d-block {
+.academics .d-block {
   white-space: normal;
 }
+
 .story-pane {
   min-height: 350px;
   background-size: cover;
 }
 
-// end    new video homepage code
+// ---homepage content specific stuff
+
+// prevents .video-controls appearing over footer
+footer {
+  position: relative;
+}
+
+// --- end --- new video homepage code
 
 .homepage {
   background-color: darken($white, 2%);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .section-header {
