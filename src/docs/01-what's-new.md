@@ -32,7 +32,8 @@ Release Highlights:
   - Updated Content Types for Bootstrap 4.
   - One column/two column "module" designations are deprecated in favor of columns. See: Site Pointer, Infographics, List Items, more.
 - **Accordion**
-  - _Marked for deprecation_ - is now a Card with a special collapsible attribute.
+  - We have restyled the standard BS4 accordion configuration (previously marked for deprecation) and introduced a new/improved accordion style.
+  - Card-based accordions have been added to the pattern library following BS4. Though we present this as an option, the default styling should be used.
 - **Agenda**
   - Simple responsive table (built with Bootstrap grid) which is intended for scheduling events that have several parts.
 - **Block**
