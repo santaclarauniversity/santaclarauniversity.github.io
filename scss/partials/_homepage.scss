@@ -20,7 +20,7 @@ $viewport: calc(100vh - 100px);
   }
 
   h2 {
-    animation-duration: 2s;
+    animation-duration: 1s;
 
     @include media-breakpoint-down(md) {
       font-size: 3rem;

@@ -209,56 +209,47 @@ $(function () {
    */
   var lastScrollPos = 0;
 
-  function animIn() {
+  function animIn( ) {
     // darken background
     targetOverlay.animate({ backgroundColor: 'rgba(0,0,0,.85)' });
 
     // fade in
-    targetBtn.removeClass('fadeOut').addClass('fadeInUp');
+    targetBtn.removeClass('fadeOutDown').addClass('fadeInUp');
   }
 
   // lighten: whether to hide the dark overlay over the video
-  function animOut( lighten ) {
-    if (lighten) {
-      // lighten background (to invisible)
-      targetOverlay.animate({ backgroundColor: 'rgba(0,0,0,.01)' });
-    }
+  function animOut( ) {
+    targetOverlay.animate({ backgroundColor: 'rgba(0,0,0,.01)' });
 
-    // fade out
-    targetBtn.removeClass('fadeInUp').addClass('fadeOut');
+    targetBtn.removeClass('fadeInUp').addClass('fadeOutDown');
   }
 
   $(window).on('scroll', function () {
     var scrollPos = $(this).scrollTop();
 
     // if moving past site load pos, anim in
-    if (lastScrollPos === 0 && scrollPos >= triggerStart && scrollPos <= triggerEnd)
-    {
+    if (lastScrollPos === 0 && scrollPos >= triggerStart && scrollPos <= triggerEnd) {
       animIn();
       targetVideo.get(0).pause();
 
       lastScrollPos = scrollPos;
     }
     // if moving from target area past first pane, anim out
-    else if (lastScrollPos >= triggerStart && lastScrollPos <= triggerEnd && scrollPos > triggerEnd)
-    {
-      animOut();
+    else if (lastScrollPos >= triggerStart && lastScrollPos <= triggerEnd && scrollPos > triggerEnd) {
       targetVideo.get(0).pause();
 
       lastScrollPos = scrollPos;
     }
     // if moving back to target area from past it, anim in
-    else if (lastScrollPos >= triggerEnd && scrollPos >= triggerStart && scrollPos <= triggerEnd)
-    {
+    else if (lastScrollPos >= triggerEnd && scrollPos >= triggerStart && scrollPos <= triggerEnd) {
       animIn();
       targetVideo.get(0).pause();
 
       lastScrollPos = scrollPos;
     }
     // if moving back to site load pos, anim out
-    else if (lastScrollPos > triggerStart && scrollPos <= triggerStart)
-    {
-      animOut(true);
+    else if (lastScrollPos > triggerStart && scrollPos <= triggerStart) {
+      animOut();
       targetVideo.get(0).play();
 
       lastScrollPos = 0;
