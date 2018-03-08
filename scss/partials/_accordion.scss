@@ -1,6 +1,5 @@
 .accordion-item {
   border-bottom: $gray-500 1px solid;
-  margin-bottom: 1rem;
 
   > [data-toggle="collapse"] {
     transition: margin .35s ease, opacity .35s ease;
@@ -56,10 +55,6 @@
         opacity: 1;
       }
     }
-  }
-
-  p {
-    margin-top: 1rem;
   }
 
   h5 {
