@@ -1,7 +1,6 @@
 .accordion-item {
   border-bottom: $gray-500 1px solid;
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
 
   > [data-toggle="collapse"] {
     transition: margin .35s ease, opacity .35s ease;
