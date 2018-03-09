@@ -1,3 +1,13 @@
+```v2.0.1```
+- **Sidebar**
+  - A new, lightweight sidebar design has been adopted that will allow for greater responsive behavior.
+  - Adjustments to Sidebar behavior.
+- **Accordion**
+  - We have restyled the standard BS4 accordion configuration (previously marked for deprecation) and introduced a new/improved accordion style.
+  - Card-based accordions have been added to the pattern library following BS4. Though we present this as an option, the default styling should be used.
+- **Templates**
+  - Removed a broken Kitchen Sink demo
+  
 ```v2.0.0```
 - Bootstrap dependency bump to BS4 stable.
 
@@ -31,9 +41,6 @@ Release Highlights:
 - **General Content Type Changes**
   - Updated Content Types for Bootstrap 4.
   - One column/two column "module" designations are deprecated in favor of columns. See: Site Pointer, Infographics, List Items, more.
-- **Accordion**
-  - We have restyled the standard BS4 accordion configuration (previously marked for deprecation) and introduced a new/improved accordion style.
-  - Card-based accordions have been added to the pattern library following BS4. Though we present this as an option, the default styling should be used.
 - **Agenda**
   - Simple responsive table (built with Bootstrap grid) which is intended for scheduling events that have several parts.
 - **Block**
