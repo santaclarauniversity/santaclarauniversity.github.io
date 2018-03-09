@@ -15,7 +15,7 @@
   @include media-breakpoint-up(md) {
     margin-bottom: 1.5rem;
 
-    .sidebar-top > .collapse {
+    .collapse {
       display: block !important;
     }
   }
@@ -63,34 +63,35 @@
 
 .sidebar-title {
   border-bottom: 1px solid $gray-300;
+  font-family: $sans-serif-light-font;
+  margin-bottom: 0;
   color: $gray-600;
   font-weight: 300 !important;
-  margin-bottom: 0;
 
   @include media-breakpoint-down(md) {
     font-size: 1rem;
   }
 
-  @include media-breakpoint-up(md) {
-    .sidebar-link-dropdown {
-      color: $gray-600 !important;
-      pointer-events: none;
+  .desktop-title {
+    color: #000;
+    opacity: .7;
+    text-decoration: none;
+    transition: opacity .35s ease;
 
-      &::after {
-        display: none;
-      }
+    &:hover {
+      opacity: 1;
     }
   }
 
   .sidebar-link-dropdown {
     display: block;
-    padding-bottom: 1.5rem;
+    //padding-bottom: 1.5rem;
     position: relative;
 
     @include media-breakpoint-down(xs) {
       padding-left: 15px;
       padding-right: 15px;
-      padding-top: 1.5rem;
+      //padding-top: 1.5rem;
 
       &::after {
         right: 15px;
@@ -104,10 +105,6 @@
         }
       }
     }
-
-    @include media-breakpoint-down(md) {
-      padding-top: 1.5rem;
-    }
   }
 }
 
@@ -119,7 +116,7 @@
   .collapse > &,
   .collapsing > & {
     border-bottom: 1px solid $gray-300;
-    padding: 1.125rem 1.125rem 1.125rem 0;
+    padding: 1rem 1rem 1rem 0;
 
     @include media-breakpoint-down(sm) {
       background-color: $gray-100;

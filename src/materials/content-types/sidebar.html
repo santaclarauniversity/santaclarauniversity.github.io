@@ -1,17 +1,18 @@
 <nav class="sidebar">
   <div class="sidebar-top">
-    <h5 class="sidebar-title">
-      <a href="#!" class="sidebar-link-dropdown" data-toggle="collapse" data-target="#sidebarLinks" aria-expanded="{{#if expanded}}true{{else}}false{{/if}}" aria-controls="sidebarLinks">News & Events</a>
+    <h5 class="sidebar-title py-3">
+      <a href="#!" class="sidebar-link-dropdown d-md-none" data-toggle="collapse" data-target="#sidebarLinks" aria-expanded="true" aria-controls="sidebarLinks">News & Events</a>
+      <a href="#1" class="d-md-block d-none desktop-title">News & Events</a>
     </h5>
-    <div class="collapse {{#if expanded}}show{{/if}}" id="sidebarLinks">
+    <div class="collapse" id="sidebarLinks">
       <ul class="sidebar-links">
         <li>
           <a href="#!">Feature Stories</a>
         </li>
         <li>
-          <a href="#!" class="sidebar-link-dropdown" data-toggle="collapse" data-target="#sidebarSubLinks" aria-expanded="{{#if expanded}}true{{else}}false{{/if}}" aria-controls="sidebarSubLinks">Press Releases</a>
+          <a href="#!">Press Releases</a>
 
-          <ul class="collapse {{#if expanded}}show{{/if}} sidebar-links" id="sidebarSubLinks">
+          <ul class="sidebar-links" id="sidebarSubLinks">
             <li>
               <a href="#">2018</a>
             </li>
@@ -19,9 +20,9 @@
               <a href="#!">2017</a>
             </li>
             <li>
-              <a href="#!" class="sidebar-link-dropdown" data-toggle="collapse" data-target="#sidebarSubSubLinks" aria-expanded="{{#if expanded}}true{{else}}false{{/if}}" aria-controls="sidebarSubSubLinks">2016</a>
+              <a href="#!">2016</a>
 
-              <ul class="collapse {{#if expanded}}show{{/if}} sidebar-links" id="sidebarSubSubLinks">
+              <ul class="sidebar-links" id="sidebarSubSubLinks">
                 <li>
                   <a href="#!">January</a>
                 </li>
