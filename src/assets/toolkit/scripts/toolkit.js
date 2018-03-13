@@ -199,8 +199,9 @@ $(function () {
   var triggerStart  = $('header').height();
   var triggerEnd    = $(window).height();
 
-  var targetOverlay = $('.fadeable');
-  var targetBtn     = targetOverlay.find('.actions');
+  var targetContent = $('.fadeable');
+  var targetOverlay = targetContent.find('.overlay');
+  var targetBtn     = targetContent.find('.actions');
   var targetVideo   = $('video');
 
   /*
@@ -210,17 +211,12 @@ $(function () {
   var lastScrollPos = 0;
 
   function animIn( ) {
-    // darken background
-    targetOverlay.animate({ backgroundColor: 'rgba(0,0,0,.85)' });
-
-    // fade in
+    targetOverlay.fadeTo('slow', .75);
     targetBtn.removeClass('fadeOutDown').addClass('fadeInUp');
   }
 
-  // lighten: whether to hide the dark overlay over the video
   function animOut( ) {
-    targetOverlay.animate({ backgroundColor: 'rgba(0,0,0,.01)' });
-
+    targetOverlay.fadeTo('slow', .01);
     targetBtn.removeClass('fadeInUp').addClass('fadeOutDown');
   }
 

@@ -3,7 +3,7 @@
 $viewport: calc(100vh - 100px);
 
 .video-container {
-  min-height: 200vh; // enables video container to "hold" onto scroll a little longer
+  min-height: 175vh; // enables video container to "hold" onto scroll a little longer
   position: relative;
 
   .sticky {
@@ -14,9 +14,16 @@ $viewport: calc(100vh - 100px);
 
   // the overlay that can "fade" into the background (faded: rgba(0,0,0,.01))
   .fadeable {
-    background-color: rgba(0, 0, 0, .01);
     height: $viewport;
     width: 100%;
+
+    .overlay {
+      background: $black;
+      height: 100%;
+      opacity: .01;
+      position: absolute;
+      width: 100%;
+    }
   }
 
   h2 {
@@ -77,7 +84,7 @@ $viewport: calc(100vh - 100px);
 
 // forces homepage blocks to full width
 .block {
-  min-width: 100%;
+  max-width: 100%;
   width: 100%;
 }
 
@@ -103,6 +110,7 @@ footer {
 
 .homepage {
   background-color: darken($white, 2%);
+  box-sizing: border-box;
   overflow-x: hidden;
   width: 100%;
 }
