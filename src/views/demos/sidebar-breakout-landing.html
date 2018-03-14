@@ -1,9 +1,9 @@
 ---
-title: Cover Image Layout
+title: Sidebar Breakout Landing Page
 layout: demo
 ---
 
-<div class="jumbotron mb-0" style="background-image: url('/assets/images/examples/stage_lighting.JPG');">
+<div class="jumbotron mb-0" style="background-image: url('/assets/images/examples/stage_lighting.JPG');border-radius:0">
   <div class="container">
     <h1 class="text-white">Invent the life you want to lead.</h1>
     <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aperiam autem commodi consectetur, culpa cum dicta, excepturi harum illum inventore repellat saepe soluta, veritatis vero! Culpa enim impedit nihil.</p>
@@ -22,11 +22,15 @@ layout: demo
 <section class="py-4">
   <div class="container">
     <div class="row">
-    <div class="col-12 col-md-9 order-md-1 order-12">
-        <div class="row justify-content-between">
+      <div class="col-12 col-md-3 order-md-2">
+        {{>sidebar}}
+        <a href="#" class="brand-primary link-button" role="button">Apply Now</a>
+      </div>
+      <div class="col-12 col-md-9 order-md-1">
+      <div class="row justify-content-between">
           <!-- About Image -->
           <div class="col-md-3 col-lg-5 align-self-top g-hidden-sm-down">
-            <img class="img-fluid" src="holder.js/326x318" alt="Image Description">
+            <img class="img-fluid" src="holder.js/100px318" alt="Image Description">
           </div>
           <!-- End About Image -->
           <div class="col-md-8 col-lg-6">
@@ -40,12 +44,6 @@ layout: demo
           </div>
           <!-- End About Info -->
         </div>
-      </div>
-      <div class="col-12 col-md-3 order-1 order-md-12">
-        {{>sidebar}}
-
-        <a href="#" class="brand-primary link-button" role="button">Apply Now</a>
-      </div>
     </div>
   </div>
 </section>
@@ -81,10 +79,8 @@ layout: demo
   </div>
 </div>
 </div>
-<div class="block" style="background: #fcfcfc;">
-  <div class="container">
-    {{> pull-quote.pull-quote-inv}}
-  </div>
+<div class="block p-0 my-3">
+  {{> pull-quote.pull-quote-inv}}
 </div>
 <div class="block">
   <div class="container">

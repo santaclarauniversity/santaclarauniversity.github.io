@@ -1,8 +1,6 @@
 ---
 title: Cover Image Layout
 layout: demo
-
-custom: false
 ---
 <div class="jumbotron jumbotron-fluid hero has-dim p-0" style="background-image:url(http://scu.edu//media/institutional-pages/campus-life/images/laptop.jpg);">
   <div class="container position-relative">
@@ -14,7 +12,10 @@ custom: false
 </div>
 <div class="container" id="content">
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-4 order-sm-last">
+      {{> sidebar}}
+    </div>
+    <div class="col-sm-8 order-sm-first">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="https://t4dev.scu.edu/terminalfour/preview/20/en/1127">Home</a></li><li class="breadcrumb-item">Campus Life  </li>
       </ol>
@@ -125,10 +126,6 @@ custom: false
         </div>
       </div>
       <div class="pull-right"></div>
-    </div>
-    <div class="col-sm-4">
-      {{> sidebar}}
-
     </div>
   </div>
 </div>
