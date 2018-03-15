@@ -64,7 +64,7 @@ $viewport: calc(100vh - 100px);
   .video-controls {
     color: darken($white, 25%);
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 2em;
     height: auto;
     position: fixed;
     right: 0;
@@ -97,6 +97,7 @@ $viewport: calc(100vh - 100px);
 .story-pane {
   min-height: 350px;
   background-size: cover;
+  overflow: hidden;
 }
 
 // ---homepage content specific stuff

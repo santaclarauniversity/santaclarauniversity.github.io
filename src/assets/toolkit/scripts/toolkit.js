@@ -211,51 +211,44 @@ $(function () {
   var lastScrollPos = 0;
 
   function animIn( ) {
-    targetOverlay.fadeTo('slow', .75);
-    targetBtn.removeClass('fadeOutDown').addClass('fadeInUp');
+    targetOverlay.fadeTo('fast', .75, function () {
+      targetBtn.removeClass('fadeOutDown').addClass('fadeInUp');
+    });
   }
 
   function animOut( ) {
-    targetOverlay.fadeTo('slow', .01);
-    targetBtn.removeClass('fadeInUp').addClass('fadeOutDown');
+    targetOverlay.fadeTo('fast', .01, function () {
+      targetBtn.removeClass('fadeInUp').addClass('fadeOutDown');
+    });
   }
 
-  $(window).on('scroll', function () {
+  function listen( ) {
     var scrollPos = $(this).scrollTop();
-
-    // if moving past site load pos, anim in
     if (lastScrollPos === 0 && scrollPos >= triggerStart && scrollPos <= triggerEnd) {
+      lastScrollPos = scrollPos;
       animIn();
       targetVideo.get(0).pause();
-
-      lastScrollPos = scrollPos;
     }
-    // if moving from target area past first pane, anim out
     else if (lastScrollPos >= triggerStart && lastScrollPos <= triggerEnd && scrollPos > triggerEnd) {
-      targetVideo.get(0).pause();
-
       lastScrollPos = scrollPos;
     }
-    // if moving back to target area from past it, anim in
     else if (lastScrollPos >= triggerEnd && scrollPos >= triggerStart && scrollPos <= triggerEnd) {
-      animIn();
-      targetVideo.get(0).pause();
-
       lastScrollPos = scrollPos;
+      animIn();
     }
-    // if moving back to site load pos, anim out
     else if (lastScrollPos > triggerStart && scrollPos <= triggerStart) {
+      lastScrollPos = 0;
       animOut();
       targetVideo.get(0).play();
-
-      lastScrollPos = 0;
     }
-  });
+  }
+
+  $(window).on('scroll', listen);
 
   // let user skip down past video
   $('.fa-chevron-down').click(function () {
     $('html, body').animate({
       scrollTop: $('.content-start').offset().top
-    }, 500);
+    }, 'slow');
   });
 });
