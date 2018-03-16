@@ -1,0 +1,39 @@
+.styled-list {
+  hr {
+    border-top-color: transparentize(#000, .8);
+  }
+
+  ol {
+    display: block;
+    list-style-type: decimal;
+
+    li {
+      display: flex;
+      padding: 12px 0 0;
+
+      .list-text {
+        align-self: center;
+        flex-grow: 1;
+        font-size: 18px;
+        min-width: 10%;
+        word-wrap: break-word;
+        padding-left: 8px;
+      }
+
+      .number {
+        font-family: $sans-serif-bold-font;
+        align-self: start;
+        background-color: rgba(0, 0, 0, .3);
+        border-radius: 50%;
+        flex-shrink: 0;
+        font-size: 16px;
+        font-weight: bold;
+        height: 36px;
+        line-height: 36px;
+        position: relative;
+        text-align: center;
+        width: 36px;
+      }
+    }
+  }
+}
