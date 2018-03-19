@@ -8,20 +8,23 @@
 
     li {
       counter-increment: item;
-      margin-bottom: 5px;
+      margin-bottom: 1rem;
       display: flex;
-      align-items: center;
+
+      .list-text {
+        font-size: 1.3rem;
+      }
     }
 
     li::before {
-      margin-right: 10px;
+      margin-right: 1rem;
       content: counter(item);
       font-family: $sans-serif-bold-font;
       align-self: start;
       background-color: rgba(0, 0, 0, .3);
       border-radius: 50%;
       flex-shrink: 0;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: bold;
       height: 36px;
       line-height: 36px;
