@@ -7,27 +7,7 @@
     padding-top: 5rem;
 
     @include media-breakpoint-up(sm) {
-      padding-top: 10rem;
-    }
-
-    @include media-breakpoint-up(md) {
-      padding-top: 15rem;
-    }
-
-    .content-block {
-      background: $white;
-      padding-top: 1rem;
-    }
-
-    .widgets {
-      &> div,
-      nav {
-        background: $white;
-      }
-
-      .side-navigation-header {
-        padding-top: 10px;
-      }
+      padding-top: 7.5rem;
     }
   }
 

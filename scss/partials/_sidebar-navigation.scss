@@ -67,16 +67,16 @@
   margin-bottom: 0;
   color: $gray-600;
   font-weight: 300 !important;
+  padding-bottom: 1rem;
 
   @include media-breakpoint-down(md) {
     font-size: 1rem;
   }
 
-  .desktop-title {
-    color: #000;
-    opacity: .7;
-    text-decoration: none;
-    transition: opacity .35s ease;
+  @include media-breakpoint-up(md) {
+    .sidebar-link-dropdown {
+      color: $gray-800 !important;
+      pointer-events: none;
 
     &:hover {
       opacity: 1;
@@ -104,6 +104,10 @@
           border-top-color: $link-color;
         }
       }
+    }
+
+    @include media-breakpoint-down(md) {
+      //padding-top: 1.5rem;
     }
   }
 }

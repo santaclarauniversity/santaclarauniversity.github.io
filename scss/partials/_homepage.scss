@@ -1,5 +1,119 @@
+// --- start --- new video homepage code
+
+$viewport: calc(100vh - 100px);
+
+.video-container {
+  min-height: 175vh; // enables video container to "hold" onto scroll a little longer
+  position: relative;
+
+  .sticky {
+    height: $viewport;
+    position: sticky;
+    top: 0;
+  }
+
+  // the overlay that can "fade" into the background (faded: rgba(0,0,0,.01))
+  .fadeable {
+    height: $viewport;
+    width: 100%;
+
+    .overlay {
+      background: $black;
+      height: 100%;
+      opacity: .01;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  h2 {
+    animation-duration: 1s;
+
+    @include media-breakpoint-down(md) {
+      font-size: 3rem;
+    }
+  }
+
+  .actions {
+    opacity: 0;
+  }
+
+  video {
+    background-size: cover;
+    height: 100vh;
+    object-fit: fill;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+
+    + div {
+      height: $viewport;
+      width: 100%;
+    }
+
+    .video-snapshot {
+      @extend video;
+    }
+  }
+
+  // icons that are fixed to the bottom of .video-container
+  .video-controls {
+    color: darken($white, 25%);
+    cursor: pointer;
+    font-size: 2em;
+    height: auto;
+    position: fixed;
+    right: 0;
+    bottom: 2rem;
+    left: 0;
+    text-align: center;
+
+    @include media-breakpoint-down(md) {
+      color: $white;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+// forces homepage blocks to full width
+.block {
+  max-width: 100%;
+  width: 100%;
+}
+
+// ---homepage content specific stuff
+
+.academics .d-block {
+  white-space: normal;
+}
+
+.story-pane {
+  min-height: 350px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+// ---homepage content specific stuff
+
+// prevents .video-controls appearing over footer
+footer {
+  position: relative;
+}
+
+// --- end --- new video homepage code
+
 .homepage {
   background-color: darken($white, 2%);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .section-header {
@@ -22,66 +136,6 @@
 .news.module {
   .media a {
     width: 40%;
-  }
-}
-
-// Page Title
-.page-title {
-  @extend .sans-serif-light-font;
-
-  border-bottom: 1px solid $gray-200;
-  margin-bottom: 40px;
-  margin-top: 0;
-
-  h1 {
-    margin: 0;
-  }
-
-  &,
-  * {
-    color: $black;
-    font-size: 36px;
-    line-height: 1.25;
-
-    @include media-breakpoint-up(sm) {
-      font-size: 49px;
-      line-height: (75em/52);
-    }
-
-    @include media-breakpoint-up(md) {
-      font-size: 52px;
-    }
-  }
-
-  .back-to-site-home {
-    a {
-      color: lighten($black, 5%);
-      display: block;
-      font-size: 14px;
-
-      span {
-        @extend .sans-serif-font-bold;
-
-        color: $brand-primary;
-        font-size: 14px;
-        line-height: inherit;
-      }
-    }
-
-    @include media-breakpoint-up(sm) {
-      text-align: right;
-
-      a {
-        display: inline;
-      }
-    }
-
-    @include media-breakpoint-up(md) {
-      a,
-      a span {
-        font-size: 18px;
-      }
-    }
   }
 }
 
