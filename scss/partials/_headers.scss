@@ -86,6 +86,14 @@ $nav-fixed-height: $nav-top-height * 1.50;
       }
     }
 
+    .dropdown-toggle:hover + .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu:hover {
+      display: block;
+    }
+
     &.initial {
       border-top: 1px solid $gray-200;
     }

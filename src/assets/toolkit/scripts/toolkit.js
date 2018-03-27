@@ -113,6 +113,7 @@ var Search = {
 // header and footer
 $(function () {
 
+  // toggle fixed header
   $(window).on('scroll', function() {
 
     var $nav = $('.nav-fixed, .nav-fixed.nav-fixed-custom');
@@ -122,6 +123,11 @@ $(function () {
     } else {
       $nav.addClass('initial');
     }
+  });
+
+  // top level navbar links w/ dropdowns should still link to the page
+  $('.navbar').find('.dropdown-toggle').click(function () {
+    window.open($(this).attr('href'), '_self');
   });
 
   Search.init();
