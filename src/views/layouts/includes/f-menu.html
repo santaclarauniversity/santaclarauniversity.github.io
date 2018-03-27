@@ -1,26 +1,37 @@
 <!-- fabricator menu -->
 <div class="f-menu">
-
   {{> f-controls}}
-
+  <h2 class="mb-0"><a href="/" class="f-menu__heading text-black">SCU</a></h2>
+  <h3 class="text-sans-light f-menu__heading text-primary mb-0" style="font-size: 1rem">Design System</h3>
+  <p><a class="highlighter-rouge f-menu__heading" href="/docs.html#what's-new">{{toolkit.version}}</a></p>
+  <hr>
   <ul>
 
     <li>
       <a href="index.html" class="f-menu__heading">Overview</a>
     </li>
 
-    {{#each materials}}
     <li>
-      <a href="{{@key}}.html" class="f-menu__heading">{{name}}</a>
+      <a href="/style-guide.html" class="f-menu__heading">Style Guide</a>
       <ul>
-        {{#each items}}
+        {{#each materials.style-guide.items}}
         <li>
-          <a href="{{@../key}}.html#{{@key}}">{{name}}</a>
+          <a href="/style-guide.html#{{@key}}">{{name}}</a>
         </li>
         {{/each}}
       </ul>
     </li>
-    {{/each}}
+
+    <li>
+      <a href="/content-types.html" class="f-menu__heading">Content Types</a>
+      <ul>
+        {{#each materials.content-types.items}}
+        <li>
+          <a href="content-types.html#{{@key}}">{{name}}</a>
+        </li>
+        {{/each}}
+      </ul>
+    </li>
 
     {{#each views}}
     <li>
@@ -47,7 +58,5 @@
     </li>
 
   </ul>
-
-
 </div>
 <!-- /fabricator menu -->

@@ -1,3 +1,18 @@
+<h2>Color</h2>
+
+<p class="highlighter-rouge"><strong>Note:</strong> Success/info/warning colors are still in beta and may be changed.</p>
+
+{{#each toolkit.colors}}
+<p class="small text-sans-light">{{@key}}</p>
+<div class="f-color-chips">
+  {{#each this}}
+  <div class="f-color-chip">
+    <div class="f-color-chip__name">{{@key}}</div>
+    <div class="f-color-chip__color">{{this}}</div>
+  </div>
+  {{/each}}
+</div>
+{{/each}}
 <h3>Text Color</h3>
 
 <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p>
