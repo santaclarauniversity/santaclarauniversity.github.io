@@ -1,0 +1,37 @@
+.styled-list {
+  hr {
+    border-top-color: transparentize(#000, .8);
+  }
+
+  ol {
+    display: block;
+
+    li {
+      counter-increment: item;
+      margin-bottom: 1rem;
+      display: flex;
+
+      .list-text {
+        font-size: 1.3rem;
+      }
+    }
+
+    li::before {
+      margin-right: 1rem;
+      content: counter(item);
+      font-family: $sans-serif-bold-font;
+      align-self: start;
+      background-color: rgba(255, 255, 255, .3);
+      border: 1px solid rgba(0, 0, 0, .1);
+      border-radius: 50%;
+      flex-shrink: 0;
+      font-size: 1rem;
+      font-weight: bold;
+      height: 36px;
+      line-height: 36px;
+      position: relative;
+      text-align: center;
+      width: 36px;
+    }
+  }
+}
