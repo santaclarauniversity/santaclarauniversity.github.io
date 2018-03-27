@@ -1,25 +1,29 @@
 ```v2.0.1```
 
-The toolkit homepage has been redesigned with a better focus on navigating the main sections of the site.
+Welcome to the redesigned SCU Design System!
 
-The [Style Guide](/style-guide.html) and various Docs have been updated and their readability vastly improved.
-
-- **Accordion**
+- **Style Guide**
+  - Restructured the [Style Guide](/style-guide.html). Fixed broken code examples.
+  - Redesigned the landing page and navigation.
+- **[Accordion](content-types.html#accordion)**
   - Restyled BS4 accordion (previously marked for deprecation) and introduced a new/improved accordion style
   - Card-based accordions (per BS4) are still availabile via **Accordion Cards**.
+- **[Lists](content-types.html#lists)**
+  - A new content type for lists with an ordered (numeric) set of items.
+- **[Sidebar](content-types.html#sidebar)**
+  - A new, lightweight sidebar design has been adopted that will allow for greater responsive behavior.
+  - Adjustments to Sidebar behavior.
+- **[Templates and Demos](/demos.html)**
+  - Expanded number of demonstration layouts and updated their content types.
+  - Removed *Kitchen Sink* demo, which will return in a future release.
+  - _Experimental:_
+    - New story display options: [Story](/demos/story.html) and [Story (Cover Image)](/demos/story-cover-image.html).
+    - [Sidebar Breakout](/demos/sidebar-breakout-landing.html), a proof-of-concept layout that mixes sidebar layout with landing page layouts.
 - **Dropdown Menus**
+  - Modified the default BS4 dropdown behavior.
   - Added support for all `.navbar`s to have dropdown menu items
   - Links with dropdown send user to page on click
   - Dropdown pops out on hover over these links
-- **Lists**
-  - A new content type for lists with an ordered (numeric) set of items.
-- **Sidebar**
-  - A new, lightweight sidebar design has been adopted that will allow for greater responsive behavior.
-  - Adjustments to Sidebar behavior.
-- **Templates**
-  - Expanded number of demonstration layouts and updated their content types.
-  - Added *Sidebar Breakout Landing*, an experimental layout for landing pages with sidebars.
-  - Removed *Kitchen Sink* demo, which will be put back in a future release.
   
 ```v2.0.0```
 - Bootstrap dependency bump to BS4 stable.
