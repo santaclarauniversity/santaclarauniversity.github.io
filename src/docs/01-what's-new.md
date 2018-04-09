@@ -1,3 +1,20 @@
+```v2.0.2```
+
+An incremental update with small changes limited to some content types, including the header.
+
+- **[Agenda](content-types.html#agenda)**
+  - Completely redesigned content type with new styles and mobile compatibility
+  - Useful for a sequence of events, such as a day plan
+- **[Carousel](content-types.html#carousel)**
+  - Updated markup to latest Bootstrap
+  - Fixed slide indicators not showing up on demos
+- **[Header](content-types.html#header)**
+  - Changed the dividing bar (|) from a link to normal text
+  - **Search**
+    - Fixed some input display issues caused by remotely updated Google Search code
+- **[Sidebar](content-types.html#sidebar)**
+  - Various bug fixes
+
 ```v2.0.1```
 
 Welcome to the redesigned SCU Design System!
