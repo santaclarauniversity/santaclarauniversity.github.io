@@ -1,11 +1,5 @@
 // provides better support against this issue with fullscreen search overlay:
 // https://getbootstrap.com/docs/4.0/getting-started/browsers-devices/#overflow-and-scrolling
-[aria-hidden="true"] {
-  display: none;
-}
-[aria-hidden="false"] {
-  display: block;
-}
 .no-scroll {
   height: 100%;
   overflow: hidden;
