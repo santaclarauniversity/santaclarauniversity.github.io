@@ -180,11 +180,10 @@ $xy-border: $gray-300;
   }
 
   .active {
-    @extend .text-sans-bold;
-
     color: $brand-primary;
     padding-bottom: .25rem;
     padding-top: .25rem;
+    font-family: $sans-serif-bold-font;
   }
 
   .link--dropdown {
