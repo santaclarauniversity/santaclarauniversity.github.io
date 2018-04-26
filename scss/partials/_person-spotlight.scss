@@ -1,4 +1,8 @@
 .person-spotlight {
+  .person-spotlight-title a {
+    text-decoration: none;
+  }
+
   .person-spotlight-img {
     background-size: cover;
     min-height: 250px;
