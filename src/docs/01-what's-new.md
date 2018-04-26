@@ -1,3 +1,14 @@
+```v2.0.3```
+
+An incremental update with minor changes and bugfixes.
+
+- Fixes inconsistent Person Spotlight styles.
+- **[Department Switcher](content-types.html#department-switcher)**
+  - Now a content type for easier use within prototypes.
+  - Fixed the markup on the [Department Switcher demo page](/demos/department-switcher.html).
+- Updated to [Bootstrap 4.1](https://blog.getbootstrap.com/2018/04/09/bootstrap-4-1/).
+- Carousel display fixes.
+
 ```v2.0.2```
 
 An incremental update with small changes limited to some content types, including the header.
