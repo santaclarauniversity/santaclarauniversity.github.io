@@ -6,7 +6,7 @@
 }
 
 $nav-top-height: 40px;
-$nav-fixed-height: $nav-top-height * 1.50;
+$nav-fixed-height: $nav-top-height * 1.5;
 
 .header-scu {
   min-height: $nav-top-height + $nav-fixed-height;
@@ -33,7 +33,7 @@ $nav-fixed-height: $nav-top-height * 1.50;
     border-top: 5px solid $gray-900;
     min-height: $nav-fixed-height;
     box-shadow: 0 5px 10px -6px rgba($black, .15);
-    transition: all 400ms ease 0s;
+    transition: border-top 400ms ease 0s;
 
     &.initial {
       border-top: 0;
@@ -182,9 +182,10 @@ $nav-fixed-height: $nav-top-height * 1.50;
     }
   }
 
+  // sass-lint:disable no-vendor-prefixes
   .search-module-results {
     // enables user to scroll more freely through results
-    -webkit-overflow-scrolling: touch; // this should be kept as a pseudo (-webkit) for now
+    -webkit-overflow-scrolling: touch;
 
     // helps prevent mobile users from scrolling out of the overlay by accident
     padding-bottom: 5rem;
@@ -197,6 +198,7 @@ $nav-fixed-height: $nav-top-height * 1.50;
       height: calc(100vh - 5rem);
     }
   }
+  // sass-lint:enable no-vendor-prefixes
 }
 
 .gsc-search-button,
@@ -209,9 +211,11 @@ $nav-fixed-height: $nav-top-height * 1.50;
   border: 0 !important;
 }
 
+// sass-lint:disable class-name-format
 .gscb_a {
   visibility: hidden;
 }
+// sass-lint:enable class-name-format
 
 .gsc-input {
   border-bottom: 1px solid $gray-200;

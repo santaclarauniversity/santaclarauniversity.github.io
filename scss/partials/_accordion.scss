@@ -1,7 +1,7 @@
 .accordion-item {
   border-bottom: $gray-500 1px solid;
 
-  > [data-toggle="collapse"] {
+  > [data-toggle='collapse'] {
     transition: margin .35s ease, opacity .35s ease;
     cursor: pointer;
     display: flex;
@@ -22,7 +22,7 @@
       transition: transform .35s ease;
     }
 
-    &[aria-expanded="true"] {
+    &[aria-expanded='true'] {
 
       i {
         transform: rotate(90deg);
@@ -48,7 +48,7 @@
       }
     }
 
-    &[aria-expanded="false"] {
+    &[aria-expanded='false'] {
       opacity: .6;
 
       &:hover {

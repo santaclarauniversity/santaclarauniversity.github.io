@@ -1,12 +1,4 @@
-/*
-  Source: https://github.com/daneden/animate.css
-
-  "Just-add-water CSS animation.
-
-  animate.css is a bunch of cool, fun, and cross-browser animations for you to
-  use in your projects. Great for emphasis, home pages, sliders, and general
-  just-add-water-awesomeness."
- */
+// source: https://github.com/daneden/animate.css
 
 // -- base animated style
 .animated {
@@ -18,7 +10,7 @@
   animation-iteration-count: infinite;
 }
 
-// -- fadeIn
+// sass-lint:disable class-name-format
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -65,3 +57,4 @@
 .fadeOutDown {
   animation-name: fadeOutDown;
 }
+// sass-lint:enable class-name-format
