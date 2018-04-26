@@ -188,7 +188,8 @@ $(function () {
   if ($otherSelect2.length) {
     $otherSelect2.selectWoo({
       theme: 'bootstrap',
-      placeholder: $(this).data('placeholder')
+      placeholder: $(this).data('placeholder'),
+      width: '100%'
     }).on('select2:select', function (evt) {
       window.location = $(evt.target).val();
     });

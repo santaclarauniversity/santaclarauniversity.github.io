@@ -1,11 +1,11 @@
 .subheader {
-  background-color: darken($brand-primary, 10%); //611b25
+  background-color: $maroon; //611b25
   background-position: 50%;
   background-size: cover;
   width: 100%;
 
   &.office {
-    background-color: lighten($black, 5%); //464646
+    background-color: $gray-900; //464646
 
     h1 {
       background: transparent;
@@ -14,15 +14,11 @@
 
   h1 {
     color: $white;
-    display: inline-block;
-    margin: 0;
-    padding: 0 0 20px;
 
     span {
-      color: darken($white, 2%);
-      display: inline-block;
+      color: $yiq-text-light;
+      display: block;
       font-size: 18px;
-      margin-right: 90%;
       padding-left: 2px;
       text-transform: uppercase;
       white-space: nowrap;

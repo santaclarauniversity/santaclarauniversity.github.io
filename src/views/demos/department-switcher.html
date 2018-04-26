@@ -7,76 +7,30 @@ layout: demo
     background-color: white;
   }
 </style>
-<div class="subheader mb-3"
-     style="background-image:url('/assets/images/electrical-engineering.jpg');">
+<div class="subheader py-4 mb-3 has-dim" style="background-image:url('/assets/images/electrical-engineering.jpg');">
   <div class="container">
-    <div class="row align-items-center pb-3">
-      <div class="col-sm-8">
-        <h1 class="text-sans-light pb-3 pb-md-0">
+    <div class="row">
+      <div class="col-12 col-md-8 align-self-center">
+        <h1 class="text-sans-light mb-0">
           <span>Department of </span>Electrical Engineering
         </h1>
       </div>
-      <div class="col-sm-4">
-        <select name="departments" id="departments" class="custom-select form-control-lg" data-placeholder="Departments and Programs">
-          <option></option>
-          <optgroup label="College of Arts and Sciences">
-              <option value="/cas/anthropology">Anthropology</option>
-              <option value="/cas/art-and-art-history">Art and Art History</option>
-              <option>Biology</option>
-              <option>Chemistry and Biochemistry</option>
-              <option>Classics</option>
-              <option>Communication</option>
-              <option>English</option>
-              <option>Environmental Studies</option>
-              <option>Ethnic Studies</option>
-              <option>History</option>
-              <option>Liberal Studies</option>
-              <option>Math and Computer Science</option>
-              <option>Military Science</option>
-              <option>Modern Languages and Literatures</option>
-              <option>Music</option>
-              <option>Philosophy</option>
-              <option>Physics</option>
-              <option>Political Science</option>
-              <option>Psychology</option>
-              <option>Public Health</option>
-              <option>Religious Studies</option>
-              <option>Sociology</option>
-              <option>Theatre and Dance</option>
-              <option>Women's and Gender Studies</option>
-            </optgroup>
-            <optgroup label="School of Engineering">
-              <option>Bioengineering</option>
-              <option>Civil Engineering</option>
-              <option>Computer Science and Engineering</option>
-              <option>Electrical Engineering</option>
-              <option>Mechanical Engineering</option>
-              <option>Web Design and Engineering</option>
-            </optgroup>
-            <optgroup label="Leavey School of Business">
-              <option>Accounting</option>
-              <option>Accounting & Information Systems</option>
-              <option>Economics</option>
-              <option>Finance</option>
-              <option>Management</option>
-              <option>Marketing</option>
-              <option>Management Information Systems (in the department of OMIS)</option>
-            </optgroup>
-        </select>
+      <div class="col-12 col-md-4 align-self-center pt-3 py-md-0">
+        {{> department-switcher}}
       </div>
     </div>
   </div>
 </div>
 <div class="container" id="content">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/engineering/">School of Engineering</a></li>
+    <li class="breadcrumb-item"><a href="/engineering/academic-programs/">Academic Programs</a></li>
+    <li class="breadcrumb-item active">Department of Electrical Engineering</li>
+  </ol>
   <div class="row">
     <div class="col-sm-8">
       <h1 class="page-title d-none" id="page-title">Department of Electrical Engineering</h1>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item"><a href="/engineering/">School of Engineering</a></li>
-        <li class="breadcrumb-item"><a href="/engineering/academic-programs/">Academic Programs</a></li>
-        <li class="breadcrumb-item active">Department of Electrical Engineering</li>
-      </ol>
       <div id="d.en.39590"><!-- General Content --></div>
       <div class="intro"><p>From nanobots to the national grid, electrical engineers create the systems that power our
         world.</p>
