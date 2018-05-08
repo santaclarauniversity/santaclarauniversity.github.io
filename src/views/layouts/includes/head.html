@@ -3,23 +3,24 @@
 
 <title>{{title}}</title>
 
+<!--[if lte IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" async></script>
+<![endif]-->
+
 {{#if fabricator}}
+<!-- fabricator styles -->
 <link rel="stylesheet" href="/css/f.css" />
+<!-- /fabricator styles -->
 {{/if}}
+
+<!-- external styles -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" />
+<link rel="stylesheet" href="/node_modules/select2/dist/css/selectWoo.min.css" /> <!-- TODO probably need to do something different eventually? -->
+<!-- /external styles -->
 
 <!-- toolkit styles -->
 <link rel="stylesheet" href="/css/toolkit.css" />
 <!-- /toolkit styles -->
-
-<!-- external styles -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.css" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" />
-<!-- /external styles -->
-
-<!--[if lte IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" async></script>
-<![endif]-->
 
 <!-- toolkit scripts -->
 <script src="/js/compiled-bundle.min.js"></script>

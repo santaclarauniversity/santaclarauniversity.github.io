@@ -80,4 +80,15 @@ $font-family-monospace:  Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier Ne
 $font-family-base:       $font-family-sans-serif;
 $headings-font-family:   $sans-serif-bold-font;
 
+// Overrides for Select2 Bootstrap 4 theme
+$input-border-color:            $gray-400;
+$input-focus-border-color:      $brand-primary;
+$dropdown-link-active-bg:       $brand-primary;
+$dropdown-link-active-color:    $white;
+$dropdown-link-disabled-color:  $gray-600;
+$dropdown-link-hover-bg:        $brand-primary;
+$dropdown-link-hover-color:     $white;
+$s2bs-line-height:              1.2;
+$input-height:                  2.75rem;
+
 @import 'partials/typography';

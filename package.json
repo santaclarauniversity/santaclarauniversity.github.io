@@ -45,7 +45,7 @@
     "gulp-accessibility": "^3.0.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",
-    "gulp-clean-css": "^3.9.2",
+    "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^3.0.1",
     "gulp-rename": "^1.2.2",
@@ -60,6 +60,7 @@
     "popper.js": "^1.13.0",
     "run-sequence": "^1.2.2",
     "select2": "git://github.com/woocommerce/selectWoo.git#master",
+    "select2-bootstrap4-theme": "^1.0.0",
     "webpack": "^1.14.0"
   },
   "babel": {

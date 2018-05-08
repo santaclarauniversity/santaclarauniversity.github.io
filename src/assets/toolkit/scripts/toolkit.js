@@ -14,9 +14,11 @@ var SCU = {
   }
 };
 
-var body,
-  searchOverlay,
-  overlayOpen;
+var body;
+var searchOverlay;
+
+var overlayOpen;
+var scrollTop;
 
 var Search = {
   // prepares the overlay to be interacted w/ on document load
@@ -32,13 +34,10 @@ var Search = {
   toggleSearchOverlay: function () {
     overlayOpen = !overlayOpen;
 
-    // prevent background scrolling while overlay open
     body.classList.toggle('no-scroll', overlayOpen);
     searchOverlay.setAttribute('aria-hidden', !overlayOpen);
-    searchOverlay.scrollTop = 0;
+    searchOverlay.classList.toggle('search-module--open');
 
-    // toggle overlay
-    document.querySelector('.search-module').classList.toggle('search-module--open');
     $('.search-module-results').toggle();
   },
 
@@ -46,7 +45,7 @@ var Search = {
   resetSearch: function () {
     $(document).off('keyup');
     $('.close-btn').off('click');
-    $('.gsc-input').off('change paste keyup');
+    $('input.gsc-input').off('change paste keyup');
   },
 
   // opens overlay and its components
@@ -71,9 +70,9 @@ var Search = {
     this.searchCloseEscListener();
     this.searchCloseBtnListener();
 
-    $('.gsc-input').on('change paste keyup', function () {
+    $('input.gsc-input').on('change paste keyup', function () {
       $('.search-header').fadeOut();
-      $('.search-module-results').show();
+      $(this).show();
     });
   },
 
@@ -102,8 +101,9 @@ var Search = {
   // inits department switcher (which is external JS)
   setupSelect2: function () {
     $('#select2-header').selectWoo({
-      theme: 'bootstrap',
-      placeholder: $(this).data('placeholder')
+      theme: 'bootstrap4',
+      placeholder: $(this).data('placeholder'),
+      width: '100%'
     }).on('select2:select', function (evt) {
       window.location = $(evt.target).val();
     });
@@ -111,7 +111,7 @@ var Search = {
 };
 
 // header and footer
-$(function () {
+$(document).ready(function ()  {
 
   // toggle fixed header
   $(window).on('scroll', function() {
@@ -130,6 +130,7 @@ $(function () {
     window.open($(this).attr('href'), '_self');
   });
 
+  // prepare search module hooks
   Search.init();
   var myCallback = function myCallback() {
     if (document.readyState === 'complete') {
@@ -157,8 +158,8 @@ $(function () {
     }
   };
 
-// Insert it before the CSE code snippet so that cse.js can take the script
-// parameters, like parsetags, callbacks.
+  // Insert it before the CSE code snippet so that cse.js can take the script
+  // parameters, like parsetags, callbacks.
   window.__gcse = {
     parsetags: 'explicit',
     callback: myCallback
@@ -250,12 +251,12 @@ $(function () {
     }
   }
 
-  $(window).on('scroll', listen);
+  // $(window).on('scroll', listen);
 
   // let user skip down past video
-  $('.fa-chevron-down').click(function () {
+  /* $('.fa-chevron-down').click(function () {
     $('html, body').animate({
       scrollTop: $('.content-start').offset().top
     }, 'slow');
-  });
+  }); */
 });

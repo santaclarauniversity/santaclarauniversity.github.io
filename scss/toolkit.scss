@@ -105,8 +105,11 @@
 @import 'partials/windowpane';
 @import 'partials/comparison-table';
 
-// Search results
+// Search overlay
 @import 'partials/search';
+
+// Select2 module BS4 theme
+@import '../node_modules/select2-bootstrap4-theme/src/select2-bootstrap4';
 
 // Utility classes
 @import 'partials/utility-classes';
