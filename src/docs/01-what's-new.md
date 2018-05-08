@@ -1,3 +1,11 @@
+```v2.0.4```
+
+An incremental update with minor changes and bugfixes.
+
+- Upgraded to [Bootstrap 4.1.1](https://blog.getbootstrap.com/2018/04/30/bootstrap-4-1-1/)
+- Improved Search
+- Updated [*Can We, Should We, Will We?*](/demos/homepage.html)
+
 ```v2.0.3```
 
 An incremental update with minor changes and bugfixes.

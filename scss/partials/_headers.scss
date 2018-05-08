@@ -11,6 +11,12 @@ $nav-fixed-height: $nav-top-height * 1.5;
 .header-scu {
   min-height: $nav-top-height + $nav-fixed-height;
 
+  .navbar-brand {
+    @include media-breakpoint-down(xs) {
+      font-size: 1.15rem;
+    }
+  }
+
   .nav-top {
     background-color: $gray-900;
     font-size: .9rem;

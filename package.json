@@ -1,6 +1,6 @@
 {
   "name": "scu-toolkit",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "SCU Brand Toolkit",
   "homepage": "https//identity.scu.edu",
   "main": "README.md",
@@ -30,12 +30,12 @@
     "npm": ">=2.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.22.1",
+    "babel-core": "^6.26.3",
     "babel-loader": "^6.2.10",
     "babel-plugin-transform-es2015-modules-strip": "^0.1.1",
     "babel-preset-es2016": "^6.22.0",
-    "bootstrap": "^4.1.0",
-    "browser-sync": "^2.23.5",
+    "bootstrap": "^4.1.1",
+    "browser-sync": "^2.24.2",
     "del": "^2.2.2",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.0",
@@ -67,5 +67,7 @@
       "es2016"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "npm": "^6.0.0"
+  }
 }
