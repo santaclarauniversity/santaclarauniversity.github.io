@@ -109,6 +109,7 @@
 @import 'partials/search';
 
 // Select2 module BS4 theme
+@import '../node_modules/select2/src/scss/core';
 @import '../node_modules/select2-bootstrap4-theme/src/select2-bootstrap4';
 
 // Utility classes
