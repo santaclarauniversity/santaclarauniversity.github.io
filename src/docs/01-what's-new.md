@@ -1,3 +1,10 @@
+```v2.1.0```
+
+An incremental update with minor changes and bugfixes.
+
+- Improved search behavior
+- **Developers:** Updated NPM dependencies. CSS/JS assets are now in `/public`, and [Webpack has been migrated to 4.0](https://github.com/santaclarauniversity/scu-design-system/wiki/Webpack-4-Migration). 
+
 ```v2.0.4```
 
 An incremental update with minor changes and bugfixes.
@@ -189,8 +196,8 @@ Release Highlights:
   - Now utilizing `run-sequence` for tasks that should be executed successively rather than simultaneously
   - Now utilizing `done` promise under `gulp` tasks which cannot have a simple return statement
   - Swapped `csslint` for `sass-lint`; swapped `jshint` for `eslint`
-  - Changed `toolkit.js` and `fabricator.js` to properly **both (together)** use `webpack` for compilation
-  - Changed `babel` preset to `es2016` from `babili` so `toolkit.js` won't be minified in development mode
+  - Changed `scu.js` and `fabricator.js` to properly **both (together)** use `webpack` for compilation
+  - Changed `babel` preset to `es2016` from `babili` so `scu.js` won't be minified in development mode
   - Added `gulp-autoprefixer` module which removes need to write browser-specific CSS prefix rules entirely
   - Added task `style:landing` to compile landing page CSS in parallel (also: files are now <1 KB each)
   - Added `gulp-size` to measure the size of output CSS files to `./css/`
@@ -202,7 +209,7 @@ Release Highlights:
   - Now using this file to describe Babel preset instead of having a `.babelrc`
  
  
-- `./src/assets/toolkit/scripts/toolkit.js`
+- `./src/assets/toolkit/scripts/scu.js`
   - Removed extraneous JS code which was meant for leftover parts of Bootstrap landing pages
   - Upgraded to ES6 standard
   - Removed header code (vast majority of this file)

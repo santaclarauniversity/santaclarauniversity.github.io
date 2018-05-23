@@ -1,16 +1,23 @@
+.wordmark {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-down(xs) {
+    letter-spacing: 1px;
+  }
+}
+
 // sass-lint:disable no-duplicate-properties
 // sass-lint:disable no-url-domains
 // sass-lint:disable no-url-protocols
 // sass-lint:disable quotes
 
-// sass-lint:disable no-css-comments
 /*
   This CSS resource incorporates links to font software which is the valuable copyrighted
   property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
   redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
   Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 */
-// sass-lint:enable no-css-comments
 @import url("//fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35");
 
 

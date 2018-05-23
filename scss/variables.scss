@@ -1,29 +1,29 @@
-$font-size-base:            16px;
+$font-size-base: 16px;
 
 // SCU Colors
 $brand-primary: #b30738;
 
-$link-red:  #9e1b32;
-$burgundy:  #690521;
-$maroon:    #72001b;
+$link-red: #9e1b32;
+$burgundy: #690521;
+$maroon: #72001b;
 
 // UI Colors
-$brand-success:   #058a16;
-$brand-info:      #2e6bff;
-$brand-warning:   #f39237;
-$brand-danger:    #d9534f;
+$brand-success: #058a16;
+$brand-info:    #2e6bff;
+$brand-warning: #f39237;
+$brand-danger:  #d9534f;
 
 // Secondary Colors
-$stone:   #4e4540;
-$navy:    #021d52;
-$beige:   #dfdbd3;
-$black:   #000;
-$white:   #fff;
-$cream:   #e9e8d5;
-$slate:   #546575;
+$stone: #4e4540;
+$navy:  #021d52;
+$beige: #dfdbd3;
+$black: #000;
+$white: #fff;
+$cream: #e9e8d5;
+$slate: #546575;
 
-$side-navigation-active:  $link-red;
-$side-navigation-link:    #444;
+$side-navigation-active: $link-red;
+$side-navigation-link: #444;
 
 $emergency-color: #f00;
 
@@ -90,5 +90,3 @@ $dropdown-link-hover-bg:        $brand-primary;
 $dropdown-link-hover-color:     $white;
 $s2bs-line-height:              1.2;
 $input-height:                  2.75rem;
-
-@import 'partials/typography';

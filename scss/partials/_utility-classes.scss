@@ -1,17 +1,3 @@
-.retina-only {
-  display: none !important;
-}
-
-@include retina {
-  .retina-only {
-    display: block !important;
-  }
-
-  .hide-for-retina {
-    display: none !important;
-  }
-}
-
 // Background Positioning
 
 .bg-img-center {

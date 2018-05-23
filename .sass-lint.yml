@@ -1,15 +1,15 @@
 {
   rules: {
     # value 0 indicates rule DISABLED
-    'force-element-nesting': 0,       # permit div h1 {..} instead of div { h1 {..} }
-    'force-pseudo-nesting': 0,        # permit .cls:hover {..} over .cls { &:hover { .. }}
-    'mixins-before-declarations': 0,  # ignore ordering of mixins relative to rules
-    'nesting-depth': 0,               # allow max nesting depth (prefer < 4)
+    'force-element-nesting': 0,       # allow div h1 {..} instead of div { h1 {..} }
+    'force-pseudo-nesting': 0,        # allow .cls:hover {..} instead of .cls { &:hover { .. }}
+    'mixins-before-declarations': 0,  # completely ignore the order of mixins relative to rules
+    'nesting-depth': 0,               # allow max nesting depth (but good practice is to minimize depth)
     'no-color-literals': 0,           # allow use of rgba(..) in rules (not just vars)
     'no-css-comments': 0,             # allow multiline /* css comments */
     'no-ids': 0,                      # allow IDs to be used as selectors (_avoid_)
-    'no-important': 0,                # ignore !important (needed in some places)
+    'no-important': 0,                # allow !important (necessary in some places)
     'placeholder-in-extend': 0,       # allow @extend statements to call normal classes
-    'property-sort-order': 0,         # ignore alphabetical order for properties
+    'property-sort-order': 0,         # allow any order for properties
   }
 }

@@ -1,9 +1,10 @@
+# WebStorm
 .idea/
-*.codekit
-.DS_Store
 
+# Node
 node_modules/
-npm-debug.log
+*.log
 
-bower_components/
+# General
 dist/
+.DS_Store

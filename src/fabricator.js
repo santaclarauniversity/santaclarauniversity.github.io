@@ -1,4 +1,7 @@
-require('./prism');
+import '../scss/fabricator.scss'
+import 'prismjs'
+
+//import 'holderjs'
 
 /**
  * Global `fabricator` object

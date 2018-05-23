@@ -1,0 +1,19 @@
+/**
+ * Fabricator styles
+ * @author Luke Askew
+ * Class selectors are namespaced with "f-"
+ */
+
+$settings: (
+	theme: light,
+	accent: #b30738,
+	menu-width: 14rem
+);
+
+@import 'partials/fabricator/variables';
+@import 'partials/fabricator/code';
+@import 'partials/fabricator/color-chips';
+@import 'partials/fabricator/controls';
+@import 'partials/fabricator/item';
+@import 'partials/fabricator/layout';
+@import 'partials/fabricator/menu';

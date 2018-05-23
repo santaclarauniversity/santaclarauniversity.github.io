@@ -1,79 +1,136 @@
-const path = require('path');
-const webpack = require('webpack');
+import path from 'path'
+import webpack from 'webpack'
 
+import MiniCssExtract from 'mini-css-extract-plugin'
+import Uglify from 'uglifyjs-webpack-plugin'
 
-/**
- * Define plugins based on environment
- * @param {boolean} isDev If in development mode
- * @return {Array}
- */
-function getPlugins(isDev) {
+import { paths } from './paths.config'
 
-  const plugins = [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.DefinePlugin({}),
-  ];
+export let dev = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
 
-  if (isDev) {
-    plugins.push(new webpack.NoErrorsPlugin());
-  } else {
-    plugins.push(new webpack.optimize.DedupePlugin());
-    plugins.push(new webpack.optimize.UglifyJsPlugin({
-      minimize: true,
-      sourceMap: false,
-      compress: {
-        warnings: false,
+        options: {
+          presets: ['es2015'],
+        }
       },
-    }));
-  }
+      {
+        test: /\.(scss|css)$/,
 
-  return plugins;
+        use: [
+          {
+            loader: MiniCssExtract.loader
+          },
+          {
+            loader: 'css-loader',
 
-}
+            options: {
+              sourceMap: false,
+              minimize: false
+            }
+          },
+          {
+            loader: 'sass-loader',
 
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      }
+    ]
+  },
 
-/**
- * Define loaders
- * @return {Array}
- */
-function getLoaders() {
+  plugins: [
+    new MiniCssExtract({ filename: '[name].css' }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'holder': 'holderjs',
+      'window.Holder': 'holderjs',
+      'Holder': 'holderjs'
+    })
+  ],
 
-  const loaders = [
-    {
-      test: /(\.js)/,
-      exclude: /(node_modules)/,
-      loaders: ['babel-loader'],
-    },
-    {
-      test: /(\.jpg|\.png)$/,
-      loader: 'url-loader?limit=10000',
-    },
-    {
-      test: /\.json/,
-      loader: 'json-loader',
-    }
-  ];
+  entry: {
+    fabricator: paths.scripts.fabricator,
+    scu: paths.scripts.scu
+  },
 
-  return loaders;
+  output: {
+    filename: '[name].js',
+    chunkFilename: '[name].js',
+    path: path.resolve(__dirname, paths.dest)
+  },
 
-}
+  devtool: 'source-map',
+  mode: 'development',
+  stats: 'verbose'
+};
 
+export let prod = {
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader',
 
-module.exports = (config) => {
-  return {
-    entry: {
-      fabricator: config.scripts.fabricator
-    },
-    output: {
-      path: config.scripts.dest,
-      filename: '[name].js',
-    },
-    resolve: {
-      extensions: ['', '.js'],
-    },
-    plugins: getPlugins(config.dev),
-    module: {
-      loaders: getLoaders(),
-    },
-  };
+				options: {
+					presets: ['es2015']
+				}
+			},
+			{
+				test: /\.(scss|css)$/,
+
+				use: [
+					{
+						loader: MiniCssExtract.loader
+					},
+					{
+						loader: 'css-loader',
+
+						options: {
+							sourceMap: false,
+              minimize: true
+						}
+					},
+					{
+						loader: 'sass-loader',
+
+						options: {
+							sourceMap: false
+						}
+					}
+				]
+			}
+		]
+	},
+
+	plugins: [
+		new Uglify(),
+		new MiniCssExtract({ filename: '[name].css' }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
+	],
+
+	entry: {
+	  fabricator: paths.scripts.fabricator,
+    scu: paths.scripts.scu
+  },
+
+	output: {
+		filename: '[name].js',
+		chunkFilename: '[name].js',
+		path: path.resolve(__dirname, paths.dest)
+	},
+
+	mode: 'production',
+  stats: 'errors-only'
 };

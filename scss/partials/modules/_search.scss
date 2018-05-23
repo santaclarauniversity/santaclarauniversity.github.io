@@ -60,6 +60,10 @@
   -webkit-overflow-scrolling: touch;
   padding: 0 0 10rem;
 
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+  }
+
   &.search-module--open {
     display: block;
     opacity: 1;
@@ -104,8 +108,9 @@
     color: $white;
     font-size: 4rem;
     font-weight: 300;
+    height: auto !important;
     line-height: 1.3;
-    padding-bottom: 1rem !important;
+    padding-bottom: .25rem !important;
     padding-right: 0 !important;
     position: relative;
     text-indent: 0 !important;
@@ -179,7 +184,7 @@
 /* end - google search module tweaks */
 
 // some small tweaks to our select2 module that we can't add to variables.scss */
-.select2-container--bootstrap4 {
+.search-module .select2-container--bootstrap4 {
   z-index: $zindex-fixed + 100;
   -webkit-overflow-scrolling: touch;
 }
