@@ -4,38 +4,37 @@ layout: demo
 ---
 
 <style type="text/css">
-  .col-6.d-flex.justify-content-center {
-    background: rgba(0, 0, 0, .35);
-    border: 2px solid #eaeaea;
+  .academics-heading {
+    border: 4px solid #fff;
     color: #fff;
   }
 </style>
 <div class="container-fluid px-0">
   <div class="row no-gutters">
-    <div class="col-12 col-md-7">
-      <img src="holder.js/100px660" alt="" />
+    <div class="col-12 col-md-6"
+         style="background-image:url(https://scu.edu/media/institutional-pages/academics/lg-1609-academics.jpg);background-size:cover;background-repeat:no-repeat;height:750px;">
     </div>
-    <div class="col-12 col-md-5" style="background:#dcdcdc">
+    <div class="col-12 col-md-6">
       <div class="row flex-nowrap no-gutters h-50 px-1 pt-1">
-        <div class="col-6 d-flex justify-content-center align-items-center">
-          <h4>Faculty</h4>
+        <div class="academics-heading bg-primary col-4 d-flex justify-content-center align-items-center">
+          <h4>Our Faculty</h4>
         </div>
-        <div class="col-6 d-flex justify-content-center align-items-center">
+        <div class="academics-heading bg-dark col-8 d-flex justify-content-center align-items-center">
           <h4>Research</h4>
         </div>
       </div>
       <div class="row flex-nowrap no-gutters h-50 px-1 pb-1">
-        <div class="col-6 d-flex justify-content-center align-items-center">
+        <div class="academics-heading bg-dark col-8 d-flex justify-content-center align-items-center">
           <h4>Experiential Learning</h4>
         </div>
-        <div class="col-6 d-flex justify-content-center align-items-center">
+        <div class="academics-heading bg-primary col-4 d-flex justify-content-center align-items-center">
           <h4>Facilities</h4>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="container my-4">
+<div class="container mt-4">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
       <a href="#">Home</a>
@@ -60,6 +59,12 @@ layout: demo
     font-size: 1.25rem;
     padding: 1rem;
     text-align: center;
+  }
+
+  .card-body {
+    background-color: transparent;
+    border: 0;
+    font-size: 1rem;
   }
 
   @media screen and (max-width: 767px) {
@@ -91,12 +96,18 @@ layout: demo
     background: #f2f2f2;
   }
 </style>
+<div class="container">
+  <div class="block text-center">
+    <h1 class="block-title">Prepare to be pushed</h1>
+    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue venenatis neque vitae ultrices. Nullam pellentesque tortor orci. Aenean in sem risus. Proin dignissim pretium lectus sed tincidunt. Suspendisse ac odio ex. Phasellus sed faucibus nisl, vel cursus erat. Pellentesque sodales odio et consectetur pharetra. Morbi mollis turpis sit amet urna vehicula dignissim. Aliquam erat volutpat.</p>
+  </div>
+</div>
 <div class="container-fluid py-5 bg-light text-center">
-  <div class="container py-5">
+  <div class="container">
     <div class="row mx-1 mb-5">
       <label class="sr-only" for="searchDegree">Degrees</label>
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Degrees..." id="searchDegree"
+        <input type="text" class="form-control" placeholder="Find a Degree Program" id="searchDegree"
                aria-label="Degree" aria-describedby="degree" />
         <div class="input-group-append">
           <div class="input-group-text">
@@ -114,12 +125,12 @@ layout: demo
                data-toggle="tab" role="tab" aria-controls="all-programs" aria-selected="true">All Programs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#area-of-study" id="area-of-study-tab"
-               data-toggle="tab" role="tab" aria-controls="area-of-study" aria-selected="false">Search by Area of Study</a>
+            <a class="nav-link" href="#college" id="college-tab"
+               data-toggle="tab" role="tab" aria-controls="college" aria-selected="false">Programs by College</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#college" id="college-tab"
-               data-toggle="tab" role="tab" aria-controls="college" aria-selected="false">Search by College</a>
+            <a class="nav-link" href="#degree" id="degree-tab"
+               data-toggle="tab" role="tab" aria-controls="degree" aria-selected="false">Programs by Degree Level</a>
           </li>
         </ul>
       </div>
@@ -127,153 +138,88 @@ layout: demo
         <div class="tab-content" id="searchDegreeTabContent">
           <div class="tab-pane show active" id="all-programs" role="tabpanel" aria-labelledby="all-programs-tab">
             <div class="row mx-0" style="border:4px solid #e1e1e1">
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Chemistry
-                <span class="text-serif-bold">Major, B.A.</span>
+              <div class="col-12 col-md-4 program-item"
+                   role="button" data-toggle="collapse" data-target="#collapseExample">
+                <div class="row">
+                  <div class="col-12 d-flex flex-md-column align-items-center justify-content-between">
+                    Chemistry<span class="text-serif-bold">B.A., Minor</span>
+                  </div>
+                  <div class="col-12">
+                    <div class="collapse" id="collapseExample">
+                      <div class="card card-body">
+                        Concise description of the degree program.<br><a href="#">Link to find out more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Classical Languages and Literatures: Greek
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Classical Languages and Literatures: Latin
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Classical Studies
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Communication
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 English
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 History
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Individual Studies
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 French and Francophone Studies
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 German Studies
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Italian Studies
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Spanish Studies
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Music
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Philosophy
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Religious Studies
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Studio Art
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Theatre Arts
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
               <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
                 Women's and Gender Studies
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="area-of-study" role="tabpanel" aria-labelledby="area-of-study-tab">
-            <div class="row mx-0" style="border:4px solid #e1e1e1">
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Chemistry
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Classical Languages and Literatures: Greek
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Classical Languages and Literatures: Latin
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Classical Studies
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Communication
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                English
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                History
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Individual Studies
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                French and Francophone Studies
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                German Studies
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Italian Studies
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Spanish Studies
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Music
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Philosophy
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Religious Studies
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Studio Art
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Theatre Arts
-                <span class="text-serif-bold">Major, B.A.</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Women's and Gender Studies
-                <span class="text-serif-bold">Major, B.A.</span>
+                <span class="text-serif-bold">B.A., Minor</span>
               </div>
             </div>
           </div>
@@ -299,7 +245,74 @@ layout: demo
               </div>
             </div>
           </div>
+          <div class="tab-pane" id="degree" role="tabpanel" aria-labelledby="degree-tab">
+            <div class="row mx-0" style="border:4px solid #e1e1e1">
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                B.A.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                B.S.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                Minor
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                M.A.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                M.S.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                MBA
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                M.Div.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                M.T.S.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                Th.M.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                Ph.D.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                J.D.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                LL.M.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                S.T.B.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                S.T.L.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                S.T.D.
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                Certificate Credential
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                Engineer's Degree
+              </div>
+              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
+                Graduate Minor
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        Support Links
       </div>
     </div>
   </div>
