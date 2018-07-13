@@ -1,3 +1,17 @@
+```v2.1.1```
+
+This update reintroduces the legacy Header design, carousel enhancements, and various bugfixes.
+
+- Reverted the removal of Trajan from the typestack.
+- Refactored and refreshed the legacy header design to use Bootstrap 4 styles.
+- Introduces thumbnail carousel view and various fixes.
+- Dependency bump of Boostrap to 4.1.2.
+
+##### Important Usage Notes
+
+The redesigned header has been demoted and will be included in a future release. It is included for preview, testing, and feedback use only, and is not to be used at the time of this release.
+
+
 ```v2.1.0```
 
 An incremental update with minor changes and bugfixes.
