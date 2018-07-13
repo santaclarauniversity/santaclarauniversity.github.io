@@ -3,10 +3,11 @@ export const paths = {
   styles: {
     all:        './scss/**/*',
     fabricator: './scss/fabricator.scss',
-    scu:    './scss/scu.scss',
+    scu:        './scss/scu.scss',
   },
   scripts: {
     fabricator: './src/fabricator.js',
-    scu:    './src/scu.js'
+    dev:        './src/scu.dev.js',
+    prod:       './src/scu.prod.js'
   }
 };

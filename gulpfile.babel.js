@@ -17,7 +17,7 @@ import { paths } from './paths.config'
 import { dev, prod } from './webpack.config'
 
 // dev or prod?
-const mode = minimist(process.argv.slice(2), { boolean: ['dev'] });
+export const mode = minimist(process.argv.slice(2), { boolean: ['dev'] });
 
 gulp.task('styles:lint', () => {
   return gulp.src(paths.styles.scu)
@@ -91,7 +91,7 @@ export function serve(done) {
 export function watch(done) {
   gulp.watch('./src/**/*.{html,md,json,yml}', gulp.series(assemble, reload));
   gulp.watch(paths.styles.all, gulp.series('styles', reload));
-  gulp.watch(paths.scripts.scu, gulp.series('scripts', reload));
+  gulp.watch('./src/**/*.js', gulp.series('scripts', reload));
 
   done();
 }

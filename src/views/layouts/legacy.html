@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {{> head}}
+
+</head>
+<body class="{{body-class}}">
+
+  {% body %}
+
+  {{#if custom}}
+    {{> footer.footer-custom custom-title=custom-title}}
+  {{else}}
+    {{> footer.footer}}
+  {{/if}}
+
+  {{> script}}
+
+</body>
+</html>

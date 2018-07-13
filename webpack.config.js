@@ -58,7 +58,7 @@ export let dev = {
 
   entry: {
     fabricator: paths.scripts.fabricator,
-    scu: paths.scripts.scu
+    scu: paths.scripts.dev
   },
 
   output: {
@@ -122,7 +122,7 @@ export let prod = {
 
 	entry: {
 	  fabricator: paths.scripts.fabricator,
-    scu: paths.scripts.scu
+    scu: paths.scripts.prod
   },
 
 	output: {

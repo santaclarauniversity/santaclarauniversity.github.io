@@ -1,3 +1,261 @@
+// legacy headers
+
+.header-legacy {
+  padding-bottom: 1.75rem;
+  position: relative;
+
+  // brand seal
+  .seal {
+    margin-top: -1rem;
+
+    i {
+      color: $gray-500;
+      font-size: 4rem;
+      transition: color .15s;
+
+      &:hover {
+        color: $gray-700;
+      }
+    }
+  }
+
+  // image-based headers
+  .img-header {
+    height: 6rem;
+  }
+
+  // offices & services / schools & centers menus
+  .accordion-collapses {
+    width: 100%;
+    z-index: $zindex-fixed + 30;
+
+    a {
+      color: $gray-800;
+
+      &:hover,
+      &:active {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  // students / faculty / .. / schools & centers menu
+  .nav-users {
+    border-bottom: 1px solid $gray-400;
+    z-index: $zindex-fixed + 20;
+
+    li {
+      border-top: 2px solid $white;
+
+      &.dropdown {
+        border-top: 2px solid $brand-primary;
+
+        a:not(.collapsed) {
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+
+  // about scu / academics / .. / news & events
+  .nav-brand {
+    background: $brand-primary;
+    z-index: $zindex-fixed + 10;
+
+    a:hover,
+    a:active {
+      background-color: darken($brand-primary, 10%);
+    }
+
+    .collapse {
+      @include media-breakpoint-up(lg) {
+        margin-left: 5rem;
+        padding: .5rem 0;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      background: linear-gradient(90deg, transparent 0, transparent 50%, $brand-primary 0, $brand-primary);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  // home / about... hover nav on custom pages
+  .nav-brand-mini {
+    position: static;
+
+    .icon-mission {
+      background: url(https://scu.edu/assets/images/header-mission.png) 0 0 no-repeat;
+      background-size: 100% 100%;
+      margin: -1rem 0 0;
+      height: 3rem;
+      width: 3rem;
+      position: relative;
+      top: 1rem;
+      z-index: $zindex-fixed + 100;
+    }
+
+    .dropdown-toggle {
+      border-color: rgba($gray-400, .5);
+      border-style: solid;
+      border-width: 0 1px;
+      border-radius: 0;
+      margin-bottom: -1px;
+
+      span {
+        font-size: .85rem;
+      }
+    }
+
+    .dropdown-menu {
+      border: 0;
+      border-radius: 0;
+      margin: 0;
+      left: 0;
+      right: 0;
+      z-index: $zindex-fixed + 99;
+
+      li {
+        border: none;
+      }
+
+      a:hover,
+      a:active {
+        background-color: darken($brand-primary, 10%);
+      }
+    }
+  }
+
+  // ---- custom page navbar color options
+  .nav-dark {
+    a {
+      color: $white !important;
+
+      &:hover,
+      &:active {
+        background-color: $gray-700;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: $gray-800;
+    }
+  }
+
+  .nav-light {
+    a {
+      color: $gray-800 !important;
+
+      &:hover,
+      &:active {
+        background-color: $brand-primary;
+        color: $white !important;
+      }
+    }
+
+    .navbar-toggler {
+      border-color: $gray-400;
+      color: $gray-600;
+    }
+  }
+
+  .nav-dark,
+  .nav-brand {
+    .navbar-toggler {
+      border-color: rgba($white, .5);
+      color: $white;
+    }
+  }
+  // ---- /custom page navbar options
+
+  // ---- tweaks and other subtle features
+  // affix nav on scroll beyond header
+  .fixed-top {
+    position: fixed;
+    top: 0;
+
+    &.nav-users {
+      &.initial {
+        top: 0;
+      }
+    }
+
+    &.nav-brand,
+    &.nav-custom {
+      bottom: auto;
+      top: 2.5rem;
+
+      &.initial {
+        position: absolute;
+        top: auto !important;
+      }
+
+      @include media-breakpoint-down(lg) {
+        top: 2.4rem;
+      }
+
+      @include media-breakpoint-down(md) {
+        top: 0;
+      }
+    }
+
+    &.initial {
+      top: auto;
+    }
+  }
+
+  // dotted border separating links
+  .navbar:not(.nav-users) {
+    li + li {
+      @include media-breakpoint-up(lg) {
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          height: 1.35rem;
+          width: 1px;
+          margin-top: -.6rem;
+          position: absolute;
+          z-index: 0;
+          border-right: 1px dotted $gray-400;
+          top: 49%;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  // remove wordmark hover states
+  .text-trajan a:hover {
+    text-decoration: none;
+  }
+
+  // show dropdowns on hover
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+
+  // shrink fonts on mobile devices
+  @include media-breakpoint-down(lg) {
+    a {
+      font-size: .85rem;
+    }
+
+    .text-trajan a {
+      font-size: inherit;
+    }
+  }
+  // ---- /tweaks and other subtle features
+}
+
+// new headers
+
 $nav-top-height: 40px;
 $nav-fixed-height: $nav-top-height * 1.5;
 
