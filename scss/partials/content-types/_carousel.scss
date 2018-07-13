@@ -27,3 +27,25 @@
     }
   }
 }
+
+.carousel-vert {
+  .carousel-indicators {
+    height: 100%;
+    margin: 0;
+    position: static;
+
+    li {
+      flex: 1;
+      margin-bottom: .5rem;
+      width: 100%;
+
+      &.active img {
+        border: 2px solid $gray-400;
+      }
+
+      .img-thumbnail {
+        padding: 0;
+      }
+    }
+  }
+}
