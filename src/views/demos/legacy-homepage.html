@@ -253,3 +253,39 @@ layout: legacy
     <p class="text-sans-light mb-0">Santa Clara University celebrates the graduating class of 2018 at its 167th commencement ceremony and throughout the weekend. Photo by Joanne Lee</p>
   </div>
 </div>
+<div class="row">
+  <div class="col-sm-6">
+  </div>
+  <div class="col-sm-6">
+    <div class="section-header">
+      <h3>Events</h3>
+    </div>
+    <div class="events module">
+      <div class="lwcw" data-options="id=16&amp;format=html&amp;link_to_calendar=/events"></div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        if (!document.querySelector('script[id="lw_lwcw"')) {
+          var script = document.createElement('script');
+          script.id = 'lw_lwcw';
+          script.src = 'https://lwcal.scu.edu/livewhale/theme/core/scripts/lwcw.js';
+          document.body.appendChild(script);
+        }
+      });
+    </script>
+    <div class="events module">
+      <div class="lwcw" data-options="id=182&amp;format=html&amp;link_to_calendar=/events"></div>
+    </div>
+    <div class="text-right"><a href="https://t4dev.scu.edu/terminalfour/preview/20/en/22249">More Events</a></div>
+    <script>
+      $(document).ready(function () {
+        if (!document.querySelector('script[id="lw_lwcw"')) {
+          var script = document.createElement('script');
+          script.id = 'lw_lwcw';
+          script.src = 'https://lwcal.scu.edu/livewhale/theme/core/scripts/lwcw.js';
+          document.body.appendChild(script);
+        }
+      });
+    </script>
+  </div>
+</div>
