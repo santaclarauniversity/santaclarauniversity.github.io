@@ -3,6 +3,10 @@ import 'select2'
 
 import './scripts/header.legacy'
 
+let $ = require('jquery');
+window.jQuery = $;
+window.$ = $;
+
 $(() => {
   // enable any select2 modules embedded in page
   let customSelects = $('.custom-select:not(#select2-header)');
