@@ -1,11 +1,7 @@
 import 'bootstrap'
 import 'select2'
 
-import './scripts/header'
-
-let $ = require('jquery');
-window.jQuery = $;
-window.$ = $;
+import './scripts/header.legacy'
 
 $(() => {
   // enable any select2 modules embedded in page
