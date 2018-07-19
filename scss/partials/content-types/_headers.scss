@@ -21,7 +21,11 @@
 
   // image-based headers
   .img-header {
-    height: 6rem;
+    max-width: 80%;
+
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+    }
   }
 
   // offices & services / schools & centers menus
