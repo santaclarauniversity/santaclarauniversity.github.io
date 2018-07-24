@@ -3,37 +3,6 @@ title: Academics
 layout: demo
 ---
 
-<style type="text/css">
-  .academics-heading {
-    border: 4px solid #fff;
-    color: #fff;
-  }
-</style>
-<div class="container-fluid px-0">
-  <div class="row no-gutters">
-    <div class="col-12 col-md-6"
-         style="background-image:url(https://scu.edu/media/institutional-pages/academics/lg-1609-academics.jpg);background-size:cover;background-repeat:no-repeat;height:750px;">
-    </div>
-    <div class="col-12 col-md-6">
-      <div class="row flex-nowrap no-gutters h-50 px-1 pt-1">
-        <div class="academics-heading bg-primary col-4 d-flex justify-content-center align-items-center">
-          <h4>Our Faculty</h4>
-        </div>
-        <div class="academics-heading bg-dark col-8 d-flex justify-content-center align-items-center">
-          <h4>Research</h4>
-        </div>
-      </div>
-      <div class="row flex-nowrap no-gutters h-50 px-1 pb-1">
-        <div class="academics-heading bg-dark col-8 d-flex justify-content-center align-items-center">
-          <h4>Experiential Learning</h4>
-        </div>
-        <div class="academics-heading bg-primary col-4 d-flex justify-content-center align-items-center">
-          <h4>Facilities</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="container mt-4">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
@@ -43,57 +12,56 @@ layout: demo
   </ol>
 </div>
 <style type="text/css">
-  #searchDegree {
-    color: #fff;
-    font-size: 1.7rem !important;
-    padding-bottom: .5rem;
-    padding-right: 0;
-    text-indent: 0;
-  }
-
-  .program-item {
-    background: #fff;
-    border: 2px solid rgba(219, 219, 219, .4);
-    color: #1d1d1d;
+  .degree-program {
+    background-color: #e0e0e0;
     cursor: pointer;
-    font-size: 1.25rem;
-    padding: 1rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0 .2rem .2rem 0;
+    width: 33%;
   }
 
-  .card-body {
-    background-color: transparent;
-    border: 0;
-    font-size: 1rem;
+  .degree-program.collapsed {
+    background-color: #ececec;
+    color: #000;
+  }
+
+  .degree-program.collapsed:hover {
+    background-color: #e0e0e0;
+  }
+
+  #navbarAcademicsDegrees .nav-link {
+    color: #c5083d;
+  }
+
+  #navbarAcademicsDegrees .nav-link:hover {
+    color: #fff;
   }
 
   @media screen and (max-width: 767px) {
-    .program-item {
-      text-align: left;
+    .degree-program {
+      margin: 0 0 .2rem;
+      width: 100%;
+    }
+
+    #degreeProgramContainer {
+      height: 80vh;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
     }
   }
 
-  .program-item:hover {
-    background: rgba(219, 219, 219, .4);
-  }
+  @media screen and (min-width: 768px) {
+    #searchDegree {
+      min-width: 20rem;
+    }
 
-  .program-item span {
-    color: #1d1d1d;
-    font-size: .95rem;
-  }
-
-  .nav-justified a.active {
-    background: #e1e1e1 !important;
-  }
-
-  .nav-justified a {
-    border-bottom-color: #e1e1e1 !important;
-    border-width: 0 0 2px !important;
-    border-radius: 0 !important;
-  }
-
-  .nav-justified a:not(.active) {
-    background: #f2f2f2;
+    .container-flex {
+      margin: 0 auto;
+      max-width: 1140px;
+    }
   }
 </style>
 <div class="container">
@@ -102,206 +70,213 @@ layout: demo
     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue venenatis neque vitae ultrices. Nullam pellentesque tortor orci. Aenean in sem risus. Proin dignissim pretium lectus sed tincidunt. Suspendisse ac odio ex. Phasellus sed faucibus nisl, vel cursus erat. Pellentesque sodales odio et consectetur pharetra. Morbi mollis turpis sit amet urna vehicula dignissim. Aliquam erat volutpat.</p>
   </div>
 </div>
-<div class="container-fluid py-5 bg-light text-center">
-  <div class="container">
-    <div class="row mx-1 mb-5">
-      <label class="sr-only" for="searchDegree">Degrees</label>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Find a Degree Program" id="searchDegree"
-               aria-label="Degree" aria-describedby="degree" />
-        <div class="input-group-append">
-          <div class="input-group-text">
-            <i class="fas fa-search"></i>
+<div class="container-fluid py-5 bg-light">
+  <div class="container-flex">
+    <div class="navbar navbar-expand-lg navbar-light bg-white">
+      <form class="form-inline my-2 my-lg-0">
+        <label class="sr-only" for="searchDegree">Degrees</label>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Find a Degree Program" id="searchDegree"
+                 aria-label="Degree" aria-describedby="degree" />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+        </div>
+      </form>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarAcademicsDegrees" aria-controls="navbarAcademicsDegrees" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarAcademicsDegrees">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-lg-2 my-2 my-lg-0">
+            <a class="nav-link btn btn-outline-primary collapsed" href="#collapseFilterSchool"
+               data-toggle="collapse" role="button" aria-expanded="false" aria-haspopup="true">
+              Filter by School: <span class="text-sans-bold">Arts &amp; Sciences</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary collapsed" href="#collapseFilterDegree"
+               data-toggle="collapse" role="button" aria-expanded="false" aria-haspopup="true">
+              Filter by Degree Type: <span class="text-sans-bold">B.A.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="accordion bg-white" id="collapseFilterAccordion">
+      <div class="collapse" id="collapseFilterSchool" data-parent="#collapseFilterAccordion">
+        <div class="p-4">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool0" value="option1" checked>
+            <label class="form-check-label" for="radioSchool1">
+              All
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool1" value="option1" checked>
+            <label class="form-check-label" for="radioSchool1">
+              Arts &amp; Sciences
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool2" value="option3">
+            <label class="form-check-label" for="radioSchool3">
+              Business
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool3" value="option2">
+            <label class="form-check-label" for="radioSchool2">
+              Engineering
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool4" value="option3">
+            <label class="form-check-label" for="radioSchool3">
+              Law
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool5" value="option3">
+            <label class="form-check-label" for="radioSchool3">
+              Jesuit School of Theology
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool6" value="option3">
+            <label class="form-check-label" for="radioSchool3">
+              Education &amp; Counseling Psychology
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="collapse" id="collapseFilterDegree" data-parent="#collapseFilterAccordion">
+        <div class="p-4">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree0" value="option1">
+            <label class="form-check-label" for="radioDegree1">
+              All
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree1" value="option1" checked>
+            <label class="form-check-label" for="radioDegree1">
+              B.A.
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree2" value="option3">
+            <label class="form-check-label" for="radioDegree3">
+              B.S.
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree3" value="option2">
+            <label class="form-check-label" for="radioDegree2">
+              M.A.
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree4" value="option3">
+            <label class="form-check-label" for="radioDegree3">
+              M.S.
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree5" value="option3">
+            <label class="form-check-label" for="radioDegree3">
+              Minor
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree6" value="option3">
+            <label class="form-check-label" for="radioDegree3">
+              Certificate
+            </label>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
+  </div>
+  <div class="container">
+    <div class="row mt-5">
       <div class="col-12">
-        <ul class="nav nav-tabs nav-justified flex-column flex-md-row"
-            id="searchDegreeTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" href="#all-programs" id="all-programs-tab"
-               data-toggle="tab" role="tab" aria-controls="all-programs" aria-selected="true">All Programs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#college" id="college-tab"
-               data-toggle="tab" role="tab" aria-controls="college" aria-selected="false">Programs by College</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#degree" id="degree-tab"
-               data-toggle="tab" role="tab" aria-controls="degree" aria-selected="false">Programs by Degree Level</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-12">
-        <div class="tab-content" id="searchDegreeTabContent">
-          <div class="tab-pane show active" id="all-programs" role="tabpanel" aria-labelledby="all-programs-tab">
-            <div class="row mx-0" style="border:4px solid #e1e1e1">
-              <div class="col-12 col-md-4 program-item"
-                   role="button" data-toggle="collapse" data-target="#collapseExample">
-                <div class="row">
-                  <div class="col-12 d-flex flex-md-column align-items-center justify-content-between">
-                    Chemistry<span class="text-serif-bold">B.A., Minor</span>
-                  </div>
-                  <div class="col-12">
-                    <div class="collapse" id="collapseExample">
-                      <div class="card card-body">
-                        Concise description of the degree program.<br><a href="#">Link to find out more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Classical Languages and Literatures: Greek
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Classical Languages and Literatures: Latin
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Classical Studies
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Communication
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                English
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                History
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Individual Studies
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                French and Francophone Studies
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                German Studies
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Italian Studies
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Spanish Studies
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Music
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Philosophy
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Religious Studies
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Studio Art
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Theatre Arts
-                <span class="text-serif-bold">B.A., Minor</span>
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Women's and Gender Studies
-                <span class="text-serif-bold">B.A., Minor</span>
+        <h4 class="text-sans-light">Degree Programs</h4>
+        <h6 class="text-sans-light text-muted">in Arts &amp; Sciences seeking a B.A.</h6>
+        <hr />
+        <div class="d-flex flex-wrap justify-content-center" id="degreeProgramContainer">
+          <div class="degree-program p-4 collapsed"
+               data-toggle="collapse" data-target="#collapseDegree1">
+            <h5 class="text-sans-bold m-0">Ancient Studies</h5>
+            <div class="collapse" id="collapseDegree1">
+              <hr />
+              <div class="text-sans-light mt-2">
+                <p>A concise description of Ancient Studies degree. Probably something about what you learn, which degrees are available (B.A., can it be a minor?).</p>
+                <a href="#">Link to scu.edu/ancient-studies-page</a>
               </div>
             </div>
           </div>
-          <div class="tab-pane" id="college" role="tabpanel" aria-labelledby="college-tab">
-            <div class="row mx-0" style="border:4px solid #e1e1e1">
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-center">
-                College of Arts and Sciences
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-center">
-                Leavey School of Business
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-center">
-                School of Engineering
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-center">
-                School of Education &amp; Counseling Psychology
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-center">
-                School of Law
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-center">
-                Jesuit School of Theology
-              </div>
-            </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Anthropology</h5>
           </div>
-          <div class="tab-pane" id="degree" role="tabpanel" aria-labelledby="degree-tab">
-            <div class="row mx-0" style="border:4px solid #e1e1e1">
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                B.A.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                B.S.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Minor
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                M.A.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                M.S.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                MBA
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                M.Div.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                M.T.S.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Th.M.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Ph.D.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                J.D.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                LL.M.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                S.T.B.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                S.T.L.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                S.T.D.
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Certificate Credential
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Engineer's Degree
-              </div>
-              <div class="col-12 col-md-4 program-item d-flex flex-md-column align-items-center justify-content-between">
-                Graduate Minor
-              </div>
-            </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Art History</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Chemistry</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Classical Studies</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Communication</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">English</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">History</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Music</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Philosophy</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Religious Studies</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Studio Art</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Theatre Arts</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Women's and Gender Studies</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Classical Languages &amp; Literatures: Greek</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Classical Languages &amp; Literatures: Latin</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">French and Francophone Studies</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">German Studies</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Italian Studies</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Spanish Studies</h5>
+          </div>
+          <div class="degree-program p-4 collapsed">
+            <h5 class="text-sans-bold m-0">Individual Studies</h5>
           </div>
         </div>
       </div>
