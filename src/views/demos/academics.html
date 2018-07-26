@@ -72,10 +72,10 @@ layout: demo
 </div>
 <div class="container-fluid py-5 bg-light">
   <div class="container-flex">
-    <div class="navbar navbar-expand-lg navbar-light bg-white">
-      <form class="form-inline my-2 my-lg-0">
+    <div class="d-flex align-items-center bg-white p-3">
+      <form class="form-inline flex-grow-1 my-2 my-lg-0">
         <label class="sr-only" for="searchDegree">Degrees</label>
-        <div class="input-group">
+        <div class="input-group w-100 mr-3">
           <input type="text" class="form-control" placeholder="Find a Degree Program" id="searchDegree"
                  aria-label="Degree" aria-describedby="degree" />
           <div class="input-group-append">
@@ -85,116 +85,34 @@ layout: demo
           </div>
         </div>
       </form>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarAcademicsDegrees" aria-controls="navbarAcademicsDegrees" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarAcademicsDegrees">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-lg-2 my-2 my-lg-0">
-            <a class="nav-link btn btn-outline-primary collapsed" href="#collapseFilterSchool"
-               data-toggle="collapse" role="button" aria-expanded="false" aria-haspopup="true">
-              Filter by School: <span class="text-sans-bold">Arts &amp; Sciences</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-outline-primary collapsed" href="#collapseFilterDegree"
-               data-toggle="collapse" role="button" aria-expanded="false" aria-haspopup="true">
-              Filter by Degree Type: <span class="text-sans-bold">B.A.</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <a class="btn btn-outline-primary collapsed" href="#collapseFilterSchool"
+         data-toggle="collapse" role="button" aria-expanded="false" aria-haspopup="true">
+        <i class="fa fa-filter mr-2" aria-hidden="true"></i> Filters
+      </a>
     </div>
-    <div class="accordion bg-white" id="collapseFilterAccordion">
-      <div class="collapse" id="collapseFilterSchool" data-parent="#collapseFilterAccordion">
-        <div class="p-4">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool0" value="option1" checked>
-            <label class="form-check-label" for="radioSchool1">
-              All
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool1" value="option1" checked>
-            <label class="form-check-label" for="radioSchool1">
-              Arts &amp; Sciences
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool2" value="option3">
-            <label class="form-check-label" for="radioSchool3">
-              Business
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool3" value="option2">
-            <label class="form-check-label" for="radioSchool2">
-              Engineering
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool4" value="option3">
-            <label class="form-check-label" for="radioSchool3">
-              Law
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool5" value="option3">
-            <label class="form-check-label" for="radioSchool3">
-              Jesuit School of Theology
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioSchool" id="radioSchool6" value="option3">
-            <label class="form-check-label" for="radioSchool3">
-              Education &amp; Counseling Psychology
-            </label>
+    <div class="collapse bg-white px-3 pb-3" id="collapseFilterSchool">
+      <div class="card card-body bg-white p-4">
+        <div class="form-group">
+          <p class="text-muted text-uppercase mb-2">Degree type</p>
+          <div class="d-flex flex-row flex-wrap">
+            <button type="button" class="btn btn-primary m-2">All</button>
+            <button type="button" class="btn btn-outline-primary m-2">Bachelor's</button>
+            <button type="button" class="btn btn-outline-primary m-2">Master's</button>
+            <button type="button" class="btn btn-outline-primary m-2">Minor</button>
+            <button type="button" class="btn btn-outline-primary m-2">Certificate</button>
+            <button type="button" class="btn btn-outline-primary m-2">Credential</button>
           </div>
         </div>
-      </div>
-      <div class="collapse" id="collapseFilterDegree" data-parent="#collapseFilterAccordion">
-        <div class="p-4">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree0" value="option1">
-            <label class="form-check-label" for="radioDegree1">
-              All
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree1" value="option1" checked>
-            <label class="form-check-label" for="radioDegree1">
-              B.A.
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree2" value="option3">
-            <label class="form-check-label" for="radioDegree3">
-              B.S.
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree3" value="option2">
-            <label class="form-check-label" for="radioDegree2">
-              M.A.
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree4" value="option3">
-            <label class="form-check-label" for="radioDegree3">
-              M.S.
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree5" value="option3">
-            <label class="form-check-label" for="radioDegree3">
-              Minor
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioDegree" id="radioDegree6" value="option3">
-            <label class="form-check-label" for="radioDegree3">
-              Certificate
-            </label>
+        <div class="form-group mb-0">
+          <p class="text-muted text-uppercase mb-2">School</p>
+          <div class="d-flex flex-row flex-wrap">
+            <button type="button" class="btn btn-primary m-2">All</button>
+            <button type="button" class="btn btn-outline-primary m-2">Arts &amp; Sciences</button>
+            <button type="button" class="btn btn-outline-primary m-2">Business</button>
+            <button type="button" class="btn btn-outline-primary m-2">Engineering</button>
+            <button type="button" class="btn btn-outline-primary m-2">Law</button>
+            <button type="button" class="btn btn-outline-primary m-2">Jesuit School of Theology</button>
+            <button type="button" class="btn btn-outline-primary m-2">Education &amp; Counseling Psychology</button>
           </div>
         </div>
       </div>
@@ -204,7 +122,9 @@ layout: demo
     <div class="row mt-5">
       <div class="col-12">
         <h4 class="text-sans-light">Degree Programs</h4>
-        <h6 class="text-sans-light text-muted">in Arts &amp; Sciences seeking a B.A.</h6>
+        <h6 class="text-sans-light text-muted">
+          in <span class="text-primary">Arts &amp; Sciences</span> seeking a <span class="text-primary">Bachelor's</span> degree
+        </h6>
         <hr />
         <div class="d-flex flex-wrap justify-content-center" id="degreeProgramContainer">
           <div class="degree-program p-4 collapsed"
