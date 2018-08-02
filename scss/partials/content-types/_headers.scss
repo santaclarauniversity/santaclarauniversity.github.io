@@ -21,10 +21,18 @@
 
   // image-based headers
   .img-header {
-    max-width: 80%;
+    max-height: 80px;
 
     @include media-breakpoint-down(lg) {
       max-width: 100%;
+    }
+  }
+
+  .dropdown-search {
+    .dropdown-menu {
+      margin-left: -10rem;
+      min-width: 10rem;
+      z-index: $zindex-fixed + 200;
     }
   }
 
@@ -240,8 +248,8 @@
     text-decoration: none;
   }
 
-  // show dropdowns on hover
-  .dropdown:hover > .dropdown-menu {
+  // show dropdowns on hover (except the search dropdown)
+  .dropdown:not(.dropdown-search):hover > .dropdown-menu {
     display: block;
   }
 

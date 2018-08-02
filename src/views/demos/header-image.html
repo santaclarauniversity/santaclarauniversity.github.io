@@ -1,9 +1,4 @@
----
-title: Legacy Custom w/ Image
-layout: legacy
----
-
-<header class="header-legacy bg-primary pt-lg-5">
+<header class="header-legacy bg-navy pt-lg-5">
   <nav class="navbar navbar-expand-lg navbar-light bg-white d-none d-lg-block py-0 fixed-top nav-fixed initial nav-users"
        id="navbarUsers">
     <div class="accordion-collapses" id="navbarUsersAccordion">
@@ -105,10 +100,10 @@ layout: legacy
       </div>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a href="#" class="nav-link text-uppercase px-3">Families</a>
+          <a href="#" class="nav-link text-uppercase px-3">Campus Life</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-uppercase px-3">Support SCU</a>
+          <a href="#" class="nav-link text-uppercase px-3">University Operations</a>
         </li>
         <li class="nav-item dropdown mr-1">
           <a class="nav-link collapsed text-uppercase px-3" href="#navbarUsersOffices"
@@ -122,29 +117,52 @@ layout: legacy
             Schools &amp; Centers <i class="fas fa-caret-up pl-2"></i>
           </a>
         </li>
+        <li class="nav-item dropdown dropdown-search ml-1">
+          <a class="nav-link" href="#" id="dropdownSearch"
+             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Search</span> <i class="fas fa-search text-primary"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownSearch">
+            <form class="p-3">
+              <div class="input-group">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                <div class="input-group-append">
+                  <button class="input-group-text btn btn-outline-primary" type="submit">
+                    <span class="sr-only">Search</span>
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="mt-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="searchTarget" id="searchScu">
+                  <label class="form-check-label" for="searchScu">
+                    scu.edu
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="searchTarget" id="searchCustom" checked>
+                  <label class="form-check-label" for="searchCustom">
+                    Alumni
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
   <div class="container d-flex align-items-center justify-content-center justify-content-lg-between py-4">
     <div class="d-flex align-items-center py-3">
-      <a href="#">
-        <img class="img-header"
-             src="https://www.scu.edu/media/public/alumni/alumni_logo-635x200.png" alt="SCU Alumni" />
-      </a>
-    </div>
-    <form class="form-inline d-none d-lg-flex">
-      <div class="input-group">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
-        <div class="input-group-append">
-          <button class="input-group-text btn btn-light" type="submit">
-            <span class="sr-only">Search</span>
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
+      <div class="text-center text-lg-left">
+        <a href="#">
+          <img class="img-header" src="https://www.scu.edu/media/scuedu/header/images/Markkula-Center-logo-with-tagline-left-V3.png" />
+        </a>
       </div>
-    </form>
+    </div>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light nav-light fixed-top nav-fixed initial nav-custom">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top nav-fixed initial nav-dark nav-custom">
     <div class="container">
       <button class="navbar-toggler px-3 py-2" type="button"
               data-toggle="collapse" data-target="#navbarCustom"
@@ -165,35 +183,29 @@ layout: legacy
       <div class="collapse navbar-collapse" id="navbarCustom">
         <ul class="navbar-nav mr-auto py-3 py-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-uppercase px-3"
+            <a class="nav-link dropdown-toggle text-sans-light text-uppercase px-3"
                href="#" id="navbarCustom1" role="button" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
-              Events
+              Get Involved
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarCustom1">
-              <a class="dropdown-item" href="#">Calendar</a>
-              <a class="dropdown-item" href="#">Graduation Picnic</a>
-              <a class="dropdown-item" href="#">Grand Reunion</a>
-              <a class="dropdown-item" href="#">President's Dinner</a>
-              <a class="dropdown-item" href="#">Vintage Santa Clara</a>
-              <a class="dropdown-item" href="#">Spiritual</a>
-              <a class="dropdown-item" href="#">Volunteer Projects</a>
+              <a class="dropdown-item" href="#">Conserve Water</a>
+              <a class="dropdown-item" href="#">Eat Sustainably</a>
+              <a class="dropdown-item" href="#">Reduce Waste</a>
+              <a class="dropdown-item" href="#">Save Energy</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-uppercase px-3" href="#">Connect</a>
+            <a class="nav-link text-uppercase px-3" href="#">Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-uppercase px-3" href="#">Serve</a>
+            <a class="nav-link text-uppercase px-3" href="#">Programs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-uppercase px-3" href="#">Learn</a>
+            <a class="nav-link text-uppercase px-3" href="#">Academics</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-uppercase px-3" href="#">Career</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase px-3" href="#">News</a>
+            <a class="nav-link text-uppercase px-3" href="#">Operations</a>
             <div class="dropdown-divider d-lg-none my-3"></div>
           </li>
           <li class="nav-item d-lg-none">
@@ -213,70 +225,38 @@ layout: legacy
     </div>
   </nav>
 </header>
-<div class="py-5" style="background-image: url('/assets/images/examples/stage_lighting.JPG');">
-  <div class="container py-5">
-    <h1 class="cover-image-title text-serif-bold text-white pb-2">Page Title</h1>
-    <div class="row">
-      <div class="col-12 col-md-8 bg-white p-5">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Library</a></li>
-          <li class="breadcrumb-item active">Data</li>
-        </ol>
-        <div id="content-28989" class="pt-3">
-          <p class="lead pb-3">This is the Cover Image layout. It's intended to replace pages with empty heroes. It works best with large images (over 500px wide). Add a .cover-image class to the body to have styles applied to content.</p>
-          <hr class="pt-3">
-          <h2>Leading a Life of Purpose</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolorem ex explicabo magni? At error incidunt nobis non perferendis? Amet culpa eius enim facilis fugiat illum incidunt ipsam nobis repellat.</p>
-          <h3>Asking Questions</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem deserunt ducimus et, excepturi expedita explicabo fugit iure nemo neque non odit quaerat, sed tempore voluptatum! Laboriosam necessitatibus tempore tenetur.</p>
-          <h3>Being Aware</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deserunt dicta exercitationem iste maiores nihil quis quo repudiandae, totam! Ab accusamus culpa cumque dolore et fugit labore laboriosam ratione sapiente!</p>
-          <div class="row">
-            <div class="col-6">
-              <img src="holder.js/100px260" alt="Placeholder" class="img-fluid">
-              <h3>Students Making a Difference</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores aspernatur atque debitis dolorum ea, est ex explicabo, iste labore modi nostrum porro provident qui saepe sunt ullam veniam, voluptate.</p>
-            </div>
-            <div class="col-6">
-              <img src="holder.js/100px260" alt="Placeholder" class="img-fluid">
-              <h3>Faculty Expertise</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad alias animi corporis cumque deleniti dolorem, earum esse est expedita illo libero optio possimus quae quibusdam ratione sint tempore voluptatibus?</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <img src="holder.js/100px260" alt="Placeholder" class="img-fluid">
-              <h3>Students Making a Difference</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores aspernatur atque debitis dolorum ea, est ex explicabo, iste labore modi nostrum porro provident qui saepe sunt ullam veniam, voluptate.</p>
-            </div>
-            <div class="col-6">
-              <img src="holder.js/100px260" alt="Placeholder" class="img-fluid">
-              <h3>Faculty Expertise</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad alias animi corporis cumque deleniti dolorem, earum esse est expedita illo libero optio possimus quae quibusdam ratione sint tempore voluptatibus?</p>
-            </div>
-          </div>
-        </div>
+<div class="container pt-5" id="content">
+  <div class="row">
+    <div class="col-8">
+      <div id="content-6829">
+        <h2>How do people and organizations inspire trust?</h2>
+        <p>They make choices based on justifiable standards. They take others into account in their decisions. And then they do what they say they will do.</p>
+        <p>The Markkula Center for Applied Ethics engages individuals and organizations to make choices that respect and care for others. &nbsp;In our focus areas—bioethics, business ethics, campus ethics, character education, government ethics, Internet ethics, journalism ethics, leadership ethics, and social sector ethics—we work with scholars and professionals to apply ethical ideas to the very real problems people encounter. We examine the obstacles to ethical action in many areas of our lives and develop tools to help people perform at their best.</p>
+        <p>&nbsp;</p>
       </div>
-      <div class="col-12 col-md-4">
-        <div class="cover-image-widget bg-white p-3">
-          {{> sidebar expanded=true}}
-        </div>
-        <div class="cover-image-widget bg-white p-3 mt-3">
-          <h4 class="text-sans-light">Cover Image Widgets</h4>
-          <p>I'm a Cover Image Widget.</p>
-          <p>Cover Image Widgets need a container with a .bg-white and utility classes (margin for separation, padding for some content types) to separate them from other blocks.</p>
-        </div>
-        <div class="cover-image-widget bg-white mt-3">
-          <a href="#" class="maroon link-button" role="button">.maroon</a>
-        </div>
-        <div class="cover-image-widget bg-white mt-3">
-          <a href="https://www.scu.edu/rooms/" class="site-pointer">
-            <img data-src="holder.js/100px350/" alt="100%x350" class="img-fluid" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22285%22%20height%3D%22350%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20285%20350%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1615321597a%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A18pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1615321597a%22%3E%3Crect%20width%3D%22285%22%20height%3D%22350%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2295.7890625%22%20y%3D%22183.1%22%3E285x350%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 350px; width: 100%; display: block;">
-            <span class="site-pointer-body p-3">Library Room Reservations</span>
-          </a>
-        </div>
+    </div>
+    <div class="col-sm-4">
+      <nav class="side-navigation match-page-title">
+        <!-- Start: Programmable Layout Nav Object Here -->
+        <a class="side-navigation-header" href="/ethics/" style="display: none;">Markkula Center for Applied Ethics</a><ul style="display: none;"><li><a href="/ethics/about-the-center/">About the Center</a></li><li><a href="/ethics/focus-areas/">Focus Areas </a></li><li><a href="/ethics/ethics-resources/">Ethics Resources</a></li><li><a href="/ethics/events/">Events</a></li><li><a href="/ethics/donate/">Donate</a></li></ul>
+        <!-- End: Programmable Layout Nav Object Here -->
+      </nav>
+      <a href="https://www.scu.edu/ethics/subscribe/" class="maroon  link-button" role="button" target="_blank">Subscribe to Our Newsletter</a>
+
+      <div class="one-column social-grid module">
+
+        <div class="social"><a class="facebook" href="https://www.facebook.com/MarkkulaCenterForAppliedEthics/?ref=bookmarks"><span class="demo-icon icon-facebook-squared"></span><span class="sr-only">Follow us on Facebook</span></a></div>
+
+        <div class="social"><a class="twitter" href="https://twitter.com/scuethics"><span class="demo-icon icon-twitter"></span><span class="sr-only">Follow us on Twitter</span></a></div>
+
+        <div class="social"><a class="instagram" href="https://www.instagram.com/markkulaethicscenter/"><span class="fa fa-instagram"></span><span class="sr-only">Follow us on Instagram</span></a></div>
+
+        <div class="social"><a class="linkedin" href="https://www.linkedin.com/company/markkula"><span class="demo-icon icon-linkedin"></span><span class="sr-only">Join us on LinkedIn</span></a></div>
+
       </div>
+      <div style="clear:left;"></div>
+
+
     </div>
   </div>
 </div>

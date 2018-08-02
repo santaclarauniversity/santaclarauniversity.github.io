@@ -7,14 +7,6 @@
 </head>
 <body class="{{body-class}}">
 
-  {{> search-module}}
-
-  {{#if custom}}
-    {{> header.header-custom custom-title=custom-title}}
-  {{else}}
-    {{> header.header}}
-  {{/if}}
-
   {% body %}
 
   {{#if custom}}
