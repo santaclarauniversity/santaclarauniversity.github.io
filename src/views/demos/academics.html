@@ -46,7 +46,7 @@ layout: demo
       width: 100%;
     }
 
-    #degreeProgramContainer {
+    #searchDegreesResults {
       height: 80vh;
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
@@ -74,9 +74,9 @@ layout: demo
   <div class="container-flex">
     <div class="d-flex align-items-center bg-white p-3">
       <form class="form-inline flex-grow-1 my-2 my-lg-0">
-        <label class="sr-only" for="searchDegree">Degrees</label>
+        <label class="sr-only" for="searchDegrees">Degrees</label>
         <div class="input-group w-100 mr-3">
-          <input type="text" class="form-control" placeholder="Find a Degree Program" id="searchDegree"
+          <input type="text" class="form-control" placeholder="Find a Degree Program" id="searchDegrees"
                  aria-label="Degree" aria-describedby="degree" />
           <div class="input-group-append">
             <div class="input-group-text">
@@ -85,12 +85,12 @@ layout: demo
           </div>
         </div>
       </form>
-      <a class="btn btn-outline-primary collapsed" href="#collapseFilterSchool"
+      <a class="btn btn-outline-primary collapsed" href="#collapseFilters"
          data-toggle="collapse" role="button" aria-expanded="false" aria-haspopup="true">
         <i class="fa fa-filter mr-2" aria-hidden="true"></i> Filters
       </a>
     </div>
-    <div class="collapse bg-white px-3 pb-3" id="collapseFilterSchool">
+    <div class="collapse bg-white px-3 pb-3" id="collapseFilters">
       <div class="card card-body bg-white p-4">
         <div class="form-group">
           <p class="text-muted text-uppercase mb-2">Degree type</p>
@@ -126,7 +126,7 @@ layout: demo
           in <span class="text-primary">Arts &amp; Sciences</span> seeking a <span class="text-primary">Bachelor's</span> degree
         </h6>
         <hr />
-        <div class="d-flex flex-wrap justify-content-center" id="degreeProgramContainer">
+        <div class="d-flex flex-wrap justify-content-center" id="searchDegreesResults">
           <div class="degree-program p-4 collapsed"
                data-toggle="collapse" data-target="#collapseDegree1">
             <h5 class="text-sans-bold m-0">Ancient Studies</h5>
@@ -135,6 +135,10 @@ layout: demo
               <div class="text-sans-light mt-2">
                 <p>A concise description of Ancient Studies degree. Probably something about what you learn, which degrees are available (B.A., can it be a minor?).</p>
                 <a href="#">Link to scu.edu/ancient-studies-page</a>
+              </div>
+              <hr />
+              <div class="text-sans-light mt-2">
+                <h6>Minor, B.S., M.S.</h6>
               </div>
             </div>
           </div>
