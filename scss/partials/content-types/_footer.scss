@@ -13,6 +13,11 @@
 
   .footer-social-icons a {
     font-size: 1.5rem;
+    color: $gray-700;
+
+    &:hover {
+      color: black;
+    }
   }
 
   .footer-wordmark {
