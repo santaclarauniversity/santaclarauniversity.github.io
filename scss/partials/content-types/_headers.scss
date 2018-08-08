@@ -201,7 +201,7 @@
       top: 2.5rem;
 
       &.initial {
-        position: absolute;
+        position: static;
         top: auto !important;
       }
 
