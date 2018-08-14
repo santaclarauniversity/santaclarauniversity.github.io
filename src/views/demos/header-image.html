@@ -133,19 +133,11 @@
                   </button>
                 </div>
               </div>
-              <div class="mt-2">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="searchTarget" id="searchScu">
-                  <label class="form-check-label" for="searchScu">
-                    scu.edu
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="searchTarget" id="searchCustom" checked>
-                  <label class="form-check-label" for="searchCustom">
-                    Alumni
-                  </label>
-                </div>
+              <div class="btn-group btn-group-sm btn-group-toggle d-flex mt-2" data-toggle=“buttons”>
+                <label class="active btn btn-light flex-grow-1">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked="">All of scu.edu</label>
+                <label class="btn btn-light flex-grow-1">
+                  <input type="radio" name="options" id="option2" autocomplete="off">Only scu.edu/cas</label>
               </div>
             </form>
           </div>
@@ -183,7 +175,7 @@
       <div class="collapse navbar-collapse" id="navbarCustom">
         <ul class="navbar-nav mr-auto py-3 py-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-sans-light text-uppercase px-3"
+            <a class="nav-link dropdown-toggle text-uppercase px-3"
                href="#" id="navbarCustom1" role="button" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
               Get Involved

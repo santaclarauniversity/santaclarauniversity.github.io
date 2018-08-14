@@ -1,7 +1,6 @@
 // legacy headers
 
 .header-legacy {
-  padding-bottom: 1.75rem;
   position: relative;
 
   // brand seal
@@ -30,8 +29,8 @@
 
   .dropdown-search {
     .dropdown-menu {
-      margin-left: -10rem;
-      min-width: 10rem;
+      margin-left: -16rem;
+      min-width: 18rem;
       z-index: $zindex-fixed + 200;
     }
   }
@@ -111,9 +110,8 @@
     }
 
     .dropdown-toggle {
-      border-color: rgba($gray-400, .5);
-      border-style: solid;
-      border-width: 0 1px;
+      border: 1px solid rgba($gray-400, .5);
+      border-bottom-width: 0;
       border-radius: 0;
       margin-bottom: -1px;
 
@@ -198,24 +196,37 @@
     &.nav-brand,
     &.nav-custom {
       bottom: auto;
-      top: 2.5rem;
+      top: 0;
 
-      &.initial {
-        position: static;
-        top: auto !important;
-      }
-
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-up(lg) {
         top: 2.4rem;
       }
-
-      @include media-breakpoint-down(md) {
-        top: 0;
+        
+      @include media-breakpoint-up(xl) {
+        top: 2.7rem;
       }
     }
 
-    &.initial {
-      top: auto;
+    &.nav-brand {
+      &.initial {
+        position: absolute;
+        top: auto !important; // needs to override JS
+
+        @include media-breakpoint-up(md) {
+          bottom: -28px;
+        }
+      }
+    }
+
+    &.nav-custom {
+      &.initial {
+        position: static;
+        top: 0 !important;
+      }
+
+      @include media-breakpoint-up(lg) {
+        top: 2.7rem;
+      }
     }
   }
 
@@ -246,6 +257,17 @@
   // remove wordmark hover states
   .text-trajan a:hover {
     text-decoration: none;
+  }
+
+  // slightly adjust dropdown menus so they're easier to hover into
+  .dropdown-menu {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  // eliminate dropdown menu carets, particularly for pages with many dropdowns in navbar
+  .dropdown-toggle::after {
+    display: none;
   }
 
   // show dropdowns on hover (except the search dropdown)

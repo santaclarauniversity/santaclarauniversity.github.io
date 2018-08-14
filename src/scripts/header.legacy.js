@@ -34,7 +34,7 @@ $(() => {
         }
 
         // affix brand/custom navbar beyond <header> height
-        if ($(Header.section).height() <= pos) {
+        if (($(Header.section).height() - $(Header.fixedNav).height()) <= pos) {
           Header.fixedNav.classList.remove('initial');
         } else {
           Header.fixedNav.classList.add('initial');
@@ -44,15 +44,18 @@ $(() => {
 
     // bump brand/custom navbar down when users navbar dropdowns are unrolled
     collapse:     () => {
-      // on screen widths beneath 1200px, we slightly shrink navbar font size, so the bar is smaller
       let brkpt = 1200;
 
       $(Header.collapses)
         .on('shown.bs.collapse', () => {
-          $(Header.fixedNav).animate({ top: $(Header.fixedUsers).height() });
+          $(Header.fixedNav).animate({
+            top: $(Header.fixedUsers).height()
+          });
         })
         .on('hide.bs.collapse', () => {
-          $(Header.fixedNav).animate({ top: window.innerWidth >= brkpt ? '2.5rem' : '2.4rem' }, 300);
+          $(Header.fixedNav).animate({
+            top: window.innerWidth >= brkpt ? '2.7rem' : '2.4rem'
+          }, 300);
         });
     },
 
