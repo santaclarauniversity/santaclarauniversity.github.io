@@ -59,7 +59,16 @@
       border-top: 2px solid $white;
 
       &.dropdown {
-        border-top: 2px solid $brand-primary;
+        border-top: 2px solid $gray-400;
+        transition: border-top-color .4s, color .4s;
+
+        &:hover {
+          border-color: $gray-800;
+        }
+
+        &:focus-within {
+          border-color: $brand-primary;
+        }
 
         a:not(.collapsed) {
           color: $brand-primary;
@@ -102,10 +111,10 @@
       background: url(https://scu.edu/assets/images/header-mission.png) 0 0 no-repeat;
       background-size: 100% 100%;
       margin: -1rem 0 0;
-      height: 3rem;
-      width: 3rem;
+      height: 3.33rem;
+      width: 3.33rem;
       position: relative;
-      top: 1rem;
+      top: .75rem;
       z-index: $zindex-fixed + 100;
     }
 
@@ -117,6 +126,15 @@
 
       span {
         font-size: .85rem;
+        text-decoration: underline;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $brand-primary;
+        border-color: $brand-primary;
+        color: $white;
       }
     }
 
@@ -197,14 +215,7 @@
     &.nav-custom {
       bottom: auto;
       top: 0;
-
-      @include media-breakpoint-up(lg) {
-        top: 2.4rem;
-      }
-        
-      @include media-breakpoint-up(xl) {
-        top: 2.7rem;
-      }
+      transition: top .3s;
     }
 
     &.nav-brand {
@@ -216,6 +227,14 @@
           bottom: -28px;
         }
       }
+
+      @include media-breakpoint-up(lg) {
+        top: 2.4rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        top: 2.7rem;
+      }
     }
 
     &.nav-custom {
@@ -225,7 +244,7 @@
       }
 
       @include media-breakpoint-up(lg) {
-        top: 2.7rem;
+        top: 3.1rem;
       }
     }
   }

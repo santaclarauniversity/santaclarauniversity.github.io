@@ -3,8 +3,10 @@ $(() => {
   const Header = {
     collapses:    document.querySelectorAll('.header-legacy .accordion-collapses .collapse'),
     dropdowns:    document.querySelectorAll('.header-legacy .navbar .dropdown-toggle'),
+    dropdownBtns: document.querySelectorAll('.header-legacy .navbar .nav-item.dropdown:not(.dropdown-search)'),
     fixedUsers:   document.querySelector('.header-legacy .nav-fixed.nav-users'),
     fixedNav:     document.querySelector('.header-legacy .nav-fixed.nav-brand, .header-legacy .nav-fixed.nav-custom'),
+    searchBtn:    document.querySelector('.header-legacy .dropdown-search'),
     section:      document.querySelector('.header-legacy'),
 
     init:         () => {
@@ -16,8 +18,12 @@ $(() => {
         Header.collapse();
       }
 
-      if (Header.dropdowns) {
+      if (Header.dropdowns && Header.dropdownBtns) {
         Header.dropdown();
+      }
+
+      if (Header.searchBtn) {
+        Header.search();
       }
     },
 
@@ -34,7 +40,7 @@ $(() => {
         }
 
         // affix brand/custom navbar beyond <header> height
-        if (($(Header.section).height() - $(Header.fixedNav).height()) <= pos) {
+        if (($(Header.section).height() - ($(Header.fixedNav).height() / 2)) <= pos) {
           Header.fixedNav.classList.remove('initial');
         } else {
           Header.fixedNav.classList.add('initial');
@@ -44,18 +50,24 @@ $(() => {
 
     // bump brand/custom navbar down when users navbar dropdowns are unrolled
     collapse:     () => {
-      let brkpt = 1200;
-
       $(Header.collapses)
-        .on('shown.bs.collapse', () => {
-          $(Header.fixedNav).animate({
-            top: $(Header.fixedUsers).height()
-          });
+        .on('shown.bs.collapse', (event) => {
+          // toggle caret direction up/down
+          $(Header.dropdownBtns).find('i')
+            .removeClass('fa-caret-up').addClass('fa-caret-down');
+          $(Header.dropdownBtns).find('a[href="#' + event.target.id + '"] i')
+            .removeClass('fa-caret-down').addClass('fa-caret-up');
+
+          // move navbar below now-expanded dropdown
+          $(Header.fixedNav).css('top', $(Header.fixedUsers).height());
         })
-        .on('hide.bs.collapse', () => {
-          $(Header.fixedNav).animate({
-            top: window.innerWidth >= brkpt ? '2.7rem' : '2.4rem'
-          }, 300);
+        .on('hide.bs.collapse', (event) => {
+          // toggle caret
+          $(Header.dropdownBtns).find('a[href="#' + event.target.id + '"] i')
+            .removeClass('fa-caret-up').addClass('fa-caret-down');
+
+          // reset navbar to default top value, as defined by CSS
+          $(Header.fixedNav).removeAttr('style');
         });
     },
 
@@ -65,6 +77,12 @@ $(() => {
         menu.addEventListener('click', () => {
           window.open(menu.href, '_self')
         });
+      });
+    },
+
+    search:       () => {
+      $(Header.searchBtn).on('shown.bs.dropdown', () => {
+        $(Header.searchBtn).find('input[type="search"]').get(0).focus();
       });
     }
   };
