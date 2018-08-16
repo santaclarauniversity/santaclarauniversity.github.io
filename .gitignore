@@ -8,3 +8,4 @@ node_modules/
 # General
 dist/
 .DS_Store
+ftp_credentials.sh
