@@ -1,0 +1,192 @@
+// sass-lint:disable no-vendor-prefixes
+
+.close-btn {
+  background: transparent;
+  border: 0;
+  fill: darken($white, 5%);
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+
+  @include media-breakpoint-down(sm) {
+    right: 0;
+    top: 1.15rem;
+  }
+
+  &:hover {
+    fill: $white;
+  }
+
+  &::after {
+    color: $gray-200;
+    content: 'esc';
+    display: block;
+  }
+
+  svg {
+    height: 2.5rem;
+    width: 2.5rem;
+
+    @include media-breakpoint-down(sm) {
+      height: 1.5rem;
+    }
+  }
+}
+
+.search-filter {
+  background-color: #f9f9f9;
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-module {
+  background-color: $white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  overflow: auto;
+  position: fixed;
+  visibility: hidden;
+  transition: opacity .2s ease-in-out;
+  z-index: $zindex-fixed + 1;
+
+  // fix incredibly obnoxious iOS issue with <body> grabbing scroll focus
+  -webkit-overflow-scrolling: touch;
+  padding: 0 0 10rem;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+  }
+
+  &.search-module--open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .search-module-input-container {
+    min-height: 8rem;
+
+    @include media-breakpoint-down(sm) {
+      min-height: 5rem;
+    }
+  }
+
+  .search-header,
+  .search-module-results {
+    max-width: 100%;
+    position: relative;
+    z-index: $zindex-fixed + 5;
+  }
+}
+
+.search-input {
+  margin-left: .25rem;
+}
+
+.gsc-input {
+  padding-right: 0 !important;
+  position: relative;
+  z-index: $zindex-fixed + 2;
+
+  .gsc-input-box {
+    background: transparent;
+    border: 0;
+    height: auto;
+  }
+
+  .gsc-input {
+    background: transparent !important;
+    border-bottom: 1px solid $gray-200 !important;
+    border-radius: 0 !important;
+    color: $white;
+    font-size: 4rem;
+    font-weight: 300;
+    height: auto !important;
+    line-height: 1.3;
+    padding-bottom: .25rem !important;
+    padding-right: 0 !important;
+    position: relative;
+    text-indent: 0 !important;
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+      padding-bottom: 0 !important;
+    }
+
+    &::placeholder {
+      visibility: hidden;
+    }
+  }
+
+  .search-input-form {
+    position: relative;
+  }
+}
+
+/* begin - google search module tweaks */
+// sass-lint:disable class-name-format
+.gsc-search-button,
+.gsc-clear-button {
+  visibility: hidden;
+}
+
+.gsc-control-cse {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.gscb_a {
+  visibility: hidden;
+}
+
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+  background: transparent !important;
+}
+
+.gsc-webResult.gsc-result {
+  padding: .5rem !important;
+
+  &:hover {
+    background-color: #ececec !important;
+  }
+}
+
+.gsc-result .gs-title {
+  height: auto !important;
+}
+
+.gsc-thumbnail-inside {
+  padding: 0 !important;
+}
+
+.gsc-search-box {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: -.25rem !important;
+  }
+}
+
+.gsib_a {
+  padding: 0 !important;
+}
+
+.gsib_b {
+  display: none !important;
+}
+// sass-lint:enable class-name-format
+/* end - google search module tweaks */
+
+// some small tweaks to our select2 module that we can't add to variables.scss */
+.search-module .select2-container--bootstrap4 {
+  z-index: $zindex-fixed + 100;
+  -webkit-overflow-scrolling: touch;
+}
+
+// sass-lint:enable no-vendor-prefixes

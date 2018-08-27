@@ -1,16 +1,23 @@
+.wordmark {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-down(xs) {
+    letter-spacing: 1px;
+  }
+}
+
 // sass-lint:disable no-duplicate-properties
 // sass-lint:disable no-url-domains
 // sass-lint:disable no-url-protocols
 // sass-lint:disable quotes
 
-// sass-lint:disable no-css-comments
 /*
   This CSS resource incorporates links to font software which is the valuable copyrighted
   property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
   redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
   Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 */
-// sass-lint:enable no-css-comments
 @import url("//fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35");
 
 
@@ -92,6 +99,19 @@
   url("/assets/fonts/3bde4253-d238-40b7-b813-eea7bdd9e80d.woff") format("woff"),
   url("/assets/fonts/6005c161-37f3-4678-869a-1b4306ecc563.ttf") format("truetype"),
   url("/assets/fonts/1301d16e-d0ec-407b-9796-677535450691.svg#1301d16e-d0ec-407b-9796-677535450691") format("svg");
+}
+
+@font-face {
+  font-family: "Trajan W01 Regular";
+  src: url("/assets/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix");
+  src: url("/assets/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix") format("eot"),
+  url("/assets/fonts/610145ac-dd31-4024-b833-3ab0ce6b7847.woff2") format("woff2"),
+  url("/assets/fonts/b4312891-e355-4bdc-80c9-ef3dbf7bd916.woff") format("woff"),
+  url("/assets/fonts/124dc47b-32a0-4543-a60e-d8aad32782b4.ttf") format("truetype"),
+  url("/assets/fonts/001e534b-3742-45b3-b20b-d4c53c41a519.svg#001e534b-3742-45b3-b20b-d4c53c41a519") format("svg");
+}
+.text-trajan {
+  font-family: $trajan-font;
 }
 
 .text-serif {
@@ -209,19 +229,6 @@ i b {
 
 .text-inverted {
   color: $white;
-}
-
-#content p > a {
-  background: linear-gradient($white, $white), linear-gradient($white, $white), linear-gradient($brand-primary, $brand-primary);
-  background-position: 0 95%, 100% 95%, 0 95%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: .05em 1px, .05em 1px, 1px 1px;
-  text-shadow: .03em 0 $white, -.03em 0 $white, 0 .03em $white, 0 -.03em $white, .06em 0 $white, -.06em 0 $white, .09em 0 $white, -.09em 0 $white, .12em 0 $white, -.12em 0 $white, .15em 0 $white, -.15em 0 $white;
-
-  &:hover {
-    text-decoration: none;
-    background: none;
-  }
 }
 
 a {

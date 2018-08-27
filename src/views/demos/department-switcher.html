@@ -1,82 +1,227 @@
 ---
-title: Can We
+title: Department Switcher
 layout: demo
 ---
+
+<header class="header-legacy bg-light pt-lg-5">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white d-none d-lg-block py-0 fixed-top nav-fixed initial nav-users"
+       id="navbarUsers">
+    <div class="accordion-collapses" id="navbarUsersAccordion">
+      <div class="collapse bg-white" id="navbarUsersOffices" data-parent="#navbarUsersAccordion">
+        <div class="container py-3">
+          <div class="row">
+            <div class="col d-flex flex-column">
+              <a href="#">Campus Ministry</a>
+              <a href="#">Campus Safety</a>
+              <a href="#">Enrollment Services</a>
+              <a href="#">Facilities</a>
+            </div>
+            <div class="col d-flex flex-column">
+              <a href="#">Diversity</a>
+              <a href="#">Recreation</a>
+              <a href="#">Sustainability</a>
+              <a href="#">Technology</a>
+            </div>
+            <div class="col d-flex flex-column">
+              <a href="#">Arts</a>
+              <a href="#">Bookstore</a>
+              <a href="#">Career Center</a>
+              <a href="#">Human Resources</a>
+            </div>
+            <div class="col d-flex flex-column">
+              <a href="#">Mission Church</a>
+              <a href="#">Library</a>
+              <a href="#">Login</a>
+              <a href="#" class="text-sans-bold text-primary">More Offices &amp; Services &raquo;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="collapse bg-white" id="navbarUsersSchools" data-parent="#navbarUsersAccordion">
+        <div class="container py-3">
+          <div class="row">
+            <div class="col d-flex flex-column">
+              <p class="text-muted text-uppercase">Schools &amp; Colleges</p>
+              <a href="#">College of Arts and Sciences</a>
+              <a href="#">Education and Counseling Psychology</a>
+              <a href="#">Leavey School of Business</a>
+            </div>
+            <div class="col d-flex flex-column">
+              <p class="text-white">Schools &amp; Colleges</p>
+              <a href="#">School of Engineering</a>
+              <a href="#">Jesuit School of Theology</a>
+              <a href="#">School of Law</a>
+            </div>
+            <div class="col d-flex flex-column">
+              <p class="text-muted text-uppercase">Centers of Distinction</p>
+              <a href="#">Miller Center for Social Entrepreneurship</a>
+              <a href="#">Ignatian Center for Jesuit Education</a>
+              <a href="#">Markkula Center for Applied Ethics</a>
+              <a href="#" class="text-sans-bold text-primary">More Centers and Institutes &raquo;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-uppercase px-3" href="#">Students</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase px-3" href="#">Faculty &amp; Staff</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase px-3" href="#">Families</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase px-3" href="#">Alumni</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase px-3" href="#">Visitors</a>
+        </li>
+        <li class="nav-item dropdown mr-1">
+          <a class="nav-link collapsed text-uppercase px-3" href="#navbarUsersOffices"
+             role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarUsersOffices">
+            Offices &amp; Services <i class="fas fa-caret-down pl-2"></i>
+          </a>
+        </li>
+        <li class="nav-item dropdown ml-1">
+          <a class="nav-link collapsed text-uppercase px-3" href="#navbarUsersSchools"
+             role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarUsersSchools">
+            Schools &amp; Centers <i class="fas fa-caret-down pl-2"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container d-flex align-items-center justify-content-center justify-content-lg-between pt-4 pb-4 pb-md-5">
+    <div class="d-flex align-items-center">
+      <a href="#" class="seal d-none d-lg-inline mr-3">
+        <i class="icon-scu"></i>
+        <span class="sr-only">Santa Clara University Homepage</span>
+      </a>
+      <div class="text-center text-md-left">
+        <h2 class="text-trajan wordmark m-0">
+          <a href="#" class="text-primary">Santa Clara University</a>
+        </h2>
+        <h6 class="text-trajan wordmark m-0">
+          <a href="#" class="text-muted">The Jesuit University in Silicon Valley</a>
+        </h6>
+      </div>
+    </div>
+    <form class="form-inline d-none d-lg-flex">
+      <div class="input-group">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+        <div class="input-group-append">
+          <button class="input-group-text btn btn-light" type="submit">
+            <span class="sr-only">Search</span>
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark py-0 fixed-top nav-fixed initial nav-brand" id="navbarBrand">
+    <div class="container">
+      <button class="navbar-toggler px-3 py-2" type="button"
+              data-toggle="collapse" data-target="#navbarBrandList"
+              aria-controls="navbarBrandList" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="text-uppercase">menu</span>
+      </button>
+      <form class="form-inline d-lg-none my-2">
+        <div class="input-group">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+          <div class="input-group-append">
+            <button class="input-group-text btn btn-light" type="submit">
+              <span class="sr-only">Search</span>
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="collapse navbar-collapse bg-primary" id="navbarBrandList">
+        <ul class="navbar-nav mr-auto px-0 px-lg-2 py-3 py-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">About SCU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Academics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Admission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Athletics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Campus Life</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Giving</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Global</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">News &amp; Events</a>
+            <div class="dropdown-divider d-lg-none my-3"></div>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Students</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Faculty</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Families</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Alumni</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Visitors</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Offices &amp; Services</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Schools &amp; Centers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 <style type="text/css">
   #content {
     background-color: white;
   }
 </style>
-<div class="subheader mb-3"
-     style="background-image:url('/assets/images/electrical-engineering.jpg');">
+<div class="subheader pt-5 pb-4 mb-3 has-dim" style="background-image:url('/assets/images/electrical-engineering.jpg');">
   <div class="container">
-    <div class="row align-items-center pb-3">
-      <div class="col-sm-8">
-        <h1 class="text-sans-light pb-3 pb-md-0">
+    <div class="row">
+      <div class="col-12 col-md-8 align-self-center">
+        <h1 class="text-sans-light mb-0">
           <span>Department of </span>Electrical Engineering
         </h1>
       </div>
-      <div class="col-sm-4">
-        <select name="departments" id="departments" class="custom-select form-control-lg" data-placeholder="Departments and Programs">
-          <option></option>
-          <optgroup label="College of Arts and Sciences">
-              <option value="/cas/anthropology">Anthropology</option>
-              <option value="/cas/art-and-art-history">Art and Art History</option>
-              <option>Biology</option>
-              <option>Chemistry and Biochemistry</option>
-              <option>Classics</option>
-              <option>Communication</option>
-              <option>English</option>
-              <option>Environmental Studies</option>
-              <option>Ethnic Studies</option>
-              <option>History</option>
-              <option>Liberal Studies</option>
-              <option>Math and Computer Science</option>
-              <option>Military Science</option>
-              <option>Modern Languages and Literatures</option>
-              <option>Music</option>
-              <option>Philosophy</option>
-              <option>Physics</option>
-              <option>Political Science</option>
-              <option>Psychology</option>
-              <option>Public Health</option>
-              <option>Religious Studies</option>
-              <option>Sociology</option>
-              <option>Theatre and Dance</option>
-              <option>Women's and Gender Studies</option>
-            </optgroup>
-            <optgroup label="School of Engineering">
-              <option>Bioengineering</option>
-              <option>Civil Engineering</option>
-              <option>Computer Science and Engineering</option>
-              <option>Electrical Engineering</option>
-              <option>Mechanical Engineering</option>
-              <option>Web Design and Engineering</option>
-            </optgroup>
-            <optgroup label="Leavey School of Business">
-              <option>Accounting</option>
-              <option>Accounting & Information Systems</option>
-              <option>Economics</option>
-              <option>Finance</option>
-              <option>Management</option>
-              <option>Marketing</option>
-              <option>Management Information Systems (in the department of OMIS)</option>
-            </optgroup>
-        </select>
+      <div class="col-12 col-md-4 align-self-center pt-3 py-md-0">
+        {{> department-switcher}}
       </div>
     </div>
   </div>
 </div>
 <div class="container" id="content">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/engineering/">School of Engineering</a></li>
+    <li class="breadcrumb-item"><a href="/engineering/academic-programs/">Academic Programs</a></li>
+    <li class="breadcrumb-item active">Department of Electrical Engineering</li>
+  </ol>
   <div class="row">
     <div class="col-sm-8">
       <h1 class="page-title d-none" id="page-title">Department of Electrical Engineering</h1>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item"><a href="/engineering/">School of Engineering</a></li>
-        <li class="breadcrumb-item"><a href="/engineering/academic-programs/">Academic Programs</a></li>
-        <li class="breadcrumb-item active">Department of Electrical Engineering</li>
-      </ol>
       <div id="d.en.39590"><!-- General Content --></div>
       <div class="intro"><p>From nanobots to the national grid, electrical engineers create the systems that power our
         world.</p>

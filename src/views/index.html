@@ -1,49 +1,78 @@
 ---
-title: Overview | Santa Clara University UI Toolkit
+title: Overview | Santa Clara University Design System
 fabricator: true
 ---
-
-<h3 class="text-trajan mb-0 text-uppercase">Santa Clara University</h3>
-<h1 class="text-sans-light mt-0">UI Toolkit</h1>
-<p><code class="highlighter-rouge">{{toolkit.version}}</code></p>
-<p>This UI toolkit is a demonstration of the visual language we have developed for Santa Clara
-  University's digital properties. This toolkit is a living document that will be continually
-  updated as our language evolves.</p>
-
-<h2>Color</h2>
-
-<p class="highlighter-rouge"><strong>Note:</strong> Success/info/warning colors are still in beta and may be changed.</p>
-
-{{#each toolkit.colors}}
-<p class="small text-sans-light">{{@key}}</p>
-<div class="f-color-chips">
-  {{#each this}}
-  <div class="f-color-chip">
-    <div class="f-color-chip__name">{{@key}}</div>
-    <div class="f-color-chip__color">{{this}}</div>
-  </div>
-  {{/each}}
-</div>
-{{/each}}
-
-<h2>Resources</h2>
-<div class="row">
-  <div class="col-6">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Bootstrap</h4>
-        <p class="card-text">Our CSS and JavaScript is built using Bootstrap.</p>
-        <a class="btn btn-primary" href="http://getbootstrap.com/docs">Bootstrap Docs</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-6">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Fabricator</h4>
-        <p class="card-text">This documentation is built using Fabricator.</p>
-        <a class="btn btn-primary" href="http://fbrctr.github.io/docs/">Fabricator Docs</a>
-      </div>
-    </div>
+<style>
+  li.d-flex {
+    width: 50%;
+  }
+  li.d-flex img {
+    height: 100px;
+    width: 100px;
+  }
+  @media screen and (max-width: 768px) {
+    li.d-flex {
+      width: 100%;
+    }
+  }
+</style>
+<div class="jumbotron jumbotron-fluid text-center has-dim" style="background-size: cover; background-image: url('/assets/images/examples/nobili.jpg')">
+  <div class="container text-white">
+    <h3 class="mb-0 text-uppercase">Santa Clara University</h3>
+    <h1 class="text-sans-light mt-0">Design System</h1>
+    <p><code class="highlighter-rouge">{{toolkit.version}}</code></p>
   </div>
 </div>
+<div class="container mb-5">
+  <ul class="d-flex list-unstyled align-items-start flex-wrap">
+    <li class="d-flex my-3">
+
+      <a href="/style-guide.html">
+        <img src="/assets/icons/colors.svg" alt="Colors Icon">
+      </a>
+      <div class="pl-3 align-self-center">
+        <h4 class="text-sans-light"><a href="/style-guide.html">Style Guide</a></h4>
+        <p>See our color and typography elements.</p>
+      </div>
+    </li>
+    <li class="d-flex my-3">
+      <a href="/demos.html">
+        <img src="/assets/icons/demos.svg" alt="Demos Icon">
+      </a>
+      <div class="pl-3 align-self-center">
+        <h4 class="text-sans-light"><a href="/demos.html">Demos</a></h4>
+        <p>Layouts of content types.</p>
+      </div>
+    </li>
+    <li class="d-flex my-3">
+      <a href="/content-types.html">
+        <img src="/assets/icons/content-types.svg" alt="Content Types Icon">
+      </a>
+      <div class="pl-3 align-self-center">
+        <h4 class="text-sans-light"><a href="/content-types.html">Content Types</a></h4>
+        <p>See the UI elements that make up our visual language.</p>
+      </div>
+    </li>
+    <li class="d-flex my-3">
+      <a href="docs.html#whats-new">
+        <img src="/assets/icons/launch.svg" alt="What's New Icon">
+      </a>
+      <div class="pl-3 align-self-center">
+        <h4 class="text-sans-light"><a href="docs.html#whats-new">What's New</a></h4>
+        <p>See the latest updates and release notes.</p>
+      </div>
+    </li>
+  </ul>
+  <hr>
+  <h3 class="text-sans-light">Getting Started</h3>
+  <p class="lead">Our goal is to make working with our visual layer as easy as possible.</p>
+  <h4 class="h6">For Content Creators</h4>
+  <p>The <a href="https://www.scu.edu/web-design/content-types/">Web Design</a> has information and documentation on how content types and layouts are integrated within TERMINALFOUR.</p>
+  <h4 class="h6">For Developers</h4>
+  <p>The Design System is on <a href="https://github.com/santaclarauniversity/scu-web-assets">GitHub</a>, but you will need to
+    <a href="https://scuweb.zendesk.com/hc/en-us/requests/new">request access</a> to download and build the system locally.</p>
+  <h3 class="text-sans-light mt-4">Questions?</h3>
+  <p>Please contact us through our support ticketing system.</p>
+  <p><a href="https://github.com/santaclarauniversity/scu-web-assets" class="btn btn-primary">Create a Support Ticket</a></p>
+</div>
+{{> footer.footer}}

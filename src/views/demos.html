@@ -1,7 +1,18 @@
 ---
 fabricator: true
+title: Demos | Santa Clara University Design System
 ---
 
 <h1 data-f-toggle="labels">Demos</h1>
+<p>See various layouts and content types.</p>
 
-<p>Use the left-hand navigation menu to navigate to a demo page.</p>
+{{#each views}}
+  <h3 href="{{@key}}.html" class="f-menu__heading">{{name}}</h3>
+  <ul>
+    {{#each items}}
+    <li>
+      <a href="{{@../key}}/{{@key}}.html">{{name}}</a>
+    </li>
+    {{/each}}
+  </ul>
+{{/each}}

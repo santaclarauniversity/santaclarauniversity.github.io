@@ -1,0 +1,51 @@
+.carousel-indicators {
+  bottom: 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: .9;
+
+  &:hover {
+    opacity: 1.0;
+  }
+}
+
+.carousel-caption {
+  background-color: rgba($black, .25);
+  bottom: 0;
+  color: $white;
+  left: 0;
+  padding: 1rem 0;
+  right: 0;
+
+  a {
+    color: darken($white, 4%);
+
+    &:hover {
+      color: darken($white, 8%);
+    }
+  }
+}
+
+.carousel-vert {
+  .carousel-indicators {
+    height: 100%;
+    margin: 0;
+    position: static;
+
+    li {
+      flex: 1;
+      margin-bottom: .5rem;
+      width: 100%;
+
+      &.active img {
+        border: 2px solid $gray-400;
+      }
+
+      .img-thumbnail {
+        padding: 0;
+      }
+    }
+  }
+}

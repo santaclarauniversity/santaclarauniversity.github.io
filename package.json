@@ -1,17 +1,17 @@
 {
-  "name": "scu-toolkit",
-  "version": "2.0.0",
-  "description": "SCU Brand Toolkit",
-  "homepage": "https//identity.scu.edu",
+  "name": "scu-design-system",
+  "version": "2.1.1",
+  "description": "SCU Design System",
+  "homepage": "https://brand.scu.edu",
   "main": "README.md",
   "scripts": {
-    "gulp": "gulp",
-    "prestart": "npm install",
-    "build": "npm install && gulp",
-    "start": "gulp --dev",
-    "test": "npm run build"
+    "a11y": "gulp a11y",
+    "dev": "gulp --dev",
+    "prod": "gulp",
+    "start": "npm install && gulp --dev"
   },
   "keywords": [
+    "design system",
     "toolkit",
     "styleguide",
     "framework",
@@ -23,49 +23,46 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/santaclarauniversity/scu-web-assets.git"
+    "url": "https://github.com/santaclarauniversity/scu-design-system.git"
   },
   "engines": {
-    "node": ">=4.0",
-    "npm": ">=2.0.0"
+    "node": ">=8.11.1",
+    "npm": ">=5.6.0"
   },
   "devDependencies": {
-    "babel-core": "^6.22.1",
-    "babel-loader": "^6.2.10",
-    "babel-plugin-transform-es2015-modules-strip": "^0.1.1",
-    "babel-preset-es2016": "^6.22.0",
-    "bootstrap": "^4.0.0",
-    "browser-sync": "^2.23.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "bootstrap": "^4.1.3",
+    "browser-sync": "^2.24.6",
+    "css-loader": "^0.28.11",
+    "debug": "^3.1.0",
     "del": "^2.2.2",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.1.0",
-    "eslint-plugin-import": "^2.2.0",
     "fabricator-assemble": "^1.2.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-accessibility": "^3.0.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean-css": "^3.9.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^3.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sass-lint": "^1.3.3",
-    "gulp-size": "^2.1.0",
-    "gulp-sourcemaps": "^2.6.3",
-    "gulp-uglify": "^2.1.2",
-    "gulp-util": "^3.0.8",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.4",
     "holderjs": "^2.9.4",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.13.0",
-    "run-sequence": "^1.2.2",
+    "jquery": "^3.3.1",
+    "jquery-ui-bundle": "^1.12.1-migrate",
+    "lodash": "^4.17.10",
+    "mini-css-extract-plugin": "^0.4.1",
+    "minimist": "^1.2.0",
+    "popper.js": "^1.14.3",
+    "prismjs": "^1.15.0",
+    "sass-loader": "^7.0.3",
     "select2": "git://github.com/woocommerce/selectWoo.git#master",
-    "webpack": "^1.14.0"
-  },
-  "babel": {
-    "presets": [
-      "es2016"
-    ]
+    "select2-bootstrap4-theme": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^2.1.5"
   },
   "dependencies": {}
 }

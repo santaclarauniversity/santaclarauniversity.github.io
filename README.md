@@ -1,6 +1,6 @@
-# Santa Clara University Digital Assets
+# Santa Clara University Design System
 
-A toolkit with the power to construct pages as they would appear on `scu.edu` in order to rapidly prototype new ideas for the website.
+Build websites, apps, and interactive prototypes using SCU's visual language.
 
 ### Installation
 
@@ -18,8 +18,8 @@ $ npm install -g gulp
 
 Download the project itself:
 ```sh
-$ git clone https://github.com/santaclarauniversity/scu-web-assets scu-web-assets
-$ cd scu-web-assets
+$ git clone https://github.com/santaclarauniversity/scu-design-system
+$ cd scu-design-system
 ```
 
 #### Running the Toolkit

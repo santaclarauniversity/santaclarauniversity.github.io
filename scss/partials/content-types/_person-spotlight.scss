@@ -1,0 +1,21 @@
+.person-spotlight {
+  .person-spotlight-title a {
+    text-decoration: none;
+  }
+
+  .person-spotlight-img {
+    background-size: cover;
+    min-height: 250px;
+  }
+
+  // fixes background position when image is displayed on right
+  div:last-child {
+    background-position: 100%;
+  }
+}
+
+.person-spotlight-inv {
+  @extend .person-spotlight;
+
+  background-color: $gray-100;
+}

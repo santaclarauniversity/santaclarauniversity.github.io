@@ -1,3 +1,87 @@
+```v2.1.1```
+
+This update reintroduces the legacy Header design, carousel enhancements, and various bugfixes.
+
+- Reverted the removal of Trajan from the typestack.
+- Refactored and refreshed the legacy header design to use Bootstrap 4 styles.
+- Introduces thumbnail carousel view and various fixes.
+- Dependency bump of Boostrap to 4.1.2.
+
+##### Important Usage Notes
+
+The redesigned header has been demoted and will be included in a future release. It is included for preview, testing, and feedback use only, and is not to be used at the time of this release.
+
+
+```v2.1.0```
+
+An incremental update with minor changes and bugfixes.
+
+- Improved search behavior
+- **Developers:** Updated NPM dependencies. CSS/JS assets are now in `/public`, and [Webpack has been migrated to 4.0](https://github.com/santaclarauniversity/scu-design-system/wiki/Webpack-4-Migration). 
+
+```v2.0.4```
+
+An incremental update with minor changes and bugfixes.
+
+- Upgraded to [Bootstrap 4.1.1](https://blog.getbootstrap.com/2018/04/30/bootstrap-4-1-1/)
+- Improved Search
+- Updated [*Can We, Should We, Will We?*](/demos/homepage.html)
+
+```v2.0.3```
+
+An incremental update with minor changes and bugfixes.
+
+- Fixes inconsistent Person Spotlight styles.
+- **[Department Switcher](content-types.html#department-switcher)**
+  - Now a content type for easier use within prototypes.
+  - Fixed the markup on the [Department Switcher demo page](/demos/department-switcher.html).
+- Updated to [Bootstrap 4.1](https://blog.getbootstrap.com/2018/04/09/bootstrap-4-1/).
+- Carousel display fixes.
+
+```v2.0.2```
+
+An incremental update with small changes limited to some content types, including the header.
+
+- **[Agenda](content-types.html#agenda)**
+  - Completely redesigned content type with new styles and mobile compatibility
+  - Useful for a sequence of events, such as a day plan
+- **[Carousel](content-types.html#carousel)**
+  - Updated markup to latest Bootstrap
+  - Fixed slide indicators not showing up on demos
+- **[Header](content-types.html#header)**
+  - Changed the dividing bar (|) from a link to normal text
+  - **Search**
+    - Fixed some input display issues caused by remotely updated Google Search code
+- **[Sidebar](content-types.html#sidebar)**
+  - Various bug fixes
+
+```v2.0.1```
+
+Welcome to the redesigned SCU Design System!
+
+- **Style Guide**
+  - Restructured the [Style Guide](/style-guide.html). Fixed broken code examples.
+  - Redesigned the landing page and navigation.
+- **[Accordion](content-types.html#accordion)**
+  - Restyled BS4 accordion (previously marked for deprecation) and introduced a new/improved accordion style
+  - Card-based accordions (per BS4) are still availabile via **Accordion Cards**.
+- **[Lists](content-types.html#lists)**
+  - A new content type for lists with an ordered (numeric) set of items.
+- **[Sidebar](content-types.html#sidebar)**
+  - A new, lightweight sidebar design has been adopted that will allow for greater responsive behavior.
+  - Adjustments to Sidebar behavior.
+- **[Templates and Demos](/demos.html)**
+  - Expanded number of demonstration layouts and updated their content types.
+  - Removed *Kitchen Sink* demo, which will return in a future release.
+  - _Experimental:_
+    - New story display options: [Story](/demos/story.html) and [Story (Cover Image)](/demos/story-cover-image.html).
+    - [Sidebar Breakout](/demos/sidebar-breakout-landing.html), a proof-of-concept layout that mixes sidebar layout with landing page layouts.
+- **Dropdown Menus**
+  - Modified the default BS4 dropdown behavior.
+  - Added support for all `.navbar`s to have dropdown menu items
+  - Links with dropdown send user to page on click
+  - Dropdown pops out on hover over these links
+  
 ```v2.0.0```
 - Bootstrap dependency bump to BS4 stable.
 
@@ -31,8 +115,6 @@ Release Highlights:
 - **General Content Type Changes**
   - Updated Content Types for Bootstrap 4.
   - One column/two column "module" designations are deprecated in favor of columns. See: Site Pointer, Infographics, List Items, more.
-- **Accordion**
-  - _Marked for deprecation_ - is now a Card with a special collapsible attribute.
 - **Agenda**
   - Simple responsive table (built with Bootstrap grid) which is intended for scheduling events that have several parts.
 - **Block**
@@ -128,8 +210,8 @@ Release Highlights:
   - Now utilizing `run-sequence` for tasks that should be executed successively rather than simultaneously
   - Now utilizing `done` promise under `gulp` tasks which cannot have a simple return statement
   - Swapped `csslint` for `sass-lint`; swapped `jshint` for `eslint`
-  - Changed `toolkit.js` and `fabricator.js` to properly **both (together)** use `webpack` for compilation
-  - Changed `babel` preset to `es2016` from `babili` so `toolkit.js` won't be minified in development mode
+  - Changed `scu.js` and `fabricator.js` to properly **both (together)** use `webpack` for compilation
+  - Changed `babel` preset to `es2016` from `babili` so `scu.js` won't be minified in development mode
   - Added `gulp-autoprefixer` module which removes need to write browser-specific CSS prefix rules entirely
   - Added task `style:landing` to compile landing page CSS in parallel (also: files are now <1 KB each)
   - Added `gulp-size` to measure the size of output CSS files to `./css/`
@@ -141,7 +223,7 @@ Release Highlights:
   - Now using this file to describe Babel preset instead of having a `.babelrc`
  
  
-- `./src/assets/toolkit/scripts/toolkit.js`
+- `./src/assets/toolkit/scripts/scu.js`
   - Removed extraneous JS code which was meant for leftover parts of Bootstrap landing pages
   - Upgraded to ES6 standard
   - Removed header code (vast majority of this file)

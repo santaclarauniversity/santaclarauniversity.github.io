@@ -1,0 +1,32 @@
+// standard footer
+.footer-core {
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+
+  .wordmark {
+    letter-spacing: 2px;
+    font-family: 'Trade Gothic W01 Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .footer-social-icons a {
+    font-size: 1.5rem;
+    color: $gray-700;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  .footer-wordmark {
+    @extend .text-white;
+    text-decoration: none;
+
+    &:hover {
+      color: transparentize($white, .1) !important;
+      text-decoration: dotted;
+    }
+  }
+}
