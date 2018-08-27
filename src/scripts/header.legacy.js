@@ -10,7 +10,7 @@ $(() => {
     section:      document.querySelector('.header-legacy'),
 
     init:         () => {
-      if (Header.fixedUsers && Header.fixedNav) {
+      if (Header.fixedUsers && Header.fixedNav && !document.querySelector('.container-homepage')) {
         Header.affix();
       }
 

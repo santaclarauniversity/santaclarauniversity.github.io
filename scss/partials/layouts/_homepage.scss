@@ -1,29 +1,23 @@
 // --- start --- new video homepage code
 
-$viewport: calc(100vh - 100px);
-
-.video-container {
+.container-homepage {
+  border-top: 4px solid $brand-primary;
   min-height: 175vh; // enables video container to "hold" onto scroll a little longer
   position: relative;
 
+  // hold actual content inside sticky container
   .sticky {
-    height: $viewport;
+    height: 100vh;
     position: sticky;
     top: 0;
   }
 
   // the overlay that can "fade" into the background (faded: rgba(0,0,0,.01))
-  .fadeable {
-    height: $viewport;
-    width: 100%;
-
-    .overlay {
-      background: $black;
-      height: 100%;
-      opacity: .01;
-      position: absolute;
-      width: 100%;
-    }
+  .overlay {
+    background: $black;
+    opacity: .02;
+    position: absolute;
+    z-index: 110;
   }
 
   h2 {
@@ -38,6 +32,39 @@ $viewport: calc(100vh - 100px);
     opacity: 0;
   }
 
+  // button for header popout
+  div:first-child {
+    z-index: 100;
+
+    button {
+      background: transparent;
+      border: 2px solid $brand-primary;
+      border-radius: 3rem;
+      cursor: pointer;
+    }
+
+    img {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+
+  // button to skip video
+  div:last-child {
+    z-index: 100;
+
+    i {
+      color: darken($white, 10%);
+      cursor: pointer;
+      font-size: 2.5rem;
+      height: auto;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
   video {
     background-size: cover;
     height: 100vh;
@@ -50,34 +77,8 @@ $viewport: calc(100vh - 100px);
     width: 100%;
     z-index: -1;
 
-    + div {
-      height: $viewport;
-      width: 100%;
-    }
-
     .video-snapshot {
       @extend video;
-    }
-  }
-
-  // icons that are fixed to the bottom of .video-container
-  .video-controls {
-    color: darken($white, 25%);
-    cursor: pointer;
-    font-size: 2em;
-    height: auto;
-    position: fixed;
-    right: 0;
-    bottom: 2rem;
-    left: 0;
-    text-align: center;
-
-    @include media-breakpoint-down(md) {
-      color: $white;
-    }
-
-    &:hover {
-      color: $white;
     }
   }
 }
