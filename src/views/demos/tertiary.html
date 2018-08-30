@@ -6,7 +6,7 @@ custom: true
 custom-title: Education and Counseling Psychology
 ---
 
-<header class="header-legacy bg-light mb-5 mb-md-0 pt-lg-5">
+<header class="header-legacy bg-navy pt-lg-5 mb-4">
   <nav class="navbar navbar-expand-lg navbar-light bg-white d-none d-lg-block py-0 fixed-top nav-fixed initial nav-users"
        id="navbarUsers">
     <div class="accordion-collapses" id="navbarUsersAccordion">
@@ -67,21 +67,51 @@ custom-title: Education and Counseling Psychology
       </div>
     </div>
     <div class="container">
+      <div class="dropdown nav-brand-mini" id="navBrandMini">
+        <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" id="navBrandMiniBtn"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="icon-mission mr-2"></span> <span class="text-uppercase">scu.edu</span>
+        </button>
+        <div class="dropdown-menu bg-primary shadow" aria-labelledby="navBrandMiniBtn">
+          <div class="container">
+            <ul class="nav nav-pills flex-nowrap flex-row py-1" role="menu">
+              <li>
+                <a class="text-uppercase text-white px-3 py-2" href="#">Home</a>
+              </li>
+              <li>
+                <a class="text-uppercase text-white px-3 py-2" href="#">About SCU</a>
+              </li>
+              <li>
+                <a class="text-uppercase text-white px-3 py-2" href="#">Academics</a>
+              </li>
+              <li>
+                <a class="text-uppercase text-white px-3 py-2" href="#">Admission</a>
+              </li>
+              <li>
+                <a class="text-uppercase text-white px-3 py-2" href="#">Campus Life</a>
+              </li>
+              <li>
+                <a class="text-uppercase text-white px-3 py-2" href="#">Athletics</a>
+              </li>
+              <li>
+                <a class="text-uppercase text-white px-3 py-2" href="#">Global</a>
+              </li>
+              <li>
+                <a class="text-uppercase text-white px-3 py-2" href="#">Giving</a>
+              </li>
+              <li>
+                <a class="text-uppercase text-white px-3 py-2" href="#">News &amp; Events</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link text-uppercase px-3" href="#">Students</a>
+          <a href="#" class="nav-link text-uppercase px-3">Campus Life</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-uppercase px-3" href="#">Faculty &amp; Staff</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-uppercase px-3" href="#">Families</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-uppercase px-3" href="#">Alumni</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-uppercase px-3" href="#">Visitors</a>
+          <a href="#" class="nav-link text-uppercase px-3">University Operations</a>
         </li>
         <li class="nav-item dropdown mr-1">
           <a class="nav-link collapsed text-uppercase px-3" href="#navbarUsersOffices"
@@ -95,41 +125,48 @@ custom-title: Education and Counseling Psychology
             Schools &amp; Centers <i class="fas fa-caret-down pl-2"></i>
           </a>
         </li>
+        <li class="nav-item dropdown dropdown-search ml-1">
+          <a class="nav-link" href="#" id="dropdownSearch"
+             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Search</span> <i class="fas fa-search text-primary"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownSearch">
+            <form class="p-3">
+              <div class="input-group">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                <div class="input-group-append">
+                  <button class="input-group-text btn btn-outline-primary" type="submit">
+                    <span class="sr-only">Search</span>
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="btn-group btn-group-sm btn-group-toggle d-flex mt-2" data-toggle=“buttons”>
+                <label class="active btn btn-light flex-grow-1">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked="">All of scu.edu</label>
+                <label class="btn btn-light flex-grow-1">
+                  <input type="radio" name="options" id="option2" autocomplete="off">Only scu.edu/cas</label>
+              </div>
+            </form>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
-  <div class="container d-flex align-items-center justify-content-center justify-content-lg-between pt-4 pb-4 pb-md-5">
-    <div class="d-flex align-items-center">
-      <a href="#" class="seal d-none d-lg-inline mr-3">
-        <i class="icon-scu"></i>
-        <span class="sr-only">Santa Clara University Homepage</span>
-      </a>
-      <div class="text-center text-md-left">
-        <h2 class="text-trajan wordmark m-0">
-          <a href="#" class="text-primary">Santa Clara University</a>
-        </h2>
-        <h6 class="text-trajan wordmark m-0">
-          <a href="#" class="text-muted">The Jesuit University in Silicon Valley</a>
-        </h6>
+  <div class="container d-flex align-items-center justify-content-center justify-content-lg-between py-4">
+    <div class="d-flex align-items-center py-3">
+      <div class="text-center text-lg-left">
+        <a href="#">
+          <img class="img-header" src="https://www.scu.edu/media/scuedu/header/images/Markkula-Center-logo-with-tagline-left-V3.png" />
+        </a>
       </div>
     </div>
-    <form class="form-inline d-none d-lg-flex">
-      <div class="input-group">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
-        <div class="input-group-append">
-          <button class="input-group-text btn btn-light" type="submit">
-            <span class="sr-only">Search</span>
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-dark py-0 fixed-top nav-fixed initial nav-brand" id="navbarBrand">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top nav-fixed initial nav-dark nav-custom">
     <div class="container">
       <button class="navbar-toggler px-3 py-2" type="button"
-              data-toggle="collapse" data-target="#navbarBrandList"
-              aria-controls="navbarBrandList" aria-expanded="false" aria-label="Toggle navigation">
+              data-toggle="collapse" data-target="#navbarCustom"
+              aria-controls="navbarCustom" aria-expanded="false" aria-label="Toggle navigation">
         <span class="text-uppercase">menu</span>
       </button>
       <form class="form-inline d-lg-none my-2">
@@ -143,61 +180,53 @@ custom-title: Education and Counseling Psychology
           </div>
         </div>
       </form>
-      <div class="collapse navbar-collapse bg-primary" id="navbarBrandList">
-        <ul class="navbar-nav mr-auto px-0 px-lg-2 py-3 py-lg-0">
-          <li class="nav-item">
-            <a class="nav-link text-white text-uppercase px-3" href="#">About SCU</a>
+      <div class="collapse navbar-collapse" id="navbarCustom">
+        <ul class="navbar-nav mr-auto py-3 py-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-uppercase px-3"
+               href="#" id="navbarCustom1" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              Get Involved
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarCustom1">
+              <a class="dropdown-item" href="#">Conserve Water</a>
+              <a class="dropdown-item" href="#">Eat Sustainably</a>
+              <a class="dropdown-item" href="#">Reduce Waste</a>
+              <a class="dropdown-item" href="#">Save Energy</a>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Academics</a>
+            <a class="nav-link text-uppercase px-3" href="#">Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Admission</a>
+            <a class="nav-link text-uppercase px-3" href="#">Programs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Athletics</a>
+            <a class="nav-link text-uppercase px-3" href="#">Academics</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Campus Life</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Giving</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Global</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white text-uppercase px-3" href="#">News &amp; Events</a>
+            <a class="nav-link text-uppercase px-3" href="#">Operations</a>
             <div class="dropdown-divider d-lg-none my-3"></div>
           </li>
           <li class="nav-item d-lg-none">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Students</a>
+            <a class="nav-link text-uppercase px-3" href="#">scu.edu</a>
           </li>
           <li class="nav-item d-lg-none">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Faculty</a>
+            <a class="nav-link text-uppercase px-3" href="#">Information for..</a>
           </li>
           <li class="nav-item d-lg-none">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Families</a>
+            <a class="nav-link text-uppercase px-3" href="#">Offices &amp; Services</a>
           </li>
           <li class="nav-item d-lg-none">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Alumni</a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Visitors</a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Offices &amp; Services</a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <a class="nav-link text-white text-uppercase px-3" href="#">Schools &amp; Centers</a>
+            <a class="nav-link text-uppercase px-3" href="#">Schools &amp; Centers</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
-<div class="container my-5" id="content">
-  <h1 class="mt-4 text-sans-light">Admissions Requirements</h1>
+<div class="container" id="content">
+  <h1 class="text-sans-light">Admissions Requirements</h1>
   <ol class="breadcrumb mb-4">
     <li class="breadcrumb-item"><a href="https://t4dev.scu.edu/terminalfour/preview/20/en/2651">ECP Homepage</a></li><li class="breadcrumb-item"><a href="https://t4dev.scu.edu/terminalfour/preview/20/en/2692">Admissions</a></li><li class="breadcrumb-item">Admissions Requirements  </li>
   </ol>
