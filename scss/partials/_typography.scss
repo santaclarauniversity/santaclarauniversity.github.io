@@ -129,6 +129,8 @@
 
 .text-sans-light {
   font-family: $sans-serif-light-font;
+  -webkit-font-smoothing: initial !important;
+  -moz-osx-font-smoothing: initial !important;
 }
 
 .text-sans-bold {

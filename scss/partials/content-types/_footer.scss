@@ -7,8 +7,9 @@
   .wordmark {
     letter-spacing: 2px;
     font-family: 'Trade Gothic W01 Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 400;
     text-decoration: none;
+    -webkit-font-smoothing: initial;
+    -moz-osx-font-smoothing: initial;
   }
 
   .footer-social-icons a {
@@ -22,7 +23,10 @@
 
   .footer-wordmark {
     @extend .text-white;
+
     text-decoration: none;
+    -webkit-font-smoothing: initial;
+    -moz-osx-font-smoothing: initial;
 
     &:hover {
       color: transparentize($white, .1) !important;
