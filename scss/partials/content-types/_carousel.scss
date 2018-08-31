@@ -17,20 +17,19 @@
 }
 
 .carousel-caption {
-  background-color: rgba($black, .25);
+  @extend .text-white;
+
+  background-color: rgba($black, .70);
   bottom: 0;
   color: $white;
   left: 0;
-  padding: 1rem 0;
+  padding: 1rem 15%;
   right: 0;
 
-  a {
-    color: darken($white, 4%);
-
-    &:hover {
-      color: darken($white, 8%);
-    }
+  p {
+    margin-bottom: 0;
   }
+
 }
 
 .carousel-vert {
