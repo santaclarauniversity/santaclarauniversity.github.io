@@ -1,30 +1,34 @@
 .pull-quote {
   background: lighten($brand-primary, 2%);
-  overflow: hidden;
-  padding: .5em 2em;
   transition: background .5s;
 
-  .blockquote {
-    > p {
+  // create some space on mobile between quote and photo, but only if there is a photo
+  div:nth-child(2) {
+    @include media-breakpoint-down(sm) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  // quote text
+  blockquote {
+    p {
       border-left: .25em solid lighten($brand-primary, 5%);
-      font-size: 2rem;
+      font-size: 1.5rem;
       line-height: 1.2;
 
-      @include media-breakpoint-down(lg) {
-        font-size: 1.5rem;
-      }
-    }
-
-    .blockquote-footer {
-      color: $white;
-      font-size: 1.5rem;
-
-      @include media-breakpoint-down(lg) {
-        font-size: 1.2rem;
+      @include media-breakpoint-up(xl) {
+        font-size: 1.75rem;
       }
     }
   }
 
+  // quote attribution
+  footer {
+    color: $white;
+    font-size: 1.25rem;
+  }
+
+  // portrait of individual being quoted (if there is one)
   img {
     border: .75em solid lighten($brand-primary, 5%);
     transition: border .5s;
@@ -34,7 +38,6 @@
     background: darken($brand-primary, 2%);
     cursor: pointer;
   }
-
 }
 
 .pull-quote-inv {
@@ -43,7 +46,7 @@
   background: darken($white, 1%);
   color: $brand-primary;
 
-  .blockquote .blockquote-footer {
+  footer {
     color: $brand-primary;
   }
 
