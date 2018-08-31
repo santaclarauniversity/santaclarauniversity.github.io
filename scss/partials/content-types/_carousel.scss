@@ -6,6 +6,11 @@
 .carousel-control-next {
   opacity: .9;
 
+  .carousel-control-icon {
+    background: rgba($black, .8);
+    border-radius: 50%;
+  }
+
   &:hover {
     opacity: 1.0;
   }
