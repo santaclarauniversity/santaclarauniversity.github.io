@@ -1,3 +1,23 @@
+```v2.1.2```
+
+This update includes a variety of patches and improvements to content types, and refines typography across the site with the use of **subpixel rendering**.
+
+- **Accordion**
+  - On extra-long accordion titles, the text didn't line up quite right with the chevron.
+- **Carousel**
+  - The new floating next/previous slide buttons are handled lazily by Bootstrap's standard styling, where they're a semi-transparent gray. Thus, they now have obvious color contrast.
+  - We were also having issues with caption text being difficult to read on certain images. After dramatically darkening the caption background, and providing some better spacing, this should no longer be a problem.
+- **Person Spotlight**
+  - New Variant: Compact
+    - This addresses the issue where Person Spotlights can be visually heavy. It is designed very much like the media items we used to have, but takes advantage of flex.
+- **Pull Quote**
+  - New Variant: Compact
+    - Addressed the issue of reliance on a "profile" photo of the speaker. Now we have a new version that is just a large quoted text.
+  - Spacing and typography changes that help Pull Quote respond better to medium-sized devices, not blow up to huge sizes on desktop devices, and generally weigh better visually
+- **Sidebar**
+  - On mobile, the sidebar menu is contained inside a dropdown made out of the top-level nav item. You can't actually click a link to go to that top-level section. We amended this by adding a link to the top-level item inside the menu, visible on mobile only. It's separated by a horizontal rule from the subsection links.
+
+
 ```v2.1.1```
 
 This update reintroduces the legacy Header design, carousel enhancements, and various bugfixes.
