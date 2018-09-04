@@ -10,6 +10,11 @@ $settings: (
 	menu-width: 14rem
 );
 
+.f-menu .f-menu__heading {
+  font-family: "Trade Gothic W01 Bold_2";
+  font-weight: 500 !important;
+}
+
 @import 'partials/fabricator/variables';
 @import 'partials/fabricator/code';
 @import 'partials/fabricator/color-chips';
@@ -17,3 +22,5 @@ $settings: (
 @import 'partials/fabricator/item';
 @import 'partials/fabricator/layout';
 @import 'partials/fabricator/menu';
+
+
