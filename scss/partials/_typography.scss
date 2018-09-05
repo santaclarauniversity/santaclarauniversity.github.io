@@ -211,11 +211,6 @@
   font-family: $sans-serif-font;
 }
 
-b,
-strong {
-  @extend .sans-serif-font-bold;
-}
-
 i,
 em {
   @extend .sans-serif-font-italic;
