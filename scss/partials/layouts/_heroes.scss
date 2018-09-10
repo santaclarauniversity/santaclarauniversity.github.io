@@ -53,5 +53,13 @@ $hero-lg-height: 450px;
     color: $black;
     font-size: 13px;
     padding: 15px;
+
+    p {
+      margin-bottom: 0;
+
+      a {
+        @extend .text-primary;
+      }
+    }
   }
 }
