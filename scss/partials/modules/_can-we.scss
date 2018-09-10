@@ -1,5 +1,5 @@
 .can-we-head {
-  h5 a {
+  a {
     background-color: $black;
     &:hover {
       text-decoration: none;
@@ -58,6 +58,7 @@
     font-size: .85rem;
     position: absolute;
     text-transform: uppercase;
+    max-width: 55%;
   }
 
   // Photo
