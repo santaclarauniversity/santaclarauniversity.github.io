@@ -1,0 +1,63 @@
+---
+notes: The standard site-wide header.
+---
+
+<header class="header-scu bg-primary">
+  <div class="nav-top fixed-top">
+    <div class="container d-flex align-items-center">
+      <div class="ml-auto">
+        <span class="d-none d-sm-inline text-white">
+          <a href="#" class="pl-0 pr-2 text-white">Current Students</a>
+          <a href="#" class="px-2 text-white">Faculty</a>
+          <a href="#" class="px-2 text-white">Families</a>
+          <a href="#" class="pl-2 pr-3 text-white">Visitors</a>
+          |
+        </span>
+
+        <a href="/login" class="text-white pl-3 pr-2">Login</a>
+        <a href="#" class="text-white px-2">
+          <i class="fa fa-search"></i>
+          <span class="sr-only">Search</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Note: the nav class requires .nav-fixed and .fixed-top, which have been removed for the content types. -->
+  <nav class="initial navbar navbar-dark navbar-expand-lg bg-primary">
+    <div class="container px-0 px-sm-3">
+      <a class="navbar-brand text-white wordmark" href="#">Santa Clara University</a>
+      <button class="navbar-toggler" type="button" data-target="#navbarCollapse" data-toggle="collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About SCU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Academics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Admission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Campus Life</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Giving</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News &amp; Events</a>
+          </li>
+          <div class="d-sm-none w-100" id="navbarCollapseAudiences">
+            <hr class="m-1" />
+            <a href="#" class="nav-link nav-item">Current Students</a>
+            <a href="#" class="nav-link nav-item">Faculty</a>
+            <a href="#" class="nav-link nav-item">Families</a>
+            <a href="#" class="nav-link nav-item">Visitors</a>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
