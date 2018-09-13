@@ -2,8 +2,12 @@
 notes: Header with a light color scheme.
 ---
 
-<header class="header-legacy bg-light pt-lg-5">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white d-none d-lg-block py-0 fixed-top nav-fixed initial nav-users"
+<header class="header-legacy bg-light {{^title}}
+pt-lg-5
+{{/title}}">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white d-none d-lg-block py-0 {{^title}}
+fixed-top nav-fixed
+{{/title}} initial nav-users"
        id="navbarUsers">
     <div class="accordion-collapses" id="navbarUsersAccordion">
       <div class="collapse bg-white" id="navbarUsersOffices" data-parent="#navbarUsersAccordion">

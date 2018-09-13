@@ -219,11 +219,15 @@
 
     &.nav-brand {
       &.initial {
-        position: absolute;
+        position: static;
         top: auto !important; // needs to override JS
 
         @include media-breakpoint-up(md) {
           bottom: -28px;
+        }
+
+        @include media-breakpoint-up(lg) {
+          position: absolute;
         }
       }
 
