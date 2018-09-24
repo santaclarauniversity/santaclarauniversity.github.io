@@ -112,7 +112,10 @@ export let prod = {
 	},
 
 	plugins: [
-		new Uglify(),
+		new Uglify({
+      parallel: true,
+      extractComments: true,
+    }),
 		new MiniCssExtract({ filename: '[name].css' }),
     new webpack.ProvidePlugin({
       $: 'jquery',

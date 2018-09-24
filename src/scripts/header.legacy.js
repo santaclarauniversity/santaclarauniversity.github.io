@@ -53,18 +53,24 @@ $(() => {
       $(Header.collapses)
         .on('shown.bs.collapse', (event) => {
           // toggle caret direction up/down
-          $(Header.dropdownBtns).find('i')
-            .removeClass('fa-caret-up').addClass('fa-caret-down');
-          $(Header.dropdownBtns).find('a[href="#' + event.target.id + '"] i')
-            .removeClass('fa-caret-down').addClass('fa-caret-up');
+          $(Header.dropdownBtns)
+            .find('i')
+            .removeClass('fa-caret-up')
+            .addClass('fa-caret-down');
+          $(Header.dropdownBtns)
+            .find('a[href="#' + event.target.id + '"] i')
+            .removeClass('fa-caret-down')
+            .addClass('fa-caret-up');
 
           // move navbar below now-expanded dropdown
           $(Header.fixedNav).css('top', $(Header.fixedUsers).height());
         })
         .on('hide.bs.collapse', (event) => {
           // toggle caret
-          $(Header.dropdownBtns).find('a[href="#' + event.target.id + '"] i')
-            .removeClass('fa-caret-up').addClass('fa-caret-down');
+          $(Header.dropdownBtns)
+            .find('a[href="#' + event.target.id + '"] i')
+            .removeClass('fa-caret-up')
+            .addClass('fa-caret-down');
 
           // reset navbar to default top value, as defined by CSS
           $(Header.fixedNav).removeAttr('style');
@@ -75,7 +81,7 @@ $(() => {
     dropdown:     () => {
       [].forEach.call(Header.dropdowns, (menu) => {
         menu.addEventListener('click', () => {
-          window.open(menu.href, '_self')
+          window.open(menu.href, '_self');
         });
       });
     },

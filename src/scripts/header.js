@@ -107,6 +107,7 @@ $(() => {
       });
     }
   };
+
   const SearchEngine = {
     init: () => {
       window.__gcse = {
