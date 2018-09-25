@@ -3,7 +3,7 @@ title: Sidebar Breakout Landing Page
 layout: demo
 ---
 
-<header class="header-legacy bg-light mb-5 mb-md-0 pt-lg-5">
+<header class="header-legacy bg-light mb-md-5 mb-md-0 pt-lg-5">
   <nav class="navbar navbar-expand-lg navbar-light bg-white d-none d-lg-block py-0 fixed-top nav-fixed initial nav-users"
        id="navbarUsers">
     <div class="accordion-collapses" id="navbarUsersAccordion">
@@ -204,185 +204,220 @@ layout: demo
       object-fit: cover;
     }
   </style>
-</header><div class="jumbotron jumbotron-fluid hero has-dim-2 pb-0 pt-4" style="background-image:url(/assets/images/core/lg-hero2.jpg);">
-  <div class="container position-relative">
+</header>
+
+<!-- jumbotron: Global -->
+<div class="jumbotron jumbotron-fluid hero has-dim-2 pt-4 pb-0"
+     style="background-image:url(/assets/images/core/lg-hero2.jpg);">
+  <div class="container">
     <h1>Global</h1>
   </div>
 </div>
+<!-- /jumbotron -->
 
+<!-- breadcrumbs -->
 <section style="border-bottom: 1px solid #f1f1f1">
   <div class="container">
-    <ol class="breadcrumb py-4 mb-0">
+    <ol class="breadcrumb mb-4">
       <li class="breadcrumb-item"><a href="#">Home</a></li>
       <li class="breadcrumb-item active"><a href="#">Library</a></li>
     </ol>
   </div>
 </section>
-<section class="pt-4">
+<!-- /breadcrumbs -->
+
+<section class="mt-4">
   <div class="container">
     <div class="row">
+      <!-- sidebar -->
       <div class="col-12 col-md-3 order-md-2">
         <nav class="sidebar">
-        <div class="sidebar-top">
-          <p class="h5 sidebar-title pb-3">
+          <div class="sidebar-top">
+            <p class="h5 sidebar-title pb-3">
+              <a href="#!" class="d-md-block d-none desktop-title">Global</a>
+            </p>
+            <div class="collapse d-md-block" id="sidebarLinks">
+              <ul class="sidebar--links">
+                <li class="border-bottom mb-2 pb-2 d-md-none">
+                  <a href="#!">Global</a>
+                </li>
+                <li><a href="#!">Learning Abroad</a></li>
+                <li>
+                  <a href="#!">Plan Your Experiences</a>
+                </li>
+                <li>
+                  <a href="#!">International Students</a>
+                </li>
+                <li>
+                  <a href="#!">Faculty & Staff</a>
+                </li>
 
-            <a href="#!" class="d-md-block d-none desktop-title">Global</a>
-          </p>
-          <div class="collapse d-md-block" id="sidebarLinks">
-            <ul class="sidebar--links">
-              <li class="border-bottom mb-2 pb-2 d-md-none">
-                <a href="#!">Global</a>
-              </li>
-              <li><a href="#!">Learning Abroad</a></li>
-              <li>
-                <a href="#!">Plan Your Experiences</a>
-              </li>
-              <li>
-                <a href="#!">International Students</a>
-              </li>
-              <li>
-                <a href="#!">Faculty & Staff</a>
-              </li>
-
-            </ul>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
         <a href="#" class="brand-primary link-button" role="button">Apply Now</a>
       </div>
+      <!-- /sidebar -->
+      <!-- intro -->
       <div class="col-12 col-md-9 order-md-1">
-
         <div class="intro">
-
           <p>Find a global perspective that knows no bounds through study or research in more than 60 different countries, or by participating in the thriving community of international students, scholars, and faculty on campus.</p>
         </div>
-
-
-              <h2 class="h4 mb-3">On Campus — In the World</h2>
-              <p>It's not just study abroad, it's learning abroad. Our programs are flexible and varied—ranging from three weeks to a semester, including immersion trips,  and international fellowships. And there's plenty to do on campus too, with clubs, activities, and XXX. Find a program that fits you and begin exploring your place in the world.</p>
+        <h2 class="h4 mb-3">On Campus&mdash;In the World</h2>
+        <p>It's not just study abroad, it's learning abroad. Our programs are flexible and varied—ranging from three weeks to a semester, including immersion trips,  and international fellowships. And there's plenty to do on campus too, with clubs, activities, and XXX. Find a program that fits you and begin exploring your place in the world.</p>
+      </div>
+      <!-- /intro -->
+    </div>
   </div>
 </section>
-<div class=" text-center">
-  <div class="container">
-    <div class="row mt-5">
-      <div class="col">
-        <div class="card has-dim-2 text-xs-center text-white">
-          <img class="card-img" src="/assets/images/core/md-explore.jpg">
-          <div class="card-img-overlay d-flex flex-column justify-content-center">
-            <h3 class="card-title">Learning Abroad</h3>
-            <p class="text-white">Find out the different ways you can engage in global programs and initiatives as well as intercultural experiences on campus.</p>
-          </div>
+
+<!-- 3-column cards: Learning, Plan, Search -->
+<div class="container text-center mt-5">
+  <div class="row">
+    <div class="col-lg">
+      <div class="card has-dim-2 text-xs-center text-white">
+        <img class="card-img" src="/assets/images/core/md-explore.jpg" alt="Learning Abroad">
+        <div class="card-img-overlay d-flex flex-column justify-content-center">
+          <h3 class="card-title">Learning Abroad</h3>
+          <p class="text-white">Find out the different ways you can engage in global programs and initiatives as well as intercultural experiences on campus.</p>
         </div>
       </div>
-      <div class="col">
-        <div class="card has-dim-2 text-xs-center text-white">
-          <img class="card-img" src="/assets/images/core/md-plan.jpg">
-          <div class="card-img-overlay d-flex flex-column justify-content-center">
-            <h3 class="card-title">Plan Your Experiences</h3>
-            <p class="text-white">Hear from past students, explore your options, and learn how to plan ahead to make the most of your experience.</p>
-          </div>
+    </div>
+    <div class="col-lg">
+      <div class="card has-dim-2 text-xs-center text-white">
+        <img class="card-img" src="/assets/images/core/md-plan.jpg" alt="Plan your Experiences">
+        <div class="card-img-overlay d-flex flex-column justify-content-center">
+          <h3 class="card-title">Plan Your Experiences</h3>
+          <p class="text-white">Hear from past students, explore your options, and learn how to plan ahead to make the most of your experience.</p>
         </div>
       </div>
-      <div class="col">
-        <div class="card has-dim-2 text-xs-center text-white">
-          <img class="card-img" src="/assets/images/core/md-search.jpg">
-          <div class="card-img-overlay d-flex flex-column justify-content-center">
-            <h3 class="card-title">Search Our Programs</h3>
-            <p class="text-white">See everything we have to offer and find a program that aligns with your interests and areas of study.</p>
-          </div>
+    </div>
+    <div class="col-lg">
+      <div class="card has-dim-2 text-xs-center text-white">
+        <img class="card-img" src="/assets/images/core/md-search.jpg" alt="Search our Programs">
+        <div class="card-img-overlay d-flex flex-column justify-content-center">
+          <h3 class="card-title">Search Our Programs</h3>
+          <p class="text-white">See everything we have to offer and find a program that aligns with your interests and areas of study.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- /Learning, Plan, Search -->
 
+<!-- 3-column infographics: By the Numbers -->
 <div class="container py-5">
   <div class="text-center">
-  <h2 class="text-sans-light">By the Numbers</h2>
+    <h2 class="text-sans-light mb-3">By the Numbers</h2>
   </div>
   <div class="row">
-    <div class="col-sm-4" style="justify-content: space-between; ">
-      <div class="bg-light  h-100 p-3">
-        <p class="block-title h1 m-b-md section-title text-center text-danger text-sans-bold">
-          >60 </p>
-        <p class="h5 mb-5 text-center text-muted text-sans-light">Countries you can travel to through our programs.</p>
-
-        <p class="block-title h1 m-b-md section-title text-center text-slate text-sans-bold">
-          30% </p>
-        <p class="h5 text-center text-muted text-sans-light">Number of SCU students who participate in learning abroad.</p>
+    <div class="col-sm-4 justify-content-between">
+      <div class="bg-light h-100 p-3">
+        <p class="block-title h1 section-title text-center text-danger text-sans-bold m-b-md">
+          >60
+        </p>
+        <p class="h5 mb-5 text-center text-muted text-sans-light">
+          Countries you can travel to through our programs.
+        </p>
+        <p class="block-title h1 section-title text-center text-slate text-sans-bold m-b-md">
+          30%
+        </p>
+        <p class="h5 text-center text-muted text-sans-light">
+          Number of SCU students who participate in learning abroad.
+        </p>
       </div>
     </div>
-    <div class="col-sm-4" style="justify-content: space-between; ">
-      <div class="bg-light  h-100 p-3">
-        <p class="block-title h1 m-b-md section-title text-center text-slate text-sans-bold">
-          125 </p>
-        <p class="h5 mb-5 text-center text-muted text-sans-light">Faculty participating in international teaching and research.</p>
-
-        <p class="block-title h1 m-b-md section-title text-center text-danger text-sans-bold">
-          18 </p>
-        <p class="h5 text-center text-muted text-sans-light">Small average class sizes allow you to be engaged and active.</p>
+    <div class="col-sm-4 justify-content-between">
+      <div class="bg-light h-100 p-3">
+        <p class="block-title h1 section-title text-center text-slate text-sans-bold m-b-md">
+          125
+        </p>
+        <p class="h5 mb-5 text-center text-muted text-sans-light">
+          Faculty participating in international teaching and research.
+        </p>
+        <p class="block-title h1 section-title text-center text-danger text-sans-bold m-b-md">
+          18
+        </p>
+        <p class="h5 text-center text-muted text-sans-light">
+          Small average class sizes allow you to be engaged and active.
+        </p>
       </div>
     </div>
-
-    <div class="col-sm-4" style="justify-content: space-between; ">
-      <div class="bg-light  h-100 p-3">
-        <p class="block-title h1 m-b-md section-title text-center text-danger text-sans-bold">
-          $10,000 </p>
-        <p class="h5 mb-5 text-center text-muted text-sans-light">Average cost of a learning abroad program.</p>
-
-        <p class="block-title h1 m-b-md section-title text-center text-slate text-sans-bold">
-          Infinite </p>
-        <p class="h5 text-center text-muted text-sans-light">Value of a learning abroad experience.</p>
+    <div class="col-sm-4 justify-content-between">
+      <div class="bg-light h-100 p-3">
+        <p class="block-title h1 section-title text-center text-danger text-sans-bold m-b-md">
+          $10,000
+        </p>
+        <p class="h5 text-center text-muted text-sans-light mb-5">
+          Average cost of a learning abroad program.
+        </p>
+        <p class="block-title h1 section-title text-center text-slate text-sans-bold m-b-md">
+          Infinite
+        </p>
+        <p class="h5 text-center text-muted text-sans-light">
+          Value of a learning abroad experience.
+        </p>
       </div>
     </div>
     </div>
   </div>
+<!-- /By the Numbers -->
 
-
-
+<!-- Int'l Students -->
 <div class="container text-center">
   <h2 class="text-sans-light">International Students</h2>
   <p>Wherever you're from, Santa Clara welcomes you. More than 1,600 international students come to Santa Clara to live, work, and thrive in Silicon Valley. And we can help you with the process. From applying for a visa to finding a job, we'll make sure you have the support you need.</p>
 </div>
+<!-- /Int'l Students -->
+
+<!-- 3-column cards: Int'l Students -->
 <div class="container">
   <div class="row">
-  <!-- Simple Card -->
-  <div class="col">
-    <div class="card text-center">
-      <img class="card-img-top" src="/assets/images/core/md-before.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Before You Come</h4>
-        <p class="card-text">Not sure what an I-20 form is? We've got you covered. Find everything you need to start your journey to SCU.
-        </p>
-        <a href="#" class="btn btn-primary">Get Started</a>
+    <div class="col-md">
+      <div class="card text-center">
+        <img class="card-img-top" src="/assets/images/core/md-before.jpg" alt="Before you Come">
+        <div class="card-body">
+          <h4 class="card-title">Before You Come</h4>
+          <p class="card-text">Not sure what an I-20 form is? We've got you covered. Find everything you need to start your journey to SCU.
+          </p>
+        </div>
+        <div class="card-footer bg-primary">
+          <a href="#" class="brand-primary link-button m-0" rel="button">Get Started</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md mt-3 mt-md-0">
+      <div class="card text-center">
+        <img class="card-img-top" src="/assets/images/core/md-while.jpg" alt="While you're Here">
+        <div class="card-body">
+          <h4 class="card-title">While You're Here</h4>
+          <p class="card-text">Make the most of your experience in the Bay Area. Learn about on-campus support and recreational opportunities.
+          </p>
+        </div>
+        <div class="card-footer bg-primary">
+          <a href="#" class="brand-primary link-button m-0" rel="button">Life at SCU</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md mt-3 mt-md-0">
+      <div class="card text-center">
+        <img class="card-img-top" src="/assets/images/core/md-after.jpg" alt="After you Graduate">
+        <div class="card-body">
+          <h4 class="card-title">After You Graduate</h4>
+          <p class="card-text">Take your education to the next level by working for a year or more in a job or internship related to your major.
+          </p>
+        </div>
+        <div class="card-footer bg-primary">
+          <a href="#" class="brand-primary link-button m-0" rel="button">Learn More</a>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card text-center">
-      <img class="card-img-top" src="/assets/images/core/md-while.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">While You're Here</h4>
-        <p class="card-text">Make the most of your experience in the Bay Area. Learn about on-campus support and recreational opportunities.
-        </p>
-        <a href="#" class="btn btn-primary">Life at SCU</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card text-center">
-      <img class="card-img-top" src="/assets/images/core/md-after.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">After You Graduate</h4>
-        <p class="card-text">Take your education to the next level by working for a year or more in a job or internship related to your major.
-        </p>
-        <a href="#" class="btn btn-primary">Learn More</a>
-      </div>
-    </div>
-    </div>
-  </div>
+</div>
+<!-- /Int'l Students -->
 
-
+<!-- pull quote -->
 <div class="block p-0 mt-5">
   <div class="row pull-quote-inv align-items-center px-3 px-md-4 px-xl-5 py-4">
     <div class="col-12 col-md-4">
@@ -391,8 +426,7 @@ layout: demo
     <div class="col-12 col-md-8">
       <blockquote class="text-sans-light m-0">
         <p class="m-0 pl-3">
-           I felt it was important to take advantage of the opportunities available at SCU, but didn't dream what an impact both Study Abroad and an immersion trip would have on me. It helped me see the world, and myself, from a new perspective.
-
+          I felt it was important to take advantage of the opportunities available at SCU, but didn't dream what an impact both Study Abroad and an immersion trip would have on me. It helped me see the world, and myself, from a new perspective.
         </p>
       </blockquote>
       <footer class="text-right mt-3">
@@ -401,118 +435,100 @@ layout: demo
       </footer>
     </div>
   </div></div>
+<!-- /pull quote -->
 
+<!-- 3-column cards: Faculty & Staff -->
 <div class="container py-5">
   <div class="text-center">
     <h2 class="text-sans-light">Resources for Faculty and Staff</h2>
-    <p>Santa Clara University strongly encourages travel outside of the United States for educational experience. Learn more about developing and leading programs. Also find guidelines and policies on traveling internationally for SCU faculty and staff.</p>
+    <p>
+      Santa Clara University strongly encourages travel outside of the United States for educational experience. Learn more about developing and leading programs. Also find guidelines and policies on traveling internationally for SCU faculty and staff.
+    </p>
   </div>
+  <div class="card-group mt-4">
+      <div class="card">
+        <img class="card-img-top" src="/assets/images/examples/ghana.jpg" alt="Research and Teaching">
+        <div class="card-body">
+          <h6 class="mt-0">Research and Teaching</h6>
+          <p class="card-text">Explore opportunities for funding and resources related to teaching and research abroad.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="/assets/images/examples/ghana.jpg" alt="International Travel">
+        <div class="card-body">
+          <h6 class="mt-0">International Travel</h6>
+          <p class="card-text">From guidelines to requirements for international travel, we're here to help.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="/assets/images/examples/ghana.jpg" alt="Students and Scholars">
+        <div class="card-body">
+          <h6 class="mt-0">Students and Scholars</h6>
+          <p class="card-text">Learn more about having international students in the classroom or hosting visiting scholars.</p>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- /Faculty & Staff -->
+
+<!-- articles -->
+<div class="container py-5">
   <div class="row">
-    <div class="col-sm-4" style="justify-content: space-between; ">
-      <div class="bg-light  h-100 p-3">
-        <div class="media">
-          <img class="d-flex align-self-start mr-2" src="/assets/images/examples/ghana.jpg" alt="Generic placeholder image" style="width: 100px">
-          <div class="media-body">
-            <h6 class="mt-0">Research and Teaching</h6>
-            <p>Explore opportunities for funding and resources related to teaching and research abroad.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4" style="justify-content: space-between; ">
-      <div class="bg-light  h-100 p-3">
-        <div class="media">
-          <img class="d-flex align-self-start mr-3" src="/assets/images/examples/ghana.jpg" alt="Generic placeholder image" style="width: 100px">
-          <div class="media-body">
-            <h6 class="mt-0">International Travel</h6>
-            <p>From guidelines to requirements for international travel, we're here to help.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-4" style="justify-content: space-between; ">
-      <div class="bg-light  h-100 p-3">
-        <div class="media">
-          <img class="d-flex align-self-start mr-3" src="/assets/images/examples/ghana.jpg" alt="Generic placeholder image" style="width: 100px">
-          <div class="media-body">
-            <h6 class="mt-0">Students and Scholars</h6>
-            <p>Learn more about having international students in the classroom or hosting visiting scholars.</p>
-          </div>
-        </div>
+    <div class="col text-center bg-light px-0">
+      <img src="/assets/images/core/md-fulbright.jpg" alt="SCU Fulbright Scholars" class="w-100">
+      <div class="px-3">
+        <h4 class="mt-4">How Did You Win a Fulbright?</h4>
+        <p class="mt-0 mb-4">Fulbright winners and their mentors share the "secret sauce" that led to a record number of these presitigious fellowships for Santa Clara students.</p>
       </div>
     </div>
   </div>
-</div>
-</div>
-
-<!-- Video Article -->
-<div class="container">
-  <div class="row">
-<div class="col-md-8">
-  <div class="text-center" data-bg-img-src="assets/img-temp/900x600/img2.jpg" style="background-image: url('holder.js/100px300')">
-    <img src="/assets/images/core/md-fulbright.jpg" alt="" class="mb-2">
-    <h4>How Did You Win a Fulbright?</h4>
-    <p>Fulbright winners and their mentors share the "secret sauce" that led to a record number of these presitigious fellowships for Santa Clara students.</p>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <article class="text-center">
+        <img src="/assets/images/core/md-whale.jpg" alt="Global Photo Contest" class="mb-2">
+        <h4 class="h5 g-color-white">Global Photo Contest</h4>
+      </article>
+    </div>
+    <div class="col-md-6 mt-3 mt-md-0">
+      <article class="text-center">
+        <img src="/assets/images/core/md-research.jpg" alt="Research With a Mission" class="mb-2">
+        <h4 class="h5">Research With a Mission</h4>
+      </article>
+    </div>
   </div>
 </div>
-<!-- End Video Article -->
+<!-- /articles -->
 
-<div class="col-md-4 g-mb-30">
-  <!-- Video Article -->
-  <div class="g-bg-size-cover g-bg-pos-center g-bg-cover g-bg-black-opacity-0_4--after g-pos-rel g-py-50 g-mb-30" data-bg-img-src="assets/img-temp/300x300/img2.jpg" style="background-image: url(&quot;assets/img-temp/300x300/img2.jpg&quot;);">
-    <article class="text-center g-pos-rel g-z-index-1 g-px-20">
-      <img src="/assets/images/core/md-whale.jpg" alt="" class="mb-2">
-      <h4 class="h5 g-color-white">Global Photo Contest</h4>
-    </article>
-  </div>
-  <!-- End Video Article -->
-
-  <!-- Video Article -->
-  <div class="g-bg-size-cover g-bg-pos-center g-bg-cover g-bg-black-opacity-0_4--after g-pos-rel g-py-50 g-mb-30 g-mb-0--md" data-bg-img-src="assets/img-temp/300x300/img3.jpg" style="background-image: url(&quot;assets/img-temp/300x300/img3.jpg&quot;);">
-    <article class="text-center g-pos-rel g-z-index-1 g-px-20">
-      <img src="/assets/images/core/md-research.jpg" alt="" class="mb-2">
-      <h4 class="h5 g-color-white">Research With a Mission</h4>
-    </article>
-  </div>
-  <!-- End Video Article -->
-</div>
-</div>
-</div>
-
-<div class="app-code-block  bg-primary block block-secondary" style="/* background-color: #fbb720; */">
+<!-- search -->
+<div class="bg-primary block block-secondary">
   <div class="container">
     <div class="row">
-      <div class="col-8 offset-md-2 text-white">
-        <!-- Search form -->
+      <div class="col-12 text-white">
+        <!-- search form -->
         <div class="md-form">
           <input class="form-control" type="text" placeholder="Search" aria-label="Search">
         </div>
+        <!-- /search form -->
         <hr class="dots-left" style="border-top: 1px dashed white;">
-        <div class="row links ">
-          <div class="col-4">
+        <div class="row links">
+          <div class="col-md-4">
             <a href="/cas" class="btn btn-lg btn-outline-light d-block">Global Engagement</a>
-            <a href="/business" class="btn btn-lg btn-outline-light d-block my-2 ">Students & Scholars</a>
-            <a href="http://law.scu.edu" class="btn btn-lg btn-outline-light d-block">Research & Teaching</a>
+            <a href="/business" class="btn btn-lg btn-outline-light d-block my-2 ">Students &amp; Scholars</a>
+            <a href="http://law.scu.edu" class="btn btn-lg btn-outline-light d-block">Research &amp; Teaching</a>
           </div>
-          <div class="col-4 text-white">
+          <div class="col-md-4 text-white">
             <a href="/engineering" class="btn btn-lg btn-outline-light d-block">Study Abroad</a>
-            <a href="/jst" class="btn btn-lg btn-outline-light d-block my-2">Diversity & Identity</a>
+            <a href="/jst" class="btn btn-lg btn-outline-light d-block my-2">Diversity &amp; Identity</a>
             <a href="/ecp" class="btn btn-lg btn-outline-light d-block">International Travel</a>
-
           </div>
-          <div class="col-4 text-white">
-            <a href="/engineering" class="btn btn-lg btn-outline-light d-block">Health & Safety</a>
+          <div class="col-md-4 text-white">
+            <a href="/engineering" class="btn btn-lg btn-outline-light d-block">Health &amp; Safety</a>
             <a href="/jst" class="btn btn-lg btn-outline-light d-block my-2">Global Partnerships</a>
             <a href="/ecp" class="btn btn-lg btn-outline-light d-block">Support Our Programs</a>
-
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
+<!-- /search -->
