@@ -2,6 +2,8 @@
   transition: $transition-base;
 
   blockquote {
+    margin: 0 auto;
+    max-width: 90%;
     position: relative;
 
     // quote text
@@ -16,19 +18,24 @@
 
     // quotation mark
     &::before {
-      font-family: "Font Awesome 5 Free";
-      font-size: 5rem;
-      font-weight: 900;
       content: "\f10d";
+      font-family: "Font Awesome 5 Free", serif;
+      font-size: 4rem;
+      font-weight: 900;
       opacity: .1;
       position: absolute;
       transform: translate(-40%, -80%);
       transition: $transition-base;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 5rem;
+      }
     }
   }
 
   img {
     border: 4px solid $gray-100;
+    max-width: 90%;
     transition: $transition-base;
 
     @include media-breakpoint-up(md) {
