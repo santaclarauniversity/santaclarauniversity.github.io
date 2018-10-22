@@ -1,80 +1,106 @@
-.can-we-head {
-  a {
-    background-color: $black;
-    &:hover {
-      text-decoration: none;
+// sass-lint:disable no-vendor-prefixes
+.can-we {
+  overflow: hidden;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+
+  .container {
+    min-height: 450px;
+
+    @include media-breakpoint-down(md) {
+      min-height: 375px;
     }
   }
 
-  h2 {
-    font-size: 1.5rem;
-    margin-top: .9rem;
+  .can-we-head {
+    $bg: rgba($black, .75);
 
-    @include media-breakpoint-up(xs) {
-      font-size: 1.75rem;
-    }
+    h2 {
+      font-size: 2rem;
 
-    @include media-breakpoint-up(md) {
-      font-size: 3.5rem;
-    }
-
-    a {
-      background-color: rgba($black, .67);
-      &:hover {
-        background-color: rgba($black, .85);
+      a {
+        background: $bg;
+        box-shadow: .25em 0 0 $bg, -.25em 0 0 $bg;
         text-decoration: none;
+      }
+
+      @include media-breakpoint-up(md) {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      margin-bottom: .95rem;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 1.05rem;
       }
     }
   }
+
+  .can-we-content {
+    bottom: 0;
+
+    @include media-breakpoint-down(md) {
+      -webkit-overflow-scrolling: touch;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .can-we-box {
+      background-color: rgba($white, .90);
+      margin-right: 3px;
+
+      // Can We?
+      h2 {
+        line-height: .7;
+        a {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        line-height: 1.4;
+        font-size: 15px;
+      }
+
+      // Name and title
+      p:last-child {
+        bottom: 0;
+        font-size: .85rem;
+        position: absolute;
+        text-transform: uppercase;
+        max-width: 55%;
+      }
+
+      // Photo
+      div {
+        border: 3px solid $white;
+        border-radius: 50%;
+        bottom: -2rem;
+        height: 7rem;
+        right: -1rem;
+        width: 7rem;
+        overflow: hidden;
+        position: absolute;
+
+        @include media-breakpoint-down(lg) {
+          height: 5rem;
+          width: 5rem;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
 }
 
-// sass-lint:disable no-vendor-prefixes
-.can-we-content {
-  @include media-breakpoint-down(md) {
-    -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
-  }
-}
+
 // sass-lint:enable no-vendor-prefixes
 
-.can-we-box {
-  background-color: rgba($white, .97);
-  min-height: 15rem;
-
-  // Can We?
-  h2 {
-    font-size: 2.5rem;
-    line-height: .7;
-    a {
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
-  // Name and title
-  p:last-child {
-    bottom: 0;
-    font-size: .85rem;
-    position: absolute;
-    text-transform: uppercase;
-    max-width: 55%;
-  }
-
-  // Photo
-  div {
-    border: 3px solid $white;
-    border-radius: 50%;
-    bottom: -2rem;
-    height: 9rem;
-    right: -1rem;
-    width: 9rem;
-    overflow: hidden;
-    position: absolute;
-
-    @include media-breakpoint-down(lg) {
-      height: 7.5rem;
-      width: 7.5rem;
-    }
-  }
-}
