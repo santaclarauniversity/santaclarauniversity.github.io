@@ -13,23 +13,19 @@
 
     // quote byline
     cite {
+      font-size: 1.3rem;
       font-style: normal;
     }
 
     // quotation mark
     &::before {
-      content: "\f10d";
-      font-family: "Font Awesome 5 Free", serif;
-      font-size: 4rem;
-      font-weight: 900;
+      content: url(/assets/images/iconmonstr-quote-5.svg);
+      height: 5em;
+      width: 5em;
       opacity: .1;
       position: absolute;
-      transform: translate(-40%, -80%);
+      transform: translate(-45%, -95%);
       transition: $transition-base;
-
-      @include media-breakpoint-up(sm) {
-        font-size: 5rem;
-      }
     }
   }
 
