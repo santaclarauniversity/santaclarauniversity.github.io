@@ -1,3 +1,17 @@
+```v2.2```
+
+This update brings some minor changes to content types and tooling:
+
+- **Blocks**
+  - Block elements had some redundancy with the Jumbotron element, so blocks have been deprecated and Jumbotrons should be used instead.
+- **Jumbotrons**
+  - Added a video jumbotron option.
+  - Added a block example for Jumbotron.
+- **Homepage**
+  - Adjusted the Homepage styling to better match 1.x.
+- **Tooling and Assets**
+  - JavaScript bundle is now minified.
+
 ```v2.1.2```
 
 This update includes a variety of patches and improvements to content types, and refines typography across the site with the use of **subpixel rendering**.
@@ -5,11 +19,11 @@ This update includes a variety of patches and improvements to content types, and
 - **Accordion**
   - On extra-long accordion titles, the text didn't line up quite right with the chevron.
 - **Carousel**
-  - The new floating next/previous slide buttons are handled lazily by Bootstrap's standard styling, where they're a semi-transparent gray. Thus, they now have obvious color contrast.
-  - We were also having issues with caption text being difficult to read on certain images. After dramatically darkening the caption background, and providing some better spacing, this should no longer be a problem.
+  - Increased color contrast on Carousel controls.
+  - Darkened the caption for better readability.
 - **Person Spotlight**
   - New Variant: Compact
-    - This addresses the issue where Person Spotlights can be visually heavy. It is designed very much like the media items we used to have, but takes advantage of flex.
+    - Introduced a slightly smaller Person Spotlight variantion.
 - **Pull Quote**
   - New Variant: Compact
     - Addressed the issue of reliance on a "profile" photo of the speaker. Now we have a new version that is just a large quoted text.
