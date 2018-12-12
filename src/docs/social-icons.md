@@ -10,6 +10,10 @@ Static social icons are available for use in emails and other contexts where Fon
 ![Twitter Icon](https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Twitter.png)
 ![Flickr Icon](https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Flickr.png)
 ![Soundcloud Icon](https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Soundcloud.png)
+![Snapchat Icon](https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Snapchat.png)
+![Tumblr Icon](https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Tumblr.png)
+
+## Resizing and Transforming
 
 These icons can be resized by changing the URL:
 
