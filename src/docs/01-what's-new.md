@@ -1,4 +1,20 @@
-```v2.2```
+```v2.3.0```
+- **Dependency updates**
+  - Bootstrap updated to 4.3.1. See the [Release Notes](https://blog.getbootstrap.com/2019/02/11/bootstrap-4-3-0/).
+  - Fabricator updated to latest version.
+- **CSS**
+  - Enabled Responsive Text globally, fixing a number of text issues within content types.
+  - Removed partials and modules that are not currently used.
+- **Jumbotron**
+  - Removed border radius from Jumbotrons by default.
+- **Sidebar**
+  - Improved design on small screens.
+  - Added a demo for a sidebar that does not collapse.
+- **Documentation**
+  - Added documentation for Social Icons.
+  - Added guidelines for Video Jumbotrons.
+  
+```v2.2.0```
 
 This update brings some minor changes to content types and tooling:
 

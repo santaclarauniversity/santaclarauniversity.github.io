@@ -1,4 +1,4 @@
-version: "2.2"
+version: "2.3.0"
 colors:
   Primary:
     brandRed:   "#b30738"

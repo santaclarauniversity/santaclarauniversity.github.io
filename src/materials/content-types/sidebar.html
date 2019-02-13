@@ -1,13 +1,17 @@
 <nav class="sidebar">
   <div class="sidebar-top">
-    <p class="h5 sidebar-title pb-3">
+    <p class="h5 sidebar-title bg-light p-3">
       <a href="#!" class="link--dropdown d-md-none" data-toggle="collapse" data-target="#sidebarLinks" aria-expanded="false" aria-controls="sidebarLinks">
           Academics
         <i class="h5 chevron right"></i>
       </a>
       <a href="#!" class="d-md-block d-none desktop-title">Academics</a>
     </p>
-    <div class="collapse d-md-block" id="sidebarLinks">
+    {{#if expanded}}
+      <div class="collapse show d-md-block" id="sidebarLinks">
+    {{else}}
+      <div class="collapse d-md-block" id="sidebarLinks">
+    {{/if}}
       <ul class="sidebar--links">
         <li class="border-bottom mb-2 pb-2 d-md-none">
           <a href="#!">Academics</a>

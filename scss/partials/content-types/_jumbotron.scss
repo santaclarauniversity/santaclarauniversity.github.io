@@ -1,0 +1,4 @@
+/* cancel out Bootstrap's rounded corners on Jumbotron */
+.jumbotron {
+  @include border-radius(0);
+}
