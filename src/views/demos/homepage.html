@@ -4,59 +4,75 @@ layout: demo
 ---
 
 {{> header.header}}
-<div class="can-we"
-     style="background:left / cover no-repeat url(/assets/images/cwsw-bg.jpg)">
-  <div class="container position-relative">
-    <div class="can-we-head">
-      <p class="text-highlight text-highlight-black text-sans-light">
-        <a href="#" class="highlight highlight--wrapping p-2 text-white">
-          STEM @ SCU
-        </a>
-      </p>
-      <h2 class="text-highlight text-highlight-black text-serif mb-0">
-        <a href="#" class="highlight highlight--wrapping text-white">
-          Building. For the Future.
-        </a>
+
+<style>
+  .d-grid {
+    display: grid;
+  }
+  .can-we {
+    grid-template-columns: 1fr 1140px 1fr;
+    grid-template-rows: 4rem 1fr auto 2rem;
+    height: 80vh;
+  }
+  .can-we-head {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .can-we-content {
+    grid-row: 3;
+    grid-column: 2;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+    grid-template-rows: 1fr auto 1fr;
+  }
+</style>
+<div class="can-we d-grid" style="background: center / cover no-repeat url(/assets/images/cwsw-bg.jpg)">
+  <div class="can-we-head">
+    <p class="text-highlight text-highlight-black text-sans-light">
+      <a href="#" class="highlight highlight--wrapping p-2 text-white">
+        STEM @ SCU
+      </a>
+    </p>
+    <h2 class="text-highlight text-highlight-black text-serif mb-0">
+      <a href="#" class="highlight highlight--wrapping text-white">
+        Building. For the Future.
+      </a>
+    </h2>
+  </div>
+
+  <div class="can-we-content d-grid w-100">
+    <div class="shadow bg-white" style="grid-column: 1; grid-row-start: 1; grid-row-end: 4;"></div>
+    <h2 class="text-primary text-serif" style="grid-column: 1; grid-row: 1">
+        <a href="#">Can We?</a>
       </h2>
-    </div>
-    <div class="can-we-content d-flex flex-lg-wrap flex-nowrap position-absolute row w-100">
-      <div class="can-we-box col-11 col-lg p-3 mx-3 shadow">
-        <h2 class="mt-2 text-primary text-serif">
-          <a href="#">Can We?</a>
-        </h2>
-        <div class="shadow">
-          <img src="/assets/images/cwsw-marvier.jpg" class="w-100 h-auto" alt="">
-        </div>
-        <p class="mb-5">SCU is transforming the way students <a href="#">approach problem solving</a>.</p>
-        <p>
-          Michelle Marvier<br><a href="#">Environmental Sciences</a>
-        </p>
-      </div>
-      <div class="can-we-box col-11 col-lg p-3 mx-3 shadow">
-        <h2 class="mt-2 text-primary text-serif">
-          <a href="#">Should We?</a>
-        </h2>
-        <div class="shadow">
-          <img src="/assets/images/cwsw-wheeler.jpg" class="w-100 h-auto" alt="">
-        </div>
-        <p class="mb-5">Removing boundaries between disciplines leads to <a href="#">solutions for complex questions</a>.</p>
-        <p>
-          Korin Wheeler<br><a href="#">Biochemistry</a>
-        </p>
-      </div>
-      <div class="can-we-box col-11 col-lg p-3 mx-3 shadow">
-        <h2 class="mt-2 text-primary text-serif">
-          <a href="#" class="">Will We?</a>
-        </h2>
-        <div class="shadow">
-          <img src="/assets/images/cwsw-lu.jpg" class="w-100 h-auto" alt="">
-        </div>
-        <p class="mb-5">New therapies need new engineering. Our students can apply their knowledge <a href="#">to create relevant strategies</a>.</p>
-        <p>
-          Bill Lu<br><a href="#">Bioengineering</a>
-        </p>
-      </div>
-    </div>
+
+      <p style="grid-column: 1; grid-row: 2">SCU is transforming the way students <a href="#">approach problem solving</a>.</p>
+      <p style="grid-column: 1; grid-row: 3">
+        Michelle Marvier<br><a href="#">Environmental Sciences</a>
+      </p>
+
+      <div class="shadow bg-white" style="grid-column: 2; grid-row-start: 1; grid-row-end: 4;"></div>
+      <h2 class="text-primary text-serif" style="grid-column: 2; grid-row: 1">
+        <a href="#">Should We?</a>
+      </h2>
+
+      <p style="grid-column: 2; grid-row: 2">Removing boundaries between disciplines leads to <a href="#">solutions for complex questions</a>.</p>
+      <p style="grid-column: 2; grid-row: 3">
+        Korin Wheeler<br><a href="#">Biochemistry</a>
+      </p>
+
+      <div class="shadow bg-white" style="grid-column: 3; grid-row-start: 1; grid-row-end: 4;"></div>
+      <h2 class="text-primary text-serif" style="grid-column: 3; grid-row: 1">
+        <a href="#" class="">Will We?</a>
+      </h2>
+      <p style="grid-column: 3; grid-row: 2">New therapies need new engineering. Our students can apply their knowledge <a href="#">to create relevant strategies</a>.</p>
+      <p style="grid-column: 3; grid-row: 3">
+        Bill Lu<br><a href="#">Bioengineering</a>
+      </p>
+
   </div>
 </div>
 <div class="container-fluid py-3 text-center"
@@ -83,12 +99,12 @@ layout: demo
           century, says professor of insurance law <strong>Robert W. Peterson</strong>.</p>
       </div>
       <div class="news module">
-        <div class="media">
-          <a href="/news-and-events/top-stories/no-blue-no-green.html" class="mr-3">
-            <img src="/assets/images/examples/md-earle.jpg" class="d-flex img-thumbnail" />
+        <div class="row">
+          <a href="/news-and-events/top-stories/no-blue-no-green.html" class="col-12 col-md-5">
+            <img src="/assets/images/examples/md-earle.jpg" class="img-thumbnail" />
           </a>
-          <div class="media-body">
-            <h4 class="mt-0">
+          <div class="col-12 col-md-7">
+            <h4 class="mt-0 h5">
               <a href="/news-and-events/top-stories/no-blue-no-green.html">No Blue, No Green</a>
             </h4>
             <p>On a visit to the Mission Campus, oceanographer Sylvia Earle and
@@ -96,23 +112,23 @@ layout: demo
               needs everyone to be an active advocate on its behalf.</p>
           </div>
         </div>
-        <div class="media mt-3">
-          <a href="https://www.scu.edu/cowell/meningitis-updates/faqs-regarding-the-second-bexsero-vaccine.html" class="mr-3">
-            <img src="/assets/images/examples/lg-0213-meningitis-720x480.jpg" class="img-thumbnail d-flex" />
+        <div class="row mt-3">
+          <a href="https://www.scu.edu/cowell/meningitis-updates/faqs-regarding-the-second-bexsero-vaccine.html" class="col-12 col-md-5">
+            <img src="/assets/images/examples/lg-0213-meningitis-720x480.jpg" class="img-thumbnail" />
           </a>
-          <div class="media-body">
-            <h4 class="mt-0">
+          <div class="col-12 col-md-7">
+            <h4 class="mt-0 h5">
               <a href="https://www.scu.edu/cowell/meningitis-updates/faqs-regarding-the-second-bexsero-vaccine.html">Meningitis Updates for the SCU Campus</a>
             </h4>
             <p><strong>March 8, 2016 (12:00):</strong> Read FAQ's regarding the
               second dose of the Bexsero® vaccine.</p></div>
         </div>
-        <div class="media mt-3">
-          <a href="https://magazine.scu.edu/scm/fall2015/bronco-news.cfm?b=439&c=23427" class="mr-3">
-            <img src="/assets/images/examples/lg-spotlight-760x482.jpg" class="img-thumbnail d-flex" />
+        <div class="row mt-3">
+          <a href="https://magazine.scu.edu/scm/fall2015/bronco-news.cfm?b=439&c=23427" class="col-12 col-md-5">
+            <img src="/assets/images/examples/lg-spotlight-760x482.jpg" class="img-thumbnail" />
           </a>
-          <div class="media-body">
-            <h4 class="mt-0"><a
+          <div class="col-12 col-md-7">
+            <h4 class="mt-0 h5"><a
               href="https://magazine.scu.edu/scm/fall2015/bronco-news.cfm?b=439&c=23427">In
               the Spotlight</a>
             </h4>
@@ -121,13 +137,12 @@ layout: demo
               Academy Awards.</p>
           </div>
         </div>
-        <div class="media mt-3">
-          <a href="/news-and-events/top-stories/getting-stuff-done.html" class="mr-3">
+        <div class="row mt-3">
+          <a href="/news-and-events/top-stories/getting-stuff-done.html" class="col-5 pl-0">
             <img src="/assets/images/examples/lg-1602-kreiner.jpg" class="img-thumbnail d-flex" />
           </a>
-          <div class="media-body"><h4 class="mt-0"><a
-            href="/news-and-events/top-stories/getting-stuff-done.html">Getting
-            Stuff Done</a></h4>
+          <div class="col-12 col-md-7">
+            <h4 class="mt-0 h5"><a href="/news-and-events/top-stories/getting-stuff-done.html">Getting Stuff Done</a></h4>
             <p>The <em>Silicon Valley Business Journal</em> catches up on social
               entrepreneurship in a Q&A with Miller Center's <strong>Thane
                 Kreiner</strong>.</p></div>
