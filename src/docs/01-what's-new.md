@@ -1,3 +1,21 @@
+``v2.4.0``
+
+This update brings fixes to the sidebar navigation, a new emergency banner, and other enhancements.
+
+- **Sidebar**
+  - Further improved sidebar display on mobile.
+  - Removed unused styles
+  - Demos append "Sections" to the title of the section to improve usability, but the inclusion of this text is optional.
+- **Navigation**
+  - Cleaned up iconography and menu buttons on mobile
+- **Accessibility**
+  - Added ARIA landmarks for navigation and semantic elements for content.
+- **Jumbotron**
+  - Fixed an issue where background images would repeat.
+- **Emergency Banner**
+  - Added an emergency banner to show critical information on the site.
+
+
 ```v2.3.0```
 - **Dependency updates**
   - Bootstrap updated to 4.3.1. See the [Release Notes](https://blog.getbootstrap.com/2019/02/11/bootstrap-4-3-0/).
