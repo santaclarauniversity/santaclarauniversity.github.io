@@ -1,0 +1,14 @@
+.alert-primary {
+  background-color: $brand-primary;
+  border-radius: 0;
+  color: $white;
+}
+
+button.close {
+  color: $white;
+  line-height: $line-height-base;
+
+  &:hover {
+    color: $white;
+  }
+}
