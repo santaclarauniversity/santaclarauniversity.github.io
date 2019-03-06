@@ -4,10 +4,10 @@ This update brings fixes to the sidebar navigation, a new emergency banner, and 
 
 - **Sidebar**
   - Further improved sidebar display on mobile.
-  - Removed unused styles
+  - Removed unused styles.
   - Demos append "Sections" to the title of the section to improve usability, but the inclusion of this text is optional.
 - **Navigation**
-  - Cleaned up iconography and menu buttons on mobile
+  - Cleaned up iconography and menu buttons on mobile.
 - **Accessibility**
   - Added ARIA landmarks for navigation and semantic elements for content.
 - **Jumbotron**
@@ -61,7 +61,7 @@ This update includes a variety of patches and improvements to content types, and
 - **Pull Quote**
   - New Variant: Compact
     - Addressed the issue of reliance on a "profile" photo of the speaker. Now we have a new version that is just a large quoted text.
-  - Spacing and typography changes that help Pull Quote respond better to medium-sized devices, not blow up to huge sizes on desktop devices, and generally weigh better visually
+  - Spacing and typography changes that help Pull Quote respond better to medium-sized devices, not blow up to huge sizes on desktop devices, and generally weigh better visually.
 - **Sidebar**
   - On mobile, the sidebar menu is contained inside a dropdown made out of the top-level nav item. You can't actually click a link to go to that top-level section. We amended this by adding a link to the top-level item inside the menu, visible on mobile only. It's separated by a horizontal rule from the subsection links.
 
