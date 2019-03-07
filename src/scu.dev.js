@@ -2,7 +2,6 @@ import 'bootstrap'
 import 'select2'
 
 import './scripts/header.legacy'
-import './scripts/alerts'
 
 let $ = require('jquery');
 window.jQuery = $;
