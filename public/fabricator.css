@@ -3,6 +3,10 @@
  * @author Luke Askew
  * Class selectors are namespaced with "f-"
  */
+.f-menu .f-menu__heading {
+  font-family: "Trade Gothic W01 Bold_2";
+  font-weight: 500 !important; }
+
 /**
  * Github-like theme for Prism.js
  * @author Luke Askew http://github.com/lukeaskew
