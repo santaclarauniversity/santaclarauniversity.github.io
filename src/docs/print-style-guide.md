@@ -1,4 +1,4 @@
-Our guidelines for print projects are part of our [Visual Identity Elements](https://www.scu.edu/omc/brand-visual-style/visual-identity-elements/) :
+Our guidelines for print projects are part of our [Visual Identity Elements](https://www.scu.edu/umc/visual-identity-elements/) :
 
 * [University Logos](https://www.scu.edu/umc/visual-identity-elements/university-logos/) - Guidelines and correct configurations for SCU's most important visual branding tool.
 * [The SCU Seal](https://www.scu.edu/umc/visual-identity-elements/the-scu-seal/) - Usage applications for the University's official, iconic symbol, having historical Jesuit roots.
