@@ -10,4 +10,4 @@ WAVE will not detect all accessibility issues. It is your responsibility to ensu
 * JavaScript interactivity and progressive enhancement
 * Effective contextual information, such as alt attributes, need to be descriptive.
 
-If you have questions about accessible contributions to the toolkit or new websites, please contact [Nic Bertino](mailto:nbertino@scu.edu), Director of Digital Strategy.
+If you have questions about accessible contributions to the toolkit or new websites, please contact [Christina Olivas](mailto:colivas@scu.edu), Director of Digital Strategy.
