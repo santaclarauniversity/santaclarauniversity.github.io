@@ -1,0 +1,289 @@
+---
+title: Homepage
+layout: demo
+---
+
+<!--NEW STYLES TO ADD-->
+<style>
+  .motifline {
+    font-family: "Trade Gothic Next W01",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #b30738;
+  }
+  .redrow {
+      padding: 1rem;
+      background-color: #b30738;
+      color: #fff;
+      text-align: center;
+      margin-top: -2rem;
+    }
+    .notification {
+      padding: 1rem;
+      border: solid 1.5px #b30738;
+
+      text-align: center;
+    }
+    .notification-title {
+      color: #b30738;
+      font-size: 18px;
+    }
+    .notification-info {
+      color: #212529;
+      font-size: 18px;
+    }
+    .container-fluid.pride-section {
+      background-color: #f4f2f0;
+      text-align: center;
+      padding-bottom: 30px;
+      padding-top: 10px;
+    }
+
+    .card.pride-section {
+      border: none;
+      background: none;
+      border-radius: 0;
+    }
+
+    .card-block.card-body.pride-section.border-right {
+      border-right: 1px solid #b30738 !important;
+    }
+
+    .jumbotron.hero h1.secNavSection {
+      font-family: "Trade Gothic W01 Bold_2";
+      bottom: 0;
+      color: #fff;
+      font-size: 60px;
+      line-height: 47px;
+      margin: 0;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      left: 50%;
+      top: 72%;
+      margin-left: -50%;
+      margin-top: -20px;
+      text-align: center;
+    }
+
+    a.btn.btn-primary.secNavSecion {
+      height: 80px;
+      width: 300px;
+      font-size: 25px;
+      padding: 15px;
+  }
+  .row.justify-content-md-center.secNavSection {
+        margin-top: -100px;
+      }
+
+
+    @media only screen and (max-width: 992px)  
+    {
+      .motifline {
+        font-size: 25px;
+      }     
+      .card-block.card-body.pride-section.border-right {
+        border-right: 0 !important;
+        padding: 0;
+      }
+      .jumbotron.hero h1.secNavSection {
+        font-size: 40px;
+
+      }
+      h1.secNavSection {
+        top: 55% !important;
+      }
+      .col-md-auto.secNavSection {
+        padding: 10px;
+      }
+
+    }
+
+    
+</style>
+
+
+{{> header.header emergency=true}}
+{{> jumbotron.video}}
+
+<!--START DECORATIVE SECTION-->
+<div class="w-screen mt-4">
+  <div class="redrow">   
+  </div>
+</div>
+<!--END DECORATIVE SECTION-->
+
+<!--START HEALTH ADISORY SECTION-->
+<div class="container my-4">
+  <div class="notification">
+         <span class="notification-title"><i class="fas fa-exclamation-circle"></i></span>
+         Health Advisory Alert:</span> 
+         <span class="notification-info"> Latest information on the COVID-19 outbreak.</span>
+        </div>
+  </div>
+<!--END HEALTH ADVISORY SECTION-->
+
+<!--START TAGLINE SECTION-->
+<div class="container-fluid py-3 text-center">
+  <div class="container">
+    <h4 class="motifline">We’re students, teachers, and mentors headquartered <br>
+in the <b>most innovative place on earth</b>: Silicon Valley.</h4>
+  </div>
+</div>
+<!--END TAGLINE SECTION-->
+
+<!--START PRIDE SECTION-->
+<div class="container-fluid pride-section">
+  <div class="row mt-3 grid-group-grid-00 grid-group-grid-05">
+    
+    <div class="grid-item mb-3 grid-05 col-lg-3 col-sm-6">
+      <div class="card pride-section h-100">
+        <div class="card-block card-body pride-section border-right">
+          <div class="card-text pride-section"><p class="statcard-number display-2" style="text-align: center; font-size: 3.4rem; color: #b30738; font-weight: 600;">94%</p>
+            <p style="text-align: center;"><span style="font-weight: 400; color: #b30738;">First-year retention</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-item mb-3 grid-05 col-lg-3 col-sm-6">
+      <div class="card pride-section h-100">
+        <div class="card-block card-body pride-section border-right">
+          <div class="card-text pride-section"><p class="statcard-number display-2" style="text-align: center; font-size: 3.4rem; font-weight: 600;">11:1</p>
+            <p style="text-align: center;"><span style="font-weight: 400;">Student to faculty ratio</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-item mb-3 grid-05 col-lg-3 col-sm-6">
+      <div class="card pride-section h-100">
+        <div class="card-block card-body pride-section border-right">
+          <div class="card-text pride-section"><p class="statcard-number display-2" style="text-align: center; font-size: 3.4rem; color: #b30738; font-weight: 600;">85%</p>
+            <p style="text-align: center; color: #b30738;">Percent 4-year graduation</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-item mb-3 grid-05 col-lg-3 col-sm-6">
+        <div class="card pride-section h-100">
+          <div class="card-block card-body pride-section">
+            <div class="card-text pride-section"><p class="statcard-number display-2" style="text-align: center; font-size: 3.4rem; font-weight: 600;">300</p>
+              <p style="text-align: center;">Days of Sunshine per year</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn btn-primary" href="https://www.scu.edu/admission/undergraduate/choosing-scu/">More Points of Pride</a>
+</div>
+<!--END PRIDE SECTION-->
+
+
+<!--START SECONDARY NAVIGATION SECTION-->
+<div class="jumbotron jumbotron-fluid hero has-dim-2 pb-0 pt-4" style="background-image:url(https://image.scu.edu/image/upload/v1583791556/NEW%20homepage%20assets/Homepage-Banner_Desktop_Q40.jpg);">
+  <div class="container position-relative">
+    <h1 class="secNavSection">Invent the Life You Want To Lead</h1>
+  </div>
+</div>
+
+<div class="container secNavSection">
+  <div class="row justify-content-md-center secNavSection" style="padding-top: 20px; padding-bottom: 45px; margin-left: auto; margin-right: auto;">
+    <div class="col-md-auto secNavSection" style="text-align: center;"><a class="btn btn-primary secNavSecion" href="https://www.scu.edu/admission/undergraduate/choosing-scu/">Visit</a></div>
+    <div class="col-md-auto secNavSection" style="text-align: center;"><a class="btn btn-primary secNavSecion" href="https://www.scu.edu/admission/undergraduate/choosing-scu/">Apply</a></div>
+    <div class="col-md-auto secNavSection" style="text-align: center;"><a class="btn btn-primary secNavSecion" href="https://www.scu.edu/admission/undergraduate/choosing-scu/">Contact</a></div>
+  </div>
+</div>
+<!--END SECONDARY NAVIGATION SECTION -->
+
+
+<!--START LWC SECTION-->
+
+<div class="jumbotron block bg-white  text-dark has-dim-0 text-center mb-0" style="border-radius:0;background-color:#033b4c !important">
+    <div class="container">
+      <h1 class="block-title"><span class="text-white">Upcoming Events</span></h1>
+      <div class="row no-gutter">
+<div class="col-md-5 bg-white mt-3">
+<div class="lwcw" data-options="id=516&amp;format=html"><div class="bg-white text-dark mt-3 text-left h-100" style="position:relative;">
+    <img src="https://lwcal.scu.edu/live/image/gid/16/width/720/height/480/crop/1/src_region/0,0,907,960/4420_Gonzalez-Andrieu_Portrait.rev.1583787050.jpg" class="img-fluid mb-3" alt="">
+    <div class="" style="background-image:url('https://image.scu.edu/image/upload/v1583793049/NEW%20homepage%20assets/FeaturedStory-Banner.png'); height:98px; width:70px; position:absolute; top:0;left:0;">
+      <div class="mt-1 text-center text-light text-uppercase">Mar</div>
+      <div class="text-center text-white h3">31</div>
+    </div>
+    <h3><a href="https://lwcal.scu.edu/news-and-events/campus-calendar/#!view/event/event_id/180258">CANCELED: Faith, Politics, and the 2020 Election</a></h3>
+    <div>
+      <strong>6:00pm, St. Clare Room, Library and Learning Commons</strong>
+    </div>
+    <p>Join the Ignatian Center’s Bannan Forum for a discussion on faith and politics in the context of the 2020 election. &nbsp;This event will&nbsp;feature Professor Cecilia Gonzalez-Andrieu, Theological Studies, Loyola Marymount University and Professor Julie Rubio, Social Ethics, Jesuit School of Theology, and 2019-2020 Bannan Faculty Fellow.</p>
+  </div></div>
+</div>
+<div class="col-md-7">
+<div class="lwcw" data-options="id=517&amp;format=html"><div class="row no-gutter pl-md-3">
+<div class="text-left col-md-6 p-0 pt-3">
+    <div class="bg-white pt-0 px-3 pb-3 mr-md-3 h-100">
+      <div class="d-inline-block">
+        <div class="mb-1 bg-primary text-white text-uppercase font-weight-bold px-2 py-1">Mar 31</div>
+      </div>
+      <h4><a href="https://lwcal.scu.edu/news-and-events/campus-calendar/#!view/event/event_id/180258">CANCELED: Faith, Politics, and the 2020 Election</a></h4>
+      <div>
+        <strong>6:00pm, St. Clare Room, Library and Learning Commons</strong>
+      </div>
+      <p>Join the Ignatian Center’s Bannan Forum for a discussion on faith and politics in the context of the 2020 election. &nbsp;This event will&nbsp;feature Professor Cecilia Gonzalez-Andrieu, Theological Studies, Loyola Marymount University and Professor Julie Rubio, Social Ethics, Jesuit School of Theology, and 2019-2020 Bannan Faculty Fellow.</p>
+    </div>
+  </div>
+  <div class="text-left col-md-6 p-0 pt-3">
+    <div class="bg-white pt-0 px-3 pb-3 mr-md-3 h-100">
+      <div class="d-inline-block">
+        <div class="mb-1 bg-primary text-white text-uppercase font-weight-bold px-2 py-1">Apr 7</div>
+      </div>
+      <h4><a href="https://lwcal.scu.edu/news-and-events/campus-calendar/#!view/event/event_id/161034">Community Conversations: Building Bridges at SCU</a></h4>
+      <div>
+        <strong>12:15pm, Nobili Dining Room</strong>
+      </div>
+      <p>Join us on the first Tuesday of the month for an opportunity to come together as an SCU community and have candid conversations &amp; discussions</p>
+    </div>
+  </div>
+  <div class="text-left col-md-6 p-0 pt-3">
+    <div class="bg-white pt-0 px-3 pb-3 mr-md-3 h-100">
+      <div class="d-inline-block">
+        <div class="mb-1 bg-primary text-white text-uppercase font-weight-bold px-2 py-1">Apr 14</div>
+      </div>
+      <h4><a href="https://lwcal.scu.edu/news-and-events/campus-calendar/#!view/event/event_id/184580">Asking Algorithms (and Ourselves) the Right Questions</a></h4>
+      <div>
+        <strong>8:00pm, Music Recital Hall</strong>
+      </div>
+      <p>Join us for the 2020 Gerald and Sally DeNardo Lectureship featuring UC Berkeley’s Ziad Obermeyer, M.D.</p>
+    </div>
+  </div>
+  <div class="text-left col-md-6 p-0 pt-3">
+    <div class="bg-white pt-0 px-3 pb-3 mr-md-3 h-100">
+      <div class="d-inline-block">
+        <div class="mb-1 bg-primary text-white text-uppercase font-weight-bold px-2 py-1">May 2</div>
+      </div>
+      <h4><a href="https://lwcal.scu.edu/news-and-events/campus-calendar/#!view/event/event_id/182325">2nd Annual Santa Clara University Pow Wow</a></h4>
+      <div>
+        <strong>10:00am, Mission Gardens, SCU Campus (outside of St. Joseph’s Hall, Varsi Hall, Adobe Lodge)</strong>
+      </div>
+      <p>Come join the SCU Native American Coalition for Change (NACC) for their 2nd Annual Pow Wow at Santa Clara University</p>
+    </div>
+  </div>
+</div></div>
+</div>
+</div>
+<p>
+<script id="lw_lwcw" src="//lwcal.scu.edu/livewhale/theme/core/scripts/lwcw.js" type="text/javascript"></script>
+</p>
+      <a href="https://t4.scu.edu/terminalfour/preview/20/en/7742" class="btn btn-primary mt">See all events</a>
+    </div>
+  </div>
+
+<!--END LWC SECTION-->
+
+
+
+
