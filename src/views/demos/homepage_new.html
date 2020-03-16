@@ -50,6 +50,10 @@ layout: demo
       border-radius: 0;
     }
 
+    .card-block.card-body.pride-section {
+      padding: 0;
+    }
+
     .card-block.card-body.pride-section.border-right {
       border-right: 1px solid #b30738 !important;
     }
@@ -73,13 +77,57 @@ layout: demo
 
     a.btn.btn-primary.secNavSecion {
       height: 80px;
-      width: 300px;
+      width: 340px;
       font-size: 25px;
       padding: 15px;
-  }
-  .row.justify-content-md-center.secNavSection {
+    }
+
+    .row.justify-content-md-center.secNavSection {
         margin-top: -100px;
+        flex-wrap: nowrap;
+        padding-top: 20px;
+        padding-bottom: 45px;
+        margin-left: auto; 
+        margin-right: auto; 
       }
+
+    .column.gallery-sm {
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+    .column.gallery-sm img, 
+    .column.gallery-md img
+     {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+    .column.gallery-md img
+     {
+      height: 376px;
+    }
+    .col-md-8.text-left {
+      padding-left: 4px !important;
+    }
+    h1.block-title.text-primary.gallery.hidden {
+      display: none;
+    }
+    img.campaign {
+      height: 227px;
+    }
+    .col-md-auto.campaign {
+      background: #f4f2f0;
+      padding: 0;
+    }
+    .col.campaign {
+      background: #f4f2f0;
+      padding-left: 50px;
+      padding-top: 24px;
+    }
+
+
+
 
 
     @media only screen and (max-width: 992px)  
@@ -101,8 +149,47 @@ layout: demo
       .col-md-auto.secNavSection {
         padding: 10px;
       }
+      
+      .col-md-8.text-left,
+      .col-md-4.text-left {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .row.justify-content-md-center.secNavSection {
+          flex-wrap: wrap;
+          margin-left: 0;
+          margin-right: 0;
+      }
+
+    h1.block-title.text-primary.gallery.hidden {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    h1.block-title.text-primary.gallery {
+        display: none;
+      }
+  }
+
+  @media only screen and (max-width: 1200px)  
+    {
+        
+    .column.gallery-sm, 
+      .column.gallery-md {
+        flex: 50%;
+        max-width: 50%;
+      }
+
+    .column.gallery-md {
+        display: none;
+      }
 
     }
+
+
+
+
 
     
 </style>
@@ -139,9 +226,9 @@ in the <b>most innovative place on earth</b>: Silicon Valley.</h4>
 
 <!--START PRIDE SECTION-->
 <div class="container-fluid pride-section">
-  <div class="row mt-3 grid-group-grid-00 grid-group-grid-05">
+  <div class="row mt-3">
     
-    <div class="grid-item mb-3 grid-05 col-lg-3 col-sm-6">
+    <div class="grid-item mb-3 col-lg-3 col-sm-6">
       <div class="card pride-section h-100">
         <div class="card-block card-body pride-section border-right">
           <div class="card-text pride-section"><p class="statcard-number display-2" style="text-align: center; font-size: 3.4rem; color: #b30738; font-weight: 600;">94%</p>
@@ -151,7 +238,7 @@ in the <b>most innovative place on earth</b>: Silicon Valley.</h4>
       </div>
     </div>
 
-    <div class="grid-item mb-3 grid-05 col-lg-3 col-sm-6">
+    <div class="grid-item mb-3 col-lg-3 col-sm-6">
       <div class="card pride-section h-100">
         <div class="card-block card-body pride-section border-right">
           <div class="card-text pride-section"><p class="statcard-number display-2" style="text-align: center; font-size: 3.4rem; font-weight: 600;">11:1</p>
@@ -161,7 +248,7 @@ in the <b>most innovative place on earth</b>: Silicon Valley.</h4>
       </div>
     </div>
 
-    <div class="grid-item mb-3 grid-05 col-lg-3 col-sm-6">
+    <div class="grid-item mb-3 col-lg-3 col-sm-6">
       <div class="card pride-section h-100">
         <div class="card-block card-body pride-section border-right">
           <div class="card-text pride-section"><p class="statcard-number display-2" style="text-align: center; font-size: 3.4rem; color: #b30738; font-weight: 600;">85%</p>
@@ -170,7 +257,7 @@ in the <b>most innovative place on earth</b>: Silicon Valley.</h4>
         </div>
       </div>
 
-      <div class="grid-item mb-3 grid-05 col-lg-3 col-sm-6">
+      <div class="grid-item mb-3 col-lg-3 col-sm-6">
         <div class="card pride-section h-100">
           <div class="card-block card-body pride-section">
             <div class="card-text pride-section"><p class="statcard-number display-2" style="text-align: center; font-size: 3.4rem; font-weight: 600;">300</p>
@@ -185,7 +272,8 @@ in the <b>most innovative place on earth</b>: Silicon Valley.</h4>
 <!--END PRIDE SECTION-->
 
 
-<!--START SECONDARY NAVIGATION SECTION-->
+
+<!--START CALL TO ACTION-->
 <div class="jumbotron jumbotron-fluid hero has-dim-2 pb-0 pt-4" style="background-image:url(https://image.scu.edu/image/upload/v1583791556/NEW%20homepage%20assets/Homepage-Banner_Desktop_Q40.jpg);">
   <div class="container position-relative">
     <h1 class="secNavSection">Invent the Life You Want To Lead</h1>
@@ -193,13 +281,52 @@ in the <b>most innovative place on earth</b>: Silicon Valley.</h4>
 </div>
 
 <div class="container secNavSection">
-  <div class="row justify-content-md-center secNavSection" style="padding-top: 20px; padding-bottom: 45px; margin-left: auto; margin-right: auto;">
+  <div class="row justify-content-md-center secNavSection" style="padding-top: 20px; padding-bottom: 45px;">
     <div class="col-md-auto secNavSection" style="text-align: center;"><a class="btn btn-primary secNavSecion" href="https://www.scu.edu/admission/undergraduate/choosing-scu/">Visit</a></div>
     <div class="col-md-auto secNavSection" style="text-align: center;"><a class="btn btn-primary secNavSecion" href="https://www.scu.edu/admission/undergraduate/choosing-scu/">Apply</a></div>
     <div class="col-md-auto secNavSection" style="text-align: center;"><a class="btn btn-primary secNavSecion" href="https://www.scu.edu/admission/undergraduate/choosing-scu/">Contact</a></div>
   </div>
 </div>
-<!--END SECONDARY NAVIGATION SECTION -->
+<!--END CALL TO ACTION-->
+
+
+<!--START DISCOVER SCU-->
+<div class="jumbotron block bg-white text-center mb-0">
+  <div class="container">
+    <h1 class="block-title text-primary">Discover SCU</h1>
+    <div class="row mt-3 ">
+      <div class="col-md-9 text-left">
+        <div class="">
+          <img src="https://image.scu.edu/image/upload/v1584035907/NEW%20homepage%20assets/Jamie-FeaturedStory.jpg" class="w-100 h-auto" alt="featured story image" />
+          <h6 class="text-uppercase text-muted">Student Spotlight</h6>
+          <h3><a href="">Jamie Ferris: Mechanical Engineer, Philosopher and Runner</a></h3>
+          <p>Jamie Ferris ’19 doesn’t let many opportunities pass her by. As a Presidential Scholarship recipient, the honors program senior is double majoring in Mechanical engineering and philosophy.</p>
+        </div>
+        <hr />
+        <a href="/news/features" class="btn btn-primary">Read all stories</a>
+      </div>
+      <div class="col-md-3 text-left">
+        <div class="">
+          <img src="https://image.scu.edu/image/upload/v1584036048/NEW%20homepage%20assets/SeanReilley.jpg" class="img-fluid" alt="secondary image" />
+          <h6 class="text-normal text-muted text-uppercase">Student Spotlight</h6>
+          <p class="h5 mb-3"><a href="">Sean Reilly: Environmental Hero, Climber and Rhodes Scholar</a></p>
+        </div>
+        <div class="">
+          <img src="https://image.scu.edu/image/upload/t_LinkedIn/v1583861010/NEW%20homepage%20assets/SCU_Areli_Hernandez-20190528-jag-0546t.jpg" class="img-fluid" alt="secondary image" />
+          <h6 class="text-normal text-muted text-uppercase">Student Spotlight</h6>
+          <p class="h5 mb-3"><a href="">Areli Hernandez: First Generation Student, Fulbright Scholar and Dancer</a></p>
+        </div>
+        <div class="">
+          <img src="https://image.scu.edu/image/upload/v1583861286/NEW%20homepage%20assets/MaggiVanDorn.jpg" class="img-fluid" alt="secondary image" />
+          <h6 class="text-normal text-muted text-uppercase">Alumni</h6>
+          <p class="h5 mb-3"><a href="">Podcasting on Pain and Progress</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--END DISCOVER SCU-->
 
 
 <!--START LWC SECTION-->
@@ -265,18 +392,18 @@ in the <b>most innovative place on earth</b>: Silicon Valley.</h4>
       <div class="d-inline-block">
         <div class="mb-1 bg-primary text-white text-uppercase font-weight-bold px-2 py-1">May 2</div>
       </div>
-      <h4><a href="https://lwcal.scu.edu/news-and-events/campus-calendar/#!view/event/event_id/182325">2nd Annual Santa Clara University Pow Wow</a></h4>
-      <div>
+      <h4><a href="https://lwcal.scu.edu/news-and-events/campus-calendar/#!view/event/event_id/182325">Annual Santa Clara University Pow Wow</a></h4>
+      <div >
         <strong>10:00am, Mission Gardens, SCU Campus (outside of St. Joseph’s Hall, Varsi Hall, Adobe Lodge)</strong>
       </div>
-      <p>Come join the SCU Native American Coalition for Change (NACC) for their 2nd Annual Pow Wow at Santa Clara University</p>
+      <p class="collapse" id="collapseExample" aria-expanded="false">Come join the SCU Native American Coalition for Change (NACC) for their 2nd Annual Pow Wow at Santa Clara University</p><a role="button" class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     </div>
   </div>
 </div></div>
 </div>
 </div>
 <p>
-<script id="lw_lwcw" src="//lwcal.scu.edu/livewhale/theme/core/scripts/lwcw.js" type="text/javascript"></script>
+<!--<script id="lw_lwcw" src="//lwcal.scu.edu/livewhale/theme/core/scripts/lwcw.js" type="text/javascript"></script>-->
 </p>
       <a href="https://t4.scu.edu/terminalfour/preview/20/en/7742" class="btn btn-primary mt">See all events</a>
     </div>
@@ -284,88 +411,80 @@ in the <b>most innovative place on earth</b>: Silicon Valley.</h4>
 
 <!--END LWC SECTION-->
 
+<!--START WHY CHOOSE SCU SECTION-->
 
-<style>
-  .gallery {
--webkit-column-count: 3;
--moz-column-count: 3;
-column-count: 3;
--webkit-column-width: 33%;
--moz-column-width: 33%;
-column-width: 33%; }
-.gallery .pics {
--webkit-transition: all 350ms ease;
-transition: all 350ms ease; }
-.gallery .animation {
--webkit-transform: scale(1);
--ms-transform: scale(1);
-transform: scale(1); }
+<div class="jumbotron block bg-white text-center mb-0">
 
-@media (max-width: 450px) {
-.gallery {
--webkit-column-count: 1;
--moz-column-count: 1;
-column-count: 1;
--webkit-column-width: 100%;
--moz-column-width: 100%;
-column-width: 100%;
-}
-}
-
-</style>
-<!-- Grid row -->
-<div class="gallery" id="gallery">
-
-  <!-- Grid column -->
-  <div class="mb-3">
-    <img class="img-fluid" src="https://image.scu.edu/image/upload/v1584036155/NEW%20homepage%20assets/ENG.jpg">
+ <div class="container">
+  <div class="row mt-3 hidden">
+    <h1 class="block-title text-primary gallery hidden">Why Choose SCU</h1>
   </div>
-  <!-- Grid column -->
-
-  <!-- Grid column -->
-  <div class="mb-3">
-    <div class="col-sm-6">TEXT HERE</div>
+  <div class="row mt-3 ">
+    <div class="col-md-8 text-left">
+      <div class="column gallery-img">
+        <img src="https://image.scu.edu/image/upload/v1584036155/NEW%20homepage%20assets/ENG.jpg" class="w-100 h-auto" />
+      </div>
+    </div>
+    <div class="col-md-4 text-left">
+      <div class="column gallery-text">
+       <h1 class="block-title text-primary gallery">Why Choose SCU</h1>
+       <p>People of all backgrounds flourish here. One thing they have in common? They want to make a difference. Santa Clara students are driven to build a better, kinder, more humane, and sustainable planet. And everything they need is right here. With our Silicon Valley location, dedicated community of scholars, and opportunities inside and outside of the classroom, we teach you to think critically, take risks, and take charge.</p>
+       <p><a href="" class="btn btn-primary">Learn More</a></p>
+      </div>
+    </div>
+    </div>
   </div>
-  <!-- Grid column -->
-</div>
+<div class="container">  
+<div class="row gallery">
+  <div class="column gallery-sm">
+    <img src="https://image.scu.edu/image/upload/v1584306390/NEW%20homepage%20assets/basketball-small.jpg">
+    <img src="https://image.scu.edu/image/upload/v1584306390/NEW%20homepage%20assets/campus-small.jpg">
+  </div>
 
-<!-- Grid row -->
-<div class="gallery" id="gallery">
+  <div class="column gallery-md">
+    <img src="https://image.scu.edu/image/upload/v1583793456/NEW%20homepage%20assets/SCU-Commencement-20190614-jgensheimer-5523.jpg">
+  </div>
   
-
-
-  <!-- Grid column -->
-  <div class="mb-3">
-    <img class="img-fluid" src="https://image.scu.edu/image/upload/v1584036816/NEW%20homepage%20assets/Kellen_s_Picks_Campus_Beauty_Shots_JL160917_4111_CampusBeauty_0259-Original.jpg">
+  <div class="column gallery-sm">
+    <img src="https://image.scu.edu/image/upload/v1584306390/NEW%20homepage%20assets/dancers-small.jpg">
+    <img src="https://image.scu.edu/image/upload/v1584306390/NEW%20homepage%20assets/cultural-small.jpg">
   </div>
-  <!-- Grid column -->
-
-    <!-- Grid column -->
-  <div class="mb-3 ">
-    <img class="img-fluid" src="https://image.scu.edu/image/upload/v1583793456/NEW%20homepage%20assets/SCU-Commencement-20190614-jgensheimer-5523.jpg" alt="Card image cap">
-  </div>
-  <!-- Grid column -->
-
-  <!-- Grid column -->
-  <div class="mb-3">
-    <img class="img-fluid" src="https://image.scu.edu/image/upload/v1584036244/NEW%20homepage%20assets/190223_Martin_vsSanFrancisco_2377.jpg">
-  </div>
-  <!-- Grid column -->
-
-
-  <!-- Grid column -->
-  <div class="mb-3">
-    <img class="img-fluid" src="https://image.scu.edu/image/upload/v1584036704/NEW%20homepage%20assets/191008_LE_Birthday_Party_0511.jpg">
-  </div>
-  <!-- Grid column -->
-
-    <!-- Grid column -->
-  <div class="mb-3">
-    <img class="img-fluid" src="https://image.scu.edu/image/upload/v1584036210/NEW%20homepage%20assets/Gallery-5-Dancers-2883_338-2_1.jpg">
-  </div>
-  <!-- Grid column -->
+</div>
+</div>
 
 </div>
-<!-- Grid row -->
+<!--END WHY CHOOSE SCU SECTION-->
+
+<!--START CAMPAIGN BANNER -->
+
+  <div class="container-fluid campaign">  
+    <div class="row campaign">
+      <div class="col campaign"><h1 class="campaign">We’re on a Mission</h1>
+        <p class="campaign">Support SCU into the next stage of its storied history and inspire the next generation of ethical leaders.</p><a href="" class="btn btn-primary">Join Us</a></div>
+      <div class="col-md-auto campaign"><img class="campaign" src="https://image.scu.edu/image/upload/v1584376803/NEW%20homepage%20assets/CampaignBanner_desktop.png"></div>
+
+    </div>
+
+    </div>
+  </div>
+
+<!--END CAMPAIGN BANNER -->
+
+<!-- TAG BBOARD -->
 
 
+<div class="jumbotron block bg-white  text-dark has-dim-0 text-center mb-0" style="border-radius:0;background-color:#033b4c !important">
+  <div class="container ">
+    <div class="  text-center "><h1>Get Connected</h1></div>
+    <div id="d.en.518929"><!-- Embed code item --></div>
+    <div class="tagboard-embed" tgb-embed-id="3735"></div><script src="https://static.tagboard.com/embed/assets/js/embed.js"></script>
+    <div class="container text-center">
+      <div class="row" style="margin-left: auto;margin-right: auto;width: 306px;">
+        <div class="col col-sm-auto social"><a class="facebook" href="https://www.facebook.com/scuadmission"><span class="demo-icon icon-facebook-squared"></span><span class="sr-only">Follow us on Facebook</span></a></div>
+        <div class="col col-sm-auto social"><a class="twitter" href="https://twitter.com/SCUAdmission"><span class="demo-icon icon-twitter"></span><span class="sr-only">Follow us on Twitter</span></a></div>
+        <div class="col col-sm-auto social"><a class="instagram" href="https://www.instagram.com/SCUAdmission"><span class="fab fa-instagram"></span><span class="sr-only">Follow us on Instagram</span></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--END TAGBOARD-->
