@@ -1,0 +1,1007 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  
+  <title>Documentation | Santa Clara University Design System</title>
+  
+  <!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" async></script>
+  <![endif]-->
+  
+  <!-- fabricator styles -->
+  <link rel="stylesheet" href="/public/fabricator.css" />
+  <!-- /fabricator styles -->
+  
+  <!-- external styles -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" />
+  <!-- /external styles -->
+  
+  <!-- toolkit styles -->
+  <link rel="stylesheet" href="/public/scu.css" />
+  <!-- /toolkit styles -->
+  
+  <!-- toolkit scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" crossorigin="anonymous"></script>
+  <script src="/public/scu.js"></script>
+  <!-- /toolkit scripts -->
+
+</head>
+<body>
+
+  <!-- fabricator icons -->
+  <svg style="display: none;">
+    <symbol id="f-icon-code" viewBox="0 0 512 512">
+      <path
+        d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+    </symbol>
+    <symbol id="f-icon-notes" viewBox="0 0 512 512">
+      <path
+        d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+    </symbol>
+    <symbol id="f-icon-labels" viewBox="0 0 512 512">
+      <path
+        d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+    </symbol>
+    <symbol id="f-icon-menu" viewBox="0 0 512 512">
+      <path
+        d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+    </symbol>
+    <symbol id="f-icon-settings" viewBox="0 0 512 512">
+      <path
+        d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+    </symbol>
+  </svg>
+  <!-- /fabricator icons -->
+  <!-- fabricator menu -->
+  <div class="f-menu">
+    <div class="f-controls">
+      <div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+        <svg>
+          <use xlink:href="#f-icon-labels"/>
+        </svg>
+      </div>
+      <div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg>
+          <use xlink:href="#f-icon-notes"/>
+        </svg>
+      </div>
+      <div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+        <svg>
+          <use xlink:href="#f-icon-code"/>
+        </svg>
+      </div>
+    </div>
+    <h2 class="mb-0"><a href="/" class="f-menu__heading text-black">SCU</a></h2>
+    <h3 class="text-sans-light f-menu__heading text-primary mb-0" style="font-size: 1rem">Design System</h3>
+    <p><a class="highlighter-rouge f-menu__heading" href="/docs.html#what's-new">2.4.1</a></p>
+    <hr>
+    <ul>
+  
+      <li>
+        <a href="index.html" class="f-menu__heading">Overview</a>
+      </li>
+  
+      <li>
+        <a href="/style-guide.html" class="f-menu__heading">Style Guide</a>
+        <ul>
+          <li>
+            <a href="/style-guide.html#colors">Colors</a>
+          </li>
+          <li>
+            <a href="/style-guide.html#spacing">Spacing</a>
+          </li>
+          <li>
+            <a href="/style-guide.html#typography">Typography</a>
+          </li>
+          <li>
+            <a href="/style-guide.html#utilities">Utilities</a>
+          </li>
+        </ul>
+      </li>
+  
+      <li>
+        <a href="/content-types.html" class="f-menu__heading">Content Types</a>
+        <ul>
+          <li>
+            <a href="content-types.html#accordion">Accordion</a>
+          </li>
+          <li>
+            <a href="content-types.html#agenda">Agenda</a>
+          </li>
+          <li>
+            <a href="content-types.html#announcement">Announcement</a>
+          </li>
+          <li>
+            <a href="content-types.html#breadcrumbs">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="content-types.html#button">Button</a>
+          </li>
+          <li>
+            <a href="content-types.html#card">Card</a>
+          </li>
+          <li>
+            <a href="content-types.html#carousel">Carousel</a>
+          </li>
+          <li>
+            <a href="content-types.html#comparison-table">Comparison Table</a>
+          </li>
+          <li>
+            <a href="content-types.html#department-switcher">Department Switcher</a>
+          </li>
+          <li>
+            <a href="content-types.html#footer">Footer</a>
+          </li>
+          <li>
+            <a href="content-types.html#header">Header</a>
+          </li>
+          <li>
+            <a href="content-types.html#header-new">Header New</a>
+          </li>
+          <li>
+            <a href="content-types.html#highlight">Highlight</a>
+          </li>
+          <li>
+            <a href="content-types.html#infographic">Infographic</a>
+          </li>
+          <li>
+            <a href="content-types.html#jumbotron">Jumbotron</a>
+          </li>
+          <li>
+            <a href="content-types.html#list-item">List Item</a>
+          </li>
+          <li>
+            <a href="content-types.html#lists">Lists</a>
+          </li>
+          <li>
+            <a href="content-types.html#pagination">Pagination</a>
+          </li>
+          <li>
+            <a href="content-types.html#person-spotlight">Person Spotlight</a>
+          </li>
+          <li>
+            <a href="content-types.html#pull-quote">Pull Quote</a>
+          </li>
+          <li>
+            <a href="content-types.html#sidebar">Sidebar</a>
+          </li>
+          <li>
+            <a href="content-types.html#site-pointer">Site Pointer</a>
+          </li>
+          <li>
+            <a href="content-types.html#social-icons">Social Icons</a>
+          </li>
+          <li>
+            <a href="content-types.html#statcards">Statcards</a>
+          </li>
+          <li>
+            <a href="content-types.html#windowpane">Windowpane</a>
+          </li>
+        </ul>
+      </li>
+  
+      <li>
+        <a href="demos.html" class="f-menu__heading">Demos</a>
+        <ul>
+          <li>
+            <a href="demos/core-top-level.html">Core Top Level</a>
+          </li>
+          <li>
+            <a href="demos/cover-image-layout.html">Cover Image Layout</a>
+          </li>
+          <li>
+            <a href="demos/cover-image-layout2.html">Cover Image Layout2</a>
+          </li>
+          <li>
+            <a href="demos/department-switcher.html">Department Switcher</a>
+          </li>
+          <li>
+            <a href="demos/header-image.html">Header Image</a>
+          </li>
+          <li>
+            <a href="demos/homepage_new.html">Homepage New</a>
+          </li>
+          <li>
+            <a href="demos/homepage.html">Homepage</a>
+          </li>
+          <li>
+            <a href="demos/sidebar-breakout-landing.html">Sidebar Breakout Landing</a>
+          </li>
+          <li>
+            <a href="demos/story-cover-image.html">Story Cover Image</a>
+          </li>
+          <li>
+            <a href="demos/story.html">Story</a>
+          </li>
+          <li>
+            <a href="demos/tertiary.html">Tertiary</a>
+          </li>
+          <li>
+            <a href="demos/test.html">Test</a>
+          </li>
+          <li>
+            <a href="demos/the-trust-project.html">The Trust Project</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="emails.html" class="f-menu__heading">Emails</a>
+        <ul>
+          <li>
+            <a href="emails/email-solid.html">Email Solid</a>
+          </li>
+        </ul>
+      </li>
+  
+      <li>
+        <a href="docs.html" class="f-menu__heading">Docs</a>
+        <ul>
+          <li>
+            <a href="docs.html#what&#x27;s-new">What&#x27;s New</a>
+          </li>
+          <li>
+            <a href="docs.html#accessibility">Accessibility</a>
+          </li>
+          <li>
+            <a href="docs.html#cloud-fonts">Cloud Fonts</a>
+          </li>
+          <li>
+            <a href="docs.html#getting-started">Getting Started</a>
+          </li>
+          <li>
+            <a href="docs.html#header-and-footer-guidelines">Header And Footer Guidelines</a>
+          </li>
+          <li>
+            <a href="docs.html#landing-pages">Landing Pages</a>
+          </li>
+          <li>
+            <a href="docs.html#print-style-guide">Print Style Guide</a>
+          </li>
+          <li>
+            <a href="docs.html#social-icons">Social Icons</a>
+          </li>
+        </ul>
+      </li>
+  
+    </ul>
+  </div>
+  <!-- /fabricator menu -->
+
+  <div class="f-container">
+
+    <div class="f-control-bar">
+      <div class="f-control f-menu-toggle">
+        <svg>
+          <use xlink:href="#f-icon-menu"/>
+        </svg>
+      </div>
+    </div>
+
+    
+<h1 data-f-toggle="labels">Docs</h1>
+
+
+<div class="f-item-group">
+  <h2 id="what&#x27;s-new"><a href="#what&#x27;s-new">What&#x27;s New</a></h2>
+  <p><code>v2.4.0</code></p>
+<p>This update brings fixes to the sidebar navigation, a new emergency banner, and other enhancements.</p>
+<ul>
+<li><strong>Sidebar</strong>
+<ul>
+<li>Further improved sidebar display on mobile.</li>
+<li>Removed unused styles.</li>
+<li>Demos append &quot;Sections&quot; to the title of the section to improve usability, but the inclusion of this text is optional.</li>
+</ul>
+</li>
+<li><strong>Navigation</strong>
+<ul>
+<li>Cleaned up iconography and menu buttons on mobile.</li>
+</ul>
+</li>
+<li><strong>Accessibility</strong>
+<ul>
+<li>Added ARIA landmarks for navigation and semantic elements for content.</li>
+</ul>
+</li>
+<li><strong>Jumbotron</strong>
+<ul>
+<li>Fixed an issue where background images would repeat.</li>
+</ul>
+</li>
+<li><strong>Emergency Banner</strong>
+<ul>
+<li>Added an emergency banner to show critical information on the site.</li>
+</ul>
+</li>
+</ul>
+<p><code>v2.3.0</code></p>
+<ul>
+<li><strong>Dependency updates</strong>
+<ul>
+<li>Bootstrap updated to 4.3.1. See the <a href="https://blog.getbootstrap.com/2019/02/11/bootstrap-4-3-0/">Release Notes</a>.</li>
+<li>Fabricator updated to latest version.</li>
+</ul>
+</li>
+<li><strong>CSS</strong>
+<ul>
+<li>Enabled Responsive Text globally, fixing a number of text issues within content types.</li>
+<li>Removed partials and modules that are not currently used.</li>
+</ul>
+</li>
+<li><strong>Jumbotron</strong>
+<ul>
+<li>Removed border radius from Jumbotrons by default.</li>
+</ul>
+</li>
+<li><strong>Sidebar</strong>
+<ul>
+<li>Improved design on small screens.</li>
+<li>Added a demo for a sidebar that does not collapse.</li>
+</ul>
+</li>
+<li><strong>Documentation</strong>
+<ul>
+<li>Added documentation for Social Icons.</li>
+<li>Added guidelines for Video Jumbotrons.</li>
+</ul>
+</li>
+</ul>
+<p><code>v2.2.0</code></p>
+<p>This update brings some minor changes to content types and tooling:</p>
+<ul>
+<li><strong>Blocks</strong>
+<ul>
+<li>Block elements had some redundancy with the Jumbotron element, so blocks have been deprecated and Jumbotrons should be used instead.</li>
+</ul>
+</li>
+<li><strong>Jumbotrons</strong>
+<ul>
+<li>Added a video jumbotron option.</li>
+<li>Added a block example for Jumbotron.</li>
+</ul>
+</li>
+<li><strong>Homepage</strong>
+<ul>
+<li>Adjusted the Homepage styling to better match 1.x.</li>
+</ul>
+</li>
+<li><strong>Tooling and Assets</strong>
+<ul>
+<li>JavaScript bundle is now minified.</li>
+</ul>
+</li>
+</ul>
+<p><code>v2.1.2</code></p>
+<p>This update includes a variety of patches and improvements to content types, and refines typography across the site with the use of <strong>subpixel rendering</strong>.</p>
+<ul>
+<li><strong>Accordion</strong>
+<ul>
+<li>On extra-long accordion titles, the text didn't line up quite right with the chevron.</li>
+</ul>
+</li>
+<li><strong>Carousel</strong>
+<ul>
+<li>Increased color contrast on Carousel controls.</li>
+<li>Darkened the caption for better readability.</li>
+</ul>
+</li>
+<li><strong>Person Spotlight</strong>
+<ul>
+<li>New Variant: Compact
+<ul>
+<li>Introduced a slightly smaller Person Spotlight variantion.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Pull Quote</strong>
+<ul>
+<li>New Variant: Compact
+<ul>
+<li>Addressed the issue of reliance on a &quot;profile&quot; photo of the speaker. Now we have a new version that is just a large quoted text.</li>
+</ul>
+</li>
+<li>Spacing and typography changes that help Pull Quote respond better to medium-sized devices, not blow up to huge sizes on desktop devices, and generally weigh better visually.</li>
+</ul>
+</li>
+<li><strong>Sidebar</strong>
+<ul>
+<li>On mobile, the sidebar menu is contained inside a dropdown made out of the top-level nav item. You can't actually click a link to go to that top-level section. We amended this by adding a link to the top-level item inside the menu, visible on mobile only. It's separated by a horizontal rule from the subsection links.</li>
+</ul>
+</li>
+</ul>
+<p><code>v2.1.1</code></p>
+<p>This update reintroduces the legacy Header design, carousel enhancements, and various bugfixes.</p>
+<ul>
+<li>Reverted the removal of Trajan from the typestack.</li>
+<li>Refactored and refreshed the legacy header design to use Bootstrap 4 styles.</li>
+<li>Introduces thumbnail carousel view and various fixes.</li>
+<li>Dependency bump of Boostrap to 4.1.2.</li>
+</ul>
+<h5>Important Usage Notes</h5>
+<p>The redesigned header has been demoted and will be included in a future release. It is included for preview, testing, and feedback use only, and is not to be used at the time of this release.</p>
+<p><code>v2.1.0</code></p>
+<p>An incremental update with minor changes and bugfixes.</p>
+<ul>
+<li>Improved search behavior</li>
+<li><strong>Developers:</strong> Updated NPM dependencies. CSS/JS assets are now in <code>/public</code>, and <a href="https://github.com/santaclarauniversity/scu-design-system/wiki/Webpack-4-Migration">Webpack has been migrated to 4.0</a>.</li>
+</ul>
+<p><code>v2.0.4</code></p>
+<p>An incremental update with minor changes and bugfixes.</p>
+<ul>
+<li>Upgraded to <a href="https://blog.getbootstrap.com/2018/04/30/bootstrap-4-1-1/">Bootstrap 4.1.1</a></li>
+<li>Improved Search</li>
+<li>Updated <a href="/demos/homepage.html"><em>Can We, Should We, Will We?</em></a></li>
+</ul>
+<p><code>v2.0.3</code></p>
+<p>An incremental update with minor changes and bugfixes.</p>
+<ul>
+<li>Fixes inconsistent Person Spotlight styles.</li>
+<li><strong><a href="content-types.html#department-switcher">Department Switcher</a></strong>
+<ul>
+<li>Now a content type for easier use within prototypes.</li>
+<li>Fixed the markup on the <a href="/demos/department-switcher.html">Department Switcher demo page</a>.</li>
+</ul>
+</li>
+<li>Updated to <a href="https://blog.getbootstrap.com/2018/04/09/bootstrap-4-1/">Bootstrap 4.1</a>.</li>
+<li>Carousel display fixes.</li>
+</ul>
+<p><code>v2.0.2</code></p>
+<p>An incremental update with small changes limited to some content types, including the header.</p>
+<ul>
+<li><strong><a href="content-types.html#agenda">Agenda</a></strong>
+<ul>
+<li>Completely redesigned content type with new styles and mobile compatibility</li>
+<li>Useful for a sequence of events, such as a day plan</li>
+</ul>
+</li>
+<li><strong><a href="content-types.html#carousel">Carousel</a></strong>
+<ul>
+<li>Updated markup to latest Bootstrap</li>
+<li>Fixed slide indicators not showing up on demos</li>
+</ul>
+</li>
+<li><strong><a href="content-types.html#header">Header</a></strong>
+<ul>
+<li>Changed the dividing bar (|) from a link to normal text</li>
+<li><strong>Search</strong>
+<ul>
+<li>Fixed some input display issues caused by remotely updated Google Search code</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><a href="content-types.html#sidebar">Sidebar</a></strong>
+<ul>
+<li>Various bug fixes</li>
+</ul>
+</li>
+</ul>
+<p><code>v2.0.1</code></p>
+<p>Welcome to the redesigned SCU Design System!</p>
+<ul>
+<li><strong>Style Guide</strong>
+<ul>
+<li>Restructured the <a href="/style-guide.html">Style Guide</a>. Fixed broken code examples.</li>
+<li>Redesigned the landing page and navigation.</li>
+</ul>
+</li>
+<li><strong><a href="content-types.html#accordion">Accordion</a></strong>
+<ul>
+<li>Restyled BS4 accordion (previously marked for deprecation) and introduced a new/improved accordion style</li>
+<li>Card-based accordions (per BS4) are still availabile via <strong>Accordion Cards</strong>.</li>
+</ul>
+</li>
+<li><strong><a href="content-types.html#lists">Lists</a></strong>
+<ul>
+<li>A new content type for lists with an ordered (numeric) set of items.</li>
+</ul>
+</li>
+<li><strong><a href="content-types.html#sidebar">Sidebar</a></strong>
+<ul>
+<li>A new, lightweight sidebar design has been adopted that will allow for greater responsive behavior.</li>
+<li>Adjustments to Sidebar behavior.</li>
+</ul>
+</li>
+<li><strong><a href="/demos.html">Templates and Demos</a></strong>
+<ul>
+<li>Expanded number of demonstration layouts and updated their content types.</li>
+<li>Removed <em>Kitchen Sink</em> demo, which will return in a future release.</li>
+<li><em>Experimental:</em>
+<ul>
+<li>New story display options: <a href="/demos/story.html">Story</a> and <a href="/demos/story-cover-image.html">Story (Cover Image)</a>.</li>
+<li><a href="/demos/sidebar-breakout-landing.html">Sidebar Breakout</a>, a proof-of-concept layout that mixes sidebar layout with landing page layouts.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Dropdown Menus</strong>
+<ul>
+<li>Modified the default BS4 dropdown behavior.</li>
+<li>Added support for all <code>.navbar</code>s to have dropdown menu items</li>
+<li>Links with dropdown send user to page on click</li>
+<li>Dropdown pops out on hover over these links</li>
+</ul>
+</li>
+</ul>
+<p><code>v2.0.0</code></p>
+<ul>
+<li>Bootstrap dependency bump to BS4 stable.</li>
+</ul>
+<p><code>v2.0.0-beta.3</code></p>
+<ul>
+<li>Bootstrap dependency bump to BS4 Beta 3.</li>
+</ul>
+<p><code>v2.0.0-beta.2</code></p>
+<ul>
+<li>Bootstrap dependency bump to BS4 Beta 2.</li>
+<li>Updated grayscale palette to use a swatch.</li>
+<li>Further improved the search experience in the new header.</li>
+<li>Toolkit optimizations for developers.</li>
+</ul>
+<p><code>v2.0.0-beta</code></p>
+<p>Release Highlights:</p>
+<ul>
+<li>Migrated from Bootstrap 3 to Bootstrap 4.</li>
+<li>Audited content types.</li>
+<li>Better CSS/JS performance.</li>
+<li>Quicker toolkit run/refresh time.</li>
+<li>New templates and documentation.</li>
+<li>Deprecated Trajan and removed from font stack.</li>
+</ul>
+<h3>Bootstrap 4</h3>
+<ul>
+<li><a href="https://v4-alpha.getbootstrap.com/getting-started/introduction/">Upgraded to Bootstrap 4</a></li>
+</ul>
+<h3>Content Type Changes</h3>
+<ul>
+<li><strong>New Content Types</strong>
+<ul>
+<li><a href="/content-types.html#comparison-table">Comparison Table</a></li>
+</ul>
+</li>
+<li><strong>General Content Type Changes</strong>
+<ul>
+<li>Updated Content Types for Bootstrap 4.</li>
+<li>One column/two column &quot;module&quot; designations are deprecated in favor of columns. See: Site Pointer, Infographics, List Items, more.</li>
+</ul>
+</li>
+<li><strong>Agenda</strong>
+<ul>
+<li>Simple responsive table (built with Bootstrap grid) which is intended for scheduling events that have several parts.</li>
+</ul>
+</li>
+<li><strong>Block</strong>
+<ul>
+<li>Full-width block content featuring a button and the option for an interactive background (e.g. a map)</li>
+</ul>
+</li>
+<li><strong>Buttons</strong>
+<ul>
+<li>Large &quot;stroked&quot; style is now deprecated.</li>
+<li>Maroon buttons are now deprecated (aliased to <code>brand-primary</code> to aid in the transition).</li>
+<li>Added new standard and outline buttons.</li>
+<li>Increased the options for the the existing SCU custom buttons.</li>
+<li>Added <code>.btn-shadow</code> class for a drop shadow effect on buttons.</li>
+</ul>
+</li>
+<li><strong>Jumbotron (formerly Hero)</strong>
+<ul>
+<li>Renamed Jumbotron and uses BS4-standard code.</li>
+<li>Transitioned <code>.high-contrast</code> to <code>.has-dim</code> for better accessibility.</li>
+<li>Added background options for Jumbotrons, including <code>.bg-primary</code> and others.</li>
+</ul>
+</li>
+<li><strong>Image Gallery</strong>
+<ul>
+<li>Renamed Carousel using BS4-shipped code.</li>
+<li>Otherwise unchanged in functionality, but has a slightly more modern look.</li>
+</ul>
+</li>
+<li><strong>Image Grid</strong>
+<ul>
+<li>Removed in favor of gutter-less grids.</li>
+</ul>
+</li>
+<li><strong>Infographics</strong>
+<ul>
+<li>Deprecated prix/window style.</li>
+<li>Created new styles based on BS badges.</li>
+</ul>
+</li>
+<li><strong>Panels</strong>
+<ul>
+<li>Panels are now deprecated in favor of Cards.</li>
+</ul>
+</li>
+<li><strong>Sidebar</strong>
+<ul>
+<li>A new, lightweight sidebar design has been adopted that will allow for greater responsive behavior.</li>
+</ul>
+</li>
+<li><strong>Site Pointer</strong>
+<ul>
+<li>New secondary styles for site pointers.</li>
+</ul>
+</li>
+<li><strong>Person Spotlight</strong>
+<ul>
+<li>Redesigned Person Spotlight to be more universal; removes overlay and introduces left/right card style.</li>
+<li>Removed &quot;compact&quot; version of person spotlight, as it utilizes media list code.</li>
+</ul>
+</li>
+<li><strong>Pull Quotes</strong>
+<ul>
+<li>Redesigned to be a more attention-grabbing type with space for a very large photo and quote.</li>
+</ul>
+</li>
+<li><strong>Highlight (formerly Ribbons)</strong>
+<ul>
+<li>Refactored ribbon code to work correctly across all browsers; renamed to Highlight. See <a href="https://codepen.io/hotmeteor/pen/ibvJs">Wrapping Highlighted Text.</a></li>
+</ul>
+</li>
+<li><strong>Windowpane</strong>
+<ul>
+<li>A new UI interaction has been added to Windowpanes. Using the <code>.has-overlay</code> class, an overlay will appear when hovering over a windowpane. This was often requested as a way to add more information about an item without going to a page. The overlay must have a call-to-action. This call to action will show on mobile devices where <code>:hover</code> states are not shown. The <code>list-group</code> option, though still supported, is not shown in the demo. These items would often overflow the Windowpane container.</li>
+</ul>
+</li>
+</ul>
+<h3>Templates and Documentation</h3>
+<ul>
+<li><strong>Typography</strong>
+<ul>
+<li>Reset to Bootstrap standards, most notably, made headers less opinionated (no color or transform), headers now use a true bold font (used a browser-filled Trade Gothic previously)</li>
+<li>Added <code>.legacy-headers</code> class for matching the pre-2.0 header styles. <a href="/style-guide.html#utilities">More information</a>.</li>
+</ul>
+</li>
+<li><strong>Templates</strong>
+<ul>
+<li>Added new footer system with flexibility for major-unit branding.</li>
+<li>New <a href="/demos/department-switcher.html">Department Switcher</a> using <code>select2</code>.</li>
+<li>New <a href="content-types.html#header">headers</a> and <a href="content-types.html#footer">footers</a>.</li>
+<li>New email template (Solid).</li>
+<li>New <a href="/demos/cover-image-layout.html">Cover Image</a> layout.</li>
+</ul>
+</li>
+<li><strong>Documentation</strong>
+<ul>
+<li>Added <a href="docs.html#accessibility">Accessibility</a> guidelines.</li>
+<li>Added <a href="/docs.html#header-and-footer-guidelines">Header and Footer Guidelines</a>.</li>
+</ul>
+</li>
+<li><strong>Landing Pages</strong>
+<ul>
+<li>Landing page templates have been removed from the public build but are still available in local code branches; the licenses for these templates do not specify if they can be made available within our toolkit and have been removed.</li>
+<li>A number of prototypes have been removed from the Toolkit.</li>
+</ul>
+</li>
+</ul>
+<h3>Fabricator and Build</h3>
+<ul>
+<li>
+<p><code>./scss/</code> contains Sass files, which are identical to Less in purpose but with (<em>very</em>) slightly different syntax/execution in general</p>
+<ul>
+<li><code>./scss/landing/</code>
+<ul>
+<li>Contains landing page styles; these are compiled to their respective files (only <code>landing-*.scss</code>)</li>
+</ul>
+</li>
+<li><code>./scss/partials/</code>
+<ul>
+<li>All of our (SCU) partial styles, just like they were in the original toolkit except Sass now</li>
+</ul>
+</li>
+<li><code>./scss/_components.scss</code>
+<ul>
+<li>Bootstrap components we use on the site</li>
+</ul>
+</li>
+<li><code>./scss/toolkit.scss</code>
+<ul>
+<li>Sass entry point; this is the file that gets compiled into <code>toolkit.css</code>.  It &quot;loads&quot; Bootstrap into itself, then
+applies our partials on top, which lets us use Bootstrap but with our customizations (notably, color, typography, etc.)</li>
+</ul>
+</li>
+<li><code>./scss/variables.scss</code>
+<ul>
+<li>Our Bootstrap variable overrides</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>./js/</code> contains</p>
+<ul>
+<li><code>./js/compiled-bundle.js</code>
+<ul>
+<li>Our custom JS output by Webpack to include Bootstrap, jQuery, etc. code which it depends on</li>
+</ul>
+</li>
+<li><code>./js/fabricator.js</code>
+<ul>
+<li>Fabricator's Webpack output JS</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>HTML changes (views, etc.)</p>
+<ul>
+<li>Various changes to demos to make them work properly on Bootstrap 4</li>
+<li>Upgraded landing pages to their Bootstrap 4 versions</li>
+<li>Moved style guide to <code>./src/views/style-guide.html</code>, which sources from <code>./src/materials/style-guide/*.html</code>; this resolves
+a navigation issue caused by the style guide's original format</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>.eslintrc.json</code>
+<ul>
+<li>Moved from <code>.eslintrc</code> to help resolve strange issues with ESLint not working on some hosts</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>gulpfile.js</code>
+<ul>
+<li>Minimized complicated/large <code>config</code> JSON structure</li>
+<li>Removed <code>bower</code> tasks.  <code>bower</code> scripts/styles are now loaded directly <em>(removed from gulpfile)</em>
+<ul>
+<li>Did the same for Bootstrap <code>.scss</code></li>
+</ul>
+</li>
+<li>Now utilizing <code>run-sequence</code> for tasks that should be executed successively rather than simultaneously</li>
+<li>Now utilizing <code>done</code> promise under <code>gulp</code> tasks which cannot have a simple return statement</li>
+<li>Swapped <code>csslint</code> for <code>sass-lint</code>; swapped <code>jshint</code> for <code>eslint</code></li>
+<li>Changed <code>scu.js</code> and <code>fabricator.js</code> to properly <strong>both (together)</strong> use <code>webpack</code> for compilation</li>
+<li>Changed <code>babel</code> preset to <code>es2016</code> from <code>babili</code> so <code>scu.js</code> won't be minified in development mode</li>
+<li>Added <code>gulp-autoprefixer</code> module which removes need to write browser-specific CSS prefix rules entirely</li>
+<li>Added task <code>style:landing</code> to compile landing page CSS in parallel (also: files are now &lt;1 KB each)</li>
+<li>Added <code>gulp-size</code> to measure the size of output CSS files to <code>./css/</code></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>package.json</code>
+<ul>
+<li>Removed extraneous Node deps</li>
+<li>Added <code>gulp-autoprefixer</code> (CSS automatic vendor prefixes), <code>gulp-size</code> (track sizes of compiled CSS files)</li>
+<li>Now using this file to describe Babel preset instead of having a <code>.babelrc</code></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>./src/assets/toolkit/scripts/scu.js</code>
+<ul>
+<li>Removed extraneous JS code which was meant for leftover parts of Bootstrap landing pages</li>
+<li>Upgraded to ES6 standard</li>
+<li>Removed header code (vast majority of this file)</li>
+</ul>
+</li>
+</ul>
+<p><code>v1.0.7</code></p>
+<p>Released November 15, 2016</p>
+<ul>
+<li>Removed extraneous images and prototypes from launched projects.</li>
+<li>Added the <a href="/content-types.html#agenda">Agenda</a> content type.</li>
+<li>Added <a href="/docs.html#print-style-guide">Print Style Guide</a> documentation.</li>
+<li>Refactored headers and footers - both now use type instead of images.</li>
+<li>Added new email templates.</li>
+<li>Moved landing page JS out of global JS files.</li>
+</ul>
+<p><code>v1.0.6</code></p>
+<ul>
+<li>Updated Fontello - uses latest icon fonts available (most notably, Instagram is updated) and added the SCU seal.</li>
+<li>Replaced the PNG logos in the header with the seal from the Fontello icon set.</li>
+<li>Fixed the social demos to reintroduce the icon-based seal.</li>
+</ul>
+<p><code>v1.0.5</code></p>
+<p>Released Jul 26, 2016</p>
+<ul>
+<li>New CSS for <a href="/content-types.html#card">Cards</a> based on Bootstrap 4.0-alpha2. The original CSS was based on <code>alpha0</code>, and some significant changes had been made in the meantime.</li>
+<li>Removed &quot;Profile&quot; as a content type.</li>
+<li>Content type demos now use <code>holder.js</code>.</li>
+<li><a href="/content-types.html#sidebar">Sidebar</a> markup fixed, CSS adjustments made.</li>
+<li><a href="/content-types.html#hero">Hero</a> content type added from White Whale's original design.</li>
+<li>Global footer updated to use social media icons instead of static images (<a href="https://github.com/santaclarauniversity/scu-web-assets/issues/54">#54</a>).</li>
+<li>Added <a href="/content-types.html#image-grid">Image Grid</a> content types.</li>
+<li>Added <code>.bg-img</code> utility classes.</li>
+</ul>
+<p><code>v1.0.4</code></p>
+<ul>
+<li>Added spacer utility classes (more information on <a href="/">homepage</a>)</li>
+<li>Added new content types: <a href="/content-types.html#blocks">Blocks</a>, <a href="/content-types.html#ribbons">Ribbons</a>, <a href="/content-types.html#statcards">Statcards</a>.</li>
+<li>Landing page prototype: <a href="/landing-pages/mba.html">MBA</a></li>
+<li>Added new <a href="/content-types.html#button">Button</a> styles (outline).</li>
+<li>Updated the <a href="/demos/roadshow-comp.html">Roadshow Prototype</a> to showcase some of the new padding, margin, and typography utility classes along with the new Ribbon content type.</li>
+<li>Updated the Mission logos to be the correct ones (with doors) (thanks, Linda!)</li>
+<li>Fixed a long-standing display issue with <a href="/content-types.html#person-spotlight">Person Spotlight</a> in the Content Type view.</li>
+<li>New <a href="/content-types.html#social-icons">Instagram</a> logo (<a href="https://github.com/santaclarauniversity/scu-web-assets/issues/52">#52</a>)</li>
+</ul>
+<p><code>v1.0.3</code></p>
+<p>Released June 17, 2016</p>
+<ul>
+<li>Added the <a href="/content-types.html#windowpane">Windowpane</a> content type and <a href="/demos/roadshow-comp.html">demo</a>.</li>
+<li>Added landing page templates: <a href="/landing-pages/bold.html">Bold</a>, <a href="/landing-pages/minimal.html">Minimal</a>, and <a href="/landing-pages/startup.html">Startup</a>.</li>
+</ul>
+<p><code>v1.0.2</code></p>
+<ul>
+<li>Reorganized our structure to be more helpful for developers that are looking to leverage our toolkit (<a href="https://github.com/santaclarauniversity/scu-web-assets/issues/42">#42</a>)</li>
+<li>Fixed Header issues (<a href="https://github.com/santaclarauniversity/scu-web-assets/issues/46">#46</a>)</li>
+</ul>
+<p><code>v1.0.1</code></p>
+<p>Released May 20, 2016</p>
+<ul>
+<li>Added some packages and dependencies to make the install process easier.</li>
+<li>Added Pull Quote content type.</li>
+<li>Added &quot;Startup&quot; style marketing landing page.</li>
+<li>Changed the README to be slightly more helpful.</li>
+</ul>
+<p><code>v1.0</code></p>
+<ul>
+<li>First version of toolkit</li>
+<li>Added content types, colors, typography demonstration, homepage demo, and other documentation.</li>
+</ul>
+
+</div>
+
+
+<div class="f-item-group">
+  <h2 id="accessibility"><a href="#accessibility">Accessibility</a></h2>
+  <p>Here's what you need to know about accessibility and code:</p>
+<ul>
+<li>All code submissions to the Toolkit must be accessible.</li>
+<li>WCAG 2.0/AA is the technical standard that we follow, but we should design with accessibility best practices in mind.</li>
+<li>The <a href="https://scu.edu/accessibility">University Accessibility Policy</a> requires third-party content to be fully accessible.</li>
+</ul>
+<p>The Toolkit has accessibility auditing capabilities (<code>gulp a11y</code>) that can be used to audit content. In addition to automated tools, pages should be checked using <a href="http://wave.webaim.org/">WebAIM WAVE</a>. Pages and content should have 0 errors according to WAVE reports.</p>
+<p>WAVE will not detect all accessibility issues. It is your responsibility to ensure that websites are accessible. A few errors that may not be detected by the tool are:</p>
+<ul>
+<li>Color contrast issues. Use a <a href="http://leaverou.github.io/contrast-ratio/">Contrast Checker</a>.</li>
+<li>JavaScript interactivity and progressive enhancement</li>
+<li>Effective contextual information, such as alt attributes, need to be descriptive.</li>
+</ul>
+<p>If you have questions about accessible contributions to the toolkit or new websites, please contact <a href="mailto:colivas@scu.edu">Christina Olivas</a>, Director of Digital Strategy.</p>
+
+</div>
+
+
+<div class="f-item-group">
+  <h2 id="cloud-fonts"><a href="#cloud-fonts">Cloud Fonts</a></h2>
+  <p>Our primary fonts, <strong>Trade Gothic</strong>, <strong>Bauer Bodoni Italic</strong>, and <strong>Trajan</strong> are provided by <a href="http://fonts.com">fonts.com</a>.</p>
+<p>Their license is for use on the official Santa Clara University website and affiliated properties and cannot be used for print materials under this license.</p>
+<p>The Office of Marketing and Communication is currently reviewing available options for making these fonts available for print projects.</p>
+
+</div>
+
+
+<div class="f-item-group">
+  <h2 id="getting-started"><a href="#getting-started">Getting Started</a></h2>
+  
+</div>
+
+
+<div class="f-item-group">
+  <h2 id="header-and-footer-guidelines"><a href="#header-and-footer-guidelines">Header And Footer Guidelines</a></h2>
+  <h3>Header Guidelines</h3>
+<p>Our header system is designed to be user-friendly, accessible, and flexible. The header design has two primary layouts, <strong>core layout</strong> and <strong>customized layout</strong>:</p>
+<hr>
+<p><h4 class="text-primary">Core Layout</h4></p>
+<p>The core layout is a general SCU header and navigation.</p>
+<p><strong>Used For:</strong></p>
+<ul>
+<li>SCU homepage</li>
+<li>Prospective student-oriented pages</li>
+<li>Non-academic departments and offices</li>
+</ul>
+<p><strong>Not used for:</strong></p>
+<ul>
+<li>Schools, initiatives, or centers (use Customized Layout)</li>
+</ul>
+<hr>
+<p><h4 class="text-primary">Customized Layout</h4></p>
+<p>The customized layout is intended for use on pages with their own visual identity or where a segment-specific navigation improves user experience.</p>
+<h5>Customization Options</h5>
+<p>The custom layout is designed to accommodate a number of elements.</p>
+<h6>Branding</h6>
+<p>The branding section, by default, is a text-based logo set in Trade Light with the name of your school, department, or unit. Trade Bold, Bodoni Italic, and Bodoni Bold Italic are also typography options for centers or initiative-based websites. The maximum width of content in this area is <strong>280px.</strong></p>
+<p>This header is designed to flex vertically if your content exceeds the height of the bar. If you are looking to use a graphic, it should be <strong>280px</strong> wide.</p>
+<h6>Navigation Options</h6>
+<p>We have tested the header with up to <strong>seven (7)</strong> navigation items, and encourage you to use up to that amount. The customized footer also contains up to nine (9) different navigation elements.</p>
+<p>See the <a href="http://getbootstrap.com/docs/4.0/components/navbar/">Navbar</a> section in <a href="http://getbootstrap.com/docs">Bootstrap's documentation</a> for more details on what the navigation supports, including calls-to-action, inline text, and other elements.</p>
+<p><strong>Do not:</strong></p>
+<ul>
+<li>Modify or remove the &quot;Santa Clara University&quot; branding/homepage link in the topmost bar.</li>
+<li>Remove or change the Search icon or modify the search placeholders or behavior.</li>
+</ul>
+<h3>Footer Guidelines</h3>
+<p>Similar to the header system, the redesigned footers offer a <strong>core layout</strong> and a <strong>customized layout</strong>.</p>
+<h4>Core Footer</h4>
+<p>The core footer contains SCU's contact information, social media links, and general links. This layout should not be modified.</p>
+<h4>Customized Footer</h4>
+<p>The customized footer offers unit-specific branding, including <strong>customizable contact information</strong> and <strong>social media links to your pages</strong>.</p>
+<p>There is also three columns of link space available for your use, and we encourage you to put unique links into this area and avoid duplication with your header.</p>
+<p>Here are some examples of common pages that work well in a footer:</p>
+<ul>
+<li>About</li>
+<li>Faculty Listings</li>
+<li>Staff Listings</li>
+<li>Contact Us</li>
+</ul>
+<p><strong>Do not:</strong></p>
+<ul>
+<li>Modify or remove the <strong>Santa Clara University</strong> branding/homepage link in the bottom-most bar.</li>
+<li>Remove or change the <strong>Login</strong>, <strong>Facebook</strong>, or <strong>Twitter</strong> icons in the bottom-most bar.</li>
+<li>Remove the Accessibility link or copyright information.</li>
+</ul>
+
+</div>
+
+
+<div class="f-item-group">
+  <h2 id="landing-pages"><a href="#landing-pages">Landing Pages</a></h2>
+  <p><code>Draft Guidelines</code></p>
+<p>We recognize that sometimes user needs and business goals necessitate (and sometimes require) a unique digital experience. In anticipating this need, we have integrated landing pages into our design language that can help address any needs not covered by our current design.</p>
+<p>Here are some guidelines for landing pages:</p>
+<ul>
+<li><strong>Every design project should be attempted in our pattern library.</strong> Using existing resources helps us keep our brand consistent across various experiences. We should attempt to expand the design language to accommodate requests before selecting a landing page.</li>
+<li><strong>There must be a demonstrated business or user need that justifies a new design.</strong> Examples of this include initiative-based websites or special projects.</li>
+<li><strong>Landing pages still play by the brand rules.</strong> That means colors, fonts, and other design elements must be preserved.</li>
+<li><strong>OMC has the ultimate approval for new landing page rollouts.</strong> We will work with you to determine if using one of our landing page designs is the best route given your user tasks and business goals.</li>
+</ul>
+
+</div>
+
+
+<div class="f-item-group">
+  <h2 id="print-style-guide"><a href="#print-style-guide">Print Style Guide</a></h2>
+  <p>Our guidelines for print projects are part of our <a href="https://www.scu.edu/umc/visual-identity-elements/">Visual Identity Elements</a> :</p>
+<ul>
+<li><a href="https://www.scu.edu/umc/visual-identity-elements/university-logos/">University Logos</a> - Guidelines and correct configurations for SCU's most important visual branding tool.</li>
+<li><a href="https://www.scu.edu/umc/visual-identity-elements/the-scu-seal/">The SCU Seal</a> - Usage applications for the University's official, iconic symbol, having historical Jesuit roots.</li>
+<li><a href="https://www.scu.edu/umc/visual-identity-elements/wordmarks--headers/">Wordmark Use</a> - The word-only version of our logo and its functions for enhancing the SCU brand.</li>
+<li><a href="https://www.scu.edu/umc/visual-identity-elements/scu-color-palette/">Official Colors</a> - The University's color palette of core and accent color options to support the SCU brand.</li>
+<li><a href="https://www.scu.edu/umc/visual-identity-elements/university-fonts/">Fonts for Print</a> - The official primary and secondary fonts that support SCU's typographic identity.</li>
+<li><a href="https://www.scu.edu/umc/visual-identity-elements/layouts--templates/">Templates</a> - Page layout examples and available templates for internal department self-publishing options.</li>
+</ul>
+
+</div>
+
+
+<div class="f-item-group">
+  <h2 id="social-icons"><a href="#social-icons">Social Icons</a></h2>
+  <p>Static social icons are available for use in emails and other contexts where FontAwesome cannot be loaded.</p>
+<p><img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/SCU.png" alt="SCU Icon">
+<img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Youtube.png" alt="YouTube Icon">
+<img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Illuminate.png" alt="Illuminate Icon">
+<img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Vimeo.png" alt="Vimeo Icon">
+<img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Facebook.png" alt="Facebook Icon">
+<img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/RSS.png" alt="RSS Icon">
+<img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/LinkedIn.png" alt="LinkedIn Icon">
+<img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Twitter.png" alt="Twitter Icon">
+<img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Flickr.png" alt="Flickr Icon">
+<img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Soundcloud.png" alt="Soundcloud Icon">
+<img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Snapchat.png" alt="Snapchat Icon">
+<img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Tumblr.png" alt="Tumblr Icon"></p>
+<h2>Resizing and Transforming</h2>
+<p>These icons can be resized by changing the URL:</p>
+<p><code>https://res.cloudinary.com/scu/image/upload/c_scale,h_100/v1544637290/social-icons/Soundcloud.png</code></p>
+<p>The <code>/c_scale,h_100/</code> portion of the URL can be changed to resize the icon in pixels. Changing this to <code>/c_scale,h_50/</code> would return a 50px icon.</p>
+<p><img src="https://res.cloudinary.com/scu/image/upload/c_scale,h_50/v1544637290/social-icons/SCU.png" alt="SCU Icon"></p>
+<p>You can also create rounded icons.</p>
+<p><img src="https://res.cloudinary.com/scu/image/upload/h_50,ar_1:1,c_fill,g_auto,r_max/v1544637290/social-icons/RSS.png" alt="RSS Icon"></p>
+<p>For more options, see <a href="https://cloudinary.com/documentation/image_transformation_reference">Cloudinary's Image Transformation reference</a>.</p>
+
+</div>
+
+
+
+  </div>
+
+  <script src="/public/fabricator.js"></script>
+
+</body>
+</html>

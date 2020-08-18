@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  
+  <title>Sidebar Breakout Landing Page</title>
+  
+  <!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" async></script>
+  <![endif]-->
+  
+  
+  <!-- external styles -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" />
+  <!-- /external styles -->
+  
+  <!-- toolkit styles -->
+  <link rel="stylesheet" href="/public/scu.css" />
+  <!-- /toolkit styles -->
+  
+  <!-- toolkit scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" crossorigin="anonymous"></script>
+  <script src="/public/scu.js"></script>
+  <!-- /toolkit scripts -->
+
+</head>
+<body class="">
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+  
+<header class="header-legacy bg-light mb-5 mb-md-0 ">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white d-none d-lg-block py-0  initial nav-users"
+       id="navbarUsers">
+    <div class="accordion-collapses" id="navbarUsersAccordion">
+      <div class="collapse bg-white" id="navbarUsersOffices" data-parent="#navbarUsersAccordion">
+        <div class="container py-3">
+          <div class="row">
+            <div class="col d-flex flex-column">
+              <a href="#">Campus Ministry</a>
+              <a href="#">Campus Safety</a>
+              <a href="#">Enrollment Services</a>
+              <a href="#">Facilities</a>
+            </div>
+            <div class="col d-flex flex-column">
+              <a href="#">Diversity</a>
+              <a href="#">Recreation</a>
+              <a href="#">Sustainability</a>
+              <a href="#">Technology</a>
+            </div>
+            <div class="col d-flex flex-column">
+              <a href="#">Arts</a>
+              <a href="#">Bookstore</a>
+              <a href="#">Career Center</a>
+              <a href="#">Human Resources</a>
+            </div>
+            <div class="col d-flex flex-column">
+              <a href="#">Mission Church</a>
+              <a href="#">Library</a>
+              <a href="#">Login</a>
+              <a href="#" class="text-sans-bold text-primary">More Offices &amp; Services &raquo;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="collapse bg-white" id="navbarUsersSchools" data-parent="#navbarUsersAccordion">
+        <div class="container py-3">
+          <div class="row">
+            <div class="col d-flex flex-column">
+              <p class="text-muted text-uppercase">Schools &amp; Colleges</p>
+              <a href="#">College of Arts and Sciences</a>
+              <a href="#">Education and Counseling Psychology</a>
+              <a href="#">Leavey School of Business</a>
+            </div>
+            <div class="col d-flex flex-column">
+              <p class="text-white">Schools &amp; Colleges</p>
+              <a href="#">School of Engineering</a>
+              <a href="#">Jesuit School of Theology</a>
+              <a href="#">School of Law</a>
+            </div>
+            <div class="col d-flex flex-column">
+              <p class="text-muted text-uppercase">Centers of Distinction</p>
+              <a href="#">Miller Center for Social Entrepreneurship</a>
+              <a href="#">Ignatian Center for Jesuit Education</a>
+              <a href="#">Markkula Center for Applied Ethics</a>
+              <a href="#" class="text-sans-bold text-primary">More Centers and Institutes &raquo;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-uppercase px-3" href="#">Students</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase px-3" href="#">Faculty &amp; Staff</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase px-3" href="#">Families</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase px-3" href="#">Alumni</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase px-3" href="#">Visitors</a>
+        </li>
+        <li class="nav-item dropdown mr-1">
+          <a class="nav-link collapsed text-uppercase px-3" href="#navbarUsersOffices"
+             role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarUsersOffices">
+            Offices &amp; Services <i class="fas fa-caret-down pl-2"></i>
+          </a>
+        </li>
+        <li class="nav-item dropdown ml-1">
+          <a class="nav-link collapsed text-uppercase px-3" href="#navbarUsersSchools"
+             role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarUsersSchools">
+            Schools &amp; Centers <i class="fas fa-caret-down pl-2"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container d-flex align-items-center justify-content-center justify-content-lg-between pt-4 pb-4 pb-md-5">
+    <div class="d-flex align-items-center">
+      <a href="#" class="seal d-none d-lg-inline mr-3">
+        <i class="icon-scu"></i>
+        <span class="sr-only">Santa Clara University Homepage</span>
+      </a>
+      <div class="text-center text-md-left">
+        <h2 class="text-trajan wordmark m-0">
+          <a href="#" class="text-primary">Santa Clara University</a>
+        </h2>
+        <h6 class="text-trajan wordmark m-0">
+          <a href="#" class="text-muted">The Jesuit University in Silicon Valley</a>
+        </h6>
+      </div>
+    </div>
+    <form class="form-inline d-none d-lg-flex">
+      <div class="input-group">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+        <div class="input-group-append">
+          <button class="input-group-text btn btn-light" type="submit">
+            <span class="sr-only">Search</span>
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark py-0 fixed-top nav-fixed initial nav-brand" id="navbarBrand">
+    <div class="container">
+      <button class="navbar-toggler px-3 py-2" type="button"
+              data-toggle="collapse" data-target="#navbarBrandList"
+              aria-controls="navbarBrandList" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+        <span class="text-uppercase">Menu</span>
+      </button>
+      <form class="form-inline d-lg-none my-2">
+        <div class="input-group">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+          <div class="input-group-append">
+            <button class="input-group-text btn btn-light" type="submit">
+              <span class="sr-only">Search</span>
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="collapse navbar-collapse bg-primary" id="navbarBrandList">
+        <ul class="navbar-nav mr-auto px-0 px-lg-2 py-3 py-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">About SCU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Academics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Admission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Athletics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Campus Life</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Giving</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Global</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-uppercase px-3" href="#">News &amp; Events</a>
+            <div class="dropdown-divider d-lg-none my-3"></div>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Students</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Faculty</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Families</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Alumni</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Visitors</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Offices &amp; Services</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link text-white text-uppercase px-3" href="#">Schools &amp; Centers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<main id="content">
+  <div class="jumbotron mb-0" style="background-image: url('/assets/images/examples/stage_lighting.JPG');border-radius:0">
+    <div class="container">
+      <h1 class="text-white">Invent the life you want to lead.</h1>
+      <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aperiam autem commodi consectetur, culpa cum dicta, excepturi harum illum inventore repellat saepe soluta, veritatis vero! Culpa enim impedit nihil.</p>
+      <a href="#" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+  <section style="border-bottom: 1px solid #f1f1f1">
+    <div class="container">
+      <nav aria-label="Section Navigation">
+        <ol class="breadcrumb py-4 mb-0">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Library</a></li>
+          <li class="breadcrumb-item active">Data</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+  <section class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-3 order-md-2">
+          <nav class="sidebar" aria-label="Section Navigation">
+  <div class="sidebar-top">
+    <a href="#!" class="sidebar-mobile-trigger d-md-none stretched-link text-primary d-flex" data-toggle="collapse" data-target="#sidebarLinks" aria-expanded="false" aria-controls="sidebarLinks">
+      Academics Sections
+      <i class="fas fa-bars"></i>
+    </a>
+    <a href="#!" class="d-md-block d-none desktop-title">Academics</a>
+      <div class="collapse d-md-block" id="sidebarLinks">
+      <ul class="sidebar--links">
+        <li class="border-bottom mb-2 pb-2 d-md-none">
+          <a href="#!">Academics</a>
+        </li>
+        <li><a href="#!">Schools & Colleges</a></li>
+        <li>
+          <a href="#!">Undergraduate Programs</a>
+        </li>
+        <li>
+          <a href="#!">Graduate Programs</a>
+        </li>
+        <li>
+          <a href="#!">Centers of Distinction</a>
+        </li>
+        <li>
+          <a href="#!" class="text-sans-bold">Our Faculty</a>
+          <ul class="sidebar--links striped" id="sidebarSubLinks" style="">
+            <li><a href="#!">Sub Link</a></li>
+            <li>
+              <a href="#!">Sub Link</a>
+            </li>
+            <li>
+              <a href="#!" class="text-sans-bold">Sub Link</a>
+
+              <ul class="sidebar--links striped" id="sidebarSubSubLinks" style="">
+                <li>
+                  <a href="#!">Sub Link</a>
+                </li>
+                <li class="active">
+                  <span class="sr-only">Current Page: </span>
+                  Active
+                </li>
+                <li>
+                  <a href="#!">Sub Link</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!">Sub Link</a>
+            </li>
+            <li>
+              <a href="#!">Sub Link</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">Libraries</a>
+        </li>
+        <li>
+          <a href="#!">Academic Calendar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> <a href="#" class="brand-primary link-button" role="button">Apply Now</a>
+        </div>
+        <div class="col-12 col-md-9 order-md-1">
+          <div class="row justify-content-between">
+            <!-- About Image -->
+            <div class="col-md-3 col-lg-5 align-self-top g-hidden-sm-down">
+              <img class="img-fluid" src="holder.js/100px318" alt="Image Description">
+            </div>
+            <!-- End About Image -->
+            <div class="col-md-8 col-lg-6">
+              <!-- About Info -->
+              <div class="g-mb-50">
+                <h2 class="h4 mb-3">Better page layouts.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto at consectetur dignissimos distinctio dolorem earum expedita illo in, incidunt iure libero, nesciunt non obcaecati pariatur praesentium, quae rem veritatis!</p>
+              </div>
+              <h2 class="h4 mb-3">Back to Basics.</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur cum cumque, dolorem dolorum harum itaque quaerat quia sequi vel?</p>
+            </div>
+            <!-- End About Info -->
+          </div>
+        </div>
+      </div>
+  </section>
+  <div class="container">
+    <div class="row">
+      <!-- Video Article -->
+      <div class="col-md-8">
+        <div class="text-center" data-bg-img-src="assets/img-temp/900x600/img2.jpg" style="background-image: url('holder.js/100px300')">
+          <img src="holder.js/100px300" alt="" class="mb-2">
+          <h4>Lorem ipsum dolor sit amet?</h4>
+        </div>
+      </div>
+      <!-- End Video Article -->
+
+      <div class="col-md-4 g-mb-30">
+        <!-- Video Article -->
+        <div class="g-bg-size-cover g-bg-pos-center g-bg-cover g-bg-black-opacity-0_4--after g-pos-rel g-py-50 g-mb-30" data-bg-img-src="assets/img-temp/300x300/img2.jpg" style="background-image: url(&quot;assets/img-temp/300x300/img2.jpg&quot;);">
+          <article class="text-center g-pos-rel g-z-index-1 g-px-20">
+            <img src="holder.js/100px150" alt="" class="mb-2">
+            <h4 class="h5 g-color-white">Ecology at SCU</h4>
+          </article>
+        </div>
+        <!-- End Video Article -->
+
+        <!-- Video Article -->
+        <div class="g-bg-size-cover g-bg-pos-center g-bg-cover g-bg-black-opacity-0_4--after g-pos-rel g-py-50 g-mb-30 g-mb-0--md" data-bg-img-src="assets/img-temp/300x300/img3.jpg" style="background-image: url(&quot;assets/img-temp/300x300/img3.jpg&quot;);">
+          <article class="text-center g-pos-rel g-z-index-1 g-px-20">
+            <img src="holder.js/100px150" alt="" class="mb-2">
+            <h4 class="h5 g-color-white">Taking It to the Limit</h4>
+          </article>
+        </div>
+        <!-- End Video Article -->
+      </div>
+    </div>
+  </div>
+  <div class="py-5 p-0 mt-5">
+    <div class="row pull-quote-inv align-items-center px-3 px-md-4 px-xl-5 py-4">
+      <div class="col-12 col-md-4">
+        <img src="holder.js/300x300?auto=yes" alt="Placeholder" class="d-block mx-auto rounded-circle img-fluid" />
+      </div>
+      <div class="col-12 col-md-8">
+        <blockquote class="text-sans-light m-0">
+          <p class="m-0 pl-3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quia quidem ratione voluptas. Ab accusantium aperiam consectetur dolor dolore dolorem, facilis fuga,
+            <a href="#">mollitia possimus quam quia</a> repellendus sequi suscipit, vel.
+          </p>
+        </blockquote>
+        <footer class="text-right mt-3">
+          <cite title="Source Title">Speaker Name</cite>, (their title)
+          <p class="m-0">Relevant University Department</p>
+        </footer>
+      </div>
+    </div>  </div>
+  <div class="py-5 p-0 mb-5">
+    <div class="row pull-quote align-items-center px-3 px-md-4 px-xl-5 py-4">
+      <div class="col-12 col-md-8">
+        <blockquote class="text-sans-light text-white m-0">
+          <p class="m-0 pl-3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quia quidem ratione voluptas. Ab accusantium aperiam consectetur dolor dolore dolorem, facilis fuga,
+            <a href="#">mollitia possimus quam quia</a> repellendus sequi suscipit, vel.
+          </p>
+        </blockquote>
+        <footer class="text-right mt-3">
+          <cite title="Source Title">Speaker Name</cite>, (their title)
+          <p class="m-0">Relevant University Department</p>
+        </footer>
+      </div>
+      <div class="col-12 col-md-4">
+        <img src="holder.js/300x300?auto=yes" alt="Placeholder" class="d-block mx-auto rounded-circle img-fluid" />
+      </div>
+    </div>  </div>
+  <div class="py-5 p-2">
+    <h2 class="mb-5 text-center">Agenda</h2>
+    <div class="container">
+      <ul class="row list-unstyled">
+        <li class="col-md-12">
+          <div class="row">
+            <div class="col-md-3 pr-md-5 text-md-right">
+              <h5 class="mb-1 text-sans-light">3:00 PM</h5>
+              <h6 class="text-sans-light">1 Apr 2018</h6>
+            </div>
+            <div class="agenda-content col-md-9 pl-md-5 pb-5 border-left border-light">
+              <div class="agenda-dot d-none d-md-block">
+                <i class="d-block bg-white rounded-circle"></i>
+              </div>
+              <article class="mt-4 mt-md-2 p-4">
+                <div class="agenda-arrow">
+                  <div></div>
+                </div>
+                <header>
+                  <h4 class="text-sans-light">First Event</h4>
+                </header>
+                <hr class="py-1" />
+                <div class="row">
+                  <div class="col-md-4">
+                    <img class="img-fluid w-100" src="holder.js/100px270" alt="Image description">
+                  </div>
+                  <div class="col-md-8 mt-3 mt-md-0">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum delectus dolore explicabo facere fuga laborum magnam magni minus nisi nulla pariatur perferendis quisquam, ratione rerum, temporibus ullam, unde ut voluptas.</p>
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-12">
+          <div class="row">
+            <div class="col-md-3 pr-md-5 text-md-right">
+              <h5 class="mb-1 text-sans-light">4:00 PM</h5>
+              <h6 class="text-sans-light">1 Apr 2018</h6>
+            </div>
+            <div class="agenda-content col-md-9 pl-md-5 pb-5 border-left border-light">
+              <div class="agenda-dot d-none d-md-block">
+                <i class="d-block bg-white rounded-circle"></i>
+              </div>
+              <article class="mt-4 mt-md-2 p-4">
+                <div class="agenda-arrow">
+                  <div></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <figure class="mb-0">
+                      <img src="holder.js/100px270" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                      <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-12">
+          <div class="row">
+            <div class="col-md-3 pr-md-5 text-md-right">
+              <h5 class="mb-1 text-sans-light">5:00 PM</h5>
+              <h6 class="text-sans-light">1 Apr 2018</h6>
+            </div>
+            <div class="agenda-content col-md-9 pl-md-5 pb-5">
+              <div class="agenda-dot d-none d-md-block">
+                <i class="d-block bg-white rounded-circle"></i>
+              </div>
+              <article class="mt-4 mt-md-2 p-4">
+                <div class="agenda-arrow">
+                  <div></div>
+                </div>
+                <header>
+                  <h4 class="text-sans-light">Closing</h4>
+                </header>
+                <hr class="py-1" />
+                <div class="row">
+                  <div class="col-md-4">
+                    <img class="img-fluid w-100" src="holder.js/100px270" alt="Image description">
+                  </div>
+                  <div class="col-md-8 mt-3 mt-md-0">
+                    <p>Winter purslane courgette pumpkin quandong komatsuna fennel green bean cucumber watercress. Pea cress potato sprouts wattle seed rutabaga okra yarrow cress avocado grape.</p>
+                    <p class="mb-0">Cabbage lentil cucumber chickpea sorrel gram garbanzo plantain lotus root bok choy squash cress potato.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>  </div>
+  <div class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 mx-auto">
+          <h2 class="text-sans-light text-primary">Application Checklist</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At est eveniet illum labore. Adipisci delectus dolores ea eius illo illum, impedit neque quis quo veritatis! Eos explicabo ipsam numquam repellat.</p>
+          <div class="styled-list p-4 bg-light">
+            <h4>Here's everything you need to know about becoming a LEAD scholar.</h4>
+            <hr>
+            <ol class="pl-0">
+              <li><span class="list-text">You'll need to be the first in your family to go to college.</span></li>
+              <li><span class="list-text">Apply to the LEAD program after being accepted to SCU.</span></li>
+              <li><span class="list-text">Attend <a href="#">LEAD Week orientation.</a></span></li>
+              <li><span class="list-text">Look for scholarships and fellowships specifically for LEAD scholars.</span></li>
+            </ol>
+          </div>          <div class="text-center">
+            <a href="#!" class="btn btn-primary">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 align-self-center">
+          <h2 class="text-sans-light text-primary">History at Every Turn</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At est eveniet illum labore. Adipisci delectus dolores ea eius illo illum, impedit neque quis quo veritatis! Eos explicabo ipsam numquam repellat.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="holder.js/100px400" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <img src="holder.js/100px500" alt="">
+        </div>
+        <div class="col-12 col-md-6 align-self-center">
+          <h2 class="text-sans-light text-primary">Go anywhere from here</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At est eveniet illum labore. Adipisci delectus dolores ea eius illo illum, impedit neque quis quo veritatis! Eos explicabo ipsam numquam repellat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+    <footer class="footer-core border-top bg-white pt-4">
+      <div class="container">
+        <a href="/" class="h4 text-dark text-uppercase wordmark d-block mb-4">Santa Clara University</a>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <p class=" mb-0">
+              500 El Camino Real<br>
+              Santa Clara, CA 95053<br>
+              (408) 554-4000
+            </p>
+            <ul class="list-unstyled list-spaced">
+              <li><a href="#">Maps &amp; Directions</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul class="list-inline mb-0 footer-social-icons">
+              <li class="list-inline-item"><a class="facebook" href="http://www.facebook.com">
+                <i class="demo-icon fab fa-facebook-f"></i>
+                <span class="sr-only">SCU on Facebook</span>
+              </a></li>
+              <li class="list-inline-item"><a class="twitter" href="http://www.twitter.com">
+                <i class="demo-icon fab fa-twitter"></i>
+                <span class="sr-only">SCU on Twitter</span>
+              </a></li>
+              <li class="list-inline-item">
+                <a class="instagram" href="http://www.instagram.com">
+                  <i class="demo-icon fab fa-instagram"></i>
+                  <span class="sr-only">SCU on Instagram</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="snapchat" href="http://www.snapchat.com">
+                  <i class="demo-icon fab fa-snapchat"></i>
+                  <span class="sr-only">SCU on Snapchat</span>
+                </a>
+              </li>
+              <li class="list-inline-item"><a class="youtube" href="http://youtube.com">
+                <i class="demo-icon fab fa-youtube"></i>
+                <span class="sr-only">SCU on YouTube</span>
+              </a></li>
+            </ul>
+            <hr class="d-block d-md-none pt-2">
+          </div>
+          <div class="col-12 col-md-3">
+            <ul class="list-unstyled list-spaced">
+              <li><h6 class="text-uppercase ">Resources</h6></li>
+              <li><a href="#">Emergency Info</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="/accessibility"><i class="fa fa-universal-access" aria-hidden="true"></i> Accessibility</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3">
+            <ul class="list-unstyled list-spaced">
+              <li><h6 class="text-uppercase">Our Campus</h6></li>
+              <li><a href="#">The Mission</a></li>
+              <li><a href="#">Event Calendar</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Athletics</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="bg-gradient-primary mb-0 mt-4 p-3 small text-center">&copy; 2018 Santa Clara University</p>
+    </footer>
+</body>
+</html>
