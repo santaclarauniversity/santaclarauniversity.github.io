@@ -3,7 +3,7 @@
   "version": "2.4.0",
   "description": "SCU Design System",
   "homepage": "https://brand.scu.edu",
-  "main": "index.html",
+  "main": "README.md",
   "scripts": {
     "a11y": "gulp a11y",
     "dev": "gulp --dev",
