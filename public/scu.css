@@ -4999,6 +4999,9 @@ input[type=submit].btn-block {
 	margin-right: 0;
 	margin-left: 0
 }
+.card.my-3.linked:hover {
+    box-shadow: 0px 5px 10px 0px rgba(84, 117, 145, 0.2);
+}
 .card>.list-group:first-child .list-group-item:first-child {
 	border-top-left-radius: .25rem;
 	border-top-right-radius: .25rem
@@ -5190,9 +5193,6 @@ input[type=submit].btn-block {
 	}
 }
 .card.h-100.linked:hover {
-    box-shadow: 0px 5px 10px 0px rgba(84, 117, 145, 0.2);
-}
-.card.my-3.linked:hover {
     box-shadow: 0px 5px 10px 0px rgba(84, 117, 145, 0.2);
 }
 .card-title.linked:hover {
