@@ -5021,7 +5021,7 @@ input[type=submit].btn-block {
 }
 .card-title.linked:hover {
 	text-decoration: underline;
-	color: #820529!important;
+	color: #820529 !important;
 }
 .card-subtitle {
 	margin-top: -.375rem;
