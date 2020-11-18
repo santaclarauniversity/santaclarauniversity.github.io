@@ -5197,7 +5197,9 @@ input[type=submit].btn-block {
 }
 .card-title.linked:hover {
 	text-decoration: underline;
-	color: #820529 !important;
+}
+h4.card-title.linked:hover {
+color: #820529 !important;
 }
 .accordion>.card {
 	overflow: hidden
