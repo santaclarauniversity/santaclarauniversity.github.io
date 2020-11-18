@@ -5019,10 +5019,6 @@ input[type=submit].btn-block {
 .card-title {
 	margin-bottom: .75rem
 }
-.card-title.linked:hover {
-	text-decoration: underline;
-	color: #820529 !important;
-}
 .card-subtitle {
 	margin-top: -.375rem;
 	margin-bottom: 0
@@ -5198,6 +5194,10 @@ input[type=submit].btn-block {
 }
 .card.h-100.linked:hover {
     box-shadow: 0px 5px 10px 0px rgba(84, 117, 145, 0.2);
+}
+.card-title.linked:hover {
+	text-decoration: underline;
+	color: #820529 !important;
 }
 .accordion>.card {
 	overflow: hidden
