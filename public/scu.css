@@ -4999,9 +4999,6 @@ input[type=submit].btn-block {
 	margin-right: 0;
 	margin-left: 0
 }
-.card.my-3.linked:hover {
-    box-shadow: 0px 5px 10px 0px rgba(84, 117, 145, 0.2);
-}
 .card>.list-group:first-child .list-group-item:first-child {
 	border-top-left-radius: .25rem;
 	border-top-right-radius: .25rem
@@ -5192,14 +5189,12 @@ input[type=submit].btn-block {
 		width: 100%
 	}
 }
-.card.h-100.linked:hover {
-    box-shadow: 0px 5px 10px 0px rgba(84, 117, 145, 0.2);
-}
 .card-title.linked:hover {
+	color: #690421 !important;
 	text-decoration: underline;
 }
-h4.card-title.linked:hover {
-color: #820529 !important;
+h4.card-title.linked {
+color: #b30738 !important;
 }
 .accordion>.card {
 	overflow: hidden
@@ -7004,6 +6999,15 @@ a.bg-beige:hover,
 button.bg-beige:focus,
 button.bg-beige:hover {
 	background-color: #cac3b5!important
+}
+.bg-lightBeige {
+	background-color: #f4f2f0!important
+}
+a.bg-lightBeige:focus,
+a.bg-lightBeige:hover,
+button.bg-lightBeige:focus,
+button.bg-lightBeige:hover {
+	background-color: #e3d9cf!important
 }
 .bg-cream {
 	background-color: #e9e8d5!important
