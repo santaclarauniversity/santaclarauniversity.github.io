@@ -10357,6 +10357,22 @@ button.close:hover{
     font-size:1.375rem;
     line-height:2.75rem
 }
+.pull-quote-simp-marina {
+	margin-left: 0!important;
+    margin-right: 0!important;
+	background-image: url(https://res.cloudinary.com/scuwebdev/image/upload/v1616783471/ring_marina_xlth0r.png);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.pull-quote-simp-marigold {
+	margin-left: 0!important;
+    margin-right: 0!important;
+	background-image: url(https://res.cloudinary.com/scuwebdev/image/upload/v1617320889/ring_marigold_lzw6wl.png);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
 @media (min-width:1200px){
     .pull-quote blockquote p,.pull-quote-inv blockquote p{
         font-size:1.75rem
