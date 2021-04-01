@@ -12510,7 +12510,8 @@ button.close:hover{
     color: white;
 }
 .quote-container {
-
+	position: relative;
+    display: inline-block;
 }
 .marina-background {
 	background: #033b4c;
