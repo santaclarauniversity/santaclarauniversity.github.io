@@ -9160,6 +9160,12 @@ a.text-beige:focus,a.text-beige:hover{
 a.text-cream:focus,a.text-cream:hover{
     color:#cfcda3!important
 }
+.text-marina{
+    color:#033b4c!important
+}
+a.text-marina:focus,a.text-cream:hover{
+    color:#034559!important
+}
 .text-slate{
     color:#546575!important
 }
@@ -9179,7 +9185,7 @@ a.text-slate:focus,a.text-slate:hover{
     color:#212529!important
 }
 .text-muted{
-    color:#6c757d!important
+    color:#575766!important
 }
 .text-black-50{
     color:rgba(0,0,0,.5)!important
@@ -10324,6 +10330,11 @@ button.close:hover{
 }
 .pull-quote,.pull-quote-inv{
     background:#bd073b;
+    -webkit-transition:background .5s;
+    transition:background .5s
+}
+.pull-quote,.pull-quote-simp{
+    background:#033b4c;
     -webkit-transition:background .5s;
     transition:background .5s
 }
