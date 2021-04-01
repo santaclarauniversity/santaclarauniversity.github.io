@@ -10334,7 +10334,7 @@ button.close:hover{
     transition:background .5s
 }
 .pull-quote,.pull-quote-simp{
-    background:#033b4c;
+    background:#fff;
     -webkit-transition:background .5s;
     transition:background .5s
 }
@@ -10348,9 +10348,16 @@ button.close:hover{
     font-size:1.5rem;
     line-height:1.2
 }
+.pull-quote-simp blockquote p{
+    font-size:1.375rem;
+    line-height:2.75rem
+}
 @media (min-width:1200px){
     .pull-quote blockquote p,.pull-quote-inv blockquote p{
         font-size:1.75rem
+    }
+    .pull-quote-simp blockquote p{
+        font-size:1.375rem
     }
 }
 .pull-quote footer,.pull-quote-inv footer{
