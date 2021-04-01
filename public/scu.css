@@ -10333,11 +10333,6 @@ button.close:hover{
     -webkit-transition:background .5s;
     transition:background .5s
 }
-.pull-quote,.pull-quote-simp{
-    background:#fff;
-    -webkit-transition:background .5s;
-    transition:background .5s
-}
 @media (max-width:767.98px){
     .pull-quote div:nth-child(2),.pull-quote-inv div:nth-child(2){
         margin-top:1.5rem
