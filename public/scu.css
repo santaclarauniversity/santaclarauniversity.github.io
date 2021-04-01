@@ -10338,6 +10338,10 @@ button.close:hover{
         margin-top:1.5rem
     }
 }
+.pull-quote,.pull-quote-inv,.pull-quote-simp {
+	margin-left: 0!important;
+	margin-right: 0!important;
+}
 .pull-quote blockquote p,.pull-quote-inv blockquote p{
     border-left:.25em solid #cc0840;
     font-size:1.5rem;
@@ -12494,3 +12498,25 @@ button.close:hover{
 .border-info-circle{
     border:2px solid #14647c!important
 }
+.quote-badge {
+    position: absolute; 
+    height: 25%;
+    right: 0;
+    width: 25%;
+    text-align: center;
+    line-height: 8rem;
+    font-size: 9rem;
+    border-radius: 50%;
+    color: white;
+}
+.quote-container {
+
+}
+.marina-background {
+	background: #033b4c;
+}
+.marigold-background {
+	background: #edb138;
+}
+
+
