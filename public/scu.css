@@ -12515,7 +12515,7 @@ button.close:hover{
     border-radius: 50%;
     color: white;
 }
-@media only screen (max-width:992px){
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 	.quote-badge {
 		line-height: 5rem;
     	font-size: 6rem;
