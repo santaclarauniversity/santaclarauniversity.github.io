@@ -12515,6 +12515,20 @@ button.close:hover{
     border-radius: 50%;
     color: white;
 }
+@media (min-width:768px){
+	.quote-badge {
+		line-height: 5rem;
+    	font-size: 6rem;
+	}
+
+}
+@media (min-width:375px){
+	.quote-badge {
+		line-height: 7rem;
+    	font-size: 8rem;
+	}
+
+}
 .quote-container {
 	position: relative;
     display: inline-block;
