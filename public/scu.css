@@ -3947,6 +3947,9 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     pointer-events:none;
     cursor:default
 }
+.nav-link .fal.fa-angle-down {
+	margin-left:.2rem;
+}
 .nav-tabs{
     border-bottom:1px solid #dee2e6
 }
@@ -5113,6 +5116,15 @@ a.badge-slate.focus,a.badge-slate:focus{
 .alert-slate .alert-link{
     color:#171b1f
 }
+.alert-site-wide.fixed-bottom {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+	border:0;
+	background-color:#033b4c;
+	z-index:auto;
+}
 @-webkit-keyframes progress-bar-stripes{
     from{
         background-position:1rem 0
@@ -5569,6 +5581,9 @@ button.close{
     -webkit-appearance:none;
     -moz-appearance:none;
     appearance:none
+}
+button.float-right.mt-1.btn.text-white.ml-1.dismiss-alert:focus {
+    box-shadow: 0 0 0 0.2rem rgb(255 255 255);
 }
 a.close.disabled{
     pointer-events:none
@@ -9090,6 +9105,12 @@ a.bg-slate:focus,a.bg-slate:hover,button.bg-slate:focus,button.bg-slate:hover{
 }
 #content.legacy-headers h2,#content.legacy-headers h4,#content.legacy-headers h6,.jumbotron.hero .caption p a,.text-primary{
     color:#b30738!important
+}
+#content p a, #content li a {
+	text-decoration:underline;
+}
+#content a.btn {
+	text-decoration:none;
 }
 .jumbotron.hero .caption p a:focus,.jumbotron.hero .caption p a:hover,a.text-primary:focus,a.text-primary:hover{
     color:#690421!important
