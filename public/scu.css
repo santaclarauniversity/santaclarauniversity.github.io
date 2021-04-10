@@ -3935,9 +3935,6 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     margin-bottom:0;
     list-style:none
 }
-.nav-link .fal.fa-angle-down {
-	margin-left:.2rem;
-}
 .nav-link{
     display:block;
     padding:.5rem 1rem
@@ -4061,6 +4058,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 .navbar-nav .nav-link{
     padding-right:0;
     padding-left:0
+    font-size: 15px;
 }
 .navbar-nav .dropdown-menu{
     position:static;
@@ -12575,6 +12573,9 @@ button.close:hover{
 	background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+.nav-link .fal.fa-angle-down {
+	margin-left:.2rem;
 }
 
 
