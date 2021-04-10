@@ -3935,6 +3935,9 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     margin-bottom:0;
     list-style:none
 }
+.nav-link .fal.fa-angle-down {
+	margin-left:.2rem;
+}
 .nav-link{
     display:block;
     padding:.5rem 1rem
@@ -3946,9 +3949,6 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     color:#6c757d;
     pointer-events:none;
     cursor:default
-}
-.nav-link .fal.fa-angle-down {
-	margin-left:.2rem;
 }
 .nav-tabs{
     border-bottom:1px solid #dee2e6
