@@ -5114,15 +5114,6 @@ a.badge-slate.focus,a.badge-slate:focus{
 .alert-slate .alert-link{
     color:#171b1f
 }
-.alert-site-wide.fixed-bottom {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    left: auto;
-	border:0;
-	background-color:#033b4c;
-	z-index:auto;
-}
 @-webkit-keyframes progress-bar-stripes{
     from{
         background-position:1rem 0
