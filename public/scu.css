@@ -9096,7 +9096,7 @@ a.bg-slate:focus,a.bg-slate:hover,button.bg-slate:focus,button.bg-slate:hover{
     color:#b30738!important
 }
 #content p a, #content li a {
-	text-decoration:underline!important;
+	text-decoration:underline;
 }		
 #content a.btn {
 	text-decoration:none;
