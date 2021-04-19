@@ -112,6 +112,9 @@
             <a href="content-types.html#agenda">Agenda</a>
           </li>
           <li>
+            <a href="content-types.html#alert">Alert</a>
+          </li>
+          <li>
             <a href="content-types.html#announcement">Announcement</a>
           </li>
           <li>
@@ -119,6 +122,11 @@
           </li>
           <li>
             <a href="content-types.html#button">Button</a>
+          </li>
+          <li>
+            <a href="content-types.html#by-the-numbers">By The Numbers</a>
+          </li>
+            <a href="content-types.html#call-to-action">Call To Action</a>
           </li>
           <li>
             <a href="content-types.html#card">Card</a>
@@ -708,7 +716,72 @@
 
 </div>
 
+<div class="f-item-group" id="alert">
 
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <h2 class="f-item-heading">Alert</h2>
+    <div class="f-item-controls">
+      
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg>
+          <use xlink:href="#f-icon-code"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+  
+  <div class="f-item-preview">
+    <div class="container" style="padding:0;">
+    <p class="border border-exclamation-triangle mt-3 mb-0 py-3 px-4 text-center" style="background-color: #fff;">
+      <i class="fas fa-exclamation-triangle text-exclamation-triangle text-center mt-1 mr-1"><span class="sr-only">Alert icon</span></i>
+      <span class="text-bold text-exclamation-triangle" style="font-weight:800">First Option:</span>
+      Use for emergency notifications (ie.&nbsp;<a href="/preparedscu/faqs/">COVID-19 FAQs</a>).</p>
+    <p></p>
+  </div>
+  
+  <div class="container" style="padding:0;">
+    <p class="border border-info-circle mt-3 mb-0 py-3 px-4 text-center" style="background-color: #fff;">
+      <i class="fas fa-info-circle text-info-circle text-center mt-1 mr-1"><span class="sr-only">Alert icon</span></i>
+      <span class="text-bold text-info-circle" style="font-weight:800">Second Option:</span>
+      Used for informational purposes.</p>
+    <p></p>
+  </div>
+  
+  <div class="container" style="padding:0;">
+    <p class="border border-flag mt-3 mb-0 py-3 px-4 text-center" style="background-color: #fff;">
+      <i class="fas fa-flag text-flag text-center mt-1 mr-1"><span class="sr-only">Alert icon</span></i>
+      <span class="text-bold text-flag" style="font-weight:800">Third Option:</span>
+      Used as a warning or reminder alert.</p>
+    <p></p>
+  </div>
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;div class&#x3D;&quot;container&quot; style&#x3D;&quot;padding:0;&quot;&gt;
+    &lt;p class&#x3D;&quot;border border-exclamation-triangle mt-3 mb-0 py-3 px-4 text-center&quot; style&#x3D;&quot;background-color: #fff;&quot;&gt;
+      &lt;i class&#x3D;&quot;fas fa-exclamation-triangle text-exclamation-triangle text-center mt-1 mr-1&quot;&gt;&lt;span class&#x3D;&quot;sr-only&quot;&gt;Alert icon&lt;/span&gt;&lt;/i&gt;
+      &lt;span class&#x3D;&quot;text-bold text-exclamation-triangle&quot; style&#x3D;&quot;font-weight:800&quot;&gt;First Option:&lt;/span&gt;
+      Use for emergency notifications (ie.&amp;nbsp;&lt;a href&#x3D;&quot;/preparedscu/faqs/&quot;&gt;COVID-19 FAQs&lt;/a&gt;).&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div class&#x3D;&quot;container&quot; style&#x3D;&quot;padding:0;&quot;&gt;
+    &lt;p class&#x3D;&quot;border border-info-circle mt-3 mb-0 py-3 px-4 text-center&quot; style&#x3D;&quot;background-color: #fff;&quot;&gt;
+      &lt;i class&#x3D;&quot;fas fa-info-circle text-info-circle text-center mt-1 mr-1&quot;&gt;&lt;span class&#x3D;&quot;sr-only&quot;&gt;Alert icon&lt;/span&gt;&lt;/i&gt;
+      &lt;span class&#x3D;&quot;text-bold text-info-circle&quot; style&#x3D;&quot;font-weight:800&quot;&gt;Second Option:&lt;/span&gt;
+      Used for informational purposes.&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div class&#x3D;&quot;container&quot; style&#x3D;&quot;padding:0;&quot;&gt;
+    &lt;p class&#x3D;&quot;border border-flag mt-3 mb-0 py-3 px-4 text-center&quot; style&#x3D;&quot;background-color: #fff;&quot;&gt;
+      &lt;i class&#x3D;&quot;fas fa-flag text-flag text-center mt-1 mr-1&quot;&gt;&lt;span class&#x3D;&quot;sr-only&quot;&gt;Alert icon&lt;/span&gt;&lt;/i&gt;
+      &lt;span class&#x3D;&quot;text-bold text-flag&quot; style&#x3D;&quot;font-weight:800&quot;&gt;Third Option:&lt;/span&gt;
+      Used as a warning or reminder alert.&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/div&gt;</code></pre>
+  </div>
+
+</div>
 <div class="f-item-group" id="announcement">
 
   <div class="f-item-heading-group" data-f-toggle="labels">
@@ -936,6 +1009,245 @@
   &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-outline-info&quot;&gt;Info&lt;/button&gt;
   &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-outline-warning&quot;&gt;Warning&lt;/button&gt;
   &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-outline-danger&quot;&gt;Danger&lt;/button&gt;</code></pre>
+  </div>
+
+</div>
+
+<div class="f-item-group" id="by-the-numbers">
+
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <h2 class="f-item-heading">By The Numbers</h2>
+    <div class="f-item-controls">
+      
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg>
+          <use xlink:href="#f-icon-code"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+  
+  <div class="f-item-preview">
+    <div class="large-stats block bg-light-stat light-stat-text has-dim-0 text-center mb-0" style="border-radius:0;">
+    <div class="container">
+      <div class="h1 block-title light-stat-text" style="padding-bottom: 15px;">Heading</div>
+      <div class="row justify-content-center">
+        <div class="col-md-10 text-center light-stat-text" style="padding-bottom:30px;">Body</div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-10 col-md-6 col-lg-3 light-stat">
+          <div class="text-center light-stat large-stats-numbers" style="font-weight: 400; border: none;"><strong>Stat1</strong></div>
+          <div class="text-center light-stat-text">Stat 1 Description*</div>
+          <div class="text-center">&nbsp;</div>
+        </div>
+        <div class="col-10 col-md-6 col-lg-3 light-stat">
+          <div class="text-center light-stat large-stats-numbers" style="font-weight: 400;"><strong>Stat2</strong></div>
+          <div class="text-center light-stat-text">Stat 2 Description</div>
+          <div class="text-center">&nbsp;</div>
+        </div>
+        <div class="col-10 col-md-6 col-lg-3 light-stat">
+          <div class="text-center light-stat large-stats-numbers" style="font-weight: 400;"><strong>Stat3</strong></div>
+          <div class="text-center light-stat-text">Stat 3 Description</div>
+          <div class="text-center">&nbsp;</div>
+        </div>
+        <div class="col-10 col-md-6 col-lg-3 light-stat">
+          <div class="text-center light-stat large-stats-numbers" style="font-weight: 400;"><strong>Stat4</strong></div>
+          <div class="text-center light-stat-text">Stat 4 Description</div>
+          <div class="text-center">&nbsp;</div>
+        </div>
+      </div>
+      <div class="text-center" style="padding-top:15px;">
+        <p><a class="btn btn-primary px-5 d-sm-inline-block" href="#">Internal or External Button Link</a></p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;div class&#x3D;&quot;large-stats block bg-light-stat light-stat-text has-dim-0 text-center mb-0&quot; style&#x3D;&quot;border-radius:0;&quot;&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+      &lt;div class&#x3D;&quot;h1 block-title light-stat-text&quot; style&#x3D;&quot;padding-bottom: 15px;&quot;&gt;Heading&lt;/div&gt;
+      &lt;div class&#x3D;&quot;row justify-content-center&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-10 text-center light-stat-text&quot; style&#x3D;&quot;padding-bottom:30px;&quot;&gt;Body&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;row justify-content-center&quot;&gt;
+        &lt;div class&#x3D;&quot;col-10 col-md-6 col-lg-3 light-stat&quot;&gt;
+          &lt;div class&#x3D;&quot;text-center light-stat large-stats-numbers&quot; style&#x3D;&quot;font-weight: 400; border: none;&quot;&gt;&lt;strong&gt;Stat1&lt;/strong&gt;&lt;/div&gt;
+          &lt;div class&#x3D;&quot;text-center light-stat-text&quot;&gt;Stat 1 Description*&lt;/div&gt;
+          &lt;div class&#x3D;&quot;text-center&quot;&gt;&amp;nbsp;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-10 col-md-6 col-lg-3 light-stat&quot;&gt;
+          &lt;div class&#x3D;&quot;text-center light-stat large-stats-numbers&quot; style&#x3D;&quot;font-weight: 400;&quot;&gt;&lt;strong&gt;Stat2&lt;/strong&gt;&lt;/div&gt;
+          &lt;div class&#x3D;&quot;text-center light-stat-text&quot;&gt;Stat 2 Description&lt;/div&gt;
+          &lt;div class&#x3D;&quot;text-center&quot;&gt;&amp;nbsp;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-10 col-md-6 col-lg-3 light-stat&quot;&gt;
+          &lt;div class&#x3D;&quot;text-center light-stat large-stats-numbers&quot; style&#x3D;&quot;font-weight: 400;&quot;&gt;&lt;strong&gt;Stat3&lt;/strong&gt;&lt;/div&gt;
+          &lt;div class&#x3D;&quot;text-center light-stat-text&quot;&gt;Stat 3 Description&lt;/div&gt;
+          &lt;div class&#x3D;&quot;text-center&quot;&gt;&amp;nbsp;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-10 col-md-6 col-lg-3 light-stat&quot;&gt;
+          &lt;div class&#x3D;&quot;text-center light-stat large-stats-numbers&quot; style&#x3D;&quot;font-weight: 400;&quot;&gt;&lt;strong&gt;Stat4&lt;/strong&gt;&lt;/div&gt;
+          &lt;div class&#x3D;&quot;text-center light-stat-text&quot;&gt;Stat 4 Description&lt;/div&gt;
+          &lt;div class&#x3D;&quot;text-center&quot;&gt;&amp;nbsp;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;text-center&quot; style&#x3D;&quot;padding-top:15px;&quot;&gt;
+        &lt;p&gt;&lt;a class&#x3D;&quot;btn btn-primary px-5 d-sm-inline-block&quot; href&#x3D;&quot;#&quot;&gt;Internal or External Button Link&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+  </div>
+
+</div>
+<div class="f-item-group" id="call-to-action">
+
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <h2 class="f-item-heading">Call To Action</h2>
+    <div class="f-item-controls">
+      
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg>
+          <use xlink:href="#f-icon-code"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+  
+  <div class="f-item-preview">
+    <nav aria-label="Call to Action">
+  
+    <div class="d-flex jumbotron light-cta block text-white has-dim-0 text-center mb-0">
+      <div class="container ml-auto my-auto text-center">
+        <div class="h1 block-title action"><span class="display-4 text-light-cta-title">Heading*</span></div>
+        <div class="row justify-content-center">
+          <div class="col-10 text-light-cta">Body</div>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-md-4">
+            <p class="text-center"><a style="font-size: 1.563rem;" class="w-100 py-3 text-weight-lighter   btn btn-primary" href="#">Button 1 Link Text</a></p>
+          </div>
+          <div class="col-md-4">
+            <p class="text-center"><a style="font-size: 1.563rem;" class="w-100 py-3 text-weight-lighter   btn btn-primary" href="#">Button 2 Link Text</a></p>
+          </div>
+          <div class="col-md-4">
+            <p class="text-center"><a style="font-size: 1.563rem;" class="w-100 py-3 text-weight-lighter   btn btn-primary" href="#">Button 3 Link Text</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  
+    <div class="d-flex jumbotron dark-cta block text-white has-dim-0 text-center mb-0">
+      <div class="container ml-auto my-auto text-center">
+        <div class="h1 block-title action"><span class="display-4 text-dark-cta-title">Invent the Life You Want to Lead</span></div>
+        <div class="row justify-content-center">
+          <div class="col-10 text-dark-cta"></div>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-md-4">
+            <p class="text-center"><a style="font-size: 1.563rem;" class="w-100 py-3 text-weight-lighter   btn btn-dark-cta" href="https://www.scu.edu/admission/visits-events/virtualscu/">Visit Virtually</a></p>
+          </div>
+          <div class="col-md-4">
+            <p class="text-center"><a style="font-size: 1.563rem;" class="w-100 py-3 text-weight-lighter   btn btn-dark-cta" href="https://www.scu.edu/admission/">Apply Now</a></p>
+          </div>
+          <div class="col-md-4">
+            <p class="text-center"><a style="font-size: 1.563rem;" class="w-100 py-3 text-weight-lighter   btn btn-dark-cta" href="https://www.scu.edu/admission/rfi/">Join Our Mailing List</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <br><br>
+  
+    <div class="d-flex jumbotron block text-white has-dim-4 text-center mb-0" style="background-image:url(https://www.scu.edu/media/institutional-pages/admission/images/marketing001-1000x667.jpg);border-radius:0; background-repeat: no-repeat;background-position: center;min-height: 490px; background-color: #546575;">
+      <div class="container ml-auto my-auto text-center">
+        <div class="h1 block-title action"><span class="display-4 text-photo-title">It's Good to be a Bronco</span></div>
+        <div class="row justify-content-center">
+          <div class="col-10 text-photo">Being in the heart of Silicon Valley means you’re down the street from some of the most innovative and successful businesses in the world. An SCU education is an investment that will pay off throughout the course of your life, both financially and personally. </div>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-md-4">
+            <p class="text-center"><a style="font-size: 1.563rem;" class="w-100 py-3 text-weight-lighter   btn btn-primary" href="/admission/choosing-scu/">Why Choose SCU</a></p>
+          </div>
+          <div class="col-md-4">
+            <p class="text-center"><a style="font-size: 1.563rem;" class="w-100 py-3 text-weight-lighter   btn btn-primary" href="/admission/visits-events/">Visits and Tours</a></p>
+          </div>
+          <div class="col-md-4">
+            <p class="text-center"><a style="font-size: 1.563rem;" class="w-100 py-3 text-weight-lighter   btn btn-primary" href="/admission/financial-aid/">Financial Aid</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;nav aria-label&#x3D;&quot;Call to Action&quot;&gt;
+  
+    &lt;div class&#x3D;&quot;d-flex jumbotron light-cta block text-white has-dim-0 text-center mb-0&quot;&gt;
+      &lt;div class&#x3D;&quot;container ml-auto my-auto text-center&quot;&gt;
+        &lt;div class&#x3D;&quot;h1 block-title action&quot;&gt;&lt;span class&#x3D;&quot;display-4 text-light-cta-title&quot;&gt;Heading*&lt;/span&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;row justify-content-center&quot;&gt;
+          &lt;div class&#x3D;&quot;col-10 text-light-cta&quot;&gt;Body&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row justify-content-center pt-5&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;p class&#x3D;&quot;text-center&quot;&gt;&lt;a style&#x3D;&quot;font-size: 1.563rem;&quot; class&#x3D;&quot;w-100 py-3 text-weight-lighter   btn btn-primary&quot; href&#x3D;&quot;#&quot;&gt;Button 1 Link Text&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;p class&#x3D;&quot;text-center&quot;&gt;&lt;a style&#x3D;&quot;font-size: 1.563rem;&quot; class&#x3D;&quot;w-100 py-3 text-weight-lighter   btn btn-primary&quot; href&#x3D;&quot;#&quot;&gt;Button 2 Link Text&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;p class&#x3D;&quot;text-center&quot;&gt;&lt;a style&#x3D;&quot;font-size: 1.563rem;&quot; class&#x3D;&quot;w-100 py-3 text-weight-lighter   btn btn-primary&quot; href&#x3D;&quot;#&quot;&gt;Button 3 Link Text&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br&gt;&lt;br&gt;
+  
+    &lt;div class&#x3D;&quot;d-flex jumbotron dark-cta block text-white has-dim-0 text-center mb-0&quot;&gt;
+      &lt;div class&#x3D;&quot;container ml-auto my-auto text-center&quot;&gt;
+        &lt;div class&#x3D;&quot;h1 block-title action&quot;&gt;&lt;span class&#x3D;&quot;display-4 text-dark-cta-title&quot;&gt;Invent the Life You Want to Lead&lt;/span&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;row justify-content-center&quot;&gt;
+          &lt;div class&#x3D;&quot;col-10 text-dark-cta&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row justify-content-center pt-5&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;p class&#x3D;&quot;text-center&quot;&gt;&lt;a style&#x3D;&quot;font-size: 1.563rem;&quot; class&#x3D;&quot;w-100 py-3 text-weight-lighter   btn btn-dark-cta&quot; href&#x3D;&quot;https://www.scu.edu/admission/visits-events/virtualscu/&quot;&gt;Visit Virtually&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;p class&#x3D;&quot;text-center&quot;&gt;&lt;a style&#x3D;&quot;font-size: 1.563rem;&quot; class&#x3D;&quot;w-100 py-3 text-weight-lighter   btn btn-dark-cta&quot; href&#x3D;&quot;https://www.scu.edu/admission/&quot;&gt;Apply Now&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;p class&#x3D;&quot;text-center&quot;&gt;&lt;a style&#x3D;&quot;font-size: 1.563rem;&quot; class&#x3D;&quot;w-100 py-3 text-weight-lighter   btn btn-dark-cta&quot; href&#x3D;&quot;https://www.scu.edu/admission/rfi/&quot;&gt;Join Our Mailing List&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  
+    &lt;br&gt;&lt;br&gt;
+  
+    &lt;div class&#x3D;&quot;d-flex jumbotron block text-white has-dim-4 text-center mb-0&quot; style&#x3D;&quot;background-image:url(https://www.scu.edu/media/institutional-pages/admission/images/marketing001-1000x667.jpg);border-radius:0; background-repeat: no-repeat;background-position: center;min-height: 490px; background-color: #546575;&quot;&gt;
+      &lt;div class&#x3D;&quot;container ml-auto my-auto text-center&quot;&gt;
+        &lt;div class&#x3D;&quot;h1 block-title action&quot;&gt;&lt;span class&#x3D;&quot;display-4 text-photo-title&quot;&gt;It&#x27;s Good to be a Bronco&lt;/span&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;row justify-content-center&quot;&gt;
+          &lt;div class&#x3D;&quot;col-10 text-photo&quot;&gt;Being in the heart of Silicon Valley means you’re down the street from some of the most innovative and successful businesses in the world. An SCU education is an investment that will pay off throughout the course of your life, both financially and personally. &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row justify-content-center pt-5&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;p class&#x3D;&quot;text-center&quot;&gt;&lt;a style&#x3D;&quot;font-size: 1.563rem;&quot; class&#x3D;&quot;w-100 py-3 text-weight-lighter   btn btn-primary&quot; href&#x3D;&quot;/admission/choosing-scu/&quot;&gt;Why Choose SCU&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;p class&#x3D;&quot;text-center&quot;&gt;&lt;a style&#x3D;&quot;font-size: 1.563rem;&quot; class&#x3D;&quot;w-100 py-3 text-weight-lighter   btn btn-primary&quot; href&#x3D;&quot;/admission/visits-events/&quot;&gt;Visits and Tours&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;p class&#x3D;&quot;text-center&quot;&gt;&lt;a style&#x3D;&quot;font-size: 1.563rem;&quot; class&#x3D;&quot;w-100 py-3 text-weight-lighter   btn btn-primary&quot; href&#x3D;&quot;/admission/financial-aid/&quot;&gt;Financial Aid&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;</code></pre>
   </div>
 
 </div>
@@ -1871,7 +2183,9 @@
     				<a href="/" class="footer-wordmark">Santa Clara University</a>
     			</span>
     			<div class="mr-auto">
-    				&copy; 2018 &middot; <a href="/accessibility" class="text-white">Accessibility</a>
+    				&copy; <script>
+    					document.write(new Date().getUTCFullYear());
+    				</script> &middot; <a href="/accessibility" class="text-white">Accessibility</a>
     			</div>
     			<a href="/login" class="text-white px-2">Login</a>
     			<span class="text-white px-2">|</span>
@@ -1972,7 +2286,9 @@
     				&lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;footer-wordmark&quot;&gt;Santa Clara University&lt;/a&gt;
     			&lt;/span&gt;
     			&lt;div class&#x3D;&quot;mr-auto&quot;&gt;
-    				&amp;copy; 2018 &amp;middot; &lt;a href&#x3D;&quot;/accessibility&quot; class&#x3D;&quot;text-white&quot;&gt;Accessibility&lt;/a&gt;
+    				&amp;copy; &lt;script&gt;
+    					document.write(new Date().getUTCFullYear());
+    				&lt;/script&gt; &amp;middot; &lt;a href&#x3D;&quot;/accessibility&quot; class&#x3D;&quot;text-white&quot;&gt;Accessibility&lt;/a&gt;
     			&lt;/div&gt;
     			&lt;a href&#x3D;&quot;/login&quot; class&#x3D;&quot;text-white px-2&quot;&gt;Login&lt;/a&gt;
     			&lt;span class&#x3D;&quot;text-white px-2&quot;&gt;|&lt;/span&gt;
@@ -2087,7 +2403,9 @@
     				<a href="/" class="footer-wordmark">Santa Clara University</a>
     			</span>
     			<div class="mr-auto">
-    				&copy; 2018 &middot; <a href="/accessibility" class="text-white">Accessibility</a>
+    				&copy; <script>
+    					document.write(new Date().getUTCFullYear());
+    				</script> &middot; <a href="/accessibility" class="text-white">Accessibility</a>
     			</div>
     			<a href="/login" class="text-white px-2">Login</a>
     			<span class="text-white px-2">|</span>
@@ -2181,7 +2499,9 @@
     				&lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;footer-wordmark&quot;&gt;Santa Clara University&lt;/a&gt;
     			&lt;/span&gt;
     			&lt;div class&#x3D;&quot;mr-auto&quot;&gt;
-    				&amp;copy; 2018 &amp;middot; &lt;a href&#x3D;&quot;/accessibility&quot; class&#x3D;&quot;text-white&quot;&gt;Accessibility&lt;/a&gt;
+    				&amp;copy; &lt;script&gt;
+    					document.write(new Date().getUTCFullYear());
+    				&lt;/script&gt; &amp;middot; &lt;a href&#x3D;&quot;/accessibility&quot; class&#x3D;&quot;text-white&quot;&gt;Accessibility&lt;/a&gt;
     			&lt;/div&gt;
     			&lt;a href&#x3D;&quot;/login&quot; class&#x3D;&quot;text-white px-2&quot;&gt;Login&lt;/a&gt;
     			&lt;span class&#x3D;&quot;text-white px-2&quot;&gt;|&lt;/span&gt;
