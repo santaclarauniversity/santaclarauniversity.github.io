@@ -10088,7 +10088,7 @@ button.close:hover{
 .announcement{
     border-left:1px solid #b30738
 }
-.announcement h3{
+.announcement.h3{
     display:inline-block;
     padding:6px 11px;
     margin:0;
