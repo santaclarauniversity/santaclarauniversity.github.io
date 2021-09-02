@@ -9302,7 +9302,7 @@ a.text-slate:focus,a.text-slate:hover{
 .text-serif-bold{
     font-family:BauerBodoniW01-BlackIta
 }
-.accordion-item.h5{
+.accordion-item.h5.text-sans-light{
     color: #000;
 }
 .accordion-item h5,.text-sans-light{
