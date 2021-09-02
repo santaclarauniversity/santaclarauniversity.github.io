@@ -9302,6 +9302,9 @@ a.text-slate:focus,a.text-slate:hover{
 .text-serif-bold{
     font-family:BauerBodoniW01-BlackIta
 }
+.accordion-item.h5{
+    color: #000;
+}
 .accordion-item h5,.text-sans-light{
     font-family:"Trade Gothic W01 Light";
     -webkit-font-smoothing:initial!important;
