@@ -10029,7 +10029,8 @@ a{
     color:#000
 }
 .accordion-item.h5.text-sans-light{
-    color: #000;
+    color:#000;
+    border:none;
 }
 .accordion-item a:hover{
     text-decoration:none
