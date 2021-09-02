@@ -1,4 +1,4 @@
-@import url(//fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35);
+import url(//fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35);
 @media print{
     *,::after,::before{
         text-shadow:none!important;
@@ -4593,7 +4593,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     color:#690421!important;
     text-decoration:underline
 }
-h4.card-title.linked{
+h4.card-title.linked,.h4.card-title.linked{
     color:#b30738!important
 }
 .accordion>.card{
