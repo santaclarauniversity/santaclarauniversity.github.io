@@ -1,4 +1,5 @@
 import url(//fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35);
+import url(//fast.fonts.net/t/1.css?apiType=css&projectid=10d6a69a-32e7-4fc5-9b58-3c811429a395);
 @media print{
     *,::after,::before{
         text-shadow:none!important;
@@ -9293,8 +9294,29 @@ a.text-slate:focus,a.text-slate:hover{
     src:url(https://assets.scu.edu/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix);
     src:url(https://assets.scu.edu/fonts/5cbd8dde-fb39-4dd1-aa25-5bb5842eb03d.eot?#iefix) format("eot"),url(https://assets.scu.edu/fonts/610145ac-dd31-4024-b833-3ab0ce6b7847.woff2) format("woff2"),url(https://assets.scu.edu/fonts/b4312891-e355-4bdc-80c9-ef3dbf7bd916.woff) format("woff"),url(https://assets.scu.edu/fonts/124dc47b-32a0-4543-a60e-d8aad32782b4.ttf) format("truetype"),url(https://assets.scu.edu/fonts/001e534b-3742-45b3-b20b-d4c53c41a519.svg#001e534b-3742-45b3-b20b-d4c53c41a519) format("svg")
 }
+@font-face{
+    font-family:"Trade Gothic Next LT W01 Rg";
+    src:url("https://assets.scu.edu/fonts/376eee11-9a10-4bc6-a111-8ab1e673bb6b.woff2") format("woff2"),url("https://assets.scu.edu/fonts c702ae07-0339-4b2c-86b6-94ecb316d6d0.woff") format("woff2");
+}
+@font-face{
+    font-family:"Trade Gothic Next LT W01 Bold";
+    src:url("https://assets.scu.edu/fonts/ec10339d-18e7-4c13-9a86-00306eb3d186.woff2") format("woff2"),url("https://assets.scu.edu/fonts/98aa2c71-be1a-4f71-87b3-8867283a25b7.woff") format("woff");
+}
+@font-face{
+    font-family:"Trade Gothic LT W05 Bold";
+    src:url("<https://assets.scu.edu/fonts/30aba873-93af-406b-b54a-66c5b5e82896.woff2") format("woff2"),url("https://assets.scu.edu/fonts/59cd5e10-9d20-4b86-850d-78b9beb6dfcd.woff") format("woff");
+}
 .text-trajan{
     font-family:"Trajan W01 Regular","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+.trade-gothic-next-lt-rg {
+    font-family:"Trade Gothic Next LT W01 Rg";   
+}
+.trade-gothic-next-lt-bold {
+    font-family:"Trade Gothic Next LT W01 Bold";   
+}          
+.trade-gothic-lt-w05-bold {
+    font-family:"Trade Gothic LT W05 Bold";   
 }
 .text-serif{
     font-family:"Bauer Bodoni W01 Italic"
