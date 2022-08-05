@@ -12604,4 +12604,21 @@ button.close:hover{
 	margin-left:.2rem;
 }
 
+/*split display content type*/
+.splitdisplay-col {
+    position:relative;
+    width:100%;
+    padding-right:15px;
+    padding-left:15px
+}
+@media (min-width:576px){
+    .splitdisplay-col {
+        -webkit-box-flex:0;
+        -ms-flex:0 0 50%;
+        flex:0 0 50%;
+        max-width:50%
+    }
+}
+
+
 
