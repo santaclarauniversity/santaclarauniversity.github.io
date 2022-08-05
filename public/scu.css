@@ -12611,12 +12611,12 @@ button.close:hover{
     padding-right:15px;
     padding-left:15px
 }
-@media (min-width:904px) {
+@media (min-width:904px){
     .splitdisplay-col {
         -webkit-box-flex:0;
         -ms-flex:0 0 50%;
-        flex:none;
-        max-width:none;
+        flex:0 0 50%;
+        max-width:50%
     }
 }
 
