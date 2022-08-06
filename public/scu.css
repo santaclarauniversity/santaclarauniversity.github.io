@@ -12618,11 +12618,11 @@ button.close:hover{
         flex:0 0 50%;
         max-width:50%
     }
+}
+@media (min-width:576px){
     .splitdisplay-txt.col-sm-10.col-lg-10 {
-        padding-top:  20px;
+        padding-top: 20px;
         padding-bottom: 40px;
     }
 }
-
-
 
