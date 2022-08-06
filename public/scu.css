@@ -10298,6 +10298,14 @@ button.close:hover{
     background-color:#b30738;
     border:1px solid #b30738
 }
+.link-button.white{
+    background-color:#FFF;
+    border:1px solid #b30738;
+    color:#b30738
+}
+.link-button.white:hover{
+    background-color:#fafafa
+}
 .link-button.brand-primary:hover,.link-button.maroon:hover{
     background-color:#9a0630
 }
