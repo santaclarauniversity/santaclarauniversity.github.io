@@ -12619,7 +12619,7 @@ button.close:hover{
         max-width:50%
     }
 }
-@media (max-device-width: 904px) {
+@media (max-width: 904px) {
     .splitdisplay-txt.col-sm-10.col-lg-10 {
         padding-top: 20px;
         padding-bottom: 40px;
