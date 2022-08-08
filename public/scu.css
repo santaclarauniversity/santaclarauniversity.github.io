@@ -10294,7 +10294,11 @@ button.close:hover{
     color:#fff;
     text-decoration:none
 }
-.link-button.brand-primary,.link-button.maroon{
+.link-button.brand-primary {
+    background-color:#b30738;
+    border:1px solid #FFFFFF
+}
+.link-button.maroon{
     background-color:#b30738;
     border:1px solid #b30738
 }
