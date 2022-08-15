@@ -2348,7 +2348,7 @@ a.btn.disabled,fieldset:disabled a.btn{
 }
 .btn-primary:not(:disabled):not(.disabled).active:focus,.btn-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-primary.dropdown-toggle:focus{
     -webkit-box-shadow:0 0 0 .1rem rgba(255,255,255);
-    box-shadow:0 0 0 .2rem rgba(255,255,255);
+    box-shadow:0 0 0 .2rem rgba(255,255,255)
 }
 .btn-secondary{
     color:#fff;
@@ -4357,7 +4357,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 }
 .navbar-dark .navbar-nav .nav-link{
     color:rgba(255,255,255,.5);
-    font-size: 15px !important;
+    font-size: 15px !important
 }
 .navbar-dark .navbar-nav .nav-link:focus,.navbar-dark .navbar-nav .nav-link:hover{
     color:rgba(255,255,255,.75)
@@ -5573,7 +5573,7 @@ button.close{
     appearance:none
 }
 button.float-right.mt-1.btn.text-white.ml-1.dismiss-alert:focus {
-    box-shadow: 0 0 0 0.2rem rgb(255 255 255);
+    box-shadow: 0 0 0 0.2rem rgb(255 255 255)
 }
 a.close.disabled{
     pointer-events:none
@@ -9097,10 +9097,10 @@ a.bg-slate:focus,a.bg-slate:hover,button.bg-slate:focus,button.bg-slate:hover{
     color:#b30738!important
 }
 #content p a, #content li a {
-	text-decoration:underline;
+	text-decoration:underline
 }		
 #content a.btn {
-	text-decoration:none;
+	text-decoration:none
 }
 .jumbotron.hero .caption p a:focus,.jumbotron.hero .caption p a:hover,a.text-primary:focus,a.text-primary:hover{
     color:#690421!important
@@ -9296,15 +9296,15 @@ a.text-slate:focus,a.text-slate:hover{
 }
 @font-face{
     font-family:"Trade Gothic Next LT W01 Rg";
-    src:url(https://assets.scu.edu/fonts/376eee11-9a10-4bc6-a111-8ab1e673bb6b.woff2) format("woff2"),url(https://assets.scu.edu/fonts c702ae07-0339-4b2c-86b6-94ecb316d6d0.woff) format("woff2");
+    src:url(https://assets.scu.edu/fonts/376eee11-9a10-4bc6-a111-8ab1e673bb6b.woff2) format("woff2"),url(https://assets.scu.edu/fonts c702ae07-0339-4b2c-86b6-94ecb316d6d0.woff) format("woff2")
 }
 @font-face{
     font-family:"Trade Gothic Next LT W01 Bold";
-    src:url(https://assets.scu.edu/fonts/ec10339d-18e7-4c13-9a86-00306eb3d186.woff2) format("woff2"),url(https://assets.scu.edu/fonts/98aa2c71-be1a-4f71-87b3-8867283a25b7.woff) format("woff");
+    src:url(https://assets.scu.edu/fonts/ec10339d-18e7-4c13-9a86-00306eb3d186.woff2) format("woff2"),url(https://assets.scu.edu/fonts/98aa2c71-be1a-4f71-87b3-8867283a25b7.woff) format("woff")
 }
 @font-face{
     font-family:"Trade Gothic LT W05 Bold";
-    src:url(https://assets.scu.edu/fonts/30aba873-93af-406b-b54a-66c5b5e82896.woff2) format("woff2"),url(https://assets.scu.edu/fonts/59cd5e10-9d20-4b86-850d-78b9beb6dfcd.woff) format("woff");
+    src:url(https://assets.scu.edu/fonts/30aba873-93af-406b-b54a-66c5b5e82896.woff2) format("woff2"),url(https://assets.scu.edu/fonts/59cd5e10-9d20-4b86-850d-78b9beb6dfcd.woff) format("woff")
 }
 .text-trajan{
     font-family:"Trajan W01 Regular","Helvetica Neue",Helvetica,Arial,sans-serif
@@ -10052,7 +10052,7 @@ a{
 }
 .accordion-item.h5.text-sans-light{
     color:#000;
-    border:none;
+    border:none
 }
 .accordion-item a:hover{
     text-decoration:none
@@ -10403,7 +10403,7 @@ button.close:hover{
 }
 .pull-quote,.pull-quote-inv,.pull-quote-simp {
 	margin-left: 0!important;
-	margin-right: 0!important;
+	margin-right: 0!important
 }
 .pull-quote blockquote p,.pull-quote-inv blockquote p{
     border-left:.25em solid #cc0840;
@@ -12437,7 +12437,7 @@ button.close:hover{
 }
 .text-center.general-stat.large-stats-numbers,.text-center.light-stat.large-stats-numbers,
 .text-center.dark-stat.large-stats-numbers{
-    height:90px;
+    height:90px
 }
 
 .text-center.dark-stat-text.px-3,.text-center.general-stat-text.px-3,.text-center.light-stat-text.px-3{
@@ -12570,31 +12570,31 @@ button.close:hover{
     line-height: 7rem;
     font-size: 8rem;
     border-radius: 50%;
-    color: white;
+    color: white
 }
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 	.quote-badge {
 		line-height: 5rem;
-    	font-size: 6rem;
+    	font-size: 6rem
 	}
 
 }
 @media only screen (max-width:600px){
 	.quote-badge {
 		line-height: 7rem;
-    	font-size: 8rem;
+    	font-size: 8rem
 	}
 
 }
 .quote-container {
 	position: relative;
-    display: inline-block;
+    display: inline-block
 }
 .marina-background {
-	background: #033b4c;
+	background: #033b4c
 }
 .marigold-background {
-	background: #edb138;
+	background: #edb138
 }
 .marina-bg-img {
 	margin-left: 0!important;
@@ -12602,7 +12602,7 @@ button.close:hover{
 	background-image: url(https://res.cloudinary.com/scuwebdev/image/upload/v1616783471/ring_marina_xlth0r.png);
 	background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: contain
 }
 .marigold-bg-img {
 	margin-left: 0!important;
@@ -12610,10 +12610,10 @@ button.close:hover{
 	background-image: url(https://res.cloudinary.com/scuwebdev/image/upload/v1617322007/ring_marigold_lypeeu.png);
 	background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: contain
 }
 .nav-link .fal.fa-angle-down {
-	margin-left:.2rem;
+	margin-left:.2rem
 }
 
 /*split display content type*/
@@ -12634,8 +12634,24 @@ button.close:hover{
 @media (max-width:904px) {
     .splitdisplay-txt.col-sm-10.col-lg-10 {
         padding-top: 20px;
-        padding-bottom: 40px;
+        padding-bottom: 40px
     }
 }
+a.lead.split-display-link {
+    align-items: center;
+    display:inline-flex;
+    text-decoration:none;
+    margin: 0px
+}
+a.lead.split-display-link:before{
+    content:"\f0a9";
+    font-family:"Font Awesome 5 Pro";
+    margin-right: 12px;
+    font-weight: 300;
+    font-size: 24px
+}
 
+a.lead.split-display-link span:hover{
+    text-decoration:underline
+}
 
