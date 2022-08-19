@@ -9250,6 +9250,21 @@ a.text-slate:focus,a.text-slate:hover{
     -moz-osx-font-smoothing:grayscale
 }
 @font-face{
+    font-family: "LibreBaskerville-Regular";
+    src: url(https://assets.scu.edu/fonts/LibreBaskerville-Regular.otf);
+    src: url(https://assets.scu.edu/fonts/LibreBaskerville-Regular.otf) format("oft")
+}
+@font-face{
+    font-family: "LibreBaskerville-Italic";
+    src: url(https://assets.scu.edu/fonts/LibreBaskerville-Italic.otf);
+    src: url(https://assets.scu.edu/fonts/LibreBaskerville-Italic) format("oft")
+}
+@font-face{
+    font-family: "LibreBaskerville-Bold";
+    src: url(https://assets.scu.edu/fonts/LibreBaskerville-Bold.otf);
+    src: url(https://assets.scu.edu/fonts/LibreBaskerville-Bold.otf) format("oft")
+}
+@font-face{
     font-family:"Bauer Bodoni W01 Italic";
     src:url(https://assets.scu.edu/fonts/0d956984-1d14-4bf5-bfbd-24047fe105f0.eot?#iefix);
     src:url(https://assets.scu.edu/fonts/0d956984-1d14-4bf5-bfbd-24047fe105f0.eot?#iefix) format("eot"),url(https://assets.scu.edu/fonts/185ac1c7-6f53-44a3-9eb9-6426c900c088.woff2) format("woff2"),url(https://assets.scu.edu/fonts/47cb918f-38fe-4009-ae12-16659f98a1eb.woff) format("woff"),url(https://assets.scu.edu/fonts/37942b37-f74a-4adf-91a0-6866ad671859.ttf) format("truetype"),url(https://assets.scu.edu/fonts/1aa79473-3e74-468a-a0fe-f575dea12203.svg#1aa79473-3e74-468a-a0fe-f575dea12203) format("svg")
