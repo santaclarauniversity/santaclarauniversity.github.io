@@ -12637,20 +12637,7 @@ button.close:hover{
     padding-right:15px;
     padding-left:15px
 }
-@media (min-width:904px){
-    .splitdisplay-col {
-        -webkit-box-flex:0;
-        -ms-flex:0 0 50%;
-        flex:0 0 50%;
-        max-width:50%
-    }
-}
-@media (max-width:904px) {
-    .splitdisplay-txt.col-sm-10.col-lg-10 {
-        padding-top: 20px;
-        padding-bottom: 40px
-    }
-}
+
 a.lead.split-display-link {
     align-items: center;
     display:inline-flex;
@@ -12669,3 +12656,30 @@ a.lead.split-display-link span:hover{
     text-decoration:underline
 }
 
+div.splitdisplay-col img.img-fluid.w-100 {
+        object-fit: cover;
+        min-height: 220px
+}
+
+div.splitdisplay-col img.img-fluid.w-100.alt-view {
+    min-height:220px;
+}
+
+@media (min-width:904px){
+    .splitdisplay-col {
+        -webkit-box-flex:0;
+        -ms-flex:0 0 50%;
+        flex:0 0 50%;
+        max-width:50%
+    }
+}
+@media (max-width:904px) {
+    .splitdisplay-txt.col-sm-10.col-lg-10 {
+        padding-top: 20px;
+        padding-bottom: 40px
+    }
+    div.splitdisplay-col img.img-fluid.w-100 {
+        object-fit: cover;
+        min-height: 480px
+    }
+}
