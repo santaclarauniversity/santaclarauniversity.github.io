@@ -12672,14 +12672,15 @@ div.splitdisplay-col img.img-fluid.w-100.alt-view {
         flex:0 0 50%;
         max-width:50%
     }
+    div.splitdisplay-col img.img-fluid.w-100 {
+        object-fit: cover;
+        min-height: 480px
+    }
 }
 @media (max-width:904px) {
     .splitdisplay-txt.col-sm-10.col-lg-10 {
         padding-top: 20px;
         padding-bottom: 40px
     }
-    div.splitdisplay-col img.img-fluid.w-100 {
-        object-fit: cover;
-        min-height: 480px
-    }
+    
 }
