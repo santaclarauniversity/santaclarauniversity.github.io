@@ -12662,7 +12662,7 @@ div.splitdisplay-col img.img-fluid.w-100 {
 }
 
 div.splitdisplay-col img.img-fluid.w-100.alt-view {
-    min-height:220px;
+    min-height:345px;
 }
 
 @media (min-width:904px){
