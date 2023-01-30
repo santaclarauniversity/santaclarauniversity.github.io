@@ -12697,3 +12697,23 @@ div.splitdisplay-col img.img-fluid.w-100.alt-view {
     }
     
 }
+
+/** UMC Story CSS **/
+
+.story-subhead {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 800;
+}
+
+.thumbnail{
+    box-shadow: none !important;
+}
+
+.story-quote {
+ text-align: center;
+ font-weight: 800;
+ padding: 4rem!important;
+ background-color: #e9ecef; 
+}
+
