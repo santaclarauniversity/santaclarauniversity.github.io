@@ -12750,8 +12750,9 @@ p.story-subhead {
     font-size: 52px;
     line-height: 62px
 }
-.story-quote .text-calluna {
+.story-quote.text-calluna {
   color: #72001B;
+  ont-family: 'Trade Gothic Next W01';
   text-align: left;
   font-size: 30px;
   line-height: 41px
