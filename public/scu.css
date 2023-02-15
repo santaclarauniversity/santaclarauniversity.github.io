@@ -12736,9 +12736,11 @@ div.splitdisplay-col img.img-fluid.w-100.alt-view {
 /*** UMC Story CSS ***/
 
 p.story-subhead {
-  font-size: 22px;
-  line-height: 28px;
-  font-weight: 800
+  font-family:"Calluna W01 Regular";
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 29px;
+  color: #72001B
 }
 
 .thumbnail{
