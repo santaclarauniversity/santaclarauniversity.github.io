@@ -12738,17 +12738,27 @@ div.splitdisplay-col img.img-fluid.w-100.alt-view {
 p.story-subhead {
   font-size: 22px;
   line-height: 28px;
-  font-weight: 800;
+  font-weight: 800
 }
 
 .thumbnail{
-    box-shadow: none !important;
+    box-shadow: none !important
 }
 
-.story-quote {
- text-align: center;
- font-weight: 800;
- padding: 4rem!important;
- background-color: #e9ecef; 
+.story-title {
+    color: #72001B;
+    font-size: 52px;
+    line-height: 62px
 }
-
+.story-quote .text-calluna {
+  color: #72001B;
+  text-align: left;
+  font-size: 30px;
+  line-height: 41px
+}
+.story-quote.text-calluna p:last-of-type {
+    font-size: 15px;
+    color: #212529;
+    font-family: 'Trade Gothic Next W01';
+    text-transform: capitalize
+}
