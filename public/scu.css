@@ -9337,22 +9337,22 @@ a.text-slate:focus,a.text-slate:hover{
 
 @font-face{
      font-family:"Calluna W01 Light";
-     src:url("https://assets.scu.edu/fonts/582aafdf-52da-4432-a204-0624a3abfb8e.woff2") format("woff2"),url("https://assets.scu.edu/fonts/083721be-31a7-4a78-b325-cb4aea5a0658.woff") format("woff");
+     src:url(https://assets.scu.edu/fonts/582aafdf-52da-4432-a204-0624a3abfb8e.woff2) format("woff2"),url(https://assets.scu.edu/fonts/083721be-31a7-4a78-b325-cb4aea5a0658.woff) format("woff");
      font-display: swap
 }
 @font-face{
     font-family:"Calluna W01 Regular";
-    src:url("https://assets.scu.edu/fonts/62ad54ed-a020-4fc1-a3dc-21e31bf8d52a.woff2") format("woff2"),url("https://assets.scu.edu/fonts/c1b12dfe-db8e-49f0-94ac-7ad0bf217f90.woff") format("woff");
+    src:url(https://assets.scu.edu/fonts/62ad54ed-a020-4fc1-a3dc-21e31bf8d52a.woff2) format("woff2"),url(https://assets.scu.edu/fonts/c1b12dfe-db8e-49f0-94ac-7ad0bf217f90.woff) format("woff");
     font-display: swap
 }
 @font-face{
     font-family:"Calluna W01 Semibold";
-    src:url("https://assets.scu.edu/fonts/8a9bfa98-a9e6-42c8-8fd2-cbebaff2b158.woff2") format("woff2"),url("https://assets.scu.edu/fonts/9c213eda-ba7d-497a-a6f1-8f41a0adef95.woff") format("woff");
+    src:url(https://assets.scu.edu/fonts/8a9bfa98-a9e6-42c8-8fd2-cbebaff2b158.woff2) format("woff2"),url(https://assets.scu.edu/fonts/9c213eda-ba7d-497a-a6f1-8f41a0adef95.woff) format("woff");
     font-display: swap
 }
 @font-face{
     font-family:"Calluna W01 Bold";
-    src:url("https://assets.scu.edu/fonts/245cd401-d5a8-4b3c-97a8-ca5023459264.woff2") format("woff2"),url("https://assets.scu.edu/fonts/3ab3c2c2-f19e-449a-941e-095b8fbe62ba.woff") format("woff");
+    src:url(https://assets.scu.edu/fonts/245cd401-d5a8-4b3c-97a8-ca5023459264.woff2) format("woff2"),url(https://assets.scu.edu/fonts/3ab3c2c2-f19e-449a-941e-095b8fbe62ba.woff) format("woff");
     font-display: swap
 }
 
