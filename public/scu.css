@@ -12763,5 +12763,15 @@ p.story-subhead {
     font-size: 15px;
     color: #212529;
     font-family: 'Trade Gothic Next W01';
-    text-transform: capitalize
+    text-transform: uppercase
+}
+
+.related-story-title {
+    margin-top: 11pt;
+    margin-bottom: 42pt;
+    font-size: 22px;
+    font-weight: 700
+}
+.relatedimage {
+    border-radius:2px
 }
