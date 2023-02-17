@@ -12757,7 +12757,11 @@ p.story-subhead {
   font-family:"Calluna W01 Regular";
   text-align: left;
   font-size: 30px;
-  line-height: 41px
+  line-height: 41px;
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, grey 25%, yellow 25%, yellow 50%,red 50%, red 75%, teal 75%) 5;
+  text-align: left
+
 }
 .story-quote p:last-of-type {
     font-size: 15px;
