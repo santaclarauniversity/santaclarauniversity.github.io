@@ -12750,6 +12750,12 @@ p.story-subhead {
     color: #72001B;
     font-size: 52px;
 }
+@media only screen (max-width:600px){
+    .story-basic {
+        text-align: center;
+    }
+}
+
 .story-quote {
   color: #72001B;
   font-family:"Calluna W01 Semibold";
@@ -12777,4 +12783,7 @@ p.story-subhead {
 }
 .relatedimage {
     border-radius:2px
+}
+.story-pipe {
+    border-right: 1px solid #B30738!important
 }
