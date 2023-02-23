@@ -12763,7 +12763,7 @@ p.story-subhead {
   font-size: 30px;
   border-left: 5px solid;
   border-image: linear-gradient(to bottom, grey 25%, yellow 25%, yellow 50%,red 50%, red 75%, teal 75%) 5;
-  padding-left: 20px;
+  padding-left: 30px;
   text-align: left
 
 }
@@ -12771,7 +12771,6 @@ p.story-subhead {
     font-size: 15px;
     color: #212529;
     font-family: 'Trade Gothic Next W01';
-    padding-left: 20px;
     text-transform: uppercase
 }
 
