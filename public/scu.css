@@ -161,6 +161,7 @@ a{
     text-decoration:none;
     background-color:transparent
 }
+a:focus,
 a:hover{
     color:#690421;
     text-decoration:underline
