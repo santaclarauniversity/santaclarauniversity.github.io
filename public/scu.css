@@ -166,6 +166,12 @@ a:hover{
     color:#690421;
     text-decoration:underline
 }
+.media-body a,
+.col-12.col-md-6 a,
+.col-sm-4.order-sm-last a{
+    text-decoration:underline 
+}
+
 a:not([href]):not([tabindex]){
     color:inherit;
     text-decoration:none
