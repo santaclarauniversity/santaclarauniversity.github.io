@@ -168,7 +168,10 @@ a:hover{
 }
 .media-body a,
 .col-12.col-md-6 a,
-.col-sm-4.order-sm-last a{
+.col-sm-4 a,
+.related-links p a,
+.card-body.card-block a,
+table a{
     text-decoration:underline 
 }
 
