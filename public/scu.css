@@ -12773,8 +12773,8 @@ p.story-subhead {
   font-family:"Calluna W01 Semibold";
   text-align: left;
   font-size: 30px;
-  border-left: 5px solid;
-  border-image: linear-gradient(to bottom, grey 25%, yellow 25%, yellow 50%,red 50%, red 75%, teal 75%) 5;
+  border-left: 6px solid;
+  border-image: linear-gradient(to bottom, #B30738 25%, #72001B 25%, #72001B 50%, #FCBD32 50%, #FCBD32 75%, #033B4C 75%, #6C879A 75%) 5;
   padding-left: 30px;
   text-align: left
 
@@ -12789,7 +12789,7 @@ p.story-subhead {
 .related-story-title {
     margin-top: 11pt;
     margin-bottom: 42pt;
-    font-size: 22px;
+    font-size: 32px;
     font-weight: 700
 }
 .relatedimage {
