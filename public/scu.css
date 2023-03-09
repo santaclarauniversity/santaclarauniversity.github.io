@@ -12774,7 +12774,7 @@ p.story-subhead {
   text-align: left;
   font-size: 30px;
   border-left: 6px solid;
-  border-image: linear-gradient(to bottom,  #B30738 20%, #72001B 20%, #72001B 40%, #FCBD32 40%,#FCBD32 60%, #033B4C 60%, #033B4C,#033B4C 80%, #6C879A 80%) 5
+  border-image: linear-gradient(to bottom,  #B30738 20%, #72001B 20%, #72001B 40%, #FCBD32 40%,#FCBD32 60%, #033B4C 60%, #033B4C,#033B4C 80%, #6C879A 80%) 5;
   padding-left: 30px;
   text-align: left
 
