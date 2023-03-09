@@ -12774,7 +12774,7 @@ p.story-subhead {
   text-align: left;
   font-size: 30px;
   border-left: 6px solid;
-  border-image: linear-gradient(to bottom, #B30738 25%, #72001B 25%, #72001B 50%, #FCBD32 50%, #FCBD32 75%, #033B4C 75%, #6C879A 75%) 5;
+  border-image: linear-gradient(to bottom,  #B30738 20%, #72001B 20%, #72001B 40%, #FCBD32 40%,#FCBD32 60%, #033B4C 60%, #033B4C,#033B4C 80%, #6C879A 80%) 5
   padding-left: 30px;
   text-align: left
 
@@ -12796,5 +12796,16 @@ p.story-subhead {
     border-radius:2px
 }
 .story-pipe {
-    border-right: 1px solid #B30738!important
+    border-right: 2px solid #B30738!important
 }
+
+hr.hr-premium {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    z-index: 999;
+    height: 5px;
+    background: linear-gradient(to right, #B30738 20%, #72001B 20%, #72001B 40%, #FCBD32 40%,#FCBD32 60%, #033B4C 60%, #033B4C,#033B4C 80%, #6C879A 80%);
+}
+
+
