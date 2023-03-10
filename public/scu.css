@@ -12848,13 +12848,13 @@ hr.hr-premium {
     }
 
 }
-@media (max-width: 992px) and (min-width:993px){
+@media (max-width: 1199px) {
     .story-quote-premium {
         width: 625px
     }
 }
 
-@media (max-width: 767px) and (min-width: 768px){
+@media (max-width: 767px){
      .story-quote-premium {
         width: 465px
     }
@@ -12868,8 +12868,11 @@ hr.hr-premium {
     .container-premium-heding {
         margin-top: 40px
     }
+    .story-quote-premium {
+        width: 500px
+    }
 }
-@media (max-width: 375px) and (min-width: 376px) {
+@media (max-width: 375px){
     .story-quote-premium {
         width: 300px
     }
