@@ -12811,9 +12811,6 @@ hr.hr-premium {
     height: 5px;
     background: linear-gradient(to right, #B30738 20%, #72001B 20%, #72001B 40%, #FCBD32 40%,#FCBD32 60%, #033B4C 60%, #033B4C,#033B4C 80%, #6C879A 80%)
 }
-.row.d-flex.justify-content-center {
-    margin: 0
-}
 
 .premium-quote {
     background-color: #F4F2F0;
