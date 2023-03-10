@@ -12852,6 +12852,14 @@ hr.hr-premium {
     margin: auto
 }
 
+.story-icon{
+    margin-left: 15px
+}
+
+.story-info{
+    padding-right: 50px
+}
+
 @media (min-width:1200px){
     .story-quote-premium {
         width: 733px
@@ -12917,8 +12925,8 @@ hr.hr-premium {
         width: 300px
     }
     .container-premium {
-    top: 223px
-}
+        top: 223px
+    }
 }
 
 
