@@ -12902,6 +12902,9 @@ hr.hr-premium {
     .story-icon{
         width: 80px;
     }
+    .sm-pipe.d-flex {
+        display: none!important;
+    }
 }
 
 @media (max-width: 515px)
