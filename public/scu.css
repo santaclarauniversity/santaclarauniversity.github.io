@@ -12857,7 +12857,8 @@ hr.hr-premium {
 }
 
 .story-info{
-    padding-right: 50px
+    padding-right: 50px;
+    padding-left: 20px
 }
 
 @media (min-width:1200px){
