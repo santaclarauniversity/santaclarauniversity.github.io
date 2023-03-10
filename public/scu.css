@@ -12842,6 +12842,13 @@ hr.hr-premium {
     .container-premium-heding {
         margin-top: 40px
     }
+    figure.one-column.image.module.pull-right.float-md-right.ml-3.mb-3.col-md-6 {
+        margin-left: 0!important
+    }
+    figure.one-column.image.module.pull-left.float-md-left.mr-3.mb-3.col-md-6 {
+        margin-right: 0!important;
+        padding-right: 0
+    }
 }
 
 @media (min-width:576px){
