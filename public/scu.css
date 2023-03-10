@@ -12845,7 +12845,7 @@ hr.hr-premium {
 }
 
 @media (max-width:600px){
-    .premium-quote {
+    .story-quote-premium {
         width: 460px
     }
     .story-title {
@@ -12858,8 +12858,10 @@ hr.hr-premium {
 }
 }
 @media (min-width:1200px){
-    .premium-quote { 
-        width: 733px
+    .story-quote-premium {
+        width: 733px;
+        margin: auto
     }
+
 }
 
