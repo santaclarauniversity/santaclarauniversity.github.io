@@ -12886,13 +12886,28 @@ hr.hr-premium {
         font-size: 40px;
         line-height: 1.2
     }
-    .container-premium-heding {
+    .container-premium-heding{
         margin-top: 40px
     }
     .story-quote-premium {
         width: 500px
     }
 }
+
+@media (max-width: 575px){
+    .container.container-premium-heading{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .story-icon{
+        width: 80px;
+    }
+    .story-info{
+        margin-top: -30px
+    }
+
+}
+
 @media (max-width: 515px)
     .container-premium {
         top: 205px
