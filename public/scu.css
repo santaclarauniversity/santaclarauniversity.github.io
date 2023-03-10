@@ -12824,7 +12824,13 @@ hr.hr-premium {
     padding-top: 30px;
     padding-bottom: 30px
 }
-
+.container-premium {
+    background-color: #F4F2F0;
+    width: 100%;
+    top: 226px;
+    height: 750px;
+    position: absolute
+}
 .container-premium-heding {
     margin-top: 100px
 }
@@ -12844,7 +12850,7 @@ hr.hr-premium {
 
 @media (min-width:1200px){
     .story-quote-premium {
-        width: 733px;
+        width: 733px
     }
 
 }
@@ -12857,6 +12863,9 @@ hr.hr-premium {
 @media (max-width: 991px){
      .story-quote-premium {
         width: 465px
+    }
+    .container-premium {
+        top: 190px
     }
 }
 
