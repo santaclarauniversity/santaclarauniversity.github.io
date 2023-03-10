@@ -12779,9 +12779,6 @@ p.story-subhead {
   text-align: left
 
 }
-.story-quote-premium {
-    width: 733px
-}
 
 .story-quote p:last-of-type {
     font-size: 15px;
@@ -12841,6 +12838,17 @@ hr.hr-premium {
     figure.one-column.image.module.pull-left.float-md-left.mr-3.mb-3.col-md-6 {
         margin-right: 0!important;
         padding-right: 0
+    }
+}
+
+@media (min-width: 767px){
+     .story-quote-premium {
+        width: 465px
+    }
+}
+@media (min-width: 992px){
+    .story-quote-premium {
+        width: 625px
     }
 }
 
