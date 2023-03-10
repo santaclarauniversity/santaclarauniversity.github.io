@@ -12857,7 +12857,7 @@ hr.hr-premium {
     }
 }
 }
-@media (max-width:1200px){
+@media (min-width:1200px){
     .premium-quote { 
         width: 733px
     }
