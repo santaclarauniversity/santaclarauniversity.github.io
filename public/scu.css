@@ -12784,7 +12784,8 @@ p.story-subhead {
 
 }
 
-.story-quote p:last-of-type {
+.story-quote p:last-of-type,
+.story-quote-premium p:last-of-type {
     font-size: 15px;
     color: #212529;
     font-family: 'Trade Gothic Next W01';
@@ -12827,7 +12828,7 @@ hr.hr-premium {
 .container-premium {
     background-color: #F4F2F0;
     width: 100%;
-    top: 226px;
+    top: 196px;
     height: 750px;
     position: absolute
 }
