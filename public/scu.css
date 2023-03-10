@@ -12854,7 +12854,7 @@ hr.hr-premium {
     }
 }
 
-@media (max-width: 767px){
+@media (max-width: 991px){
      .story-quote-premium {
         width: 465px
     }
@@ -12872,7 +12872,7 @@ hr.hr-premium {
         width: 500px
     }
 }
-@media (max-width: 375px){
+@media (max-width: 420px){
     .story-quote-premium {
         width: 300px
     }
