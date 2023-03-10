@@ -12828,7 +12828,7 @@ hr.hr-premium {
     margin-top: 100px
 }
 
-@media (min-width: 375px){
+@media (max-width: 375px){
     .premium-quote {
         width: 300px
     }
