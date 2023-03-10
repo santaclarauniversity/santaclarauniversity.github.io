@@ -12768,17 +12768,21 @@ p.story-subhead {
     }
 }
 
-.story-quote {
+.story-quote, .story-quote-premium {
   color: #72001B;
-  font-family:"Calluna W01 Semibold";
+  font-family:"Calluna W01 Regular";
   text-align: left;
   font-size: 30px;
   border-left: 6px solid;
   border-image: linear-gradient(to bottom,  #B30738 20%, #72001B 20%, #72001B 40%, #FCBD32 40%,#FCBD32 60%, #033B4C 60%, #033B4C,#033B4C 80%, #6C879A 80%) 5;
-  padding-left: 30px;
+  padding: 10px 30px 5px 30px;
   text-align: left
 
 }
+.story-quote-premium {
+    width: 733px
+}
+
 .story-quote p:last-of-type {
     font-size: 15px;
     color: #212529;
@@ -12787,7 +12791,7 @@ p.story-subhead {
 }
 
 .related-story-title {
-    margin-top: 11pt;
+    margin-top: 5px;
     margin-bottom: 42pt;
     font-size: 22px;
     font-weight: 700
@@ -12805,7 +12809,49 @@ hr.hr-premium {
     border: 0;
     z-index: 999;
     height: 5px;
-    background: linear-gradient(to right, #B30738 20%, #72001B 20%, #72001B 40%, #FCBD32 40%,#FCBD32 60%, #033B4C 60%, #033B4C,#033B4C 80%, #6C879A 80%);
+    background: linear-gradient(to right, #B30738 20%, #72001B 20%, #72001B 40%, #FCBD32 40%,#FCBD32 60%, #033B4C 60%, #033B4C,#033B4C 80%, #6C879A 80%)
+}
+.row.d-flex.justify-content-center {
+    margin: 0
 }
 
+.premium-quote {
+    background-color: #F4F2F0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding-top: 30px;
+    padding-bottom: 30px
+}
+
+.container-premium-heding {
+    margin-top: 100px
+}
+
+@media (min-width: 375){
+    .premium-quote {
+        width: 300px
+    }
+    .story-title {
+        font-size: 40px;
+        line-height: 1.2
+    }
+    .container-premium-heding {
+        margin-top: 40px
+    }
+}
+
+@media (min-width:576px){
+    .premium-quote {
+        width: 460px
+    }
+}
+@media (min-width:1200px){
+    .premium-quote { 
+        width: 733px
+    }
+}
 
