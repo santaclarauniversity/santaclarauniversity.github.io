@@ -12902,10 +12902,6 @@ hr.hr-premium {
     .story-icon{
         width: 80px;
     }
-    .story-info{
-        margin-top: -30px
-    }
-
 }
 
 @media (max-width: 515px)
