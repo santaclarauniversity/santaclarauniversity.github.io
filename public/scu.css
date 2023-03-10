@@ -12832,13 +12832,9 @@ hr.hr-premium {
     .premium-quote {
         width: 300px
     }
-    .story-title {
-        font-size: 40px;
-        line-height: 1.2
-    }
-    .container-premium-heding {
-        margin-top: 40px
-    }
+}
+
+@media (max-width: 767px){
     figure.one-column.image.module.pull-right.float-md-right.ml-3.mb-3.col-md-6 {
         margin-left: 0!important
     }
@@ -12852,6 +12848,14 @@ hr.hr-premium {
     .premium-quote {
         width: 460px
     }
+    .story-title {
+        font-size: 40px;
+        line-height: 1.2
+    }
+    .container-premium-heding {
+        margin-top: 40px
+    }
+}
 }
 @media (max-width:1200px){
     .premium-quote { 
