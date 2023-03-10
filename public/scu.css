@@ -12831,7 +12831,7 @@ hr.hr-premium {
     margin-top: 100px
 }
 
-@media (min-width: 375){
+@media (min-width: 375px){
     .premium-quote {
         width: 300px
     }
@@ -12851,12 +12851,12 @@ hr.hr-premium {
     }
 }
 
-@media (min-width:576px){
+@media (max-width:600px){
     .premium-quote {
         width: 460px
     }
 }
-@media (min-width:1200px){
+@media (max-width:1200px){
     .premium-quote { 
         width: 733px
     }
