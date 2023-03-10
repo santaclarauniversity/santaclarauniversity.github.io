@@ -12869,6 +12869,11 @@ hr.hr-premium {
     }
 }
 
+@media (max-width: 767px)
+.container-premium {
+    top: 167px;
+}
+
 @media (max-width:600px){
     .story-title {
         font-size: 40px;
@@ -12881,10 +12886,18 @@ hr.hr-premium {
         width: 500px
     }
 }
+@media (max-width: 515px)
+    .container-premium {
+        top: 205px
+}
+
 @media (max-width: 420px){
     .story-quote-premium {
         width: 300px
     }
+    .container-premium {
+    top: 223px
+}
 }
 
 
