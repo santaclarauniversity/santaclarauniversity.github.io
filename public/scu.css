@@ -326,7 +326,7 @@ template{
     margin-bottom:.5rem;
     font-family:"Trade Gothic W01 Bold_2";
     font-weight:500;
-    line-height:1.2
+    line-height:1.5
 }
 .h1,h1{
     font-size:2.5rem
@@ -373,7 +373,7 @@ template{
 .display-1{
     font-size:6rem;
     font-weight:300;
-    line-height:1.2
+    line-height:1.5
 }
 @media (max-width:1200px){
     .display-1{
@@ -383,7 +383,7 @@ template{
 .cover-image .cover-image-title,.display-2{
     font-size:5.5rem;
     font-weight:300;
-    line-height:1.2
+    line-height:1.5
 }
 @media (max-width:1200px){
     .cover-image .cover-image-title,.display-2{
@@ -393,7 +393,7 @@ template{
 .display-3{
     font-size:4.5rem;
     font-weight:300;
-    line-height:1.2
+    line-height:1.5
 }
 @media (max-width:1200px){
     .display-3{
@@ -403,7 +403,7 @@ template{
 .display-4{
     font-size:3.5rem;
     font-weight:300;
-    line-height:1.2
+    line-height:1.5
 }
 @media (max-width:1200px){
     .display-4{
@@ -4676,7 +4676,7 @@ h4.card-title.linked,.h4.card-title.linked{
     display:block;
     padding:.5rem .75rem;
     margin-left:-1px;
-    line-height:1.25;
+    line-height:1.5;
     color:#b30738;
     background-color:#fff;
     border:1px solid #dee2e6
