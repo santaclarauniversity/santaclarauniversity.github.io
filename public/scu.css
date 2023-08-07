@@ -2862,12 +2862,13 @@ a.btn.disabled,fieldset:disabled a.btn{
 }
 .btn-outline-light:hover{
     color:#212529;
-    background-color:#f8f9fa;
+    background-color:#f0f0f0!important;
     border-color:#f8f9fa
 }
 .btn-outline-light.focus,.btn-outline-light:focus{
     -webkit-box-shadow:0 0 0 .2rem rgba(248,249,250,.5);
-    box-shadow:0 0 0 .2rem rgba(248,249,250,.5)
+    box-shadow:0 0 0 .2rem rgba(248,249,250,.5);
+    background-color:white
 }
 .btn-outline-light.disabled,.btn-outline-light:disabled{
     color:#f8f9fa;
@@ -2964,8 +2965,12 @@ a.btn.disabled,fieldset:disabled a.btn{
     color:#dfdbd3;
     border-color:#dfdbd3
 }
+.btn-outline-beige:focus{
+    background-color:#dfdbd3;
+    text-decoration: none
+}
 .btn-outline-beige:hover{
-    color:#212529;
+    color:#212529 !important;
     background-color:#dfdbd3;
     border-color:#dfdbd3
 }
@@ -4336,7 +4341,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     color:rgba(0,0,0,.9)
 }
 .navbar-light .navbar-nav .nav-link{
-    color:rgba(0,0,0,.5)
+    color:rgba(0,0,0,.6)
 }
 .navbar-light .navbar-nav .nav-link:focus,.navbar-light .navbar-nav .nav-link:hover{
     color:rgba(0,0,0,.7)
@@ -10357,7 +10362,7 @@ button.close:hover{
         max-width:360px
     }
 }
-.link-button::after{
+.link-button::after, .link-butto spann::after{
     content:'\00bb';
     position:absolute;
     right:15px;
@@ -10373,9 +10378,21 @@ button.close:hover{
     background-color:#b30738;
     border:1px solid #FFFFFF
 }
+.link-button.brand-primary:focus{
+    background-color: white;
+    color:#b30738
+}
 .link-button.maroon{
     background-color:#b30738;
     border:1px solid #b30738
+}
+.link-button.maroon:focus{
+    background-color: white!important;
+    color:#b30738
+}
+.link-button.maroon:hover{
+    background-color:#F0F0F0!important;
+    color:#b30738
 }
 .link-button.white{
     background-color:#FFF;
@@ -10385,16 +10402,20 @@ button.close:hover{
 .link-button.white:hover{
     background-color:#f4f2f0
 }
-.link-button.brand-primary:hover,.link-button.maroon:hover{
-    background-color:#9a0630
+.link-button.brand-primary:hover{
+    background-color: #F0F0F0!important;
+    color:#b30738
 }
 .link-button.brand-secondary{
     background-color:transparent;
     border:1px solid #b30738;
     color:#b30738
 }
+.link-button.brand-secondary:focus{
+    background-color:white
+}
 .link-button.brand-secondary:hover{
-    background-color:#fafafa
+    background-color:##f0f0f0
 }
 .carousel-indicators{
     bottom:0
