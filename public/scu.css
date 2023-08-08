@@ -10362,7 +10362,7 @@ button.close:hover{
         max-width:360px
     }
 }
-.link-button::after, .link-button span::after{
+.link-button span::after{
     content:'\00bb';
     position:absolute;
     right:15px;
