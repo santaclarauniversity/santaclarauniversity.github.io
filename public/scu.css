@@ -10362,6 +10362,7 @@ button.close:hover{
         max-width:360px
     }
 }
+/*fix double bracket issue*/
 .link-button span::after{
     content:'\00bb';
     position:absolute;
