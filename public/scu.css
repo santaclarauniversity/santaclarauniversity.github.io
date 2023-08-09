@@ -10362,7 +10362,6 @@ button.close:hover{
         max-width:360px
     }
 }
-/*fix double bracket issue*/
 .link-button span::after{
     content:'\00bb';
     position:absolute;
@@ -10416,7 +10415,7 @@ button.close:hover{
     background-color:white
 }
 .link-button.brand-secondary:hover{
-    background-color:##f0f0f0
+    background-color:#f0f0f0
 }
 .carousel-indicators{
     bottom:0
