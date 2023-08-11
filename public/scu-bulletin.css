@@ -142,6 +142,7 @@ body {
 }
  span.tocFldr.lv-1>a {
      background-color: #DFDBD3;
+     border-bottom: 2px solid #FFFFFF;
 }
  span.tocFldr.lv-1>a:hover {
      background-color: #DDCBA4;
