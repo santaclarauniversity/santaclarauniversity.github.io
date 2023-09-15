@@ -118,7 +118,7 @@ body {
      list-style: disc;
      margin-left: 60px;
 }
- ul, li {
+ ul {
      list-style: none;
      padding-left: 0;
 }
@@ -129,8 +129,10 @@ body {
  li>span>a {
      color: #546575;
      text-decoration: none;
-     padding: 10px 10px 10px 20px;
-     display: block;
+}
+nav.bd-links>ul>li>span>a, nav.bd-links>ul>li>ul>li>span>a {
+    padding: 10px 10px 10px 20px;
+    display: block;
 }
  ul>li>span>a:hover {
      background-color: #DFDBD3;
