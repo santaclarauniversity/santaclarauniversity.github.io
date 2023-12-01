@@ -175,7 +175,7 @@ a:hover{
 .related-links p a,
 .card-body.card-block a,
 table a{
-    text-decoration:underline 
+    text-decoration:underline
 }
 
 a:not([href]):not([tabindex]){
@@ -9117,7 +9117,7 @@ a.bg-slate:focus,a.bg-slate:hover,button.bg-slate:focus,button.bg-slate:hover{
 }
 #content p a, #content li a {
 	text-decoration:underline
-}		
+}
 #content a.btn {
 	text-decoration:none
 }
@@ -9378,13 +9378,13 @@ a.text-slate:focus,a.text-slate:hover{
     font-family:"Trajan W01 Regular","Helvetica Neue",Helvetica,Arial,sans-serif
 }
 .trade-gothic-next-lt-rg {
-    font-family:"Trade Gothic Next LT W01 Rg"   
+    font-family:"Trade Gothic Next LT W01 Rg"
 }
 .trade-gothic-next-lt-bold {
-    font-family:"Trade Gothic Next LT W01 Bold"   
-}          
+    font-family:"Trade Gothic Next LT W01 Bold"
+}
 .trade-gothic-lt-w05-bold {
-    font-family:"Trade Gothic LT W05 Bold"   
+    font-family:"Trade Gothic LT W05 Bold"
 }
 .text-serif{
     font-family:"Bauer Bodoni W01 Italic"
@@ -12659,7 +12659,7 @@ button.close:hover{
     border:2px solid #14647c!important
 }
 .quote-badge {
-    position: absolute; 
+    position: absolute;
     height: 25%;
     right: 0;
     width: 25%;
@@ -12765,7 +12765,7 @@ div.splitdisplay-col img.img-fluid.w-100.alt-view {
         padding-top: 20px;
         padding-bottom: 40px
     }
-    
+
 }
 
 /*** UMC Story CSS ***/
@@ -12908,9 +12908,10 @@ hr.hr-premium {
     }
 }
 
-@media (max-width: 767px)
+@media (max-width: 767px) {
 .container-premium {
-    top: 167px;
+    top: 167px
+  }
 }
 
 @media (max-width:600px){
@@ -12939,9 +12940,10 @@ hr.hr-premium {
     }
 }
 
-@media (max-width: 515px)
+@media (max-width: 515px) {
     .container-premium {
         top: 205px
+      }
 }
 
 @media (max-width: 420px){
@@ -12950,9 +12952,6 @@ hr.hr-premium {
         line-height: 1.3
     }
     .container-premium {
-        top: 223px
+        top: 250px
     }
 }
-
-
-
