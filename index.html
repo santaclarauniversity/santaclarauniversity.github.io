@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,8 +17,7 @@
   <!-- /fabricator styles -->
   
   <!-- external styles -->
-  <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" />-->
-  <link rel="stylesheet" href="https://kit.fontawesome.com/895f1e62c1.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" />
   <!-- /external styles -->
   
   <!-- toolkit styles -->
@@ -28,9 +28,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" crossorigin="anonymous"></script>
   <script src="/public/scu.js"></script>
   <!-- /toolkit scripts -->
+  <link rel="stylesheet" href="assets/scu.css">
 
 </head>
-<body>
+<body><script id="__bs_script__">//<![CDATA[
+  (function() {
+    try {
+      var script = document.createElement('script');
+      if ('async') {
+        script.async = true;
+      }
+      script.src = '/browser-sync/browser-sync-client.js?v=2.29.3'.replace("HOST", location.hostname);
+      if (document.body) {
+        document.body.appendChild(script);
+      } else if (document.head) {
+        document.head.appendChild(script);
+      }
+    } catch (e) {
+      console.error("Browsersync: could not append script tag", e);
+    }
+  })()
+//]]></script>
+
 
   <!-- fabricator icons -->
   <svg style="display: none;">
@@ -75,7 +94,7 @@
         </svg>
       </div>
     </div>
-    <h2 class="mb-0"><a href="/" class="f-menu__heading text-black">SCU</a></h2>
+    <h2 class="mb-0"><a href="/" class="f-menu__heading text-black"><img src="../../../../assets/images/scu_ver1_pos_rgb_2c.png" alt="SCU logo" style="width:100%"></a></h2>
     <h3 class="text-sans-light f-menu__heading text-primary mb-0" style="font-size: 1rem">Design System</h3>
     <p><a class="highlighter-rouge f-menu__heading" href="/docs.html#what's-new">2.4.1</a></p>
     <hr>
@@ -375,29 +394,25 @@
 </ul>
         <ul class="list-inline mb-0 footer-social-icons">
           <li class="list-inline-item"><a class="facebook" href="https://www.facebook.com/SantaClaraUniversity">
-          <i class="fa-brands fa-square-facebook"></i>
+          <i class="demo-icon icon-facebook-squared"></i>
           <span class="sr-only">SCU on Facebook</span>
           </a></li>
           <li class="list-inline-item"><a class="twitter" href="https://twitter.com/SantaClaraUniv">
-          <i class="fa-brands fa-x-twitter"></i>
+          <i class="demo-icon icon-twitter"></i>
           <span class="sr-only">SCU on Twitter</span>
           </a></li>
           <li class="list-inline-item"><a class="linkedin" href="https://www.linkedin.com/edu/santa-clara-university-17914">
-          <i class="fa-brands fa-linkedin-in"></i>
+          <i class="demo-icon icon-linkedin"></i>
           <span class="sr-only">SCU on Linkedin</span>
           </a></li>
           <li class="list-inline-item"><a class="youtube" href="https://www.youtube.com/channel/UCsii-lMGVZ5tL3lj2No6i7A?sub_confirmation=1">
-          <i class="fa-brands fa-youtube"></i>
+          <i class="demo-icon icon-youtube"></i>
           <span class="sr-only">SCU on YouTube</span>
           </a></li>
           <li class="list-inline-item"><a class="instagram" href="https://instagram.com/santaclarauniversity/">
-          <i class="fa-brands fa-instagram"></i>
+          <i class="demo-icon icon-instagram"></i>
           <span class="sr-only">SCU on Instagram</span>
           </a></li>
-          <li class="list-inline-item"><a class="tiktok" href="https://www.tiktok.com/@santaclarauniv">
-	  <i class="fa-brands fa-tiktok"></i>
-	  <span class="sr-only">SCU on TikTok</span>
-	  </a></li>
         </ul>
       <hr class="d-block d-md-none pt-2">
       </div>
