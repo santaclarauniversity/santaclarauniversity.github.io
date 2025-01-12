@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,9 +28,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" crossorigin="anonymous"></script>
   <script src="/public/scu.js"></script>
   <!-- /toolkit scripts -->
+  <link rel="stylesheet" href="assets/scu.css">
 
 </head>
-<body>
+<body><script id="__bs_script__">//<![CDATA[
+  (function() {
+    try {
+      var script = document.createElement('script');
+      if ('async') {
+        script.async = true;
+      }
+      script.src = '/browser-sync/browser-sync-client.js?v=2.29.3'.replace("HOST", location.hostname);
+      if (document.body) {
+        document.body.appendChild(script);
+      } else if (document.head) {
+        document.head.appendChild(script);
+      }
+    } catch (e) {
+      console.error("Browsersync: could not append script tag", e);
+    }
+  })()
+//]]></script>
+
 
   <!-- fabricator icons -->
   <svg style="display: none;">
@@ -74,7 +94,7 @@
         </svg>
       </div>
     </div>
-    <h2 class="mb-0"><a href="/" class="f-menu__heading text-black">SCU</a></h2>
+    <h2 class="mb-0"><a href="/" class="f-menu__heading text-black"><img src="../../../../assets/images/scu_ver1_pos_rgb_2c.png" alt="SCU logo" style="width:100%"></a></h2>
     <h3 class="text-sans-light f-menu__heading text-primary mb-0" style="font-size: 1rem">Design System</h3>
     <p><a class="highlighter-rouge f-menu__heading" href="/docs.html#what's-new">2.4.1</a></p>
     <hr>
