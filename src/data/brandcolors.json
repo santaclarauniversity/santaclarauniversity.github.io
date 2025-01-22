@@ -1,0 +1,263 @@
+{
+  "primary" : {
+    "Santa Clara Red" : {
+      "PMS" : 201,
+      "CMYK" : [7, 100, 68, 32],
+      "RGB" : [163, 32, 53],
+      "HEX" : "#A32035",
+      "text-hex": "#F0E9E2"
+    },
+    "White" : {
+      "PMS": -1,
+      "CMYK" : [0, 0, 0, 0],
+      "RGB": [255, 255, 255],
+      "HEX" : "#FFFFFF",
+      "text-hex": "#425765"
+    },
+    "Bronco Red" : {
+      "PMS" : 202,
+      "CMYK" : [30, 95, 75, 30],
+      "RGB" : [134, 38, 51],
+      "HEX" : "#862633",
+      "text-hex": "#F0E9E2"
+    },
+    "Stone" : {
+      "PMS": 7544,
+      "CMYK" : [58, 41, 34, 4],
+      "RGB": [121, 136, 154],
+      "HEX" : "#758592",
+      "text-hex": "#EEECE9"
+    },
+    "Black" : {
+      "PMS": -1,
+      "CMYK" : [0, 0, 0, 100],
+      "RGB": [0, 0, 0],
+      "HEX" : "#000000",
+      "text-hex": "#E0DAD3"
+    }
+  },
+  "secondary" : {
+    "Terracotta" : {
+      "CMYK" : [13, 76, 86, 2],
+      "RGB": [209, 92, 56],
+      "HEX" : "#D15C3B",
+      "text-hex": "#FFFFFE",
+      "variants": {
+        "Light" : {
+          "CMYK" : [0, 72, 65, 0],
+          "RGB": [247, 109, 89],
+          "HEX" : "#F76D59",
+          "text-hex": "#B13E13"
+        },
+        "Dark" : {
+          "CMYK" : [21, 86, 100, 13],
+          "RGB": [177, 62, 19],
+          "HEX" : "#B13E13",
+          "text-hex": "#F76D59"
+        }
+      }
+    },
+    "Sunrise" : {
+      "CMYK" : [0, 22, 100, 2],
+      "RGB": [255, 182, 0],
+      "HEX" : "#FFB600",
+      "text-hex": "#FFFFFE",
+      "variants": {
+        "Light" : {
+          "CMYK" : [1, 16, 95, 0],
+          "RGB": [255, 210, 32],
+          "HEX" : "#FFD220",
+          "text-hex": "#C97900"
+        },
+        "Dark" : {
+          "CMYK" : [18, 57, 100, 4],
+          "RGB": [201, 121, 0],
+          "HEX" : "#C97900",
+          "text-hex": "#FFD220"
+        }
+      }
+    },
+    "Palm" : {
+      "CMYK" : [68, 36, 100, 22],
+      "RGB": [85, 113, 46],
+      "HEX" : "#55712E",
+      "text-hex": "#FFFFFE",
+      "variants": {
+        "Light" : {
+          "CMYK" : [27, 0, 90, 0],
+          "RGB": [198, 217, 68],
+          "HEX" : "#C6D944",
+          "text-hex": "#27540C"
+        },
+        "Dark" : {
+          "CMYK" : [79, 41, 100, 40],
+          "RGB": [39, 84, 12],
+          "HEX" : "#27540C",
+          "text-hex": "#C6D944"
+        }
+      }
+    },
+    "Agave" : {
+      "CMYK" : [72, 35, 33, 3],
+      "RGB": [77, 135, 152],
+      "HEX" : "#4D8798",
+      "text-hex": "#FFFFFE",
+      "variants": {
+        "Light" : {
+          "CMYK" : [45, 0, 40, 0],
+          "RGB": [137, 214, 176],
+          "HEX" : "#89D6B0",
+          "text-hex": "#115D6F"
+        },
+        "Dark" : {
+          "CMYK" : [91, 52, 43, 20],
+          "RGB": [17, 93, 111],
+          "HEX" : "#115D6F",
+          "text-hex": "#89D6B0"
+        }
+      }
+    },
+    "Sky" : {
+      "CMYK" : [75, 53, 0, 0],
+      "RGB": [73, 116, 187],
+      "HEX" : "#4974BB",
+      "text-hex": "#FFFFFE",
+      "variants": {
+        "Light" : {
+          "CMYK" : [45, 11, 0, 0],
+          "RGB": [123, 194, 249],
+          "HEX" : "#7BC2F9",
+          "text-hex": "#2B438F"
+        },
+        "Dark" : {
+          "CMYK" : [96, 86, 10, 1],
+          "RGB": [43, 67, 143],
+          "HEX" : "#2B438F",
+          "text-hex": "#7BC2F9"
+        }
+      }
+    },
+    "Wisteria" : {
+      "CMYK" : [58, 72, 9, 0],
+      "RGB": [127, 94, 156],
+      "HEX" : "#7F5E9C",
+      "text-hex": "#FFFFFE",
+      "variants": {
+        "Light" : {
+          "CMYK" : [20, 54, 0, 0],
+          "RGB": [207, 135, 205],
+          "HEX" : "#CF87CD",
+          "text-hex": "#633573"
+        },
+        "Dark" : {
+          "CMYK" : [71, 92, 24, 10],
+          "RGB": [99, 53, 115],
+          "HEX" : "#633573",
+          "text-hex": "#CF87CD"
+        }
+      }
+    },
+    "Rose" : {
+      "CMYK" : [23, 98, 56, 9],
+      "RGB": [179, 37, 81],
+      "HEX" : "#B32551",
+      "text-hex": "#FFFFFE",
+      "variants": {
+        "Light" : {
+          "CMYK" : [0, 84, 36, 0],
+          "RGB": [255, 77, 114],
+          "HEX" : "#FF4D72",
+          "text-hex": "#810039"
+        },
+        "Dark" : {
+          "CMYK" : [33, 100, 60, 33],
+          "RGB": [129, 0, 57],
+          "HEX" : "#810039",
+          "text-hex": "#FF4D72"
+        }
+      }
+    }
+  },
+  "tertiary" : {
+    "Fog" : {
+      "CMYK" : [11, 11, 14, 0],
+      "RGB": [224, 218, 211],
+      "HEX" : "#E0DAD3",
+      "text-hex": "#2A373F",
+      "variants": {
+        "Light" : {
+          "CMYK" : [5, 5, 6, 0],
+          "RGB": [239, 236, 233],
+          "HEX" : "#EFECE9",
+          "text-hex": "#425766"
+        },
+        "Dark" : {
+          "CMYK" : [30, 25, 29, 0],
+          "RGB": [181, 177, 172],
+          "HEX" : "#B5B1AC",
+          "text-hex": "#EFECE9"
+        }
+      }
+    },
+    "Adobe" : {
+      "CMYK" : [5, 7, 21, 0],
+      "RGB": [241, 231, 204],
+      "HEX" : "#F1E7CC",
+      "text-hex": "#8E7B66",
+      "variants": {
+        "Light" : {
+          "CMYK" : [2, 3, 9, 0],
+          "RGB": [249, 243, 229],
+          "HEX" : "#F8F3E5",
+          "text-hex": "#425766"
+        },
+        "Dark" : {
+          "CMYK" : [20, 19, 31, 0],
+          "RGB": [206, 195, 174],
+          "HEX" : "#CEC3AE",
+          "text-hex": "#F8F3E5"
+        }
+      }
+    },
+    "Clay" : {
+      "CMYK" : [25, 31, 47, 0],
+      "RGB": [194, 169, 139],
+      "HEX" : "#C2A98B",
+      "text-hex": "#2A373F",
+      "variants": {
+        "Light" : {
+          "CMYK" : [5, 6, 10, 0],
+          "RGB": [240, 233, 226],
+          "HEX" : "#F0E9E2",
+          "text-hex": "#425766"
+        },
+        "Dark" : {
+          "CMYK" : [42, 46, 59, 12],
+          "RGB": [142, 123, 102],
+          "HEX" : "#8E7B66",
+          "text-hex": "#F0E9E2"
+        }
+      }
+    },
+    "Slate" : {
+      "CMYK" : [77, 58, 44, 24],
+      "RGB": [66, 87, 102],
+      "HEX" : "#425766",
+      "text-hex": "#D0D5D9",
+      "variants": {
+        "Light" : {
+          "CMYK" : [17, 11, 10, 0],
+          "RGB": [208, 213, 217],
+          "HEX" : "#D0D5D9",
+          "text-hex": "#425766"
+        },
+        "Dark" : {
+          "CMYK" : [80, 64, 55, 50],
+          "RGB": [42, 55, 63],
+          "HEX" : "#2A373F",
+          "text-hex": "#D0D5D9"
+        }
+      }
+    }
+  }
+}
