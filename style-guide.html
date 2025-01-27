@@ -360,20 +360,19 @@
     .tertiary-container .color-chip:hover,
     .tertiary-container .color-chip:focus {
       transform: scale(1.5, 1.25);
-      border-left-width: 4px;
+      border-left-width: calc(5px/1.5);
       /* 5/1.5 */
-      border-right-width: 4px;
-      border-top-width: 5px;
-      /*5/1.25 */
-      border-bottom-width: 5px;
+      border-right-width: calc(5px/1.5);
+      border-top-width: calc(5px/1.25);
+      border-bottom-width: calc(5px/1.25);
     }
   
     .primary.slim.color-chip:hover .color-chip-info,
     .primary.slim.color-chip:focus .color-chip-info,
     .tertiary-container .color-chip:hover .color-chip-info,
     .tertiary-container .color-chip:focus .color-chip-info {
-      transform: scale(0.667, 0.8);
-      margin: 0.4rem 0.3333rem;
+      transform: scale(calc(1/1.5), calc(1/1.25));
+      margin: calc(0.5rem/1.25) calc(0.5rem/1.5);
       /* 0.5 / 1.25 and 0.5 / 1.5 */
       width: calc(150% - 1rem);
       height: calc(125% - 1rem);
@@ -382,17 +381,17 @@
     .secondary-container .color-chip:hover,
     .secondary-container .color-chip:focus {
       transform: scale(2.25, 1.25);
-      border-left-width: 3px;
+      border-left-width: calc(5px/2.25);
       /* 5/2.25 */
-      border-right-width: 3px;
-      border-top-width: 5px;
-      border-bottom-width: 5px;
+      border-right-width: calc(5px/2.25);
+      border-top-width: calc(5px/1.25);
+      border-bottom-width: calc(5px/1.25);
     }
   
     .secondary-container .color-chip:hover .color-chip-info,
     .secondary-container .color-chip:focus .color-chip-info {
-      transform: scale(0.4444, 0.8);
-      margin: 0.4rem 0.2222rem;
+      transform: scale(calc(1/2.25), calc(1/1.25));
+      margin: calc(0.5rem/1.25) calc(0.5rem/2.25);
       /* 0.5 / 1.25 and 0.5 / 2.25 */
       width: calc(225% - 1rem);
       height: calc(125% - 1rem);
@@ -406,31 +405,283 @@
       width: 100%;
     }
   
-    /*@media (min-width: 992px) {*/
     .color-chip:hover .color-copy-button-container,
     .color-chip:focus .color-copy-button-container {
       display: inherit;
     }
   
-    /*}*/
+    .color-chip-container .col-lg:nth-child(1) .color-chip:nth-child(1) {
+      transform-origin: top left;
+    }
   
-    @media (max-width: 1024px) {
+    .color-chip-container .col-lg:nth-child(1) .color-chip:nth-child(3) {
+      transform-origin: bottom left;
+    }
   
-      .primary.slim.color-chip:hover p,
-      .primary.slim.color-chip:focus p {
-        width: 250%;
+    .color-chip-container .col-lg:nth-last-child(1) .color-chip:nth-child(1) {
+      transform-origin: top right;
+    }
+  
+    .color-chip-container .col-lg:nth-last-child(1) .color-chip:nth-child(3) {
+      transform-origin: bottom right;
+    }
+  
+    .color-chip-container .color-chip:nth-child(1) {
+      transform-origin: top;
+    }
+  
+    .color-chip-container .color-chip:nth-child(2) {
+      transform-origin: center;
+    }
+  
+    .color-chip-container .color-chip:nth-child(3) {
+      transform-origin: bottom;
+    }
+  
+    .color-chip-container .col-lg:nth-child(1) .color-chip {
+      transform-origin: left;
+    }
+  
+    .color-chip-container .col-lg:nth-last-child(1) .color-chip {
+      transform-origin: right;
+    }
+  
+    .color-chip__name {
+      font-weight: bold;
+    }
+  
+    @media (min-width: 766px) and (max-width: 991.98px) {
+  
+      /* for block of colors with 3 per row */
+      .secondary-container .col-md-4 .color-chip:hover,
+      .secondary-container .color-chip:focus {
+        transform: scale(1.25, 1.25);
+        border-left-width: calc(5px / 1.25);
+        /* 5/2.25 */
+        border-right-width: calc(5px / 1.25);
+        border-top-width: calc(5px / 1.25);
+        border-bottom-width: calc(5px / 1.25);
+      }
+  
+      .secondary-container .col-md-4 .color-chip:hover .color-chip-info,
+      .secondary-container .color-chip:focus .color-chip-info {
+        transform: scale(calc(1/1.25), 0.8);
+        margin: calc(0.5rem / 1.25) calc(0.5rem / 1.25);
+        /* 0.5 / 1.25 and 0.5 / 2.25 */
+        width: calc(125% - 1rem);
+        height: calc(125% - 1rem);
+      }
+  
+      /* for block of colors with 4 per row */
+      .secondary-container .col-md-3 .color-chip:hover,
+      .secondary-container .color-chip:focus {
+        transform: scale(calc(15/9), 1.25);
+        border-left-width: calc(5px / calc(15/9));
+        /* 5/2.25 */
+        border-right-width: calc(5px / calc(15/9));
+        border-top-width: calc(5px / 1.25);
+        border-bottom-width: calc(5px / 1.25);
+      }
+  
+      .secondary-container .col-md-3 .color-chip:hover .color-chip-info,
+      .secondary-container .color-chip:focus .color-chip-info {
+        transform: scale(calc(1/calc(15/9)), 0.8);
+        margin: calc(0.5rem / 1.25) calc(0.5rem / calc(15/9));
+        /* 0.5 / 1.25 and 0.5 / 2.25 */
+        width: calc(calc(1500%/9) - 1rem);
+        height: calc(125% - 1rem);
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-child(1) .color-chip:nth-child(1) {
+        transform-origin: top left;
+      }
+  
+      /* agave */
+      .color-chip-container.secondary-container .col-lg:nth-child(4) .color-chip:nth-child(1) {
+        transform-origin: top left;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-child(1) .color-chip:nth-child(3) {
+        transform-origin: bottom left;
+      }
+  
+      /* agave dark */
+      .color-chip-container.secondary-container .col-lg:nth-child(4) .color-chip:nth-child(3) {
+        transform-origin: bottom left;
+      }
+  
+      /* palm */
+      .color-chip-container.secondary-container .col-lg:nth-child(3) .color-chip:nth-child(1) {
+        transform-origin: top right;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-last-child(1) .color-chip:nth-child(1) {
+        transform-origin: top right;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-child(3) .color-chip:nth-child(3) {
+        transform-origin: bottom right;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-last-child(1) .color-chip:nth-child(3) {
+        transform-origin: bottom right;
+      }
+  
+      .color-chip-container.secondary-container .color-chip:nth-child(1) {
+        transform-origin: top;
+      }
+  
+      .color-chip-container.secondary-container .color-chip:nth-child(2) {
+        transform-origin: center;
+      }
+  
+      .color-chip-container.secondary-container .color-chip:nth-child(3) {
+        transform-origin: bottom;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-child(1) .color-chip {
+        transform-origin: left;
+      }
+  
+      /* agave light */
+      .color-chip-container.secondary-container .col-lg:nth-child(4) .color-chip {
+        transform-origin: left;
+      }
+  
+      /* palm light */
+      .color-chip-container.secondary-container .col-lg:nth-child(3) .color-chip {
+        transform-origin: right;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-last-child(1) .color-chip {
+        transform-origin: right;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(1) .color-chip:nth-child(1) {
+        transform-origin: top left;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(2) .color-chip:nth-child(1) {
+        transform-origin: top right;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(3) .color-chip:nth-last-child(1) {
+        transform-origin: bottom left;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(4) .color-chip:nth-last-child(1) {
+        transform-origin: bottom right;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(2n-1) .color-chip {
+        transform-origin: left;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(2n) .color-chip {
+        transform-origin: right;
+      }
+  
+      .tertiary-container .color-chip:hover,
+      .color-chip:focus {
+        position: relative;
+        transition: transform 0.05s ease-in;
+        transform: scale(1.25);
+        z-index: 100;
+      }
+  
+      .tertiary-container .color-chip:hover .color-chip-info,
+      .color-chip:focus .color-chip-info {
+        transform-origin: top left;
+        transition: none;
+        transform: scale(0.8);
+        width: calc(125% - 1rem);
+        height: calc(125% - 1rem);
+      }
+    }
+  
+    /* mobile view. no copy button because who's copying on mobile?? */
+    @media (max-width: 767.98px) {
+  
+      .color-chip-container .color-chip:hover,
+      .color-chip:focus {
+        position: relative;
+        transition: transform 0.05s ease-in;
+        transform: scale(1.25);
+        border-left-width: calc(5px / 1.25);
+        /* 5/2.25 */
+        border-right-width: calc(5px / 1.25);
+        border-top-width: calc(5px / 1.25);
+        border-bottom-width: calc(5px / 1.25);
+      }
+  
+      .color-chip-container .color-chip:hover .color-chip-info,
+      .color-chip:focus .color-chip-info {
+        transform: scale(calc(1/1.25));
+        margin: calc(0.5rem/1.25) calc(0.5rem/1.25);
+        width: calc(125% - 1rem);
+        height: calc(125% - 1rem);
+      }
+  
+      .color-chip-container .col-lg:nth-child(1) .color-chip:nth-child(1) {
+        transform-origin: top left;
+      }
+  
+      .color-chip-container .col-lg:nth-child(2) .color-chip:nth-child(1) {
+        transform-origin: top right;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-last-child(1) .color-chip:nth-child(3) {
+        transform-origin: bottom left;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-last-child(2) .color-chip:nth-child(3) {
+        transform-origin: bottom right;
+      }
+  
+      .color-chip-container .col-lg:nth-child(2n-1) .color-chip {
+        transform-origin: left;
+      }
+  
+      .color-chip-container .col-lg:nth-child(2n) .color-chip {
+        transform-origin: right;
+      }
+  
+      .color-chip-container .col-lg:nth-last-child(1) .color-chip:nth-child(1) {
+        transform-origin: left;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(1) .color-chip:nth-child(3) {
+        transform-origin: left;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-last-child(2) .color-chip:nth-child(3) {
+        transform-origin: bottom left;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-last-child(1) .color-chip:nth-child(1) {
+        transform-origin: right;
       }
   
       .primary.slim.color-chip:hover,
       .primary.slim.color-chip:focus {
         transform: scale(2.5, 1.25);
+        border-left-width: calc(5px/1.5);
+        /* 5/1.5 */
+        border-right-width: calc(5px/1.5);
+        border-top-width: calc(5px/1.25);
+        border-bottom-width: calc(5px/1.25);
       }
   
       .primary.slim.color-chip:hover .color-chip-info,
       .primary.slim.color-chip:focus .color-chip-info {
-        transform: scale(0.4, 0.8);
+        transform: scale(calc(1/2.5), calc(1/1.25));
+        margin: calc(0.5rem/1.25) calc(0.5rem/2.5);
+        /* 0.5 / 1.25 and 0.5 / 1.5 */
+        width: calc(250% - 1rem);
+        height: calc(125% - 1rem);
       }
     }
+  
   
     .color-chip {
       height: 10rem;
@@ -522,41 +773,7 @@
       margin: 0;
     }
   
-    .color-chip-container .col:nth-child(1) .color-chip:nth-child(1) {
-      transform-origin: top left;
-    }
   
-    .color-chip-container .col:nth-child(1) .color-chip:nth-child(3) {
-      transform-origin: bottom left;
-    }
-  
-    .color-chip-container .col:nth-last-child(1) .color-chip:nth-child(1) {
-      transform-origin: top right;
-    }
-  
-    .color-chip-container .col:nth-last-child(1) .color-chip:nth-child(3) {
-      transform-origin: bottom right;
-    }
-  
-    .color-chip-container .color-chip:nth-child(1) {
-      transform-origin: top;
-    }
-  
-    .color-chip-container .color-chip:nth-child(2) {
-      transform-origin: center;
-    }
-  
-    .color-chip-container .color-chip:nth-child(3) {
-      transform-origin: bottom;
-    }
-  
-    .color-chip-container .col:nth-child(1) .color-chip {
-      transform-origin: left;
-    }
-  
-    .color-chip-container .col:nth-last-child(1) .color-chip {
-      transform-origin: right;
-    }
   
     .color-copy-button-container {
       position: absolute;
@@ -573,7 +790,7 @@
       margin: 5px;
     }
   
-    .color-copy-button:hover {
+    .color-copy-button-container:hover {
       cursor: pointer;
     }
   </style>
@@ -659,7 +876,7 @@
   <h2>Secondary Colors</h2>
   <div class="color-chip-container secondary-container">
     <div class="row">
-      <div class="col">
+      <div class="col-6 col-lg col-md-4">
         <div class="color-chip" tabindex="0">
           <div class="color-chip-info">
             <div class="color-chip__name">
@@ -697,7 +914,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-6 col-lg col-md-4">
         <div class="color-chip" tabindex="0">
           <div class="color-chip-info">
             <div class="color-chip__name">
@@ -735,7 +952,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-6 col-lg col-md-4">
         <div class="color-chip" tabindex="0">
           <div class="color-chip-info">
             <div class="color-chip__name">
@@ -773,7 +990,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-6 col-lg col-md-3">
         <div class="color-chip" tabindex="0">
           <div class="color-chip-info">
             <div class="color-chip__name">
@@ -811,7 +1028,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-6 col-lg col-md-3">
         <div class="color-chip" tabindex="0">
           <div class="color-chip-info">
             <div class="color-chip__name">
@@ -849,7 +1066,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-6 col-lg col-md-3">
         <div class="color-chip" tabindex="0">
           <div class="color-chip-info">
             <div class="color-chip__name">
@@ -887,7 +1104,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-6 col-lg col-md-3">
         <div class="color-chip" tabindex="0">
           <div class="color-chip-info">
             <div class="color-chip__name">
@@ -931,7 +1148,7 @@
   <h2>Neutral Colors</h2>
   <div class="color-chip-container tertiary-container">
     <div class="row">
-      <div class="col">
+      <div class="col-6 col-lg col">
         <div class="color-chip" tabindex="0">
           <div class="color-chip-info">
             <div class="color-chip__name">
@@ -969,7 +1186,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-6 col-lg col">
         <div class="color-chip" tabindex="0">
           <div class="color-chip-info">
             <div class="color-chip__name">
@@ -1007,7 +1224,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-6 col-lg col">
         <div class="color-chip" tabindex="0">
           <div class="color-chip-info">
             <div class="color-chip__name">
@@ -1045,7 +1262,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-6 col-lg col">
         <div class="color-chip" tabindex="0">
           <div class="color-chip-info">
             <div class="color-chip__name">
@@ -1220,20 +1437,19 @@
     .tertiary-container .color-chip:hover,
     .tertiary-container .color-chip:focus {
       transform: scale(1.5, 1.25);
-      border-left-width: 4px;
+      border-left-width: calc(5px/1.5);
       /* 5/1.5 */
-      border-right-width: 4px;
-      border-top-width: 5px;
-      /*5/1.25 */
-      border-bottom-width: 5px;
+      border-right-width: calc(5px/1.5);
+      border-top-width: calc(5px/1.25);
+      border-bottom-width: calc(5px/1.25);
     }
   
     .primary.slim.color-chip:hover .color-chip-info,
     .primary.slim.color-chip:focus .color-chip-info,
     .tertiary-container .color-chip:hover .color-chip-info,
     .tertiary-container .color-chip:focus .color-chip-info {
-      transform: scale(0.667, 0.8);
-      margin: 0.4rem 0.3333rem;
+      transform: scale(calc(1/1.5), calc(1/1.25));
+      margin: calc(0.5rem/1.25) calc(0.5rem/1.5);
       /* 0.5 / 1.25 and 0.5 / 1.5 */
       width: calc(150% - 1rem);
       height: calc(125% - 1rem);
@@ -1242,17 +1458,17 @@
     .secondary-container .color-chip:hover,
     .secondary-container .color-chip:focus {
       transform: scale(2.25, 1.25);
-      border-left-width: 3px;
+      border-left-width: calc(5px/2.25);
       /* 5/2.25 */
-      border-right-width: 3px;
-      border-top-width: 5px;
-      border-bottom-width: 5px;
+      border-right-width: calc(5px/2.25);
+      border-top-width: calc(5px/1.25);
+      border-bottom-width: calc(5px/1.25);
     }
   
     .secondary-container .color-chip:hover .color-chip-info,
     .secondary-container .color-chip:focus .color-chip-info {
-      transform: scale(0.4444, 0.8);
-      margin: 0.4rem 0.2222rem;
+      transform: scale(calc(1/2.25), calc(1/1.25));
+      margin: calc(0.5rem/1.25) calc(0.5rem/2.25);
       /* 0.5 / 1.25 and 0.5 / 2.25 */
       width: calc(225% - 1rem);
       height: calc(125% - 1rem);
@@ -1266,31 +1482,283 @@
       width: 100%;
     }
   
-    /*@media (min-width: 992px) {*/
     .color-chip:hover .color-copy-button-container,
     .color-chip:focus .color-copy-button-container {
       display: inherit;
     }
   
-    /*}*/
+    .color-chip-container .col-lg:nth-child(1) .color-chip:nth-child(1) {
+      transform-origin: top left;
+    }
   
-    @media (max-width: 1024px) {
+    .color-chip-container .col-lg:nth-child(1) .color-chip:nth-child(3) {
+      transform-origin: bottom left;
+    }
   
-      .primary.slim.color-chip:hover p,
-      .primary.slim.color-chip:focus p {
-        width: 250%;
+    .color-chip-container .col-lg:nth-last-child(1) .color-chip:nth-child(1) {
+      transform-origin: top right;
+    }
+  
+    .color-chip-container .col-lg:nth-last-child(1) .color-chip:nth-child(3) {
+      transform-origin: bottom right;
+    }
+  
+    .color-chip-container .color-chip:nth-child(1) {
+      transform-origin: top;
+    }
+  
+    .color-chip-container .color-chip:nth-child(2) {
+      transform-origin: center;
+    }
+  
+    .color-chip-container .color-chip:nth-child(3) {
+      transform-origin: bottom;
+    }
+  
+    .color-chip-container .col-lg:nth-child(1) .color-chip {
+      transform-origin: left;
+    }
+  
+    .color-chip-container .col-lg:nth-last-child(1) .color-chip {
+      transform-origin: right;
+    }
+  
+    .color-chip__name {
+      font-weight: bold;
+    }
+  
+    @media (min-width: 766px) and (max-width: 991.98px) {
+  
+      /* for block of colors with 3 per row */
+      .secondary-container .col-md-4 .color-chip:hover,
+      .secondary-container .color-chip:focus {
+        transform: scale(1.25, 1.25);
+        border-left-width: calc(5px / 1.25);
+        /* 5/2.25 */
+        border-right-width: calc(5px / 1.25);
+        border-top-width: calc(5px / 1.25);
+        border-bottom-width: calc(5px / 1.25);
+      }
+  
+      .secondary-container .col-md-4 .color-chip:hover .color-chip-info,
+      .secondary-container .color-chip:focus .color-chip-info {
+        transform: scale(calc(1/1.25), 0.8);
+        margin: calc(0.5rem / 1.25) calc(0.5rem / 1.25);
+        /* 0.5 / 1.25 and 0.5 / 2.25 */
+        width: calc(125% - 1rem);
+        height: calc(125% - 1rem);
+      }
+  
+      /* for block of colors with 4 per row */
+      .secondary-container .col-md-3 .color-chip:hover,
+      .secondary-container .color-chip:focus {
+        transform: scale(calc(15/9), 1.25);
+        border-left-width: calc(5px / calc(15/9));
+        /* 5/2.25 */
+        border-right-width: calc(5px / calc(15/9));
+        border-top-width: calc(5px / 1.25);
+        border-bottom-width: calc(5px / 1.25);
+      }
+  
+      .secondary-container .col-md-3 .color-chip:hover .color-chip-info,
+      .secondary-container .color-chip:focus .color-chip-info {
+        transform: scale(calc(1/calc(15/9)), 0.8);
+        margin: calc(0.5rem / 1.25) calc(0.5rem / calc(15/9));
+        /* 0.5 / 1.25 and 0.5 / 2.25 */
+        width: calc(calc(1500%/9) - 1rem);
+        height: calc(125% - 1rem);
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-child(1) .color-chip:nth-child(1) {
+        transform-origin: top left;
+      }
+  
+      /* agave */
+      .color-chip-container.secondary-container .col-lg:nth-child(4) .color-chip:nth-child(1) {
+        transform-origin: top left;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-child(1) .color-chip:nth-child(3) {
+        transform-origin: bottom left;
+      }
+  
+      /* agave dark */
+      .color-chip-container.secondary-container .col-lg:nth-child(4) .color-chip:nth-child(3) {
+        transform-origin: bottom left;
+      }
+  
+      /* palm */
+      .color-chip-container.secondary-container .col-lg:nth-child(3) .color-chip:nth-child(1) {
+        transform-origin: top right;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-last-child(1) .color-chip:nth-child(1) {
+        transform-origin: top right;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-child(3) .color-chip:nth-child(3) {
+        transform-origin: bottom right;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-last-child(1) .color-chip:nth-child(3) {
+        transform-origin: bottom right;
+      }
+  
+      .color-chip-container.secondary-container .color-chip:nth-child(1) {
+        transform-origin: top;
+      }
+  
+      .color-chip-container.secondary-container .color-chip:nth-child(2) {
+        transform-origin: center;
+      }
+  
+      .color-chip-container.secondary-container .color-chip:nth-child(3) {
+        transform-origin: bottom;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-child(1) .color-chip {
+        transform-origin: left;
+      }
+  
+      /* agave light */
+      .color-chip-container.secondary-container .col-lg:nth-child(4) .color-chip {
+        transform-origin: left;
+      }
+  
+      /* palm light */
+      .color-chip-container.secondary-container .col-lg:nth-child(3) .color-chip {
+        transform-origin: right;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-last-child(1) .color-chip {
+        transform-origin: right;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(1) .color-chip:nth-child(1) {
+        transform-origin: top left;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(2) .color-chip:nth-child(1) {
+        transform-origin: top right;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(3) .color-chip:nth-last-child(1) {
+        transform-origin: bottom left;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(4) .color-chip:nth-last-child(1) {
+        transform-origin: bottom right;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(2n-1) .color-chip {
+        transform-origin: left;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(2n) .color-chip {
+        transform-origin: right;
+      }
+  
+      .tertiary-container .color-chip:hover,
+      .color-chip:focus {
+        position: relative;
+        transition: transform 0.05s ease-in;
+        transform: scale(1.25);
+        z-index: 100;
+      }
+  
+      .tertiary-container .color-chip:hover .color-chip-info,
+      .color-chip:focus .color-chip-info {
+        transform-origin: top left;
+        transition: none;
+        transform: scale(0.8);
+        width: calc(125% - 1rem);
+        height: calc(125% - 1rem);
+      }
+    }
+  
+    /* mobile view. no copy button because who&#x27;s copying on mobile?? */
+    @media (max-width: 767.98px) {
+  
+      .color-chip-container .color-chip:hover,
+      .color-chip:focus {
+        position: relative;
+        transition: transform 0.05s ease-in;
+        transform: scale(1.25);
+        border-left-width: calc(5px / 1.25);
+        /* 5/2.25 */
+        border-right-width: calc(5px / 1.25);
+        border-top-width: calc(5px / 1.25);
+        border-bottom-width: calc(5px / 1.25);
+      }
+  
+      .color-chip-container .color-chip:hover .color-chip-info,
+      .color-chip:focus .color-chip-info {
+        transform: scale(calc(1/1.25));
+        margin: calc(0.5rem/1.25) calc(0.5rem/1.25);
+        width: calc(125% - 1rem);
+        height: calc(125% - 1rem);
+      }
+  
+      .color-chip-container .col-lg:nth-child(1) .color-chip:nth-child(1) {
+        transform-origin: top left;
+      }
+  
+      .color-chip-container .col-lg:nth-child(2) .color-chip:nth-child(1) {
+        transform-origin: top right;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-last-child(1) .color-chip:nth-child(3) {
+        transform-origin: bottom left;
+      }
+  
+      .color-chip-container.secondary-container .col-lg:nth-last-child(2) .color-chip:nth-child(3) {
+        transform-origin: bottom right;
+      }
+  
+      .color-chip-container .col-lg:nth-child(2n-1) .color-chip {
+        transform-origin: left;
+      }
+  
+      .color-chip-container .col-lg:nth-child(2n) .color-chip {
+        transform-origin: right;
+      }
+  
+      .color-chip-container .col-lg:nth-last-child(1) .color-chip:nth-child(1) {
+        transform-origin: left;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-child(1) .color-chip:nth-child(3) {
+        transform-origin: left;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-last-child(2) .color-chip:nth-child(3) {
+        transform-origin: bottom left;
+      }
+  
+      .color-chip-container.tertiary-container .col-lg:nth-last-child(1) .color-chip:nth-child(1) {
+        transform-origin: right;
       }
   
       .primary.slim.color-chip:hover,
       .primary.slim.color-chip:focus {
         transform: scale(2.5, 1.25);
+        border-left-width: calc(5px/1.5);
+        /* 5/1.5 */
+        border-right-width: calc(5px/1.5);
+        border-top-width: calc(5px/1.25);
+        border-bottom-width: calc(5px/1.25);
       }
   
       .primary.slim.color-chip:hover .color-chip-info,
       .primary.slim.color-chip:focus .color-chip-info {
-        transform: scale(0.4, 0.8);
+        transform: scale(calc(1/2.5), calc(1/1.25));
+        margin: calc(0.5rem/1.25) calc(0.5rem/2.5);
+        /* 0.5 / 1.25 and 0.5 / 1.5 */
+        width: calc(250% - 1rem);
+        height: calc(125% - 1rem);
       }
     }
+  
   
     .color-chip {
       height: 10rem;
@@ -1382,41 +1850,7 @@
       margin: 0;
     }
   
-    .color-chip-container .col:nth-child(1) .color-chip:nth-child(1) {
-      transform-origin: top left;
-    }
   
-    .color-chip-container .col:nth-child(1) .color-chip:nth-child(3) {
-      transform-origin: bottom left;
-    }
-  
-    .color-chip-container .col:nth-last-child(1) .color-chip:nth-child(1) {
-      transform-origin: top right;
-    }
-  
-    .color-chip-container .col:nth-last-child(1) .color-chip:nth-child(3) {
-      transform-origin: bottom right;
-    }
-  
-    .color-chip-container .color-chip:nth-child(1) {
-      transform-origin: top;
-    }
-  
-    .color-chip-container .color-chip:nth-child(2) {
-      transform-origin: center;
-    }
-  
-    .color-chip-container .color-chip:nth-child(3) {
-      transform-origin: bottom;
-    }
-  
-    .color-chip-container .col:nth-child(1) .color-chip {
-      transform-origin: left;
-    }
-  
-    .color-chip-container .col:nth-last-child(1) .color-chip {
-      transform-origin: right;
-    }
   
     .color-copy-button-container {
       position: absolute;
@@ -1433,7 +1867,7 @@
       margin: 5px;
     }
   
-    .color-copy-button:hover {
+    .color-copy-button-container:hover {
       cursor: pointer;
     }
   &lt;/style&gt;
@@ -1519,7 +1953,7 @@
   &lt;h2&gt;Secondary Colors&lt;/h2&gt;
   &lt;div class&#x3D;&quot;color-chip-container secondary-container&quot;&gt;
     &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 col-lg col-md-4&quot;&gt;
         &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
           &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
             &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
@@ -1557,7 +1991,7 @@
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 col-lg col-md-4&quot;&gt;
         &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
           &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
             &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
@@ -1595,7 +2029,7 @@
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 col-lg col-md-4&quot;&gt;
         &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
           &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
             &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
@@ -1633,7 +2067,7 @@
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 col-lg col-md-3&quot;&gt;
         &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
           &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
             &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
@@ -1671,7 +2105,7 @@
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 col-lg col-md-3&quot;&gt;
         &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
           &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
             &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
@@ -1709,7 +2143,7 @@
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 col-lg col-md-3&quot;&gt;
         &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
           &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
             &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
@@ -1747,7 +2181,7 @@
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 col-lg col-md-3&quot;&gt;
         &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
           &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
             &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
@@ -1791,7 +2225,7 @@
   &lt;h2&gt;Neutral Colors&lt;/h2&gt;
   &lt;div class&#x3D;&quot;color-chip-container tertiary-container&quot;&gt;
     &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
         &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
           &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
             &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
@@ -1829,7 +2263,7 @@
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
         &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
           &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
             &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
@@ -1867,7 +2301,7 @@
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
         &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
           &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
             &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
@@ -1905,7 +2339,7 @@
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col&quot;&gt;
+      &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
         &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
           &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
             &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;

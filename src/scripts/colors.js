@@ -62,13 +62,13 @@ function appendData(parent_element, details, is_primary) {
   if(is_primary) {
     let p_pms = document.createElement('p');
     if (details["PMS"] !== -1) {
-      p_pms.innerHTML = "<em>PMS</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + details["PMS"];
+      p_pms.innerHTML = "<b>PMS</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + details["PMS"] + " C";
       parent_element.appendChild(p_pms);
     }
   }
 
   let p_cmyk = document.createElement('p');
-  p_cmyk.innerHTML = "<em>CMYK</em>&nbsp;&nbsp;&nbsp;"
+  p_cmyk.innerHTML = "<b>CMYK</b>&nbsp;&nbsp;&nbsp;&nbsp;"
   for(let i = 0; i < details["CMYK"].length; i++) {
     if(i !== details["CMYK"].length - 1) {
       p_cmyk.innerHTML += details["CMYK"][i] + " / ";
@@ -78,7 +78,7 @@ function appendData(parent_element, details, is_primary) {
   }
 
   let p_rgb = document.createElement('p');
-  p_rgb.innerHTML = "<em>RGB</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;"
+  p_rgb.innerHTML = "<b>RGB</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
   for(let i = 0; i < details["RGB"].length; i++) {
     if(i !== details["RGB"].length - 1) {
       p_rgb.innerHTML += details["RGB"][i] + " / ";
@@ -88,7 +88,7 @@ function appendData(parent_element, details, is_primary) {
   }
 
   let p_hex = document.createElement('p');
-  p_hex.innerHTML = `<em>HEX</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;${details["HEX"]}`;
+  p_hex.innerHTML = `<b>HEX</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;${details["HEX"]}`;
 
   parent_element.appendChild(p_cmyk);
   parent_element.appendChild(p_rgb);
@@ -99,7 +99,7 @@ function copyButtons() {
   let copy_color_buttons = document.querySelectorAll(".color-copy-button-container");
   for (let i = 0; i < copy_color_buttons.length; i++) {
     copy_color_buttons[i].addEventListener("click", function(e) {
-      let p_hex = e.srcElement.parentElement.parentElement.querySelector('.color-chip__data p:nth-child(3)');
+      let p_hex = e.srcElement.parentElement.parentElement.querySelector('.color-chip__data p:nth-last-child(1)');
       let hex_code = p_hex.textContent.split('HEX')[1].trim();
 
       navigator.clipboard.writeText(hex_code).then(() => {
@@ -130,6 +130,27 @@ function copyButtons() {
         }, 1000);
       });
     });
+
+    copy_color_buttons[i].addEventListener("mouseenter", function(e) {
+      let originalBackground = window.getComputedStyle(e.target).backgroundColor;
+      let originalColor = window.getComputedStyle(e.target).color;
+      e.target.dataset.originalBackground = originalBackground;
+      e.target.dataset.originalColor = originalColor;
+
+      let newBackground = originalColor; // Use the text color as the background
+      let p_hex = e.srcElement.parentElement.parentElement.querySelector('.color-chip__data p:nth-last-child(1)');
+      let text = p_hex.textContent.split('HEX')[1].trim();
+
+      e.target.style.background = newBackground;
+      e.target.style.color = text;
+    });
+
+    copy_color_buttons[i].addEventListener("mouseleave", function(e) {
+      // Revert to the original styles stored in dataset
+      e.target.style.background = e.target.dataset.originalBackground || "none";
+      e.target.style.color = e.target.dataset.originalColor || "inherit";
+    });
+
   }
 }
 
