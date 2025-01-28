@@ -1,0 +1,405 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="description" content="${description}">
+    <meta name="author" content="Santa Clara University">
+    <meta name="robots" content="noindex">
+     
+    <title>SCU Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="$request.getContextPath()/css/capslock.js"></script>
+
+    <link href="https://www.scu.edu/bootstrap-scu/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="https://www.scu.edu/css/scu.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/895f1e62c1.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8fd101ac29.js" crossorigin="anonymous"></script>
+
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="$request.getContextPath()/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="$request.getContextPath()/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="$request.getContextPath()/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="$request.getContextPath()/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="$request.getContextPath()/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="$request.getContextPath()/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="$request.getContextPath()/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="$request.getContextPath()/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="$request.getContextPath()/images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="$request.getContextPath()/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="$request.getContextPath()/images/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="$request.getContextPath()/images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="$request.getContextPath()/images/favicons/favicon-16x16.png" sizes="16x16">
+
+    <style>
+    /* Space out content a bit */
+    body {
+      background-color:  #F4F2F0;
+    }
+
+    header {
+      background-color: #fff;
+    }
+  
+    .site-header {
+      padding:0;
+    }
+
+    @media (min-width: 1065px) {
+      .site-header-with-seal .site-header-text-and-search {
+        height: inherit;
+        padding: 8px 0 0;
+      }
+
+      
+
+    }
+
+    aside,
+    footer {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    header {
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    footer {
+      padding-top: 19px;
+      color: #777;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 730px;
+      }
+      .site-header-with-seal .site-header-text-and-search {
+        padding: 8px 0 0 8px !important;
+    }
+    .site-header.uses-core-navigation {
+        padding-bottom: 8px;
+      }
+  }
+
+    .main {
+      text-align: left;
+      border-bottom: 1px solid #e5e5e5;
+      background-color: #DFDBD3;
+      margin-bottom: 30px;
+    }
+    .main h1 {
+      margin:10px 0 0 0;
+    }
+
+    aside {
+      margin: 40px 0;
+    }
+
+     
+
+    @media screen and (min-width: 768px) {
+      aside,
+      .footer {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      .site-header-with-seal .wordmarks {
+        margin-top: 20px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .main h1 {
+        font-size:30px;
+        margin:0;
+      }
+      .main h2 {
+        font-size:24px;
+        margin:10px 0 40px 0;
+
+      }
+      .site-header-with-seal {
+        padding-top: 8px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .col-xs-3, .col-xs-9 {
+        width: 100% !important;
+      }
+    }
+
+    #duo_iframe {
+      width: 100%;
+      min-width: 304px;
+      max-width: 620px;
+       height: 330px;
+    }
+    .login_btn {
+        background-color: #B30738;
+        display: flex;
+        width: 120px;
+        height: 44px;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border:0px;
+        color:white;
+        border-radius: 3px;
+        margin-top: 16px;
+    }
+   
+    .site-header-titles {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .sculogo {
+        
+      width: 350px;
+      height: 100px;
+      margin: 0 auto;
+      img {
+        height: 400%;
+        width: 400%;
+        vertical-align: middle;
+        transform: scale(0.25);
+        transform-origin: 0 0;    
+    }
+
+    h3 {
+      color:   #212529;
+    }
+    h2 {
+      color:   #212529;
+      font-family: "Trade Gothic Next W01";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 29.33px; /* 122.208% */
+      margin-bottom: 40px;
+
+
+      align-self: stretch;
+        flex-shrink: 0;
+        flex-basis: auto;
+        position: relative;
+        height: 30px;
+        font-weight: 700;
+        line-height: 29.33px;
+        text-align: left;
+        white-space: nowrap;
+        z-index: 9;      
+    }
+    label {
+      color:#212529;
+      font-family: "Trade Gothic W01 Light";
+      font-size: 15.75px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;  
+    }
+          
+
+    @font-face{
+        font-family:"Trade Gothic W01 Light";
+        src:url(./assets/fonts/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix);
+        src:url(./assets/fonts/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix) format("eot"),url(./assets/fonts/5414f75e-5cb8-4357-88e5-5a294424c859.woff2) format("woff2"),url(./assets/fonts/537b145a-6a7d-4787-81d9-7228d3a42458.woff) format("woff"),url(./assets/fonts/8e50278c-45cd-4808-b774-24767d958f17.ttf) format("truetype"),url(./assets/fonts/d918b947-5fcb-42e2-8286-a98a801876de.svg#d918b947-5fcb-42e2-8286-a98a801876de) format("svg");
+        font-display: swap
+    }
+    @font-face{
+        font-family:TradeGothicW01-LightObl;
+        src:url(./assets/fonts/b1721311-de06-4277-8dcb-bf39e072b75e.eot?#iefix);
+        src:url(./assets/fonts/b1721311-de06-4277-8dcb-bf39e072b75e.eot?#iefix) format("eot"),url(./assets/fonts/c71beaba-ad09-45b0-9e21-78db525b4d1c.woff2) format("woff2"),url(./assets/fonts/c357a65e-dd87-4d11-8063-db04802d44c0.woff) format("woff"),url(./assets/fonts/6b9ca17d-cb9d-43bb-8b43-93670b45b83f.ttf) format("truetype"),url(./assets/fonts/198ed3e2-0cdf-496f-a0ef-86da8d4dde55.svg#198ed3e2-0cdf-496f-a0ef-86da8d4dde55) format("svg");
+        font-display: swap
+    }
+    @font-face{
+        font-family:"Trade Gothic W01 Bold_2";
+        src:url(./assets/fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix);
+        src:url(./assets/fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix) format("eot"),url(./assets/fonts/7bb1c0cb-e6e9-44ea-ae0c-1984ad7e3339.woff2) format("woff2"),url(./assets/fonts/1454a71d-cdbb-429c-8092-122f4493e0c7.woff) format("woff"),url(./assets/fonts/d5ea405c-2180-4ff0-bd51-3e19fb280be4.ttf) format("truetype"),url(./assets/fonts/70ac6679-cf48-4a0e-a909-d1e3bb4a1aa9.svg#70ac6679-cf48-4a0e-a909-d1e3bb4a1aa9) format("svg");
+        font-display: swap
+    }
+    @font-face{
+        font-family:TradeGothicW01-Bold2Obl;
+        src:url(./assets/fonts/363fd092-cd55-4bd1-bdc5-cfc9a7057517.eot?#iefix);
+        src:url(./assets/fonts/363fd092-cd55-4bd1-bdc5-cfc9a7057517.eot?#iefix) format("eot"),url(./assets/fonts/2576748c-c86d-474c-b80b-33a1ce248599.woff2) format("woff2"),url(./assets/fonts/25f577c3-f32b-4fbf-b684-3e7c1a76d1ea.woff) format("woff"),url(./assets/fonts/2ed49e17-92ad-4026-9ae6-d20f88f21840.ttf) format("truetype"),url(./assets/fonts/969cd675-2b4c-4baa-ada6-62bb7ace778f.svg#969cd675-2b4c-4baa-ada6-62bb7ace778f) format("svg");
+        font-display: swap
+    }
+    @font-face{
+        font-family:"Trade Gothic Next W01";
+        src:url(./assets/fonts/8a6c3750-4927-4649-9dac-87049f5e9700.eot?#iefix);
+        src:url(./assets/fonts/8a6c3750-4927-4649-9dac-87049f5e9700.eot?#iefix) format("eot"),url(./assets/fonts/d4eef5b1-2f4a-42d6-ae2d-6220d71243be.woff2) format("woff2"),url(./assets/fonts/57625f96-ca80-4602-9644-ec1803cb3ba3.woff) format("woff"),url(./assets/fonts/6618d500-1727-4334-878e-1c4b95192f42.ttf) format("truetype"),url(./assets/fonts/01ebe944-ca6c-41db-a3ba-b7e2a90536d9.svg#01ebe944-ca6c-41db-a3ba-b7e2a90536d9) format("svg");
+        font-display: swap
+    }
+    @font-face{
+        font-family:TradeGothicNextW01-Ital;
+        src:url(./assets/fonts/5907bd95-539f-4f25-b115-69c42aee6b21.eot?#iefix);
+        src:url(./assets/fonts/5907bd95-539f-4f25-b115-69c42aee6b21.eot?#iefix) format("eot"),url(./assets/fonts/e41c3ce6-57bc-473c-aaf0-9e0e771bf6c8.woff2) format("woff2"),url(./assets/fonts/3bde4253-d238-40b7-b813-eea7bdd9e80d.woff) format("woff"),url(./assets/fonts/6005c161-37f3-4678-869a-1b4306ecc563.ttf) format("truetype"),url(./assets/fonts/1301d16e-d0ec-407b-9796-677535450691.svg#1301d16e-d0ec-407b-9796-677535450691) format("svg");
+        font-display: swap
+    }
+    </style>
+  </head>
+
+ 
+  <body class="">
+
+    <header class="site-header uses-core-navigation site-header-with-seal">
+      <div class="site-header-text-and-search">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 site-header-titles">
+              
+               <a href="https://www.scu.edu" class="text-center"><div class="sculogo"><img src="https://assets.scu.edu/images/scu-primary-logo.svg"><span class="sr-only">Santa Clara University Homepage</span></div></a>
+              <h1 class="sr-only">Santa Clara University</h1>
+
+
+
+         
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container">
+
+            <div class="main block block-primary p-a" >
+              <form class="form-horizontal" action="/idp/profile/SAML2/Redirect/SSO?execution=e1s2" method="post">
+      <input type="hidden" name="csrf_token" value="_75d99746d45726f343c14c57b6da996364f53644">
+                <h2 class="p-3" id="boxtitle">Login to SCU</h2>
+                          
+              
+              
+  
+                <div class="p-3">
+                  <label for="username" >SCU Username</label>
+                  
+                    <input class="form-control" id="username" name="j_username" type="text" placeholder="e.g. BBronco" value="" autofocus="autofocus">
+                  
+                </div>
+  
+                <div class="p-3">
+                  <label for="password">Password</label>
+                 
+                    <input class="form-control" id="password" name="j_password" type="password" value="" placeholder="Passwords are case sensitive" autocomplete="off">
+                 
+                </div>
+  
+                <div class="p-3">
+                  
+                                                                                                                  
+                                                          
+                    <button class="login_btn" type="submit" name="_eventId_proceed" onclick="this.childNodes[0].nodeValue='Logging in, please wait...'">Login</button>
+  
+  
+                 
+                </div>
+              </form>
+            </div>
+            
+  
+  
+            <aside class="row">
+              <div class="col-lg-12">
+                <h3>Need help?</h3>
+                <p>Please note passwords are case sensitive. We can assist if you've <a href="https://www.scu.edu/technology/get-connected/logins--accounts/scu-username-password-management/" target="_blank">forgotten your password</a>.</p>
+                <p>Staff at the <a href="https://www.scu.edu/technology/computing-services--support/">Technology Help Desk</a>, located on the first floor of the Learning Commons, are ready to help you with your computing and network needs.
+              </p></div>
+            </aside>
+  
+       <script type="text/javascript">
+         if ( inIframe () ) {
+           $('header').hide();
+           $('footer').hide();
+           $('#boxtitle').hide();
+         }
+  
+         function inIframe () {
+           try {
+             return window.self !== window.top;
+           } catch (e) {
+             return true;
+           }
+         }
+       </script>
+        <footer class="footer">
+          <p>© 2024 Santa Clara University.</p>
+        </footer>
+  
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        </div> <!-- /container -->
+    
+    
+      </body>
+    </html>
+    
