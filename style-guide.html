@@ -329,6 +329,7 @@
   
   <div class="f-item-preview">
     <style>
+    /* for color chips */
     .color-chip__data p {
       display: none;
       margin: 0;
@@ -658,6 +659,10 @@
         transform-origin: bottom left;
       }
   
+      .color-chip-container .col-lg:nth-child(1) .color-chip:nth-child(3) {
+        transform-origin: left;
+      }
+  
       .color-chip-container.tertiary-container .col-lg:nth-last-child(1) .color-chip:nth-child(1) {
         transform-origin: right;
       }
@@ -793,509 +798,619 @@
     .color-copy-button-container:hover {
       cursor: pointer;
     }
+  
+    /* for color combo */
+  
+    .color-circle {
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  
+    .color-circle:hover {
+      cursor: pointer;
+    }
+  
+    .color-circle.selected {
+      outline: 1px solid black;
+      outline-offset: 5px;
+    }
+  
+    .color-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      width: 4.5rem;
+    }
+  
+    .color-combo-container {
+      margin: 1.5rem 1.5rem;
+      padding: 2rem;
+      border: 1px solid #2A373F;
+      border-radius: 0.5rem;
+    }
+  
+    .color-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  
+    .sandbox {
+      margin: 1rem;
+      padding: 1.5rem 2rem;
+      border-radius: 1rem;
+    }
+  
+    .color-button {
+      position: relative;
+      /* Ensures absolute positioning works inside */
+    }
+  
+    .color-tip {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      white-space: nowrap;
+      transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+      top: -50%;
+      z-index: 10;
+    }
+  
+    .color-button:hover .color-tip {
+      visibility: visible;
+      opacity: 1;
+    }
+  
+    .check-container {}
+  
+    .pass {
+      color: green;
+      border: 1px solid;
+      width: fit-content;
+      height: fit-content;
+      border-radius: 0.5rem;
+      padding: 0.25rem;
+    }
+  
+    .fail {
+      color: red;
+      border: 1px solid;
+      width: fit-content;
+      height: fit-content;
+      border-radius: 0.5rem;
+      padding: 0.25rem;
+    }
+  
+    .compliance {
+      gap: 2rem;
+    }
+  
+    .compliance-row {
+      display: flex;
+      gap: 10px;
+    }
+  
+    .compliance-category {
+      padding: 0.25rem 0;
+      height: fit-content;
+    }
+  
+    .color-contrast {
+      font-size: xxx-large;
+    }
   </style>
   
-  <!-- primary colors -->
-  <h2>Primary Colors</h2>
-  <div class="primary-color-chip-container">
-    <div class="row">
-      <div class="col-6">
-        <div class="color-chip primary" tabindex="0" style="transform-origin: top left">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Santa Clara Red
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip primary" tabindex="0" style="transform-origin: bottom left">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              White
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="color-chip primary" tabindex="0" style="transform-origin: top right">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Bronco Red
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <div class="color-chip primary slim" tabindex="0" style="transform-origin: bottom">
-              <div class="color-chip-info">
-                <div class="color-chip__name">
-                  Stone
-                </div>
-                <div class="color-chip__data">
-                </div>
-                <div class="color-copy-button-container">
-                  <a class="color-copy-button">Copy Hex Code</a>
-                </div>
+  
+  <div>
+    <!-- primary colors -->
+    <h2>Primary Colors</h2>
+    <div class="primary-color-chip-container">
+      <div class="row">
+        <div class="col-6">
+          <div class="color-chip primary" tabindex="0" style="transform-origin: top left">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Santa Clara Red
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
               </div>
             </div>
           </div>
-          <div class="col-6">
-            <div class="color-chip primary slim" tabindex="0" style="transform-origin: bottom right">
-              <div class="color-chip-info">
-                <div class="color-chip__name">
-                  Black
-                </div>
-                <div class="color-chip__data">
-                </div>
-                <div class="color-copy-button-container">
-                  <a class="color-copy-button">Copy Hex Code</a>
-                </div>
+          <div class="color-chip primary" tabindex="0" style="transform-origin: bottom left">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                White
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- secondary colors -->
-  <h2>Secondary Colors</h2>
-  <div class="color-chip-container secondary-container">
-    <div class="row">
-      <div class="col-6 col-lg col-md-4">
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Terracotta
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
+        <div class="col">
+          <div class="color-chip primary" tabindex="0" style="transform-origin: top right">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Bronco Red
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Terracotta Light
+          <div class="row">
+            <div class="col-6">
+              <div class="color-chip primary slim" tabindex="0" style="transform-origin: bottom">
+                <div class="color-chip-info">
+                  <div class="color-chip__name">
+                    Stone
+                  </div>
+                  <div class="color-chip__data">
+                  </div>
+                  <div class="color-copy-button-container">
+                    <a class="color-copy-button">Copy Hex Code</a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Terracotta Dark
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-lg col-md-4">
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Sunrise
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Sunrise Light
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Sunrise Dark
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-lg col-md-4">
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Palm
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Palm Light
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Palm Dark
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-lg col-md-3">
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Agave
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Agave Light
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Agave Dark
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-lg col-md-3">
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Sky
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Sky Light
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Sky Dark
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-lg col-md-3">
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Wisteria
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Wisteria Light
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Wisteria Dark
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-lg col-md-3">
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Rose
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Rose Light
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Rose Dark
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
+            <div class="col-6">
+              <div class="color-chip primary slim" tabindex="0" style="transform-origin: bottom right">
+                <div class="color-chip-info">
+                  <div class="color-chip__name">
+                    Black
+                  </div>
+                  <div class="color-chip__data">
+                  </div>
+                  <div class="color-copy-button-container">
+                    <a class="color-copy-button">Copy Hex Code</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   
-  <h2>Neutral Colors</h2>
-  <div class="color-chip-container tertiary-container">
-    <div class="row">
-      <div class="col-6 col-lg col">
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Fog
+    <!-- secondary colors -->
+    <h2>Secondary Colors</h2>
+    <div class="color-chip-container secondary-container">
+      <div class="row">
+        <div class="col-6 col-lg col-md-4">
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Terracotta
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
-            <div class="color-chip__data">
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Terracotta Light
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Terracotta Dark
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Fog Light
+        <div class="col-6 col-lg col-md-4">
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Sunrise
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
-            <div class="color-chip__data">
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Sunrise Light
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Sunrise Dark
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Fog Dark
+        <div class="col-6 col-lg col-md-4">
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Palm
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
-            <div class="color-chip__data">
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Palm Light
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Palm Dark
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg col-md-3">
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Agave
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Agave Light
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Agave Dark
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg col-md-3">
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Sky
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Sky Light
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Sky Dark
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg col-md-3">
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Wisteria
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Wisteria Light
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Wisteria Dark
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg col-md-3">
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Rose
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Rose Light
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Rose Dark
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-6 col-lg col">
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Adobe
+    </div>
+  
+    <h2>Neutral Colors</h2>
+    <div class="color-chip-container tertiary-container">
+      <div class="row">
+        <div class="col-6 col-lg col">
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Fog
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
-            <div class="color-chip__data">
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Fog Light
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Fog Dark
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Adobe Light
+        <div class="col-6 col-lg col">
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Adobe
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
-            <div class="color-chip__data">
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Adobe Light
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Adobe Dark
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Adobe Dark
+        <div class="col-6 col-lg col">
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Clay
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
-            <div class="color-chip__data">
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Clay Light
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
+          </div>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Clay Dark
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-6 col-lg col">
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Clay
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Clay Light
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
+        <div class="col-6 col-lg col">
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Slate
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Clay Dark
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-lg col">
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Slate
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Slate Light
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Slate Light
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="color-chip" tabindex="0">
-          <div class="color-chip-info">
-            <div class="color-chip__name">
-              Slate Dark
-            </div>
-            <div class="color-chip__data">
-            </div>
-            <div class="color-copy-button-container">
-              <a class="color-copy-button">Copy Hex Code</a>
+          <div class="color-chip" tabindex="0">
+            <div class="color-chip-info">
+              <div class="color-chip__name">
+                Slate Dark
+              </div>
+              <div class="color-chip__data">
+              </div>
+              <div class="color-copy-button-container">
+                <a class="color-copy-button">Copy Hex Code</a>
+              </div>
             </div>
           </div>
         </div>
@@ -1303,7 +1418,73 @@
     </div>
   </div>
   
+  <div class="color-combo-container">
   
+    <h3>Accessible Brand Color Combinations</h3>
+  
+    <p>Use this tool to help find accessible color combinations. Web accessibility standards require certain contrast levels
+      between the text and the background to be at certain levels.</p>
+  
+    <h4>Choose a Background Color</h4>
+    <div class="color-selector background-colors">
+  
+    </div>
+  
+    <hr>
+  
+    <h4>Choose a Text Color</h4>
+    <div class="color-selector text-colors">
+  
+    </div>
+  
+    <div class="sandbox">
+      <div class="h3">Choose Your Path</div>
+      <p>Explore the dozens of fields you could major or minor in, ranging from the arts and the humanities to the natural and social sciences. Pair two or more areas of study together to fulfill your interests.</p>
+    </div>
+    <div class="result-container row">
+      <div class="color-contrast-container col-12 col-md-6">
+        <h4>Color Contrast</h4>
+        <div class="color-contrast">
+  
+        </div>
+      </div>
+  
+      <div class="check-container col-12 col-md-6">
+        <h4>Your Compliance</h4>
+        <p>Large Text</p>
+        <div class="compliance row">
+          <div class="compliance-row row">
+            <p class="compliance-category">AA</p>
+            <div class="pass-fail pass" id="aa-large">
+              Pass
+            </div>
+          </div>
+          <div class="compliance-row row">
+            <p class="compliance-category">AAA</p>
+            <div class="pass-fail pass" id="aaa-large">
+              Pass
+            </div>
+          </div>
+        </div>
+        <p>Small Text</p>
+        <div class="compliance row">
+          <div class="compliance-row row">
+            <p class="compliance-category">AA</p>
+            <div class="pass-fail pass" id="aa-normal">
+              Pass
+            </div>
+          </div>
+          <div class="compliance-row row">
+            <p class="compliance-category">AAA</p>
+            <div class="pass-fail pass" id="aaa-normal">
+              Pass
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
   
   <h3>Text Color</h3>
   
@@ -1406,6 +1587,7 @@
   </div>
   <div class="f-item-code f-item-hidden" data-f-toggle="code">
     <pre><code class="language-markup">&lt;style&gt;
+    /* for color chips */
     .color-chip__data p {
       display: none;
       margin: 0;
@@ -1735,6 +1917,10 @@
         transform-origin: bottom left;
       }
   
+      .color-chip-container .col-lg:nth-child(1) .color-chip:nth-child(3) {
+        transform-origin: left;
+      }
+  
       .color-chip-container.tertiary-container .col-lg:nth-last-child(1) .color-chip:nth-child(1) {
         transform-origin: right;
       }
@@ -1870,509 +2056,619 @@
     .color-copy-button-container:hover {
       cursor: pointer;
     }
+  
+    /* for color combo */
+  
+    .color-circle {
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  
+    .color-circle:hover {
+      cursor: pointer;
+    }
+  
+    .color-circle.selected {
+      outline: 1px solid black;
+      outline-offset: 5px;
+    }
+  
+    .color-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      width: 4.5rem;
+    }
+  
+    .color-combo-container {
+      margin: 1.5rem 1.5rem;
+      padding: 2rem;
+      border: 1px solid #2A373F;
+      border-radius: 0.5rem;
+    }
+  
+    .color-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  
+    .sandbox {
+      margin: 1rem;
+      padding: 1.5rem 2rem;
+      border-radius: 1rem;
+    }
+  
+    .color-button {
+      position: relative;
+      /* Ensures absolute positioning works inside */
+    }
+  
+    .color-tip {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      white-space: nowrap;
+      transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+      top: -50%;
+      z-index: 10;
+    }
+  
+    .color-button:hover .color-tip {
+      visibility: visible;
+      opacity: 1;
+    }
+  
+    .check-container {}
+  
+    .pass {
+      color: green;
+      border: 1px solid;
+      width: fit-content;
+      height: fit-content;
+      border-radius: 0.5rem;
+      padding: 0.25rem;
+    }
+  
+    .fail {
+      color: red;
+      border: 1px solid;
+      width: fit-content;
+      height: fit-content;
+      border-radius: 0.5rem;
+      padding: 0.25rem;
+    }
+  
+    .compliance {
+      gap: 2rem;
+    }
+  
+    .compliance-row {
+      display: flex;
+      gap: 10px;
+    }
+  
+    .compliance-category {
+      padding: 0.25rem 0;
+      height: fit-content;
+    }
+  
+    .color-contrast {
+      font-size: xxx-large;
+    }
   &lt;/style&gt;
   
-  &lt;!-- primary colors --&gt;
-  &lt;h2&gt;Primary Colors&lt;/h2&gt;
-  &lt;div class&#x3D;&quot;primary-color-chip-container&quot;&gt;
-    &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-6&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip primary&quot; tabindex&#x3D;&quot;0&quot; style&#x3D;&quot;transform-origin: top left&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Santa Clara Red
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip primary&quot; tabindex&#x3D;&quot;0&quot; style&#x3D;&quot;transform-origin: bottom left&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              White
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip primary&quot; tabindex&#x3D;&quot;0&quot; style&#x3D;&quot;transform-origin: top right&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Bronco Red
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;row&quot;&gt;
-          &lt;div class&#x3D;&quot;col-6&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip primary slim&quot; tabindex&#x3D;&quot;0&quot; style&#x3D;&quot;transform-origin: bottom&quot;&gt;
-              &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-                &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-                  Stone
-                &lt;/div&gt;
-                &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-                &lt;/div&gt;
-                &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-                  &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-                &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;!-- primary colors --&gt;
+    &lt;h2&gt;Primary Colors&lt;/h2&gt;
+    &lt;div class&#x3D;&quot;primary-color-chip-container&quot;&gt;
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-6&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip primary&quot; tabindex&#x3D;&quot;0&quot; style&#x3D;&quot;transform-origin: top left&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Santa Clara Red
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-          &lt;div class&#x3D;&quot;col-6&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip primary slim&quot; tabindex&#x3D;&quot;0&quot; style&#x3D;&quot;transform-origin: bottom right&quot;&gt;
-              &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-                &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-                  Black
-                &lt;/div&gt;
-                &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-                &lt;/div&gt;
-                &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-                  &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-                &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip primary&quot; tabindex&#x3D;&quot;0&quot; style&#x3D;&quot;transform-origin: bottom left&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                White
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  
-  &lt;!-- secondary colors --&gt;
-  &lt;h2&gt;Secondary Colors&lt;/h2&gt;
-  &lt;div class&#x3D;&quot;color-chip-container secondary-container&quot;&gt;
-    &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-6 col-lg col-md-4&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Terracotta
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+        &lt;div class&#x3D;&quot;col&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip primary&quot; tabindex&#x3D;&quot;0&quot; style&#x3D;&quot;transform-origin: top right&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Bronco Red
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Terracotta Light
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-6&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip primary slim&quot; tabindex&#x3D;&quot;0&quot; style&#x3D;&quot;transform-origin: bottom&quot;&gt;
+                &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+                  &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                    Stone
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                    &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Terracotta Dark
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-6 col-lg col-md-4&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Sunrise
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Sunrise Light
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Sunrise Dark
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-6 col-lg col-md-4&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Palm
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Palm Light
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Palm Dark
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-6 col-lg col-md-3&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Agave
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Agave Light
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Agave Dark
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-6 col-lg col-md-3&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Sky
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Sky Light
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Sky Dark
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-6 col-lg col-md-3&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Wisteria
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Wisteria Light
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Wisteria Dark
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-6 col-lg col-md-3&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Rose
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Rose Light
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Rose Dark
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+            &lt;div class&#x3D;&quot;col-6&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip primary slim&quot; tabindex&#x3D;&quot;0&quot; style&#x3D;&quot;transform-origin: bottom right&quot;&gt;
+                &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+                  &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                    Black
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                    &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
   
-  &lt;h2&gt;Neutral Colors&lt;/h2&gt;
-  &lt;div class&#x3D;&quot;color-chip-container tertiary-container&quot;&gt;
-    &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Fog
+    &lt;!-- secondary colors --&gt;
+    &lt;h2&gt;Secondary Colors&lt;/h2&gt;
+    &lt;div class&#x3D;&quot;color-chip-container secondary-container&quot;&gt;
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-6 col-lg col-md-4&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Terracotta
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Terracotta Light
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Terracotta Dark
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Fog Light
+        &lt;div class&#x3D;&quot;col-6 col-lg col-md-4&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Sunrise
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Sunrise Light
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Sunrise Dark
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Fog Dark
+        &lt;div class&#x3D;&quot;col-6 col-lg col-md-4&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Palm
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Palm Light
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Palm Dark
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-6 col-lg col-md-3&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Agave
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Agave Light
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Agave Dark
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-6 col-lg col-md-3&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Sky
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Sky Light
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Sky Dark
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-6 col-lg col-md-3&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Wisteria
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Wisteria Light
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Wisteria Dark
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-6 col-lg col-md-3&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Rose
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Rose Light
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Rose Dark
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Adobe
+    &lt;/div&gt;
+  
+    &lt;h2&gt;Neutral Colors&lt;/h2&gt;
+    &lt;div class&#x3D;&quot;color-chip-container tertiary-container&quot;&gt;
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Fog
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Fog Light
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Fog Dark
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Adobe Light
+        &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Adobe
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Adobe Light
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Adobe Dark
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Adobe Dark
+        &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Clay
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Clay Light
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Clay Dark
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Clay
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Clay Light
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+        &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Slate
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Clay Dark
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Slate
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Slate Light
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Slate Light
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
-          &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
-            &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
-              Slate Dark
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
-              &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+          &lt;div class&#x3D;&quot;color-chip&quot; tabindex&#x3D;&quot;0&quot;&gt;
+            &lt;div class&#x3D;&quot;color-chip-info&quot;&gt;
+              &lt;div class&#x3D;&quot;color-chip__name&quot;&gt;
+                Slate Dark
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-chip__data&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;color-copy-button-container&quot;&gt;
+                &lt;a class&#x3D;&quot;color-copy-button&quot;&gt;Copy Hex Code&lt;/a&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
@@ -2380,7 +2676,73 @@
     &lt;/div&gt;
   &lt;/div&gt;
   
+  &lt;div class&#x3D;&quot;color-combo-container&quot;&gt;
   
+    &lt;h3&gt;Accessible Brand Color Combinations&lt;/h3&gt;
+  
+    &lt;p&gt;Use this tool to help find accessible color combinations. Web accessibility standards require certain contrast levels
+      between the text and the background to be at certain levels.&lt;/p&gt;
+  
+    &lt;h4&gt;Choose a Background Color&lt;/h4&gt;
+    &lt;div class&#x3D;&quot;color-selector background-colors&quot;&gt;
+  
+    &lt;/div&gt;
+  
+    &lt;hr&gt;
+  
+    &lt;h4&gt;Choose a Text Color&lt;/h4&gt;
+    &lt;div class&#x3D;&quot;color-selector text-colors&quot;&gt;
+  
+    &lt;/div&gt;
+  
+    &lt;div class&#x3D;&quot;sandbox&quot;&gt;
+      &lt;div class&#x3D;&quot;h3&quot;&gt;Choose Your Path&lt;/div&gt;
+      &lt;p&gt;Explore the dozens of fields you could major or minor in, ranging from the arts and the humanities to the natural and social sciences. Pair two or more areas of study together to fulfill your interests.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;result-container row&quot;&gt;
+      &lt;div class&#x3D;&quot;color-contrast-container col-12 col-md-6&quot;&gt;
+        &lt;h4&gt;Color Contrast&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;color-contrast&quot;&gt;
+  
+        &lt;/div&gt;
+      &lt;/div&gt;
+  
+      &lt;div class&#x3D;&quot;check-container col-12 col-md-6&quot;&gt;
+        &lt;h4&gt;Your Compliance&lt;/h4&gt;
+        &lt;p&gt;Large Text&lt;/p&gt;
+        &lt;div class&#x3D;&quot;compliance row&quot;&gt;
+          &lt;div class&#x3D;&quot;compliance-row row&quot;&gt;
+            &lt;p class&#x3D;&quot;compliance-category&quot;&gt;AA&lt;/p&gt;
+            &lt;div class&#x3D;&quot;pass-fail pass&quot; id&#x3D;&quot;aa-large&quot;&gt;
+              Pass
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;compliance-row row&quot;&gt;
+            &lt;p class&#x3D;&quot;compliance-category&quot;&gt;AAA&lt;/p&gt;
+            &lt;div class&#x3D;&quot;pass-fail pass&quot; id&#x3D;&quot;aaa-large&quot;&gt;
+              Pass
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p&gt;Small Text&lt;/p&gt;
+        &lt;div class&#x3D;&quot;compliance row&quot;&gt;
+          &lt;div class&#x3D;&quot;compliance-row row&quot;&gt;
+            &lt;p class&#x3D;&quot;compliance-category&quot;&gt;AA&lt;/p&gt;
+            &lt;div class&#x3D;&quot;pass-fail pass&quot; id&#x3D;&quot;aa-normal&quot;&gt;
+              Pass
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;compliance-row row&quot;&gt;
+            &lt;p class&#x3D;&quot;compliance-category&quot;&gt;AAA&lt;/p&gt;
+            &lt;div class&#x3D;&quot;pass-fail pass&quot; id&#x3D;&quot;aaa-normal&quot;&gt;
+              Pass
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  
+  &lt;/div&gt;
   
   &lt;h3&gt;Text Color&lt;/h3&gt;
   
