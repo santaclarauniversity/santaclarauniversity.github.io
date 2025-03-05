@@ -34,6 +34,10 @@
   
   <style>
 
+    .homelink {
+      font-size: 16px;
+    }
+
     .header-legacy .nav-users li.dropdown {
         border-top: none !important;
     }
@@ -221,7 +225,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        <div class="dropdown nav-brand-mini" id="navBrandMini" style="color: #A32035 !important;margin-left: 13px;">
          <!--  <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" id="navBrandMiniBtn"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="icon-mission mr-2"></span> --><a href="https://www.scu.edu"><i class="fa-regular fa-arrow-left" ></i><span class="ml-2 text-uppercase">scu.edu</span></a>
+            <span class="icon-mission mr-2"></span> --><a class="homelink" href="https://www.scu.edu"><i class="fa-regular fa-arrow-left" ></i><span class="ml-2 text-uppercase">scu.edu</span></a>
           <!--</button>
           <div class="dropdown-menu bg-primary shadow" aria-labelledby="navBrandMiniBtn">
             <div class="container">
@@ -902,7 +906,31 @@ copyright.innerHTML = '<a href="https://t4.scu.edu/terminalfour/page/section#edi
       });
     </script>
 
-    
+    <script>
+        $(document).ready(function() {
+    let target = $("path.fa-secondary")[0]; 
+
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                $(entry.target).css({
+                    "fill": "#FFB600",
+                    "transition": "all 4s"
+                });
+            } else {
+                $(entry.target).css({
+                    "fill": "#FFF",
+                    "transition": "all 0s"
+                });
+            }
+        });
+    });
+
+    observer.observe(target);
+
+});
+
+    </script>
     
     
    </body>
