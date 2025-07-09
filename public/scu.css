@@ -1,6 +1,6 @@
-/*import url(//fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35);*/
-/*import url(//fast.fonts.net/t/1.css?apiType=css&projectid=10d6a69a-32e7-4fc5-9b58-3c811429a395);*/
-/*import url(//fast.fonts.net/t/1.css?apiType=css&projectid=f1e06266-e640-4587-a377-6ee1735e6263);*/
+/*import url(//fast.fonts.net/t/1.css?apiType=css&projectid=7ca70c55-93f6-44af-995e-942812907b35);
+import url(//fast.fonts.net/t/1.css?apiType=css&projectid=10d6a69a-32e7-4fc5-9b58-3c811429a395);
+import url(//fast.fonts.net/t/1.css?apiType=css&projectid=f1e06266-e640-4587-a377-6ee1735e6263);*/
 @media print{
     *,::after,::before{
         text-shadow:none!important;
@@ -2341,7 +2341,7 @@ a.btn.disabled,fieldset:disabled a.btn{
     background-color:#b30738;
     border-color:#b30738
 }
-.btn-primary:hover{
+.btn-primary:hover, .btn-primary:focus{
     color:#fff;
     background-color:#8e062c;
     border-color:#820529
@@ -4339,7 +4339,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     color:#495057
 }
 .navbar-light .navbar-nav .nav-link:focus,.navbar-light .navbar-nav .nav-link:hover{
-    color:black;
+    color:black
 }
 .navbar-light .navbar-nav .nav-link.disabled{
     color:rgba(0,0,0,.3)
@@ -4614,29 +4614,29 @@ h4.card-title.linked,.h4.card-title.linked{
 .accordion {
     width: 100%;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem
 }
 .accordion .accordion-item {
-    border-bottom: none;
+    border-bottom: none
 }
 .accordion .accordion-item > a:hover {
-    text-decoration: none;
+    text-decoration: none
 }
 .accordion .accordion-item > div {
-    padding-bottom: 2rem;
+    padding-bottom: 2rem
 }
 .accordion .accordion-item svg {
     transition: transform 200ms ease-out;
     transform: rotateX(180deg);
     margin: 0 1rem;
     min-width: 14px;
-    fill: #B30738;
+    fill: #B30738
 }
 .accordion .accordion-item a.collapsed svg {
     transition: transform 200ms ease-out;
     transform: rotateX(0deg);
     margin: 0 1rem;
-    fill: #343A40;
+    fill: #343A40
 }
 .accordion .default-accordion.accordion-item.h5.text-sans-light {
     font-size: 1.25rem;
@@ -4645,25 +4645,25 @@ h4.card-title.linked,.h4.card-title.linked{
     line-height: 1.875rem;
     margin-bottom: 0;
     padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.5rem
 }
 .accordion .default-accordion.accordion-item:hover a.collapsed div.default-accordion.accordion-item{
-    color: #B30738;
+    color: #B30738
 }
 .accordion .default-accordion.accordion-item:hover a svg {
-    fill: #B30738;
+    fill: #B30738
 }
 .accordion .default-accordion.accordion-item.h5.text-sans-light {
-    color: #343A40;
+    color: #343A40
 }
 .accordion .default-accordion.accordion-item.h5.text-sans-light {
-    border: none;
+    border: none
 }
 .accordion .default-accordion.accordion-item:first-child {
-    border-top: solid #CED4DA 1px;
+    border-top: solid #CED4DA 1px
 }
 .accordion .default-accordion.accordion-item {
-    border-bottom: solid #CED4DA 1px;
+    border-bottom: solid #CED4DA 1px
 }
 .accordion .card-1.accordion-item.h5.text-sans-light {
     font-size: 1.25rem;
@@ -4673,50 +4673,50 @@ h4.card-title.linked,.h4.card-title.linked{
     margin-bottom: 0;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    padding-left: 1.5rem;
+    padding-left: 1.5rem
 }
 .accordion .card-1.accordion-item.h5.text-sans-light {
     color: #343A40;
-    background: none;
+    background: none
 }
 .accordion .card-1.accordion-item:hover a svg {
-    fill: #B30738;
+    fill: #B30738
 }
 .accordion .card-1.accordion-item:hover a.collapsed div.card-1.accordion-item{
     color: #B30738;
-    outline: none;
+    outline: none
 }
 .accordion .card-1.accordion-item.h5.text-sans-light {
-    border: none;
+    border: none
 }
 .accordion .card-1.accordion-item > div {
     padding: 1rem 1.5rem 2rem 1.5rem;
     border-radius: 0 0 0.25rem 0.25rem;
-    background-color: white;
+    background-color: white
 }
 .accordion .card-1.accordion-item {
     border-radius: 0.25rem;
     background-color: #E9ECEF;
-    outline: none;
+    outline: none
 }
 .accordion .card-1.accordion-item:has(a.collapsed) {
     background-color: #F4F2F0;
-    outline: none;
+    outline: none
 }
 .accordion .card-1.accordion-item:has(a.collapsed):hover {
     background-color: #F4F2F0;
-    outline: none;
+    outline: none
 }
 .accordion .card-1.accordion-item:has(a) {
     background-color: #F4F2F0;
     outline: solid #9E1B32 1px;
-    padding: 1px;
+    padding: 1px
 }
 .accordion .card-1.accordion-item:first-child {
-    margin-top: 0;
+    margin-top: 0
 }
 .accordion .card-1.accordion-item {
-    margin-top: 0.31rem;
+    margin-top: 0.31rem
 }
 .accordion .card-2.accordion-item.h5.text-sans-light {
     font-size: 1.25rem;
@@ -4726,61 +4726,63 @@ h4.card-title.linked,.h4.card-title.linked{
     margin-bottom: 0;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    padding-left: 1.5rem;
+    padding-left: 1.5rem
 }
 .accordion .card-2.accordion-item.h5.text-sans-light {
     color: #343A40;
-    background: none;
+    background: none
 }
 .accordion .card-2.accordion-item.h5.text-sans-light {
-    border: none;
+    border: none
 }
 .accordion .card-2.accordion-item > div {
     padding: 1rem 1.5rem 2rem 1.5rem;
     border-radius: 0 0 0.25rem 0.25rem;
-    background: white;
+    background: white
 }
 .accordion .card-2.accordion-item {
     outline: none;
     border-radius: 0.25rem;
-    background-color: #F8F9FA;
+    background-color: #F8F9FA
 }
 .accordion .card-2.accordion-item:has(a.collapsed) {
     background-color: white;
-    outline: none;
+    outline: none
 }
 .accordion .card-2.accordion-item:has(a.collapsed):hover {
-    background-color: #DFDBD3;
+    background-color: #DFDBD3
 }
 .accordion .card-2.accordion-item:hover a.collapsed div.card-2.accordion-item{
     color: #B30738;
-    outline: none;
+    outline: none
 }
 .accordion .card-2.accordion-item:hover a svg {
-    fill: #B30738;
+    fill: #B30738
 }
 .accordion .card-2.accordion-item:has(a) {
     background-color: #F4F2F0;
     outline: solid #9E1B32 1px;
-    padding: 1px;
+    padding: 1px
 }
 .accordion .card-2.accordion-item:first-child {
-    margin-top: 0;
+    margin-top: 0
 }
 .accordion .card-2.accordion-item {
-    margin-top: 0.31rem;
+    margin-top: 0.31rem
 }
 .accordion .accordion-item>a {
     padding: 0;
     margin: 0;
     opacity: 1;
-    text-decoration: none;
+    text-decoration: none
 }
-.accordion .accordion-item > a:hover, .accordion .accordion-item > a:hover a:focus {
+.accordion .accordion-item > a:hover,
+.accordion .accordion-item > a:focus
+{
     padding: 0;
     margin: 0;
     opacity: 1;
-    text-decoration: none;
+    text-decoration: none
 }
 .expand_button {
     color: #B30738;
@@ -4792,10 +4794,7 @@ h4.card-title.linked,.h4.card-title.linked{
     background: rgba(0, 0, 0, 0);
     border-radius: 0;
     border: 0;
-    display: inline-block;
-}
-.expand_button:focus {
-    outline: none;
+    display: inline-block
 }
 .breadcrumb{
     display:-webkit-box;
@@ -7719,12 +7718,13 @@ a.bg-slate:focus,a.bg-slate:hover,button.bg-slate:focus,button.bg-slate:hover{
     border:0
 }
 .sr-only-focusable:active,.sr-only-focusable:focus{
-    position:static;
-    width:auto;
-    height:auto;
-    overflow:visible;
-    clip:auto;
-    white-space:normal
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    margin-top: 50px;
 }
 .shadow-sm{
     -webkit-box-shadow:0 .125rem .25rem rgba(0,0,0,.075)!important;
@@ -9371,7 +9371,7 @@ a.text-slate:focus,a.text-slate:hover{
     color:#b30738!important
 }
 .text-flag{
-    color:#d96f1a!important
+    color:#B13E13!important
 }
 .text-info-circle{
     color:#14647c!important
@@ -9805,6 +9805,103 @@ a{
     -webkit-text-decoration:dotted;
     text-decoration:dotted
 }
+
+@media (max-width: 991.98px) {
+    footer .nav-link-list {
+        display: none
+    }
+
+    footer a.text-dark.nameText {
+        font-size: 40px;
+    }
+    footer .navbar-logo.fa-kit-duotone.fa-scu-primary-logo {
+        font-size: 55px !important;
+    }
+    footer .text-site-name {
+        padding-top: 25px;
+    }
+    footer .small {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767.9px) {
+    footer .logo-container {
+        flex-direction: column
+    }
+    footer .logo-container>div {
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1440px) {
+    footer .dropdown.nav-brand-mini {
+        margin-left: -63px;
+    }
+
+    footer .navbar-logo.fa-kit-duotone.fa-scu-primary-logo.scrolled {
+        margin-left: 18px;
+    }
+
+
+}
+
+footer a.text-dark.nameText {
+    font-size: 2.375rem;
+}
+footer .h1.text-default.m-0 {
+    line-height: 1.1;
+}
+
+footer .dropdown.nav-brand-mini {
+    padding-top: 12px;
+    padding-bottom: 7px;
+}
+
+footer .navbar-logo.fa-kit-duotone.fa-scu-primary-logo,
+i.fa-kit-duotone.fa-scu-primary-logo-reverse {
+    font-size: 77px;
+    transition: all 0.1s ease-in-out;
+}
+
+footer .navbar-light .navbar-nav .nav-link,
+.nav-link.collapsed.px-3 {
+    color: #A32035 !important;
+}
+
+footer .fas.fa-search.text-primary {
+    color: #A32035
+}
+
+footer .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #862633;
+    text-decoration: underline;
+}
+footer .bg-scu-red {
+    background: #A32035;
+}
+footer .navbar-dark .navbar-nav .nav-link {
+    font-size: 18px !important;
+}
+
+footer svg {
+    height: 58px;
+}
+
+footer .navbar-logo.fa-kit-duotone.fa-scu-primary-logo.scrolled {
+    font-size: 55px;
+
+}
+
+footer .logo-container>div {
+    margin-left: auto;
+}
+
+footer #temperature-container {
+    display: flex;
+    align-items: center
+}
+
 .header-legacy{
     position:relative
 }
@@ -9847,19 +9944,10 @@ a{
     border-bottom:1px solid #ced4da;
     z-index:1050
 }
-.header-legacy .nav-users li{
-    border-top:2px solid #fff
 }
 .header-legacy .nav-users li.dropdown{
-    border-top:2px solid #ced4da;
     -webkit-transition:border-top-color .4s,color .4s;
     transition:border-top-color .4s,color .4s
-}
-.header-legacy .nav-users li.dropdown:hover{
-    border-color:#343a40
-}
-.header-legacy .nav-users li.dropdown:focus-within{
-    border-color:#b30738
 }
 .header-legacy .nav-users li.dropdown a:not(.collapsed){
     color:#b30738
@@ -9873,7 +9961,6 @@ a{
 }
 @media (min-width:992px){
     .header-legacy .nav-brand .collapse{
-        margin-left:5rem;
         padding:.5rem 0
     }
 }
@@ -9971,12 +10058,12 @@ a{
 }
 @media (min-width:768px){
     .header-legacy .fixed-top.nav-brand.initial{
-        bottom:-28px
+        margin-top:-31px
     }
 }
 @media (min-width:992px){
     .header-legacy .fixed-top.nav-brand.initial{
-        position:absolute
+        position:static
     }
 }
 @media (min-width:992px){
@@ -10031,9 +10118,10 @@ a{
     display:block
 }
 @media (max-width:1199.98px){
-    .header-legacy a{
+    /* TODO: why is this here */
+    /*.header-legacy a{
         font-size:.85rem
-    }
+    }*/
     .header-legacy .text-trajan a{
         font-size:inherit
     }
@@ -10123,6 +10211,16 @@ a{
     .header-scu .fa-search{
         font-size:1.2rem
     }
+}
+i.fa-scu-primary-logo {
+    font-size: 6rem;
+    --fa-primary-color: #A32035;
+    --fa-secondary-color: #FFB600;
+    --fa-secondary-opacity: 1
+}
+i.fa-scu-primary-logo:hover {
+    --fa-primary-color: #8E1C2E !important;
+    --fa-secondary-color: #FFA600 !important
 }
 .subheader{
     -webkit-box-align:center;
@@ -12750,7 +12848,7 @@ button.close:hover{
     }
 }
 .border-flag{
-    border:2px solid #d96f1a!important
+    border:2px solid #D15C3B!important
 }
 .border-exclamation-triangle{
     border:2px solid #b30738!important
@@ -12845,7 +12943,7 @@ div.splitdisplay-col img.img-fluid.w-100 {
 }
 
 div.splitdisplay-col img.img-fluid.w-100.alt-view {
-    min-height:345px;
+    min-height:345px
 }
 
 @media (min-width:904px){
@@ -12885,10 +12983,11 @@ p.story-subhead, p.span.story-subhead, .story-subhead {
 .story-title {
     color: #72001B;
     font-size: 52px;
+    line-height: 1.15
 }
 @media only screen and (max-width: 600px) {
     .story-basic {
-        text-align: center;
+        text-align: center
     }
 }
 
@@ -12951,7 +13050,7 @@ hr.hr-premium {
     height: 750px;
     position: absolute;
     background-position: 0;
-    z-index: -1;
+    z-index: -1
 }
 .container-premium-heding {
     padding-top: 100px
@@ -13011,7 +13110,7 @@ hr.hr-premium {
 @media (max-width:600px){
     .story-title {
         font-size: 40px;
-        line-height: 1
+        line-height: 1.2
     }
     .container-premium-heding{
         padding-top: 40px
@@ -13041,8 +13140,185 @@ hr.hr-premium {
     }
 }
 
-a.text-primary.scuHomeLink:hover {
-    text-decoration: none;
+.hp-story-title.h5.mb-3 {
+    font-size: 1.1rem;
+    line-height: 1.4
 }
 
-/* v4 */
+a.text-primary.scuHomeLink:hover {
+    text-decoration: none
+}
+
+/*split display jumbotron*/
+.sdj-bg {
+    background-color: #f4f2f0;
+    background-image: url("https://assets.scu.edu/public/media/images/scu/shield-background-light-beige.png");
+    background-repeat: no-repeat;
+    background-position: 15% 80%;
+}
+.sdj-bg > .splitdisplay-col {
+    max-height: 960px !important;
+}
+.sdjHeadline {
+    font-size: 70px;
+    line-height: 76px;
+    max-width: 650px;
+    padding-bottom: 32px;
+}
+.splitdisplay-text > .lead {
+    margin-left: 158px;
+}
+a.lead.split-display-link {
+    text-decoration: none !important;
+}
+span.sdjbtn {
+    font-size: 22.5px;
+}
+span.sdjlink {
+    font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+    .splitdisplay-txt > .lead {
+        margin-left: 0; }
+    .sdjHeadline {
+        width: initial; }
+}
+
+
+/* v5 */
+
+@media (min-width: 1440px) {
+    header .dropdown.nav-brand-mini {
+        margin-left: -63px;
+    }
+
+    header .navbar-logo.fa-kit-duotone.fa-scu-primary-logo.scrolled {
+        margin-left: 18px;
+    }
+
+    header > div > div i {
+        margin-left: -58px;
+    }
+
+
+}
+
+header a.text-dark.nameText {
+    font-size: 2.375rem;
+}
+header .h1.text-default.m-0 {
+    line-height: 1.1;
+}
+
+header .dropdown.nav-brand-mini {
+    padding-top: 12px;
+    padding-bottom: 7px;
+}
+
+
+
+header .navbar-logo.fa-kit-duotone.fa-scu-primary-logo,
+header i.fa-kit-duotone.fa-scu-primary-logo-reverse {
+    font-size: 77px;
+    transition: font-size 0.1s ease-in-out, margin-left 0.1s ease-in-out, height 0.1s ease-in-out
+}
+
+header .navbar-logo {
+    font-size: 77px
+}
+
+/*header .navbar-light .navbar-nav .nav-link,*/
+/*header .nav-link.collapsed.px-3 {*/
+/*    color: #A32035 !important;*/
+/*}*/
+
+header .fas.fa-search.text-primary {
+    color: #A32035
+}
+
+header .navbar-light .navbar-nav .nav-link:focus, header .navbar-light .navbar-nav .nav-link:hover {
+    color: #862633;
+    text-decoration: underline;
+}
+
+header .navbar-dark .navbar-nav .nav-link {
+    font-size: 18px !important;
+}
+
+header .navbar-logo.fa-kit-duotone.fa-scu-primary-logo.scrolled {
+    font-size: 55px;
+    height: 55px
+}
+
+header .logo-container>div {
+    margin-left: auto;
+}
+
+header .nav-brand-text {
+    font-size: 14px;
+}
+
+header .h1.text-default {
+    margin: 4.5rem 0 0 0;
+    line-height: 1.1;
+}
+
+header #navBrandText {
+    color: #A32035 !important;
+    margin-left: 13px;
+    padding-top: 11px;
+    width: 100px
+}
+
+
+#navBrandMini {
+    margin-right: 5rem;
+    height: 96px;
+    transition: height 0.1s ease-in-out
+}
+
+#navBrandMini:has(.scrolled) {
+    height: 74px
+}
+
+.lockup-container:has(i) {
+    height: 6rem;
+}
+
+@media (max-width: 991.98px) {
+    .lockup-container:has(i) {
+        height: 7.5rem;
+    }
+
+    header .nav-link-list {
+        display: none
+    }
+
+    header a.text-dark.nameText {
+        font-size: 40px;
+    }
+    header .navbar-logo.fa-kit-duotone.fa-scu-primary-logo {
+        font-size: 55px !important;
+    }
+    header .text-site-name {
+        padding-top: 25px;
+    }
+
+    header > div > div > div > a > i {
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+    }
+
+    header .h1.text-default {
+        margin: 4.5rem 0 2rem 0;
+    }
+
+    #navBrandMini {
+        height: 74px
+    }
+}
+
+.container:has(.lockup-container) {
+    min-height: 5rem
+}
