@@ -1,16 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 
   <title>Style Guide | Santa Clara University Design System</title>
 
   <!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" async></script>
-  <![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" async></script>
+    <![endif]-->
 
   <!-- fabricator styles -->
   <link rel="stylesheet" href="/public/fabricator.css" />
@@ -28,31 +27,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" crossorigin="anonymous"></script>
   <script src="/public/scu.js"></script>
   <!-- /toolkit scripts -->
-  <link rel="stylesheet" href="assets/scu.css">
-
+  <link rel="stylesheet" href="assets/scu.css" />
+  <link rel="stylesheet" href="https://kit.fontawesome.com/895f1e62c1.css" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/8fd101ac29.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <script id="__bs_script__">//<![CDATA[
-    (function () {
-      try {
-        var script = document.createElement('script');
-        if ('async') {
-          script.async = true;
-        }
-        script.src = '/browser-sync/browser-sync-client.js?v=2.29.3'.replace("HOST", location.hostname);
-        if (document.body) {
-          document.body.appendChild(script);
-        } else if (document.head) {
-          document.head.appendChild(script);
-        }
-      } catch (e) {
-        console.error("Browsersync: could not append script tag", e);
-      }
-    })()
-//]]></script>
-
-
   <!-- fabricator icons -->
   <svg style="display: none;">
     <symbol id="f-icon-code" viewBox="0 0 512 512">
@@ -299,8 +279,8 @@
   </div>
   <!-- /fabricator menu -->
 
-  <div class="f-container">
 
+  <div class="f-container">
     <div class="f-control-bar">
       <div class="f-control f-menu-toggle">
         <svg>
@@ -308,7 +288,6 @@
         </svg>
       </div>
     </div>
-
 
     <h1 data-f-toggle="labels">Style Guide</h1>
 
@@ -327,9 +306,6 @@
         </div>
       </div>
 
-      <p>Our color palettes are a key part of our brand identity and help shape the tone of our communications. To
-        ensure accessibility, use the Accessible Brand Color Combinations tool to check that your color pairings meet
-        contrast standards.</p>
       <div class="f-item-preview">
         <style>
           /* for color chips */
@@ -1542,7 +1518,8 @@
         <h3>Text Color</h3>
 
         <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links
-          and will darken on hover just like our default link styles.</p>
+          and will
+          darken on hover just like our default link styles.</p>
 
         <div class="bd-example">
           <p class="text-primary">.text-primary</p>
@@ -1571,8 +1548,9 @@
           </code></pre>
 
         <p>Similar to the contextual text color classes, easily set the background of an element to any contextual
-          class. Anchor components will darken on hover, just like the text classes. Background utilities <strong>do not
-            set <code class="highlighter-rouge">color</code></strong>, so in some cases you’ll want to use <code
+          class. Anchor
+          components will darken on hover, just like the text classes. Background utilities <strong>do not set <code
+              class="highlighter-rouge">color</code></strong>, so in some cases you’ll want to use <code
             class="highlighter-rouge">.text-*</code> utilities.</p>
 
         <div class="bd-example">
@@ -1604,8 +1582,9 @@
         <h3>Background Color</h3>
 
         <p>Similar to the contextual text color classes, easily set the background of an element to any contextual
-          class. Anchor components will darken on hover, just like the text classes. Background utilities <strong>do not
-            set <code class="highlighter-rouge">color</code></strong>, so in some cases you’ll want to use <code
+          class. Anchor
+          components will darken on hover, just like the text classes. Background utilities <strong>do not set <code
+              class="highlighter-rouge">color</code></strong>, so in some cases you’ll want to use <code
             class="highlighter-rouge">.text-*</code> utilities.</p>
 
         <div class="bd-example">
@@ -2151,24 +2130,35 @@
             }
 
             .color-combo-container {
-            margin: 1.5rem 1.5rem;
+            margin: 3.5rem 1.5rem 1.5rem 1.5rem;
             padding: 2rem;
             border: 1px solid #2A373F;
-            border-radius: 0.5rem;
             }
 
             .color-selector {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 1.5rem;
+            font-size: 1rem;
             }
 
             .sandbox {
+            padding: 2rem 2.5rem;
+            align-items: center;
+            }
+
+            .color-contrast-container {
+            padding: 2rem;
+            background-color: #F8F9FA;
+            }
+
+            .color-combo-header {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
             }
 
             .color-button {
             position: relative;
-            /* Ensures absolute positioning works inside */
             }
 
             .color-tip {
@@ -2193,19 +2183,22 @@
 
             .check-container {}
 
+            .pass-fail {
+            width: 3.125rem;
+            text-align: center;
+            }
+
             .pass {
             color: green;
             border: 1px solid;
-            width: fit-content;
             height: fit-content;
             border-radius: 0.5rem;
             padding: 0.25rem;
             }
 
             .fail {
-            color: red;
+            color: #A9082B;
             border: 1px solid;
-            width: fit-content;
             height: fit-content;
             border-radius: 0.5rem;
             padding: 0.25rem;
@@ -2226,14 +2219,33 @@
             }
 
             .color-contrast {
+            font-weight: 700;
             font-size: xxx-large;
+            }
+
+            @media (min-width: 1250px) {
+            .my-col-lg-4 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
+            }
+
+            .my-col-lg-8 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
+            max-width: 66.66667%;
+            }
             }
             &lt;/style&gt;
 
 
             &lt;div&gt;
             &lt;!-- primary colors --&gt;
-            &lt;h2&gt;Primary Colors&lt;/h2&gt;
+            &lt;h2 class&#x3D;&quot;mt-5&quot;&gt;Primary Colors&lt;/h2&gt;
+            &lt;p&gt;Our core brand colors. Use these as the foundation for most communications and interface
+            elements.&lt;/p&gt;
             &lt;div class&#x3D;&quot;primary-color-chip-container&quot;&gt;
             &lt;div class&#x3D;&quot;row&quot;&gt;
             &lt;div class&#x3D;&quot;col-6&quot;&gt;
@@ -2315,7 +2327,10 @@
             &lt;/div&gt;
 
             &lt;!-- secondary colors --&gt;
-            &lt;h2&gt;Secondary Colors&lt;/h2&gt;
+            &lt;h2 class&#x3D;&quot;mt-5&quot;&gt;Secondary Colors&lt;/h2&gt;
+            &lt;p&gt;Offers flexibility and variety. Inspired by the diversity of our campus, these colors complement
+            the
+            primary palette and add visual interest.&lt;/p&gt;
             &lt;div class&#x3D;&quot;color-chip-container secondary-container&quot;&gt;
             &lt;div class&#x3D;&quot;row&quot;&gt;
             &lt;div class&#x3D;&quot;col-6 col-lg col-md-4&quot;&gt;
@@ -2587,7 +2602,10 @@
             &lt;/div&gt;
             &lt;/div&gt;
 
-            &lt;h2&gt;Neutral Colors&lt;/h2&gt;
+            &lt;h2 class&#x3D;&quot;mt-5&quot;&gt;Neutral Colors&lt;/h2&gt;
+            &lt;p&gt;Adds depth and balance. Inspired by the tones and textures found around our campus, these colors
+            work in
+            harmony with the primary and secondary palettes while maintaining a cohesive and elegant look.&lt;/p&gt;
             &lt;div class&#x3D;&quot;color-chip-container tertiary-container&quot;&gt;
             &lt;div class&#x3D;&quot;row&quot;&gt;
             &lt;div class&#x3D;&quot;col-6 col-lg col&quot;&gt;
@@ -2750,68 +2768,83 @@
 
             &lt;h3&gt;Accessible Brand Color Combinations&lt;/h3&gt;
 
-            &lt;p&gt;Use this tool to help find accessible color combinations. Web accessibility standards require
-            certain contrast levels
-            between the text and the background to be at certain levels.&lt;/p&gt;
+            &lt;p style&#x3D;&quot;margin-top: 0.75rem; margin-bottom: 1.5rem;&quot;&gt;Use this tool to find color
+            combinations that are
+            accessible and easy for everyone to read. Web
+            accessibility guidelines (WCAG) set minimum contrast levels between text and background to ensure content is
+            legible.&lt;/p&gt;
 
-            &lt;h4&gt;Choose a Background Color&lt;/h4&gt;
+            &lt;hr&gt;
+
+            &lt;h4 class&#x3D;&quot;color-combo-header&quot;&gt;Choose a Background Color&lt;/h4&gt;
             &lt;div class&#x3D;&quot;color-selector background-colors&quot;&gt;
 
             &lt;/div&gt;
 
             &lt;hr&gt;
 
-            &lt;h4&gt;Choose a Text Color&lt;/h4&gt;
+            &lt;h4 class&#x3D;&quot;color-combo-header&quot;&gt;Choose a Text Color&lt;/h4&gt;
             &lt;div class&#x3D;&quot;color-selector text-colors&quot;&gt;
 
             &lt;/div&gt;
 
-            &lt;div class&#x3D;&quot;sandbox&quot;&gt;
-            &lt;div class&#x3D;&quot;h3&quot;&gt;Choose Your Path&lt;/div&gt;
-            &lt;p&gt;Explore the dozens of fields you could major or minor in, ranging from the arts and the humanities
-            to the natural and social sciences. Pair two or more areas of study together to fulfill your
-            interests.&lt;/p&gt;
-            &lt;/div&gt;
+            &lt;hr&gt;
+
+            &lt;h4 class&#x3D;&quot;color-combo-header&quot;&gt;Your Color Contrast Results&lt;/h4&gt;
+
             &lt;div class&#x3D;&quot;result-container row&quot;&gt;
-            &lt;div class&#x3D;&quot;color-contrast-container col-12 col-md-6&quot;&gt;
-            &lt;h4&gt;Color Contrast&lt;/h4&gt;
+            &lt;div class&#x3D;&quot;color-contrast-container col-12 my-col-lg-4&quot;&gt;
+            &lt;p style&#x3D;&quot;font-size: 1.25rem;&quot;&gt;&lt;b&gt;Contrast Ratio&lt;/b&gt;&lt;/p&gt;
             &lt;div class&#x3D;&quot;color-contrast&quot;&gt;
 
             &lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class&#x3D;&quot;check-container col-12 col-md-6&quot;&gt;
-            &lt;h4&gt;Your Compliance&lt;/h4&gt;
-            &lt;p&gt;Large Text&lt;/p&gt;
-            &lt;div class&#x3D;&quot;compliance row&quot;&gt;
+            &lt;div class&#x3D;&quot;row&quot; style&#x3D;&quot;margin-top: 2rem;&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+            &lt;p&gt;&lt;b&gt;Small Text&lt;/b&gt;&lt;/p&gt;
             &lt;div class&#x3D;&quot;compliance-row row&quot;&gt;
-            &lt;p class&#x3D;&quot;compliance-category&quot;&gt;AA&lt;/p&gt;
-            &lt;div class&#x3D;&quot;pass-fail pass&quot; id&#x3D;&quot;aa-large&quot;&gt;
-            Pass
-            &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;compliance-row row&quot;&gt;
-            &lt;p class&#x3D;&quot;compliance-category&quot;&gt;AAA&lt;/p&gt;
-            &lt;div class&#x3D;&quot;pass-fail pass&quot; id&#x3D;&quot;aaa-large&quot;&gt;
-            Pass
-            &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;p&gt;Small Text&lt;/p&gt;
-            &lt;div class&#x3D;&quot;compliance row&quot;&gt;
-            &lt;div class&#x3D;&quot;compliance-row row&quot;&gt;
-            &lt;p class&#x3D;&quot;compliance-category&quot;&gt;AA&lt;/p&gt;
             &lt;div class&#x3D;&quot;pass-fail pass&quot; id&#x3D;&quot;aa-normal&quot;&gt;
             Pass
             &lt;/div&gt;
+            &lt;p class&#x3D;&quot;compliance-category&quot;&gt;AA&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class&#x3D;&quot;compliance-row row&quot;&gt;
-            &lt;p class&#x3D;&quot;compliance-category&quot;&gt;AAA&lt;/p&gt;
             &lt;div class&#x3D;&quot;pass-fail pass&quot; id&#x3D;&quot;aaa-normal&quot;&gt;
             Pass
             &lt;/div&gt;
+            &lt;p class&#x3D;&quot;compliance-category&quot;&gt;AAA&lt;/p&gt;
             &lt;/div&gt;
             &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+            &lt;p&gt;&lt;b&gt;Large Text&lt;/b&gt;&lt;/p&gt;
+            &lt;div class&#x3D;&quot;compliance-row row&quot;&gt;
+            &lt;div class&#x3D;&quot;pass-fail pass&quot; id&#x3D;&quot;aa-large&quot;&gt;
+            Pass
+            &lt;/div&gt;
+            &lt;p class&#x3D;&quot;compliance-category&quot;&gt;AA&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;compliance-row row&quot;&gt;
+            &lt;div class&#x3D;&quot;pass-fail pass&quot; id&#x3D;&quot;aaa-large&quot;&gt;
+            Pass
+            &lt;/div&gt;
+            &lt;p class&#x3D;&quot;compliance-category&quot;&gt;AAA&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;sandbox row col-12 my-col-lg-8&quot;&gt;
+            &lt;div class&#x3D;&quot;h3&quot;&gt;Understanding Your Contrast Ratio&lt;/div&gt;
+            &lt;p&gt;
+            To make sure text is easy to read for everyone, the Web Content Accessibility Guidelines (WCAG) set
+            contrast ratio standards. For small text (&amp;lt;24px), aim for a ratio of at least 4.5:1 (AA) or 7:1
+            (AAA).
+            For large text (&amp;geq;24px), aim for 3:1 (AA) or 4.5:1 (AAA)—the same goes for any bold text greater than
+            18px.
+            &lt;/p&gt;
+            &lt;p&gt;
+            Higher ratios mean better readability, especially for users with low vision. Overall, we need to
+            aim for AA at a minimum.
+            &lt;/p&gt;
             &lt;/div&gt;
             &lt;/div&gt;
 
@@ -2820,7 +2853,8 @@
             &lt;h3&gt;Text Color&lt;/h3&gt;
 
             &lt;p&gt;Convey meaning through color with a handful of emphasis utility classes. These may also be applied
-            to links and will darken on hover just like our default link styles.&lt;/p&gt;
+            to links and will
+            darken on hover just like our default link styles.&lt;/p&gt;
 
             &lt;div class&#x3D;&quot;bd-example&quot;&gt;
             &lt;p class&#x3D;&quot;text-primary&quot;&gt;.text-primary&lt;/p&gt;
@@ -2834,8 +2868,8 @@
             &lt;p class&#x3D;&quot;text-muted&quot;&gt;.text-muted&lt;/p&gt;
             &lt;p class&#x3D;&quot;text-white bg-dark&quot;&gt;.text-white&lt;/p&gt;
             &lt;/div&gt;
-            &lt;pre&gt;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&lt;script
-            type&#x3D;&quot;prism-html-markup&quot;&gt;
+            &lt;pre&gt;&lt;code class&#x3D;&quot;language-markup&quot;&gt;
+            &lt;script type&#x3D;&quot;prism-html-markup&quot;&gt;
             &lt;p class&#x3D;&quot;text-primary&quot;&gt;.text-primary&lt;/p&gt;
             &lt;p class&#x3D;&quot;text-secondary&quot;&gt;.text-secondary&lt;/p&gt;
             &lt;p class&#x3D;&quot;text-success&quot;&gt;.text-success&lt;/p&gt;
@@ -2845,14 +2879,15 @@
             &lt;p class&#x3D;&quot;text-light bg-dark&quot;&gt;.text-light&lt;/p&gt;
             &lt;p class&#x3D;&quot;text-dark&quot;&gt;.text-dark&lt;/p&gt;
             &lt;p class&#x3D;&quot;text-muted&quot;&gt;.text-muted&lt;/p&gt;
-            &lt;p class&#x3D;&quot;text-white
-            bg-dark&quot;&gt;.text-white&lt;/p&gt;&lt;/script&gt;&lt;/code&gt;&lt;/pre&gt;
+            &lt;p class&#x3D;&quot;text-white bg-dark&quot;&gt;.text-white&lt;/p&gt;&lt;/script&gt;
+            &lt;/code&gt;&lt;/pre&gt;
 
             &lt;p&gt;Similar to the contextual text color classes, easily set the background of an element to any
-            contextual class. Anchor components will darken on hover, just like the text classes. Background utilities
-            &lt;strong&gt;do not set &lt;code
-            class&#x3D;&quot;highlighter-rouge&quot;&gt;color&lt;/code&gt;&lt;/strong&gt;, so in some cases you’ll want
-            to use &lt;code class&#x3D;&quot;highlighter-rouge&quot;&gt;.text-*&lt;/code&gt; utilities.&lt;/p&gt;
+            contextual class. Anchor
+            components will darken on hover, just like the text classes. Background utilities &lt;strong&gt;do not set
+            &lt;code class&#x3D;&quot;highlighter-rouge&quot;&gt;color&lt;/code&gt;&lt;/strong&gt;, so in some cases
+            you’ll want to use &lt;code class&#x3D;&quot;highlighter-rouge&quot;&gt;.text-*&lt;/code&gt;
+            utilities.&lt;/p&gt;
 
             &lt;div class&#x3D;&quot;bd-example&quot;&gt;
             &lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;text-primary&quot;&gt;Primary
@@ -2872,8 +2907,8 @@
             &lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;text-white bg-dark&quot;&gt;White
             link&lt;/a&gt;&lt;/p&gt;
             &lt;/div&gt;
-            &lt;pre&gt;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&lt;script
-            type&#x3D;&quot;prism-html-markup&quot;&gt;
+            &lt;pre&gt;&lt;code class&#x3D;&quot;language-markup&quot;&gt;
+            &lt;script type&#x3D;&quot;prism-html-markup&quot;&gt;
             &lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;text-primary&quot;&gt;Primary
             link&lt;/a&gt;&lt;/p&gt;
             &lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;text-secondary&quot;&gt;Secondary
@@ -2889,15 +2924,17 @@
             &lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;text-dark&quot;&gt;Dark link&lt;/a&gt;&lt;/p&gt;
             &lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;text-muted&quot;&gt;Muted link&lt;/a&gt;&lt;/p&gt;
             &lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;text-white bg-dark&quot;&gt;White
-            link&lt;/a&gt;&lt;/p&gt;&lt;/script&gt;&lt;/code&gt;&lt;/pre&gt;
+            link&lt;/a&gt;&lt;/p&gt;&lt;/script&gt;
+            &lt;/code&gt;&lt;/pre&gt;
 
             &lt;h3&gt;Background Color&lt;/h3&gt;
 
             &lt;p&gt;Similar to the contextual text color classes, easily set the background of an element to any
-            contextual class. Anchor components will darken on hover, just like the text classes. Background utilities
-            &lt;strong&gt;do not set &lt;code
-            class&#x3D;&quot;highlighter-rouge&quot;&gt;color&lt;/code&gt;&lt;/strong&gt;, so in some cases you’ll want
-            to use &lt;code class&#x3D;&quot;highlighter-rouge&quot;&gt;.text-*&lt;/code&gt; utilities.&lt;/p&gt;
+            contextual class. Anchor
+            components will darken on hover, just like the text classes. Background utilities &lt;strong&gt;do not set
+            &lt;code class&#x3D;&quot;highlighter-rouge&quot;&gt;color&lt;/code&gt;&lt;/strong&gt;, so in some cases
+            you’ll want to use &lt;code class&#x3D;&quot;highlighter-rouge&quot;&gt;.text-*&lt;/code&gt;
+            utilities.&lt;/p&gt;
 
             &lt;div class&#x3D;&quot;bd-example&quot;&gt;
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-primary text-white&quot;&gt;.bg-primary&lt;/div&gt;
@@ -2910,8 +2947,8 @@
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-dark text-white&quot;&gt;.bg-dark&lt;/div&gt;
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-white text-dark&quot;&gt;.bg-white&lt;/div&gt;
             &lt;/div&gt;
-            &lt;pre&gt;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&lt;script
-            type&#x3D;&quot;prism-html-markup&quot;&gt;
+            &lt;pre&gt;&lt;code class&#x3D;&quot;language-markup&quot;&gt;
+            &lt;script type&#x3D;&quot;prism-html-markup&quot;&gt;
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-primary text-white&quot;&gt;.bg-primary&lt;/div&gt;
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-secondary text-white&quot;&gt;.bg-secondary&lt;/div&gt;
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-success text-white&quot;&gt;.bg-success&lt;/div&gt;
@@ -2920,8 +2957,8 @@
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-info text-white&quot;&gt;.bg-info&lt;/div&gt;
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-light text-dark&quot;&gt;.bg-light&lt;/div&gt;
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-dark text-white&quot;&gt;.bg-dark&lt;/div&gt;
-            &lt;div class&#x3D;&quot;p-3 mb-2 bg-white
-            text-dark&quot;&gt;.bg-white&lt;/div&gt;&lt;/script&gt;&lt;/code&gt;&lt;/pre&gt;
+            &lt;div class&#x3D;&quot;p-3 mb-2 bg-white text-dark&quot;&gt;.bg-white&lt;/div&gt;&lt;/script&gt;
+            &lt;/code&gt;&lt;/pre&gt;
 
             &lt;h4&gt;Background Gradients&lt;/h4&gt;
 
@@ -2934,15 +2971,15 @@
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-gradient text-white&quot;&gt;.bg-gradient&lt;/div&gt;
             &lt;/div&gt;
 
-            &lt;pre&gt;&lt;code class&#x3D;&quot;language-markup&quot;&gt;&lt;script
-            type&#x3D;&quot;prism-html-markup&quot;&gt;
+            &lt;pre&gt;&lt;code class&#x3D;&quot;language-markup&quot;&gt;
+            &lt;script type&#x3D;&quot;prism-html-markup&quot;&gt;
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-gradient-primary text-white&quot;&gt;.bg-gradient-primary&lt;/div&gt;
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-gradient-success text-white&quot;&gt;.bg-gradient-success&lt;/div&gt;
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-gradient-danger text-white&quot;&gt;.bg-gradient-danger&lt;/div&gt;
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-gradient-warning text-dark&quot;&gt;.bg-gradient-warning&lt;/div&gt;
             &lt;div class&#x3D;&quot;p-3 mb-2 bg-gradient-info text-white&quot;&gt;.bg-gradient-info&lt;/div&gt;
-            &lt;div class&#x3D;&quot;p-3 mb-2 bg-gradient
-            text-white&quot;&gt;.bg-gradient&lt;/div&gt;&lt;/script&gt;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            &lt;div class&#x3D;&quot;p-3 mb-2 bg-gradient text-white&quot;&gt;.bg-gradient&lt;/div&gt;&lt;/script&gt;
+            &lt;/code&gt;&lt;/pre&gt;</code></pre>
       </div>
 
     </div>
@@ -4047,11 +4084,9 @@
 
     <script src="/src/scripts/colors.js"></script>
 
-
   </div>
 
   <script src="/public/fabricator.js"></script>
-
 </body>
 
 </html>
