@@ -1,467 +1,503 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-
+  
   <title>Overview | Santa Clara University Design System</title>
-
+  
   <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" async></script>
   <![endif]-->
-
+  
   <!-- fabricator styles -->
   <link rel="stylesheet" href="/public/fabricator.css" />
   <!-- /fabricator styles -->
-
+  
   <!-- external styles -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" />
   <!-- /external styles -->
-
+  
   <!-- toolkit styles -->
   <link rel="stylesheet" href="/public/scu.css" />
   <!-- /toolkit styles -->
-
+  
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicons/favicon-96x96-icon-img.png" />
+  
   <!-- toolkit scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" crossorigin="anonymous"></script>
   <script src="/public/scu.js"></script>
   <!-- /toolkit scripts -->
-  <link rel="stylesheet" href="assets/scu.css">
-
+  <link rel="stylesheet" href="assets/scu.css" />
+  <link rel="stylesheet" href="https://kit.fontawesome.com/895f1e62c1.css" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/8fd101ac29.js" crossorigin="anonymous">
+  </script>
 </head>
 
 <body>
-  <script id="__bs_script__">//<![CDATA[
-    (function () {
-      try {
-        var script = document.createElement('script');
-        if ('async') {
-          script.async = true;
-        }
-        script.src = '/browser-sync/browser-sync-client.js?v=2.29.3'.replace("HOST", location.hostname);
-        if (document.body) {
-          document.body.appendChild(script);
-        } else if (document.head) {
-          document.head.appendChild(script);
-        }
-      } catch (e) {
-        console.error("Browsersync: could not append script tag", e);
-      }
-    })()
-//]]></script>
-
-
-  <!-- fabricator icons -->
-  <svg style="display: none;">
-    <symbol id="f-icon-code" viewBox="0 0 512 512">
-      <path
-        d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z" />
-    </symbol>
-    <symbol id="f-icon-notes" viewBox="0 0 512 512">
-      <path
-        d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z" />
-    </symbol>
-    <symbol id="f-icon-labels" viewBox="0 0 512 512">
-      <path
-        d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z" />
-    </symbol>
-    <symbol id="f-icon-menu" viewBox="0 0 512 512">
-      <path
-        d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z" />
-    </symbol>
-    <symbol id="f-icon-settings" viewBox="0 0 512 512">
-      <path
-        d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z" />
-    </symbol>
-  </svg>
-  <!-- /fabricator icons -->
-  <!-- fabricator menu -->
-  <div class="f-menu">
-    <div class="f-controls">
-      <div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
-        <svg>
-          <use xlink:href="#f-icon-labels" />
-        </svg>
-      </div>
-      <div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
-        <svg>
-          <use xlink:href="#f-icon-notes" />
-        </svg>
-      </div>
-      <div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
-        <svg>
-          <use xlink:href="#f-icon-code" />
-        </svg>
-      </div>
+   <!-- fabricator icons -->
+<svg style="display: none;">
+  <symbol id="f-icon-code" viewBox="0 0 512 512">
+    <path
+      d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+  </symbol>
+  <symbol id="f-icon-notes" viewBox="0 0 512 512">
+    <path
+      d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+  </symbol>
+  <symbol id="f-icon-labels" viewBox="0 0 512 512">
+    <path
+      d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+  </symbol>
+  <symbol id="f-icon-menu" viewBox="0 0 512 512">
+    <path
+      d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+  </symbol>
+  <symbol id="f-icon-settings" viewBox="0 0 512 512">
+    <path
+      d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+  </symbol>
+</svg>
+<!-- /fabricator icons -->
+ <!-- fabricator menu -->
+<div class="f-menu">
+  <div class="f-controls">
+    <div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+      <svg>
+        <use xlink:href="#f-icon-labels"/>
+      </svg>
     </div>
-    <h2 class="mb-0"><a href="/" class="f-menu__heading text-black"><img
-          src="../../../../assets/images/scu_ver1_pos_rgb_2c.png" alt="SCU logo" style="width:100%"></a></h2>
-    <h3 class="text-sans-light f-menu__heading text-primary mb-0" style="font-size: 1rem">Design System</h3>
-    <p><a class="highlighter-rouge f-menu__heading" href="/docs.html#what's-new">2.4.1</a></p>
-    <hr>
-    <ul>
-
-      <li>
-        <a href="index.html" class="f-menu__heading">Overview</a>
-      </li>
-
-      <li>
-        <a href="/style-guide.html" class="f-menu__heading">Style Guide</a>
-        <ul>
-          <li>
-            <a href="/style-guide.html#colors">Colors</a>
-          </li>
-          <li>
-            <a href="/style-guide.html#spacing">Spacing</a>
-          </li>
-          <li>
-            <a href="/style-guide.html#typography">Typography</a>
-          </li>
-          <li>
-            <a href="/style-guide.html#utilities">Utilities</a>
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <a href="/content-types.html" class="f-menu__heading">Content Types</a>
-        <ul>
-          <li>
-            <a href="content-types.html#accordion">Accordion</a>
-          </li>
-          <li>
-            <a href="content-types.html#agenda">Agenda</a>
-          </li>
-          <li>
-            <a href="content-types.html#alert">Alert</a>
-          </li>
-          <li>
-            <a href="content-types.html#announcement">Announcement</a>
-          </li>
-          <li>
-            <a href="content-types.html#breadcrumbs">Breadcrumbs</a>
-          </li>
-          <li>
-            <a href="content-types.html#button">Button</a>
-          </li>
-          <li>
-            <a href="content-types.html#by-the-numbers">By The Numbers</a>
-          </li>
-          <li>
-            <a href="content-types.html#call-to-action">Call To Action</a>
-          </li>
-          <li>
-            <a href="content-types.html#card">Card</a>
-          </li>
-          <li>
-            <a href="content-types.html#carousel">Carousel</a>
-          </li>
-          <li>
-            <a href="content-types.html#comparison-table">Comparison Table</a>
-          </li>
-          <li>
-            <a href="content-types.html#department-switcher">Department Switcher</a>
-          </li>
-          <li>
-            <a href="content-types.html#footer">Footer</a>
-          </li>
-          <li>
-            <a href="content-types.html#header">Header</a>
-          </li>
-          <li>
-            <a href="content-types.html#highlight">Highlight</a>
-          </li>
-          <li>
-            <a href="content-types.html#infographic">Infographic</a>
-          </li>
-          <li>
-            <a href="content-types.html#jumbotron">Jumbotron</a>
-          </li>
-          <li>
-            <a href="content-types.html#list-item">List Item</a>
-          </li>
-          <li>
-            <a href="content-types.html#lists">Lists</a>
-          </li>
-          <li>
-            <a href="content-types.html#pagination">Pagination</a>
-          </li>
-          <li>
-            <a href="content-types.html#person-spotlight">Person Spotlight</a>
-          </li>
-          <li>
-            <a href="content-types.html#pull-quote">Pull Quote</a>
-          </li>
-          <li>
-            <a href="content-types.html#sidebar">Sidebar</a>
-          </li>
-          <li>
-            <a href="content-types.html#site-pointer">Site Pointer</a>
-          </li>
-          <li>
-            <a href="content-types.html#social-icons">Social Icons</a>
-          </li>
-          <li>
-            <a href="content-types.html#statcards">Statcards</a>
-          </li>
-          <li>
-            <a href="content-types.html#windowpane">Windowpane</a>
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <a href="demos.html" class="f-menu__heading">Demos</a>
-        <ul>
-          <li>
-            <a href="demos/core-top-level.html">Core Top Level</a>
-          </li>
-          <li>
-            <a href="demos/cover-image-layout.html">Cover Image Layout</a>
-          </li>
-          <li>
-            <a href="demos/cover-image-layout2.html">Cover Image Layout2</a>
-          </li>
-          <li>
-            <a href="demos/department-switcher.html">Department Switcher</a>
-          </li>
-          <li>
-            <a href="demos/header-image.html">Header Image</a>
-          </li>
-          <li>
-            <a href="demos/homepage_new.html">Homepage New</a>
-          </li>
-          <li>
-            <a href="demos/homepage.html">Homepage</a>
-          </li>
-          <li>
-            <a href="demos/sidebar-breakout-landing.html">Sidebar Breakout Landing</a>
-          </li>
-          <li>
-            <a href="demos/story-cover-image.html">Story Cover Image</a>
-          </li>
-          <li>
-            <a href="demos/story.html">Story</a>
-          </li>
-          <li>
-            <a href="demos/tertiary.html">Tertiary</a>
-          </li>
-          <li>
-            <a href="demos/test.html">Test</a>
-          </li>
-          <li>
-            <a href="demos/the-trust-project.html">The Trust Project</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="emails.html" class="f-menu__heading">Emails</a>
-        <ul>
-          <li>
-            <a href="emails/email-solid.html">Email Solid</a>
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <a href="docs.html" class="f-menu__heading">Docs</a>
-        <ul>
-          <li>
-            <a href="docs.html#what&#x27;s-new">What&#x27;s New</a>
-          </li>
-          <li>
-            <a href="docs.html#accessibility">Accessibility</a>
-          </li>
-          <li>
-            <a href="docs.html#cloud-fonts">Cloud Fonts</a>
-          </li>
-          <li>
-            <a href="docs.html#getting-started">Getting Started</a>
-          </li>
-          <li>
-            <a href="docs.html#header-and-footer-guidelines">Header And Footer Guidelines</a>
-          </li>
-          <li>
-            <a href="docs.html#landing-pages">Landing Pages</a>
-          </li>
-          <li>
-            <a href="docs.html#print-style-guide">Print Style Guide</a>
-          </li>
-          <li>
-            <a href="docs.html#social-icons">Social Icons</a>
-          </li>
-        </ul>
-      </li>
-
-    </ul>
+    <div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+      <svg>
+        <use xlink:href="#f-icon-notes"/>
+      </svg>
+    </div>
+    <div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+      <svg>
+        <use xlink:href="#f-icon-code"/>
+      </svg>
+    </div>
   </div>
-  <!-- /fabricator menu -->
+  <h2 class="mb-0"><a href="/" class="f-menu__heading text-black"><img src="../../../../assets/images/scu_ver1_pos_rgb_2c.png" alt="SCU logo" style="width:100%"></a></h2>
+  <h3 class="text-sans-light f-menu__heading text-primary mb-0" style="font-size: 1rem">Design System</h3>
+  <p><a class="highlighter-rouge f-menu__heading" href="/docs.html#what's-new">2.4.1</a></p>
+  <hr>
+  <ul>
 
-  <div class="f-container">
+    <li>
+      <a href="index.html" class="f-menu__heading">Overview</a>
+    </li>
 
-    <div class="f-control-bar">
-      <div class="f-control f-menu-toggle">
-        <svg>
-          <use xlink:href="#f-icon-menu" />
-        </svg>
-      </div>
-    </div>
-
-    <style>
-      li.d-flex {
-        width: 50%;
-      }
-
-      li.d-flex img {
-        height: 100px;
-        width: 100px;
-      }
-
-      @media screen and (max-width: 768px) {
-        li.d-flex {
-          width: 100%;
-        }
-      }
-    </style>
-    <div class="jumbotron jumbotron-fluid text-center has-dim"
-      style="background-size: cover; background-image: url('/assets/images/examples/nobili.jpg')">
-      <div class="container text-white">
-        <h3 class="mb-0 text-uppercase">Santa Clara University</h3>
-        <h1 class="text-sans-light mt-0">Design System</h1>
-        <p><code class="highlighter-rouge">2.4.1</code></p>
-      </div>
-    </div>
-    <div class="container mb-5">
-      <ul class="d-flex list-unstyled align-items-start flex-wrap">
-        <li class="d-flex my-3">
-
-          <a href="/style-guide.html">
-            <img src="/assets/icons/colors.svg" alt="Colors Icon">
-          </a>
-          <div class="pl-3 align-self-center">
-            <h4 class="text-sans-light"><a href="/style-guide.html">Style Guide</a></h4>
-            <p>See our color and typography elements.</p>
-          </div>
+    <li>
+      <a href="/style-guide.html" class="f-menu__heading">Style Guide</a>
+      <ul>
+        <li>
+          <a href="/style-guide.html#colors">Colors</a>
         </li>
-        <li class="d-flex my-3">
-          <a href="/demos.html">
-            <img src="/assets/icons/demos.svg" alt="Demos Icon">
-          </a>
-          <div class="pl-3 align-self-center">
-            <h4 class="text-sans-light"><a href="/demos.html">Demos</a></h4>
-            <p>Layouts of content types.</p>
-          </div>
+        <li>
+          <a href="/style-guide.html#favicon">Favicon</a>
         </li>
-        <li class="d-flex my-3">
-          <a href="/content-types.html">
-            <img src="/assets/icons/content-types.svg" alt="Content Types Icon">
-          </a>
-          <div class="pl-3 align-self-center">
-            <h4 class="text-sans-light"><a href="/content-types.html">Content Types</a></h4>
-            <p>See the UI elements that make up our visual language.</p>
-          </div>
+        <li>
+          <a href="/style-guide.html#spacing">Spacing</a>
         </li>
-        <li class="d-flex my-3">
-          <a href="docs.html#whats-new">
-            <img src="/assets/icons/launch.svg" alt="What's New Icon">
-          </a>
-          <div class="pl-3 align-self-center">
-            <h4 class="text-sans-light"><a href="docs.html#whats-new">What's New</a></h4>
-            <p>See the latest updates and release notes.</p>
-          </div>
+        <li>
+          <a href="/style-guide.html#typography">Typography</a>
+        </li>
+        <li>
+          <a href="/style-guide.html#utilities">Utilities</a>
         </li>
       </ul>
-      <hr>
-      <h3 class="text-sans-light">Getting Started</h3>
-      <p class="lead">Our goal is to make working with our visual layer as easy as possible.</p>
-      <h4 class="h6">For Content Creators</h4>
-      <p>The <a href="https://www.scu.edu/web-design/content-types/">Web Design</a> has information and documentation on
-        how content types and layouts are integrated within TERMINALFOUR.</p>
-      <h4 class="h6">For Developers</h4>
-      <p>The Design System is on <a href="https://github.com/santaclarauniversity/scu-web-assets">GitHub</a>, but you
-        will need to
-        <a href="https://scuweb.zendesk.com/hc/en-us/requests/new">request access</a> to download and build the system
-        locally.
-      </p>
-      <h3 class="text-sans-light mt-4">Questions?</h3>
-      <p>Please contact us through our support ticketing system.</p>
-      <p><a href="https://scuweb.zendesk.com" class="btn btn-primary">Create a Support Ticket</a></p>
+    </li>
+
+    <li>
+      <a href="/content-types.html" class="f-menu__heading">Content Types</a>
+      <ul>
+        <li>
+          <a href="content-types.html#accordion">Accordion</a>
+        </li>
+        <li>
+          <a href="content-types.html#agenda">Agenda</a>
+        </li>
+        <li>
+          <a href="content-types.html#alert">Alert</a>
+        </li>
+        <li>
+          <a href="content-types.html#announcement">Announcement</a>
+        </li>
+        <li>
+          <a href="content-types.html#breadcrumbs">Breadcrumbs</a>
+        </li>
+        <li>
+          <a href="content-types.html#button">Button</a>
+        </li>
+        <li>
+          <a href="content-types.html#by-the-numbers">By The Numbers</a>
+        </li>
+        <li>
+          <a href="content-types.html#call-to-action">Call To Action</a>
+        </li>
+        <li>
+          <a href="content-types.html#card">Card</a>
+        </li>
+        <li>
+          <a href="content-types.html#carousel">Carousel</a>
+        </li>
+        <li>
+          <a href="content-types.html#comparison-table">Comparison Table</a>
+        </li>
+        <li>
+          <a href="content-types.html#department-switcher">Department Switcher</a>
+        </li>
+        <li>
+          <a href="content-types.html#footer">Footer</a>
+        </li>
+        <li>
+          <a href="content-types.html#header">Header</a>
+        </li>
+        <li>
+          <a href="content-types.html#highlight">Highlight</a>
+        </li>
+        <li>
+          <a href="content-types.html#infographic">Infographic</a>
+        </li>
+        <li>
+          <a href="content-types.html#jumbotron">Jumbotron</a>
+        </li>
+        <li>
+          <a href="content-types.html#list-item">List Item</a>
+        </li>
+        <li>
+          <a href="content-types.html#lists">Lists</a>
+        </li>
+        <li>
+          <a href="content-types.html#pagination">Pagination</a>
+        </li>
+        <li>
+          <a href="content-types.html#person-spotlight">Person Spotlight</a>
+        </li>
+        <li>
+          <a href="content-types.html#pull-quote">Pull Quote</a>
+        </li>
+        <li>
+          <a href="content-types.html#sidebar">Sidebar</a>
+        </li>
+        <li>
+          <a href="content-types.html#site-pointer">Site Pointer</a>
+        </li>
+        <li>
+          <a href="content-types.html#social-icons">Social Icons</a>
+        </li>
+        <li>
+          <a href="content-types.html#statcards">Statcards</a>
+        </li>
+        <li>
+          <a href="content-types.html#windowpane">Windowpane</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="demos.html" class="f-menu__heading">Demos</a>
+      <ul>
+        <li>
+          <a href="demos/core-top-level.html">Core Top Level</a>
+        </li>
+        <li>
+          <a href="demos/cover-image-layout.html">Cover Image Layout</a>
+        </li>
+        <li>
+          <a href="demos/cover-image-layout2.html">Cover Image Layout2</a>
+        </li>
+        <li>
+          <a href="demos/department-switcher.html">Department Switcher</a>
+        </li>
+        <li>
+          <a href="demos/header-image.html">Header Image</a>
+        </li>
+        <li>
+          <a href="demos/homepage_new.html">Homepage New</a>
+        </li>
+        <li>
+          <a href="demos/homepage.html">Homepage</a>
+        </li>
+        <li>
+          <a href="demos/sidebar-breakout-landing.html">Sidebar Breakout Landing</a>
+        </li>
+        <li>
+          <a href="demos/story-cover-image.html">Story Cover Image</a>
+        </li>
+        <li>
+          <a href="demos/story.html">Story</a>
+        </li>
+        <li>
+          <a href="demos/tertiary.html">Tertiary</a>
+        </li>
+        <li>
+          <a href="demos/test.html">Test</a>
+        </li>
+        <li>
+          <a href="demos/the-trust-project.html">The Trust Project</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="emails.html" class="f-menu__heading">Emails</a>
+      <ul>
+        <li>
+          <a href="emails/email-solid.html">Email Solid</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="docs.html" class="f-menu__heading">Docs</a>
+      <ul>
+        <li>
+          <a href="docs.html#what&#x27;s-new">What&#x27;s New</a>
+        </li>
+        <li>
+          <a href="docs.html#accessibility">Accessibility</a>
+        </li>
+        <li>
+          <a href="docs.html#cloud-fonts">Cloud Fonts</a>
+        </li>
+        <li>
+          <a href="docs.html#getting-started">Getting Started</a>
+        </li>
+        <li>
+          <a href="docs.html#header-and-footer-guidelines">Header And Footer Guidelines</a>
+        </li>
+        <li>
+          <a href="docs.html#landing-pages">Landing Pages</a>
+        </li>
+        <li>
+          <a href="docs.html#print-style-guide">Print Style Guide</a>
+        </li>
+        <li>
+          <a href="docs.html#social-icons">Social Icons</a>
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+</div>
+<!-- /fabricator menu -->
+
+
+  <div class="f-container">
+    <div class="f-control-bar">
+  <div class="f-control f-menu-toggle">
+    <svg>
+      <use xlink:href="#f-icon-menu"/>
+    </svg>
+  </div>
+</div>
+  <style>
+  li.d-flex {
+    width: 50%;
+  }
+  li.d-flex img {
+    height: 100px;
+    width: 100px;
+  }
+  @media screen and (max-width: 768px) {
+    li.d-flex {
+      width: 100%;
+    }
+  }
+</style>
+<div class="jumbotron jumbotron-fluid text-center has-dim" style="background-size: cover; background-image: url('/assets/images/examples/nobili.jpg')">
+  <div class="container text-white">
+    <h3 class="mb-0 text-uppercase">Santa Clara University</h3>
+    <h1 class="text-sans-light mt-0">Design System</h1>
+    <p><code class="highlighter-rouge">2.4.1</code></p>
+  </div>
+</div>
+<div class="container mb-5">
+  <ul class="d-flex list-unstyled align-items-start flex-wrap">
+    <li class="d-flex my-3">
+
+      <a href="/style-guide.html">
+        <img src="/assets/icons/colors.svg" alt="Colors Icon">
+      </a>
+      <div class="pl-3 align-self-center">
+        <h4 class="text-sans-light"><a href="/style-guide.html">Style Guide</a></h4>
+        <p>See our color and typography elements.</p>
+      </div>
+    </li>
+    <li class="d-flex my-3">
+      <a href="/demos.html">
+        <img src="/assets/icons/demos.svg" alt="Demos Icon">
+      </a>
+      <div class="pl-3 align-self-center">
+        <h4 class="text-sans-light"><a href="/demos.html">Demos</a></h4>
+        <p>Layouts of content types.</p>
+      </div>
+    </li>
+    <li class="d-flex my-3">
+      <a href="/content-types.html">
+        <img src="/assets/icons/content-types.svg" alt="Content Types Icon">
+      </a>
+      <div class="pl-3 align-self-center">
+        <h4 class="text-sans-light"><a href="/content-types.html">Content Types</a></h4>
+        <p>See the UI elements that make up our visual language.</p>
+      </div>
+    </li>
+    <li class="d-flex my-3">
+      <a href="docs.html#whats-new">
+        <img src="/assets/icons/launch.svg" alt="What's New Icon">
+      </a>
+      <div class="pl-3 align-self-center">
+        <h4 class="text-sans-light"><a href="docs.html#whats-new">What's New</a></h4>
+        <p>See the latest updates and release notes.</p>
+      </div>
+    </li>
+  </ul>
+  <hr>
+  <h3 class="text-sans-light">Getting Started</h3>
+  <p class="lead">Our goal is to make working with our visual layer as easy as possible.</p>
+  <h4 class="h6">For Content Creators</h4>
+  <p>The <a href="https://www.scu.edu/web-design/content-types/">Web Design</a> has information and documentation on how content types and layouts are integrated within TERMINALFOUR.</p>
+  <h4 class="h6">For Developers</h4>
+  <p>The Design System is on <a href="https://github.com/santaclarauniversity/scu-web-assets">GitHub</a>, but you will need to
+    <a href="https://scuweb.zendesk.com/hc/en-us/requests/new">request access</a> to download and build the system locally.</p>
+  <h3 class="text-sans-light mt-4">Questions?</h3>
+  <p>Please contact us through our support ticketing system.</p>
+  <p><a href="https://scuweb.zendesk.com" class="btn btn-primary">Create a Support Ticket</a></p>
+</div>
+<footer class="footer-core border-top bg-white pt-4 footer-core">
+  <div class="container">
+    <a href="/" class="h4 text-dark text-uppercase wordmark d-block mb-4">Santa Clara University</a>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <p class="mb-0">
+          500 El Camino Real<br />Santa Clara, CA 95053<br />(408) 554-4000
+        </p>
+        <ul class="list-unstyled list-spaced">
+          <li><a href="https://www.scu.edu/map/">Maps &amp; Directions</a></li>
+          <li><a href="https://www.scu.edu/phonebook">Contact Us</a></li>
+        </ul>
+        <ul class="list-inline mb-0 footer-social-icons">
+          <li class="list-inline-item">
+            <a aria-label="facebook" class="facebook" href="https://www.facebook.com/SantaClaraUniversity">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span class="sr-only">SCU on Facebook</span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a aria-label="x-twitter" class="x-twitter" href="https://twitter.com/SantaClaraUniv">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span class="sr-only">SCU on X (formerly Twitter)</span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a aria-label="linkedin" class="linkedin" href="https://www.linkedin.com/edu/santa-clara-university-17914">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span class="sr-only">SCU on Linkedin</span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a aria-label="youtube" class="youtube"
+              href="https://www.youtube.com/channel/UCsii-lMGVZ5tL3lj2No6i7A?sub_confirmation=1">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+              <span class="sr-only">SCU on YouTube</span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a aria-label="instagram" class="instagram" href="https://instagram.com/santaclarauniversity/">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span class="sr-only">SCU on Instagram</span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a aria-label="tiktok" class="tiktok" href="https://www.tiktok.com/@santaclarauniv">
+              <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+              <span class="sr-only">SCU on TikTok</span>
+            </a>
+          </li>
+        </ul>
+        <hr class="d-block d-md-none pt-2" />
+      </div>
+      <div class="col-12 col-md-3">
+        <ul class="list-unstyled list-spaced">
+          <li>
+            <div class="h6 text-uppercase">Resources</div>
+          </li>
+          <li><a href="/emergency/">Emergency Info</a></li>
+          <li>
+            <span aria-hidden="true" class="fa text-primary"></span><a href="/website-privacy-statement/">Privacy
+              Statement</a>
+          </li>
+          <li>
+            <a title="Office of Equal Opportunity and Title IX" href="https://www.scu.edu/title-ix">Title IX</a>
+          </li>
+          <li><a href="/hr/careers/">Careers</a></li>
+          <li><a href="https://www.scu.edu/login">Login</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3">
+        <ul class="list-unstyled list-spaced">
+          <li>
+            <div class="h6 text-uppercase ">Our Campus</div>
+          </li>
+          <li><a href="/missionchurch/">The Mission</a></li>
+          <li><a href="/events/">Event Calendar</a></li>
+          <li><a href="/news-and-events/">News</a></li>
+        </ul>
+      </div>
     </div>
-    <footer class="footer-core border-top bg-white pt-4 footer-core">
-      <div class="container">
-        <a href="https://www.scu.edu" class="h4 text-dark text-uppercase wordmark d-block mb-4">Santa Clara
-          University</a>
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <p class="mb-0">500 El Camino Real<br>Santa Clara, CA 95053<br>(408) 554-4000</p>
-            <ul class="list-unstyled list-spaced">
-              <li><a href="https://www.scu.edu/map/">Maps &amp; Directions</a></li>
-              <li><a href="https://www.scu.edu/phonebook">Contact Us</a></li>
-            </ul>
-            <ul class="list-inline mb-0 footer-social-icons">
-              <li class="list-inline-item"><a class="facebook" href="https://www.facebook.com/SantaClaraUniversity">
-                  <i class="demo-icon icon-facebook-squared"></i>
-                  <span class="sr-only">SCU on Facebook</span>
-                </a></li>
-              <li class="list-inline-item"><a class="twitter" href="https://twitter.com/SantaClaraUniv">
-                  <i class="demo-icon icon-twitter"></i>
-                  <span class="sr-only">SCU on Twitter</span>
-                </a></li>
-              <li class="list-inline-item"><a class="linkedin"
-                  href="https://www.linkedin.com/edu/santa-clara-university-17914">
-                  <i class="demo-icon icon-linkedin"></i>
-                  <span class="sr-only">SCU on Linkedin</span>
-                </a></li>
-              <li class="list-inline-item"><a class="youtube"
-                  href="https://www.youtube.com/channel/UCsii-lMGVZ5tL3lj2No6i7A?sub_confirmation=1">
-                  <i class="demo-icon icon-youtube"></i>
-                  <span class="sr-only">SCU on YouTube</span>
-                </a></li>
-              <li class="list-inline-item"><a class="instagram" href="https://instagram.com/santaclarauniversity/">
-                  <i class="demo-icon icon-instagram"></i>
-                  <span class="sr-only">SCU on Instagram</span>
-                </a></li>
-            </ul>
-            <hr class="d-block d-md-none pt-2">
-          </div>
-          <div class="col-12 col-md-3">
-            <ul class="list-unstyled list-spaced">
-              <li>
-                <h6 class="text-uppercase">Resources</h6>
-              </li>
-              <li><a href="https://www.scu.edu/emergency/">Emergency Info</a></li>
-              <li><span class="fa fa-universal-access text-primary"><span class="sr-only">Accessibility
-                    icon</span></span> <a href="https://www.scu.edu/accessibility/">Accessibility</a></li>
-              <li><a title="Office of Equal Opportunity and Title IX" href="https://www.scu.edu/title-ix">Title IX</a>
-              </li>
-              <li><a title="Human Resources » Careers"
-                  href="https://wd1.myworkdaysite.com/recruiting/scu/scu">Careers</a></li>
-              <li><a href="https://www.scu.edu/login">Login</a></li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-3">
-            <ul class="list-unstyled list-spaced">
-              <li>
-                <h6 class="text-uppercase ">Our Campus</h6>
-              </li>
-              <li><a href="https://www.scu.edu/missionchurch/">The Mission</a></li>
-              <li><a href="https://www.scu.edu/events/">Event Calendar</a></li>
-              <li><a href="https://www.scu.edu/news-and-events/">News</a></li>
-            </ul>
+  </div>
+  <div class="bg-scu-red mt-4 small align-items-center">
+    <div class="container d-flex p-3 logo-container">
+      <span class="wordmark link-home logo-footer"><a href="https://www.scu.edu/" class="footer-wordmark"><svg
+            aria-hidden="true" style="position: relative; z-index: 2" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1366 512">
+            <!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.-->
+            <defs>
+              <radialGradient id="sunFill" cx="0.5" cy="0.8" r="0.01" fx="0.5" fy="0.8">
+                <stop offset="0%" stop-color="#FFB600" stop-opacity="1"></stop>
+                <stop offset="100%" stop-color="#FFB600" stop-opacity="0">
+                  <animate id="opacity-anim" attributeName="stop-opacity" values="0;0;0;1" keyTimes="0;0.8;0.9;1"
+                    dur="4.5s" begin="indefinite" fill="freeze"></animate>
+                </stop>
+                <animate id="radius-anim" attributeName="r" values="0.01;10.0" calcMode="spline" keySplines="0.42 0 1 1"
+                  dur="5s" begin="indefinite" fill="freeze"></animate>
+              </radialGradient>
+            </defs>
+            <path class="" fill="#FFF"
+              d="M10.1 85c23.6-6.1 47.7-10.9 72.2-14.2c0 2.4 0 4.9 0 7.3L48.8 118l-15.6 5 6.5 6.2 0 156.1c-13.6 1.5-23.8 2.8-29.7 3.6c0-51.8 0-119.7 0-203.9zm99.1-17.2c18.3-1.7 36.7-2.5 55.4-2.6c53.3 .1 105.1 7 154.5 19.8c0 0 0 132 0 203.9c-6.1-.8-14.5-1.9-25-3.1l0-16 9.5-.9 0-6-35.7-31.9c0-5.3 0-10.5 0-15.8l16.9-1.6 0-7.3-68.2-59.3 0-12.8 6.1 1.2 0-4.4-6.1-1.3 0-6-4.7-1 0 6-6.1-1.3 0 4.5 6.1 1.2 0 14.8-60.2 12.1 0-31.2 6.4-6L142.6 118 109.1 78.2c0-3.5 0-6.9 0-10.4z">
+            </path>
+            <path id="sunrise" class="fa-secondary" fill="url(#sunFill)"
+              d="M10.1 85c23.6-6.1 47.7-10.9 72.2-14.2c0 2.4 0 4.9 0 7.3L48.8 118l-15.6 5 6.5 6.2 0 156.1c-13.6 1.5-23.8 2.8-29.7 3.6c0-51.8 0-119.7 0-203.9zm99.1-17.2c18.3-1.7 36.7-2.5 55.4-2.6c53.3 .1 105.1 7 154.5 19.8c0 0 0 132 0 203.9c-6.1-.8-14.5-1.9-25-3.1l0-16 9.5-.9 0-6-35.7-31.9c0-5.3 0-10.5 0-15.8l16.9-1.6 0-7.3-68.2-59.3 0-12.8 6.1 1.2 0-4.4-6.1-1.3 0-6-4.7-1 0 6-6.1-1.3 0 4.5 6.1 1.2 0 14.8-60.2 12.1 0-31.2 6.4-6L142.6 118 109.1 78.2c0-3.5 0-6.9 0-10.4z"
+              style="visibility: visible; opacity: 1;"></path>
+            <path class="fa-primary" fill="#ffffff"
+              d="M488.2 155c-4-12.7-10.8-27.3-27.4-27.3c-12.6 0-20.4 9.3-20.4 20.6c0 12.5 8.2 19.2 25.2 27.7c19 9.7 35.1 20.2 35.1 41.2c0 22.4-18.8 40-47.3 40c-15.1 0-30.2-5.8-32.6-7l-4.5-33.4 6.8-2c3.6 12.7 14.4 34.6 34.1 34.6c13.4 0 21.6-8.9 21.6-22.4c0-12.9-9.6-20.4-24.6-28.3c-17.8-9.3-34.3-20-34.3-40.6c0-21 16.6-38.2 44.1-38.2c11.6 0 21.8 3.4 27 5.1c.8 7.5 2 16 3.6 28.7l-6.4 1.4zm181 99.2v-6.1c9.6-1.2 10.8-2.2 10.8-16.6V197.7c0-14.3-6.2-20.4-15.4-20.4c-6.2 0-12 3.2-17.4 7.7v48.3c0 12.9 1.2 13.7 10.6 15v6.1H611.9v-6.1c12.2-1.6 13.2-2.2 13.2-15.6V190.8c0-12.5-1-13.1-11.2-15.2v-5.5c10.6-1.4 22.4-4.2 33.3-7.9v15.4c4-2.8 8-5.9 12.8-8.9c5.8-3.8 10.2-5.9 16-5.9c16 0 25.8 11.7 25.8 31.7V233c0 13.1 1.2 13.7 12.2 15.2v6.1l-44.9 0zm88.8 2.4c-14.4 0-22.6-7.5-22.6-25.1V174.4h-14l-.1-2.4 5.6-6.7h8.4V150.6l17.5-15 4.3-.1v29.8H778v9l-20.8 .1v50.5c0 16 7.2 18.2 11.6 18.2c4 0 7.6-1.2 10.8-2.6l2 6.3L758 256.7h0zm273.8-36.6l-8.6 32.1c-5.1 1.9-17.7 5-35 5c-46.7 0-66.7-35-66.7-66.9c0-42 28.7-70.5 70.9-70.5c14.6 0 27.6 4.2 32.5 5.5c1.4 11.1 2.7 20.2 4 32.1l-6.3 1.4c-5.4-23-18.2-30.7-34.1-30.7c-27.6 0-42.6 27.9-42.6 58.2c0 37.2 18.4 62.2 44 62.2c16.4 0 26.9-10.9 36.1-31.1l6 2.6 0 0zm12.2 34.1v-6.1c12.2-1.6 13.4-2.6 13.4-15.8V145c0-12.7-1-14-12.6-15.2v-5.7c11-1.2 25-4.2 34.7-7.1V232.4c0 13.5 1.4 14.6 13.8 15.8v6.1l-49.3 0zm193.3-69.9c6.8-11.9 15-21.4 23.2-21.4c7.6 0 12.8 5.5 12.8 11.7c0 5.9-3.8 11.1-8.6 12.9c-2.6 1-4.6 .6-5.8-.6c-3.4-2.8-5.8-4.2-9-4.2c-4.4 0-9.2 3.8-13 13.1v37.4c0 12.7 1 13.7 16.4 15v6.1h-51.1v-6.1c10.8-1.2 12.6-2.2 12.6-15V189.8c0-11.3-1.2-12.1-11.4-14.1v-5.3c11.2-1.6 22-4 33.5-7.9v21.8h.4l0 0zM477.1 313.2c-5.3 .3-7.5 2-8 5.5c-.4 2.7-.6 6.3-.6 13.7v9.2c0 10.3-1.6 18.2-6.8 23.8c-4.3 4.5-10.6 6.7-16.9 6.7c-5.8 0-11.5-1.3-15.8-4.7c-5.3-4.2-7.9-11.1-7.9-22V323c0-8.7-.8-9.2-7.9-9.8v-3.1h26.5v3.1c-6.9 .6-7.8 1.1-7.8 9.8v20.6c0 14.4 5.3 22.7 15.8 22.7c11.8 0 16.5-9.4 16.5-25v-8.9c0-7.3-.5-11-.8-13.9c-.6-3.4-2.6-4.9-9-5.3v-3.1h22.8v3.1l0 0zm107.5-.1c-5 .3-7 1.6-7.5 5.8c-.4 2.8-.7 7.2-.7 15.6v37.2h-3.9l-38.9-47.4h-.2v21.9c0 8.3 .4 12.5 .6 15.3c.5 4.4 2.2 5.9 8.9 6.3v3H520.6v-3c5.2-.4 7.4-1.8 7.9-6c.3-3.1 .7-7.3 .7-15.6V326.3c0-6.3-.1-7.7-1.9-9.8c-1.9-2.3-3.8-3.1-8-3.5v-3h15.9l36.6 43h.3V334.4c0-8.4-.5-12.8-.6-15.5c-.6-4-2.5-5.5-9.2-5.9v-3h22.3v3h0zm51.6 57.7v-3c7.1-.7 8-1.2 8-9.2V322.3c0-7.9-.8-8.6-8-9.1v-3.1h26.6v3.1c-7.1 .6-7.9 1.2-7.9 9.1v36.3c0 7.8 .7 8.5 7.9 9.2v3H636.3zm140.3-57.6c-6.1 .7-7.7 1.8-11.3 10.5c-2.9 6.8-11.8 28.8-18.9 48.2h-4c-6.3-17.1-14.6-38.7-19-49.9c-2.8-7.1-4.3-8.2-9.9-8.8v-3.1h25.8v3.1c-6.8 .9-6.8 1.9-5.4 5.9c2.6 7.2 9.6 25.8 14.1 37.2h.2c5-12.9 10-26.3 12.7-34.9c2-6.1 1.8-7.2-5.7-8.1v-3.1h21.4l0 3.1zm97.2 42.4c-.6 3.7-2.4 12.4-3.2 15.2H823.3v-3c8.1-.7 8.9-1.3 8.9-9.2V322.3c0-8.2-.8-8.6-7.6-9.1v-3.1H870c.1 1.9 .6 8.4 .9 13.8l-3.1 .5c-.8-3.5-1.9-6.3-3.4-8s-4-2.4-9.7-2.4h-8.1c-3.2 0-3.5 .2-3.5 3.2v20.3h7.1c8 0 8.9-.6 10.1-7h3.1v18.5h-3.1c-1.2-6.7-2.1-7.1-10.1-7.1H843v16.6c0 4.5 .5 6.6 2.2 7.7c1.7 .9 4.9 1 8.7 1c5.6 0 9.7-.7 11.8-3.1c1.8-2 3.4-5 5-9l3.1 .6h0zm108.1 16.1c-.7 0-1.9-.1-2.9-.1c-10-.5-13.7-2.9-17.6-8.9c-2.7-4.1-5.6-9.4-8.2-14.2c-1.5-2.8-3.1-3.9-6.8-3.9h-2.1v14.1c0 7.7 .8 8.5 8 9.2v3H925.7v-3c7.1-.7 8.1-1.4 8.1-9.2V322.1c0-7.7-.8-8.4-7.8-9v-3.1h24.9c7.6 0 12.2 .9 15.9 3.4c3.7 2.5 6.2 6.6 6.2 12.4c0 8.1-5.3 12.7-11.7 15.4c1.5 2.9 5 9.2 7.8 13.4c3.3 5.1 5.3 7.9 7.3 10c2.1 2.4 3.9 3.5 6 4.2l-.6 2.8 0 0zm-34.5-30.5c4.3 0 7.3-.7 9.4-2.5c3.2-2.7 4.6-6.4 4.6-11.3c0-10-5.9-13.7-11.8-13.7c-2.4 0-3.8 .5-4.4 .9c-.6 .6-.8 1.6-.8 3.7v22.9h3.1 0zm119.1-16.1c-1.8-5.9-5-12.6-12.7-12.6c-5.8 0-9.4 4.3-9.4 9.5c0 5.8 3.8 8.9 11.7 12.8c8.8 4.5 16.2 9.3 16.2 19c0 10.4-8.7 18.5-21.8 18.5c-3.5 0-6.7-.6-9.2-1.4c-2.5-.7-4.2-1.4-5.3-2c-.8-2.2-2-10.1-2.7-15.3l3.1-.9c1.7 5.9 6.7 16 15.7 16c6.2 0 10-4.1 10-10.4c0-6-4.4-9.4-11.4-13.1c-8.2-4.3-15.8-9.2-15.8-18.8c0-9.7 7.7-17.6 20.4-17.6c5.4 0 10.1 1.6 12.5 2.3c.4 3.5 .9 7.4 1.7 13.3l-3 .7 0 0zm64.5 45.8v-3c7.1-.7 8-1.2 8-9.2V322.3c0-7.9-.8-8.6-8-9.1v-3.1h26.6v3.1c-7.1 .6-7.9 1.2-7.9 9.1v36.3c0 7.8 .7 8.5 7.9 9.2v3H1131zm129.6-45.3c-1.1-4.7-2.2-7.6-3.6-9.2c-1.7-1.9-3.7-2.4-9.7-2.4h-5v44.7c0 7.7 .8 8.5 9.3 9.2v3h-28.9v-3c8-.7 8.9-1.4 8.9-9.2V313.9h-4.2c-7.6 0-9.3 .8-10.6 2.6c-1.4 1.6-2.4 4.6-3.5 9.1H1210c.4-6.3 .9-13 1.1-17.8h2.1c1.4 2.1 2.6 2.3 5.2 2.3h37c2.4 0 3.5-.6 5.1-2.3h2.1c0 4 .5 11.8 .9 17.5l-3 .2 0 0zM1365 313.2c-6.1 .7-7.7 2.1-11.1 7.7c-3.7 6-6.4 10.5-10.8 19c-1.3 2.4-1.7 3.5-1.7 6.3v12.2c0 8.2 .7 8.8 9.1 9.4v3h-28.6v-3c8-.6 8.8-1.2 8.8-9.4V347.2c0-2.1-.4-3.1-1.5-5.3c-2.8-5.3-6.2-11.5-11.5-20.9c-3.6-6.3-4.9-7.2-10.2-7.8v-3.1h24.8v3.1c-6.2 .8-6.1 2-4.4 5.2c3.5 6.8 7.5 14 11.3 20.9c3-5.6 7.8-14.5 10.1-20.2c1.8-4.1 1.6-5.2-5.4-6v-3.1H1365v3.1 0zM582.8 256.6c-4.6 0-8.6-1.8-11.2-4c-2.6-2.6-4-5.2-5-8.1c-2.5 2.3-15.1 12.1-24.1 12.1c-14.9 0-23.6-12.9-23.6-25.4c0-9.3 7-15.6 17.4-20.1c11.6-5 29.8-12.8 29.8-12.8V187c0-8.7-2.5-14.4-10.2-14.4c-9.1 0-13.6 4.9-16.2 14.5c-1.1 4.2-1.8 8.8-7.9 8.8c-5.5 0-11.4-4.9-11.4-9.6c0-9.5 21.3-18.5 38.4-23.2c21.5 0 28.6 12 28.6 31.5v38c0 7.2 2.4 9.7 6.6 9.7c2.4 0 5.1-.8 7.1-1.8l1.9 5.1-20.2 11.1 0 0zM566 205.8s-9.1 4.1-13.3 6.3c-6.8 3.2-10.7 8-10.7 15c0 10.9 5.9 15.3 12.8 15.3c3.6 0 7.6-1.8 11.2-4.6l0-32zm291 50.8c-4.6 0-8.6-1.8-11.2-4c-2.6-2.6-4-5.2-5-8.1c-2.5 2.3-15.1 12.1-24.1 12.1c-14.9 0-23.6-12.9-23.6-25.4c0-9.3 7-15.6 17.4-20.1c11.6-5 29.8-12.8 29.8-12.8V187c0-8.7-2.5-14.4-10.2-14.4c-9.1 0-13.6 4.9-16.2 14.5c-1.1 4.2-1.8 8.8-7.9 8.8c-5.5 0-11.4-4.9-11.4-9.6c0-9.5 21.3-18.5 38.4-23.2c21.5 0 28.6 12 28.6 31.5v38c0 7.2 2.4 9.7 6.6 9.7c2.4 0 5.1-.8 7.1-1.8l1.9 5.1L857 256.6l0 0zm-16.8-50.8s-9.1 4.1-13.3 6.3c-6.8 3.2-10.7 8-10.7 15c0 10.9 5.9 15.3 12.8 15.3c3.6 0 7.6-1.8 11.2-4.6v-32h0zm331.1 50.8c-4.6 0-8.6-1.8-11.2-4c-2.6-2.6-4-5.2-5-8.1c-2.5 2.3-15.1 12.1-24.1 12.1c-14.9 0-23.6-12.9-23.6-25.4c0-9.3 7-15.6 17.4-20.1c11.6-5 29.8-12.8 29.8-12.8V187c0-8.7-2.5-14.4-10.2-14.4c-9.1 0-13.6 4.9-16.2 14.5c-1.1 4.2-1.8 8.8-7.9 8.8c-5.5 0-11.4-4.9-11.4-9.6c0-9.5 21.3-18.5 38.4-23.2c21.5 0 28.6 12 28.6 31.5v38c0 7.2 2.4 9.7 6.6 9.7c2.4 0 5.1-.8 7.1-1.8l1.9 5.1-20.2 11.1 0 0zm-16.8-50.8s-9.1 4.1-13.3 6.3c-6.8 3.2-10.7 8-10.7 15c0 10.9 5.9 15.3 12.8 15.3c3.6 0 7.6-1.8 11.2-4.6l0-32zm190.2 50.8c-4.6 0-8.6-1.8-11.2-4c-2.6-2.6-4-5.2-5-8.1c-2.5 2.3-15.1 12.1-24.1 12.1c-14.9 0-23.6-12.9-23.6-25.4c0-9.3 7-15.6 17.3-20.1c11.6-5 29.8-12.8 29.8-12.8V187c0-8.7-2.5-14.4-10.2-14.4c-9.1 0-13.6 4.9-16.2 14.5c-1.1 4.2-1.8 8.8-7.9 8.8c-5.5 0-11.4-4.9-11.4-9.6c0-9.5 21.3-18.5 38.4-23.2c21.5 0 28.6 12 28.6 31.5v38c0 7.2 2.4 9.7 6.6 9.7c2.4 0 5.1-.8 7.1-1.8l1.9 5.1-20.2 11.1 0 0zm-16.8-50.8s-9.1 4.1-13.3 6.3c-6.8 3.2-10.6 8-10.6 15c0 10.9 5.9 15.3 12.8 15.3c3.6 0 7.6-1.8 11.2-4.6v-32h0zM127.4 378.1V380H109.1v-1.9c5.4-.3 5.7-.8 5.7-4.6v-19c0-2.7-.9-2.9-3.1-3.2l-1.6-.3v-1.7c4-.5 8.5-1.5 11.6-2.6v26.8c0 3.9 .3 4.4 5.6 4.6zm32.3-7.5c0 6.7-6.6 10-11.7 10c-7 0-11.4-3.6-11.4-8.9c0-2.5 1.2-3.9 2.2-4.8c1-.8 3.2-2.1 4.7-3c-3-1.7-5.7-4.3-5.7-8.2c0-5 4.4-9.1 10.7-9.1c5.8 0 9.6 3.5 9.6 8.1c0 1.5-.5 2.9-1.7 4c-.8 .7-1.9 1.5-3.9 2.7c3.7 2 7 4.5 7 9l0 0zM144 353.4c0 3.5 2.6 5.2 6.8 7.1c1.2-1.1 1.9-2.6 1.9-5.6c0-4.6-2.7-6.1-4.7-6.1c-2.6 0-4 1.9-4 4.6zm9.3 19.8c-.1-3.7-2.5-5.5-7.7-8.1c-1.6 1.2-2.8 3.4-2.8 6.1c0 5 2.9 7.3 5.8 7.3s4.7-1.8 4.6-5.3zm61 .3V346.7c-3.1 1.1-7.6 2.2-11.6 2.6V351l1.6 .3c2.1 .3 3.1 .5 3.1 3.2v19c0 3.8-.4 4.4-5.7 4.6V380h18.3v-1.9c-5.3-.3-5.6-.7-5.6-4.6zm-33-14.2c-1.4 0-4.3 .7-6.9 1.6c.5-2.2 1.2-5.6 1.7-7.9h13l1.7-5.2-.3-.5h-16c-.7 4.9-2 11.6-3 16.4l.3 .3c1.4-.4 3.1-.9 5.4-.9c4.8 0 7.8 3.1 7.8 7.8c0 3.8-1.5 6.7-4.7 6.7c-3.3 0-5.6-2.2-6.8-3.3c-.7-.7-1.4-.7-2-.3c-.9 .7-1.6 1.9-1.6 2.8c0 .7 .2 1.3 1.3 2.1c1.2 1 3.4 1.7 5.5 1.7c3.1 0 7-1.4 9.9-3.5c3.7-2.6 5.2-5.8 5.2-9.1c0-4.5-3.5-8.8-10.3-8.8l0 0zM294 266.4v36.8l-8.9 .2V274.5l-13.3-.5v29.7l-41.6 1.1V266.8h0s0 0 0 0c0-8.9-6.5-16.8-15.9-16.8c-8.8 0-15.9 6.4-15.9 15.3v40.5l-61.5 1.7V268.6l-22.9-.8V308l-18.2 .5V112.3l56 16.7v62.2l64.1-25.8 52 46.4v31.1L294 266.4zM117.9 130.1c0-2.7-2.2-5.5-4.9-6.2c-1.7-.5-3.1 0-4 1c2 1.2 3.4 3.4 3.4 5.6v21.4l5.5 1.3V130.1zm11.4 57.6l-9.5-1.8v29.4l9.5 1.3V187.7zm11-51.1c0-2.7-2.2-5.5-4.9-6.2c-1.7-.5-3.1 0-4 1c2 1.2 3.4 3.4 3.4 5.6v20.2l5.5 1.3V136.5zm79.7 53.4c0-3.2-2.6-6.5-5.7-7.3c-2-.5-3.7 0-4.7 1.2c2.3 1.4 4 4 4 6.6V213l6.5 1.1 0-24.1zM78.1 124c-2.7 .7-4.9 3.5-4.9 6.2v23l5.5-1.3V130.6c0-2.2 1.4-4.4 3.4-5.6c-.9-1-2.3-1.5-4-1l0 0zm26-69c-1.6 .4-3.6 .6-5.9 .7V73.4c2.3 .1 4.3 .3 5.9 .7V55v0zM87.3 74.1c1.6-.4 3.6-.6 5.9-.7V55.7c-2.3-.1-4.3-.3-5.9-.7V74.1zM55.7 130.4c-2.7 .7-4.9 3.5-4.9 6.2v21.9l5.5-1.3V137c0-2.2 1.4-4.4 3.4-5.6c-.9-1-2.3-1.5-4-1l0 0zm108.8-75c-15.3 0-30.5 .6-45.7 1.7V50.9c0-8.8-4.9-16.5-12.1-20.5c2-2.5 3.2-5.7 3.2-9.1c0-8-6.4-14.4-14.3-14.4s-14.3 6.5-14.3 14.4c0 3.5 1.2 6.6 3.2 9.1c-7.2 4-12 11.7-12 20.5V62.4C48.2 66 24.1 71 .3 77.4V293.7C.3 341 33.1 408.3 164.5 457.4C295.9 408.3 328.7 341 328.7 293.7V77.4C275.2 63 220 55.5 164.5 55.4zM319 293.7c0 40.7-28.3 105.4-154.5 153.2C38.3 399.1 10.1 334.4 10.1 293.7v-4.8V85c23.6-6.1 47.7-10.9 72.2-14.2v-20c0-6.7 4.8-12.2 10.9-13.3l0-14.7-6.5-1.3V16.8l6.5 1.4V11.7l5 1.1v6.4l6.5 1.4v4.8L98.2 24V37.7c6.2 1.2 10.9 6.5 10.9 13.2V67.8c18.3-1.7 36.7-2.5 55.4-2.6c53.3 .1 105.1 7 154.5 19.8V288.9v4.8l0 0z">
+            </path>
+          </svg><span class="sr-only">Santa Clara University Homepage</span></a></span>
+      <div class="text-light row" style="align-items: center; gap: 1rem; margin-top: 1rem; margin-bottom: 1rem">
+        <div id="temperature-container" style="width: 120px">
+          <img id="weather-icon" src="https://scu.edu/media/scuedu/content-assets/icons/filled-weather-icons/sun.svg"
+            style="margin-right: 4px" alt="current weather in Santa Clara is sunny" />
+          <div>
+            <span id="footer-temperature-f">75</span><span>°F</span> /
+            <span id="footer-temperature-c">24</span><span>°C</span>
           </div>
         </div>
+        <div><span id="copyright" style="color: #FFFFFF;">©</span> 2025</div>
+        <div>
+          <a href="https://www.scu.edu/accessibility" class="text-white"><span aria-hidden="true"
+              class="fa fa-universal-access text-light"></span><span>&nbsp;Accessibility</span></a>
+        </div>
       </div>
-      <p class="bg-gradient-primary mb-0 mt-4 p-3 small text-center">©
-        <script>document.write(new Date().getUTCFullYear());</script> Santa Clara University
-      </p>
-    </footer>
-
+    </div>
+  </div>
+</footer>
+<script src="https://assets.scu.edu/public/js/weather-widget.js"></script>
+<script src="https://assets.scu.edu/public/js/animation-sunrise.js"></script>
   </div>
 
   <script src="/public/fabricator.js"></script>
-
 </body>
 
 </html>
