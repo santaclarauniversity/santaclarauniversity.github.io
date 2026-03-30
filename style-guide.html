@@ -33,6 +33,81 @@
   <link rel="stylesheet" href="https://kit.fontawesome.com/895f1e62c1.css" crossorigin="anonymous" />
   <script src="https://kit.fontawesome.com/8fd101ac29.js" crossorigin="anonymous">
   </script>
+
+  <!-- Figtree + Crimson Pro (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+
+  <!-- Minion Pro (Adobe Fonts / Typekit) -->
+  <link rel="stylesheet" href="https://use.typekit.net/pcm8ajw.css" />
+
+  <style>
+    /* ── Santa Clara Nueva ── */
+    @font-face {
+      font-family: 'SantaClaraNueva';
+      src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Regular_otf.woff2') format('woff2'),
+           url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Regular.otf') format('opentype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'SantaClaraNueva';
+      src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Italic_otf.woff2') format('woff2'),
+           url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Italic.otf') format('opentype');
+      font-weight: 400; font-style: italic; font-display: swap;
+    }
+    @font-face {
+      font-family: 'SantaClaraNueva';
+      src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Medium_otf.woff2') format('woff2'),
+           url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Medium.otf') format('opentype');
+      font-weight: 500; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'SantaClaraNueva';
+      src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Bold_otf.woff2') format('woff2'),
+           url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Bold.otf') format('opentype');
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'SantaClaraNueva';
+      src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-BoldItalic_otf.woff2') format('woff2'),
+           url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-BoldItalic.otf') format('opentype');
+      font-weight: 700; font-style: italic; font-display: swap;
+    }
+    @font-face {
+      font-family: 'SantaClaraNueva';
+      src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Heavy_otf.woff2') format('woff2'),
+           url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Heavy.otf') format('opentype');
+      font-weight: 800; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'SantaClaraNueva';
+      src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Black_otf.woff2') format('woff2'),
+           url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Black.otf') format('opentype');
+      font-weight: 900; font-style: normal; font-display: swap;
+    }
+
+	.weight-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.25rem;
+    }
+    .weight-label {
+      font-family: 'Figtree', sans-serif;
+      font-size: 0.75rem;
+      color: #666;
+      width: 6rem;
+      flex-shrink: 0;
+    }
+    .sample { font-size: 1.5rem; line-height: 1.6; }
+
+    .font-santa-clara-nueva { font-family: 'SantaClaraNueva', serif; }
+    .font-minion-pro         { font-family: 'minion-pro', serif; }
+    .font-figtree            { font-family: 'Figtree', sans-serif; }
+    .font-crimson-pro        { font-family: 'Crimson Pro', serif; }
+  </style>
+
 </head>
 
 <body>
@@ -3055,33 +3130,153 @@
   
   <div class="f-item-preview">
     <main role="main">
-  	<div class="row">
-  		<div class="col">
-  			<h3>Trade Gothic Next</h3>
-  			<p><code class="highter-rouge">Default</code></p>
-  			<p class="intro">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
-  			<hr>
-  			<p><code class="highter-rouge">.text-sans-light</code></p>
-  			<p class="intro text-sans-light">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
-  			<hr>
-  			<p><code class="highter-rouge">.text-sans-bold</code></p>
-  			<p class="intro text-sans-bold">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
-  			<hr>
-  			<p><code class="highter-rouge">.text-sans-italic</code></p>
-  			<p class="intro text-sans-italic">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
-  			<hr>
-  			<p><code class="highter-rouge">.text-sans-bold-italic</code></p>
-  			<p class="intro text-sans-bold-italic">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
-  		</div>
-  		<div class="col">
-  			<h3>Bauer Bodoni W01 Italic</h3>
-  			<p><code class="highlighter-rouge">.text-serif</code></p>
-  			<p class="intro text-serif">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
-  			<hr>
-  			<p><code class="highlighter-rouge">.text-serif-bold</code></p>
-  			<p class="intro text-serif-bold">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
-  		</div>
-  	</div>
+  	<h2>Primary Typeface</h2>
+	<section>
+      <div style="margin-bottom:2rem">
+        <h3>Santa Clara Nueva</h3>
+
+        <div class="weight-row">
+          <span class="weight-label">Regular (400)</span>
+          <span class="font-santa-clara-nueva sample" style="font-weight:400;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Italic (400)</span>
+          <span class="font-santa-clara-nueva sample" style="font-weight:400;font-style:italic">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Medium (500)</span>
+          <span class="font-santa-clara-nueva sample" style="font-weight:500;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Bold (700)</span>
+          <span class="font-santa-clara-nueva sample" style="font-weight:700;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Bold Italic (700)</span>
+          <span class="font-santa-clara-nueva sample" style="font-weight:700;font-style:italic">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Heavy (800)</span>
+          <span class="font-santa-clara-nueva sample" style="font-weight:800;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Black (900)</span>
+          <span class="font-santa-clara-nueva sample" style="font-weight:900;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom:2rem">
+        <h3>Minion Pro</h3>
+
+        <div class="weight-row">
+          <span class="weight-label">Regular (400)</span>
+          <span class="font-minion-pro sample" style="font-weight:400;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Italic (400)</span>
+          <span class="font-minion-pro sample" style="font-weight:400;font-style:italic">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Semibold (600)</span>
+          <span class="font-minion-pro sample" style="font-weight:600;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Bold (700)</span>
+          <span class="font-minion-pro sample" style="font-weight:700;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Bold Italic (700)</span>
+          <span class="font-minion-pro sample" style="font-weight:700;font-style:italic">The quick brown fox jumps over the lazy dog</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secondary Typefaces -->
+    <section>
+      <h2>Secondary Typeface</h2>
+
+      <div style="margin-bottom:2rem">
+        <h3>Figtree</h3>
+
+        <div class="weight-row">
+          <span class="weight-label">Light (300)</span>
+          <span class="font-figtree sample" style="font-weight:300;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Regular (400)</span>
+          <span class="font-figtree sample" style="font-weight:400;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Italic (400)</span>
+          <span class="font-figtree sample" style="font-weight:400;font-style:italic">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Medium (500)</span>
+          <span class="font-figtree sample" style="font-weight:500;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Semibold (600)</span>
+          <span class="font-figtree sample" style="font-weight:600;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Bold (700)</span>
+          <span class="font-figtree sample" style="font-weight:700;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">ExtraBold (800)</span>
+          <span class="font-figtree sample" style="font-weight:800;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Black (900)</span>
+          <span class="font-figtree sample" style="font-weight:900;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom:2rem">
+        <h3>Crimson Pro</h3>
+
+        <div class="weight-row">
+          <span class="weight-label">ExtraLight (200)</span>
+          <span class="font-crimson-pro sample" style="font-weight:200;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Light (300)</span>
+          <span class="font-crimson-pro sample" style="font-weight:300;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Regular (400)</span>
+          <span class="font-crimson-pro sample" style="font-weight:400;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Italic (400)</span>
+          <span class="font-crimson-pro sample" style="font-weight:400;font-style:italic">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Medium (500)</span>
+          <span class="font-crimson-pro sample" style="font-weight:500;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Semibold (600)</span>
+          <span class="font-crimson-pro sample" style="font-weight:600;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Bold (700)</span>
+          <span class="font-crimson-pro sample" style="font-weight:700;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Bold Italic (700)</span>
+          <span class="font-crimson-pro sample" style="font-weight:700;font-style:italic">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">ExtraBold (800)</span>
+          <span class="font-crimson-pro sample" style="font-weight:800;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div class="weight-row">
+          <span class="weight-label">Black (900)</span>
+          <span class="font-crimson-pro sample" style="font-weight:900;font-style:normal">The quick brown fox jumps over the lazy dog</span>
+        </div>
+      </div>
+    </section>
   	<h2 id="headings"><a class="anchorjs-link " href="#headings" aria-label="Anchor link for: headings" data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Headings</h2>
   
   	<p>All HTML headings, <code class="highlighter-rouge">&lt;h1&gt;</code> through <code class="highlighter-rouge">&lt;h6&gt;</code>, are available.</p>
