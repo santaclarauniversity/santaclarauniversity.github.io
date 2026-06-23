@@ -1,0 +1,58 @@
+export const lockupOptions = [
+  { label: "Alumni Association", value: "fa-alumni-association" },
+  { label: "Campus Ministry", value: "fa-campus-ministry" },
+  { label: "Campus Safety Services", value: "fa-campus-safety-services" },
+  { label: "Career Center", value: "fa-career-center" },
+  {
+    label: "Ciocca Center for Innovation and Entrepreneurship",
+    value: "fa-ciocca-center",
+  },
+  {
+    label: "College of Arts and Sciences",
+    value: "fa-college-of-arts-and-sciences",
+  },
+  { label: "Enrollment Management", value: "fa-enrollment-management" },
+  {
+    label: "Finance and Administration",
+    value: "fa-finance-and-administration",
+  },
+  { label: "General Counsel", value: "fa-general-counsel" },
+  { label: "Human Resources", value: "fa-human-resources" },
+  {
+    label: "Ignatian Center for Jesuit Education",
+    value: "fa-ignatian-center",
+  },
+  { label: "Inclusive Excellence", value: "fa-inclusive-excellence" },
+  { label: "Information Services", value: "fa-information-services" },
+  { label: "Jesuit School of Theology", value: "fa-jesuit-school-of-theology" },
+  { label: "Leavey School of Business", value: "fa-leavey-school-of-business" },
+  { label: "Markkula Center for Applied Ethics", value: "fa-markkula-center" },
+  {
+    label: "Marketing and Communications",
+    value: "fa-marketing-and-communications",
+  },
+  { label: "Miller Center for Global Impact", value: "fa-miller-center" },
+  { label: "Mission and Ministry", value: "fa-mission-and-ministry" },
+  { label: "Online", value: "fa-online" },
+  {
+    label: "Parking and Transportation Services",
+    value: "fa-parking-and-transportation-services",
+  },
+  { label: "President", value: "fa-president" },
+  {
+    label: "Provost and Executive Vice President",
+    value: "fa-provost-and-executive-vice-president",
+  },
+  {
+    label: "School of Education and Counseling Psychology",
+    value: "fa-school-of-education-and-counseling-psychology",
+  },
+  { label: "School of Engineering", value: "fa-school-of-engineering" },
+  { label: "School of Law", value: "fa-school-of-law" },
+  { label: "Staff Senate", value: "fa-staff-senate" },
+  { label: "Student Life", value: "fa-student-life" },
+  { label: "University Governance", value: "fa-university-governance" },
+  { label: "University Library", value: "fa-library" },
+  { label: "University Operations", value: "fa-operations" },
+  { label: "University Relations", value: "fa-university-relations" },
+];
