@@ -1,0 +1,131 @@
+/* Figtree */
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* Minion Pro */
+@import url("https://use.typekit.net/pcm8ajw.css");
+
+/* Crimson Pro */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* Regular */
+@font-face {
+  font-family: 'SantaClaraNueva';
+  src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Regular_otf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Regular_ttf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Regular.otf') format('opentype'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'SantaClaraNueva';
+  src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Medium_otf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Medium_ttf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Medium.otf') format('opentype'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'SantaClaraNueva';
+  src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Bold_otf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Bold_ttf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Bold.otf') format('opentype'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: 'SantaClaraNueva';
+  src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-BoldItalic_otf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-BoldItalic_ttf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-BoldItalic.otf') format('opentype'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Heavy */
+@font-face {
+  font-family: 'SantaClaraNueva';
+  src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Heavy_otf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Heavy_ttf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Heavy.otf') format('opentype'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Heavy.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Black */
+@font-face {
+  font-family: 'SantaClaraNueva';
+  src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Black_otf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Black_ttf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Black.otf') format('opentype'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic (Regular weight) */
+@font-face {
+  font-family: 'SantaClaraNueva';
+  src: url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Italic_otf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Italic_ttf.woff2') format('woff2'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Italic.otf') format('opentype'),
+       url('https://assets.scu.edu/assets/fonts/nueva/SantaClaraNueva-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Font family classes */
+.santaClaraNueva {
+  font-family: 'SantaClaraNueva', sans-serif;
+}
+
+.minionPro {
+  font-family: 'minion-pro', serif;
+}
+
+.figtree {
+  font-family: 'Figtree', sans-serif;
+}
+
+.crimsonPro {
+  font-family: 'Crimson Pro', serif;
+}
+
+/* Sample text styling */
+.sample {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.weightRow {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.weightLabel {
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.75rem;
+  color: #666;
+  width: 6rem;
+  flex-shrink: 0;
+}
